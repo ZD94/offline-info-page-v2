@@ -1016,7 +1016,8 @@
       </div>
 
       <div class="annotation-toolbar" role="toolbar" aria-label="截图标注工具">
-        <button id="annotationToggle" class="annotation-button" type="button" aria-pressed="false">✎ 标注</button>
+        <button id="annotationToggle" class="annotation-button" type="button" aria-pressed="false">✎ 画笔</button>
+        <button id="annotationRectangle" class="annotation-button" type="button" aria-pressed="false">▭ 框选</button>
         <label class="annotation-control" title="标注颜色">
           颜色
           <input id="annotationColor" class="annotation-color" type="color" value="#ff3b5c" aria-label="标注颜色">
@@ -1129,7 +1130,7 @@
           <button id="saveCurrentTranslationReview" class="action-button primary" type="button">保存当前页</button>
           <button id="exportReviewedTranslations" class="action-button export" type="button">导出核对后的译文</button>
         </div>
-        <p class="export-hint">译文核对使用独立草稿与存储；译文标识 ID 用于定位条目，不会显示在 App 中。导出文件按目标语言、页面、子项和条目保存，不会修改中文人工核对稿。</p>
+        <p class="export-hint">译文核对使用独立草稿与存储；安卓与 iOS 译文标识 ID 用于定位条目，不会显示在 App 中。导出文件按目标语言、页面、子项和条目保存，不会修改中文人工核对稿。</p>
         <p id="translationReviewStatus" class="review-status" role="status" aria-live="polite">请从上方选择一种目标语言</p>
       </div>
     </section>
@@ -1192,6 +1193,7 @@
         annotationSurface: document.querySelector('#annotationSurface'),
         annotationCanvas: document.querySelector('#annotationCanvas'),
         annotationToggle: document.querySelector('#annotationToggle'),
+        annotationRectangle: document.querySelector('#annotationRectangle'),
         annotationColor: document.querySelector('#annotationColor'),
         annotationSize: document.querySelector('#annotationSize'),
         annotationUndo: document.querySelector('#annotationUndo'),
@@ -1265,6 +1267,7 @@
       let activeAnnotationStroke = null
       let activeAnnotationPointerId = null
       let annotationEnabled = false
+      let annotationMode = 'freehand'
       if (!Object.hasOwn(languageLabels, currentLanguage)) currentLanguage = 'zh'
       if (!Object.hasOwn(languageLabels, currentTranslationLanguage) || currentTranslationLanguage === 'zh') currentTranslationLanguage = 'en'
       if (!['baseline', 'translation'].includes(currentReviewMode)) currentReviewMode = 'baseline'
@@ -1293,6 +1296,7 @@
       function cloneAnnotationStrokes (strokes) {
         if (!Array.isArray(strokes)) return []
         return strokes.map(stroke => ({
+          type: stroke?.type === 'rectangle' ? 'rectangle' : 'freehand',
           color: typeof stroke?.color === 'string' ? stroke.color : '#ff3b5c',
           width: Math.min(.08, Math.max(.001, Number(stroke?.width) || .015)),
           points: Array.isArray(stroke?.points)
@@ -1366,7 +1370,7 @@
         if (!silent) {
           if (!saved) setAnnotationStatus('保存失败：浏览器存储不可用')
           else if (currentAnnotationStrokes.length === 0) setAnnotationStatus('暂无标注')
-          else setAnnotationStatus(automatic ? `已自动保存 ${currentAnnotationStrokes.length} 笔` : `已保存 ${currentAnnotationStrokes.length} 笔`)
+          else setAnnotationStatus(automatic ? `已自动保存 ${currentAnnotationStrokes.length} 项标注` : `已保存 ${currentAnnotationStrokes.length} 项标注`)
         }
         updateAnnotationControls()
         return saved
@@ -1383,7 +1387,7 @@
         }
         currentAnnotationImageRef = imageRef
         elements.annotationCanvas.classList.remove('is-ready', 'is-active')
-        setAnnotationStatus(currentAnnotationStrokes.length > 0 ? `已恢复 ${currentAnnotationStrokes.length} 笔` : '暂无标注')
+        setAnnotationStatus(currentAnnotationStrokes.length > 0 ? `已恢复 ${currentAnnotationStrokes.length} 项标注` : '暂无标注')
         updateAnnotationControls()
       }
 
@@ -1398,7 +1402,20 @@
           context.lineWidth = Math.max(1, stroke.width * scale)
           context.lineCap = 'round'
           context.lineJoin = 'round'
-          if (points.length === 1) {
+          if (stroke.type === 'rectangle' && points.length >= 2) {
+            const startX = points[0].x * width
+            const startY = points[0].y * height
+            const endX = points.at(-1).x * width
+            const endY = points.at(-1).y * height
+            const rectangleX = Math.min(startX, endX)
+            const rectangleY = Math.min(startY, endY)
+            const rectangleWidth = Math.abs(endX - startX)
+            const rectangleHeight = Math.abs(endY - startY)
+            context.globalAlpha = .1
+            context.fillRect(rectangleX, rectangleY, rectangleWidth, rectangleHeight)
+            context.globalAlpha = 1
+            context.strokeRect(rectangleX, rectangleY, rectangleWidth, rectangleHeight)
+          } else if (points.length === 1) {
             context.beginPath()
             context.arc(points[0].x * width, points[0].y * height, context.lineWidth / 2, 0, Math.PI * 2)
             context.fill()
@@ -1453,15 +1470,27 @@
         updateAnnotationControls()
       }
 
-      function setAnnotationEnabled (enabled) {
+      function setAnnotationMode (mode, enabled = true) {
+        annotationMode = mode === 'rectangle' ? 'rectangle' : 'freehand'
         annotationEnabled = Boolean(enabled)
-        elements.annotationToggle.classList.toggle('is-active', annotationEnabled)
-        elements.annotationToggle.setAttribute('aria-pressed', String(annotationEnabled))
-        elements.annotationToggle.textContent = annotationEnabled ? '✓ 结束标注' : '✎ 标注'
+        const freehandActive = annotationEnabled && annotationMode === 'freehand'
+        const rectangleActive = annotationEnabled && annotationMode === 'rectangle'
+        elements.annotationToggle.classList.toggle('is-active', freehandActive)
+        elements.annotationToggle.setAttribute('aria-pressed', String(freehandActive))
+        elements.annotationRectangle.classList.toggle('is-active', rectangleActive)
+        elements.annotationRectangle.setAttribute('aria-pressed', String(rectangleActive))
         elements.annotationCanvas.classList.toggle('is-active', annotationEnabled && elements.annotationCanvas.classList.contains('is-ready'))
         setAnnotationStatus(annotationEnabled
-          ? '可直接在图片上绘制'
-          : (currentAnnotationStrokes.length > 0 ? `已保存 ${currentAnnotationStrokes.length} 笔` : '暂无标注'))
+          ? (annotationMode === 'rectangle' ? '框选模式：拖动绘制矩形' : '画笔模式：可直接绘制')
+          : (currentAnnotationStrokes.length > 0 ? `已保存 ${currentAnnotationStrokes.length} 项标注` : '暂无标注'))
+      }
+
+      function setAnnotationEnabled (enabled) {
+        setAnnotationMode(annotationMode, enabled)
+      }
+
+      function toggleAnnotationMode (mode) {
+        setAnnotationMode(mode, !(annotationEnabled && annotationMode === mode))
       }
 
       function annotationPointFromEvent (event) {
@@ -1479,12 +1508,13 @@
         if (rect.width < 1 || rect.height < 1) return
         activeAnnotationPointerId = event.pointerId
         activeAnnotationStroke = {
+          type: annotationMode,
           color: elements.annotationColor.value,
           width: Number(elements.annotationSize.value) / Math.min(rect.width, rect.height),
           points: [annotationPointFromEvent(event)]
         }
         elements.annotationCanvas.setPointerCapture?.(event.pointerId)
-        setAnnotationStatus('正在标注…')
+        setAnnotationStatus(annotationMode === 'rectangle' ? '正在框选…' : '正在标注…')
         renderAnnotations()
       }
 
@@ -1492,6 +1522,11 @@
         if (!activeAnnotationStroke || event.pointerId !== activeAnnotationPointerId) return
         event.preventDefault()
         const point = annotationPointFromEvent(event)
+        if (activeAnnotationStroke.type === 'rectangle') {
+          activeAnnotationStroke.points[1] = point
+          renderAnnotations()
+          return
+        }
         const previous = activeAnnotationStroke.points.at(-1)
         if (Math.hypot(point.x - previous.x, point.y - previous.y) < .002) return
         activeAnnotationStroke.points.push(point)
@@ -1501,6 +1536,18 @@
       function finishAnnotationStroke (event) {
         if (!activeAnnotationStroke || event.pointerId !== activeAnnotationPointerId) return
         event.preventDefault()
+        if (activeAnnotationStroke.type === 'rectangle') {
+          activeAnnotationStroke.points[1] = annotationPointFromEvent(event)
+          const [start, end] = activeAnnotationStroke.points
+          if (Math.abs(end.x - start.x) < .003 || Math.abs(end.y - start.y) < .003) {
+            activeAnnotationStroke = null
+            activeAnnotationPointerId = null
+            if (elements.annotationCanvas.hasPointerCapture?.(event.pointerId)) elements.annotationCanvas.releasePointerCapture(event.pointerId)
+            renderAnnotations()
+            setAnnotationStatus('框选范围过小，未保存')
+            return
+          }
+        }
         currentAnnotationStrokes.push(activeAnnotationStroke)
         activeAnnotationStroke = null
         activeAnnotationPointerId = null
@@ -1514,7 +1561,7 @@
         activeAnnotationStroke = null
         activeAnnotationPointerId = null
         renderAnnotations()
-        setAnnotationStatus(currentAnnotationStrokes.length > 0 ? `已保存 ${currentAnnotationStrokes.length} 笔` : '暂无标注')
+        setAnnotationStatus(currentAnnotationStrokes.length > 0 ? `已保存 ${currentAnnotationStrokes.length} 项标注` : '暂无标注')
       }
 
       function undoAnnotationStroke () {
@@ -1563,7 +1610,7 @@
             link.click()
             link.remove()
             URL.revokeObjectURL(url)
-            setAnnotationStatus(`已导出 ${currentAnnotationStrokes.length} 笔标注`)
+            setAnnotationStatus(`已导出 ${currentAnnotationStrokes.length} 项标注`)
           }, 'image/png')
         } catch {
           setAnnotationStatus('导出失败：图片不可读取')
@@ -1699,6 +1746,16 @@
         })
       }
 
+      function savedIosTranslationIdValues (page, language) {
+        const saved = savedTranslationReviews[language]?.[page.name] ?? {}
+        return page.items.map(item => {
+          const savedValue = saved[item.key]
+          return savedValue && typeof savedValue === 'object' && typeof savedValue.iosTranslationId === 'string'
+            ? savedValue.iosTranslationId
+            : ''
+        })
+      }
+
       function currentTranslationReviewDraft (page, language, sourceValues = currentReviewValues(page)) {
         const draft = translationReviewDrafts.get(translationReviewDraftKey(language, page))
         return {
@@ -1707,7 +1764,10 @@
             : savedTranslationValues(page, language, sourceValues),
           translationIds: Array.isArray(draft?.translationIds)
             ? draft.translationIds
-            : savedTranslationIdValues(page, language)
+            : savedTranslationIdValues(page, language),
+          iosTranslationIds: Array.isArray(draft?.iosTranslationIds)
+            ? draft.iosTranslationIds
+            : savedIosTranslationIdValues(page, language)
         }
       }
 
@@ -1717,6 +1777,10 @@
 
       function currentTranslationReviewIdValues (page, language, sourceValues = currentReviewValues(page)) {
         return currentTranslationReviewDraft(page, language, sourceValues).translationIds
+      }
+
+      function currentIosTranslationReviewIdValues (page, language, sourceValues = currentReviewValues(page)) {
+        return currentTranslationReviewDraft(page, language, sourceValues).iosTranslationIds
       }
 
       function translationPageHasSavedChanges (page, language) {
@@ -2174,7 +2238,7 @@
         elements.exportTranslationReviews.disabled = false
 
         if (message) elements.translationReviewStatus.textContent = message
-        else if (hasDraft) elements.translationReviewStatus.textContent = `当前页有未保存的${languageLabel}译文或标识 ID 修改`
+        else if (hasDraft) elements.translationReviewStatus.textContent = `当前页有未保存的${languageLabel}译文或平台标识 ID 修改`
         else if (hasSavedChanges) elements.translationReviewStatus.textContent = `当前页${languageLabel}译文核对内容已保存到本浏览器`
         else elements.translationReviewStatus.textContent = `当前页使用 Codex ${languageLabel}译文初稿`
       }
@@ -2185,16 +2249,25 @@
           textarea => textarea.value
         )
         const translationIds = Array.from(
-          elements.translationReviewList.querySelectorAll('.translation-review-id-input'),
+          elements.translationReviewList.querySelectorAll('.translation-review-android-id-input'),
+          input => input.value
+        )
+        const iosTranslationIds = Array.from(
+          elements.translationReviewList.querySelectorAll('.translation-review-ios-id-input'),
           input => input.value
         )
         const savedTranslations = savedTranslationValues(page, language, sourceValues)
         const savedTranslationIds = savedTranslationIdValues(page, language)
+        const savedIosTranslationIds = savedIosTranslationIdValues(page, language)
         const draftKey = translationReviewDraftKey(language, page)
-        if (arraysEqual(translations, savedTranslations) && arraysEqual(translationIds, savedTranslationIds)) {
+        if (
+          arraysEqual(translations, savedTranslations) &&
+          arraysEqual(translationIds, savedTranslationIds) &&
+          arraysEqual(iosTranslationIds, savedIosTranslationIds)
+        ) {
           translationReviewDrafts.delete(draftKey)
         } else {
-          translationReviewDrafts.set(draftKey, { translations, translationIds })
+          translationReviewDrafts.set(draftKey, { translations, translationIds, iosTranslationIds })
         }
         updateTranslationReviewState(page, language)
       }
@@ -2210,7 +2283,7 @@
         elements.translationReviewTitle.textContent = page?.label ?? pageNames[pageIndex]
         elements.translationReviewSummary.textContent = language === 'zh'
           ? '中文原文只读；请从上方选择目标语言'
-          : `中文原文只读；${languageLabel}译文和译文标识 ID 可编辑`
+          : `中文原文只读；${languageLabel}译文和安卓 / iOS 译文标识 ID 可编辑`
         elements.translationReviewList.replaceChildren()
 
         if (language === 'zh') {
@@ -2237,6 +2310,7 @@
         const initialValues = translationReviewInitialValues(page, language, sourceValues)
         const values = currentTranslationReviewValues(page, language, sourceValues)
         const translationIds = currentTranslationReviewIdValues(page, language, sourceValues)
+        const iosTranslationIds = currentIosTranslationReviewIdValues(page, language, sourceValues)
         elements.translationReviewCount.textContent = `${page.items.length} 条`
 
         page.items.forEach((item, index) => {
@@ -2283,28 +2357,49 @@
           })
           targetField.append(targetLabel, textarea)
 
-          const idField = document.createElement('label')
-          idField.className = 'translation-review-field'
-          const idLabel = document.createElement('span')
-          idLabel.className = 'translation-review-label'
-          idLabel.textContent = '译文标识 ID（可选）'
-          const idInput = document.createElement('input')
-          idInput.className = 'translation-review-id-input'
-          idInput.type = 'text'
-          idInput.value = translationIds[index]
-          idInput.maxLength = 160
-          idInput.lang = 'en'
-          idInput.dir = 'ltr'
-          idInput.autocomplete = 'off'
-          idInput.spellcheck = false
-          idInput.placeholder = '例如：onboarding.current_weight.title'
-          idInput.setAttribute('aria-label', `第 ${index + 1} 条译文标识 ID`)
-          idInput.addEventListener('input', function () {
+          const androidIdField = document.createElement('label')
+          androidIdField.className = 'translation-review-field'
+          const androidIdLabel = document.createElement('span')
+          androidIdLabel.className = 'translation-review-label'
+          androidIdLabel.textContent = '安卓译文标识 ID（可选）'
+          const androidIdInput = document.createElement('input')
+          androidIdInput.className = 'translation-review-id-input translation-review-android-id-input'
+          androidIdInput.type = 'text'
+          androidIdInput.value = translationIds[index]
+          androidIdInput.maxLength = 160
+          androidIdInput.lang = 'en'
+          androidIdInput.dir = 'ltr'
+          androidIdInput.autocomplete = 'off'
+          androidIdInput.spellcheck = false
+          androidIdInput.placeholder = '例如：onboarding.current_weight.title'
+          androidIdInput.setAttribute('aria-label', `第 ${index + 1} 条安卓译文标识 ID`)
+          androidIdInput.addEventListener('input', function () {
             updateTranslationReviewDraft(page, language, sourceValues)
           })
-          idField.append(idLabel, idInput)
+          androidIdField.append(androidIdLabel, androidIdInput)
 
-          fields.append(sourceField, targetField, idField)
+          const iosIdField = document.createElement('label')
+          iosIdField.className = 'translation-review-field'
+          const iosIdLabel = document.createElement('span')
+          iosIdLabel.className = 'translation-review-label'
+          iosIdLabel.textContent = 'iOS 译文标识 ID（可选）'
+          const iosIdInput = document.createElement('input')
+          iosIdInput.className = 'translation-review-id-input translation-review-ios-id-input'
+          iosIdInput.type = 'text'
+          iosIdInput.value = iosTranslationIds[index]
+          iosIdInput.maxLength = 160
+          iosIdInput.lang = 'en'
+          iosIdInput.dir = 'ltr'
+          iosIdInput.autocomplete = 'off'
+          iosIdInput.spellcheck = false
+          iosIdInput.placeholder = '例如：onboarding.current_weight.title'
+          iosIdInput.setAttribute('aria-label', `第 ${index + 1} 条 iOS 译文标识 ID`)
+          iosIdInput.addEventListener('input', function () {
+            updateTranslationReviewDraft(page, language, sourceValues)
+          })
+          iosIdField.append(iosIdLabel, iosIdInput)
+
+          fields.append(sourceField, targetField, androidIdField, iosIdField)
           row.append(number, fields)
           if (item.dynamic) {
             const meta = document.createElement('div')
@@ -2367,16 +2462,21 @@
           textarea => textarea.value
         )
         const translationIds = Array.from(
-          elements.translationReviewList.querySelectorAll('.translation-review-id-input'),
+          elements.translationReviewList.querySelectorAll('.translation-review-android-id-input'),
+          input => input.value.trim()
+        )
+        const iosTranslationIds = Array.from(
+          elements.translationReviewList.querySelectorAll('.translation-review-ios-id-input'),
           input => input.value.trim()
         )
         const changes = {}
         page.items.forEach((item, index) => {
-          if (values[index] !== initialValues[index] || translationIds[index] !== '') {
+          if (values[index] !== initialValues[index] || translationIds[index] !== '' || iosTranslationIds[index] !== '') {
             changes[item.key] = {
               sourceText: sourceValues[index],
               translation: values[index],
-              translationId: translationIds[index]
+              translationId: translationIds[index],
+              iosTranslationId: iosTranslationIds[index]
             }
           }
         })
@@ -2523,6 +2623,7 @@
         const initialValues = translationReviewInitialValues(page, language, sourceValues)
         const translatedValues = savedTranslationValues(page, language, sourceValues)
         const translationIds = savedTranslationIdValues(page, language)
+        const iosTranslationIds = savedIosTranslationIdValues(page, language)
         return {
           order: page.order,
           name: page.name,
@@ -2533,6 +2634,7 @@
             sourceText: sourceValues[index],
             translation: translatedValues[index],
             translationId: translationIds[index],
+            iosTranslationId: iosTranslationIds[index],
             dynamic: Boolean(item.dynamic),
             modified: translatedValues[index] !== initialValues[index]
           }))
@@ -2570,7 +2672,7 @@
         const exportedAt = new Date()
         const payload = {
           metadata: {
-            schemaVersion: 1,
+            schemaVersion: 2,
             sourceLocale: 'zh-CN',
             targetLocale: languageCodes[language],
             targetLanguage: languageLabels[language],
@@ -2712,7 +2814,8 @@
       elements.saveTranslationReview.addEventListener('click', saveCurrentTranslationReview)
       elements.resetTranslationReview.addEventListener('click', resetCurrentTranslationReview)
       elements.exportTranslationReviews.addEventListener('click', exportReviewedTranslations)
-      elements.annotationToggle.addEventListener('click', function () { setAnnotationEnabled(!annotationEnabled) })
+      elements.annotationToggle.addEventListener('click', function () { toggleAnnotationMode('freehand') })
+      elements.annotationRectangle.addEventListener('click', function () { toggleAnnotationMode('rectangle') })
       elements.annotationUndo.addEventListener('click', undoAnnotationStroke)
       elements.annotationClear.addEventListener('click', clearAnnotations)
       elements.annotationSave.addEventListener('click', function () { saveCurrentAnnotations() })
