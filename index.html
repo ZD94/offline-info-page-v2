@@ -1,0 +1,2211 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="多语言问卷截图查看页面">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231f2937'/%3E%3Cpath d='M18 20h28M22 32h20M26 44h12' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <title>多语言问卷（第二套）</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f5f7fb;
+      --surface: #ffffff;
+      --surface-soft: #f1f4f8;
+      --text: #172033;
+      --muted: #748096;
+      --border: #dce2ec;
+      --active: #1f2937;
+      --active-text: #ffffff;
+      --focus: #8bb8ff;
+      --page-header-height: 98px;
+      font-family: Inter, "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(129, 166, 255, .13), transparent 32rem),
+        var(--background);
+    }
+
+    button { font: inherit; }
+
+    .page-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(220, 226, 236, .9);
+      background: rgba(255, 255, 255, .92);
+      box-shadow: 0 8px 28px rgba(30, 42, 65, .06);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: min(1440px, 100%);
+      margin: 0 auto;
+    }
+
+    .language-selector {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      padding: 6px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface-soft);
+    }
+
+    .language-button {
+      position: relative;
+      min-width: 104px;
+      min-height: 44px;
+      padding: 10px 18px;
+      border: 1px solid transparent;
+      border-radius: 11px;
+      color: #4c586d;
+      background: transparent;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: color .18s ease, background .18s ease, box-shadow .18s ease, transform .18s ease;
+    }
+
+    .language-button:hover:not(.is-selected) {
+      color: var(--text);
+      background: rgba(255, 255, 255, .82);
+    }
+
+    .language-button:active { transform: scale(.98); }
+
+    .language-button:focus-visible,
+    .variant-button:focus-visible,
+    .page-button:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .language-button.is-selected {
+      padding-left: 34px;
+      color: var(--active-text);
+      background: var(--active);
+      box-shadow: 0 8px 20px rgba(31, 41, 55, .2);
+    }
+
+    .language-button.is-selected::before {
+      content: "✓";
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      font-size: 13px;
+      transform: translateY(-50%);
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(340px, 430px) repeat(3, minmax(280px, 1fr));
+      gap: 22px;
+      width: 100%;
+      min-height: calc(100vh - 100px);
+      margin: 0 0 32px;
+      padding-right: 20px;
+    }
+
+    .screenshot-panel {
+      position: sticky;
+      top: var(--page-header-height);
+      display: flex;
+      flex-direction: column;
+      align-self: start;
+      height: calc(100vh - var(--page-header-height) - 14px);
+      height: calc(100dvh - var(--page-header-height) - 14px);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-left: 0;
+      border-radius: 0 20px 20px 0;
+      background: var(--surface);
+      box-shadow: 0 14px 38px rgba(30, 42, 65, .09);
+    }
+
+    .screenshot-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 92px;
+      padding: 20px 22px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-kicker {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .page-title {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.3;
+    }
+
+    .language-label {
+      flex: 0 0 auto;
+      padding: 6px 9px;
+      border-radius: 999px;
+      color: #465267;
+      background: var(--surface-soft);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .variant-selector {
+      padding: 12px 14px 13px;
+      border-bottom: 1px solid var(--border);
+      background: #f8faff;
+    }
+
+    .variant-selector[hidden] { display: none; }
+
+    .variant-selector-label {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .variant-buttons {
+      display: flex;
+      gap: 8px;
+      padding: 1px 1px 5px;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scrollbar-width: thin;
+    }
+
+    .variant-button {
+      flex: 0 0 auto;
+      min-height: 38px;
+      padding: 8px 13px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: #4c586d;
+      background: var(--surface);
+      font-size: 13px;
+      font-weight: 750;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: color .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .variant-button:hover:not(.is-selected) {
+      color: var(--text);
+      border-color: #aeb8c8;
+      background: var(--surface-soft);
+    }
+
+    .variant-button.is-selected {
+      color: var(--active-text);
+      border-color: var(--active);
+      background: var(--active);
+    }
+
+    .image-stage {
+      display: flex;
+      flex: 1 1 auto;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+      height: auto;
+      max-height: none;
+      padding: 12px;
+      overflow: hidden;
+      background:
+        linear-gradient(45deg, rgba(255, 255, 255, .025) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, .025) 75%),
+        #202733;
+      background-size: 22px 22px;
+    }
+
+    .questionnaire-image {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0 auto;
+      object-fit: contain;
+      border-radius: 5px;
+      box-shadow: 0 16px 38px rgba(0, 0, 0, .28);
+    }
+
+    .questionnaire-image.is-loading { opacity: .35; }
+
+    .page-navigation {
+      display: grid;
+      flex: 0 0 auto;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 12px;
+      margin: 14px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: 0 8px 20px rgba(30, 42, 65, .06);
+    }
+
+    .page-button {
+      min-height: 42px;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      color: var(--text);
+      background: var(--surface);
+      font-weight: 750;
+      cursor: pointer;
+      transition: background .18s ease, border-color .18s ease;
+    }
+
+    .page-button:last-child { justify-self: end; }
+    .page-button:hover:not(:disabled) { border-color: #aeb8c8; background: var(--surface-soft); }
+    .page-button:disabled { color: #aab2c0; cursor: not-allowed; }
+
+    .page-counter {
+      min-width: 70px;
+      color: var(--muted);
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .content-area {
+      align-self: start;
+      padding: 28px;
+      border: 1px solid rgba(220, 226, 236, .72);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .86);
+      box-shadow: 0 14px 38px rgba(30, 42, 65, .06);
+    }
+
+    .ai-panel {
+      min-height: min(72vh, 720px);
+    }
+
+    .ai-language-badge {
+      color: #315f83;
+      border-color: #bdd7e8;
+      background: #edf7fc;
+    }
+
+    .content-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 0 22px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .baseline-heading {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 58px;
+      padding: 0 0 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .review-mode-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+    }
+
+    .header-review-mode {
+      position: absolute;
+      top: 50%;
+      right: 24px;
+      transform: translateY(-50%);
+    }
+
+    .review-mode-switch {
+      display: inline-flex;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface-soft);
+    }
+
+    .review-mode-button {
+      min-height: 36px;
+      padding: 8px 13px;
+      border: 0;
+      border-radius: 9px;
+      color: #647086;
+      background: transparent;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: color .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .review-mode-button:hover:not(.is-selected) {
+      color: var(--text);
+      background: #fff;
+    }
+
+    .review-mode-button.is-selected {
+      color: #fff;
+      background: var(--active);
+      box-shadow: 0 4px 10px rgba(25, 40, 60, .16);
+    }
+
+    .review-mode-button:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .baseline-title {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(27px, 2.4vw, 36px);
+      font-weight: 900;
+      line-height: 1.2;
+      text-align: center;
+      letter-spacing: .06em;
+    }
+
+    .content-kicker {
+      margin: 0 0 7px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .content-title {
+      margin: 0;
+      font-size: clamp(23px, 3vw, 32px);
+      line-height: 1.25;
+    }
+
+    .readonly-badge {
+      position: absolute;
+      top: 2px;
+      right: 0;
+      padding: 7px 11px;
+      border: 1px solid #cfd8e5;
+      border-radius: 999px;
+      color: #5c687d;
+      background: var(--surface-soft);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .editable-badge {
+      color: #17613b;
+      border-color: #b9dfca;
+      background: #edf9f2;
+    }
+
+    .content-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 20px 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .text-count {
+      flex: 0 0 auto;
+      color: #47536a;
+      font-weight: 800;
+    }
+
+    .chinese-text-list {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .chinese-text-item {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: start;
+      padding: 14px 15px;
+      border: 1px solid #e1e6ee;
+      border-radius: 13px;
+      background: var(--surface);
+    }
+
+    .text-index {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      color: #5c687d;
+      background: var(--surface-soft);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+      font-weight: 850;
+    }
+
+    .text-value {
+      padding-top: 4px;
+      font-size: 16px;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+    }
+
+    .dynamic-badge {
+      margin-top: 5px;
+      padding: 3px 7px;
+      border-radius: 7px;
+      color: #7a5b16;
+      background: #fff4d6;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .text-empty {
+      padding: 34px;
+      border: 1px dashed #c6cfdd;
+      border-radius: 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .ai-translation-list {
+      display: grid;
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .ai-translation-item {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      border: 1px solid #dce6ee;
+      border-radius: 14px;
+      background: var(--surface);
+    }
+
+    .translation-pair {
+      display: grid;
+      gap: 9px;
+      min-width: 0;
+    }
+
+    .translation-block {
+      min-width: 0;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #f7f9fc;
+    }
+
+    .translation-block.is-target {
+      border: 1px solid #cfe2ee;
+      background: #f1f8fc;
+    }
+
+    .translation-block.is-deepseek {
+      border: 1px solid #ddd3f0;
+      background: #f8f5fc;
+    }
+
+    .translation-label-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+
+    .translation-label {
+      color: #718096;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .08em;
+    }
+
+    .translation-block.is-target .translation-label { color: #315f83; }
+    .translation-block.is-deepseek .translation-label { color: #694b8e; }
+
+    .translation-value {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+    }
+
+    .translation-arrow {
+      width: 26px;
+      height: 20px;
+      margin: -5px 0 -5px 10px;
+      color: #7f94a8;
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .translation-status-badge {
+      flex: 0 0 auto;
+      padding: 3px 7px;
+      border-radius: 999px;
+      color: #17613b;
+      background: #e7f7ee;
+      font-size: 10px;
+      font-weight: 850;
+    }
+
+    .translation-status-badge.is-dynamic {
+      color: #7a5b16;
+      background: #fff4d6;
+    }
+
+    .translation-status-badge.is-model {
+      color: #62448a;
+      background: #eee7f8;
+    }
+
+    .translation-status-badge.is-missing {
+      color: #8b3a3a;
+      background: #fdecec;
+    }
+
+    .review-text-list {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .review-view[hidden] {
+      display: none;
+    }
+
+    .review-text-item {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 12px;
+      border: 1px solid #e1e6ee;
+      border-radius: 13px;
+      background: var(--surface);
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .review-text-item:focus-within {
+      border-color: #9ab8e7;
+      box-shadow: 0 0 0 3px rgba(139, 184, 255, .2);
+    }
+
+    .review-textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 7px 8px;
+      overflow: hidden;
+      resize: vertical;
+      border: 0;
+      border-radius: 8px;
+      outline: 0;
+      color: var(--text);
+      background: #f8fafc;
+      font: inherit;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .review-textarea.is-imported-modified {
+      border: 2px solid #ef4444;
+      background: #fff7f7;
+      box-shadow: 0 0 0 2px rgba(239, 68, 68, .08);
+    }
+
+    .review-textarea.is-imported-modified:focus {
+      border-color: #dc2626;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, .18);
+    }
+
+    .translation-review-fields {
+      display: grid;
+      gap: 9px;
+      min-width: 0;
+    }
+
+    .translation-review-field {
+      display: grid;
+      gap: 5px;
+    }
+
+    .translation-review-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .translation-review-source {
+      min-height: 42px;
+      padding: 9px 10px;
+      border: 1px solid #e7ebf1;
+      border-radius: 8px;
+      color: var(--text);
+      background: #f3f6fa;
+      font-size: 15px;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+    }
+
+    .translation-review-textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 9px 10px;
+      overflow: hidden;
+      resize: vertical;
+      border: 1px solid #cfd8e5;
+      border-radius: 8px;
+      outline: 0;
+      color: var(--text);
+      background: #fff;
+      font: inherit;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .translation-review-textarea:focus {
+      border-color: #739dd8;
+      box-shadow: 0 0 0 3px rgba(115, 157, 216, .18);
+    }
+
+    .translation-review-textarea.is-reviewed-modified {
+      border: 2px solid #ef4444;
+      background: #fff7f7;
+      box-shadow: 0 0 0 2px rgba(239, 68, 68, .08);
+    }
+
+    .translation-review-textarea.is-reviewed-modified:focus {
+      border-color: #dc2626;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, .18);
+    }
+
+    .review-item-meta {
+      grid-column: 2;
+      display: flex;
+      align-items: center;
+      min-height: 18px;
+      margin-top: -6px;
+    }
+
+    .review-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .action-button {
+      min-height: 42px;
+      padding: 9px 12px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      color: var(--text);
+      background: var(--surface);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .action-button:hover:not(:disabled) { border-color: #aeb8c8; background: var(--surface-soft); }
+    .action-button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+    .action-button:disabled { color: #aab2c0; cursor: not-allowed; }
+
+    .action-button.primary {
+      color: #fff;
+      border-color: var(--active);
+      background: var(--active);
+    }
+
+    .action-button.export {
+      grid-column: 1 / -1;
+      color: #fff;
+      border-color: #17613b;
+      background: #217a4b;
+    }
+
+    .action-button.primary:disabled,
+    .action-button.export:disabled {
+      color: #aab2c0;
+      border-color: var(--border);
+      background: #f3f5f8;
+    }
+
+    .review-status {
+      min-height: 20px;
+      margin: 10px 2px 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .export-hint {
+      margin: 12px 2px 0;
+      color: #8a6470;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .selection-status {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 1580px) {
+      .header-inner { justify-content: space-between; gap: 16px; }
+      .header-review-mode { position: static; flex: 0 0 auto; transform: none; }
+    }
+
+    @media (max-width: 1360px) {
+      .workspace { grid-template-columns: minmax(340px, 430px) minmax(0, 1fr); }
+    }
+
+    @media (max-width: 860px) {
+      .header-inner { flex-direction: column; align-items: stretch; }
+      .header-review-mode { align-self: flex-end; }
+      .workspace { grid-template-columns: 1fr; padding-right: 0; }
+      .screenshot-panel { position: static; display: block; width: min(100%, 500px); height: auto; margin: 0; }
+      .image-stage { flex: none; height: min(68vh, 720px); min-height: 460px; max-height: 720px; }
+      .content-area { min-height: 420px; margin: 0 12px 20px; padding: 22px; }
+    }
+
+    @media (max-width: 560px) {
+      .page-header { padding: 12px; }
+      .language-selector { display: grid; grid-template-columns: repeat(2, 1fr); width: 100%; }
+      .language-button { min-width: 0; width: 100%; }
+      .workspace { width: 100%; margin-top: 0; }
+      .screenshot-heading { padding: 17px; }
+      .variant-selector { padding-inline: 12px; }
+      .image-stage { height: 62vh; min-height: 400px; padding: 12px; }
+      .page-navigation { gap: 8px; padding: 12px; }
+      .page-button { padding-inline: 10px; }
+      .content-area { margin-inline: 10px; padding: 18px; }
+      .content-heading { gap: 10px; }
+      .baseline-title { font-size: 25px; }
+      .review-mode-toolbar { justify-content: stretch; }
+      .header-review-mode { width: 100%; }
+      .review-mode-switch { width: 100%; }
+      .review-mode-button { flex: 1; min-width: 0; white-space: normal; }
+      .chinese-text-item { grid-template-columns: 34px minmax(0, 1fr); }
+      .ai-translation-item { grid-template-columns: 34px minmax(0, 1fr); }
+      .review-text-item { grid-template-columns: 34px minmax(0, 1fr); }
+      .dynamic-badge { grid-column: 2; justify-self: start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-inner">
+      <div class="language-selector" role="radiogroup" aria-label="选择页面语言">
+        <button class="language-button is-selected" type="button" role="radio" aria-checked="true" tabindex="0" data-language="zh">中文</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="en">英文</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="th">泰语</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="ms">马来语</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="de">德语</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="tr">土耳其语</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="fr">法语</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="uk">乌克兰语</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="ar-SA">阿拉伯语（沙特）</button>
+      </div>
+      <div class="review-mode-toolbar header-review-mode">
+        <div class="review-mode-switch" role="tablist" aria-label="选择人工核对模式">
+          <button id="baselineReviewTab" class="review-mode-button is-selected" type="button" role="tab" aria-selected="true" aria-controls="baselineReviewView" tabindex="0" data-review-mode="baseline">中文基准核对</button>
+          <button id="translationReviewTab" class="review-mode-button" type="button" role="tab" aria-selected="false" aria-controls="translationReviewView" tabindex="-1" data-review-mode="translation">多语言译文核对</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="screenshot-panel" aria-label="问卷截图浏览器">
+      <div class="screenshot-heading">
+        <div>
+          <p id="pageKicker" class="page-kicker">问卷页面 01</p>
+          <h1 id="pageTitle" class="page-title">问卷介绍</h1>
+        </div>
+        <span id="languageLabel" class="language-label">中文</span>
+      </div>
+
+      <div id="variantSelector" class="variant-selector" hidden>
+        <p id="variantSelectorLabel" class="variant-selector-label">当前页面子项</p>
+        <div id="variantButtons" class="variant-buttons" role="radiogroup" aria-labelledby="variantSelectorLabel"></div>
+      </div>
+
+      <div id="imageStage" class="image-stage">
+        <img id="questionnaireImage" class="questionnaire-image" src="assets/screenshots/zh/01.png" alt="中文问卷第 1 页：问卷介绍" draggable="false">
+      </div>
+
+      <nav class="page-navigation" aria-label="问卷截图翻页">
+        <button id="previousPage" class="page-button" type="button" disabled>← 上一页</button>
+        <span id="pageCounter" class="page-counter">01 / 22</span>
+        <button id="nextPage" class="page-button" type="button">下一页 →</button>
+      </nav>
+    </aside>
+
+    <section id="pageContent" class="content-area" aria-labelledby="chineseTextTitle">
+      <div class="baseline-heading">
+        <h2 class="baseline-title">中文基准</h2>
+        <span class="readonly-badge">只读</span>
+      </div>
+      <div class="content-heading">
+        <div>
+          <p id="chineseTextKicker" class="content-kicker">问卷页面 01</p>
+          <h3 id="chineseTextTitle" class="content-title">问卷介绍</h3>
+        </div>
+      </div>
+      <div class="content-summary">
+        <span>当前页面提取到的全部中文可见内容</span>
+        <span id="chineseTextCount" class="text-count">0 条</span>
+      </div>
+      <ol id="chineseTextList" class="chinese-text-list" aria-live="polite"></ol>
+    </section>
+
+    <section class="content-area ai-panel" aria-labelledby="aiTranslationTitle">
+      <div class="baseline-heading">
+        <h2 id="aiTranslationTitle" class="baseline-title">AI翻译</h2>
+        <span id="aiLanguageBadge" class="readonly-badge ai-language-badge">中文校对</span>
+      </div>
+      <div class="content-heading">
+        <div>
+          <p id="aiTranslationKicker" class="content-kicker">问卷页面 01</p>
+          <h3 id="aiTranslationPageTitle" class="content-title">问卷介绍</h3>
+        </div>
+      </div>
+      <div class="content-summary">
+        <span id="aiTranslationSummary">中文原文 → Codex 中文校对</span>
+        <span id="aiTranslationCount" class="text-count">0 条</span>
+      </div>
+      <ol id="aiTranslationList" class="ai-translation-list" aria-live="polite"></ol>
+    </section>
+
+    <section class="content-area review-panel" aria-label="文案核对">
+      <div id="baselineReviewView" class="review-view" role="tabpanel" aria-labelledby="baselineReviewTab">
+        <div class="baseline-heading">
+          <h2 id="manualReviewTitle" class="baseline-title">人工核对</h2>
+          <span class="readonly-badge editable-badge">可编辑</span>
+        </div>
+        <div class="content-heading">
+          <div>
+            <p id="reviewTextKicker" class="content-kicker">问卷页面 01</p>
+            <h3 id="reviewTextTitle" class="content-title">问卷介绍</h3>
+          </div>
+        </div>
+        <div class="content-summary">
+          <span>基于导入的人工核对稿继续修改并保存</span>
+          <span id="reviewTextCount" class="text-count">0 条</span>
+        </div>
+        <ol id="reviewTextList" class="review-text-list"></ol>
+        <div class="review-actions">
+          <button id="resetCurrentReview" class="action-button" type="button">重置当前页</button>
+          <button id="saveCurrentReview" class="action-button primary" type="button">保存当前页</button>
+          <button id="exportReviewedTexts" class="action-button export" type="button">导出修改后的文案</button>
+        </div>
+        <p class="export-hint">导出文件与 review-questionnaire-text.js 格式一致，会同时包含主页面与动态子项；不会自动覆盖项目中的原始数据文件。</p>
+        <p id="reviewStatus" class="review-status" role="status" aria-live="polite">已加载人工核对初始稿</p>
+      </div>
+
+      <div id="translationReviewView" class="review-view" role="tabpanel" aria-labelledby="translationReviewTab" hidden>
+        <div class="baseline-heading">
+          <h2 class="baseline-title">多语言译文核对</h2>
+          <span class="readonly-badge editable-badge">译文可编辑</span>
+        </div>
+        <div class="content-heading">
+          <div>
+            <p id="translationReviewKicker" class="content-kicker">问卷页面 01</p>
+            <h3 id="translationReviewTitle" class="content-title">问卷介绍</h3>
+          </div>
+        </div>
+        <div class="content-summary">
+          <span id="translationReviewSummary">中文原文只读；请选择目标语言</span>
+          <span id="translationReviewCount" class="text-count">0 条</span>
+        </div>
+        <ol id="translationReviewList" class="review-text-list"></ol>
+        <div class="review-actions">
+          <button id="resetCurrentTranslationReview" class="action-button" type="button">重置当前页</button>
+          <button id="saveCurrentTranslationReview" class="action-button primary" type="button">保存当前页</button>
+          <button id="exportReviewedTranslations" class="action-button export" type="button">导出核对后的译文</button>
+        </div>
+        <p class="export-hint">译文核对使用独立草稿与存储，导出文件按目标语言、页面、子项和条目保存，不会修改中文人工核对稿。</p>
+        <p id="translationReviewStatus" class="review-status" role="status" aria-live="polite">请从上方选择一种目标语言</p>
+      </div>
+    </section>
+  </main>
+
+  <p id="selectionStatus" class="selection-status" role="status" aria-live="polite">当前目标语言：中文；截图固定为中文，第 1 页，问卷介绍</p>
+
+  <script src="assets/data/zh-questionnaire-text.js?v=20261109-01"></script>
+  <script src="assets/data/pre-questionnaire-text.js?v=20261109-01"></script>
+  <script src="assets/data/post-questionnaire-text.js?v=20261109-01"></script>
+  <script src="assets/data/zh-questionnaire-variants.js?v=20261109-01"></script>
+  <script src="assets/data/review-questionnaire-text.js?v=20261109-01"></script>
+  <script src="assets/data/ai-questionnaire-translations.js?v=20261109-02"></script>
+  <script src="assets/data/deepseek-questionnaire-translations.js?v=20261109-04"></script>
+  <script>
+    (function () {
+      'use strict'
+
+      const LANGUAGE_STORAGE_KEY = 'offline-info-page-v2:language:v1'
+      const PAGE_STORAGE_KEY = 'offline-info-page-v2:questionnaire-page:v1'
+      const REVIEW_STORAGE_KEY = 'offline-info-page-v2:manual-review:v1'
+      const REVIEW_MODE_STORAGE_KEY = 'offline-info-page-v2:review-mode:v1'
+      const TRANSLATION_REVIEW_STORAGE_KEY = 'offline-info-page-v2:translation-review:v1'
+      const TRANSLATION_LANGUAGE_STORAGE_KEY = 'offline-info-page-v2:translation-review-language:v1'
+      const SCREENSHOT_LANGUAGE = 'zh'
+      const ASSET_VERSION = 'offline-info-page-v2-20261109-01'
+      const baselinePages = (window.QUESTIONNAIRE_TEXTS ?? []).map(page => ({
+        ...page,
+        items: page.items.map(item => ({ ...item }))
+      }))
+      const reviewPages = (window.REVIEW_QUESTIONNAIRE_TEXTS ?? window.QUESTIONNAIRE_TEXTS ?? []).map(page => ({
+        ...page,
+        items: page.items.map(item => ({ ...item }))
+      }))
+      const reviewPagesByName = new Map(reviewPages.map(page => [page.name, page]))
+      const pageNames = baselinePages.map(page => page.label)
+      const languageLabels = {
+        zh: '中文',
+        en: '英文',
+        th: '泰语',
+        ms: '马来语',
+        de: '德语',
+        tr: '土耳其语',
+        fr: '法语',
+        uk: '乌克兰语',
+        'ar-SA': '阿拉伯语（沙特）'
+      }
+      const languageCodes = { zh: 'zh-CN', en: 'en', th: 'th', ms: 'ms', de: 'de', tr: 'tr', fr: 'fr', uk: 'uk', 'ar-SA': 'ar-SA' }
+      const languageButtons = Array.from(document.querySelectorAll('.language-button'))
+      const reviewModeButtons = Array.from(document.querySelectorAll('.review-mode-button'))
+      let currentReviewMode = readStorage(REVIEW_MODE_STORAGE_KEY, 'baseline')
+      const elements = {
+        pageHeader: document.querySelector('.page-header'),
+        pageKicker: document.querySelector('#pageKicker'),
+        pageTitle: document.querySelector('#pageTitle'),
+        languageLabel: document.querySelector('#languageLabel'),
+        image: document.querySelector('#questionnaireImage'),
+        variantSelector: document.querySelector('#variantSelector'),
+        variantButtons: document.querySelector('#variantButtons'),
+        previous: document.querySelector('#previousPage'),
+        next: document.querySelector('#nextPage'),
+        counter: document.querySelector('#pageCounter'),
+        chineseTextKicker: document.querySelector('#chineseTextKicker'),
+        chineseTextTitle: document.querySelector('#chineseTextTitle'),
+        chineseTextCount: document.querySelector('#chineseTextCount'),
+        chineseTextList: document.querySelector('#chineseTextList'),
+        aiLanguageBadge: document.querySelector('#aiLanguageBadge'),
+        aiTranslationKicker: document.querySelector('#aiTranslationKicker'),
+        aiTranslationPageTitle: document.querySelector('#aiTranslationPageTitle'),
+        aiTranslationSummary: document.querySelector('#aiTranslationSummary'),
+        aiTranslationCount: document.querySelector('#aiTranslationCount'),
+        aiTranslationList: document.querySelector('#aiTranslationList'),
+        reviewTextKicker: document.querySelector('#reviewTextKicker'),
+        reviewTextTitle: document.querySelector('#reviewTextTitle'),
+        reviewTextCount: document.querySelector('#reviewTextCount'),
+        reviewTextList: document.querySelector('#reviewTextList'),
+        baselineReviewView: document.querySelector('#baselineReviewView'),
+        translationReviewView: document.querySelector('#translationReviewView'),
+        translationReviewKicker: document.querySelector('#translationReviewKicker'),
+        translationReviewTitle: document.querySelector('#translationReviewTitle'),
+        translationReviewSummary: document.querySelector('#translationReviewSummary'),
+        translationReviewCount: document.querySelector('#translationReviewCount'),
+        translationReviewList: document.querySelector('#translationReviewList'),
+        resetReview: document.querySelector('#resetCurrentReview'),
+        saveReview: document.querySelector('#saveCurrentReview'),
+        exportReviews: document.querySelector('#exportReviewedTexts'),
+        reviewStatus: document.querySelector('#reviewStatus'),
+        resetTranslationReview: document.querySelector('#resetCurrentTranslationReview'),
+        saveTranslationReview: document.querySelector('#saveCurrentTranslationReview'),
+        exportTranslationReviews: document.querySelector('#exportReviewedTranslations'),
+        translationReviewStatus: document.querySelector('#translationReviewStatus'),
+        status: document.querySelector('#selectionStatus')
+      }
+
+      function syncStickyLayout () {
+        const height = elements.pageHeader?.getBoundingClientRect().height
+        if (height) document.documentElement.style.setProperty('--page-header-height', `${height}px`)
+      }
+
+      syncStickyLayout()
+      if (typeof ResizeObserver === 'function' && elements.pageHeader) {
+        const headerResizeObserver = new ResizeObserver(syncStickyLayout)
+        headerResizeObserver.observe(elements.pageHeader)
+      } else {
+        window.addEventListener('resize', syncStickyLayout)
+      }
+
+      const reviewDrafts = new Map()
+      let savedReviews = readSavedReviews()
+      const translationReviewDrafts = new Map()
+      let savedTranslationReviews = readSavedTranslationReviews()
+
+      let currentLanguage = readStorage(LANGUAGE_STORAGE_KEY, 'zh')
+      let currentTranslationLanguage = readStorage(TRANSLATION_LANGUAGE_STORAGE_KEY, 'en')
+      let currentPage = Number(readStorage(PAGE_STORAGE_KEY, '0'))
+      let currentVariantId = null
+      if (!Object.hasOwn(languageLabels, currentLanguage)) currentLanguage = 'zh'
+      if (!Object.hasOwn(languageLabels, currentTranslationLanguage) || currentTranslationLanguage === 'zh') currentTranslationLanguage = 'en'
+      if (!['baseline', 'translation'].includes(currentReviewMode)) currentReviewMode = 'baseline'
+      if (!Number.isInteger(currentPage) || currentPage < 0 || currentPage >= pageNames.length) currentPage = 0
+
+      function readStorage (key, fallback) {
+        try {
+          return localStorage.getItem(key) ?? fallback
+        } catch {
+          return fallback
+        }
+      }
+
+      function writeStorage (key, value) {
+        try {
+          localStorage.setItem(key, String(value))
+        } catch {
+          // The page remains usable when storage is unavailable.
+        }
+      }
+
+      function readSavedReviews () {
+        try {
+          const value = JSON.parse(localStorage.getItem(REVIEW_STORAGE_KEY) ?? '{}')
+          return value && typeof value === 'object' && !Array.isArray(value) ? value : {}
+        } catch {
+          return {}
+        }
+      }
+
+      function persistSavedReviews () {
+        try {
+          if (Object.keys(savedReviews).length === 0) localStorage.removeItem(REVIEW_STORAGE_KEY)
+          else localStorage.setItem(REVIEW_STORAGE_KEY, JSON.stringify(savedReviews))
+          return true
+        } catch {
+          return false
+        }
+      }
+
+      function arraysEqual (left, right) {
+        return left.length === right.length && left.every((value, index) => value === right[index])
+      }
+
+      function readSavedTranslationReviews () {
+        try {
+          const value = JSON.parse(localStorage.getItem(TRANSLATION_REVIEW_STORAGE_KEY) ?? '{}')
+          return value && typeof value === 'object' && !Array.isArray(value) ? value : {}
+        } catch {
+          return {}
+        }
+      }
+
+      function persistSavedTranslationReviews () {
+        try {
+          if (Object.keys(savedTranslationReviews).length === 0) localStorage.removeItem(TRANSLATION_REVIEW_STORAGE_KEY)
+          else localStorage.setItem(TRANSLATION_REVIEW_STORAGE_KEY, JSON.stringify(savedTranslationReviews))
+          return true
+        } catch {
+          return false
+        }
+      }
+
+      function reviewPageForIndex (pageIndex) {
+        const baselinePage = baselinePages[pageIndex]
+        return baselinePage ? reviewPagesByName.get(baselinePage.name) : undefined
+      }
+
+      function reviewTargetForVariant (pageIndex, variant, index) {
+        const baselinePage = baselinePages[pageIndex]
+        if (!baselinePage || !variant) return undefined
+        const id = variantId(variant, index)
+        const reviewVariant = reviewVariantForPage(pageIndex, variant, index)
+        return {
+          order: pageIndex + 1,
+          name: `${baselinePage.name}::${id}`,
+          label: `${baselinePage.label} · ${reviewVariant.label || variant.label || `子项 ${index + 1}`}`,
+          screenshot: reviewVariant.screenshot || variant.screenshot,
+          isVariant: true,
+          items: Array.isArray(reviewVariant.items)
+            ? reviewVariant.items.map(item => {
+                const originalText = typeof item.originalText === 'string' ? item.originalText : item.text
+                return {
+                  ...item,
+                  modified: item.text !== originalText,
+                  originalText
+                }
+              })
+            : []
+        }
+      }
+
+      function reviewTargetForIndex (pageIndex) {
+        const variant = activeVariantForPage(pageIndex)
+        if (!variant) return reviewPageForIndex(pageIndex)
+
+        const variants = variantsForPage(pageIndex)
+        return reviewTargetForVariant(pageIndex, variant, variants.indexOf(variant))
+      }
+
+      function savedPageValues (page) {
+        const saved = savedReviews[page.name] ?? {}
+        return page.items.map(item => typeof saved[item.key] === 'string' ? saved[item.key] : item.text)
+      }
+
+      function currentReviewValues (page) {
+        return reviewDrafts.get(page.name) ?? savedPageValues(page)
+      }
+
+      function pageHasSavedChanges (page) {
+        return !arraysEqual(savedPageValues(page), page.items.map(item => item.text))
+      }
+
+      function translationReviewDraftKey (language, page) {
+        return `${language}::${page.name}`
+      }
+
+      function translationReviewInitialValues (page, language, sourceValues = currentReviewValues(page)) {
+        const dictionary = window.AI_TRANSLATIONS?.[language] ?? {}
+        return page.items.map((item, index) => {
+          const sourceText = sourceValues[index] ?? item.text
+          if (item.dynamic) return sourceText
+          if (typeof dictionary[sourceText] === 'string') return dictionary[sourceText]
+          return typeof dictionary[item.text] === 'string' ? dictionary[item.text] : ''
+        })
+      }
+
+      function savedTranslationValues (page, language, sourceValues = currentReviewValues(page)) {
+        const initialValues = translationReviewInitialValues(page, language, sourceValues)
+        const saved = savedTranslationReviews[language]?.[page.name] ?? {}
+        return page.items.map((item, index) => {
+          const savedValue = saved[item.key]
+          if (typeof savedValue === 'string') return savedValue
+          if (savedValue && typeof savedValue === 'object' && typeof savedValue.translation === 'string') {
+            return savedValue.translation
+          }
+          return initialValues[index]
+        })
+      }
+
+      function currentTranslationReviewValues (page, language, sourceValues = currentReviewValues(page)) {
+        return translationReviewDrafts.get(translationReviewDraftKey(language, page)) ??
+          savedTranslationValues(page, language, sourceValues)
+      }
+
+      function translationPageHasSavedChanges (page, language) {
+        return Object.keys(savedTranslationReviews[language]?.[page.name] ?? {}).length > 0
+      }
+
+      function versionedAssetPath (assetPath) {
+        return `${assetPath}${assetPath.includes('?') ? '&' : '?'}v=${ASSET_VERSION}`
+      }
+
+      function imagePath (language, pageIndex) {
+        return versionedAssetPath(`assets/screenshots/${language}/${String(pageIndex + 1).padStart(2, '0')}.png`)
+      }
+
+      function variantsForPage (pageIndex) {
+        const page = baselinePages[pageIndex]
+        if (!page) return []
+        const entry = window.QUESTIONNAIRE_VARIANTS?.[page.name]
+        const variants = Array.isArray(entry) ? entry : entry?.variants
+        return Array.isArray(variants) ? variants.filter(variant => variant && typeof variant === 'object') : []
+      }
+
+      function reviewVariantsForPage (pageIndex) {
+        const page = baselinePages[pageIndex]
+        if (!page) return []
+        const entry = window.REVIEW_QUESTIONNAIRE_VARIANTS?.[page.name]
+        const variants = Array.isArray(entry) ? entry : entry?.variants
+        return Array.isArray(variants) ? variants.filter(variant => variant && typeof variant === 'object') : []
+      }
+
+      function reviewVariantForPage (pageIndex, baselineVariant, index) {
+        const id = variantId(baselineVariant, index)
+        return reviewVariantsForPage(pageIndex).find((variant, reviewIndex) => variantId(variant, reviewIndex) === id) ?? baselineVariant
+      }
+
+      function variantId (variant, index) {
+        return String(variant.id ?? `variant-${String(index + 1).padStart(2, '0')}`)
+      }
+
+      function activeVariantForPage (pageIndex) {
+        if (currentVariantId === null) return undefined
+        return variantsForPage(pageIndex).find((variant, index) => variantId(variant, index) === currentVariantId)
+      }
+
+      function variantImagePath (pageIndex, variant) {
+        const page = baselinePages[pageIndex]
+        const screenshot = typeof variant?.screenshot === 'string' ? variant.screenshot.trim().replaceAll('\\', '/') : ''
+        if (!page || !screenshot) return imagePath(SCREENSHOT_LANGUAGE, pageIndex)
+
+        let assetPath = screenshot
+        if (!/^(?:assets\/|\/|https?:\/\/|data:)/.test(assetPath)) {
+          assetPath = assetPath.includes('/')
+            ? `assets/screenshots/${SCREENSHOT_LANGUAGE}/${assetPath}`
+            : `assets/screenshots/${SCREENSHOT_LANGUAGE}/variants/${page.name}/${assetPath}`
+        }
+        const version = typeof variant.contentHash === 'string' && variant.contentHash
+          ? variant.contentHash.slice(0, 16)
+          : ASSET_VERSION
+        return `${assetPath}${assetPath.includes('?') ? '&' : '?'}v=${version}`
+      }
+
+      function syncVariantButtons () {
+        Array.from(elements.variantButtons.querySelectorAll('.variant-button')).forEach(button => {
+          const selected = (button.dataset.variantId || null) === currentVariantId
+          button.classList.toggle('is-selected', selected)
+          button.setAttribute('aria-checked', String(selected))
+          button.tabIndex = selected ? 0 : -1
+        })
+      }
+
+      function selectVariant (id) {
+        const variants = variantsForPage(currentPage)
+        const exists = id === null || variants.some((variant, index) => variantId(variant, index) === id)
+        if (!exists || id === currentVariantId) return
+
+        currentVariantId = id
+        syncVariantButtons()
+        renderCurrentScreenshot()
+        renderChineseTexts(currentPage)
+        renderAiTranslations(currentPage)
+        renderActiveReview(currentPage)
+        updateSelectionStatus()
+      }
+
+      function renderVariantSelector () {
+        const variants = variantsForPage(currentPage)
+        elements.variantButtons.replaceChildren()
+        elements.variantSelector.hidden = variants.length === 0
+        if (variants.length === 0) {
+          currentVariantId = null
+          return
+        }
+
+        const options = [
+          { id: null, label: '主页面' },
+          ...variants.map((variant, index) => ({ id: variantId(variant, index), label: variant.label || `子项 ${index + 1}` }))
+        ]
+
+        options.forEach((option, index) => {
+          const button = document.createElement('button')
+          button.type = 'button'
+          button.className = 'variant-button'
+          button.dataset.variantId = option.id ?? ''
+          button.setAttribute('role', 'radio')
+          button.textContent = option.label
+          button.addEventListener('click', function () { selectVariant(option.id) })
+          button.addEventListener('keydown', function (event) {
+            let nextIndex = index
+            if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = (index + 1) % options.length
+            else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = (index - 1 + options.length) % options.length
+            else if (event.key === 'Home') nextIndex = 0
+            else if (event.key === 'End') nextIndex = options.length - 1
+            else return
+
+            event.preventDefault()
+            selectVariant(options[nextIndex].id)
+            elements.variantButtons.querySelectorAll('.variant-button')[nextIndex]?.focus()
+          })
+          elements.variantButtons.append(button)
+        })
+        syncVariantButtons()
+      }
+
+      function renderCurrentScreenshot () {
+        const pageNumber = currentPage + 1
+        const pageName = pageNames[currentPage]
+        const variant = activeVariantForPage(currentPage)
+        const screenshotLanguageLabel = languageLabels[SCREENSHOT_LANGUAGE]
+        const displayName = variant ? `${pageName}，子项：${variant.label}` : pageName
+
+        elements.image.classList.add('is-loading')
+        elements.image.alt = `${screenshotLanguageLabel}问卷第 ${pageNumber} 页：${displayName}`
+        elements.image.src = variant
+          ? variantImagePath(currentPage, variant)
+          : imagePath(SCREENSHOT_LANGUAGE, currentPage)
+      }
+
+      function updateSelectionStatus () {
+        const variant = activeVariantForPage(currentPage)
+        const variantStatus = variant ? `；当前子项：${variant.label}` : '；当前展示：主页面'
+        elements.status.textContent = `当前目标语言：${languageLabels[currentLanguage]}；截图固定为中文，第 ${currentPage + 1} 页，${pageNames[currentPage]}${variantStatus}`
+      }
+
+      function renderLanguage () {
+        languageButtons.forEach(button => {
+          const selected = button.dataset.language === currentLanguage
+          button.classList.toggle('is-selected', selected)
+          button.setAttribute('aria-checked', String(selected))
+          button.tabIndex = selected ? 0 : -1
+        })
+        document.documentElement.lang = 'zh-CN'
+        elements.languageLabel.textContent = languageLabels[SCREENSHOT_LANGUAGE]
+        updateSelectionStatus()
+      }
+
+      function renderPage () {
+        const pageNumber = currentPage + 1
+        const paddedNumber = String(pageNumber).padStart(2, '0')
+        const pageName = pageNames[currentPage]
+
+        elements.pageKicker.textContent = `问卷页面 ${paddedNumber}`
+        elements.pageTitle.textContent = pageName
+        elements.counter.textContent = `${paddedNumber} / ${pageNames.length}`
+        elements.previous.disabled = currentPage === 0
+        elements.next.disabled = currentPage === pageNames.length - 1
+        updateSelectionStatus()
+
+        renderVariantSelector()
+        renderCurrentScreenshot()
+        renderChineseTexts(currentPage)
+        renderAiTranslations(currentPage)
+        renderActiveReview(currentPage)
+
+        preloadAdjacentImage(currentPage - 1)
+        preloadAdjacentImage(currentPage + 1)
+      }
+
+      function renderChineseTexts (pageIndex) {
+        const baselinePage = window.QUESTIONNAIRE_TEXTS?.[pageIndex]
+        const variant = activeVariantForPage(pageIndex)
+        const page = variant ?? baselinePage
+        const paddedNumber = String(pageIndex + 1).padStart(2, '0')
+        elements.chineseTextKicker.textContent = variant ? `问卷页面 ${paddedNumber} · 子项` : `问卷页面 ${paddedNumber}`
+        elements.chineseTextTitle.textContent = variant
+          ? `${baselinePage?.label ?? pageNames[pageIndex]} · ${variant.label}`
+          : (baselinePage?.label ?? pageNames[pageIndex])
+        elements.chineseTextList.replaceChildren()
+
+        if (!page || !Array.isArray(page.items) || page.items.length === 0) {
+          elements.chineseTextCount.textContent = '0 条'
+          const empty = document.createElement('li')
+          empty.className = 'text-empty'
+          empty.textContent = '该页面暂时没有可展示的中文内容。'
+          elements.chineseTextList.append(empty)
+          return
+        }
+
+        elements.chineseTextCount.textContent = `${page.items.length} 条`
+        page.items.forEach((item, index) => {
+          const row = document.createElement('li')
+          row.className = 'chinese-text-item'
+
+          const number = document.createElement('span')
+          number.className = 'text-index'
+          number.textContent = String(index + 1).padStart(2, '0')
+
+          const text = document.createElement('span')
+          text.className = 'text-value'
+          text.textContent = item.text
+
+          row.append(number, text)
+          if (item.dynamic) {
+            const badge = document.createElement('span')
+            badge.className = 'dynamic-badge'
+            badge.textContent = '动态内容'
+            row.append(badge)
+          }
+          elements.chineseTextList.append(row)
+        })
+      }
+
+      function resizeTextarea (textarea) {
+        textarea.style.height = 'auto'
+        textarea.style.height = `${Math.max(48, textarea.scrollHeight)}px`
+      }
+
+      function createTranslationArrow () {
+        const arrow = document.createElement('div')
+        arrow.className = 'translation-arrow'
+        arrow.setAttribute('aria-hidden', 'true')
+        arrow.textContent = '↓'
+        return arrow
+      }
+
+      function createTranslationBlock ({ className = '', label, status, statusClass = '', text, lang }) {
+        const block = document.createElement('div')
+        block.className = `translation-block${className ? ` ${className}` : ''}`
+        const labelRow = document.createElement('div')
+        labelRow.className = 'translation-label-row'
+        const blockLabel = document.createElement('span')
+        blockLabel.className = 'translation-label'
+        blockLabel.textContent = label
+        labelRow.append(blockLabel)
+        if (status) {
+          const statusBadge = document.createElement('span')
+          statusBadge.className = `translation-status-badge${statusClass ? ` ${statusClass}` : ''}`
+          statusBadge.textContent = status
+          labelRow.append(statusBadge)
+        }
+        const value = document.createElement('p')
+        value.className = 'translation-value'
+        value.lang = lang
+        value.dir = 'auto'
+        value.textContent = text
+        block.append(labelRow, value)
+        return block
+      }
+
+      function renderAiTranslations (pageIndex) {
+        const page = reviewTargetForIndex(pageIndex)
+        const paddedNumber = String(pageIndex + 1).padStart(2, '0')
+        const targetLanguage = languageLabels[currentLanguage]
+        const isExternalLanguage = currentLanguage !== 'zh'
+        const codexLabel = isExternalLanguage ? `Codex ${targetLanguage}` : 'Codex 中文校对'
+        const codexDictionary = window.AI_TRANSLATIONS?.[currentLanguage] ?? {}
+        const hasCodexLocale = !isExternalLanguage || Object.keys(codexDictionary).length > 0
+        const deepSeekData = window.DEEPSEEK_TRANSLATIONS ?? {}
+        const deepSeekDictionary = deepSeekData.translations?.[currentLanguage] ?? {}
+        const deepSeekModel = deepSeekData.metadata?.model ?? 'deepseek-chat'
+
+        elements.aiLanguageBadge.textContent = isExternalLanguage
+          ? (hasCodexLocale ? '双模型' : 'DeepSeek')
+          : '中文校对'
+        elements.aiLanguageBadge.title = isExternalLanguage
+          ? `${hasCodexLocale ? 'Codex 与 DeepSeek 对照' : 'Codex 译文待补充，当前展示 DeepSeek 结果'}；DeepSeek 模型：${deepSeekModel}`
+          : '中文基准与 Codex 中文校对对照'
+        elements.aiTranslationKicker.textContent = `问卷页面 ${paddedNumber}`
+        elements.aiTranslationPageTitle.textContent = page?.label ?? pageNames[pageIndex]
+        elements.aiTranslationSummary.textContent = isExternalLanguage
+          ? `中文原文 → ${hasCodexLocale ? 'Codex / ' : 'Codex（待补充）/ '}DeepSeek ${targetLanguage}`
+          : '中文原文 → Codex 中文校对'
+        elements.aiTranslationList.replaceChildren()
+
+        if (!page || page.items.length === 0) {
+          elements.aiTranslationCount.textContent = '0 条'
+          const empty = document.createElement('li')
+          empty.className = 'text-empty'
+          empty.textContent = '该页面暂时没有可翻译的内容。'
+          elements.aiTranslationList.append(empty)
+          return
+        }
+
+        elements.aiTranslationCount.textContent = `${page.items.length} 条`
+        page.items.forEach((item, index) => {
+          const hasCodexTranslation = !isExternalLanguage || item.dynamic || typeof codexDictionary[item.text] === 'string'
+          const codexTranslation = !isExternalLanguage || item.dynamic
+            ? item.text
+            : codexDictionary[item.text]
+          const deepSeekTranslation = item.dynamic ? item.text : deepSeekDictionary[item.text]
+
+          const row = document.createElement('li')
+          row.className = 'ai-translation-item'
+
+          const number = document.createElement('span')
+          number.className = 'text-index'
+          number.textContent = String(index + 1).padStart(2, '0')
+
+          const pair = document.createElement('div')
+          pair.className = 'translation-pair'
+
+          pair.append(
+            createTranslationBlock({ label: '中文原文', text: item.text, lang: 'zh-CN' }),
+            createTranslationArrow(),
+            createTranslationBlock({
+              className: 'is-target',
+              label: codexLabel,
+              status: item.dynamic ? '动态内容 · 原样保留' : (hasCodexTranslation ? '已校对' : '待补充'),
+              statusClass: item.dynamic ? 'is-dynamic' : (hasCodexTranslation ? '' : 'is-missing'),
+              text: hasCodexTranslation ? codexTranslation : '尚未生成 Codex 译文。',
+              lang: languageCodes[currentLanguage]
+            })
+          )
+
+          if (isExternalLanguage) {
+            const hasDeepSeekTranslation = item.dynamic || typeof deepSeekTranslation === 'string'
+            pair.append(
+              createTranslationArrow(),
+              createTranslationBlock({
+                className: 'is-deepseek',
+                label: `DeepSeek ${targetLanguage}`,
+                status: item.dynamic ? '动态内容 · 原样保留' : (hasDeepSeekTranslation ? '模型生成' : '待生成'),
+                statusClass: item.dynamic ? 'is-dynamic' : (hasDeepSeekTranslation ? 'is-model' : 'is-missing'),
+                text: hasDeepSeekTranslation ? deepSeekTranslation : '尚未生成，请运行 DeepSeek 翻译命令。',
+                lang: languageCodes[currentLanguage]
+              })
+            )
+          }
+
+          row.append(number, pair)
+          elements.aiTranslationList.append(row)
+        })
+      }
+
+      function updateReviewState (page, message) {
+        const hasDraft = reviewDrafts.has(page.name)
+        const hasSavedChanges = pageHasSavedChanges(page)
+        elements.saveReview.disabled = !hasDraft
+        elements.resetReview.disabled = !hasDraft && !hasSavedChanges
+
+        if (message) elements.reviewStatus.textContent = message
+        else if (hasDraft) elements.reviewStatus.textContent = '当前页有未保存修改'
+        else if (hasSavedChanges) elements.reviewStatus.textContent = '当前页修改已保存到本浏览器'
+        else elements.reviewStatus.textContent = '当前页使用人工核对初始稿'
+      }
+
+      function updateReviewDraft (page) {
+        const values = Array.from(elements.reviewTextList.querySelectorAll('.review-textarea'), textarea => textarea.value)
+        const savedValues = savedPageValues(page)
+        if (arraysEqual(values, savedValues)) reviewDrafts.delete(page.name)
+        else reviewDrafts.set(page.name, values)
+        updateReviewState(page)
+      }
+
+      function syncReviewTextareaModifiedState (textarea, item) {
+        const originalText = typeof item.originalText === 'string' ? item.originalText : item.text
+        const isModified = textarea.value !== originalText
+        textarea.classList.toggle('is-imported-modified', isModified)
+        if (isModified) textarea.title = '该文案相对中文基准已修改'
+        else textarea.removeAttribute('title')
+      }
+
+      function renderManualReview (pageIndex) {
+        const page = reviewTargetForIndex(pageIndex)
+        const paddedNumber = String(pageIndex + 1).padStart(2, '0')
+        elements.reviewTextKicker.textContent = page?.isVariant
+          ? `问卷页面 ${paddedNumber} · 子项`
+          : `问卷页面 ${paddedNumber}`
+        elements.reviewTextTitle.textContent = page?.label ?? pageNames[pageIndex]
+        elements.reviewTextList.replaceChildren()
+
+        if (!page || page.items.length === 0) {
+          elements.reviewTextCount.textContent = '0 条'
+          const empty = document.createElement('li')
+          empty.className = 'text-empty'
+          empty.textContent = '该页面暂时没有可核对的中文内容。'
+          elements.reviewTextList.append(empty)
+          elements.saveReview.disabled = true
+          elements.resetReview.disabled = true
+          elements.reviewStatus.textContent = '当前页没有可编辑内容'
+          return
+        }
+
+        const values = currentReviewValues(page)
+        elements.reviewTextCount.textContent = `${page.items.length} 条`
+        page.items.forEach((item, index) => {
+          const row = document.createElement('li')
+          row.className = 'review-text-item'
+
+          const number = document.createElement('span')
+          number.className = 'text-index'
+          number.textContent = String(index + 1).padStart(2, '0')
+
+          const textarea = document.createElement('textarea')
+          textarea.className = 'review-textarea'
+          textarea.rows = 1
+          textarea.value = values[index]
+          syncReviewTextareaModifiedState(textarea, item)
+          textarea.setAttribute('aria-label', `第 ${index + 1} 条中文文案`)
+          textarea.addEventListener('input', function () {
+            resizeTextarea(textarea)
+            syncReviewTextareaModifiedState(textarea, item)
+            updateReviewDraft(page)
+          })
+
+          row.append(number, textarea)
+          if (item.dynamic) {
+            const meta = document.createElement('div')
+            meta.className = 'review-item-meta'
+            const badge = document.createElement('span')
+            badge.className = 'dynamic-badge'
+            badge.textContent = '动态内容'
+            meta.append(badge)
+            row.append(meta)
+          }
+          elements.reviewTextList.append(row)
+          resizeTextarea(textarea)
+        })
+        updateReviewState(page)
+      }
+
+      function syncTranslationReviewModifiedState (textarea, initialValue) {
+        const isModified = textarea.value !== initialValue
+        textarea.classList.toggle('is-reviewed-modified', isModified)
+        if (isModified) textarea.title = '该译文相对 Codex 初稿已修改'
+        else textarea.removeAttribute('title')
+      }
+
+      function updateTranslationReviewState (page, language, message) {
+        if (!page || language === 'zh') {
+          elements.saveTranslationReview.disabled = true
+          elements.resetTranslationReview.disabled = true
+          elements.exportTranslationReviews.disabled = true
+          elements.translationReviewStatus.textContent = message ?? '请从上方选择一种目标语言'
+          return
+        }
+
+        const draftKey = translationReviewDraftKey(language, page)
+        const hasDraft = translationReviewDrafts.has(draftKey)
+        const hasSavedChanges = translationPageHasSavedChanges(page, language)
+        const languageLabel = languageLabels[language]
+        elements.saveTranslationReview.disabled = !hasDraft
+        elements.resetTranslationReview.disabled = !hasDraft && !hasSavedChanges
+        elements.exportTranslationReviews.disabled = false
+
+        if (message) elements.translationReviewStatus.textContent = message
+        else if (hasDraft) elements.translationReviewStatus.textContent = `当前页有未保存的${languageLabel}译文修改`
+        else if (hasSavedChanges) elements.translationReviewStatus.textContent = `当前页${languageLabel}译文已保存到本浏览器`
+        else elements.translationReviewStatus.textContent = `当前页使用 Codex ${languageLabel}译文初稿`
+      }
+
+      function updateTranslationReviewDraft (page, language, sourceValues) {
+        const values = Array.from(
+          elements.translationReviewList.querySelectorAll('.translation-review-textarea'),
+          textarea => textarea.value
+        )
+        const savedValues = savedTranslationValues(page, language, sourceValues)
+        const draftKey = translationReviewDraftKey(language, page)
+        if (arraysEqual(values, savedValues)) translationReviewDrafts.delete(draftKey)
+        else translationReviewDrafts.set(draftKey, values)
+        updateTranslationReviewState(page, language)
+      }
+
+      function renderTranslationReview (pageIndex) {
+        const page = reviewTargetForIndex(pageIndex)
+        const language = currentLanguage
+        const paddedNumber = String(pageIndex + 1).padStart(2, '0')
+        const languageLabel = languageLabels[language]
+        elements.translationReviewKicker.textContent = page?.isVariant
+          ? `问卷页面 ${paddedNumber} · 子项`
+          : `问卷页面 ${paddedNumber}`
+        elements.translationReviewTitle.textContent = page?.label ?? pageNames[pageIndex]
+        elements.translationReviewSummary.textContent = language === 'zh'
+          ? '中文原文只读；请从上方选择目标语言'
+          : `中文原文只读；${languageLabel}译文可编辑`
+        elements.translationReviewList.replaceChildren()
+
+        if (language === 'zh') {
+          elements.translationReviewCount.textContent = '0 条'
+          const empty = document.createElement('li')
+          empty.className = 'text-empty'
+          empty.textContent = '多语言译文核对不以中文作为目标语言，请从上方选择英文或其他语言。'
+          elements.translationReviewList.append(empty)
+          updateTranslationReviewState(page, language)
+          return
+        }
+
+        if (!page || page.items.length === 0) {
+          elements.translationReviewCount.textContent = '0 条'
+          const empty = document.createElement('li')
+          empty.className = 'text-empty'
+          empty.textContent = '该页面暂时没有可核对的译文。'
+          elements.translationReviewList.append(empty)
+          updateTranslationReviewState(page, language, '当前页没有可编辑内容')
+          return
+        }
+
+        const sourceValues = currentReviewValues(page)
+        const initialValues = translationReviewInitialValues(page, language, sourceValues)
+        const values = currentTranslationReviewValues(page, language, sourceValues)
+        elements.translationReviewCount.textContent = `${page.items.length} 条`
+
+        page.items.forEach((item, index) => {
+          const row = document.createElement('li')
+          row.className = 'review-text-item translation-review-item'
+
+          const number = document.createElement('span')
+          number.className = 'text-index'
+          number.textContent = String(index + 1).padStart(2, '0')
+
+          const fields = document.createElement('div')
+          fields.className = 'translation-review-fields'
+
+          const sourceField = document.createElement('div')
+          sourceField.className = 'translation-review-field'
+          const sourceLabel = document.createElement('span')
+          sourceLabel.className = 'translation-review-label'
+          sourceLabel.textContent = '中文原文（只读）'
+          const source = document.createElement('div')
+          source.className = 'translation-review-source'
+          source.lang = 'zh-CN'
+          source.dir = 'auto'
+          source.textContent = sourceValues[index]
+          sourceField.append(sourceLabel, source)
+
+          const targetField = document.createElement('label')
+          targetField.className = 'translation-review-field'
+          const targetLabel = document.createElement('span')
+          targetLabel.className = 'translation-review-label'
+          targetLabel.textContent = `${languageLabel}译文（可编辑）`
+          const textarea = document.createElement('textarea')
+          textarea.className = 'translation-review-textarea'
+          textarea.rows = 1
+          textarea.value = values[index]
+          textarea.lang = languageCodes[language]
+          textarea.dir = 'auto'
+          textarea.placeholder = `请输入${languageLabel}译文`
+          textarea.setAttribute('aria-label', `第 ${index + 1} 条${languageLabel}译文`)
+          syncTranslationReviewModifiedState(textarea, initialValues[index])
+          textarea.addEventListener('input', function () {
+            resizeTextarea(textarea)
+            syncTranslationReviewModifiedState(textarea, initialValues[index])
+            updateTranslationReviewDraft(page, language, sourceValues)
+          })
+          targetField.append(targetLabel, textarea)
+
+          fields.append(sourceField, targetField)
+          row.append(number, fields)
+          if (item.dynamic) {
+            const meta = document.createElement('div')
+            meta.className = 'review-item-meta'
+            const badge = document.createElement('span')
+            badge.className = 'dynamic-badge'
+            badge.textContent = '动态内容'
+            meta.append(badge)
+            row.append(meta)
+          }
+          elements.translationReviewList.append(row)
+          resizeTextarea(textarea)
+        })
+
+        updateTranslationReviewState(page, language)
+      }
+
+      function renderActiveReview (pageIndex = currentPage) {
+        if (currentReviewMode === 'translation') renderTranslationReview(pageIndex)
+        else renderManualReview(pageIndex)
+      }
+
+      function saveCurrentReview () {
+        const page = reviewTargetForIndex(currentPage)
+        if (!page) return
+        const values = Array.from(elements.reviewTextList.querySelectorAll('.review-textarea'), textarea => textarea.value)
+        const changes = {}
+        page.items.forEach((item, index) => {
+          if (values[index] !== item.text) changes[item.key] = values[index]
+        })
+
+        if (Object.keys(changes).length === 0) delete savedReviews[page.name]
+        else savedReviews[page.name] = changes
+        reviewDrafts.delete(page.name)
+
+        const persisted = persistSavedReviews()
+        renderManualReview(currentPage)
+        updateReviewState(page, persisted ? '当前页修改已保存' : '浏览器存储不可用，修改仅在本次打开期间有效')
+      }
+
+      function resetCurrentReview () {
+        const page = reviewTargetForIndex(currentPage)
+        if (!page) return
+        delete savedReviews[page.name]
+        reviewDrafts.delete(page.name)
+        const persisted = persistSavedReviews()
+        renderManualReview(currentPage)
+        updateReviewState(page, persisted ? '当前页已重置为人工核对初始稿' : '当前页已在本次打开期间重置')
+      }
+
+      function saveCurrentTranslationReview () {
+        const page = reviewTargetForIndex(currentPage)
+        const language = currentLanguage
+        if (!page || language === 'zh') return
+
+        const sourceValues = currentReviewValues(page)
+        const initialValues = translationReviewInitialValues(page, language, sourceValues)
+        const values = Array.from(
+          elements.translationReviewList.querySelectorAll('.translation-review-textarea'),
+          textarea => textarea.value
+        )
+        const changes = {}
+        page.items.forEach((item, index) => {
+          if (values[index] !== initialValues[index]) {
+            changes[item.key] = {
+              sourceText: sourceValues[index],
+              translation: values[index]
+            }
+          }
+        })
+
+        if (!savedTranslationReviews[language]) savedTranslationReviews[language] = {}
+        if (Object.keys(changes).length === 0) delete savedTranslationReviews[language][page.name]
+        else savedTranslationReviews[language][page.name] = changes
+        if (Object.keys(savedTranslationReviews[language]).length === 0) delete savedTranslationReviews[language]
+        translationReviewDrafts.delete(translationReviewDraftKey(language, page))
+
+        const persisted = persistSavedTranslationReviews()
+        renderTranslationReview(currentPage)
+        updateTranslationReviewState(
+          page,
+          language,
+          persisted
+            ? `当前页${languageLabels[language]}译文修改已保存`
+            : '浏览器存储不可用，译文修改仅在本次打开期间有效'
+        )
+      }
+
+      function resetCurrentTranslationReview () {
+        const page = reviewTargetForIndex(currentPage)
+        const language = currentLanguage
+        if (!page || language === 'zh') return
+
+        if (savedTranslationReviews[language]) {
+          delete savedTranslationReviews[language][page.name]
+          if (Object.keys(savedTranslationReviews[language]).length === 0) delete savedTranslationReviews[language]
+        }
+        translationReviewDrafts.delete(translationReviewDraftKey(language, page))
+        const persisted = persistSavedTranslationReviews()
+        renderTranslationReview(currentPage)
+        updateTranslationReviewState(
+          page,
+          language,
+          persisted
+            ? `当前页已重置为 Codex ${languageLabels[language]}译文初稿`
+            : '当前页译文已在本次打开期间重置'
+        )
+      }
+
+      function createReviewedExport () {
+        return reviewPages.map(page => {
+          const saved = savedReviews[page.name] ?? {}
+          return {
+            ...page,
+            items: page.items.map(item => {
+              const reviewedText = typeof saved[item.key] === 'string' ? saved[item.key] : item.text
+              const originalText = typeof item.originalText === 'string' ? item.originalText : item.text
+              return {
+                ...item,
+                text: reviewedText,
+                modified: reviewedText !== originalText,
+                originalText
+              }
+            })
+          }
+        })
+      }
+
+      function createReviewedVariantExport () {
+        const exportedVariants = {}
+
+        baselinePages.forEach((page, pageIndex) => {
+          const variants = variantsForPage(pageIndex)
+          if (variants.length === 0) return
+
+          exportedVariants[page.name] = variants.map((variant, index) => {
+            const reviewVariant = reviewVariantForPage(pageIndex, variant, index)
+            const target = reviewTargetForVariant(pageIndex, variant, index)
+            const saved = savedReviews[target.name] ?? {}
+            return {
+              ...reviewVariant,
+              items: target.items.map(item => {
+                const reviewedText = typeof saved[item.key] === 'string' ? saved[item.key] : item.text
+                const originalText = typeof item.originalText === 'string' ? item.originalText : item.text
+                return {
+                  ...item,
+                  text: reviewedText,
+                  modified: reviewedText !== originalText,
+                  originalText
+                }
+              })
+            }
+          })
+        })
+
+        return exportedVariants
+      }
+
+      function exportReviewedTexts () {
+        const exportedPages = createReviewedExport()
+        const exportedVariants = createReviewedVariantExport()
+        const source = [
+          `window.REVIEW_QUESTIONNAIRE_TEXTS = ${JSON.stringify(exportedPages, null, 2)}`,
+          `window.REVIEW_QUESTIONNAIRE_VARIANTS = ${JSON.stringify(exportedVariants, null, 2)}`,
+          ''
+        ].join('\n\n')
+        const blob = new Blob([source], { type: 'text/javascript;charset=utf-8' })
+        const url = URL.createObjectURL(blob)
+        const link = document.createElement('a')
+        const now = new Date()
+        const timestamp = [
+          now.getFullYear(),
+          String(now.getMonth() + 1).padStart(2, '0'),
+          String(now.getDate()).padStart(2, '0'),
+          '-',
+          String(now.getHours()).padStart(2, '0'),
+          String(now.getMinutes()).padStart(2, '0'),
+          String(now.getSeconds()).padStart(2, '0')
+        ].join('')
+        const savedPageCount = reviewPages.filter(page => pageHasSavedChanges(page)).length
+        const savedVariantCount = baselinePages.reduce((count, page, pageIndex) => {
+          return count + variantsForPage(pageIndex).filter((variant, index) => {
+            const target = reviewTargetForVariant(pageIndex, variant, index)
+            return target && pageHasSavedChanges(target)
+          }).length
+        }, 0)
+        const exportedVariantCount = Object.values(exportedVariants).reduce((count, variants) => count + variants.length, 0)
+        const fileName = `offline-info-page-v2.review-questionnaire-text.reviewed-${savedPageCount}pages-${savedVariantCount}variants-${timestamp}.js`
+        link.href = url
+        link.download = fileName
+        document.body.append(link)
+        link.click()
+        link.remove()
+        URL.revokeObjectURL(url)
+
+        const hasDrafts = reviewDrafts.size > 0
+        elements.reviewStatus.textContent = hasDrafts
+          ? `已导出 ${fileName}；包含 ${savedPageCount} 个已保存主页面和 ${savedVariantCount} 个已保存子项，未保存修改不会写入文件`
+          : `已导出 ${fileName}；完整保留 ${reviewPages.length} 页主页面和 ${exportedVariantCount} 个动态子项，其中 ${savedPageCount} 个主页面、${savedVariantCount} 个子项包含本次保存的修改`
+      }
+
+      function createReviewedTranslationPage (page, language) {
+        const savedSources = savedPageValues(page)
+        const savedTranslations = savedTranslationReviews[language]?.[page.name] ?? {}
+        const sourceValues = page.items.map((item, index) => {
+          const savedValue = savedTranslations[item.key]
+          return savedValue && typeof savedValue === 'object' && typeof savedValue.sourceText === 'string'
+            ? savedValue.sourceText
+            : savedSources[index]
+        })
+        const initialValues = translationReviewInitialValues(page, language, sourceValues)
+        const translatedValues = savedTranslationValues(page, language, sourceValues)
+        return {
+          order: page.order,
+          name: page.name,
+          label: page.label,
+          screenshot: page.screenshot,
+          items: page.items.map((item, index) => ({
+            key: item.key,
+            sourceText: sourceValues[index],
+            translation: translatedValues[index],
+            dynamic: Boolean(item.dynamic),
+            modified: translatedValues[index] !== initialValues[index]
+          }))
+        }
+      }
+
+      function createReviewedTranslationVariantExport (language) {
+        const exportedVariants = {}
+
+        baselinePages.forEach((page, pageIndex) => {
+          const variants = variantsForPage(pageIndex)
+          if (variants.length === 0) return
+
+          exportedVariants[page.name] = variants.map((variant, index) => {
+            const target = reviewTargetForVariant(pageIndex, variant, index)
+            const exported = createReviewedTranslationPage(target, language)
+            return {
+              id: variantId(variant, index),
+              order: variant.order ?? index + 1,
+              ...exported
+            }
+          })
+        })
+
+        return exportedVariants
+      }
+
+      function exportReviewedTranslations () {
+        const language = currentLanguage
+        if (language === 'zh') {
+          elements.translationReviewStatus.textContent = '请先从上方选择一种目标语言再导出'
+          return
+        }
+
+        const exportedAt = new Date()
+        const payload = {
+          metadata: {
+            schemaVersion: 1,
+            sourceLocale: 'zh-CN',
+            targetLocale: languageCodes[language],
+            targetLanguage: languageLabels[language],
+            exportedAt: exportedAt.toISOString()
+          },
+          pages: reviewPages.map(page => createReviewedTranslationPage(page, language)),
+          variants: createReviewedTranslationVariantExport(language)
+        }
+        const source = `window.REVIEWED_QUESTIONNAIRE_TRANSLATIONS = ${JSON.stringify(payload, null, 2)}\n`
+        const blob = new Blob([source], { type: 'text/javascript;charset=utf-8' })
+        const url = URL.createObjectURL(blob)
+        const link = document.createElement('a')
+        const timestamp = [
+          exportedAt.getFullYear(),
+          String(exportedAt.getMonth() + 1).padStart(2, '0'),
+          String(exportedAt.getDate()).padStart(2, '0'),
+          '-',
+          String(exportedAt.getHours()).padStart(2, '0'),
+          String(exportedAt.getMinutes()).padStart(2, '0'),
+          String(exportedAt.getSeconds()).padStart(2, '0')
+        ].join('')
+        const savedTargets = Object.keys(savedTranslationReviews[language] ?? {})
+        const savedPageCount = savedTargets.filter(name => !name.includes('::')).length
+        const savedVariantCount = savedTargets.length - savedPageCount
+        const fileName = `offline-info-page-v2.reviewed-questionnaire-translations.${language}-${savedPageCount}pages-${savedVariantCount}variants-${timestamp}.js`
+        link.href = url
+        link.download = fileName
+        document.body.append(link)
+        link.click()
+        link.remove()
+        URL.revokeObjectURL(url)
+
+        const hasDrafts = Array.from(translationReviewDrafts.keys()).some(key => key.startsWith(`${language}::`))
+        elements.translationReviewStatus.textContent = hasDrafts
+          ? `已导出 ${fileName}；${languageLabels[language]}未保存修改不会写入文件`
+          : `已导出 ${fileName}；按页面、子项和条目保留完整${languageLabels[language]}译文`
+      }
+
+      function selectLanguage (language, announce) {
+        if (currentReviewMode === 'translation' && language === 'zh') {
+          elements.translationReviewStatus.textContent = `多语言译文核对需选择目标语言，已保留${languageLabels[currentLanguage]}`
+          return
+        }
+        currentLanguage = language
+        writeStorage(LANGUAGE_STORAGE_KEY, currentLanguage)
+        if (currentLanguage !== 'zh') {
+          currentTranslationLanguage = currentLanguage
+          writeStorage(TRANSLATION_LANGUAGE_STORAGE_KEY, currentTranslationLanguage)
+        }
+        renderLanguage()
+        renderAiTranslations(currentPage)
+        renderActiveReview(currentPage)
+
+        if (announce) {
+          document.dispatchEvent(new CustomEvent('languagechange', {
+            detail: { language: currentLanguage, label: languageLabels[currentLanguage] }
+          }))
+        }
+      }
+
+      function goToPage (pageIndex) {
+        if (pageIndex < 0 || pageIndex >= pageNames.length || pageIndex === currentPage) return
+        currentPage = pageIndex
+        currentVariantId = null
+        writeStorage(PAGE_STORAGE_KEY, currentPage)
+        renderPage()
+      }
+
+      function preloadAdjacentImage (pageIndex) {
+        if (pageIndex < 0 || pageIndex >= pageNames.length) return
+        const image = new Image()
+        image.src = imagePath(SCREENSHOT_LANGUAGE, pageIndex)
+      }
+
+      function selectReviewMode (mode, shouldRender = true) {
+        if (!['baseline', 'translation'].includes(mode)) return
+        currentReviewMode = mode
+        writeStorage(REVIEW_MODE_STORAGE_KEY, currentReviewMode)
+        if (currentReviewMode === 'translation' && currentLanguage === 'zh') {
+          currentLanguage = currentTranslationLanguage
+          writeStorage(LANGUAGE_STORAGE_KEY, currentLanguage)
+          renderLanguage()
+          renderAiTranslations(currentPage)
+        }
+        reviewModeButtons.forEach(function (button) {
+          const selected = button.dataset.reviewMode === currentReviewMode
+          button.classList.toggle('is-selected', selected)
+          button.setAttribute('aria-selected', String(selected))
+          button.tabIndex = selected ? 0 : -1
+        })
+        elements.baselineReviewView.hidden = currentReviewMode !== 'baseline'
+        elements.translationReviewView.hidden = currentReviewMode !== 'translation'
+        if (shouldRender) renderActiveReview(currentPage)
+      }
+
+      languageButtons.forEach((button, index) => {
+        button.addEventListener('click', function () {
+          selectLanguage(button.dataset.language, true)
+        })
+
+        button.addEventListener('keydown', function (event) {
+          let nextIndex = index
+          if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = (index + 1) % languageButtons.length
+          else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = (index - 1 + languageButtons.length) % languageButtons.length
+          else if (event.key === 'Home') nextIndex = 0
+          else if (event.key === 'End') nextIndex = languageButtons.length - 1
+          else return
+
+          event.preventDefault()
+          selectLanguage(languageButtons[nextIndex].dataset.language, true)
+          languageButtons[nextIndex].focus()
+        })
+      })
+
+      reviewModeButtons.forEach(function (button, index) {
+        button.addEventListener('click', function () {
+          selectReviewMode(button.dataset.reviewMode)
+        })
+
+        button.addEventListener('keydown', function (event) {
+          let nextIndex = index
+          if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = (index + 1) % reviewModeButtons.length
+          else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = (index - 1 + reviewModeButtons.length) % reviewModeButtons.length
+          else if (event.key === 'Home') nextIndex = 0
+          else if (event.key === 'End') nextIndex = reviewModeButtons.length - 1
+          else return
+
+          event.preventDefault()
+          selectReviewMode(reviewModeButtons[nextIndex].dataset.reviewMode)
+          reviewModeButtons[nextIndex].focus()
+        })
+      })
+
+      elements.previous.addEventListener('click', function () { goToPage(currentPage - 1) })
+      elements.next.addEventListener('click', function () { goToPage(currentPage + 1) })
+      elements.saveReview.addEventListener('click', saveCurrentReview)
+      elements.resetReview.addEventListener('click', resetCurrentReview)
+      elements.exportReviews.addEventListener('click', exportReviewedTexts)
+      elements.saveTranslationReview.addEventListener('click', saveCurrentTranslationReview)
+      elements.resetTranslationReview.addEventListener('click', resetCurrentTranslationReview)
+      elements.exportTranslationReviews.addEventListener('click', exportReviewedTranslations)
+      elements.image.addEventListener('load', function () { elements.image.classList.remove('is-loading') })
+      elements.image.addEventListener('error', function () {
+        elements.image.classList.remove('is-loading')
+        const variant = activeVariantForPage(currentPage)
+        const variantLabel = variant ? `子项“${variant.label}”` : '主页面'
+        elements.status.textContent = `中文第 ${currentPage + 1} 页${variantLabel}截图加载失败`
+      })
+
+      renderLanguage()
+      selectReviewMode(currentReviewMode, false)
+      renderPage()
+    })()
+  </script>
+</body>
+</html>
