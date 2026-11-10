@@ -6,9 +6,9 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <meta name="description" content="多语言问卷截图查看页面">
+  <meta name="description" content="多语言截图标注页面">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231f2937'/%3E%3Cpath d='M18 20h28M22 32h20M26 44h12' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
-  <title>多语言问卷（第二套）</title>
+  <title>多语言截图标注</title>
   <style>
     :root {
       color-scheme: light;
@@ -117,26 +117,28 @@
 
     .workspace {
       display: grid;
-      grid-template-columns: minmax(340px, 430px) repeat(3, minmax(280px, 1fr));
-      gap: 22px;
-      width: 100%;
+      grid-template-columns: minmax(360px, 420px) minmax(560px, 780px);
+      justify-content: center;
+      align-items: start;
+      gap: clamp(22px, 2vw, 30px);
+      width: min(1318px, calc(100% - 32px));
       min-height: calc(100vh - 100px);
-      margin: 0 0 32px;
-      padding-right: 20px;
+      margin: 18px auto 32px;
+      padding-left: 88px;
     }
 
     .screenshot-panel {
       position: sticky;
-      top: var(--page-header-height);
+      top: calc(var(--page-header-height) + 18px);
       display: flex;
       flex-direction: column;
       align-self: start;
-      height: calc(100vh - var(--page-header-height) - 14px);
-      height: calc(100dvh - var(--page-header-height) - 14px);
-      overflow: hidden;
+      width: 100%;
+      height: calc(100vh - var(--page-header-height) - 36px);
+      height: calc(100dvh - var(--page-header-height) - 36px);
+      overflow: visible;
       border: 1px solid var(--border);
-      border-left: 0;
-      border-radius: 0 20px 20px 0;
+      border-radius: 20px;
       background: var(--surface);
       box-shadow: 0 14px 38px rgba(30, 42, 65, .09);
     }
@@ -237,11 +239,87 @@
       height: auto;
       max-height: none;
       padding: 12px;
-      overflow: hidden;
+      overflow: visible;
       background:
         linear-gradient(45deg, rgba(255, 255, 255, .025) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, .025) 75%),
         #202733;
       background-size: 22px 22px;
+    }
+
+    .screenshot-thumbnails {
+      position: absolute;
+      z-index: 4;
+      top: 12px;
+      bottom: 12px;
+      left: -88px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      width: 76px;
+      min-height: 0;
+      padding: 5px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 10px;
+      background: rgba(10, 15, 24, .58);
+      scrollbar-color: rgba(255, 255, 255, .42) transparent;
+      scrollbar-width: thin;
+    }
+
+    .screenshot-thumbnail {
+      position: relative;
+      flex: 0 0 auto;
+      width: 100%;
+      min-height: 88px;
+      padding: 4px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .08);
+      cursor: pointer;
+      transition: border-color .18s ease, background .18s ease, transform .18s ease;
+    }
+
+    .screenshot-thumbnail:hover:not(.is-selected) {
+      border-color: rgba(255, 255, 255, .45);
+      background: rgba(255, 255, 255, .15);
+      transform: translateY(-1px);
+    }
+
+    .screenshot-thumbnail.is-selected {
+      border-color: #1683ff;
+      background: rgba(22, 131, 255, .2);
+      box-shadow: 0 0 0 1px rgba(22, 131, 255, .3);
+    }
+
+    .screenshot-thumbnail:focus-visible {
+      outline: 3px solid rgba(255, 255, 255, .88);
+      outline-offset: 2px;
+    }
+
+    .screenshot-thumbnail-image {
+      display: block;
+      width: 100%;
+      height: 76px;
+      border-radius: 4px;
+      background: #f7f8fb;
+      object-fit: contain;
+    }
+
+    .screenshot-thumbnail-number {
+      position: absolute;
+      right: 6px;
+      bottom: 6px;
+      min-width: 24px;
+      padding: 2px 5px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(13, 22, 37, .82);
+      font-size: 10px;
+      font-weight: 850;
+      line-height: 1.4;
+      text-align: center;
     }
 
     .annotation-toolbar {
@@ -391,6 +469,7 @@
 
     .content-area {
       align-self: start;
+      width: 100%;
       padding: 28px;
       border: 1px solid rgba(220, 226, 236, .72);
       border-radius: 20px;
@@ -425,6 +504,53 @@
       min-height: 58px;
       padding: 0 0 18px;
       border-bottom: 1px solid var(--border);
+    }
+
+    .screenshot-heading-main { min-width: 0; }
+
+    .screenshot-heading-actions {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .screenshot-tab-selector {
+      display: block;
+      width: 120px;
+    }
+
+    .screenshot-tab-selector-label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .screenshot-tab-select {
+      width: 100%;
+      min-width: 0;
+      height: 32px;
+      padding: 0 28px 0 9px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text);
+      background: var(--surface);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .screenshot-tab-select:focus-visible {
+      outline: 3px solid rgba(0, 122, 255, .16);
+      outline-offset: 1px;
+      border-color: var(--focus);
     }
 
     .review-mode-toolbar {
@@ -742,6 +868,87 @@
       min-width: 0;
     }
 
+    .manual-annotation-subitems {
+      display: grid;
+      gap: 10px;
+      margin-top: 5px;
+      padding-top: 13px;
+      border-top: 1px dashed #cfd8e6;
+    }
+
+    .manual-annotation-subitems-header,
+    .manual-annotation-subitem-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .manual-annotation-subitems-title,
+    .manual-annotation-subitem-title {
+      margin: 0;
+      color: #52627a;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .manual-annotation-subitem-list {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .manual-annotation-subitem {
+      display: grid;
+      gap: 9px;
+      padding: 12px;
+      border: 1px solid #dbe5f3;
+      border-radius: 11px;
+      background: #f8faff;
+    }
+
+    .manual-annotation-add-subitem,
+    .manual-annotation-delete-subitem {
+      min-height: 32px;
+      padding: 6px 12px;
+      border-radius: 9px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .manual-annotation-add-subitem {
+      border: 1px solid #7fa8e8;
+      color: #175ebf;
+      background: #eef5ff;
+    }
+
+    .manual-annotation-add-subitem:hover {
+      border-color: #357dd8;
+      background: #e1eeff;
+    }
+
+    .manual-annotation-delete-subitem {
+      border: 1px solid #ff9aac;
+      color: #d92d4d;
+      background: #fff;
+    }
+
+    .manual-annotation-delete-subitem:hover {
+      border-color: #ef3f5e;
+      background: #ffe8ed;
+    }
+
+    .manual-annotation-add-subitem:focus-visible,
+    .manual-annotation-delete-subitem:focus-visible {
+      outline: 0;
+      box-shadow: 0 0 0 3px rgba(53, 125, 216, .18);
+    }
+
     .manual-annotation-delete {
       justify-self: end;
       min-height: 34px;
@@ -843,6 +1050,18 @@
     .translation-review-textarea:focus {
       border-color: #739dd8;
       box-shadow: 0 0 0 3px rgba(115, 157, 216, .18);
+    }
+
+    .translation-review-textarea[readonly] {
+      color: #788397;
+      background: #f1f4f8;
+      border-color: #d9e0ea;
+      cursor: not-allowed;
+    }
+
+    .translation-review-textarea[readonly]:focus {
+      border-color: #d9e0ea;
+      box-shadow: none;
     }
 
     .translation-review-textarea.is-reviewed-modified {
@@ -999,9 +1218,27 @@
       background: var(--active);
     }
 
-    .action-button.import,
     .action-button.export {
       grid-column: 1 / -1;
+    }
+
+    .manual-annotation-footer {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .manual-annotation-footer .review-status {
+      flex: 1 1 auto;
+      margin-top: 0;
+    }
+
+    .manual-annotation-footer .action-button.import {
+      flex: 0 0 auto;
+      min-width: 148px;
+      padding-inline: 18px;
     }
 
     .action-button.export {
@@ -1049,17 +1286,43 @@
       .header-review-mode { position: static; flex: 0 0 auto; transform: none; }
     }
 
-    @media (max-width: 1360px) {
-      .workspace { grid-template-columns: minmax(340px, 430px) minmax(0, 1fr); }
+    @media (max-width: 1260px) {
+      .workspace {
+        grid-template-columns: minmax(340px, 400px) minmax(0, 1fr);
+        width: calc(100% - 24px);
+        gap: 20px;
+      }
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 980px) {
       .header-inner { flex-direction: column; align-items: stretch; }
       .header-review-mode { align-self: flex-end; }
-      .workspace { grid-template-columns: 1fr; padding-right: 0; }
-      .screenshot-panel { position: static; display: block; width: min(100%, 500px); height: auto; margin: 0; }
+      .workspace { grid-template-columns: 1fr; width: min(100% - 24px, 760px); }
+      .screenshot-panel { position: static; display: block; width: min(100%, 500px); height: auto; margin: 0 auto; }
       .image-stage { flex: none; height: min(68vh, 720px); min-height: 460px; max-height: 720px; }
-      .content-area { min-height: 420px; margin: 0 12px 20px; padding: 22px; }
+      .content-area { min-height: 420px; margin: 0 0 20px; padding: 22px; }
+    }
+
+    @media (max-width: 700px) {
+      .workspace { padding-left: 0; }
+      .screenshot-panel { overflow: hidden; }
+      .image-stage {
+        display: grid;
+        grid-template-rows: 86px minmax(0, 1fr);
+        align-items: stretch;
+        gap: 8px;
+        overflow: hidden;
+      }
+      .screenshot-thumbnails {
+        position: static;
+        width: 100%;
+        height: 86px;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      .screenshot-thumbnail { width: 64px; min-height: 0; }
+      .screenshot-thumbnail-image { height: 68px; }
     }
 
     @media (max-width: 560px) {
@@ -1069,7 +1332,10 @@
       .workspace { width: 100%; margin-top: 0; }
       .screenshot-heading { padding: 17px; }
       .variant-selector { padding-inline: 12px; }
-      .image-stage { height: 62vh; min-height: 400px; padding: 12px; }
+      .image-stage { height: 62vh; min-height: 400px; padding: 10px; }
+      .screenshot-thumbnails { gap: 5px; padding: 4px; }
+      .screenshot-thumbnail { padding: 3px; }
+      .screenshot-thumbnail-image { height: 68px; }
       .page-navigation { gap: 8px; padding: 12px; }
       .page-button { padding-inline: 10px; }
       .content-area { margin-inline: 10px; padding: 18px; }
@@ -1090,8 +1356,7 @@
   <header class="page-header">
     <div class="header-inner">
       <div class="language-selector" role="radiogroup" aria-label="选择页面语言">
-        <button class="language-button is-selected" type="button" role="radio" aria-checked="true" tabindex="0" data-language="zh">中文</button>
-        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="en">英文</button>
+        <button class="language-button is-selected" type="button" role="radio" aria-checked="true" tabindex="0" data-language="en">英文</button>
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="th">泰语</button>
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="ms">马来语</button>
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="de">德语</button>
@@ -1099,8 +1364,9 @@
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="fr">法语</button>
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="uk">乌克兰语</button>
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="ar-SA">阿拉伯语（沙特）</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="zh">中文</button>
       </div>
-      <div class="review-mode-toolbar header-review-mode">
+      <div class="review-mode-toolbar header-review-mode" hidden>
         <div class="review-mode-switch" role="tablist" aria-label="选择人工核对模式">
           <button id="baselineReviewTab" class="review-mode-button is-selected" type="button" role="tab" aria-selected="true" aria-controls="baselineReviewView" tabindex="0" data-review-mode="baseline">中文基准核对</button>
           <button id="translationReviewTab" class="review-mode-button" type="button" role="tab" aria-selected="false" aria-controls="translationReviewView" tabindex="-1" data-review-mode="translation">多语言译文核对</button>
@@ -1112,11 +1378,17 @@
   <main class="workspace">
     <aside class="screenshot-panel" aria-label="问卷截图浏览器">
       <div class="screenshot-heading">
-        <div>
+        <div class="screenshot-heading-main">
           <p id="pageKicker" class="page-kicker">页面 01</p>
           <h1 id="pageTitle" class="page-title">ios支付成功</h1>
         </div>
-        <span id="languageLabel" class="language-label">中文</span>
+        <div class="screenshot-heading-actions">
+          <div class="screenshot-tab-selector">
+            <label class="screenshot-tab-selector-label" for="screenshotTabSelect">选择截图 Tab</label>
+            <select id="screenshotTabSelect" class="screenshot-tab-select" aria-label="选择截图 Tab" title="选择截图 Tab"></select>
+          </div>
+          <span id="languageLabel" class="language-label">中文</span>
+        </div>
       </div>
 
       <div id="variantSelector" class="variant-selector" hidden>
@@ -1136,6 +1408,7 @@
       </div>
 
       <div id="imageStage" class="image-stage">
+        <nav id="screenshotThumbnails" class="screenshot-thumbnails" aria-label="全部截图缩略图"></nav>
         <div id="annotationSurface" class="annotation-surface">
           <img id="questionnaireImage" class="questionnaire-image" src="assets/screenshots/我的tab/ios支付成功.jpg" alt="第 1 页：ios支付成功" draggable="false">
           <canvas id="annotationCanvas" class="annotation-canvas" aria-label="当前截图标注层"></canvas>
@@ -1168,15 +1441,17 @@
       <div class="review-actions">
         <button id="resetCurrentManualAnnotation" class="action-button" type="button">重置当前页</button>
         <button id="saveCurrentManualAnnotation" class="action-button primary" type="button">保存当前页</button>
-        <button id="importManualAnnotations" class="action-button import" type="button">导入标注 JSON</button>
         <button id="exportManualAnnotations" class="action-button export" type="button">导出标注 JSON</button>
-        <input id="manualAnnotationImportFile" type="file" accept=".json,application/json" hidden>
       </div>
       <p class="export-hint">导出 JSON 会按页面、子项和打点编号保留文本原文与译文 ID，以及图片打点的安卓 / iOS 资源 ID。导入会覆盖 JSON 中包含页面的本地标注，未包含的页面保持不变。</p>
-      <p id="manualAnnotationStatus" class="review-status" role="status" aria-live="polite">人工标注输入会自动保存</p>
+      <div class="manual-annotation-footer">
+        <p id="manualAnnotationStatus" class="review-status" role="status" aria-live="polite">修改会自动暂存，切换页面前请保存当前页</p>
+        <button id="importManualAnnotations" class="action-button import" type="button">导入标注 JSON</button>
+        <input id="manualAnnotationImportFile" type="file" accept=".json,application/json" hidden>
+      </div>
     </section>
 
-    <section class="content-area ai-panel" aria-labelledby="aiTranslationTitle">
+    <section class="content-area ai-panel" aria-labelledby="aiTranslationTitle" hidden>
       <div class="baseline-heading">
         <h2 id="aiTranslationTitle" class="baseline-title">AI翻译</h2>
         <span id="aiLanguageBadge" class="readonly-badge ai-language-badge">中文校对</span>
@@ -1194,7 +1469,7 @@
       <ol id="aiTranslationList" class="ai-translation-list" aria-live="polite"></ol>
     </section>
 
-    <section class="content-area review-panel" aria-label="文案核对">
+    <section class="content-area review-panel" aria-label="文案核对" hidden>
       <div id="baselineReviewView" class="review-view" role="tabpanel" aria-labelledby="baselineReviewTab">
         <div class="baseline-heading">
           <h2 id="manualReviewTitle" class="baseline-title">人工核对</h2>
@@ -1261,7 +1536,7 @@
   <script src="assets/data/post-questionnaire-text.js?v=20261109-01"></script>
   <script src="assets/data/zh-questionnaire-variants.js?v=20261109-01"></script>
   <script src="assets/data/review-questionnaire-text.js?v=20261109-01"></script>
-  <script src="assets/data/profile-tab-pages.js?v=20261110-01"></script>
+  <script src="assets/data/profile-tab-pages.js?v=20261110-02"></script>
   <script src="assets/data/ai-questionnaire-translations.js?v=20261109-02"></script>
   <script src="assets/data/deepseek-questionnaire-translations.js?v=20261109-04"></script>
   <script>
@@ -1270,6 +1545,7 @@
 
       const LANGUAGE_STORAGE_KEY = 'offline-info-page-v2:language:v1'
       const PAGE_STORAGE_KEY = 'offline-info-page-v2:questionnaire-page:v1'
+      const SCREENSHOT_TAB_STORAGE_KEY = 'offline-info-page-v2:screenshot-tab:v1'
       const REVIEW_STORAGE_KEY = 'offline-info-page-v2:manual-review:v1'
       const REVIEW_MODE_STORAGE_KEY = 'offline-info-page-v2:review-mode:v1'
       const TRANSLATION_REVIEW_STORAGE_KEY = 'offline-info-page-v2:translation-review:v1'
@@ -1280,18 +1556,19 @@
       const ANNOTATION_IMAGE_POINT_COLOR = '#007aff'
       const ANNOTATION_POINT_RADIUS = 15
       const SCREENSHOT_LANGUAGE = 'zh'
-      const SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261110-01'
-      const baselinePages = (window.QUESTIONNAIRE_TEXTS ?? []).map(page => ({
-        ...page,
-        items: page.items.map(item => ({ ...item }))
-      }))
-      const reviewPages = (window.REVIEW_QUESTIONNAIRE_TEXTS ?? window.QUESTIONNAIRE_TEXTS ?? []).map(page => ({
-        ...page,
-        items: page.items.map(item => ({ ...item }))
-      }))
-      const reviewPagesByName = new Map(reviewPages.map(page => [page.name, page]))
-      const pageNames = baselinePages.map(page => page.label)
+      const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
+      const ASSET_VERSION = 'offline-info-page-v2-20261110-02'
+      const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
+      let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
+      let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
+      currentScreenshotTabId = currentScreenshotTab.id
+      let screenshotDirectory = currentScreenshotTab.directory
+      let baselinePages = cloneScreenshotPages(currentScreenshotTab.pages)
+      let reviewPages = cloneScreenshotPages(currentScreenshotTab.reviewPages)
+      let reviewPagesByName = new Map(reviewPages.map(page => [page.name, page]))
+      let pageNames = baselinePages.map(page => page.label)
+      let questionnaireVariants = currentScreenshotTab.variants
+      let reviewQuestionnaireVariants = currentScreenshotTab.reviewVariants
       const languageLabels = {
         zh: '中文',
         en: '英文',
@@ -1309,11 +1586,13 @@
       let currentReviewMode = readStorage(REVIEW_MODE_STORAGE_KEY, 'baseline')
       const elements = {
         pageHeader: document.querySelector('.page-header'),
+        screenshotTabSelect: document.querySelector('#screenshotTabSelect'),
         pageKicker: document.querySelector('#pageKicker'),
         pageTitle: document.querySelector('#pageTitle'),
         languageLabel: document.querySelector('#languageLabel'),
         image: document.querySelector('#questionnaireImage'),
         imageStage: document.querySelector('#imageStage'),
+        screenshotThumbnails: document.querySelector('#screenshotThumbnails'),
         annotationSurface: document.querySelector('#annotationSurface'),
         annotationCanvas: document.querySelector('#annotationCanvas'),
         annotationNumber: document.querySelector('#annotationNumber'),
@@ -1387,21 +1666,22 @@
       const translationReviewDrafts = new Map()
       let savedTranslationReviews = readSavedTranslationReviews()
 
-      let currentLanguage = readStorage(LANGUAGE_STORAGE_KEY, 'zh')
+      let currentLanguage = readStorage(LANGUAGE_STORAGE_KEY, 'en')
       let currentTranslationLanguage = readStorage(TRANSLATION_LANGUAGE_STORAGE_KEY, 'en')
-      let currentPage = Number(readStorage(PAGE_STORAGE_KEY, '0'))
+      let currentPage = Number(readStorage(screenshotTabPageStorageKey(currentScreenshotTabId), readStorage(PAGE_STORAGE_KEY, '0')))
       let currentVariantId = null
       let savedAnnotations = readSavedAnnotations()
       let currentAnnotationKey = null
       let currentAnnotationImageRef = ''
       let currentAnnotationStrokes = []
       let currentAnnotationImageResources = emptyAnnotationImageResources()
+      const unsavedManualAnnotationTargets = new Set()
       let activeAnnotationStroke = null
       let activeAnnotationPointerId = null
       let annotationEnabled = false
       let annotationMode = 'numbered-point'
       let annotationExportAllBusy = false
-      if (!Object.hasOwn(languageLabels, currentLanguage)) currentLanguage = 'zh'
+      if (!Object.hasOwn(languageLabels, currentLanguage)) currentLanguage = 'en'
       if (!Object.hasOwn(languageLabels, currentTranslationLanguage) || currentTranslationLanguage === 'zh') currentTranslationLanguage = 'en'
       if (!['baseline', 'translation'].includes(currentReviewMode)) currentReviewMode = 'baseline'
       if (!Number.isInteger(currentPage) || currentPage < 0 || currentPage >= pageNames.length) currentPage = 0
@@ -1420,6 +1700,50 @@
         } catch {
           // The page remains usable when storage is unavailable.
         }
+      }
+
+      function cloneScreenshotPages (pages) {
+        return (Array.isArray(pages) ? pages : []).map(page => ({
+          ...page,
+          items: Array.isArray(page.items) ? page.items.map(item => ({ ...item })) : []
+        }))
+      }
+
+      function normalizeScreenshotTabs (tabs) {
+        const fallbackPages = cloneScreenshotPages(window.QUESTIONNAIRE_TEXTS)
+        const fallbackReviewPages = cloneScreenshotPages(window.REVIEW_QUESTIONNAIRE_TEXTS ?? window.QUESTIONNAIRE_TEXTS)
+        const source = Array.isArray(tabs) && tabs.length > 0
+          ? tabs
+          : [{
+              id: 'profile-tab',
+              label: DEFAULT_SCREENSHOT_DIRECTORY,
+              directory: DEFAULT_SCREENSHOT_DIRECTORY,
+              pages: fallbackPages,
+              reviewPages: fallbackReviewPages,
+              variants: window.QUESTIONNAIRE_VARIANTS,
+              reviewVariants: window.REVIEW_QUESTIONNAIRE_VARIANTS
+            }]
+        return source.map((tab, index) => {
+          const id = String(tab?.id || `screenshot-tab-${index + 1}`)
+          const directory = String(tab?.directory || DEFAULT_SCREENSHOT_DIRECTORY)
+          const pages = cloneScreenshotPages(tab?.pages)
+          const tabReviewPages = cloneScreenshotPages(tab?.reviewPages)
+          return {
+            id,
+            label: String(tab?.label || directory),
+            directory,
+            pages: pages.length > 0 ? pages : fallbackPages,
+            reviewPages: tabReviewPages.length > 0
+              ? tabReviewPages
+              : (pages.length > 0 ? pages : fallbackReviewPages),
+            variants: tab?.variants && typeof tab.variants === 'object' ? tab.variants : {},
+            reviewVariants: tab?.reviewVariants && typeof tab.reviewVariants === 'object' ? tab.reviewVariants : {}
+          }
+        })
+      }
+
+      function screenshotTabPageStorageKey (tabId) {
+        return `${PAGE_STORAGE_KEY}:${tabId}`
       }
 
       function clampAnnotationCoordinate (value) {
@@ -1458,12 +1782,29 @@
           if (type === 'numbered-point') {
             cloned.review = {
               sourceText: typeof stroke?.review?.sourceText === 'string' ? stroke.review.sourceText : '',
+              translations: stroke?.review?.translations && typeof stroke.review.translations === 'object' && !Array.isArray(stroke.review.translations)
+                ? Object.fromEntries(Object.entries(stroke.review.translations)
+                    .filter(([language, value]) => language !== 'en' && typeof value === 'string'))
+                : {},
               androidTranslationId: typeof stroke?.review?.androidTranslationId === 'string'
                 ? stroke.review.androidTranslationId
                 : '',
               iosTranslationId: typeof stroke?.review?.iosTranslationId === 'string'
                 ? stroke.review.iosTranslationId
-                : ''
+                : '',
+              subItems: Array.isArray(stroke?.review?.subItems)
+                ? stroke.review.subItems
+                    .filter(item => item && typeof item === 'object' && !Array.isArray(item))
+                    .map(item => ({
+                      sourceText: typeof item.sourceText === 'string' ? item.sourceText : '',
+                      translations: item.translations && typeof item.translations === 'object' && !Array.isArray(item.translations)
+                        ? Object.fromEntries(Object.entries(item.translations)
+                            .filter(([language, value]) => language !== 'en' && typeof value === 'string'))
+                        : {},
+                      androidTranslationId: typeof item.androidTranslationId === 'string' ? item.androidTranslationId : '',
+                      iosTranslationId: typeof item.iosTranslationId === 'string' ? item.iosTranslationId : ''
+                    }))
+                : []
             }
           }
           if (type === 'image-point') {
@@ -1503,7 +1844,35 @@
         for (const field of ['sourceText', 'androidTranslationId', 'iosTranslationId']) {
           if (typeof stroke.review[field] !== 'string') stroke.review[field] = ''
         }
+        if (!stroke.review.translations || typeof stroke.review.translations !== 'object' || Array.isArray(stroke.review.translations)) {
+          stroke.review.translations = {}
+        }
+        stroke.review.translations = Object.fromEntries(Object.entries(stroke.review.translations)
+          .filter(([language, value]) => language !== 'en' && typeof value === 'string'))
+        if (!Array.isArray(stroke.review.subItems)) stroke.review.subItems = []
+        stroke.review.subItems = stroke.review.subItems
+          .filter(item => item && typeof item === 'object' && !Array.isArray(item))
+          .map(item => {
+            for (const field of ['sourceText', 'androidTranslationId', 'iosTranslationId']) {
+              if (typeof item[field] !== 'string') item[field] = ''
+            }
+            if (!item.translations || typeof item.translations !== 'object' || Array.isArray(item.translations)) {
+              item.translations = {}
+            }
+            item.translations = Object.fromEntries(Object.entries(item.translations)
+              .filter(([language, value]) => language !== 'en' && typeof value === 'string'))
+            return item
+          })
         return stroke.review
+      }
+
+      function emptyManualAnnotationSubItem () {
+        return {
+          sourceText: '',
+          translations: {},
+          androidTranslationId: '',
+          iosTranslationId: ''
+        }
       }
 
       function annotationImagePointResources (stroke) {
@@ -1805,8 +2174,10 @@
         if (markerType === 'numbered-point') {
           marker.review = {
             sourceText: '',
+            translations: {},
             androidTranslationId: '',
-            iosTranslationId: ''
+            iosTranslationId: '',
+            subItems: []
           }
         } else {
           marker.imageResources = {
@@ -1815,10 +2186,11 @@
           }
         }
         currentAnnotationStrokes.push(marker)
+        markCurrentManualAnnotationsDirty()
         renderAnnotations()
         const saved = saveCurrentAnnotations({ automatic: true })
         setAnnotationStatus(saved
-          ? `已添加${markerLabel}编号 ${markerNumber}，已自动保存`
+          ? `已添加${markerLabel}编号 ${markerNumber}，修改已暂存，请点击右侧“保存当前页”确认`
           : `已添加${markerLabel}编号 ${markerNumber}，但浏览器存储不可用`)
         refreshManualAnnotationReview()
         refreshTranslationImageResources()
@@ -1874,6 +2246,7 @@
       function undoAnnotationStroke () {
         if (currentAnnotationStrokes.length === 0) return
         currentAnnotationStrokes.pop()
+        markCurrentManualAnnotationsDirty()
         renderAnnotations()
         saveCurrentAnnotations()
         refreshManualAnnotationReview()
@@ -1884,6 +2257,7 @@
         if (currentAnnotationStrokes.length === 0) return
         if (!window.confirm('确定清空当前截图上的全部标注吗？')) return
         currentAnnotationStrokes = []
+        markCurrentManualAnnotationsDirty()
         activeAnnotationStroke = null
         activeAnnotationPointerId = null
         renderAnnotations()
@@ -1988,7 +2362,8 @@
         annotationExportAllBusy = true
         updateAnnotationControls()
         try {
-          const outputDirectory = await selectedDirectory.getDirectoryHandle('我的tab-已标注', { create: true })
+          const outputFolderName = `${screenshotDirectory}-已标注`
+          const outputDirectory = await selectedDirectory.getDirectoryHandle(outputFolderName, { create: true })
           for (let pageIndex = 0; pageIndex < baselinePages.length; pageIndex += 1) {
             const page = baselinePages[pageIndex]
             const pageNumber = String(pageIndex + 1).padStart(2, '0')
@@ -2001,7 +2376,7 @@
             await writable.write(blob)
             await writable.close()
           }
-          setAnnotationStatus(`已按当前顺序导出 ${baselinePages.length} 张带标记图片到“我的tab-已标注”文件夹`)
+          setAnnotationStatus(`已按当前顺序导出 ${baselinePages.length} 张带标记图片到“${outputFolderName}”文件夹`)
         } catch (error) {
           console.error(error)
           setAnnotationStatus(`导出全部图片失败：${error?.message || '未知错误'}`)
@@ -2195,15 +2570,127 @@
           ? baselinePages[pageIndex].screenshot.trim()
           : ''
         if (screenshot) {
-          return versionedAssetPath(`assets/screenshots/${SCREENSHOT_DIRECTORY}/${screenshot}`)
+          return versionedAssetPath(`assets/screenshots/${screenshotDirectory}/${screenshot}`)
         }
         return versionedAssetPath(`assets/screenshots/${language}/${String(pageIndex + 1).padStart(2, '0')}.png`)
+      }
+
+      function renderScreenshotTabSelector () {
+        elements.screenshotTabSelect.replaceChildren()
+        screenshotTabs.forEach(tab => {
+          const option = document.createElement('option')
+          option.value = tab.id
+          option.textContent = tab.label
+          elements.screenshotTabSelect.append(option)
+        })
+        elements.screenshotTabSelect.value = currentScreenshotTabId
+      }
+
+      function activateScreenshotTab (tab) {
+        currentScreenshotTab = tab
+        currentScreenshotTabId = tab.id
+        screenshotDirectory = tab.directory
+        baselinePages = cloneScreenshotPages(tab.pages)
+        reviewPages = cloneScreenshotPages(tab.reviewPages)
+        reviewPagesByName = new Map(reviewPages.map(page => [page.name, page]))
+        pageNames = baselinePages.map(page => page.label)
+        questionnaireVariants = tab.variants
+        reviewQuestionnaireVariants = tab.reviewVariants
+        currentPage = Number(readStorage(screenshotTabPageStorageKey(tab.id), '0'))
+        if (!Number.isInteger(currentPage) || currentPage < 0 || currentPage >= pageNames.length) currentPage = 0
+        currentVariantId = null
+        writeStorage(SCREENSHOT_TAB_STORAGE_KEY, currentScreenshotTabId)
+        writeStorage(PAGE_STORAGE_KEY, currentPage)
+        elements.screenshotTabSelect.value = currentScreenshotTabId
+        renderScreenshotThumbnails()
+        renderPage()
+      }
+
+      function selectScreenshotTab (tabId) {
+        const nextTab = screenshotTabs.find(tab => tab.id === tabId)
+        if (!nextTab || nextTab.id === currentScreenshotTabId) return Boolean(nextTab)
+        if (!canSwitchFromCurrentScreenshotTab()) {
+          elements.screenshotTabSelect.value = currentScreenshotTabId
+          return false
+        }
+        activateScreenshotTab(nextTab)
+        return true
+      }
+
+      function syncScreenshotThumbnailSelection () {
+        const buttons = Array.from(elements.screenshotThumbnails.querySelectorAll('.screenshot-thumbnail'))
+        let selectedButton = null
+        buttons.forEach(button => {
+          const selected = Number(button.dataset.pageIndex) === currentPage
+          button.classList.toggle('is-selected', selected)
+          button.setAttribute('aria-current', selected ? 'page' : 'false')
+          button.setAttribute('aria-pressed', String(selected))
+          button.tabIndex = selected ? 0 : -1
+          if (selected) selectedButton = button
+        })
+
+        if (!selectedButton || elements.screenshotThumbnails.clientHeight === 0) return
+        const selectedTop = selectedButton.offsetTop
+        const selectedBottom = selectedTop + selectedButton.offsetHeight
+        const visibleTop = elements.screenshotThumbnails.scrollTop
+        const visibleBottom = visibleTop + elements.screenshotThumbnails.clientHeight
+        if (selectedTop < visibleTop) elements.screenshotThumbnails.scrollTop = Math.max(0, selectedTop - 5)
+        else if (selectedBottom > visibleBottom) {
+          elements.screenshotThumbnails.scrollTop = selectedBottom - elements.screenshotThumbnails.clientHeight + 5
+        }
+      }
+
+      function renderScreenshotThumbnails () {
+        elements.screenshotThumbnails.replaceChildren()
+        pageNames.forEach((pageName, pageIndex) => {
+          const pageNumber = pageIndex + 1
+          const paddedNumber = String(pageNumber).padStart(2, '0')
+          const button = document.createElement('button')
+          button.className = 'screenshot-thumbnail'
+          button.type = 'button'
+          button.dataset.pageIndex = String(pageIndex)
+          button.title = `第 ${paddedNumber} 页：${pageName}`
+          button.setAttribute('aria-label', button.title)
+
+          const image = document.createElement('img')
+          image.className = 'screenshot-thumbnail-image'
+          image.src = imagePath(SCREENSHOT_LANGUAGE, pageIndex)
+          image.alt = ''
+          image.loading = 'lazy'
+          image.decoding = 'async'
+          image.draggable = false
+
+          const number = document.createElement('span')
+          number.className = 'screenshot-thumbnail-number'
+          number.textContent = paddedNumber
+          button.append(image, number)
+          button.addEventListener('click', function () { goToPage(pageIndex) })
+          button.addEventListener('keydown', function (event) {
+            const targetIndex = event.key === 'ArrowUp'
+              ? Math.max(0, pageIndex - 1)
+              : event.key === 'ArrowDown'
+                ? Math.min(pageNames.length - 1, pageIndex + 1)
+                : event.key === 'Home'
+                  ? 0
+                  : event.key === 'End'
+                    ? pageNames.length - 1
+                    : null
+            if (targetIndex === null) return
+            event.preventDefault()
+            goToPage(targetIndex)
+            if (currentPage === targetIndex) {
+              elements.screenshotThumbnails.querySelector(`[data-page-index="${targetIndex}"]`)?.focus()
+            }
+          })
+          elements.screenshotThumbnails.append(button)
+        })
+        syncScreenshotThumbnailSelection()
       }
 
       function variantsForPage (pageIndex) {
         const page = baselinePages[pageIndex]
         if (!page) return []
-        const entry = window.QUESTIONNAIRE_VARIANTS?.[page.name]
+        const entry = questionnaireVariants?.[page.name]
         const variants = Array.isArray(entry) ? entry : entry?.variants
         return Array.isArray(variants) ? variants.filter(variant => variant && typeof variant === 'object') : []
       }
@@ -2211,7 +2698,7 @@
       function reviewVariantsForPage (pageIndex) {
         const page = baselinePages[pageIndex]
         if (!page) return []
-        const entry = window.REVIEW_QUESTIONNAIRE_VARIANTS?.[page.name]
+        const entry = reviewQuestionnaireVariants?.[page.name]
         const variants = Array.isArray(entry) ? entry : entry?.variants
         return Array.isArray(variants) ? variants.filter(variant => variant && typeof variant === 'object') : []
       }
@@ -2238,8 +2725,8 @@
         let assetPath = screenshot
         if (!/^(?:assets\/|\/|https?:\/\/|data:)/.test(assetPath)) {
           assetPath = assetPath.includes('/')
-            ? `assets/screenshots/${SCREENSHOT_LANGUAGE}/${assetPath}`
-            : `assets/screenshots/${SCREENSHOT_LANGUAGE}/variants/${page.name}/${assetPath}`
+            ? `assets/screenshots/${screenshotDirectory}/${assetPath}`
+            : `assets/screenshots/${screenshotDirectory}/variants/${page.name}/${assetPath}`
         }
         const version = typeof variant.contentHash === 'string' && variant.contentHash
           ? variant.contentHash.slice(0, 16)
@@ -2353,6 +2840,7 @@
         elements.counter.textContent = `${paddedNumber} / ${pageNames.length}`
         elements.previous.disabled = currentPage === 0
         elements.next.disabled = currentPage === pageNames.length - 1
+        syncScreenshotThumbnailSelection()
         updateSelectionStatus()
 
         renderVariantSelector()
@@ -2366,7 +2854,7 @@
       }
 
       function renderChineseTexts (pageIndex) {
-        const baselinePage = window.QUESTIONNAIRE_TEXTS?.[pageIndex]
+        const baselinePage = baselinePages[pageIndex]
         const variant = activeVariantForPage(pageIndex)
         const paddedNumber = String(pageIndex + 1).padStart(2, '0')
         elements.chineseTextKicker.textContent = variant ? `问卷页面 ${paddedNumber} · 子项` : `问卷页面 ${paddedNumber}`
@@ -2377,6 +2865,8 @@
 
         const markers = numberedPointStrokes()
         const imageMarkers = imagePointStrokes()
+        const isEnglishSource = currentLanguage === 'en'
+        const currentLanguageLabel = languageLabels[currentLanguage]
         elements.chineseTextCount.textContent = `${markers.length} 个文本打点 · ${imageMarkers.length} 个图片打点`
         updateManualAnnotationActionState(markers, imageMarkers)
         if (markers.length === 0 && imageMarkers.length === 0) {
@@ -2406,20 +2896,46 @@
           sourceField.className = 'translation-review-field'
           const sourceLabel = document.createElement('span')
           sourceLabel.className = 'translation-review-label'
-          sourceLabel.textContent = '原文'
+          sourceLabel.textContent = isEnglishSource ? '英文原文' : '英文原文（只读）'
           const sourceInput = document.createElement('textarea')
           sourceInput.className = 'translation-review-textarea manual-annotation-source-input'
           sourceInput.rows = 1
           sourceInput.value = review.sourceText
-          sourceInput.lang = 'zh-CN'
+          sourceInput.lang = 'en'
           sourceInput.dir = 'auto'
-          sourceInput.placeholder = '请输入该打点对应的原文'
-          sourceInput.setAttribute('aria-label', `编号 ${stroke.number} 原文`)
-          sourceInput.addEventListener('input', function () {
-            resizeTextarea(sourceInput)
-            updateManualAnnotationField(stroke, 'sourceText', sourceInput.value)
-          })
+          sourceInput.placeholder = isEnglishSource ? '请输入该打点对应的英文原文' : '请先在英文页填写原文'
+          sourceInput.setAttribute('aria-label', `编号 ${stroke.number} 英文原文${isEnglishSource ? '' : '，只读'}`)
+          sourceInput.readOnly = !isEnglishSource
+          if (isEnglishSource) {
+            sourceInput.addEventListener('input', function () {
+              resizeTextarea(sourceInput)
+              updateManualAnnotationField(stroke, 'sourceText', sourceInput.value)
+            })
+          }
           sourceField.append(sourceLabel, sourceInput)
+
+          let translationField = null
+          let translationInput = null
+          if (!isEnglishSource) {
+            translationField = document.createElement('label')
+            translationField.className = 'translation-review-field'
+            const translationLabel = document.createElement('span')
+            translationLabel.className = 'translation-review-label'
+            translationLabel.textContent = `${currentLanguageLabel}译文`
+            translationInput = document.createElement('textarea')
+            translationInput.className = 'translation-review-textarea manual-annotation-translation-input'
+            translationInput.rows = 1
+            translationInput.value = review.translations[currentLanguage] ?? ''
+            translationInput.lang = languageCodes[currentLanguage]
+            translationInput.dir = 'auto'
+            translationInput.placeholder = `请输入${currentLanguageLabel}译文`
+            translationInput.setAttribute('aria-label', `编号 ${stroke.number} ${currentLanguageLabel}译文`)
+            translationInput.addEventListener('input', function () {
+              resizeTextarea(translationInput)
+              updateManualAnnotationTranslation(stroke, currentLanguage, translationInput.value)
+            })
+            translationField.append(translationLabel, translationInput)
+          }
 
           const androidField = document.createElement('label')
           androidField.className = 'translation-review-field'
@@ -2463,10 +2979,18 @@
           })
           iosField.append(iosLabel, iosInput)
 
-          fields.append(sourceField, androidField, iosField, createManualAnnotationDeleteButton(stroke, '文本打点'))
+          fields.append(
+            sourceField,
+            ...(translationField ? [translationField] : []),
+            androidField,
+            iosField,
+            createManualAnnotationSubItems(stroke),
+            createManualAnnotationDeleteButton(stroke, '文本打点')
+          )
           row.append(number, fields)
           elements.chineseTextList.append(row)
           resizeTextarea(sourceInput)
+          if (translationInput) resizeTextarea(translationInput)
         })
 
         imageMarkers.forEach(stroke => {
@@ -2519,6 +3043,137 @@
           row.append(number, fields)
           elements.chineseTextList.append(row)
         })
+      }
+
+      function createManualAnnotationSubItems (stroke) {
+        const review = annotationPointReview(stroke)
+        const isEnglishSource = currentLanguage === 'en'
+        const currentLanguageLabel = languageLabels[currentLanguage]
+        const section = document.createElement('section')
+        section.className = 'manual-annotation-subitems'
+        section.setAttribute('aria-label', `文本打点 ${stroke.number} 的子项`)
+
+        const header = document.createElement('div')
+        header.className = 'manual-annotation-subitems-header'
+        const title = document.createElement('p')
+        title.className = 'manual-annotation-subitems-title'
+        title.textContent = `子项（${review.subItems.length}）`
+        const addButton = document.createElement('button')
+        addButton.type = 'button'
+        addButton.className = 'manual-annotation-add-subitem'
+        addButton.textContent = '+ 新增子项'
+        addButton.setAttribute('aria-label', `为文本打点 ${stroke.number} 新增子项`)
+        addButton.addEventListener('click', function () {
+          addManualAnnotationSubItem(stroke)
+        })
+        header.append(title, addButton)
+
+        const list = document.createElement('ol')
+        list.className = 'manual-annotation-subitem-list'
+        review.subItems.forEach((subItem, subItemIndex) => {
+          const item = document.createElement('li')
+          item.className = 'manual-annotation-subitem'
+          item.dataset.markerNumber = String(stroke.number)
+          item.dataset.subItemIndex = String(subItemIndex)
+
+          const itemHeader = document.createElement('div')
+          itemHeader.className = 'manual-annotation-subitem-header'
+          const itemTitle = document.createElement('p')
+          itemTitle.className = 'manual-annotation-subitem-title'
+          itemTitle.textContent = `子项 ${subItemIndex + 1}`
+          const deleteButton = document.createElement('button')
+          deleteButton.type = 'button'
+          deleteButton.className = 'manual-annotation-delete-subitem'
+          deleteButton.textContent = '删除子项'
+          deleteButton.setAttribute('aria-label', `删除文本打点 ${stroke.number} 的子项 ${subItemIndex + 1}`)
+          deleteButton.addEventListener('click', function () {
+            removeManualAnnotationSubItem(stroke, subItemIndex)
+          })
+          itemHeader.append(itemTitle, deleteButton)
+
+          const sourceField = document.createElement('label')
+          sourceField.className = 'translation-review-field'
+          const sourceLabel = document.createElement('span')
+          sourceLabel.className = 'translation-review-label'
+          sourceLabel.textContent = isEnglishSource ? '英文原文' : '英文原文（只读）'
+          const sourceInput = document.createElement('textarea')
+          sourceInput.className = 'translation-review-textarea manual-annotation-subitem-source-input'
+          sourceInput.rows = 1
+          sourceInput.value = subItem.sourceText
+          sourceInput.lang = 'en'
+          sourceInput.dir = 'auto'
+          sourceInput.placeholder = isEnglishSource ? '请输入该子项对应的英文原文' : '请先在英文页填写原文'
+          sourceInput.setAttribute('aria-label', `文本打点 ${stroke.number} 子项 ${subItemIndex + 1} 英文原文${isEnglishSource ? '' : '，只读'}`)
+          sourceInput.readOnly = !isEnglishSource
+          if (isEnglishSource) {
+            sourceInput.addEventListener('input', function () {
+              resizeTextarea(sourceInput)
+              updateManualAnnotationSubItemField(stroke, subItemIndex, 'sourceText', sourceInput.value)
+            })
+          }
+          sourceField.append(sourceLabel, sourceInput)
+
+          let translationField = null
+          let translationInput = null
+          if (!isEnglishSource) {
+            translationField = document.createElement('label')
+            translationField.className = 'translation-review-field'
+            const translationLabel = document.createElement('span')
+            translationLabel.className = 'translation-review-label'
+            translationLabel.textContent = `${currentLanguageLabel}译文`
+            translationInput = document.createElement('textarea')
+            translationInput.className = 'translation-review-textarea manual-annotation-subitem-translation-input'
+            translationInput.rows = 1
+            translationInput.value = subItem.translations[currentLanguage] ?? ''
+            translationInput.lang = languageCodes[currentLanguage]
+            translationInput.dir = 'auto'
+            translationInput.placeholder = `请输入${currentLanguageLabel}译文`
+            translationInput.setAttribute('aria-label', `文本打点 ${stroke.number} 子项 ${subItemIndex + 1} ${currentLanguageLabel}译文`)
+            translationInput.addEventListener('input', function () {
+              resizeTextarea(translationInput)
+              updateManualAnnotationSubItemTranslation(stroke, subItemIndex, currentLanguage, translationInput.value)
+            })
+            translationField.append(translationLabel, translationInput)
+          }
+
+          const idFieldDefinitions = [
+            ['androidTranslationId', '安卓译文标识 ID', 'manual-annotation-subitem-android-id-input'],
+            ['iosTranslationId', 'iOS 译文标识 ID', 'manual-annotation-subitem-ios-id-input']
+          ]
+          const idFields = idFieldDefinitions.map(([field, labelText, className]) => {
+            const fieldLabel = document.createElement('label')
+            fieldLabel.className = 'translation-review-field'
+            const label = document.createElement('span')
+            label.className = 'translation-review-label'
+            label.textContent = labelText
+            const input = document.createElement('input')
+            input.className = `translation-review-id-input ${className}`
+            input.type = 'text'
+            input.value = subItem[field]
+            input.maxLength = 160
+            input.lang = 'en'
+            input.dir = 'ltr'
+            input.autocomplete = 'off'
+            input.spellcheck = false
+            input.placeholder = '例如：onboarding.current_weight.title'
+            input.setAttribute('aria-label', `文本打点 ${stroke.number} 子项 ${subItemIndex + 1} ${labelText}`)
+            input.addEventListener('input', function () {
+              updateManualAnnotationSubItemField(stroke, subItemIndex, field, input.value)
+            })
+            fieldLabel.append(label, input)
+            return fieldLabel
+          })
+
+          item.append(itemHeader, sourceField, ...(translationField ? [translationField] : []), ...idFields)
+          list.append(item)
+          queueMicrotask(function () {
+            resizeTextarea(sourceInput)
+            if (translationInput) resizeTextarea(translationInput)
+          })
+        })
+
+        section.append(header, list)
+        return section
       }
 
       function resizeTextarea (textarea) {
@@ -2674,21 +3329,96 @@
       function updateManualAnnotationField (stroke, field, value) {
         if (!['sourceText', 'androidTranslationId', 'iosTranslationId'].includes(field)) return
         annotationPointReview(stroke)[field] = value
+        markCurrentManualAnnotationsDirty()
         const persisted = saveCurrentAnnotations({ silent: true })
         const message = persisted
-          ? `编号 ${stroke.number} 的人工标注已自动保存`
+          ? `编号 ${stroke.number} 的修改已暂存，请点击“保存当前页”确认`
           : '浏览器存储不可用，人工标注仅在本次打开期间有效'
         setAnnotationStatus(message)
         elements.manualAnnotationStatus.textContent = message
         updateManualAnnotationActionState()
       }
 
+      function updateManualAnnotationTranslation (stroke, language, value) {
+        if (language === 'en' || !Object.hasOwn(languageLabels, language)) return
+        const translations = annotationPointReview(stroke).translations
+        if (value) translations[language] = value
+        else delete translations[language]
+        markCurrentManualAnnotationsDirty()
+        const persisted = saveCurrentAnnotations({ silent: true })
+        const message = persisted
+          ? `编号 ${stroke.number} 的${languageLabels[language]}译文已暂存，请点击“保存当前页”确认`
+          : '浏览器存储不可用，译文仅在本次打开期间有效'
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+        updateManualAnnotationActionState()
+      }
+
+      function updateManualAnnotationSubItemField (stroke, subItemIndex, field, value) {
+        if (!['sourceText', 'androidTranslationId', 'iosTranslationId'].includes(field)) return
+        const subItem = annotationPointReview(stroke).subItems[subItemIndex]
+        if (!subItem) return
+        subItem[field] = value
+        markCurrentManualAnnotationsDirty()
+        const persisted = saveCurrentAnnotations({ silent: true })
+        const message = persisted
+          ? `编号 ${stroke.number} 的子项 ${subItemIndex + 1} 已暂存，请点击“保存当前页”确认`
+          : '浏览器存储不可用，子项修改仅在本次打开期间有效'
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+        updateManualAnnotationActionState()
+      }
+
+      function updateManualAnnotationSubItemTranslation (stroke, subItemIndex, language, value) {
+        if (language === 'en' || !Object.hasOwn(languageLabels, language)) return
+        const subItem = annotationPointReview(stroke).subItems[subItemIndex]
+        if (!subItem) return
+        if (value) subItem.translations[language] = value
+        else delete subItem.translations[language]
+        markCurrentManualAnnotationsDirty()
+        const persisted = saveCurrentAnnotations({ silent: true })
+        const message = persisted
+          ? `编号 ${stroke.number} 的子项 ${subItemIndex + 1} ${languageLabels[language]}译文已暂存，请点击“保存当前页”确认`
+          : '浏览器存储不可用，子项译文仅在本次打开期间有效'
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+        updateManualAnnotationActionState()
+      }
+
+      function addManualAnnotationSubItem (stroke) {
+        const review = annotationPointReview(stroke)
+        review.subItems.push(emptyManualAnnotationSubItem())
+        markCurrentManualAnnotationsDirty()
+        const persisted = saveCurrentAnnotations({ silent: true })
+        renderChineseTexts(currentPage)
+        const message = persisted
+          ? `已为编号 ${stroke.number} 新增子项，修改已暂存，请点击“保存当前页”确认`
+          : '已新增子项，但浏览器存储不可用'
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+      }
+
+      function removeManualAnnotationSubItem (stroke, subItemIndex) {
+        const review = annotationPointReview(stroke)
+        if (!review.subItems[subItemIndex]) return
+        review.subItems.splice(subItemIndex, 1)
+        markCurrentManualAnnotationsDirty()
+        const persisted = saveCurrentAnnotations({ silent: true })
+        renderChineseTexts(currentPage)
+        const message = persisted
+          ? `已删除编号 ${stroke.number} 的子项 ${subItemIndex + 1}，修改已暂存，请点击“保存当前页”确认`
+          : '已删除子项，但浏览器存储不可用'
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+      }
+
       function updateManualImageAnnotationField (stroke, field, value) {
         if (!['androidResourceId', 'iosResourceId'].includes(field)) return
         annotationImagePointResources(stroke)[field] = value
+        markCurrentManualAnnotationsDirty()
         const persisted = saveCurrentAnnotations({ silent: true })
         const message = persisted
-          ? `图片编号 ${stroke.number} 的资源信息已自动保存`
+          ? `图片编号 ${stroke.number} 的修改已暂存，请点击“保存当前页”确认`
           : '浏览器存储不可用，图片资源信息仅在本次打开期间有效'
         setAnnotationStatus(message)
         elements.manualAnnotationStatus.textContent = message
@@ -2713,13 +3443,14 @@
         const markerLabel = stroke.type === 'image-point' ? '图片打点' : '文本打点'
         const markerNumber = stroke.number
         currentAnnotationStrokes.splice(strokeIndex, 1)
+        markCurrentManualAnnotationsDirty()
         renderAnnotations()
         updateAnnotationControls()
         const persisted = saveCurrentAnnotations({ silent: true })
         refreshManualAnnotationReview()
         refreshTranslationImageResources()
         const message = persisted
-          ? `已删除${markerLabel} ${markerNumber}，并自动保存`
+          ? `已删除${markerLabel} ${markerNumber}，修改已暂存，请点击“保存当前页”确认`
           : `已删除${markerLabel} ${markerNumber}，但浏览器存储不可用`
         setAnnotationStatus(message)
         elements.manualAnnotationStatus.textContent = message
@@ -2727,7 +3458,9 @@
 
       function manualAnnotationHasContent (stroke) {
         const review = annotationPointReview(stroke)
-        return ['sourceText', 'androidTranslationId', 'iosTranslationId'].some(field => review[field].trim())
+        return ['sourceText', 'androidTranslationId', 'iosTranslationId'].some(field => review[field].trim()) ||
+          Object.values(review.translations).some(value => value.trim()) ||
+          review.subItems.length > 0
       }
 
       function manualImageAnnotationHasContent (stroke) {
@@ -2736,10 +3469,64 @@
           .some(field => resources[field].trim())
       }
 
+      function currentManualAnnotationHasMarkers () {
+        return numberedPointStrokes().length > 0 || imagePointStrokes().length > 0
+      }
+
+      function annotationTargetHasMarkers (targetKey) {
+        const strokes = targetKey === currentAnnotationKey
+          ? currentAnnotationStrokes
+          : savedAnnotations.targets[targetKey]?.strokes
+        return numberedPointStrokes(strokes).length > 0 || imagePointStrokes(strokes).length > 0
+      }
+
+      function unsavedTargetsForCurrentScreenshotTab () {
+        const pageNameSet = new Set(baselinePages.map(page => page.name))
+        return Array.from(unsavedManualAnnotationTargets).filter(targetKey => {
+          const [pageName] = targetKey.split('::')
+          return pageNameSet.has(pageName) && annotationTargetHasMarkers(targetKey)
+        })
+      }
+
+      function markCurrentManualAnnotationsDirty () {
+        if (!currentAnnotationKey) return
+        unsavedManualAnnotationTargets.add(currentAnnotationKey)
+        elements.manualAnnotationStatus.textContent = '当前页有未保存的人工标注，请点击“保存当前页”'
+        updateManualAnnotationActionState()
+      }
+
+      function markCurrentManualAnnotationsSaved () {
+        if (!currentAnnotationKey) return
+        unsavedManualAnnotationTargets.delete(currentAnnotationKey)
+        updateManualAnnotationActionState()
+      }
+
+      function canNavigateFromCurrentPage () {
+        if (!currentManualAnnotationHasMarkers() || !unsavedManualAnnotationTargets.has(currentAnnotationKey)) return true
+        const message = '当前页有未保存的人工标注，请先点击右侧“保存当前页”，再切换页面。'
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+        window.alert(message)
+        elements.saveManualAnnotation.focus()
+        return false
+      }
+
+      function canSwitchFromCurrentScreenshotTab () {
+        const unsavedTargets = unsavedTargetsForCurrentScreenshotTab()
+        if (unsavedTargets.length === 0) return true
+        const message = `当前截图 Tab“${currentScreenshotTab.label}”有 ${unsavedTargets.length} 个页面存在未保存的人工标注，请先逐页点击右侧“保存当前页”，再切换截图 Tab。`
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+        window.alert(message)
+        if (unsavedManualAnnotationTargets.has(currentAnnotationKey)) elements.saveManualAnnotation.focus()
+        return false
+      }
+
       function updateManualAnnotationActionState (markers = numberedPointStrokes(), imageMarkers = imagePointStrokes()) {
         elements.resetManualAnnotation.disabled = !markers.some(manualAnnotationHasContent) &&
           !imageMarkers.some(manualImageAnnotationHasContent)
-        elements.saveManualAnnotation.disabled = markers.length === 0 && imageMarkers.length === 0
+        elements.saveManualAnnotation.disabled = (markers.length === 0 && imageMarkers.length === 0) ||
+          !unsavedManualAnnotationTargets.has(currentAnnotationKey)
         const savedPointCount = Object.values(savedAnnotations.targets).reduce((count, target) => {
           return count + numberedPointStrokes(target?.strokes).length + imagePointStrokes(target?.strokes).length
         }, 0)
@@ -2752,8 +3539,10 @@
         markers.forEach(stroke => {
           stroke.review = {
             sourceText: '',
+            translations: {},
             androidTranslationId: '',
-            iosTranslationId: ''
+            iosTranslationId: '',
+            subItems: []
           }
         })
         imageMarkers.forEach(stroke => {
@@ -2763,6 +3552,7 @@
           }
         })
         const persisted = saveCurrentAnnotations({ silent: true })
+        if (persisted) markCurrentManualAnnotationsSaved()
         renderChineseTexts(currentPage)
         elements.manualAnnotationStatus.textContent = persisted
           ? `当前页 ${markers.length} 个文本打点和 ${imageMarkers.length} 个图片打点已重置并保存`
@@ -2773,6 +3563,7 @@
         const markers = numberedPointStrokes()
         const imageMarkers = imagePointStrokes()
         const persisted = saveCurrentAnnotations({ silent: true })
+        if (persisted) markCurrentManualAnnotationsSaved()
         elements.manualAnnotationStatus.textContent = persisted
           ? `当前页 ${markers.length} 个文本打点和 ${imageMarkers.length} 个图片打点已保存`
           : '保存失败：浏览器存储不可用'
@@ -2782,18 +3573,33 @@
       function createManualAnnotationExport () {
         const targets = {}
         let pointCount = 0
+        let subItemCount = 0
         let imagePointCount = 0
         Object.entries(savedAnnotations.targets).forEach(([targetKey, target]) => {
+          const [pageName, state = 'main'] = targetKey.split('::')
+          const page = baselinePages.find(candidate => candidate.name === pageName)
+          if (!page) return
           const items = numberedPointStrokes(target?.strokes).map(stroke => {
             const review = annotationPointReview(stroke)
             const point = stroke.points[0] ?? { x: 0, y: 0 }
+            const subItems = review.subItems.map(subItem => ({
+              sourceText: subItem.sourceText,
+              translation: currentLanguage === 'en' ? '' : (subItem.translations[currentLanguage] ?? ''),
+              translations: { ...subItem.translations },
+              androidTranslationId: subItem.androidTranslationId.trim(),
+              iosTranslationId: subItem.iosTranslationId.trim()
+            }))
+            subItemCount += subItems.length
             return {
               number: Number(stroke.number),
               x: point.x,
               y: point.y,
               sourceText: review.sourceText,
+              translation: currentLanguage === 'en' ? '' : (review.translations[currentLanguage] ?? ''),
+              translations: { ...review.translations },
               androidTranslationId: review.androidTranslationId.trim(),
-              iosTranslationId: review.iosTranslationId.trim()
+              iosTranslationId: review.iosTranslationId.trim(),
+              subItems
             }
           })
           const imageItems = imagePointStrokes(target?.strokes).map(stroke => {
@@ -2808,11 +3614,9 @@
             }
           })
           if (items.length === 0 && imageItems.length === 0) return
-          const [pageName, state = 'main'] = targetKey.split('::')
-          const pageTitle = baselinePages.find(page => page.name === pageName)?.label ?? pageName
           targets[targetKey] = {
             pageName,
-            pageTitle,
+            pageTitle: page.label ?? pageName,
             variantId: state.startsWith('variant:') ? state.slice('variant:'.length) : null,
             imageRef: target.imageRef,
             items,
@@ -2821,7 +3625,7 @@
           pointCount += items.length
           imagePointCount += imageItems.length
         })
-        return { targets, pointCount, imagePointCount }
+        return { targets, pointCount, subItemCount, imagePointCount }
       }
 
       function manualAnnotationImportString (value, fieldLabel, { trim = false } = {}) {
@@ -2830,7 +3634,52 @@
         return trim ? value.trim() : value
       }
 
-      function manualAnnotationImportMarker (item, itemLabel, markerType) {
+      function manualAnnotationImportLanguage (metadata) {
+        const locale = typeof metadata?.targetLocale === 'string' ? metadata.targetLocale : ''
+        const label = typeof metadata?.targetLanguage === 'string' ? metadata.targetLanguage : ''
+        return Object.keys(languageCodes).find(language => languageCodes[language] === locale) ??
+          Object.keys(languageLabels).find(language => languageLabels[language] === label) ??
+          'en'
+      }
+
+      function manualAnnotationImportTranslations (translations, translation, itemLabel, importLanguage) {
+        if (translations !== undefined && translations !== null &&
+          (typeof translations !== 'object' || Array.isArray(translations))) {
+          throw new Error(`${itemLabel}的 translations 必须是对象`)
+        }
+        const result = {}
+        Object.entries(translations ?? {}).forEach(([language, value]) => {
+          if (!Object.hasOwn(languageLabels, language) || language === 'en') return
+          result[language] = manualAnnotationImportString(value, `${itemLabel}的${languageLabels[language]}译文`)
+        })
+        if (translation !== undefined && translation !== null) {
+          const importedTranslation = manualAnnotationImportString(translation, `${itemLabel}的当前语言译文`)
+          if (importLanguage !== 'en') {
+            if (importedTranslation) result[importLanguage] = importedTranslation
+            else delete result[importLanguage]
+          }
+        }
+        return result
+      }
+
+      function manualAnnotationImportSubItems (subItems, itemLabel, importLanguage = 'en') {
+        if (subItems === undefined || subItems === null) return []
+        if (!Array.isArray(subItems)) throw new Error(`${itemLabel}的 subItems 必须是数组`)
+        return subItems.map((subItem, index) => {
+          const subItemLabel = `${itemLabel}的子项 ${index + 1}`
+          if (!subItem || typeof subItem !== 'object' || Array.isArray(subItem)) {
+            throw new Error(`${subItemLabel}格式无效`)
+          }
+          return {
+            sourceText: manualAnnotationImportString(subItem.sourceText, `${subItemLabel}的原文`),
+            translations: manualAnnotationImportTranslations(subItem.translations, subItem.translation, subItemLabel, importLanguage),
+            androidTranslationId: manualAnnotationImportString(subItem.androidTranslationId, `${subItemLabel}的安卓译文 ID`, { trim: true }),
+            iosTranslationId: manualAnnotationImportString(subItem.iosTranslationId, `${subItemLabel}的 iOS 译文 ID`, { trim: true })
+          }
+        })
+      }
+
+      function manualAnnotationImportMarker (item, itemLabel, markerType, importLanguage = 'en') {
         if (!item || typeof item !== 'object' || Array.isArray(item)) {
           throw new Error(`${itemLabel}格式无效`)
         }
@@ -2859,8 +3708,10 @@
         } else {
           marker.review = {
             sourceText: manualAnnotationImportString(item.sourceText, `${itemLabel}的原文`),
+            translations: manualAnnotationImportTranslations(item.translations, item.translation, itemLabel, importLanguage),
             androidTranslationId: manualAnnotationImportString(item.androidTranslationId, `${itemLabel}的安卓译文 ID`, { trim: true }),
-            iosTranslationId: manualAnnotationImportString(item.iosTranslationId, `${itemLabel}的 iOS 译文 ID`, { trim: true })
+            iosTranslationId: manualAnnotationImportString(item.iosTranslationId, `${itemLabel}的 iOS 译文 ID`, { trim: true }),
+            subItems: manualAnnotationImportSubItems(item.subItems, itemLabel, importLanguage)
           }
         }
         return marker
@@ -2878,9 +3729,11 @@
         }
         const entries = Object.entries(payload.targets)
         if (entries.length === 0) throw new Error('JSON 中没有可导入的页面标注')
+        const importLanguage = manualAnnotationImportLanguage(payload.metadata)
 
         const targets = {}
         let pointCount = 0
+        let subItemCount = 0
         let imagePointCount = 0
         entries.forEach(([targetKey, target]) => {
           if (!target || typeof target !== 'object' || Array.isArray(target)) {
@@ -2917,13 +3770,13 @@
           const textNumbers = new Set()
           const imageNumbers = new Set()
           const textStrokes = items.map((item, index) => {
-            const marker = manualAnnotationImportMarker(item, `${targetKey} 文本打点 ${index + 1}`, 'numbered-point')
+            const marker = manualAnnotationImportMarker(item, `${targetKey} 文本打点 ${index + 1}`, 'numbered-point', importLanguage)
             if (textNumbers.has(marker.number)) throw new Error(`${targetKey} 存在重复的文本打点编号 ${marker.number}`)
             textNumbers.add(marker.number)
             return marker
           })
           const imageStrokes = imageItems.map((item, index) => {
-            const marker = manualAnnotationImportMarker(item, `${targetKey} 图片打点 ${index + 1}`, 'image-point')
+            const marker = manualAnnotationImportMarker(item, `${targetKey} 图片打点 ${index + 1}`, 'image-point', importLanguage)
             if (imageNumbers.has(marker.number)) throw new Error(`${targetKey} 存在重复的图片打点编号 ${marker.number}`)
             imageNumbers.add(marker.number)
             return marker
@@ -2933,9 +3786,10 @@
             strokes: [...textStrokes, ...imageStrokes]
           }
           pointCount += textStrokes.length
+          subItemCount += textStrokes.reduce((count, stroke) => count + stroke.review.subItems.length, 0)
           imagePointCount += imageStrokes.length
         })
-        return { targets, targetCount: entries.length, pointCount, imagePointCount }
+        return { targets, targetCount: entries.length, pointCount, subItemCount, imagePointCount }
       }
 
       function applyManualAnnotationImport (imported) {
@@ -2963,6 +3817,10 @@
           return false
         }
 
+        Object.keys(imported.targets).forEach(targetKey => {
+          unsavedManualAnnotationTargets.delete(targetKey)
+        })
+
         if (Object.hasOwn(imported.targets, currentAnnotationKey)) {
           const activeTarget = savedAnnotations.targets[currentAnnotationKey]
           currentAnnotationStrokes = cloneAnnotationStrokes(activeTarget?.strokes)
@@ -2976,7 +3834,8 @@
         } else {
           updateManualAnnotationActionState()
         }
-        const message = `已导入 ${imported.targetCount} 个页面、${imported.pointCount} 个文本打点和 ${imported.imagePointCount} 个图片打点`
+        const importedSubItemCount = Number(imported.subItemCount) || 0
+        const message = `已导入 ${imported.targetCount} 个页面、${imported.pointCount} 个文本打点、${importedSubItemCount} 个子项和 ${imported.imagePointCount} 个图片打点`
         setAnnotationStatus(message)
         elements.manualAnnotationStatus.textContent = message
         return true
@@ -3010,6 +3869,15 @@
         }
       }
 
+      function manualAnnotationExportLanguageMetadata (language = currentLanguage) {
+        return {
+          sourceLocale: languageCodes.en,
+          sourceLanguage: languageLabels.en,
+          targetLocale: languageCodes[language],
+          targetLanguage: languageLabels[language]
+        }
+      }
+
       function exportManualAnnotations () {
         saveCurrentAnnotations({ silent: true })
         const exportedAt = new Date()
@@ -3017,10 +3885,12 @@
         const payload = {
           metadata: {
             schemaVersion: 2,
-            sourceLocale: 'zh-CN',
+            screenshotFolderName: screenshotDirectory,
+            ...manualAnnotationExportLanguageMetadata(),
             exportedAt: exportedAt.toISOString(),
             targetCount: Object.keys(exported.targets).length,
             pointCount: exported.pointCount,
+            subItemCount: exported.subItemCount,
             imagePointCount: exported.imagePointCount
           },
           targets: exported.targets
@@ -3045,7 +3915,7 @@
         link.click()
         link.remove()
         URL.revokeObjectURL(url)
-        elements.manualAnnotationStatus.textContent = `已导出 ${fileName}；包含 ${exported.pointCount} 个文本打点和 ${exported.imagePointCount} 个图片打点`
+        elements.manualAnnotationStatus.textContent = `已导出 ${fileName}；包含 ${exported.pointCount} 个文本打点、${exported.subItemCount} 个子项和 ${exported.imagePointCount} 个图片打点`
       }
 
       function renderManualReview (pageIndex) {
@@ -3771,6 +4641,7 @@
           writeStorage(TRANSLATION_LANGUAGE_STORAGE_KEY, currentTranslationLanguage)
         }
         renderLanguage()
+        renderChineseTexts(currentPage)
         renderAiTranslations(currentPage)
         renderActiveReview(currentPage)
 
@@ -3783,9 +4654,11 @@
 
       function goToPage (pageIndex) {
         if (pageIndex < 0 || pageIndex >= pageNames.length || pageIndex === currentPage) return
+        if (!canNavigateFromCurrentPage()) return
         currentPage = pageIndex
         currentVariantId = null
         writeStorage(PAGE_STORAGE_KEY, currentPage)
+        writeStorage(screenshotTabPageStorageKey(currentScreenshotTabId), currentPage)
         renderPage()
       }
 
@@ -3854,6 +4727,9 @@
         })
       })
 
+      elements.screenshotTabSelect.addEventListener('change', function () {
+        selectScreenshotTab(elements.screenshotTabSelect.value)
+      })
       elements.previous.addEventListener('click', function () { goToPage(currentPage - 1) })
       elements.next.addEventListener('click', function () { goToPage(currentPage + 1) })
       elements.saveReview.addEventListener('click', saveCurrentReview)
@@ -3901,6 +4777,8 @@
       renderLanguage()
       selectReviewMode(currentReviewMode, false)
       setAnnotationEnabled(false)
+      renderScreenshotTabSelector()
+      renderScreenshotThumbnails()
       renderPage()
     })()
   </script>

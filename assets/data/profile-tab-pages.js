@@ -90,4 +90,13 @@
   window.REVIEW_QUESTIONNAIRE_TEXTS = copyPages()
   window.QUESTIONNAIRE_VARIANTS = {}
   window.REVIEW_QUESTIONNAIRE_VARIANTS = {}
+  window.SCREENSHOT_TABS = [{
+    id: 'profile-tab',
+    label: '我的tab',
+    directory: '我的tab',
+    pages: copyPages(),
+    reviewPages: copyPages(),
+    variants: {},
+    reviewVariants: {}
+  }]
 })()
