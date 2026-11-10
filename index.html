@@ -742,6 +742,31 @@
       min-width: 0;
     }
 
+    .manual-annotation-delete {
+      justify-self: end;
+      min-height: 34px;
+      padding: 7px 14px;
+      border: 1px solid #ff6b7f;
+      border-radius: 10px;
+      color: #d92d4d;
+      background: #fff5f7;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .manual-annotation-delete:hover {
+      border-color: #ef3f5e;
+      background: #ffe8ed;
+    }
+
+    .manual-annotation-delete:focus-visible {
+      outline: 0;
+      box-shadow: 0 0 0 3px rgba(239, 63, 94, .2);
+    }
+
     .review-textarea {
       width: 100%;
       min-height: 48px;
@@ -974,8 +999,12 @@
       background: var(--active);
     }
 
+    .action-button.import,
     .action-button.export {
       grid-column: 1 / -1;
+    }
+
+    .action-button.export {
       color: #fff;
       border-color: #17613b;
       background: #217a4b;
@@ -1132,16 +1161,18 @@
         </div>
       </div>
       <div class="content-summary">
-        <span>文本点填写原文与译文 ID；图片点填写双端资源 ID 与链接</span>
+        <span>文本点填写原文与译文 ID；图片点填写安卓与 iOS 资源 ID</span>
         <span id="chineseTextCount" class="text-count">0 个打点</span>
       </div>
       <ol id="chineseTextList" class="chinese-text-list" aria-live="polite"></ol>
       <div class="review-actions">
         <button id="resetCurrentManualAnnotation" class="action-button" type="button">重置当前页</button>
         <button id="saveCurrentManualAnnotation" class="action-button primary" type="button">保存当前页</button>
-        <button id="exportManualAnnotations" class="action-button export" type="button">导出核对后的译文</button>
+        <button id="importManualAnnotations" class="action-button import" type="button">导入标注 JSON</button>
+        <button id="exportManualAnnotations" class="action-button export" type="button">导出标注 JSON</button>
+        <input id="manualAnnotationImportFile" type="file" accept=".json,application/json" hidden>
       </div>
-      <p class="export-hint">导出文件会按页面、子项和打点编号保留文本原文与译文 ID，以及图片打点的安卓 / iOS 资源 ID 和图片资源链接。</p>
+      <p class="export-hint">导出 JSON 会按页面、子项和打点编号保留文本原文与译文 ID，以及图片打点的安卓 / iOS 资源 ID。导入会覆盖 JSON 中包含页面的本地标注，未包含的页面保持不变。</p>
       <p id="manualAnnotationStatus" class="review-status" role="status" aria-live="polite">人工标注输入会自动保存</p>
     </section>
 
@@ -1304,6 +1335,8 @@
         chineseTextList: document.querySelector('#chineseTextList'),
         resetManualAnnotation: document.querySelector('#resetCurrentManualAnnotation'),
         saveManualAnnotation: document.querySelector('#saveCurrentManualAnnotation'),
+        importManualAnnotations: document.querySelector('#importManualAnnotations'),
+        manualAnnotationImportFile: document.querySelector('#manualAnnotationImportFile'),
         exportManualAnnotations: document.querySelector('#exportManualAnnotations'),
         manualAnnotationStatus: document.querySelector('#manualAnnotationStatus'),
         aiLanguageBadge: document.querySelector('#aiLanguageBadge'),
@@ -1440,12 +1473,6 @@
                 : '',
               iosResourceId: typeof stroke?.imageResources?.iosResourceId === 'string'
                 ? stroke.imageResources.iosResourceId
-                : '',
-              androidResourceUrl: typeof stroke?.imageResources?.androidResourceUrl === 'string'
-                ? stroke.imageResources.androidResourceUrl
-                : '',
-              iosResourceUrl: typeof stroke?.imageResources?.iosResourceUrl === 'string'
-                ? stroke.imageResources.iosResourceUrl
                 : ''
             }
           }
@@ -1481,7 +1508,7 @@
 
       function annotationImagePointResources (stroke) {
         if (!stroke.imageResources || typeof stroke.imageResources !== 'object') stroke.imageResources = {}
-        for (const field of ['androidResourceId', 'iosResourceId', 'androidResourceUrl', 'iosResourceUrl']) {
+        for (const field of ['androidResourceId', 'iosResourceId']) {
           if (typeof stroke.imageResources[field] !== 'string') stroke.imageResources[field] = ''
         }
         return stroke.imageResources
@@ -1784,9 +1811,7 @@
         } else {
           marker.imageResources = {
             androidResourceId: '',
-            iosResourceId: '',
-            androidResourceUrl: '',
-            iosResourceUrl: ''
+            iosResourceId: ''
           }
         }
         currentAnnotationStrokes.push(marker)
@@ -2438,7 +2463,7 @@
           })
           iosField.append(iosLabel, iosInput)
 
-          fields.append(sourceField, androidField, iosField)
+          fields.append(sourceField, androidField, iosField, createManualAnnotationDeleteButton(stroke, '文本打点'))
           row.append(number, fields)
           elements.chineseTextList.append(row)
           resizeTextarea(sourceInput)
@@ -2461,9 +2486,7 @@
 
           const fieldDefinitions = [
             ['androidResourceId', '安卓资源 ID', 'manual-image-android-id-input', '例如：onboarding.equipment.hero_image', 'text'],
-            ['iosResourceId', 'iOS 资源 ID', 'manual-image-ios-id-input', '例如：onboarding.equipment.hero_image', 'text'],
-            ['androidResourceUrl', '安卓图片资源链接', 'manual-image-android-url-input', '例如：https://example.com/android.png 或 assets/...', 'url'],
-            ['iosResourceUrl', 'iOS 图片资源链接', 'manual-image-ios-url-input', '例如：https://example.com/ios.png 或 assets/...', 'url']
+            ['iosResourceId', 'iOS 资源 ID', 'manual-image-ios-id-input', '例如：onboarding.equipment.hero_image', 'text']
           ]
 
           fieldDefinitions.forEach(([field, labelText, className, placeholder, inputMode]) => {
@@ -2490,6 +2513,8 @@
             resourceField.append(resourceLabel, input)
             fields.append(resourceField)
           })
+
+          fields.append(createManualAnnotationDeleteButton(stroke, '图片打点'))
 
           row.append(number, fields)
           elements.chineseTextList.append(row)
@@ -2659,7 +2684,7 @@
       }
 
       function updateManualImageAnnotationField (stroke, field, value) {
-        if (!['androidResourceId', 'iosResourceId', 'androidResourceUrl', 'iosResourceUrl'].includes(field)) return
+        if (!['androidResourceId', 'iosResourceId'].includes(field)) return
         annotationImagePointResources(stroke)[field] = value
         const persisted = saveCurrentAnnotations({ silent: true })
         const message = persisted
@@ -2670,6 +2695,36 @@
         updateManualAnnotationActionState()
       }
 
+      function createManualAnnotationDeleteButton (stroke, markerLabel) {
+        const button = document.createElement('button')
+        button.type = 'button'
+        button.className = 'manual-annotation-delete'
+        button.textContent = '删除标注'
+        button.setAttribute('aria-label', `删除${markerLabel} ${stroke.number}`)
+        button.addEventListener('click', function () {
+          deleteManualAnnotation(stroke)
+        })
+        return button
+      }
+
+      function deleteManualAnnotation (stroke) {
+        const strokeIndex = currentAnnotationStrokes.indexOf(stroke)
+        if (strokeIndex < 0) return
+        const markerLabel = stroke.type === 'image-point' ? '图片打点' : '文本打点'
+        const markerNumber = stroke.number
+        currentAnnotationStrokes.splice(strokeIndex, 1)
+        renderAnnotations()
+        updateAnnotationControls()
+        const persisted = saveCurrentAnnotations({ silent: true })
+        refreshManualAnnotationReview()
+        refreshTranslationImageResources()
+        const message = persisted
+          ? `已删除${markerLabel} ${markerNumber}，并自动保存`
+          : `已删除${markerLabel} ${markerNumber}，但浏览器存储不可用`
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+      }
+
       function manualAnnotationHasContent (stroke) {
         const review = annotationPointReview(stroke)
         return ['sourceText', 'androidTranslationId', 'iosTranslationId'].some(field => review[field].trim())
@@ -2677,7 +2732,7 @@
 
       function manualImageAnnotationHasContent (stroke) {
         const resources = annotationImagePointResources(stroke)
-        return ['androidResourceId', 'iosResourceId', 'androidResourceUrl', 'iosResourceUrl']
+        return ['androidResourceId', 'iosResourceId']
           .some(field => resources[field].trim())
       }
 
@@ -2704,9 +2759,7 @@
         imageMarkers.forEach(stroke => {
           stroke.imageResources = {
             androidResourceId: '',
-            iosResourceId: '',
-            androidResourceUrl: '',
-            iosResourceUrl: ''
+            iosResourceId: ''
           }
         })
         const persisted = saveCurrentAnnotations({ silent: true })
@@ -2751,9 +2804,7 @@
               x: point.x,
               y: point.y,
               androidResourceId: resources.androidResourceId.trim(),
-              iosResourceId: resources.iosResourceId.trim(),
-              androidResourceUrl: resources.androidResourceUrl.trim(),
-              iosResourceUrl: resources.iosResourceUrl.trim()
+              iosResourceId: resources.iosResourceId.trim()
             }
           })
           if (items.length === 0 && imageItems.length === 0) return
@@ -2773,6 +2824,192 @@
         return { targets, pointCount, imagePointCount }
       }
 
+      function manualAnnotationImportString (value, fieldLabel, { trim = false } = {}) {
+        if (value === undefined || value === null) return ''
+        if (typeof value !== 'string') throw new Error(`${fieldLabel}必须是字符串`)
+        return trim ? value.trim() : value
+      }
+
+      function manualAnnotationImportMarker (item, itemLabel, markerType) {
+        if (!item || typeof item !== 'object' || Array.isArray(item)) {
+          throw new Error(`${itemLabel}格式无效`)
+        }
+        const number = Number(item.number)
+        if (!Number.isInteger(number) || number <= 0) {
+          throw new Error(`${itemLabel}的编号必须是正整数`)
+        }
+        for (const coordinate of ['x', 'y']) {
+          if (typeof item[coordinate] !== 'number' || !Number.isFinite(item[coordinate]) || item[coordinate] < 0 || item[coordinate] > 1) {
+            throw new Error(`${itemLabel}的 ${coordinate} 坐标必须是 0 到 1 之间的数字`)
+          }
+        }
+        const marker = {
+          type: markerType,
+          platform: null,
+          color: markerType === 'image-point' ? ANNOTATION_IMAGE_POINT_COLOR : ANNOTATION_TEXT_POINT_COLOR,
+          width: .05,
+          number,
+          points: [{ x: item.x, y: item.y }]
+        }
+        if (markerType === 'image-point') {
+          marker.imageResources = {
+            androidResourceId: manualAnnotationImportString(item.androidResourceId, `${itemLabel}的安卓资源 ID`, { trim: true }),
+            iosResourceId: manualAnnotationImportString(item.iosResourceId, `${itemLabel}的 iOS 资源 ID`, { trim: true })
+          }
+        } else {
+          marker.review = {
+            sourceText: manualAnnotationImportString(item.sourceText, `${itemLabel}的原文`),
+            androidTranslationId: manualAnnotationImportString(item.androidTranslationId, `${itemLabel}的安卓译文 ID`, { trim: true }),
+            iosTranslationId: manualAnnotationImportString(item.iosTranslationId, `${itemLabel}的 iOS 译文 ID`, { trim: true })
+          }
+        }
+        return marker
+      }
+
+      function normalizeManualAnnotationImport (payload) {
+        if (!payload || typeof payload !== 'object' || Array.isArray(payload)) {
+          throw new Error('文件根节点必须是 JSON 对象')
+        }
+        if (Number(payload.metadata?.schemaVersion) !== 2) {
+          throw new Error('仅支持 schemaVersion 为 2 的标注 JSON')
+        }
+        if (!payload.targets || typeof payload.targets !== 'object' || Array.isArray(payload.targets)) {
+          throw new Error('targets 必须是页面标注对象')
+        }
+        const entries = Object.entries(payload.targets)
+        if (entries.length === 0) throw new Error('JSON 中没有可导入的页面标注')
+
+        const targets = {}
+        let pointCount = 0
+        let imagePointCount = 0
+        entries.forEach(([targetKey, target]) => {
+          if (!target || typeof target !== 'object' || Array.isArray(target)) {
+            throw new Error(`${targetKey} 的页面标注格式无效`)
+          }
+          const keyParts = targetKey.split('::')
+          if (keyParts.length !== 2) throw new Error(`无法识别页面标识 ${targetKey}`)
+          const [pageName, state] = keyParts
+          const pageIndex = baselinePages.findIndex(page => page.name === pageName)
+          if (pageIndex < 0) throw new Error(`当前 V2 页面中不存在 ${pageName}`)
+          if (target.pageName !== undefined && target.pageName !== pageName) {
+            throw new Error(`${targetKey} 的 pageName 与页面标识不一致`)
+          }
+
+          let importedVariantId = null
+          if (state !== 'main') {
+            if (!state.startsWith('variant:') || state.length === 'variant:'.length) {
+              throw new Error(`无法识别页面状态 ${targetKey}`)
+            }
+            importedVariantId = state.slice('variant:'.length)
+            const knownVariant = variantsForPage(pageIndex)
+              .some((variant, index) => variantId(variant, index) === importedVariantId)
+            if (!knownVariant) throw new Error(`${pageName} 中不存在子项 ${importedVariantId}`)
+          }
+          if (target.variantId !== undefined && target.variantId !== importedVariantId) {
+            throw new Error(`${targetKey} 的 variantId 与页面标识不一致`)
+          }
+
+          const items = target.items ?? []
+          const imageItems = target.imageItems ?? []
+          if (!Array.isArray(items) || !Array.isArray(imageItems)) {
+            throw new Error(`${targetKey} 的 items 和 imageItems 必须是数组`)
+          }
+          const textNumbers = new Set()
+          const imageNumbers = new Set()
+          const textStrokes = items.map((item, index) => {
+            const marker = manualAnnotationImportMarker(item, `${targetKey} 文本打点 ${index + 1}`, 'numbered-point')
+            if (textNumbers.has(marker.number)) throw new Error(`${targetKey} 存在重复的文本打点编号 ${marker.number}`)
+            textNumbers.add(marker.number)
+            return marker
+          })
+          const imageStrokes = imageItems.map((item, index) => {
+            const marker = manualAnnotationImportMarker(item, `${targetKey} 图片打点 ${index + 1}`, 'image-point')
+            if (imageNumbers.has(marker.number)) throw new Error(`${targetKey} 存在重复的图片打点编号 ${marker.number}`)
+            imageNumbers.add(marker.number)
+            return marker
+          })
+          targets[targetKey] = {
+            imageRef: manualAnnotationImportString(target.imageRef, `${targetKey} 的 imageRef`, { trim: true }),
+            strokes: [...textStrokes, ...imageStrokes]
+          }
+          pointCount += textStrokes.length
+          imagePointCount += imageStrokes.length
+        })
+        return { targets, targetCount: entries.length, pointCount, imagePointCount }
+      }
+
+      function applyManualAnnotationImport (imported) {
+        const previousAnnotations = savedAnnotations
+        const nextTargets = { ...savedAnnotations.targets }
+        const importedAt = new Date().toISOString()
+        Object.entries(imported.targets).forEach(([targetKey, target]) => {
+          if (target.strokes.length === 0) {
+            delete nextTargets[targetKey]
+            return
+          }
+          nextTargets[targetKey] = {
+            imageRef: target.imageRef || nextTargets[targetKey]?.imageRef || '',
+            strokes: cloneAnnotationStrokes(target.strokes),
+            imageResources: emptyAnnotationImageResources(),
+            updatedAt: importedAt
+          }
+        })
+        savedAnnotations = { version: 1, targets: nextTargets }
+        if (!persistSavedAnnotations()) {
+          savedAnnotations = previousAnnotations
+          const message = '导入失败：浏览器存储不可用，现有标注未改变'
+          setAnnotationStatus(message)
+          elements.manualAnnotationStatus.textContent = message
+          return false
+        }
+
+        if (Object.hasOwn(imported.targets, currentAnnotationKey)) {
+          const activeTarget = savedAnnotations.targets[currentAnnotationKey]
+          currentAnnotationStrokes = cloneAnnotationStrokes(activeTarget?.strokes)
+          currentAnnotationImageResources = cloneAnnotationImageResources(activeTarget?.imageResources)
+          activeAnnotationStroke = null
+          activeAnnotationPointerId = null
+          renderAnnotations()
+          updateAnnotationControls()
+          renderChineseTexts(currentPage)
+          refreshTranslationImageResources()
+        } else {
+          updateManualAnnotationActionState()
+        }
+        const message = `已导入 ${imported.targetCount} 个页面、${imported.pointCount} 个文本打点和 ${imported.imagePointCount} 个图片打点`
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+        return true
+      }
+
+      function openManualAnnotationImport () {
+        elements.manualAnnotationImportFile.value = ''
+        elements.manualAnnotationImportFile.click()
+      }
+
+      async function importManualAnnotationsFromFile (event) {
+        const input = event.currentTarget
+        const file = input.files?.[0]
+        if (!file) return
+        try {
+          const payload = JSON.parse(await file.text())
+          const imported = normalizeManualAnnotationImport(payload)
+          const confirmed = window.confirm(`将导入 ${imported.targetCount} 个页面的标注，并覆盖这些页面当前保存的内容。未包含的页面会保留。是否继续？`)
+          if (!confirmed) {
+            elements.manualAnnotationStatus.textContent = '已取消导入，现有标注未改变'
+            return
+          }
+          applyManualAnnotationImport(imported)
+        } catch (error) {
+          const detail = typeof error?.message === 'string' ? error.message : '文件内容无效'
+          const message = `导入失败：${detail}`
+          setAnnotationStatus(message)
+          elements.manualAnnotationStatus.textContent = message
+        } finally {
+          input.value = ''
+        }
+      }
+
       function exportManualAnnotations () {
         saveCurrentAnnotations({ silent: true })
         const exportedAt = new Date()
@@ -2788,8 +3025,8 @@
           },
           targets: exported.targets
         }
-        const source = `window.REVIEWED_TEXT_POINT_ANNOTATIONS = ${JSON.stringify(payload, null, 2)}\n`
-        const blob = new Blob([source], { type: 'text/javascript;charset=utf-8' })
+        const source = `${JSON.stringify(payload, null, 2)}\n`
+        const blob = new Blob([source], { type: 'application/json;charset=utf-8' })
         const url = URL.createObjectURL(blob)
         const link = document.createElement('a')
         const timestamp = [
@@ -2801,7 +3038,7 @@
           String(exportedAt.getMinutes()).padStart(2, '0'),
           String(exportedAt.getSeconds()).padStart(2, '0')
         ].join('')
-        const fileName = `offline-info-page-v2.reviewed-annotations-${exported.pointCount}text-${exported.imagePointCount}image-${timestamp}.js`
+        const fileName = `offline-info-page-v2.reviewed-annotations-${exported.pointCount}text-${exported.imagePointCount}image-${timestamp}.json`
         link.href = url
         link.download = fileName
         document.body.append(link)
@@ -3634,6 +3871,8 @@
       elements.annotationExportAll.addEventListener('click', exportAllAnnotatedImages)
       elements.resetManualAnnotation.addEventListener('click', resetCurrentManualAnnotations)
       elements.saveManualAnnotation.addEventListener('click', saveCurrentManualAnnotations)
+      elements.importManualAnnotations.addEventListener('click', openManualAnnotationImport)
+      elements.manualAnnotationImportFile.addEventListener('change', importManualAnnotationsFromFile)
       elements.exportManualAnnotations.addEventListener('click', exportManualAnnotations)
       elements.annotationCanvas.addEventListener('pointerdown', beginAnnotationStroke)
       elements.annotationCanvas.addEventListener('pointermove', continueAnnotationStroke)
