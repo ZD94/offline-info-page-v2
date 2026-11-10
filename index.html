@@ -866,6 +866,20 @@
       box-shadow: 0 0 0 3px rgba(115, 157, 216, .18);
     }
 
+    .translation-review-id-input[readonly],
+    .translation-review-id-input[readonly]:focus {
+      border-color: #d8dee8;
+      color: #596579;
+      background: #eef2f7;
+      box-shadow: none;
+      cursor: text;
+    }
+
+    .translation-review-id-input[readonly]:focus-visible {
+      border-color: #739dd8;
+      box-shadow: 0 0 0 3px rgba(115, 157, 216, .18);
+    }
+
     .translation-image-resources {
       display: grid;
       gap: 12px;
@@ -1219,7 +1233,7 @@
           <button id="saveCurrentTranslationReview" class="action-button primary" type="button">保存当前页</button>
           <button id="exportReviewedTranslations" class="action-button export" type="button">导出核对后的译文</button>
         </div>
-        <p class="export-hint">译文核对使用独立草稿与存储；安卓与 iOS 译文标识 ID 用于定位条目。框选图片的标识 ID 与资源链接按页面、子项和平台自动保存，并随译文一起导出；不会修改中文人工核对稿。</p>
+        <p class="export-hint">译文核对使用独立草稿与存储；安卓与 iOS 译文标识 ID 仅在英文页维护，其他语言自动同步英文已保存值且只读。框选图片的标识 ID 与资源链接按页面、子项和平台自动保存，并随译文一起导出；不会修改中文人工核对稿。</p>
         <p id="translationReviewStatus" class="review-status" role="status" aria-live="polite">请从上方选择一种目标语言</p>
       </div>
     </section>
@@ -1244,6 +1258,7 @@
       const REVIEW_MODE_STORAGE_KEY = 'offline-info-page-v2:review-mode:v1'
       const TRANSLATION_REVIEW_STORAGE_KEY = 'offline-info-page-v2:translation-review:v1'
       const TRANSLATION_LANGUAGE_STORAGE_KEY = 'offline-info-page-v2:translation-review-language:v1'
+      const TRANSLATION_ID_SOURCE_LANGUAGE = 'en'
       const ANNOTATION_STORAGE_KEY = 'offline-info-page-v2:screenshot-annotations:v1'
       const ANNOTATION_PLATFORM_COLORS = Object.freeze({ android: '#34A853', ios: '#007AFF' })
       const SCREENSHOT_LANGUAGE = 'zh'
@@ -1878,8 +1893,8 @@
         })
       }
 
-      function savedTranslationIdValues (page, language) {
-        const saved = savedTranslationReviews[language]?.[page.name] ?? {}
+      function savedTranslationIdValues (page) {
+        const saved = savedTranslationReviews[TRANSLATION_ID_SOURCE_LANGUAGE]?.[page.name] ?? {}
         return page.items.map(item => {
           const savedValue = saved[item.key]
           return savedValue && typeof savedValue === 'object' && typeof savedValue.translationId === 'string'
@@ -1888,8 +1903,8 @@
         })
       }
 
-      function savedIosTranslationIdValues (page, language) {
-        const saved = savedTranslationReviews[language]?.[page.name] ?? {}
+      function savedIosTranslationIdValues (page) {
+        const saved = savedTranslationReviews[TRANSLATION_ID_SOURCE_LANGUAGE]?.[page.name] ?? {}
         return page.items.map(item => {
           const savedValue = saved[item.key]
           return savedValue && typeof savedValue === 'object' && typeof savedValue.iosTranslationId === 'string'
@@ -1900,16 +1915,17 @@
 
       function currentTranslationReviewDraft (page, language, sourceValues = currentReviewValues(page)) {
         const draft = translationReviewDrafts.get(translationReviewDraftKey(language, page))
+        const identifiersEditable = language === TRANSLATION_ID_SOURCE_LANGUAGE
         return {
           translations: Array.isArray(draft?.translations)
             ? draft.translations
             : savedTranslationValues(page, language, sourceValues),
-          translationIds: Array.isArray(draft?.translationIds)
+          translationIds: identifiersEditable && Array.isArray(draft?.translationIds)
             ? draft.translationIds
-            : savedTranslationIdValues(page, language),
-          iosTranslationIds: Array.isArray(draft?.iosTranslationIds)
+            : savedTranslationIdValues(page),
+          iosTranslationIds: identifiersEditable && Array.isArray(draft?.iosTranslationIds)
             ? draft.iosTranslationIds
-            : savedIosTranslationIdValues(page, language)
+            : savedIosTranslationIdValues(page)
         }
       }
 
@@ -1926,7 +1942,11 @@
       }
 
       function translationPageHasSavedChanges (page, language) {
-        return Object.keys(savedTranslationReviews[language]?.[page.name] ?? {}).length > 0
+        const sourceValues = currentReviewValues(page)
+        const initialValues = translationReviewInitialValues(page, language, sourceValues)
+        const translationsChanged = !arraysEqual(savedTranslationValues(page, language, sourceValues), initialValues)
+        if (language !== TRANSLATION_ID_SOURCE_LANGUAGE) return translationsChanged
+        return translationsChanged || savedTranslationIdValues(page).some(Boolean) || savedIosTranslationIdValues(page).some(Boolean)
       }
 
       function versionedAssetPath (assetPath) {
@@ -2380,7 +2400,9 @@
         elements.exportTranslationReviews.disabled = false
 
         if (message) elements.translationReviewStatus.textContent = message
-        else if (hasDraft) elements.translationReviewStatus.textContent = `当前页有未保存的${languageLabel}译文或平台标识 ID 修改`
+        else if (hasDraft) elements.translationReviewStatus.textContent = language === TRANSLATION_ID_SOURCE_LANGUAGE
+          ? `当前页有未保存的${languageLabel}译文或平台标识 ID 修改`
+          : `当前页有未保存的${languageLabel}译文修改；平台标识 ID 使用英文已保存值`
         else if (hasSavedChanges) elements.translationReviewStatus.textContent = `当前页${languageLabel}译文核对内容已保存到本浏览器`
         else elements.translationReviewStatus.textContent = `当前页使用 Codex ${languageLabel}译文初稿`
       }
@@ -2390,6 +2412,15 @@
           elements.translationReviewList.querySelectorAll('.translation-review-textarea'),
           textarea => textarea.value
         )
+        const savedTranslations = savedTranslationValues(page, language, sourceValues)
+        const draftKey = translationReviewDraftKey(language, page)
+        if (language !== TRANSLATION_ID_SOURCE_LANGUAGE) {
+          if (arraysEqual(translations, savedTranslations)) translationReviewDrafts.delete(draftKey)
+          else translationReviewDrafts.set(draftKey, { translations })
+          updateTranslationReviewState(page, language)
+          return
+        }
+
         const translationIds = Array.from(
           elements.translationReviewList.querySelectorAll('.translation-review-android-id-input'),
           input => input.value
@@ -2398,10 +2429,8 @@
           elements.translationReviewList.querySelectorAll('.translation-review-ios-id-input'),
           input => input.value
         )
-        const savedTranslations = savedTranslationValues(page, language, sourceValues)
-        const savedTranslationIds = savedTranslationIdValues(page, language)
-        const savedIosTranslationIds = savedIosTranslationIdValues(page, language)
-        const draftKey = translationReviewDraftKey(language, page)
+        const savedTranslationIds = savedTranslationIdValues(page)
+        const savedIosTranslationIds = savedIosTranslationIdValues(page)
         if (
           arraysEqual(translations, savedTranslations) &&
           arraysEqual(translationIds, savedTranslationIds) &&
@@ -2498,13 +2527,16 @@
         const language = currentLanguage
         const paddedNumber = String(pageIndex + 1).padStart(2, '0')
         const languageLabel = languageLabels[language]
+        const identifiersEditable = language === TRANSLATION_ID_SOURCE_LANGUAGE
         elements.translationReviewKicker.textContent = page?.isVariant
           ? `问卷页面 ${paddedNumber} · 子项`
           : `问卷页面 ${paddedNumber}`
         elements.translationReviewTitle.textContent = page?.label ?? pageNames[pageIndex]
         elements.translationReviewSummary.textContent = language === 'zh'
           ? '中文原文只读；请从上方选择目标语言'
-          : `中文原文只读；${languageLabel}译文、安卓 / iOS 译文标识 ID 和框选图片资源可编辑`
+          : identifiersEditable
+            ? '中文原文只读；英文译文、安卓 / iOS 译文标识 ID 和框选图片资源可编辑'
+            : `中文原文只读；${languageLabel}译文可编辑；安卓 / iOS 译文标识 ID 同步英文已保存值且只读，框选图片资源可编辑`
         elements.translationReviewList.replaceChildren()
         renderTranslationImageResources(page, language)
 
@@ -2583,7 +2615,9 @@
           androidIdField.className = 'translation-review-field'
           const androidIdLabel = document.createElement('span')
           androidIdLabel.className = 'translation-review-label'
-          androidIdLabel.textContent = '安卓译文标识 ID（可选）'
+          androidIdLabel.textContent = identifiersEditable
+            ? '安卓译文标识 ID（可选）'
+            : '安卓译文标识 ID（同步英文，只读）'
           const androidIdInput = document.createElement('input')
           androidIdInput.className = 'translation-review-id-input translation-review-android-id-input'
           androidIdInput.type = 'text'
@@ -2593,18 +2627,31 @@
           androidIdInput.dir = 'ltr'
           androidIdInput.autocomplete = 'off'
           androidIdInput.spellcheck = false
-          androidIdInput.placeholder = '例如：onboarding.current_weight.title'
-          androidIdInput.setAttribute('aria-label', `第 ${index + 1} 条安卓译文标识 ID`)
-          androidIdInput.addEventListener('input', function () {
-            updateTranslationReviewDraft(page, language, sourceValues)
-          })
+          androidIdInput.readOnly = !identifiersEditable
+          androidIdInput.setAttribute('aria-readonly', String(!identifiersEditable))
+          androidIdInput.placeholder = identifiersEditable
+            ? '例如：onboarding.current_weight.title'
+            : '英文核对稿尚未填写'
+          androidIdInput.setAttribute(
+            'aria-label',
+            identifiersEditable
+              ? `第 ${index + 1} 条安卓译文标识 ID，可编辑`
+              : `第 ${index + 1} 条安卓译文标识 ID，同步英文，只读`
+          )
+          if (identifiersEditable) {
+            androidIdInput.addEventListener('input', function () {
+              updateTranslationReviewDraft(page, language, sourceValues)
+            })
+          }
           androidIdField.append(androidIdLabel, androidIdInput)
 
           const iosIdField = document.createElement('label')
           iosIdField.className = 'translation-review-field'
           const iosIdLabel = document.createElement('span')
           iosIdLabel.className = 'translation-review-label'
-          iosIdLabel.textContent = 'iOS 译文标识 ID（可选）'
+          iosIdLabel.textContent = identifiersEditable
+            ? 'iOS 译文标识 ID（可选）'
+            : 'iOS 译文标识 ID（同步英文，只读）'
           const iosIdInput = document.createElement('input')
           iosIdInput.className = 'translation-review-id-input translation-review-ios-id-input'
           iosIdInput.type = 'text'
@@ -2614,11 +2661,22 @@
           iosIdInput.dir = 'ltr'
           iosIdInput.autocomplete = 'off'
           iosIdInput.spellcheck = false
-          iosIdInput.placeholder = '例如：onboarding.current_weight.title'
-          iosIdInput.setAttribute('aria-label', `第 ${index + 1} 条 iOS 译文标识 ID`)
-          iosIdInput.addEventListener('input', function () {
-            updateTranslationReviewDraft(page, language, sourceValues)
-          })
+          iosIdInput.readOnly = !identifiersEditable
+          iosIdInput.setAttribute('aria-readonly', String(!identifiersEditable))
+          iosIdInput.placeholder = identifiersEditable
+            ? '例如：onboarding.current_weight.title'
+            : '英文核对稿尚未填写'
+          iosIdInput.setAttribute(
+            'aria-label',
+            identifiersEditable
+              ? `第 ${index + 1} 条 iOS 译文标识 ID，可编辑`
+              : `第 ${index + 1} 条 iOS 译文标识 ID，同步英文，只读`
+          )
+          if (identifiersEditable) {
+            iosIdInput.addEventListener('input', function () {
+              updateTranslationReviewDraft(page, language, sourceValues)
+            })
+          }
           iosIdField.append(iosIdLabel, iosIdInput)
 
           fields.append(sourceField, targetField, androidIdField, iosIdField)
@@ -2679,27 +2737,39 @@
 
         const sourceValues = currentReviewValues(page)
         const initialValues = translationReviewInitialValues(page, language, sourceValues)
+        const identifiersEditable = language === TRANSLATION_ID_SOURCE_LANGUAGE
         const values = Array.from(
           elements.translationReviewList.querySelectorAll('.translation-review-textarea'),
           textarea => textarea.value
         )
-        const translationIds = Array.from(
-          elements.translationReviewList.querySelectorAll('.translation-review-android-id-input'),
-          input => input.value.trim()
-        )
-        const iosTranslationIds = Array.from(
-          elements.translationReviewList.querySelectorAll('.translation-review-ios-id-input'),
-          input => input.value.trim()
-        )
+        const translationIds = identifiersEditable
+          ? Array.from(
+              elements.translationReviewList.querySelectorAll('.translation-review-android-id-input'),
+              input => input.value.trim()
+            )
+          : []
+        const iosTranslationIds = identifiersEditable
+          ? Array.from(
+              elements.translationReviewList.querySelectorAll('.translation-review-ios-id-input'),
+              input => input.value.trim()
+            )
+          : []
         const changes = {}
         page.items.forEach((item, index) => {
-          if (values[index] !== initialValues[index] || translationIds[index] !== '' || iosTranslationIds[index] !== '') {
-            changes[item.key] = {
+          const translationChanged = values[index] !== initialValues[index]
+          const identifiersPresent = identifiersEditable && (
+            translationIds[index] !== '' || iosTranslationIds[index] !== ''
+          )
+          if (translationChanged || identifiersPresent) {
+            const savedValue = {
               sourceText: sourceValues[index],
-              translation: values[index],
-              translationId: translationIds[index],
-              iosTranslationId: iosTranslationIds[index]
+              translation: values[index]
             }
+            if (identifiersEditable) {
+              savedValue.translationId = translationIds[index]
+              savedValue.iosTranslationId = iosTranslationIds[index]
+            }
+            changes[item.key] = savedValue
           }
         })
 
@@ -2863,8 +2933,8 @@
         })
         const initialValues = translationReviewInitialValues(page, language, sourceValues)
         const translatedValues = savedTranslationValues(page, language, sourceValues)
-        const translationIds = savedTranslationIdValues(page, language)
-        const iosTranslationIds = savedIosTranslationIdValues(page, language)
+        const translationIds = savedTranslationIdValues(page)
+        const iosTranslationIds = savedIosTranslationIdValues(page)
         return {
           order: page.order,
           name: page.name,
