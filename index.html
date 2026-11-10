@@ -94,9 +94,7 @@
     .language-button:focus-visible,
     .variant-button:focus-visible,
     .page-button:focus-visible,
-    .annotation-button:focus-visible,
-    .annotation-color:focus-visible,
-    .annotation-size:focus-visible {
+    .annotation-button:focus-visible {
       outline: 3px solid var(--focus);
       outline-offset: 2px;
     }
@@ -286,39 +284,12 @@
       background: #ff3b5c;
     }
 
-    .annotation-button.annotation-android.is-active {
-      border-color: #25883f;
-      background: #34a853;
-    }
-
-    .annotation-button.annotation-ios.is-active {
+    .annotation-button.annotation-image.is-active {
       border-color: #0068d9;
       background: #007aff;
     }
 
     .annotation-button:disabled { color: #aab2c0; cursor: not-allowed; }
-
-    .annotation-control {
-      display: inline-flex;
-      flex: 0 0 auto;
-      align-items: center;
-      gap: 5px;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    .annotation-color {
-      width: 30px;
-      height: 30px;
-      padding: 2px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--surface);
-      cursor: pointer;
-    }
-
-    .annotation-size { width: 62px; accent-color: #ff3b5c; }
 
     .annotation-status {
       flex: 0 0 auto;
@@ -376,6 +347,8 @@
       cursor: crosshair;
       pointer-events: auto;
     }
+
+    .annotation-canvas.is-active.is-image-point { outline-color: rgba(0, 122, 255, .75); }
 
     .page-navigation {
       display: grid;
@@ -757,6 +730,18 @@
       box-shadow: 0 0 0 3px rgba(139, 184, 255, .2);
     }
 
+    .annotation-point-index {
+      border-radius: 999px;
+      color: #fff;
+      box-shadow: 0 2px 7px rgba(25, 40, 60, .18);
+    }
+
+    .manual-annotation-fields {
+      display: grid;
+      gap: 9px;
+      min-width: 0;
+    }
+
     .review-textarea {
       width: 100%;
       min-height: 48px;
@@ -1099,8 +1084,8 @@
     <aside class="screenshot-panel" aria-label="问卷截图浏览器">
       <div class="screenshot-heading">
         <div>
-          <p id="pageKicker" class="page-kicker">问卷页面 01</p>
-          <h1 id="pageTitle" class="page-title">问卷介绍</h1>
+          <p id="pageKicker" class="page-kicker">页面 01</p>
+          <h1 id="pageTitle" class="page-title">ios支付成功</h1>
         </div>
         <span id="languageLabel" class="language-label">中文</span>
       </div>
@@ -1110,43 +1095,35 @@
         <div id="variantButtons" class="variant-buttons" role="radiogroup" aria-labelledby="variantSelectorLabel"></div>
       </div>
 
-      <div class="annotation-toolbar" role="toolbar" aria-label="截图标注工具">
-        <button id="annotationToggle" class="annotation-button" type="button" aria-pressed="false">✎ 画笔</button>
-        <button id="annotationRectangle" class="annotation-button annotation-android" type="button" aria-pressed="false">▭ 安卓框选</button>
-        <button id="annotationIosRectangle" class="annotation-button annotation-ios" type="button" aria-pressed="false">▭ iOS框选</button>
-        <label class="annotation-control" title="标注颜色">
-          颜色
-          <input id="annotationColor" class="annotation-color" type="color" value="#ff3b5c" aria-label="标注颜色">
-        </label>
-        <label class="annotation-control" title="画笔粗细">
-          粗细
-          <input id="annotationSize" class="annotation-size" type="range" min="2" max="12" step="1" value="5" aria-label="画笔粗细">
-        </label>
+      <div class="annotation-toolbar" role="toolbar" aria-label="截图打点工具">
+        <button id="annotationNumber" class="annotation-button" type="button" aria-pressed="false" title="点击截图依次添加文本编号">① 文本打点</button>
+        <button id="annotationImageNumber" class="annotation-button annotation-image" type="button" aria-pressed="false" title="点击截图依次添加图片编号">① 图片打点</button>
         <button id="annotationUndo" class="annotation-button" type="button" disabled>撤销</button>
         <button id="annotationClear" class="annotation-button" type="button" disabled>清空</button>
         <button id="annotationSave" class="annotation-button" type="button">保存</button>
         <button id="annotationExport" class="annotation-button" type="button">导出图片</button>
-        <span id="annotationStatus" class="annotation-status" aria-live="polite">暂无标注</span>
+        <button id="annotationExportAll" class="annotation-button" type="button">导出全部图片</button>
+        <span id="annotationStatus" class="annotation-status" aria-live="polite">暂无打点</span>
       </div>
 
       <div id="imageStage" class="image-stage">
         <div id="annotationSurface" class="annotation-surface">
-          <img id="questionnaireImage" class="questionnaire-image" src="assets/screenshots/zh/01.png" alt="中文问卷第 1 页：问卷介绍" draggable="false">
+          <img id="questionnaireImage" class="questionnaire-image" src="assets/screenshots/我的tab/ios支付成功.jpg" alt="第 1 页：ios支付成功" draggable="false">
           <canvas id="annotationCanvas" class="annotation-canvas" aria-label="当前截图标注层"></canvas>
         </div>
       </div>
 
       <nav class="page-navigation" aria-label="问卷截图翻页">
         <button id="previousPage" class="page-button" type="button" disabled>← 上一页</button>
-        <span id="pageCounter" class="page-counter">01 / 22</span>
+        <span id="pageCounter" class="page-counter">01 / 69</span>
         <button id="nextPage" class="page-button" type="button">下一页 →</button>
       </nav>
     </aside>
 
     <section id="pageContent" class="content-area" aria-labelledby="chineseTextTitle">
       <div class="baseline-heading">
-        <h2 class="baseline-title">中文基准</h2>
-        <span class="readonly-badge">只读</span>
+        <h2 class="baseline-title">人工标注</h2>
+        <span class="readonly-badge editable-badge">自动保存</span>
       </div>
       <div class="content-heading">
         <div>
@@ -1155,10 +1132,17 @@
         </div>
       </div>
       <div class="content-summary">
-        <span>当前页面提取到的全部中文可见内容</span>
-        <span id="chineseTextCount" class="text-count">0 条</span>
+        <span>文本点填写原文与译文 ID；图片点填写双端资源 ID 与链接</span>
+        <span id="chineseTextCount" class="text-count">0 个打点</span>
       </div>
       <ol id="chineseTextList" class="chinese-text-list" aria-live="polite"></ol>
+      <div class="review-actions">
+        <button id="resetCurrentManualAnnotation" class="action-button" type="button">重置当前页</button>
+        <button id="saveCurrentManualAnnotation" class="action-button primary" type="button">保存当前页</button>
+        <button id="exportManualAnnotations" class="action-button export" type="button">导出核对后的译文</button>
+      </div>
+      <p class="export-hint">导出文件会按页面、子项和打点编号保留文本原文与译文 ID，以及图片打点的安卓 / iOS 资源 ID 和图片资源链接。</p>
+      <p id="manualAnnotationStatus" class="review-status" role="status" aria-live="polite">人工标注输入会自动保存</p>
     </section>
 
     <section class="content-area ai-panel" aria-labelledby="aiTranslationTitle">
@@ -1239,13 +1223,14 @@
     </section>
   </main>
 
-  <p id="selectionStatus" class="selection-status" role="status" aria-live="polite">当前目标语言：中文；截图固定为中文，第 1 页，问卷介绍</p>
+  <p id="selectionStatus" class="selection-status" role="status" aria-live="polite">当前目标语言：中文；第 1 页，ios支付成功</p>
 
   <script src="assets/data/zh-questionnaire-text.js?v=20261109-01"></script>
   <script src="assets/data/pre-questionnaire-text.js?v=20261109-01"></script>
   <script src="assets/data/post-questionnaire-text.js?v=20261109-01"></script>
   <script src="assets/data/zh-questionnaire-variants.js?v=20261109-01"></script>
   <script src="assets/data/review-questionnaire-text.js?v=20261109-01"></script>
+  <script src="assets/data/profile-tab-pages.js?v=20261110-01"></script>
   <script src="assets/data/ai-questionnaire-translations.js?v=20261109-02"></script>
   <script src="assets/data/deepseek-questionnaire-translations.js?v=20261109-04"></script>
   <script>
@@ -1260,9 +1245,12 @@
       const TRANSLATION_LANGUAGE_STORAGE_KEY = 'offline-info-page-v2:translation-review-language:v1'
       const TRANSLATION_ID_SOURCE_LANGUAGE = 'en'
       const ANNOTATION_STORAGE_KEY = 'offline-info-page-v2:screenshot-annotations:v1'
-      const ANNOTATION_PLATFORM_COLORS = Object.freeze({ android: '#34A853', ios: '#007AFF' })
+      const ANNOTATION_TEXT_POINT_COLOR = '#ff3b5c'
+      const ANNOTATION_IMAGE_POINT_COLOR = '#007aff'
+      const ANNOTATION_POINT_RADIUS = 15
       const SCREENSHOT_LANGUAGE = 'zh'
-      const ASSET_VERSION = 'offline-info-page-v2-20261109-02'
+      const SCREENSHOT_DIRECTORY = '我的tab'
+      const ASSET_VERSION = 'offline-info-page-v2-20261110-01'
       const baselinePages = (window.QUESTIONNAIRE_TEXTS ?? []).map(page => ({
         ...page,
         items: page.items.map(item => ({ ...item }))
@@ -1297,15 +1285,13 @@
         imageStage: document.querySelector('#imageStage'),
         annotationSurface: document.querySelector('#annotationSurface'),
         annotationCanvas: document.querySelector('#annotationCanvas'),
-        annotationToggle: document.querySelector('#annotationToggle'),
-        annotationRectangle: document.querySelector('#annotationRectangle'),
-        annotationIosRectangle: document.querySelector('#annotationIosRectangle'),
-        annotationColor: document.querySelector('#annotationColor'),
-        annotationSize: document.querySelector('#annotationSize'),
+        annotationNumber: document.querySelector('#annotationNumber'),
+        annotationImageNumber: document.querySelector('#annotationImageNumber'),
         annotationUndo: document.querySelector('#annotationUndo'),
         annotationClear: document.querySelector('#annotationClear'),
         annotationSave: document.querySelector('#annotationSave'),
         annotationExport: document.querySelector('#annotationExport'),
+        annotationExportAll: document.querySelector('#annotationExportAll'),
         annotationStatus: document.querySelector('#annotationStatus'),
         variantSelector: document.querySelector('#variantSelector'),
         variantButtons: document.querySelector('#variantButtons'),
@@ -1316,6 +1302,10 @@
         chineseTextTitle: document.querySelector('#chineseTextTitle'),
         chineseTextCount: document.querySelector('#chineseTextCount'),
         chineseTextList: document.querySelector('#chineseTextList'),
+        resetManualAnnotation: document.querySelector('#resetCurrentManualAnnotation'),
+        saveManualAnnotation: document.querySelector('#saveCurrentManualAnnotation'),
+        exportManualAnnotations: document.querySelector('#exportManualAnnotations'),
+        manualAnnotationStatus: document.querySelector('#manualAnnotationStatus'),
         aiLanguageBadge: document.querySelector('#aiLanguageBadge'),
         aiTranslationKicker: document.querySelector('#aiTranslationKicker'),
         aiTranslationPageTitle: document.querySelector('#aiTranslationPageTitle'),
@@ -1376,7 +1366,8 @@
       let activeAnnotationStroke = null
       let activeAnnotationPointerId = null
       let annotationEnabled = false
-      let annotationMode = 'freehand'
+      let annotationMode = 'numbered-point'
+      let annotationExportAllBusy = false
       if (!Object.hasOwn(languageLabels, currentLanguage)) currentLanguage = 'zh'
       if (!Object.hasOwn(languageLabels, currentTranslationLanguage) || currentTranslationLanguage === 'zh') currentTranslationLanguage = 'en'
       if (!['baseline', 'translation'].includes(currentReviewMode)) currentReviewMode = 'baseline'
@@ -1404,18 +1395,119 @@
 
       function cloneAnnotationStrokes (strokes) {
         if (!Array.isArray(strokes)) return []
-        return strokes.map(stroke => ({
-          type: stroke?.type === 'rectangle' ? 'rectangle' : 'freehand',
-          platform: stroke?.platform === 'android' || stroke?.platform === 'ios' ? stroke.platform : null,
-          color: typeof stroke?.color === 'string' ? stroke.color : '#ff3b5c',
-          width: Math.min(.08, Math.max(.001, Number(stroke?.width) || .015)),
-          points: Array.isArray(stroke?.points)
-            ? stroke.points.map(point => ({
-                x: clampAnnotationCoordinate(point?.x),
-                y: clampAnnotationCoordinate(point?.y)
-              }))
-            : []
-        })).filter(stroke => stroke.points.length > 0)
+        return strokes.map(stroke => {
+          const type = stroke?.type === 'rectangle'
+            ? 'rectangle'
+            : stroke?.type === 'numbered-point'
+              ? 'numbered-point'
+              : stroke?.type === 'image-point' ? 'image-point' : 'freehand'
+          const markerNumber = Number(stroke?.number)
+          const isPoint = type === 'numbered-point' || type === 'image-point'
+          const cloned = {
+            type,
+            platform: type === 'rectangle' && (stroke?.platform === 'android' || stroke?.platform === 'ios')
+              ? stroke.platform
+              : null,
+            color: typeof stroke?.color === 'string'
+              ? stroke.color
+              : type === 'image-point' ? ANNOTATION_IMAGE_POINT_COLOR : ANNOTATION_TEXT_POINT_COLOR,
+            width: Math.min(.08, Math.max(.001, Number(stroke?.width) || .015)),
+            number: isPoint && Number.isInteger(markerNumber) && markerNumber > 0
+              ? markerNumber
+              : null,
+            points: Array.isArray(stroke?.points)
+              ? stroke.points.map(point => ({
+                  x: clampAnnotationCoordinate(point?.x),
+                  y: clampAnnotationCoordinate(point?.y)
+                }))
+              : []
+          }
+          if (type === 'numbered-point') {
+            cloned.review = {
+              sourceText: typeof stroke?.review?.sourceText === 'string' ? stroke.review.sourceText : '',
+              androidTranslationId: typeof stroke?.review?.androidTranslationId === 'string'
+                ? stroke.review.androidTranslationId
+                : '',
+              iosTranslationId: typeof stroke?.review?.iosTranslationId === 'string'
+                ? stroke.review.iosTranslationId
+                : ''
+            }
+          }
+          if (type === 'image-point') {
+            cloned.imageResources = {
+              androidResourceId: typeof stroke?.imageResources?.androidResourceId === 'string'
+                ? stroke.imageResources.androidResourceId
+                : '',
+              iosResourceId: typeof stroke?.imageResources?.iosResourceId === 'string'
+                ? stroke.imageResources.iosResourceId
+                : '',
+              androidResourceUrl: typeof stroke?.imageResources?.androidResourceUrl === 'string'
+                ? stroke.imageResources.androidResourceUrl
+                : '',
+              iosResourceUrl: typeof stroke?.imageResources?.iosResourceUrl === 'string'
+                ? stroke.imageResources.iosResourceUrl
+                : ''
+            }
+          }
+          return cloned
+        }).filter(stroke => {
+          return stroke.points.length > 0 && (!['numbered-point', 'image-point'].includes(stroke.type) || stroke.number !== null)
+        })
+      }
+
+      function numberedPointStrokes (strokes = currentAnnotationStrokes) {
+        return Array.isArray(strokes)
+          ? strokes
+              .filter(stroke => stroke?.type === 'numbered-point' && Number.isInteger(Number(stroke.number)))
+              .sort((left, right) => Number(left.number) - Number(right.number))
+          : []
+      }
+
+      function imagePointStrokes (strokes = currentAnnotationStrokes) {
+        return Array.isArray(strokes)
+          ? strokes
+              .filter(stroke => stroke?.type === 'image-point' && Number.isInteger(Number(stroke.number)))
+              .sort((left, right) => Number(left.number) - Number(right.number))
+          : []
+      }
+
+      function annotationPointReview (stroke) {
+        if (!stroke.review || typeof stroke.review !== 'object') stroke.review = {}
+        for (const field of ['sourceText', 'androidTranslationId', 'iosTranslationId']) {
+          if (typeof stroke.review[field] !== 'string') stroke.review[field] = ''
+        }
+        return stroke.review
+      }
+
+      function annotationImagePointResources (stroke) {
+        if (!stroke.imageResources || typeof stroke.imageResources !== 'object') stroke.imageResources = {}
+        for (const field of ['androidResourceId', 'iosResourceId', 'androidResourceUrl', 'iosResourceUrl']) {
+          if (typeof stroke.imageResources[field] !== 'string') stroke.imageResources[field] = ''
+        }
+        return stroke.imageResources
+      }
+
+      function nextAnnotationNumber (strokes = currentAnnotationStrokes, type = 'numbered-point') {
+        const highestNumber = Array.isArray(strokes)
+          ? strokes.reduce((highest, stroke) => {
+              const markerNumber = Number(stroke?.number)
+              return stroke?.type === type && Number.isInteger(markerNumber) && markerNumber > highest
+                ? markerNumber
+                : highest
+            }, 0)
+          : 0
+        return highestNumber + 1
+      }
+
+      function annotationMarkerTextColor (color) {
+        const match = /^#([0-9a-f]{6})$/i.exec(color ?? '')
+        if (!match) return '#ffffff'
+        const value = Number.parseInt(match[1], 16)
+        const red = (value >> 16) & 255
+        const green = (value >> 8) & 255
+        const blue = value & 255
+        const luminance = (.2126 * red + .7152 * green + .0722 * blue) / 255
+        return luminance > .62 ? '#172033' : '#ffffff'
       }
 
       function emptyAnnotationImageResources () {
@@ -1490,6 +1582,7 @@
         elements.annotationUndo.disabled = !hasStrokes
         elements.annotationClear.disabled = !hasStrokes
         elements.annotationExport.disabled = !elements.image.complete || elements.image.naturalWidth === 0
+        elements.annotationExportAll.disabled = annotationExportAllBusy
       }
 
       function setAnnotationStatus (message) {
@@ -1545,7 +1638,28 @@
           context.lineWidth = Math.max(1, stroke.width * scale)
           context.lineCap = 'round'
           context.lineJoin = 'round'
-          if (stroke.type === 'rectangle' && points.length >= 2) {
+          if (stroke.type === 'numbered-point' || stroke.type === 'image-point') {
+            const markerX = points[0].x * width
+            const markerY = points[0].y * height
+            const radius = Math.max(10, stroke.width * scale)
+            context.shadowColor = 'rgba(13, 22, 36, .32)'
+            context.shadowBlur = Math.max(3, radius * .28)
+            context.beginPath()
+            context.arc(markerX, markerY, radius, 0, Math.PI * 2)
+            context.fill()
+            context.shadowColor = 'transparent'
+            context.shadowBlur = 0
+            context.strokeStyle = '#ffffff'
+            context.lineWidth = Math.max(2, radius * .12)
+            context.stroke()
+            const markerText = String(stroke.number)
+            const fontScale = markerText.length >= 3 ? .78 : markerText.length === 2 ? .9 : 1
+            context.fillStyle = annotationMarkerTextColor(stroke.color)
+            context.font = `800 ${Math.max(10, radius * 1.05 * fontScale)}px system-ui, sans-serif`
+            context.textAlign = 'center'
+            context.textBaseline = 'middle'
+            context.fillText(markerText, markerX, markerY + radius * .04)
+          } else if (stroke.type === 'rectangle' && points.length >= 2) {
             const startX = points[0].x * width
             const startY = points[0].y * height
             const endX = points.at(-1).x * width
@@ -1613,26 +1727,20 @@
         updateAnnotationControls()
       }
 
-      function setAnnotationMode (mode, enabled = true) {
-        annotationMode = ['rectangle-android', 'rectangle-ios'].includes(mode) ? mode : 'freehand'
+      function setAnnotationMode (mode = 'numbered-point', enabled = true) {
+        annotationMode = mode === 'image-point' ? 'image-point' : 'numbered-point'
         annotationEnabled = Boolean(enabled)
-        const freehandActive = annotationEnabled && annotationMode === 'freehand'
-        const androidRectangleActive = annotationEnabled && annotationMode === 'rectangle-android'
-        const iosRectangleActive = annotationEnabled && annotationMode === 'rectangle-ios'
-        elements.annotationToggle.classList.toggle('is-active', freehandActive)
-        elements.annotationToggle.setAttribute('aria-pressed', String(freehandActive))
-        elements.annotationRectangle.classList.toggle('is-active', androidRectangleActive)
-        elements.annotationRectangle.setAttribute('aria-pressed', String(androidRectangleActive))
-        elements.annotationIosRectangle.classList.toggle('is-active', iosRectangleActive)
-        elements.annotationIosRectangle.setAttribute('aria-pressed', String(iosRectangleActive))
+        const textPointActive = annotationEnabled && annotationMode === 'numbered-point'
+        const imagePointActive = annotationEnabled && annotationMode === 'image-point'
+        elements.annotationNumber.classList.toggle('is-active', textPointActive)
+        elements.annotationNumber.setAttribute('aria-pressed', String(textPointActive))
+        elements.annotationImageNumber.classList.toggle('is-active', imagePointActive)
+        elements.annotationImageNumber.setAttribute('aria-pressed', String(imagePointActive))
         elements.annotationCanvas.classList.toggle('is-active', annotationEnabled && elements.annotationCanvas.classList.contains('is-ready'))
+        elements.annotationCanvas.classList.toggle('is-image-point', imagePointActive)
         setAnnotationStatus(annotationEnabled
-          ? (annotationMode === 'rectangle-android'
-              ? '安卓框选：拖动绘制绿色矩形'
-              : annotationMode === 'rectangle-ios'
-                ? 'iOS 框选：拖动绘制蓝色矩形'
-                : '画笔模式：可直接绘制')
-          : (currentAnnotationStrokes.length > 0 ? `已保存 ${currentAnnotationStrokes.length} 项标注` : '暂无标注'))
+          ? `${annotationMode === 'image-point' ? '图片' : '文本'}打点：点击截图依次添加 1、2、3…`
+          : (currentAnnotationStrokes.length > 0 ? `已保存 ${currentAnnotationStrokes.length} 项标注` : '暂无打点'))
       }
 
       function setAnnotationEnabled (enabled) {
@@ -1656,20 +1764,39 @@
         event.preventDefault()
         const rect = elements.annotationCanvas.getBoundingClientRect()
         if (rect.width < 1 || rect.height < 1) return
-        const platform = annotationMode === 'rectangle-android'
-          ? 'android'
-          : annotationMode === 'rectangle-ios' ? 'ios' : null
-        activeAnnotationPointerId = event.pointerId
-        activeAnnotationStroke = {
-          type: platform ? 'rectangle' : 'freehand',
-          platform,
-          color: platform ? ANNOTATION_PLATFORM_COLORS[platform] : elements.annotationColor.value,
-          width: Number(elements.annotationSize.value) / Math.min(rect.width, rect.height),
+        const markerType = annotationMode === 'image-point' ? 'image-point' : 'numbered-point'
+        const markerLabel = markerType === 'image-point' ? '图片' : '文本'
+        const markerNumber = nextAnnotationNumber(currentAnnotationStrokes, markerType)
+        const marker = {
+          type: markerType,
+          platform: null,
+          color: markerType === 'image-point' ? ANNOTATION_IMAGE_POINT_COLOR : ANNOTATION_TEXT_POINT_COLOR,
+          width: ANNOTATION_POINT_RADIUS / Math.min(rect.width, rect.height),
+          number: markerNumber,
           points: [annotationPointFromEvent(event)]
         }
-        elements.annotationCanvas.setPointerCapture?.(event.pointerId)
-        setAnnotationStatus(platform ? `正在绘制${platform === 'android' ? '安卓' : ' iOS'}框选…` : '正在标注…')
+        if (markerType === 'numbered-point') {
+          marker.review = {
+            sourceText: '',
+            androidTranslationId: '',
+            iosTranslationId: ''
+          }
+        } else {
+          marker.imageResources = {
+            androidResourceId: '',
+            iosResourceId: '',
+            androidResourceUrl: '',
+            iosResourceUrl: ''
+          }
+        }
+        currentAnnotationStrokes.push(marker)
         renderAnnotations()
+        const saved = saveCurrentAnnotations({ automatic: true })
+        setAnnotationStatus(saved
+          ? `已添加${markerLabel}编号 ${markerNumber}，已自动保存`
+          : `已添加${markerLabel}编号 ${markerNumber}，但浏览器存储不可用`)
+        refreshManualAnnotationReview()
+        refreshTranslationImageResources()
       }
 
       function continueAnnotationStroke (event) {
@@ -1724,6 +1851,7 @@
         currentAnnotationStrokes.pop()
         renderAnnotations()
         saveCurrentAnnotations()
+        refreshManualAnnotationReview()
         refreshTranslationImageResources()
       }
 
@@ -1735,6 +1863,7 @@
         activeAnnotationPointerId = null
         renderAnnotations()
         saveCurrentAnnotations()
+        refreshManualAnnotationReview()
         refreshTranslationImageResources()
       }
 
@@ -1771,6 +1900,89 @@
           }, 'image/png')
         } catch {
           setAnnotationStatus('导出失败：图片不可读取')
+        }
+      }
+
+      function safeAnnotatedImageFileName (value) {
+        const safeName = String(value ?? '')
+          .replace(/[<>:"/\\|?*\u0000-\u001F]/g, '-')
+          .replace(/[. ]+$/g, '')
+          .trim()
+        return safeName || 'page'
+      }
+
+      function loadAnnotationExportImage (source) {
+        return new Promise((resolve, reject) => {
+          const image = new Image()
+          image.onload = () => resolve(image)
+          image.onerror = () => reject(new Error(`无法加载图片：${source}`))
+          image.src = source
+        })
+      }
+
+      function annotationCanvasBlob (canvas) {
+        return new Promise((resolve, reject) => {
+          canvas.toBlob(blob => {
+            if (blob) resolve(blob)
+            else reject(new Error('无法生成图片文件'))
+          }, 'image/png')
+        })
+      }
+
+      async function createAnnotatedPageBlob (pageIndex) {
+        const sourceImage = await loadAnnotationExportImage(imagePath('zh', pageIndex))
+        const canvas = document.createElement('canvas')
+        canvas.width = sourceImage.naturalWidth
+        canvas.height = sourceImage.naturalHeight
+        const context = canvas.getContext('2d')
+        if (!context) throw new Error('浏览器无法创建图片画布')
+        context.drawImage(sourceImage, 0, 0, canvas.width, canvas.height)
+        const targetKey = annotationTargetKey(pageIndex, null)
+        const strokes = cloneAnnotationStrokes(savedAnnotations.targets[targetKey]?.strokes)
+        drawAnnotationStrokes(context, strokes, canvas.width, canvas.height)
+        return annotationCanvasBlob(canvas)
+      }
+
+      async function exportAllAnnotatedImages () {
+        if (typeof window.showDirectoryPicker !== 'function') {
+          setAnnotationStatus('当前浏览器不支持导出文件夹，请使用最新版 Chrome 或 Edge')
+          return
+        }
+        if (annotationExportAllBusy) return
+        saveCurrentAnnotations({ silent: true })
+
+        let selectedDirectory
+        try {
+          selectedDirectory = await window.showDirectoryPicker({ mode: 'readwrite' })
+        } catch (error) {
+          if (error?.name === 'AbortError') setAnnotationStatus('已取消导出全部图片')
+          else setAnnotationStatus('无法访问导出目录')
+          return
+        }
+
+        annotationExportAllBusy = true
+        updateAnnotationControls()
+        try {
+          const outputDirectory = await selectedDirectory.getDirectoryHandle('我的tab-已标注', { create: true })
+          for (let pageIndex = 0; pageIndex < baselinePages.length; pageIndex += 1) {
+            const page = baselinePages[pageIndex]
+            const pageNumber = String(pageIndex + 1).padStart(2, '0')
+            const pageTitle = safeAnnotatedImageFileName(page?.label ?? page?.name ?? `page-${pageNumber}`)
+            const fileName = `${pageNumber}-${pageTitle}.png`
+            setAnnotationStatus(`正在导出全部图片 ${pageIndex + 1}/${baselinePages.length}：${pageTitle}`)
+            const blob = await createAnnotatedPageBlob(pageIndex)
+            const fileHandle = await outputDirectory.getFileHandle(fileName, { create: true })
+            const writable = await fileHandle.createWritable()
+            await writable.write(blob)
+            await writable.close()
+          }
+          setAnnotationStatus(`已按当前顺序导出 ${baselinePages.length} 张带标记图片到“我的tab-已标注”文件夹`)
+        } catch (error) {
+          console.error(error)
+          setAnnotationStatus(`导出全部图片失败：${error?.message || '未知错误'}`)
+        } finally {
+          annotationExportAllBusy = false
+          updateAnnotationControls()
         }
       }
 
@@ -1897,9 +2109,9 @@
         const saved = savedTranslationReviews[TRANSLATION_ID_SOURCE_LANGUAGE]?.[page.name] ?? {}
         return page.items.map(item => {
           const savedValue = saved[item.key]
-          return savedValue && typeof savedValue === 'object' && typeof savedValue.translationId === 'string'
-            ? savedValue.translationId
-            : ''
+          if (!savedValue || typeof savedValue !== 'object') return ''
+          if (typeof savedValue.androidTranslationId === 'string') return savedValue.androidTranslationId
+          return typeof savedValue.translationId === 'string' ? savedValue.translationId : ''
         })
       }
 
@@ -1954,6 +2166,12 @@
       }
 
       function imagePath (language, pageIndex) {
+        const screenshot = typeof baselinePages[pageIndex]?.screenshot === 'string'
+          ? baselinePages[pageIndex].screenshot.trim()
+          : ''
+        if (screenshot) {
+          return versionedAssetPath(`assets/screenshots/${SCREENSHOT_DIRECTORY}/${screenshot}`)
+        }
         return versionedAssetPath(`assets/screenshots/${language}/${String(pageIndex + 1).padStart(2, '0')}.png`)
       }
 
@@ -2125,7 +2343,6 @@
       function renderChineseTexts (pageIndex) {
         const baselinePage = window.QUESTIONNAIRE_TEXTS?.[pageIndex]
         const variant = activeVariantForPage(pageIndex)
-        const page = variant ?? baselinePage
         const paddedNumber = String(pageIndex + 1).padStart(2, '0')
         elements.chineseTextKicker.textContent = variant ? `问卷页面 ${paddedNumber} · 子项` : `问卷页面 ${paddedNumber}`
         elements.chineseTextTitle.textContent = variant
@@ -2133,35 +2350,148 @@
           : (baselinePage?.label ?? pageNames[pageIndex])
         elements.chineseTextList.replaceChildren()
 
-        if (!page || !Array.isArray(page.items) || page.items.length === 0) {
-          elements.chineseTextCount.textContent = '0 条'
+        const markers = numberedPointStrokes()
+        const imageMarkers = imagePointStrokes()
+        elements.chineseTextCount.textContent = `${markers.length} 个文本打点 · ${imageMarkers.length} 个图片打点`
+        updateManualAnnotationActionState(markers, imageMarkers)
+        if (markers.length === 0 && imageMarkers.length === 0) {
           const empty = document.createElement('li')
           empty.className = 'text-empty'
-          empty.textContent = '该页面暂时没有可展示的中文内容。'
+          empty.textContent = '当前截图暂无编号点，请先使用左侧“① 文本打点”或“① 图片打点”工具添加。'
           elements.chineseTextList.append(empty)
           return
         }
 
-        elements.chineseTextCount.textContent = `${page.items.length} 条`
-        page.items.forEach((item, index) => {
+        markers.forEach(stroke => {
+          const review = annotationPointReview(stroke)
           const row = document.createElement('li')
-          row.className = 'chinese-text-item'
+          row.className = 'review-text-item manual-annotation-item'
 
           const number = document.createElement('span')
-          number.className = 'text-index'
-          number.textContent = String(index + 1).padStart(2, '0')
+          number.className = 'text-index annotation-point-index'
+          number.textContent = String(stroke.number)
+          number.style.backgroundColor = stroke.color
+          number.style.color = annotationMarkerTextColor(stroke.color)
+          number.title = `截图编号 ${stroke.number}`
 
-          const text = document.createElement('span')
-          text.className = 'text-value'
-          text.textContent = item.text
+          const fields = document.createElement('div')
+          fields.className = 'manual-annotation-fields'
 
-          row.append(number, text)
-          if (item.dynamic) {
-            const badge = document.createElement('span')
-            badge.className = 'dynamic-badge'
-            badge.textContent = '动态内容'
-            row.append(badge)
-          }
+          const sourceField = document.createElement('label')
+          sourceField.className = 'translation-review-field'
+          const sourceLabel = document.createElement('span')
+          sourceLabel.className = 'translation-review-label'
+          sourceLabel.textContent = '原文'
+          const sourceInput = document.createElement('textarea')
+          sourceInput.className = 'translation-review-textarea manual-annotation-source-input'
+          sourceInput.rows = 1
+          sourceInput.value = review.sourceText
+          sourceInput.lang = 'zh-CN'
+          sourceInput.dir = 'auto'
+          sourceInput.placeholder = '请输入该打点对应的原文'
+          sourceInput.setAttribute('aria-label', `编号 ${stroke.number} 原文`)
+          sourceInput.addEventListener('input', function () {
+            resizeTextarea(sourceInput)
+            updateManualAnnotationField(stroke, 'sourceText', sourceInput.value)
+          })
+          sourceField.append(sourceLabel, sourceInput)
+
+          const androidField = document.createElement('label')
+          androidField.className = 'translation-review-field'
+          const androidLabel = document.createElement('span')
+          androidLabel.className = 'translation-review-label'
+          androidLabel.textContent = '安卓译文标识 ID'
+          const androidInput = document.createElement('input')
+          androidInput.className = 'translation-review-id-input manual-annotation-android-id-input'
+          androidInput.type = 'text'
+          androidInput.value = review.androidTranslationId
+          androidInput.maxLength = 160
+          androidInput.lang = 'en'
+          androidInput.dir = 'ltr'
+          androidInput.autocomplete = 'off'
+          androidInput.spellcheck = false
+          androidInput.placeholder = '例如：onboarding.current_weight.title'
+          androidInput.setAttribute('aria-label', `编号 ${stroke.number} 安卓译文标识 ID`)
+          androidInput.addEventListener('input', function () {
+            updateManualAnnotationField(stroke, 'androidTranslationId', androidInput.value)
+          })
+          androidField.append(androidLabel, androidInput)
+
+          const iosField = document.createElement('label')
+          iosField.className = 'translation-review-field'
+          const iosLabel = document.createElement('span')
+          iosLabel.className = 'translation-review-label'
+          iosLabel.textContent = 'iOS 译文标识 ID'
+          const iosInput = document.createElement('input')
+          iosInput.className = 'translation-review-id-input manual-annotation-ios-id-input'
+          iosInput.type = 'text'
+          iosInput.value = review.iosTranslationId
+          iosInput.maxLength = 160
+          iosInput.lang = 'en'
+          iosInput.dir = 'ltr'
+          iosInput.autocomplete = 'off'
+          iosInput.spellcheck = false
+          iosInput.placeholder = '例如：onboarding.current_weight.title'
+          iosInput.setAttribute('aria-label', `编号 ${stroke.number} iOS 译文标识 ID`)
+          iosInput.addEventListener('input', function () {
+            updateManualAnnotationField(stroke, 'iosTranslationId', iosInput.value)
+          })
+          iosField.append(iosLabel, iosInput)
+
+          fields.append(sourceField, androidField, iosField)
+          row.append(number, fields)
+          elements.chineseTextList.append(row)
+          resizeTextarea(sourceInput)
+        })
+
+        imageMarkers.forEach(stroke => {
+          const resources = annotationImagePointResources(stroke)
+          const row = document.createElement('li')
+          row.className = 'review-text-item manual-annotation-item is-image-point'
+
+          const number = document.createElement('span')
+          number.className = 'text-index annotation-point-index'
+          number.textContent = String(stroke.number)
+          number.style.backgroundColor = stroke.color
+          number.style.color = annotationMarkerTextColor(stroke.color)
+          number.title = `图片编号 ${stroke.number}`
+
+          const fields = document.createElement('div')
+          fields.className = 'manual-annotation-fields'
+
+          const fieldDefinitions = [
+            ['androidResourceId', '安卓资源 ID', 'manual-image-android-id-input', '例如：onboarding.equipment.hero_image', 'text'],
+            ['iosResourceId', 'iOS 资源 ID', 'manual-image-ios-id-input', '例如：onboarding.equipment.hero_image', 'text'],
+            ['androidResourceUrl', '安卓图片资源链接', 'manual-image-android-url-input', '例如：https://example.com/android.png 或 assets/...', 'url'],
+            ['iosResourceUrl', 'iOS 图片资源链接', 'manual-image-ios-url-input', '例如：https://example.com/ios.png 或 assets/...', 'url']
+          ]
+
+          fieldDefinitions.forEach(([field, labelText, className, placeholder, inputMode]) => {
+            const resourceField = document.createElement('label')
+            resourceField.className = 'translation-review-field'
+            const resourceLabel = document.createElement('span')
+            resourceLabel.className = 'translation-review-label'
+            resourceLabel.textContent = labelText
+            const input = document.createElement('input')
+            input.className = `translation-review-id-input ${className}`
+            input.type = 'text'
+            input.value = resources[field]
+            input.maxLength = inputMode === 'url' ? 2048 : 160
+            input.lang = 'en'
+            input.dir = 'ltr'
+            input.inputMode = inputMode
+            input.autocomplete = 'off'
+            input.spellcheck = false
+            input.placeholder = placeholder
+            input.setAttribute('aria-label', `图片编号 ${stroke.number} ${labelText}`)
+            input.addEventListener('input', function () {
+              updateManualImageAnnotationField(stroke, field, input.value)
+            })
+            resourceField.append(resourceLabel, input)
+            fields.append(resourceField)
+          })
+
+          row.append(number, fields)
           elements.chineseTextList.append(row)
         })
       }
@@ -2316,6 +2646,171 @@
         else textarea.removeAttribute('title')
       }
 
+      function updateManualAnnotationField (stroke, field, value) {
+        if (!['sourceText', 'androidTranslationId', 'iosTranslationId'].includes(field)) return
+        annotationPointReview(stroke)[field] = value
+        const persisted = saveCurrentAnnotations({ silent: true })
+        const message = persisted
+          ? `编号 ${stroke.number} 的人工标注已自动保存`
+          : '浏览器存储不可用，人工标注仅在本次打开期间有效'
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+        updateManualAnnotationActionState()
+      }
+
+      function updateManualImageAnnotationField (stroke, field, value) {
+        if (!['androidResourceId', 'iosResourceId', 'androidResourceUrl', 'iosResourceUrl'].includes(field)) return
+        annotationImagePointResources(stroke)[field] = value
+        const persisted = saveCurrentAnnotations({ silent: true })
+        const message = persisted
+          ? `图片编号 ${stroke.number} 的资源信息已自动保存`
+          : '浏览器存储不可用，图片资源信息仅在本次打开期间有效'
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+        updateManualAnnotationActionState()
+      }
+
+      function manualAnnotationHasContent (stroke) {
+        const review = annotationPointReview(stroke)
+        return ['sourceText', 'androidTranslationId', 'iosTranslationId'].some(field => review[field].trim())
+      }
+
+      function manualImageAnnotationHasContent (stroke) {
+        const resources = annotationImagePointResources(stroke)
+        return ['androidResourceId', 'iosResourceId', 'androidResourceUrl', 'iosResourceUrl']
+          .some(field => resources[field].trim())
+      }
+
+      function updateManualAnnotationActionState (markers = numberedPointStrokes(), imageMarkers = imagePointStrokes()) {
+        elements.resetManualAnnotation.disabled = !markers.some(manualAnnotationHasContent) &&
+          !imageMarkers.some(manualImageAnnotationHasContent)
+        elements.saveManualAnnotation.disabled = markers.length === 0 && imageMarkers.length === 0
+        const savedPointCount = Object.values(savedAnnotations.targets).reduce((count, target) => {
+          return count + numberedPointStrokes(target?.strokes).length + imagePointStrokes(target?.strokes).length
+        }, 0)
+        elements.exportManualAnnotations.disabled = savedPointCount === 0 && markers.length === 0 && imageMarkers.length === 0
+      }
+
+      function resetCurrentManualAnnotations () {
+        const markers = numberedPointStrokes()
+        const imageMarkers = imagePointStrokes()
+        markers.forEach(stroke => {
+          stroke.review = {
+            sourceText: '',
+            androidTranslationId: '',
+            iosTranslationId: ''
+          }
+        })
+        imageMarkers.forEach(stroke => {
+          stroke.imageResources = {
+            androidResourceId: '',
+            iosResourceId: '',
+            androidResourceUrl: '',
+            iosResourceUrl: ''
+          }
+        })
+        const persisted = saveCurrentAnnotations({ silent: true })
+        renderChineseTexts(currentPage)
+        elements.manualAnnotationStatus.textContent = persisted
+          ? `当前页 ${markers.length} 个文本打点和 ${imageMarkers.length} 个图片打点已重置并保存`
+          : '当前页已重置，但浏览器存储不可用'
+      }
+
+      function saveCurrentManualAnnotations () {
+        const markers = numberedPointStrokes()
+        const imageMarkers = imagePointStrokes()
+        const persisted = saveCurrentAnnotations({ silent: true })
+        elements.manualAnnotationStatus.textContent = persisted
+          ? `当前页 ${markers.length} 个文本打点和 ${imageMarkers.length} 个图片打点已保存`
+          : '保存失败：浏览器存储不可用'
+        updateManualAnnotationActionState(markers, imageMarkers)
+      }
+
+      function createManualAnnotationExport () {
+        const targets = {}
+        let pointCount = 0
+        let imagePointCount = 0
+        Object.entries(savedAnnotations.targets).forEach(([targetKey, target]) => {
+          const items = numberedPointStrokes(target?.strokes).map(stroke => {
+            const review = annotationPointReview(stroke)
+            const point = stroke.points[0] ?? { x: 0, y: 0 }
+            return {
+              number: Number(stroke.number),
+              x: point.x,
+              y: point.y,
+              sourceText: review.sourceText,
+              androidTranslationId: review.androidTranslationId.trim(),
+              iosTranslationId: review.iosTranslationId.trim()
+            }
+          })
+          const imageItems = imagePointStrokes(target?.strokes).map(stroke => {
+            const resources = annotationImagePointResources(stroke)
+            const point = stroke.points[0] ?? { x: 0, y: 0 }
+            return {
+              number: Number(stroke.number),
+              x: point.x,
+              y: point.y,
+              androidResourceId: resources.androidResourceId.trim(),
+              iosResourceId: resources.iosResourceId.trim(),
+              androidResourceUrl: resources.androidResourceUrl.trim(),
+              iosResourceUrl: resources.iosResourceUrl.trim()
+            }
+          })
+          if (items.length === 0 && imageItems.length === 0) return
+          const [pageName, state = 'main'] = targetKey.split('::')
+          const pageTitle = baselinePages.find(page => page.name === pageName)?.label ?? pageName
+          targets[targetKey] = {
+            pageName,
+            pageTitle,
+            variantId: state.startsWith('variant:') ? state.slice('variant:'.length) : null,
+            imageRef: target.imageRef,
+            items,
+            imageItems
+          }
+          pointCount += items.length
+          imagePointCount += imageItems.length
+        })
+        return { targets, pointCount, imagePointCount }
+      }
+
+      function exportManualAnnotations () {
+        saveCurrentAnnotations({ silent: true })
+        const exportedAt = new Date()
+        const exported = createManualAnnotationExport()
+        const payload = {
+          metadata: {
+            schemaVersion: 2,
+            sourceLocale: 'zh-CN',
+            exportedAt: exportedAt.toISOString(),
+            targetCount: Object.keys(exported.targets).length,
+            pointCount: exported.pointCount,
+            imagePointCount: exported.imagePointCount
+          },
+          targets: exported.targets
+        }
+        const source = `window.REVIEWED_TEXT_POINT_ANNOTATIONS = ${JSON.stringify(payload, null, 2)}\n`
+        const blob = new Blob([source], { type: 'text/javascript;charset=utf-8' })
+        const url = URL.createObjectURL(blob)
+        const link = document.createElement('a')
+        const timestamp = [
+          exportedAt.getFullYear(),
+          String(exportedAt.getMonth() + 1).padStart(2, '0'),
+          String(exportedAt.getDate()).padStart(2, '0'),
+          '-',
+          String(exportedAt.getHours()).padStart(2, '0'),
+          String(exportedAt.getMinutes()).padStart(2, '0'),
+          String(exportedAt.getSeconds()).padStart(2, '0')
+        ].join('')
+        const fileName = `offline-info-page-v2.reviewed-annotations-${exported.pointCount}text-${exported.imagePointCount}image-${timestamp}.js`
+        link.href = url
+        link.download = fileName
+        document.body.append(link)
+        link.click()
+        link.remove()
+        URL.revokeObjectURL(url)
+        elements.manualAnnotationStatus.textContent = `已导出 ${fileName}；包含 ${exported.pointCount} 个文本打点和 ${exported.imagePointCount} 个图片打点`
+      }
+
       function renderManualReview (pageIndex) {
         const page = reviewTargetForIndex(pageIndex)
         const paddedNumber = String(pageIndex + 1).padStart(2, '0')
@@ -2373,6 +2868,10 @@
           resizeTextarea(textarea)
         })
         updateReviewState(page)
+      }
+
+      function refreshManualAnnotationReview () {
+        renderChineseTexts(currentPage)
       }
 
       function syncTranslationReviewModifiedState (textarea, initialValue) {
@@ -2766,7 +3265,7 @@
               translation: values[index]
             }
             if (identifiersEditable) {
-              savedValue.translationId = translationIds[index]
+              savedValue.androidTranslationId = translationIds[index]
               savedValue.iosTranslationId = iosTranslationIds[index]
             }
             changes[item.key] = savedValue
@@ -2945,7 +3444,7 @@
             key: item.key,
             sourceText: sourceValues[index],
             translation: translatedValues[index],
-            translationId: translationIds[index],
+            androidTranslationId: translationIds[index],
             iosTranslationId: iosTranslationIds[index],
             dynamic: Boolean(item.dynamic),
             modified: translatedValues[index] !== initialValues[index]
@@ -2984,7 +3483,7 @@
         const exportedAt = new Date()
         const payload = {
           metadata: {
-            schemaVersion: 3,
+            schemaVersion: 4,
             sourceLocale: 'zh-CN',
             targetLocale: languageCodes[language],
             targetLanguage: languageLabels[language],
@@ -3126,13 +3625,16 @@
       elements.saveTranslationReview.addEventListener('click', saveCurrentTranslationReview)
       elements.resetTranslationReview.addEventListener('click', resetCurrentTranslationReview)
       elements.exportTranslationReviews.addEventListener('click', exportReviewedTranslations)
-      elements.annotationToggle.addEventListener('click', function () { toggleAnnotationMode('freehand') })
-      elements.annotationRectangle.addEventListener('click', function () { toggleAnnotationMode('rectangle-android') })
-      elements.annotationIosRectangle.addEventListener('click', function () { toggleAnnotationMode('rectangle-ios') })
+      elements.annotationNumber.addEventListener('click', function () { toggleAnnotationMode('numbered-point') })
+      elements.annotationImageNumber.addEventListener('click', function () { toggleAnnotationMode('image-point') })
       elements.annotationUndo.addEventListener('click', undoAnnotationStroke)
       elements.annotationClear.addEventListener('click', clearAnnotations)
       elements.annotationSave.addEventListener('click', function () { saveCurrentAnnotations() })
       elements.annotationExport.addEventListener('click', exportAnnotatedImage)
+      elements.annotationExportAll.addEventListener('click', exportAllAnnotatedImages)
+      elements.resetManualAnnotation.addEventListener('click', resetCurrentManualAnnotations)
+      elements.saveManualAnnotation.addEventListener('click', saveCurrentManualAnnotations)
+      elements.exportManualAnnotations.addEventListener('click', exportManualAnnotations)
       elements.annotationCanvas.addEventListener('pointerdown', beginAnnotationStroke)
       elements.annotationCanvas.addEventListener('pointermove', continueAnnotationStroke)
       elements.annotationCanvas.addEventListener('pointerup', finishAnnotationStroke)
