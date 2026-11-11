@@ -293,6 +293,17 @@
       box-shadow: 0 0 0 1px rgba(22, 131, 255, .3);
     }
 
+    .screenshot-thumbnail.is-unannotated {
+      border-color: #ff3b5c;
+      background: rgba(255, 59, 92, .18);
+      box-shadow: 0 0 0 1px rgba(255, 59, 92, .55), 0 0 10px rgba(255, 59, 92, .42);
+    }
+
+    .screenshot-thumbnail.is-unannotated.is-selected {
+      background: rgba(22, 131, 255, .2);
+      box-shadow: 0 0 0 2px rgba(255, 59, 92, .62), 0 0 12px rgba(255, 59, 92, .48);
+    }
+
     .screenshot-thumbnail:focus-visible {
       outline: 3px solid rgba(255, 255, 255, .88);
       outline-offset: 2px;
@@ -2640,6 +2651,29 @@
         }
       }
 
+      function screenshotPageHasMarkers (pageIndex) {
+        const pageName = baselinePages[pageIndex]?.name
+        if (!pageName) return false
+        const targetPrefix = `${pageName}::`
+        const targetKeys = Object.keys(savedAnnotations.targets)
+          .filter(targetKey => targetKey.startsWith(targetPrefix))
+        if (currentAnnotationKey?.startsWith(targetPrefix)) targetKeys.push(currentAnnotationKey)
+        return Array.from(new Set(targetKeys)).some(annotationTargetHasMarkers)
+      }
+
+      function syncScreenshotThumbnailAnnotationState () {
+        const buttons = Array.from(elements.screenshotThumbnails.querySelectorAll('.screenshot-thumbnail'))
+        buttons.forEach(button => {
+          const pageIndex = Number(button.dataset.pageIndex)
+          const hasMarkers = screenshotPageHasMarkers(pageIndex)
+          const paddedNumber = String(pageIndex + 1).padStart(2, '0')
+          const label = `第 ${paddedNumber} 页：${pageNames[pageIndex]}${hasMarkers ? '' : '（暂无打点标注）'}`
+          button.classList.toggle('is-unannotated', !hasMarkers)
+          button.title = label
+          button.setAttribute('aria-label', label)
+        })
+      }
+
       function renderScreenshotThumbnails () {
         elements.screenshotThumbnails.replaceChildren()
         pageNames.forEach((pageName, pageIndex) => {
@@ -2684,6 +2718,7 @@
           })
           elements.screenshotThumbnails.append(button)
         })
+        syncScreenshotThumbnailAnnotationState()
         syncScreenshotThumbnailSelection()
       }
 
@@ -2868,6 +2903,7 @@
         const isEnglishSource = currentLanguage === 'en'
         const currentLanguageLabel = languageLabels[currentLanguage]
         elements.chineseTextCount.textContent = `${markers.length} 个文本打点 · ${imageMarkers.length} 个图片打点`
+        syncScreenshotThumbnailAnnotationState()
         updateManualAnnotationActionState(markers, imageMarkers)
         if (markers.length === 0 && imageMarkers.length === 0) {
           const empty = document.createElement('li')
@@ -2980,12 +3016,12 @@
           iosField.append(iosLabel, iosInput)
 
           fields.append(
+            createManualAnnotationDeleteButton(stroke, '文本打点'),
             sourceField,
             ...(translationField ? [translationField] : []),
             androidField,
             iosField,
-            createManualAnnotationSubItems(stroke),
-            createManualAnnotationDeleteButton(stroke, '文本打点')
+            createManualAnnotationSubItems(stroke)
           )
           row.append(number, fields)
           elements.chineseTextList.append(row)
@@ -3007,6 +3043,7 @@
 
           const fields = document.createElement('div')
           fields.className = 'manual-annotation-fields'
+          fields.append(createManualAnnotationDeleteButton(stroke, '图片打点'))
 
           const fieldDefinitions = [
             ['androidResourceId', '安卓资源 ID', 'manual-image-android-id-input', '例如：onboarding.equipment.hero_image', 'text'],
@@ -3037,8 +3074,6 @@
             resourceField.append(resourceLabel, input)
             fields.append(resourceField)
           })
-
-          fields.append(createManualAnnotationDeleteButton(stroke, '图片打点'))
 
           row.append(number, fields)
           elements.chineseTextList.append(row)
@@ -3834,6 +3869,7 @@
         } else {
           updateManualAnnotationActionState()
         }
+        syncScreenshotThumbnailAnnotationState()
         const importedSubItemCount = Number(imported.subItemCount) || 0
         const message = `已导入 ${imported.targetCount} 个页面、${imported.pointCount} 个文本打点、${importedSubItemCount} 个子项和 ${imported.imagePointCount} 个图片打点`
         setAnnotationStatus(message)
