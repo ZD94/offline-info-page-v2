@@ -1246,10 +1246,105 @@
       margin-top: 0;
     }
 
+    .manual-annotation-footer-actions {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .manual-annotation-footer .action-button.check,
     .manual-annotation-footer .action-button.import {
       flex: 0 0 auto;
       min-width: 148px;
       padding-inline: 18px;
+    }
+
+    .manual-annotation-footer .action-button.check {
+      min-width: 178px;
+      color: #0b57c7;
+      border-color: #9cbcf0;
+      background: #f7faff;
+    }
+
+    .manual-annotation-footer .action-button.check:hover:not(:disabled) {
+      border-color: #5f91df;
+      background: #edf4ff;
+    }
+
+    .manual-annotation-check-result {
+      margin-top: 12px;
+      padding: 14px 16px;
+      border: 1px solid #f0b3bd;
+      border-radius: 12px;
+      color: #5f2330;
+      background: #fff7f8;
+    }
+
+    .manual-annotation-check-result[hidden] { display: none; }
+
+    .manual-annotation-check-result.is-success {
+      border-color: #9ed7b6;
+      color: #155c37;
+      background: #f3fbf6;
+    }
+
+    .manual-annotation-check-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .manual-annotation-check-title { font-size: 14px; }
+
+    .manual-annotation-check-close {
+      padding: 4px 9px;
+      border: 1px solid currentColor;
+      border-radius: 8px;
+      color: inherit;
+      background: transparent;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .manual-annotation-check-summary {
+      margin: 8px 0 0;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .manual-annotation-check-issues {
+      display: grid;
+      gap: 10px;
+      max-height: 260px;
+      margin: 10px 0 0;
+      overflow: auto;
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .manual-annotation-check-group {
+      padding: 9px 11px;
+      border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+      border-radius: 8px;
+      background: color-mix(in srgb, currentColor 4%, transparent);
+    }
+
+    .manual-annotation-check-group-title {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    .manual-annotation-check-group-list {
+      margin: 5px 0 0;
+      padding-left: 20px;
+    }
+
+    .manual-annotation-check-group-pages,
+    .manual-annotation-check-group-empty {
+      margin: 5px 0 0;
     }
 
     .action-button.export {
@@ -1356,6 +1451,10 @@
       .header-review-mode { width: 100%; }
       .review-mode-switch { width: 100%; }
       .review-mode-button { flex: 1; min-width: 0; white-space: normal; }
+      .manual-annotation-footer { align-items: stretch; flex-direction: column; }
+      .manual-annotation-footer-actions { display: grid; grid-template-columns: 1fr; }
+      .manual-annotation-footer .action-button.check,
+      .manual-annotation-footer .action-button.import { width: 100%; min-width: 0; }
       .chinese-text-item { grid-template-columns: 34px minmax(0, 1fr); }
       .ai-translation-item { grid-template-columns: 34px minmax(0, 1fr); }
       .review-text-item { grid-template-columns: 34px minmax(0, 1fr); }
@@ -1457,9 +1556,20 @@
       <p class="export-hint">导出 JSON 会按页面、子项和打点编号保留文本原文与译文 ID，以及图片打点的安卓 / iOS 资源 ID。导入会覆盖 JSON 中包含页面的本地标注，未包含的页面保持不变。</p>
       <div class="manual-annotation-footer">
         <p id="manualAnnotationStatus" class="review-status" role="status" aria-live="polite">修改会自动暂存，切换页面前请保存当前页</p>
-        <button id="importManualAnnotations" class="action-button import" type="button">导入标注 JSON</button>
+        <div class="manual-annotation-footer-actions">
+          <button id="checkManualAnnotations" class="action-button check" type="button">检查当前标注结果</button>
+          <button id="importManualAnnotations" class="action-button import" type="button">导入标注 JSON</button>
+        </div>
         <input id="manualAnnotationImportFile" type="file" accept=".json,application/json" hidden>
       </div>
+      <section id="manualAnnotationCheckResult" class="manual-annotation-check-result" aria-labelledby="manualAnnotationCheckTitle" hidden>
+        <div class="manual-annotation-check-heading">
+          <strong id="manualAnnotationCheckTitle" class="manual-annotation-check-title">当前标注检查结果</strong>
+          <button id="closeManualAnnotationCheck" class="manual-annotation-check-close" type="button">关闭</button>
+        </div>
+        <p id="manualAnnotationCheckSummary" class="manual-annotation-check-summary"></p>
+        <div id="manualAnnotationCheckIssues" class="manual-annotation-check-issues"></div>
+      </section>
     </section>
 
     <section class="content-area ai-panel" aria-labelledby="aiTranslationTitle" hidden>
@@ -1625,10 +1735,16 @@
         chineseTextList: document.querySelector('#chineseTextList'),
         resetManualAnnotation: document.querySelector('#resetCurrentManualAnnotation'),
         saveManualAnnotation: document.querySelector('#saveCurrentManualAnnotation'),
+        checkManualAnnotations: document.querySelector('#checkManualAnnotations'),
         importManualAnnotations: document.querySelector('#importManualAnnotations'),
         manualAnnotationImportFile: document.querySelector('#manualAnnotationImportFile'),
         exportManualAnnotations: document.querySelector('#exportManualAnnotations'),
         manualAnnotationStatus: document.querySelector('#manualAnnotationStatus'),
+        manualAnnotationCheckResult: document.querySelector('#manualAnnotationCheckResult'),
+        manualAnnotationCheckTitle: document.querySelector('#manualAnnotationCheckTitle'),
+        manualAnnotationCheckSummary: document.querySelector('#manualAnnotationCheckSummary'),
+        manualAnnotationCheckIssues: document.querySelector('#manualAnnotationCheckIssues'),
+        closeManualAnnotationCheck: document.querySelector('#closeManualAnnotationCheck'),
         aiLanguageBadge: document.querySelector('#aiLanguageBadge'),
         aiTranslationKicker: document.querySelector('#aiTranslationKicker'),
         aiTranslationPageTitle: document.querySelector('#aiTranslationPageTitle'),
@@ -3526,6 +3642,7 @@
       function markCurrentManualAnnotationsDirty () {
         if (!currentAnnotationKey) return
         unsavedManualAnnotationTargets.add(currentAnnotationKey)
+        elements.manualAnnotationCheckResult.hidden = true
         elements.manualAnnotationStatus.textContent = '当前页有未保存的人工标注，请点击“保存当前页”'
         updateManualAnnotationActionState()
       }
@@ -3536,7 +3653,28 @@
         updateManualAnnotationActionState()
       }
 
+      function canProceedWithManualAnnotations (actionLabel) {
+        const emptySources = numberedPointStrokes().flatMap(stroke => {
+          const review = annotationPointReview(stroke)
+          const locations = review.sourceText.trim() ? [] : [`标注 ${stroke.number}`]
+          review.subItems.forEach((subItem, index) => {
+            if (!subItem.sourceText.trim()) locations.push(`标注 ${stroke.number} 的子项 ${index + 1}`)
+          })
+          return locations
+        })
+        if (emptySources.length === 0) return true
+        const visibleLocations = emptySources.slice(0, 3)
+        const remaining = emptySources.length - visibleLocations.length
+        const locationSummary = `${visibleLocations.join('、')}${remaining > 0 ? `等 ${emptySources.length} 处标注` : ''}`
+        const message = `当前页${locationSummary} 的英文原文为空，请填写后再${actionLabel}。`
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+        window.alert(message)
+        return false
+      }
+
       function canNavigateFromCurrentPage () {
+        if (!canProceedWithManualAnnotations('切换页面')) return false
         if (!currentManualAnnotationHasMarkers() || !unsavedManualAnnotationTargets.has(currentAnnotationKey)) return true
         const message = '当前页有未保存的人工标注，请先点击右侧“保存当前页”，再切换页面。'
         setAnnotationStatus(message)
@@ -3569,6 +3707,7 @@
       }
 
       function resetCurrentManualAnnotations () {
+        elements.manualAnnotationCheckResult.hidden = true
         const markers = numberedPointStrokes()
         const imageMarkers = imagePointStrokes()
         markers.forEach(stroke => {
@@ -3595,6 +3734,7 @@
       }
 
       function saveCurrentManualAnnotations () {
+        if (!canProceedWithManualAnnotations('保存当前页')) return
         const markers = numberedPointStrokes()
         const imageMarkers = imagePointStrokes()
         const persisted = saveCurrentAnnotations({ silent: true })
@@ -3603,6 +3743,156 @@
           ? `当前页 ${markers.length} 个文本打点和 ${imageMarkers.length} 个图片打点已保存`
           : '保存失败：浏览器存储不可用'
         updateManualAnnotationActionState(markers, imageMarkers)
+      }
+
+      function manualAnnotationCheckTargetDetails (targetKey) {
+        const separatorIndex = targetKey.indexOf('::')
+        const pageName = separatorIndex < 0 ? targetKey : targetKey.slice(0, separatorIndex)
+        const state = separatorIndex < 0 ? 'main' : targetKey.slice(separatorIndex + 2)
+        const pageIndex = baselinePages.findIndex(page => page.name === pageName)
+        if (pageIndex < 0) return null
+        const page = baselinePages[pageIndex]
+        const pageNumber = String(pageIndex + 1).padStart(2, '0')
+        let variantLabel = ''
+        if (state.startsWith('variant:')) {
+          const identifier = state.slice('variant:'.length)
+          const variant = variantsForPage(pageIndex).find((candidate, index) => variantId(candidate, index) === identifier)
+          variantLabel = ` · 子项“${variant?.label || identifier}”`
+        }
+        return {
+          pageIndex,
+          pageName,
+          label: `第 ${pageNumber} 页“${page.label ?? pageName}”${variantLabel}`
+        }
+      }
+
+      function createManualAnnotationCheckReport () {
+        const emptySource = []
+        const emptyAndroidId = []
+        const emptyIosId = []
+        const stats = {
+          pageCount: baselinePages.length,
+          annotatedPageCount: 0,
+          targetCount: 0,
+          textPointCount: 0,
+          subItemCount: 0,
+          imagePointCount: 0
+        }
+
+        Object.entries(savedAnnotations.targets).forEach(([targetKey, target]) => {
+          const details = manualAnnotationCheckTargetDetails(targetKey)
+          if (!details) return
+          const textMarkers = numberedPointStrokes(target?.strokes)
+          const imageMarkers = imagePointStrokes(target?.strokes)
+          if (textMarkers.length === 0 && imageMarkers.length === 0) return
+          stats.targetCount += 1
+          stats.textPointCount += textMarkers.length
+          stats.imagePointCount += imageMarkers.length
+
+          textMarkers.forEach(stroke => {
+            const number = Number(stroke.number)
+            const location = `第 ${details.pageIndex + 1} 页，标注 ${number}`
+            const review = annotationPointReview(stroke)
+            if (!review.sourceText.trim()) emptySource.push(location)
+            if (!review.androidTranslationId.trim()) emptyAndroidId.push(location)
+            if (!review.iosTranslationId.trim()) emptyIosId.push(location)
+            stats.subItemCount += review.subItems.length
+            review.subItems.forEach((subItem, subItemIndex) => {
+              const subLocation = `${location}，子项 ${subItemIndex + 1}`
+              if (!subItem.sourceText.trim()) emptySource.push(subLocation)
+              if (!subItem.androidTranslationId.trim()) emptyAndroidId.push(subLocation)
+              if (!subItem.iosTranslationId.trim()) emptyIosId.push(subLocation)
+            })
+          })
+
+          imageMarkers.forEach(stroke => {
+            const number = Number(stroke.number)
+            const location = `第 ${details.pageIndex + 1} 页，图片标注 ${number}`
+            const resources = annotationImagePointResources(stroke)
+            if (!resources.androidResourceId.trim()) emptyAndroidId.push(location)
+            if (!resources.iosResourceId.trim()) emptyIosId.push(location)
+          })
+        })
+
+        const unannotatedPages = baselinePages.flatMap((_, pageIndex) => {
+          if (screenshotPageHasMarkers(pageIndex)) return []
+          return [pageIndex + 1]
+        })
+        stats.annotatedPageCount = stats.pageCount - unannotatedPages.length
+        return {
+          emptySource,
+          emptyAndroidId,
+          emptyIosId,
+          unannotatedPages,
+          stats
+        }
+      }
+
+      function renderManualAnnotationCheckReport (report) {
+        const issueCount = report.emptySource.length + report.emptyAndroidId.length +
+          report.emptyIosId.length + report.unannotatedPages.length
+        const stats = report.stats
+        const isSuccess = issueCount === 0
+        elements.manualAnnotationCheckResult.hidden = false
+        elements.manualAnnotationCheckResult.classList.toggle('is-success', isSuccess)
+        elements.manualAnnotationCheckTitle.textContent = isSuccess
+          ? '当前标注检查通过'
+          : `当前标注发现 ${issueCount} 个问题`
+        elements.manualAnnotationCheckSummary.textContent = `当前截图 Tab“${currentScreenshotTab.label}”：${stats.annotatedPageCount}/${stats.pageCount} 个页面有打点，共 ${stats.textPointCount} 个文本打点、${stats.subItemCount} 个子项和 ${stats.imagePointCount} 个图片打点。`
+        elements.manualAnnotationCheckIssues.replaceChildren()
+
+        const groups = [
+          { title: '英文原文为空', items: report.emptySource },
+          { title: '安卓ID为空', items: report.emptyAndroidId },
+          { title: 'IOS ID为空', items: report.emptyIosId },
+          { title: '哪些页面还没有任何打点', items: report.unannotatedPages, pageNumbersOnly: true }
+        ]
+        groups.forEach(group => {
+          const section = document.createElement('section')
+          section.className = 'manual-annotation-check-group'
+          const title = document.createElement('h4')
+          title.className = 'manual-annotation-check-group-title'
+          title.textContent = `${group.title}（${group.items.length}）`
+          section.append(title)
+          if (group.items.length === 0) {
+            const empty = document.createElement('p')
+            empty.className = 'manual-annotation-check-group-empty'
+            empty.textContent = '无'
+            section.append(empty)
+          } else if (group.pageNumbersOnly) {
+            const pages = document.createElement('p')
+            pages.className = 'manual-annotation-check-group-pages'
+            pages.textContent = group.items.join('、')
+            section.append(pages)
+          } else {
+            const list = document.createElement('ul')
+            list.className = 'manual-annotation-check-group-list'
+            group.items.forEach(location => {
+              const item = document.createElement('li')
+              item.textContent = location
+              list.append(item)
+            })
+            section.append(list)
+          }
+          elements.manualAnnotationCheckIssues.append(section)
+        })
+
+        const message = isSuccess
+          ? '检查通过：英文原文及安卓、iOS ID 均已填写，且所有页面均有打点'
+          : `检查完成：发现 ${issueCount} 个标注问题`
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+        elements.manualAnnotationCheckResult.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+      }
+
+      function checkManualAnnotationResults () {
+        saveCurrentAnnotations({ silent: true })
+        renderManualAnnotationCheckReport(createManualAnnotationCheckReport())
+      }
+
+      function closeManualAnnotationCheckResult () {
+        elements.manualAnnotationCheckResult.hidden = true
+        elements.checkManualAnnotations.focus()
       }
 
       function createManualAnnotationExport () {
@@ -3851,6 +4141,7 @@
           elements.manualAnnotationStatus.textContent = message
           return false
         }
+        elements.manualAnnotationCheckResult.hidden = true
 
         Object.keys(imported.targets).forEach(targetKey => {
           unsavedManualAnnotationTargets.delete(targetKey)
@@ -4671,6 +4962,7 @@
           return
         }
         currentLanguage = language
+        elements.manualAnnotationCheckResult.hidden = true
         writeStorage(LANGUAGE_STORAGE_KEY, currentLanguage)
         if (currentLanguage !== 'zh') {
           currentTranslationLanguage = currentLanguage
@@ -4783,6 +5075,8 @@
       elements.annotationExportAll.addEventListener('click', exportAllAnnotatedImages)
       elements.resetManualAnnotation.addEventListener('click', resetCurrentManualAnnotations)
       elements.saveManualAnnotation.addEventListener('click', saveCurrentManualAnnotations)
+      elements.checkManualAnnotations.addEventListener('click', checkManualAnnotationResults)
+      elements.closeManualAnnotationCheck.addEventListener('click', closeManualAnnotationCheckResult)
       elements.importManualAnnotations.addEventListener('click', openManualAnnotationImport)
       elements.manualAnnotationImportFile.addEventListener('change', importManualAnnotationsFromFile)
       elements.exportManualAnnotations.addEventListener('click', exportManualAnnotations)
