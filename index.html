@@ -378,6 +378,11 @@
       background: #007aff;
     }
 
+    .annotation-button.annotation-note.is-active {
+      border-color: #dc7600;
+      background: #ff9500;
+    }
+
     .annotation-button:disabled { color: #aab2c0; cursor: not-allowed; }
 
     .annotation-status {
@@ -438,6 +443,8 @@
     }
 
     .annotation-canvas.is-active.is-image-point { outline-color: rgba(0, 122, 255, .75); }
+
+    .annotation-canvas.is-active.is-note-point { outline-color: rgba(255, 149, 0, .8); }
 
     .page-navigation {
       display: grid;
@@ -1519,8 +1526,7 @@
       <div class="annotation-toolbar" role="toolbar" aria-label="截图打点工具">
         <button id="annotationNumber" class="annotation-button" type="button" aria-pressed="false" title="点击截图依次添加文本编号">① 文本打点</button>
         <button id="annotationImageNumber" class="annotation-button annotation-image" type="button" aria-pressed="false" title="点击截图依次添加图片编号">① 图片打点</button>
-        <button id="annotationUndo" class="annotation-button" type="button" disabled>撤销</button>
-        <button id="annotationClear" class="annotation-button" type="button" disabled>清空</button>
+        <button id="annotationNoteNumber" class="annotation-button annotation-note" type="button" aria-pressed="false" title="点击截图依次添加备注编号">① 备注打点</button>
         <button id="annotationSave" class="annotation-button" type="button">保存</button>
         <button id="annotationExport" class="annotation-button" type="button">导出图片</button>
         <button id="annotationExportAll" class="annotation-button" type="button">导出全部图片</button>
@@ -1565,7 +1571,7 @@
         <button id="exportAndroidTranslations" class="action-button" type="button" hidden>导出安卓翻译结果</button>
         <button id="exportIosTranslations" class="action-button" type="button" hidden>导出IOS翻译结果</button>
       </div>
-      <p class="export-hint">导出 JSON 会按页面、子项和打点编号保留文本原文与译文 ID，以及图片打点的安卓 / iOS 资源 ID。导入会覆盖 JSON 中包含页面的本地标注，未包含的页面保持不变。</p>
+      <p class="export-hint">导出 JSON 会按页面、子项和打点编号保留文本、备注打点的原文、译文 ID 与备注，以及图片打点的安卓 / iOS 资源 ID。导入会覆盖 JSON 中包含页面的本地标注，未包含的页面保持不变。</p>
       <div class="manual-annotation-footer">
         <p id="manualAnnotationStatus" class="review-status" role="status" aria-live="polite">修改会自动暂存，切换页面前请保存当前页</p>
         <div class="manual-annotation-footer-actions">
@@ -1687,10 +1693,11 @@
       const ANNOTATION_STORAGE_KEY = 'offline-info-page-v2:screenshot-annotations:v1'
       const ANNOTATION_TEXT_POINT_COLOR = '#ff3b5c'
       const ANNOTATION_IMAGE_POINT_COLOR = '#007aff'
+      const ANNOTATION_NOTE_POINT_COLOR = '#ff9500'
       const ANNOTATION_POINT_RADIUS = 15
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const BUNDLED_MANUAL_ANNOTATIONS_PATH = '第三版标注-中文翻译.json'
+      const BUNDLED_MANUAL_ANNOTATIONS_PATH = '标注结果/我的tab/标注-最终结果.json'
       const ASSET_VERSION = 'offline-info-page-v2-20261112-01'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
@@ -1731,8 +1738,7 @@
         annotationCanvas: document.querySelector('#annotationCanvas'),
         annotationNumber: document.querySelector('#annotationNumber'),
         annotationImageNumber: document.querySelector('#annotationImageNumber'),
-        annotationUndo: document.querySelector('#annotationUndo'),
-        annotationClear: document.querySelector('#annotationClear'),
+        annotationNoteNumber: document.querySelector('#annotationNoteNumber'),
         annotationSave: document.querySelector('#annotationSave'),
         annotationExport: document.querySelector('#annotationExport'),
         annotationExportAll: document.querySelector('#annotationExportAll'),
@@ -1897,9 +1903,11 @@
             ? 'rectangle'
             : stroke?.type === 'numbered-point'
               ? 'numbered-point'
-              : stroke?.type === 'image-point' ? 'image-point' : 'freehand'
+              : stroke?.type === 'image-point'
+                ? 'image-point'
+                : stroke?.type === 'note-point' ? 'note-point' : 'freehand'
           const markerNumber = Number(stroke?.number)
-          const isPoint = type === 'numbered-point' || type === 'image-point'
+          const isPoint = ['numbered-point', 'image-point', 'note-point'].includes(type)
           const cloned = {
             type,
             platform: type === 'rectangle' && (stroke?.platform === 'android' || stroke?.platform === 'ios')
@@ -1907,7 +1915,9 @@
               : null,
             color: typeof stroke?.color === 'string'
               ? stroke.color
-              : type === 'image-point' ? ANNOTATION_IMAGE_POINT_COLOR : ANNOTATION_TEXT_POINT_COLOR,
+              : type === 'image-point'
+                ? ANNOTATION_IMAGE_POINT_COLOR
+                : type === 'note-point' ? ANNOTATION_NOTE_POINT_COLOR : ANNOTATION_TEXT_POINT_COLOR,
             width: Math.min(.08, Math.max(.001, Number(stroke?.width) || .015)),
             number: isPoint && Number.isInteger(markerNumber) && markerNumber > 0
               ? markerNumber
@@ -1919,7 +1929,7 @@
                 }))
               : []
           }
-          if (type === 'numbered-point') {
+          if (type === 'numbered-point' || type === 'note-point') {
             cloned.review = {
               sourceText: typeof stroke?.review?.sourceText === 'string' ? stroke.review.sourceText : '',
               translations: stroke?.review?.translations && typeof stroke.review.translations === 'object' && !Array.isArray(stroke.review.translations)
@@ -1932,6 +1942,9 @@
               iosTranslationId: typeof stroke?.review?.iosTranslationId === 'string'
                 ? stroke.review.iosTranslationId
                 : '',
+              ...(type === 'note-point'
+                ? { note: typeof stroke?.review?.note === 'string' ? stroke.review.note : '' }
+                : {}),
               subItems: Array.isArray(stroke?.review?.subItems)
                 ? stroke.review.subItems
                     .filter(item => item && typeof item === 'object' && !Array.isArray(item))
@@ -1942,7 +1955,10 @@
                             .filter(([language, value]) => language !== 'en' && typeof value === 'string'))
                         : {},
                       androidTranslationId: typeof item.androidTranslationId === 'string' ? item.androidTranslationId : '',
-                      iosTranslationId: typeof item.iosTranslationId === 'string' ? item.iosTranslationId : ''
+                      iosTranslationId: typeof item.iosTranslationId === 'string' ? item.iosTranslationId : '',
+                      ...(type === 'note-point'
+                        ? { note: typeof item.note === 'string' ? item.note : '' }
+                        : {})
                     }))
                 : []
             }
@@ -1959,7 +1975,7 @@
           }
           return cloned
         }).filter(stroke => {
-          return stroke.points.length > 0 && (!['numbered-point', 'image-point'].includes(stroke.type) || stroke.number !== null)
+          return stroke.points.length > 0 && (!['numbered-point', 'image-point', 'note-point'].includes(stroke.type) || stroke.number !== null)
         })
       }
 
@@ -1979,11 +1995,20 @@
           : []
       }
 
+      function notePointStrokes (strokes = currentAnnotationStrokes) {
+        return Array.isArray(strokes)
+          ? strokes
+              .filter(stroke => stroke?.type === 'note-point' && Number.isInteger(Number(stroke.number)))
+              .sort((left, right) => Number(left.number) - Number(right.number))
+          : []
+      }
+
       function annotationPointReview (stroke) {
         if (!stroke.review || typeof stroke.review !== 'object') stroke.review = {}
         for (const field of ['sourceText', 'androidTranslationId', 'iosTranslationId']) {
           if (typeof stroke.review[field] !== 'string') stroke.review[field] = ''
         }
+        if (stroke.type === 'note-point' && typeof stroke.review.note !== 'string') stroke.review.note = ''
         if (!stroke.review.translations || typeof stroke.review.translations !== 'object' || Array.isArray(stroke.review.translations)) {
           stroke.review.translations = {}
         }
@@ -1996,6 +2021,7 @@
             for (const field of ['sourceText', 'androidTranslationId', 'iosTranslationId']) {
               if (typeof item[field] !== 'string') item[field] = ''
             }
+            if (stroke.type === 'note-point' && typeof item.note !== 'string') item.note = ''
             if (!item.translations || typeof item.translations !== 'object' || Array.isArray(item.translations)) {
               item.translations = {}
             }
@@ -2006,12 +2032,13 @@
         return stroke.review
       }
 
-      function emptyManualAnnotationSubItem () {
+      function emptyManualAnnotationSubItem (includeNote = false) {
         return {
           sourceText: '',
           translations: {},
           androidTranslationId: '',
-          iosTranslationId: ''
+          iosTranslationId: '',
+          ...(includeNote ? { note: '' } : {})
         }
       }
 
@@ -2115,11 +2142,9 @@
 
       function updateAnnotationControls () {
         const isReadOnly = currentLanguage === 'zh'
-        const hasStrokes = currentAnnotationStrokes.length > 0
         elements.annotationNumber.disabled = isReadOnly
         elements.annotationImageNumber.disabled = isReadOnly
-        elements.annotationUndo.disabled = isReadOnly || !hasStrokes
-        elements.annotationClear.disabled = isReadOnly || !hasStrokes
+        elements.annotationNoteNumber.disabled = isReadOnly
         elements.annotationSave.disabled = isReadOnly
         elements.annotationExport.disabled = !elements.image.complete || elements.image.naturalWidth === 0
         elements.annotationExportAll.disabled = annotationExportAllBusy
@@ -2178,7 +2203,7 @@
           context.lineWidth = Math.max(1, stroke.width * scale)
           context.lineCap = 'round'
           context.lineJoin = 'round'
-          if (stroke.type === 'numbered-point' || stroke.type === 'image-point') {
+          if (['numbered-point', 'image-point', 'note-point'].includes(stroke.type)) {
             const markerX = points[0].x * width
             const markerY = points[0].y * height
             const radius = Math.max(10, stroke.width * scale)
@@ -2268,18 +2293,23 @@
       }
 
       function setAnnotationMode (mode = 'numbered-point', enabled = true) {
-        annotationMode = mode === 'image-point' ? 'image-point' : 'numbered-point'
+        annotationMode = ['numbered-point', 'image-point', 'note-point'].includes(mode) ? mode : 'numbered-point'
         annotationEnabled = Boolean(enabled)
         const textPointActive = annotationEnabled && annotationMode === 'numbered-point'
         const imagePointActive = annotationEnabled && annotationMode === 'image-point'
+        const notePointActive = annotationEnabled && annotationMode === 'note-point'
         elements.annotationNumber.classList.toggle('is-active', textPointActive)
         elements.annotationNumber.setAttribute('aria-pressed', String(textPointActive))
         elements.annotationImageNumber.classList.toggle('is-active', imagePointActive)
         elements.annotationImageNumber.setAttribute('aria-pressed', String(imagePointActive))
+        elements.annotationNoteNumber.classList.toggle('is-active', notePointActive)
+        elements.annotationNoteNumber.setAttribute('aria-pressed', String(notePointActive))
         elements.annotationCanvas.classList.toggle('is-active', annotationEnabled && elements.annotationCanvas.classList.contains('is-ready'))
         elements.annotationCanvas.classList.toggle('is-image-point', imagePointActive)
+        elements.annotationCanvas.classList.toggle('is-note-point', notePointActive)
+        const markerLabel = annotationMode === 'image-point' ? '图片' : annotationMode === 'note-point' ? '备注' : '文本'
         setAnnotationStatus(annotationEnabled
-          ? `${annotationMode === 'image-point' ? '图片' : '文本'}打点：点击截图依次添加 1、2、3…`
+          ? `${markerLabel}打点：点击截图依次添加 1、2、3…`
           : (currentAnnotationStrokes.length > 0 ? `已保存 ${currentAnnotationStrokes.length} 项标注` : '暂无打点'))
       }
 
@@ -2305,23 +2335,26 @@
         event.preventDefault()
         const rect = elements.annotationCanvas.getBoundingClientRect()
         if (rect.width < 1 || rect.height < 1) return
-        const markerType = annotationMode === 'image-point' ? 'image-point' : 'numbered-point'
-        const markerLabel = markerType === 'image-point' ? '图片' : '文本'
+        const markerType = ['numbered-point', 'image-point', 'note-point'].includes(annotationMode) ? annotationMode : 'numbered-point'
+        const markerLabel = markerType === 'image-point' ? '图片' : markerType === 'note-point' ? '备注' : '文本'
         const markerNumber = nextAnnotationNumber(currentAnnotationStrokes, markerType)
         const marker = {
           type: markerType,
           platform: null,
-          color: markerType === 'image-point' ? ANNOTATION_IMAGE_POINT_COLOR : ANNOTATION_TEXT_POINT_COLOR,
+          color: markerType === 'image-point'
+            ? ANNOTATION_IMAGE_POINT_COLOR
+            : markerType === 'note-point' ? ANNOTATION_NOTE_POINT_COLOR : ANNOTATION_TEXT_POINT_COLOR,
           width: ANNOTATION_POINT_RADIUS / Math.min(rect.width, rect.height),
           number: markerNumber,
           points: [annotationPointFromEvent(event)]
         }
-        if (markerType === 'numbered-point') {
+        if (markerType === 'numbered-point' || markerType === 'note-point') {
           marker.review = {
             sourceText: '',
             translations: {},
             androidTranslationId: '',
             iosTranslationId: '',
+            note: '',
             subItems: []
           }
         } else {
@@ -2386,29 +2419,6 @@
         activeAnnotationPointerId = null
         renderAnnotations()
         setAnnotationStatus(currentAnnotationStrokes.length > 0 ? `已保存 ${currentAnnotationStrokes.length} 项标注` : '暂无标注')
-      }
-
-      function undoAnnotationStroke () {
-        if (currentAnnotationStrokes.length === 0) return
-        currentAnnotationStrokes.pop()
-        markCurrentManualAnnotationsDirty()
-        renderAnnotations()
-        saveCurrentAnnotations()
-        refreshManualAnnotationReview()
-        refreshTranslationImageResources()
-      }
-
-      function clearAnnotations () {
-        if (currentAnnotationStrokes.length === 0) return
-        if (!window.confirm('确定清空当前截图上的全部标注吗？')) return
-        currentAnnotationStrokes = []
-        markCurrentManualAnnotationsDirty()
-        activeAnnotationStroke = null
-        activeAnnotationPointerId = null
-        renderAnnotations()
-        saveCurrentAnnotations()
-        refreshManualAnnotationReview()
-        refreshTranslationImageResources()
       }
 
       function exportAnnotatedImage () {
@@ -3034,22 +3044,25 @@
 
         const markers = numberedPointStrokes()
         const imageMarkers = imagePointStrokes()
+        const noteMarkers = notePointStrokes()
         const isEnglishSource = currentLanguage === 'en'
         const isReadOnly = currentLanguage === 'zh'
         const currentLanguageLabel = languageLabels[currentLanguage]
-        elements.chineseTextCount.textContent = `${markers.length} 个文本打点 · ${imageMarkers.length} 个图片打点`
+        elements.chineseTextCount.textContent = `${markers.length} 个文本打点 · ${imageMarkers.length} 个图片打点 · ${noteMarkers.length} 个备注打点`
         syncScreenshotThumbnailAnnotationState()
-        updateManualAnnotationActionState(markers, imageMarkers)
-        if (markers.length === 0 && imageMarkers.length === 0) {
+        updateManualAnnotationActionState(markers, imageMarkers, noteMarkers)
+        if (markers.length === 0 && imageMarkers.length === 0 && noteMarkers.length === 0) {
           const empty = document.createElement('li')
           empty.className = 'text-empty'
-          empty.textContent = '当前截图暂无编号点，请先使用左侧“① 文本打点”或“① 图片打点”工具添加。'
+          empty.textContent = '当前截图暂无编号点，请先使用左侧“① 文本打点”“① 图片打点”或“① 备注打点”工具添加。'
           elements.chineseTextList.append(empty)
           return
         }
 
-        markers.forEach(stroke => {
+        ;[...markers, ...noteMarkers].forEach(stroke => {
           const review = annotationPointReview(stroke)
+          const isNoteMarker = stroke.type === 'note-point'
+          const markerLabel = isNoteMarker ? '备注打点' : '文本打点'
           const row = document.createElement('li')
           row.className = 'review-text-item manual-annotation-item'
 
@@ -3058,7 +3071,7 @@
           number.textContent = String(stroke.number)
           number.style.backgroundColor = stroke.color
           number.style.color = annotationMarkerTextColor(stroke.color)
-          number.title = `截图编号 ${stroke.number}`
+          number.title = `${markerLabel}编号 ${stroke.number}`
 
           const fields = document.createElement('div')
           fields.className = 'manual-annotation-fields'
@@ -3159,18 +3172,46 @@
           }
           iosField.append(iosLabel, iosInput)
 
+          let noteField = null
+          let noteInput = null
+          if (isNoteMarker) {
+            noteField = document.createElement('label')
+            noteField.className = 'translation-review-field'
+            const noteLabel = document.createElement('span')
+            noteLabel.className = 'translation-review-label'
+            noteLabel.textContent = '备注'
+            noteInput = document.createElement('textarea')
+            noteInput.className = 'translation-review-textarea manual-annotation-note-input'
+            noteInput.rows = 1
+            noteInput.value = review.note
+            noteInput.lang = 'zh-CN'
+            noteInput.dir = 'auto'
+            noteInput.placeholder = '请输入备注'
+            noteInput.setAttribute('aria-label', `备注打点 ${stroke.number} 备注${isReadOnly ? '，只读' : ''}`)
+            noteInput.readOnly = isReadOnly
+            if (!isReadOnly) {
+              noteInput.addEventListener('input', function () {
+                resizeTextarea(noteInput)
+                updateManualAnnotationField(stroke, 'note', noteInput.value)
+              })
+            }
+            noteField.append(noteLabel, noteInput)
+          }
+
           fields.append(
-            createManualAnnotationDeleteButton(stroke, '文本打点'),
+            createManualAnnotationDeleteButton(stroke, markerLabel),
             sourceField,
             ...(translationField ? [translationField] : []),
             androidField,
             iosField,
+            ...(noteField ? [noteField] : []),
             createManualAnnotationSubItems(stroke)
           )
           row.append(number, fields)
           elements.chineseTextList.append(row)
           resizeTextarea(sourceInput)
           if (translationInput) resizeTextarea(translationInput)
+          if (noteInput) resizeTextarea(noteInput)
         })
 
         imageMarkers.forEach(stroke => {
@@ -3229,12 +3270,14 @@
 
       function createManualAnnotationSubItems (stroke) {
         const review = annotationPointReview(stroke)
+        const markerLabel = stroke.type === 'note-point' ? '备注打点' : '文本打点'
+        const includesNote = stroke.type === 'note-point'
         const isEnglishSource = currentLanguage === 'en'
         const isReadOnly = currentLanguage === 'zh'
         const currentLanguageLabel = languageLabels[currentLanguage]
         const section = document.createElement('section')
         section.className = 'manual-annotation-subitems'
-        section.setAttribute('aria-label', `文本打点 ${stroke.number} 的子项`)
+        section.setAttribute('aria-label', `${markerLabel} ${stroke.number} 的子项`)
 
         const header = document.createElement('div')
         header.className = 'manual-annotation-subitems-header'
@@ -3245,7 +3288,7 @@
         addButton.type = 'button'
         addButton.className = 'manual-annotation-add-subitem'
         addButton.textContent = '+ 新增子项'
-        addButton.setAttribute('aria-label', `为文本打点 ${stroke.number} 新增子项`)
+        addButton.setAttribute('aria-label', `为${markerLabel} ${stroke.number} 新增子项`)
         addButton.disabled = isReadOnly
         if (!isReadOnly) {
           addButton.addEventListener('click', function () {
@@ -3271,7 +3314,7 @@
           deleteButton.type = 'button'
           deleteButton.className = 'manual-annotation-delete-subitem'
           deleteButton.textContent = '删除子项'
-          deleteButton.setAttribute('aria-label', `删除文本打点 ${stroke.number} 的子项 ${subItemIndex + 1}`)
+          deleteButton.setAttribute('aria-label', `删除${markerLabel} ${stroke.number} 的子项 ${subItemIndex + 1}`)
           deleteButton.disabled = isReadOnly
           if (!isReadOnly) {
             deleteButton.addEventListener('click', function () {
@@ -3292,7 +3335,7 @@
           sourceInput.lang = 'en'
           sourceInput.dir = 'auto'
           sourceInput.placeholder = isEnglishSource ? '请输入该子项对应的英文原文' : '请先在英文页填写原文'
-          sourceInput.setAttribute('aria-label', `文本打点 ${stroke.number} 子项 ${subItemIndex + 1} 英文原文${isEnglishSource ? '' : '，只读'}`)
+          sourceInput.setAttribute('aria-label', `${markerLabel} ${stroke.number} 子项 ${subItemIndex + 1} 英文原文${isEnglishSource ? '' : '，只读'}`)
           sourceInput.readOnly = !isEnglishSource
           if (isEnglishSource) {
             sourceInput.addEventListener('input', function () {
@@ -3317,7 +3360,7 @@
             translationInput.lang = languageCodes[currentLanguage]
             translationInput.dir = 'auto'
             translationInput.placeholder = `请输入${currentLanguageLabel}译文`
-            translationInput.setAttribute('aria-label', `文本打点 ${stroke.number} 子项 ${subItemIndex + 1} ${currentLanguageLabel}译文${isReadOnly ? '，只读' : ''}`)
+            translationInput.setAttribute('aria-label', `${markerLabel} ${stroke.number} 子项 ${subItemIndex + 1} ${currentLanguageLabel}译文${isReadOnly ? '，只读' : ''}`)
             translationInput.readOnly = isReadOnly
             if (!isReadOnly) {
               translationInput.addEventListener('input', function () {
@@ -3348,7 +3391,7 @@
             input.autocomplete = 'off'
             input.spellcheck = false
             input.placeholder = '例如：onboarding.current_weight.title'
-            input.setAttribute('aria-label', `文本打点 ${stroke.number} 子项 ${subItemIndex + 1} ${labelText}${isReadOnly ? '，只读' : ''}`)
+            input.setAttribute('aria-label', `${markerLabel} ${stroke.number} 子项 ${subItemIndex + 1} ${labelText}${isReadOnly ? '，只读' : ''}`)
             input.readOnly = isReadOnly
             if (!isReadOnly) {
               input.addEventListener('input', function () {
@@ -3359,11 +3402,38 @@
             return fieldLabel
           })
 
-          item.append(itemHeader, sourceField, ...(translationField ? [translationField] : []), ...idFields)
+          let noteField = null
+          let noteInput = null
+          if (includesNote) {
+            noteField = document.createElement('label')
+            noteField.className = 'translation-review-field'
+            const noteLabel = document.createElement('span')
+            noteLabel.className = 'translation-review-label'
+            noteLabel.textContent = '备注'
+            noteInput = document.createElement('textarea')
+            noteInput.className = 'translation-review-textarea manual-annotation-subitem-note-input'
+            noteInput.rows = 1
+            noteInput.value = subItem.note
+            noteInput.lang = 'zh-CN'
+            noteInput.dir = 'auto'
+            noteInput.placeholder = '请输入子项备注'
+            noteInput.setAttribute('aria-label', `${markerLabel} ${stroke.number} 子项 ${subItemIndex + 1} 备注${isReadOnly ? '，只读' : ''}`)
+            noteInput.readOnly = isReadOnly
+            if (!isReadOnly) {
+              noteInput.addEventListener('input', function () {
+                resizeTextarea(noteInput)
+                updateManualAnnotationSubItemField(stroke, subItemIndex, 'note', noteInput.value)
+              })
+            }
+            noteField.append(noteLabel, noteInput)
+          }
+
+          item.append(itemHeader, sourceField, ...(translationField ? [translationField] : []), ...idFields, ...(noteField ? [noteField] : []))
           list.append(item)
           queueMicrotask(function () {
             resizeTextarea(sourceInput)
             if (translationInput) resizeTextarea(translationInput)
+            if (noteInput) resizeTextarea(noteInput)
           })
         })
 
@@ -3522,7 +3592,7 @@
       }
 
       function updateManualAnnotationField (stroke, field, value) {
-        if (!['sourceText', 'androidTranslationId', 'iosTranslationId'].includes(field)) return
+        if (!['sourceText', 'androidTranslationId', 'iosTranslationId', 'note'].includes(field)) return
         annotationPointReview(stroke)[field] = value
         markCurrentManualAnnotationsDirty()
         const persisted = saveCurrentAnnotations({ silent: true })
@@ -3550,7 +3620,7 @@
       }
 
       function updateManualAnnotationSubItemField (stroke, subItemIndex, field, value) {
-        if (!['sourceText', 'androidTranslationId', 'iosTranslationId'].includes(field)) return
+        if (!['sourceText', 'androidTranslationId', 'iosTranslationId', 'note'].includes(field)) return
         const subItem = annotationPointReview(stroke).subItems[subItemIndex]
         if (!subItem) return
         subItem[field] = value
@@ -3582,7 +3652,7 @@
 
       function addManualAnnotationSubItem (stroke) {
         const review = annotationPointReview(stroke)
-        review.subItems.push(emptyManualAnnotationSubItem())
+        review.subItems.push(emptyManualAnnotationSubItem(stroke.type === 'note-point'))
         markCurrentManualAnnotationsDirty()
         const persisted = saveCurrentAnnotations({ silent: true })
         renderChineseTexts(currentPage)
@@ -3638,7 +3708,9 @@
       function deleteManualAnnotation (stroke) {
         const strokeIndex = currentAnnotationStrokes.indexOf(stroke)
         if (strokeIndex < 0) return
-        const markerLabel = stroke.type === 'image-point' ? '图片打点' : '文本打点'
+        const markerLabel = stroke.type === 'image-point'
+          ? '图片打点'
+          : (stroke.type === 'note-point' ? '备注打点' : '文本打点')
         const markerNumber = stroke.number
         currentAnnotationStrokes.splice(strokeIndex, 1)
         markCurrentManualAnnotationsDirty()
@@ -3657,6 +3729,7 @@
       function manualAnnotationHasContent (stroke) {
         const review = annotationPointReview(stroke)
         return ['sourceText', 'androidTranslationId', 'iosTranslationId'].some(field => review[field].trim()) ||
+          (stroke.type === 'note-point' && review.note.trim()) ||
           Object.values(review.translations).some(value => value.trim()) ||
           review.subItems.length > 0
       }
@@ -3668,14 +3741,15 @@
       }
 
       function currentManualAnnotationHasMarkers () {
-        return numberedPointStrokes().length > 0 || imagePointStrokes().length > 0
+        return numberedPointStrokes().length > 0 || imagePointStrokes().length > 0 || notePointStrokes().length > 0
       }
 
       function annotationTargetHasMarkers (targetKey) {
         const strokes = targetKey === currentAnnotationKey
           ? currentAnnotationStrokes
           : savedAnnotations.targets[targetKey]?.strokes
-        return numberedPointStrokes(strokes).length > 0 || imagePointStrokes(strokes).length > 0
+        return numberedPointStrokes(strokes).length > 0 || imagePointStrokes(strokes).length > 0 ||
+          notePointStrokes(strokes).length > 0
       }
 
       function unsavedTargetsForCurrentScreenshotTab () {
@@ -3701,11 +3775,12 @@
       }
 
       function canProceedWithManualAnnotations (actionLabel) {
-        const emptySources = numberedPointStrokes().flatMap(stroke => {
+        const emptySources = [...numberedPointStrokes(), ...notePointStrokes()].flatMap(stroke => {
           const review = annotationPointReview(stroke)
-          const locations = review.sourceText.trim() ? [] : [`标注 ${stroke.number}`]
+          const markerLabel = stroke.type === 'note-point' ? '备注标注' : '标注'
+          const locations = review.sourceText.trim() ? [] : [`${markerLabel} ${stroke.number}`]
           review.subItems.forEach((subItem, index) => {
-            if (!subItem.sourceText.trim()) locations.push(`标注 ${stroke.number} 的子项 ${index + 1}`)
+            if (!subItem.sourceText.trim()) locations.push(`${markerLabel} ${stroke.number} 的子项 ${index + 1}`)
           })
           return locations
         })
@@ -3742,29 +3817,33 @@
         return false
       }
 
-      function updateManualAnnotationActionState (markers = numberedPointStrokes(), imageMarkers = imagePointStrokes()) {
+      function updateManualAnnotationActionState (markers = numberedPointStrokes(), imageMarkers = imagePointStrokes(), noteMarkers = notePointStrokes()) {
         const isReadOnly = currentLanguage === 'zh'
         elements.resetManualAnnotation.disabled = isReadOnly || (!markers.some(manualAnnotationHasContent) &&
-          !imageMarkers.some(manualImageAnnotationHasContent)
+          !imageMarkers.some(manualImageAnnotationHasContent) &&
+          !noteMarkers.some(manualAnnotationHasContent)
         )
-        elements.saveManualAnnotation.disabled = isReadOnly || (markers.length === 0 && imageMarkers.length === 0) ||
+        elements.saveManualAnnotation.disabled = isReadOnly || (markers.length === 0 && imageMarkers.length === 0 && noteMarkers.length === 0) ||
           !unsavedManualAnnotationTargets.has(currentAnnotationKey)
         const savedPointCount = Object.values(savedAnnotations.targets).reduce((count, target) => {
-          return count + numberedPointStrokes(target?.strokes).length + imagePointStrokes(target?.strokes).length
+          return count + numberedPointStrokes(target?.strokes).length + imagePointStrokes(target?.strokes).length +
+            notePointStrokes(target?.strokes).length
         }, 0)
-        elements.exportManualAnnotations.disabled = savedPointCount === 0 && markers.length === 0 && imageMarkers.length === 0
+        elements.exportManualAnnotations.disabled = savedPointCount === 0 && markers.length === 0 && imageMarkers.length === 0 && noteMarkers.length === 0
       }
 
       function resetCurrentManualAnnotations () {
         elements.manualAnnotationCheckResult.hidden = true
         const markers = numberedPointStrokes()
         const imageMarkers = imagePointStrokes()
-        markers.forEach(stroke => {
+        const noteMarkers = notePointStrokes()
+        ;[...markers, ...noteMarkers].forEach(stroke => {
           stroke.review = {
             sourceText: '',
             translations: {},
             androidTranslationId: '',
             iosTranslationId: '',
+            ...(stroke.type === 'note-point' ? { note: '' } : {}),
             subItems: []
           }
         })
@@ -3778,7 +3857,7 @@
         if (persisted) markCurrentManualAnnotationsSaved()
         renderChineseTexts(currentPage)
         elements.manualAnnotationStatus.textContent = persisted
-          ? `当前页 ${markers.length} 个文本打点和 ${imageMarkers.length} 个图片打点已重置并保存`
+          ? `当前页 ${markers.length} 个文本打点、${imageMarkers.length} 个图片打点和 ${noteMarkers.length} 个备注打点已重置并保存`
           : '当前页已重置，但浏览器存储不可用'
       }
 
@@ -3786,12 +3865,13 @@
         if (!canProceedWithManualAnnotations('保存当前页')) return
         const markers = numberedPointStrokes()
         const imageMarkers = imagePointStrokes()
+        const noteMarkers = notePointStrokes()
         const persisted = saveCurrentAnnotations({ silent: true })
         if (persisted) markCurrentManualAnnotationsSaved()
         elements.manualAnnotationStatus.textContent = persisted
-          ? `当前页 ${markers.length} 个文本打点和 ${imageMarkers.length} 个图片打点已保存`
+          ? `当前页 ${markers.length} 个文本打点、${imageMarkers.length} 个图片打点和 ${noteMarkers.length} 个备注打点已保存`
           : '保存失败：浏览器存储不可用'
-        updateManualAnnotationActionState(markers, imageMarkers)
+        updateManualAnnotationActionState(markers, imageMarkers, noteMarkers)
       }
 
       function manualAnnotationCheckTargetDetails (targetKey) {
@@ -3825,7 +3905,8 @@
           targetCount: 0,
           textPointCount: 0,
           subItemCount: 0,
-          imagePointCount: 0
+          imagePointCount: 0,
+          notePointCount: 0
         }
 
         Object.entries(savedAnnotations.targets).forEach(([targetKey, target]) => {
@@ -3833,14 +3914,17 @@
           if (!details) return
           const textMarkers = numberedPointStrokes(target?.strokes)
           const imageMarkers = imagePointStrokes(target?.strokes)
-          if (textMarkers.length === 0 && imageMarkers.length === 0) return
+          const noteMarkers = notePointStrokes(target?.strokes)
+          if (textMarkers.length === 0 && imageMarkers.length === 0 && noteMarkers.length === 0) return
           stats.targetCount += 1
           stats.textPointCount += textMarkers.length
           stats.imagePointCount += imageMarkers.length
+          stats.notePointCount += noteMarkers.length
 
-          textMarkers.forEach(stroke => {
+          ;[...textMarkers, ...noteMarkers].forEach(stroke => {
             const number = Number(stroke.number)
-            const location = `第 ${details.pageIndex + 1} 页，标注 ${number}`
+            const markerLabel = stroke.type === 'note-point' ? '备注标注' : '标注'
+            const location = `第 ${details.pageIndex + 1} 页，${markerLabel} ${number}`
             const review = annotationPointReview(stroke)
             if (!review.sourceText.trim()) emptySource.push(location)
             if (!review.androidTranslationId.trim()) emptyAndroidId.push(location)
@@ -3887,7 +3971,7 @@
         elements.manualAnnotationCheckTitle.textContent = isSuccess
           ? '当前标注检查通过'
           : `当前标注发现 ${issueCount} 个问题`
-        elements.manualAnnotationCheckSummary.textContent = `当前截图 Tab“${currentScreenshotTab.label}”：${stats.annotatedPageCount}/${stats.pageCount} 个页面有打点，共 ${stats.textPointCount} 个文本打点、${stats.subItemCount} 个子项和 ${stats.imagePointCount} 个图片打点。`
+        elements.manualAnnotationCheckSummary.textContent = `当前截图 Tab“${currentScreenshotTab.label}”：${stats.annotatedPageCount}/${stats.pageCount} 个页面有打点，共 ${stats.textPointCount} 个文本打点、${stats.imagePointCount} 个图片打点、${stats.notePointCount} 个备注打点和 ${stats.subItemCount} 个子项。`
         elements.manualAnnotationCheckIssues.replaceChildren()
 
         const groups = [
@@ -3949,33 +4033,38 @@
         let pointCount = 0
         let subItemCount = 0
         let imagePointCount = 0
+        let notePointCount = 0
+        const exportAnnotationItem = stroke => {
+          const review = annotationPointReview(stroke)
+          const point = stroke.points[0] ?? { x: 0, y: 0 }
+          const subItems = review.subItems.map(subItem => ({
+            sourceText: subItem.sourceText,
+            translation: currentLanguage === 'en' ? '' : (subItem.translations[currentLanguage] ?? ''),
+            translations: { ...subItem.translations },
+            androidTranslationId: subItem.androidTranslationId.trim(),
+            iosTranslationId: subItem.iosTranslationId.trim(),
+            ...(stroke.type === 'note-point' ? { note: subItem.note } : {})
+          }))
+          subItemCount += subItems.length
+          return {
+            number: Number(stroke.number),
+            x: point.x,
+            y: point.y,
+            sourceText: review.sourceText,
+            translation: currentLanguage === 'en' ? '' : (review.translations[currentLanguage] ?? ''),
+            translations: { ...review.translations },
+            androidTranslationId: review.androidTranslationId.trim(),
+            iosTranslationId: review.iosTranslationId.trim(),
+            ...(stroke.type === 'note-point' ? { note: review.note } : {}),
+            subItems
+          }
+        }
         Object.entries(savedAnnotations.targets).forEach(([targetKey, target]) => {
           const [pageName, state = 'main'] = targetKey.split('::')
           const page = baselinePages.find(candidate => candidate.name === pageName)
           if (!page) return
-          const items = numberedPointStrokes(target?.strokes).map(stroke => {
-            const review = annotationPointReview(stroke)
-            const point = stroke.points[0] ?? { x: 0, y: 0 }
-            const subItems = review.subItems.map(subItem => ({
-              sourceText: subItem.sourceText,
-              translation: currentLanguage === 'en' ? '' : (subItem.translations[currentLanguage] ?? ''),
-              translations: { ...subItem.translations },
-              androidTranslationId: subItem.androidTranslationId.trim(),
-              iosTranslationId: subItem.iosTranslationId.trim()
-            }))
-            subItemCount += subItems.length
-            return {
-              number: Number(stroke.number),
-              x: point.x,
-              y: point.y,
-              sourceText: review.sourceText,
-              translation: currentLanguage === 'en' ? '' : (review.translations[currentLanguage] ?? ''),
-              translations: { ...review.translations },
-              androidTranslationId: review.androidTranslationId.trim(),
-              iosTranslationId: review.iosTranslationId.trim(),
-              subItems
-            }
-          })
+          const items = numberedPointStrokes(target?.strokes).map(exportAnnotationItem)
+          const noteItems = notePointStrokes(target?.strokes).map(exportAnnotationItem)
           const imageItems = imagePointStrokes(target?.strokes).map(stroke => {
             const resources = annotationImagePointResources(stroke)
             const point = stroke.points[0] ?? { x: 0, y: 0 }
@@ -3987,19 +4076,21 @@
               iosResourceId: resources.iosResourceId.trim()
             }
           })
-          if (items.length === 0 && imageItems.length === 0) return
+          if (items.length === 0 && imageItems.length === 0 && noteItems.length === 0) return
           targets[targetKey] = {
             pageName,
             pageTitle: page.label ?? pageName,
             variantId: state.startsWith('variant:') ? state.slice('variant:'.length) : null,
             imageRef: target.imageRef,
             items,
-            imageItems
+            imageItems,
+            noteItems
           }
           pointCount += items.length
           imagePointCount += imageItems.length
+          notePointCount += noteItems.length
         })
-        return { targets, pointCount, subItemCount, imagePointCount }
+        return { targets, pointCount, subItemCount, imagePointCount, notePointCount }
       }
 
       function manualAnnotationImportString (value, fieldLabel, { trim = false } = {}) {
@@ -4036,7 +4127,7 @@
         return result
       }
 
-      function manualAnnotationImportSubItems (subItems, itemLabel, importLanguage = 'en') {
+      function manualAnnotationImportSubItems (subItems, itemLabel, importLanguage = 'en', includeNote = false) {
         if (subItems === undefined || subItems === null) return []
         if (!Array.isArray(subItems)) throw new Error(`${itemLabel}的 subItems 必须是数组`)
         return subItems.map((subItem, index) => {
@@ -4048,7 +4139,8 @@
             sourceText: manualAnnotationImportString(subItem.sourceText, `${subItemLabel}的原文`),
             translations: manualAnnotationImportTranslations(subItem.translations, subItem.translation, subItemLabel, importLanguage),
             androidTranslationId: manualAnnotationImportString(subItem.androidTranslationId, `${subItemLabel}的安卓译文 ID`, { trim: true }),
-            iosTranslationId: manualAnnotationImportString(subItem.iosTranslationId, `${subItemLabel}的 iOS 译文 ID`, { trim: true })
+            iosTranslationId: manualAnnotationImportString(subItem.iosTranslationId, `${subItemLabel}的 iOS 译文 ID`, { trim: true }),
+            ...(includeNote ? { note: manualAnnotationImportString(subItem.note, `${subItemLabel}的备注`) } : {})
           }
         })
       }
@@ -4069,7 +4161,9 @@
         const marker = {
           type: markerType,
           platform: null,
-          color: markerType === 'image-point' ? ANNOTATION_IMAGE_POINT_COLOR : ANNOTATION_TEXT_POINT_COLOR,
+          color: markerType === 'image-point'
+            ? ANNOTATION_IMAGE_POINT_COLOR
+            : (markerType === 'note-point' ? ANNOTATION_NOTE_POINT_COLOR : ANNOTATION_TEXT_POINT_COLOR),
           width: .05,
           number,
           points: [{ x: item.x, y: item.y }]
@@ -4085,7 +4179,10 @@
             translations: manualAnnotationImportTranslations(item.translations, item.translation, itemLabel, importLanguage),
             androidTranslationId: manualAnnotationImportString(item.androidTranslationId, `${itemLabel}的安卓译文 ID`, { trim: true }),
             iosTranslationId: manualAnnotationImportString(item.iosTranslationId, `${itemLabel}的 iOS 译文 ID`, { trim: true }),
-            subItems: manualAnnotationImportSubItems(item.subItems, itemLabel, importLanguage)
+            ...(markerType === 'note-point'
+              ? { note: manualAnnotationImportString(item.note, `${itemLabel}的备注`) }
+              : {}),
+            subItems: manualAnnotationImportSubItems(item.subItems, itemLabel, importLanguage, markerType === 'note-point')
           }
         }
         return marker
@@ -4109,6 +4206,7 @@
         let pointCount = 0
         let subItemCount = 0
         let imagePointCount = 0
+        let notePointCount = 0
         entries.forEach(([targetKey, target]) => {
           if (!target || typeof target !== 'object' || Array.isArray(target)) {
             throw new Error(`${targetKey} 的页面标注格式无效`)
@@ -4138,11 +4236,13 @@
 
           const items = target.items ?? []
           const imageItems = target.imageItems ?? []
-          if (!Array.isArray(items) || !Array.isArray(imageItems)) {
-            throw new Error(`${targetKey} 的 items 和 imageItems 必须是数组`)
+          const noteItems = target.noteItems ?? []
+          if (!Array.isArray(items) || !Array.isArray(imageItems) || !Array.isArray(noteItems)) {
+            throw new Error(`${targetKey} 的 items、imageItems 和 noteItems 必须是数组`)
           }
           const textNumbers = new Set()
           const imageNumbers = new Set()
+          const noteNumbers = new Set()
           const textStrokes = items.map((item, index) => {
             const marker = manualAnnotationImportMarker(item, `${targetKey} 文本打点 ${index + 1}`, 'numbered-point', importLanguage)
             if (textNumbers.has(marker.number)) throw new Error(`${targetKey} 存在重复的文本打点编号 ${marker.number}`)
@@ -4155,15 +4255,23 @@
             imageNumbers.add(marker.number)
             return marker
           })
+          const noteStrokes = noteItems.map((item, index) => {
+            const marker = manualAnnotationImportMarker(item, `${targetKey} 备注打点 ${index + 1}`, 'note-point', importLanguage)
+            if (noteNumbers.has(marker.number)) throw new Error(`${targetKey} 存在重复的备注打点编号 ${marker.number}`)
+            noteNumbers.add(marker.number)
+            return marker
+          })
           targets[targetKey] = {
             imageRef: manualAnnotationImportString(target.imageRef, `${targetKey} 的 imageRef`, { trim: true }),
-            strokes: [...textStrokes, ...imageStrokes]
+            strokes: [...textStrokes, ...imageStrokes, ...noteStrokes]
           }
           pointCount += textStrokes.length
-          subItemCount += textStrokes.reduce((count, stroke) => count + stroke.review.subItems.length, 0)
+          subItemCount += [...textStrokes, ...noteStrokes]
+            .reduce((count, stroke) => count + stroke.review.subItems.length, 0)
           imagePointCount += imageStrokes.length
+          notePointCount += noteStrokes.length
         })
-        return { targets, targetCount: entries.length, pointCount, subItemCount, imagePointCount }
+        return { targets, targetCount: entries.length, pointCount, subItemCount, imagePointCount, notePointCount }
       }
 
       function applyManualAnnotationImport (imported) {
@@ -4211,7 +4319,8 @@
         }
         syncScreenshotThumbnailAnnotationState()
         const importedSubItemCount = Number(imported.subItemCount) || 0
-        const message = `已导入 ${imported.targetCount} 个页面、${imported.pointCount} 个文本打点、${importedSubItemCount} 个子项和 ${imported.imagePointCount} 个图片打点`
+        const importedNotePointCount = Number(imported.notePointCount) || 0
+        const message = `已导入 ${imported.targetCount} 个页面、${imported.pointCount} 个文本打点、${imported.imagePointCount} 个图片打点、${importedNotePointCount} 个备注打点和 ${importedSubItemCount} 个子项`
         setAnnotationStatus(message)
         elements.manualAnnotationStatus.textContent = message
         return true
@@ -4282,7 +4391,8 @@
             targetCount: Object.keys(exported.targets).length,
             pointCount: exported.pointCount,
             subItemCount: exported.subItemCount,
-            imagePointCount: exported.imagePointCount
+            imagePointCount: exported.imagePointCount,
+            notePointCount: exported.notePointCount
           },
           targets: exported.targets
         }
@@ -4299,14 +4409,14 @@
           String(exportedAt.getMinutes()).padStart(2, '0'),
           String(exportedAt.getSeconds()).padStart(2, '0')
         ].join('')
-        const fileName = `offline-info-page-v2.reviewed-annotations-${exported.pointCount}text-${exported.imagePointCount}image-${timestamp}.json`
+        const fileName = `offline-info-page-v2.reviewed-annotations-${exported.pointCount}text-${exported.imagePointCount}image-${exported.notePointCount}note-${timestamp}.json`
         link.href = url
         link.download = fileName
         document.body.append(link)
         link.click()
         link.remove()
         URL.revokeObjectURL(url)
-        elements.manualAnnotationStatus.textContent = `已导出 ${fileName}；包含 ${exported.pointCount} 个文本打点、${exported.subItemCount} 个子项和 ${exported.imagePointCount} 个图片打点`
+        elements.manualAnnotationStatus.textContent = `已导出 ${fileName}；包含 ${exported.pointCount} 个文本打点、${exported.imagePointCount} 个图片打点、${exported.notePointCount} 个备注打点和 ${exported.subItemCount} 个子项`
       }
 
       function renderManualReview (pageIndex) {
@@ -5134,8 +5244,7 @@
       elements.exportTranslationReviews.addEventListener('click', exportReviewedTranslations)
       elements.annotationNumber.addEventListener('click', function () { toggleAnnotationMode('numbered-point') })
       elements.annotationImageNumber.addEventListener('click', function () { toggleAnnotationMode('image-point') })
-      elements.annotationUndo.addEventListener('click', undoAnnotationStroke)
-      elements.annotationClear.addEventListener('click', clearAnnotations)
+      elements.annotationNoteNumber.addEventListener('click', function () { toggleAnnotationMode('note-point') })
       elements.annotationSave.addEventListener('click', function () { saveCurrentAnnotations() })
       elements.annotationExport.addEventListener('click', exportAnnotatedImage)
       elements.annotationExportAll.addEventListener('click', exportAllAnnotatedImages)
