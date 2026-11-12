@@ -1,7 +1,7 @@
 (function () {
   'use strict'
 
-  const screenshots = [
+  const profileScreenshots = [
     'ios支付成功.jpg',
     '设备管理搜索按钮.jpg',
     '我的tab1.jpg',
@@ -73,29 +73,77 @@
     '支付成功.jpg'
   ]
 
-  const pages = screenshots.map((screenshot, index) => ({
+  const planScreenshots = [
+    '计划tab1.jpg',
+    '计划tab2.jpg',
+    '计划tab3.jpg',
+    '计划tab4.jpg',
+    '计划tab5.jpg',
+    '计划tab6.jpg',
+    '计划tab7.jpg',
+    '计划tab8.jpg',
+    '计划tab9.jpg',
+    '计划tab10.jpg',
+    '计划tab-全部计划1.jpg',
+    '计划tab-全部计划2.jpg',
+    '计划tab-全部计划3.jpg',
+    '计划tab-全部计划-筛选1.jpg',
+    '计划tab-全部计划-筛选2.jpg',
+    '计划tab-训练计划1.jpg',
+    '计划tab-训练计划2.jpg',
+    '计划tab-训练计划3.jpg',
+    '计划tab-训练计划4.jpg',
+    '计划tab-训练计划5.jpg',
+    '计划tab-训练计划6.jpg',
+    '计划tab-训练计划7.jpg',
+    '计划tab-训练计划8.jpg',
+    '计划tab-训练计划9.jpg',
+    '计划tab-训练计划10.jpg',
+    '计划tab-训练计划11.jpg',
+    '计划tab-训练计划-添加课程1.jpg',
+    '计划tab-训练计划-添加课程2.jpg',
+    '计划tab-训练计划-添加课程3.jpg',
+    '计划tab-训练计划-添加课程4.jpg',
+    '计划tab-训练计划-添加课程5.jpg',
+    '计划tab-训练计划-添加课程6.jpg',
+    '计划tab-训练计划-添加课程7.jpg',
+    '计划tab-训练计划-添加课程8.jpg'
+  ]
+
+  const createPages = (screenshots, prefix) => screenshots.map((screenshot, index) => ({
     order: index + 1,
-    name: `profile-tab-${String(index + 1).padStart(2, '0')}`,
+    name: `${prefix}-${String(index + 1).padStart(2, '0')}`,
     label: screenshot.replace(/\.jpg$/i, ''),
     screenshot,
     items: []
   }))
 
-  const copyPages = () => pages.map(page => ({
+  const profilePages = createPages(profileScreenshots, 'profile-tab')
+  const planPages = createPages(planScreenshots, 'plan-tab')
+
+  const copyPages = pages => pages.map(page => ({
     ...page,
     items: []
   }))
 
-  window.QUESTIONNAIRE_TEXTS = copyPages()
-  window.REVIEW_QUESTIONNAIRE_TEXTS = copyPages()
+  window.QUESTIONNAIRE_TEXTS = copyPages(profilePages)
+  window.REVIEW_QUESTIONNAIRE_TEXTS = copyPages(profilePages)
   window.QUESTIONNAIRE_VARIANTS = {}
   window.REVIEW_QUESTIONNAIRE_VARIANTS = {}
   window.SCREENSHOT_TABS = [{
     id: 'profile-tab',
     label: '我的tab',
     directory: '我的tab',
-    pages: copyPages(),
-    reviewPages: copyPages(),
+    pages: copyPages(profilePages),
+    reviewPages: copyPages(profilePages),
+    variants: {},
+    reviewVariants: {}
+  }, {
+    id: 'plan-tab',
+    label: '计划tab',
+    directory: '计划tab',
+    pages: copyPages(planPages),
+    reviewPages: copyPages(planPages),
     variants: {},
     reviewVariants: {}
   }]

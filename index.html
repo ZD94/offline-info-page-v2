@@ -985,6 +985,16 @@
       box-shadow: 0 0 0 3px rgba(239, 63, 94, .2);
     }
 
+    .manual-annotation-add-subitem:disabled,
+    .manual-annotation-delete-subitem:disabled,
+    .manual-annotation-delete:disabled {
+      border-color: #d8dee8;
+      color: #8a94a6;
+      background: #eef2f7;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+
     .review-textarea {
       width: 100%;
       min-height: 48px;
@@ -1552,6 +1562,8 @@
         <button id="resetCurrentManualAnnotation" class="action-button" type="button">重置当前页</button>
         <button id="saveCurrentManualAnnotation" class="action-button primary" type="button">保存当前页</button>
         <button id="exportManualAnnotations" class="action-button export" type="button">导出标注 JSON</button>
+        <button id="exportAndroidTranslations" class="action-button" type="button" hidden>导出安卓翻译结果</button>
+        <button id="exportIosTranslations" class="action-button" type="button" hidden>导出IOS翻译结果</button>
       </div>
       <p class="export-hint">导出 JSON 会按页面、子项和打点编号保留文本原文与译文 ID，以及图片打点的安卓 / iOS 资源 ID。导入会覆盖 JSON 中包含页面的本地标注，未包含的页面保持不变。</p>
       <div class="manual-annotation-footer">
@@ -1657,7 +1669,7 @@
   <script src="assets/data/post-questionnaire-text.js?v=20261109-01"></script>
   <script src="assets/data/zh-questionnaire-variants.js?v=20261109-01"></script>
   <script src="assets/data/review-questionnaire-text.js?v=20261109-01"></script>
-  <script src="assets/data/profile-tab-pages.js?v=20261110-02"></script>
+  <script src="assets/data/profile-tab-pages.js?v=20261112-01"></script>
   <script src="assets/data/ai-questionnaire-translations.js?v=20261109-02"></script>
   <script src="assets/data/deepseek-questionnaire-translations.js?v=20261109-04"></script>
   <script>
@@ -1678,7 +1690,8 @@
       const ANNOTATION_POINT_RADIUS = 15
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261110-02'
+      const BUNDLED_MANUAL_ANNOTATIONS_PATH = '第三版标注-中文翻译.json'
+      const ASSET_VERSION = 'offline-info-page-v2-20261112-01'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
       let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
@@ -2101,9 +2114,13 @@
       }
 
       function updateAnnotationControls () {
+        const isReadOnly = currentLanguage === 'zh'
         const hasStrokes = currentAnnotationStrokes.length > 0
-        elements.annotationUndo.disabled = !hasStrokes
-        elements.annotationClear.disabled = !hasStrokes
+        elements.annotationNumber.disabled = isReadOnly
+        elements.annotationImageNumber.disabled = isReadOnly
+        elements.annotationUndo.disabled = isReadOnly || !hasStrokes
+        elements.annotationClear.disabled = isReadOnly || !hasStrokes
+        elements.annotationSave.disabled = isReadOnly
         elements.annotationExport.disabled = !elements.image.complete || elements.image.naturalWidth === 0
         elements.annotationExportAll.disabled = annotationExportAllBusy
       }
@@ -2271,6 +2288,7 @@
       }
 
       function toggleAnnotationMode (mode) {
+        if (currentLanguage === 'zh') return
         setAnnotationMode(mode, !(annotationEnabled && annotationMode === mode))
       }
 
@@ -3017,6 +3035,7 @@
         const markers = numberedPointStrokes()
         const imageMarkers = imagePointStrokes()
         const isEnglishSource = currentLanguage === 'en'
+        const isReadOnly = currentLanguage === 'zh'
         const currentLanguageLabel = languageLabels[currentLanguage]
         elements.chineseTextCount.textContent = `${markers.length} 个文本打点 · ${imageMarkers.length} 个图片打点`
         syncScreenshotThumbnailAnnotationState()
@@ -3081,11 +3100,14 @@
             translationInput.lang = languageCodes[currentLanguage]
             translationInput.dir = 'auto'
             translationInput.placeholder = `请输入${currentLanguageLabel}译文`
-            translationInput.setAttribute('aria-label', `编号 ${stroke.number} ${currentLanguageLabel}译文`)
-            translationInput.addEventListener('input', function () {
-              resizeTextarea(translationInput)
-              updateManualAnnotationTranslation(stroke, currentLanguage, translationInput.value)
-            })
+            translationInput.setAttribute('aria-label', `编号 ${stroke.number} ${currentLanguageLabel}译文${isReadOnly ? '，只读' : ''}`)
+            translationInput.readOnly = isReadOnly
+            if (!isReadOnly) {
+              translationInput.addEventListener('input', function () {
+                resizeTextarea(translationInput)
+                updateManualAnnotationTranslation(stroke, currentLanguage, translationInput.value)
+              })
+            }
             translationField.append(translationLabel, translationInput)
           }
 
@@ -3104,10 +3126,13 @@
           androidInput.autocomplete = 'off'
           androidInput.spellcheck = false
           androidInput.placeholder = '例如：onboarding.current_weight.title'
-          androidInput.setAttribute('aria-label', `编号 ${stroke.number} 安卓译文标识 ID`)
-          androidInput.addEventListener('input', function () {
-            updateManualAnnotationField(stroke, 'androidTranslationId', androidInput.value)
-          })
+          androidInput.setAttribute('aria-label', `编号 ${stroke.number} 安卓译文标识 ID${isReadOnly ? '，只读' : ''}`)
+          androidInput.readOnly = isReadOnly
+          if (!isReadOnly) {
+            androidInput.addEventListener('input', function () {
+              updateManualAnnotationField(stroke, 'androidTranslationId', androidInput.value)
+            })
+          }
           androidField.append(androidLabel, androidInput)
 
           const iosField = document.createElement('label')
@@ -3125,10 +3150,13 @@
           iosInput.autocomplete = 'off'
           iosInput.spellcheck = false
           iosInput.placeholder = '例如：onboarding.current_weight.title'
-          iosInput.setAttribute('aria-label', `编号 ${stroke.number} iOS 译文标识 ID`)
-          iosInput.addEventListener('input', function () {
-            updateManualAnnotationField(stroke, 'iosTranslationId', iosInput.value)
-          })
+          iosInput.setAttribute('aria-label', `编号 ${stroke.number} iOS 译文标识 ID${isReadOnly ? '，只读' : ''}`)
+          iosInput.readOnly = isReadOnly
+          if (!isReadOnly) {
+            iosInput.addEventListener('input', function () {
+              updateManualAnnotationField(stroke, 'iosTranslationId', iosInput.value)
+            })
+          }
           iosField.append(iosLabel, iosInput)
 
           fields.append(
@@ -3183,10 +3211,13 @@
             input.autocomplete = 'off'
             input.spellcheck = false
             input.placeholder = placeholder
-            input.setAttribute('aria-label', `图片编号 ${stroke.number} ${labelText}`)
-            input.addEventListener('input', function () {
-              updateManualImageAnnotationField(stroke, field, input.value)
-            })
+            input.setAttribute('aria-label', `图片编号 ${stroke.number} ${labelText}${isReadOnly ? '，只读' : ''}`)
+            input.readOnly = isReadOnly
+            if (!isReadOnly) {
+              input.addEventListener('input', function () {
+                updateManualImageAnnotationField(stroke, field, input.value)
+              })
+            }
             resourceField.append(resourceLabel, input)
             fields.append(resourceField)
           })
@@ -3199,6 +3230,7 @@
       function createManualAnnotationSubItems (stroke) {
         const review = annotationPointReview(stroke)
         const isEnglishSource = currentLanguage === 'en'
+        const isReadOnly = currentLanguage === 'zh'
         const currentLanguageLabel = languageLabels[currentLanguage]
         const section = document.createElement('section')
         section.className = 'manual-annotation-subitems'
@@ -3214,9 +3246,12 @@
         addButton.className = 'manual-annotation-add-subitem'
         addButton.textContent = '+ 新增子项'
         addButton.setAttribute('aria-label', `为文本打点 ${stroke.number} 新增子项`)
-        addButton.addEventListener('click', function () {
-          addManualAnnotationSubItem(stroke)
-        })
+        addButton.disabled = isReadOnly
+        if (!isReadOnly) {
+          addButton.addEventListener('click', function () {
+            addManualAnnotationSubItem(stroke)
+          })
+        }
         header.append(title, addButton)
 
         const list = document.createElement('ol')
@@ -3237,9 +3272,12 @@
           deleteButton.className = 'manual-annotation-delete-subitem'
           deleteButton.textContent = '删除子项'
           deleteButton.setAttribute('aria-label', `删除文本打点 ${stroke.number} 的子项 ${subItemIndex + 1}`)
-          deleteButton.addEventListener('click', function () {
-            removeManualAnnotationSubItem(stroke, subItemIndex)
-          })
+          deleteButton.disabled = isReadOnly
+          if (!isReadOnly) {
+            deleteButton.addEventListener('click', function () {
+              removeManualAnnotationSubItem(stroke, subItemIndex)
+            })
+          }
           itemHeader.append(itemTitle, deleteButton)
 
           const sourceField = document.createElement('label')
@@ -3279,11 +3317,14 @@
             translationInput.lang = languageCodes[currentLanguage]
             translationInput.dir = 'auto'
             translationInput.placeholder = `请输入${currentLanguageLabel}译文`
-            translationInput.setAttribute('aria-label', `文本打点 ${stroke.number} 子项 ${subItemIndex + 1} ${currentLanguageLabel}译文`)
-            translationInput.addEventListener('input', function () {
-              resizeTextarea(translationInput)
-              updateManualAnnotationSubItemTranslation(stroke, subItemIndex, currentLanguage, translationInput.value)
-            })
+            translationInput.setAttribute('aria-label', `文本打点 ${stroke.number} 子项 ${subItemIndex + 1} ${currentLanguageLabel}译文${isReadOnly ? '，只读' : ''}`)
+            translationInput.readOnly = isReadOnly
+            if (!isReadOnly) {
+              translationInput.addEventListener('input', function () {
+                resizeTextarea(translationInput)
+                updateManualAnnotationSubItemTranslation(stroke, subItemIndex, currentLanguage, translationInput.value)
+              })
+            }
             translationField.append(translationLabel, translationInput)
           }
 
@@ -3307,10 +3348,13 @@
             input.autocomplete = 'off'
             input.spellcheck = false
             input.placeholder = '例如：onboarding.current_weight.title'
-            input.setAttribute('aria-label', `文本打点 ${stroke.number} 子项 ${subItemIndex + 1} ${labelText}`)
-            input.addEventListener('input', function () {
-              updateManualAnnotationSubItemField(stroke, subItemIndex, field, input.value)
-            })
+            input.setAttribute('aria-label', `文本打点 ${stroke.number} 子项 ${subItemIndex + 1} ${labelText}${isReadOnly ? '，只读' : ''}`)
+            input.readOnly = isReadOnly
+            if (!isReadOnly) {
+              input.addEventListener('input', function () {
+                updateManualAnnotationSubItemField(stroke, subItemIndex, field, input.value)
+              })
+            }
             fieldLabel.append(label, input)
             return fieldLabel
           })
@@ -3582,9 +3626,12 @@
         button.className = 'manual-annotation-delete'
         button.textContent = '删除标注'
         button.setAttribute('aria-label', `删除${markerLabel} ${stroke.number}`)
-        button.addEventListener('click', function () {
-          deleteManualAnnotation(stroke)
-        })
+        button.disabled = currentLanguage === 'zh'
+        if (!button.disabled) {
+          button.addEventListener('click', function () {
+            deleteManualAnnotation(stroke)
+          })
+        }
         return button
       }
 
@@ -3696,9 +3743,11 @@
       }
 
       function updateManualAnnotationActionState (markers = numberedPointStrokes(), imageMarkers = imagePointStrokes()) {
-        elements.resetManualAnnotation.disabled = !markers.some(manualAnnotationHasContent) &&
+        const isReadOnly = currentLanguage === 'zh'
+        elements.resetManualAnnotation.disabled = isReadOnly || (!markers.some(manualAnnotationHasContent) &&
           !imageMarkers.some(manualImageAnnotationHasContent)
-        elements.saveManualAnnotation.disabled = (markers.length === 0 && imageMarkers.length === 0) ||
+        )
+        elements.saveManualAnnotation.disabled = isReadOnly || (markers.length === 0 && imageMarkers.length === 0) ||
           !unsavedManualAnnotationTargets.has(currentAnnotationKey)
         const savedPointCount = Object.values(savedAnnotations.targets).reduce((count, target) => {
           return count + numberedPointStrokes(target?.strokes).length + imagePointStrokes(target?.strokes).length
@@ -4166,6 +4215,21 @@
         setAnnotationStatus(message)
         elements.manualAnnotationStatus.textContent = message
         return true
+      }
+
+      async function loadBundledManualAnnotations () {
+        try {
+          const sourceUrl = new URL(BUNDLED_MANUAL_ANNOTATIONS_PATH, document.baseURI)
+          sourceUrl.searchParams.set('cacheBust', String(Date.now()))
+          const response = await fetch(sourceUrl, { cache: 'no-store' })
+          if (!response.ok) throw new Error(`HTTP ${response.status}`)
+          applyManualAnnotationImport(normalizeManualAnnotationImport(await response.json()))
+        } catch (error) {
+          const detail = typeof error?.message === 'string' ? error.message : '文件内容无效'
+          const message = `内置中文标注加载失败：${detail}`
+          setAnnotationStatus(message)
+          elements.manualAnnotationStatus.textContent = message
+        }
       }
 
       function openManualAnnotationImport () {
@@ -4962,6 +5026,7 @@
           return
         }
         currentLanguage = language
+        if (currentLanguage === 'zh') setAnnotationEnabled(false)
         elements.manualAnnotationCheckResult.hidden = true
         writeStorage(LANGUAGE_STORAGE_KEY, currentLanguage)
         if (currentLanguage !== 'zh') {
@@ -4969,6 +5034,7 @@
           writeStorage(TRANSLATION_LANGUAGE_STORAGE_KEY, currentTranslationLanguage)
         }
         renderLanguage()
+        updateAnnotationControls()
         renderChineseTexts(currentPage)
         renderAiTranslations(currentPage)
         renderActiveReview(currentPage)
@@ -5110,6 +5176,7 @@
       renderScreenshotTabSelector()
       renderScreenshotThumbnails()
       renderPage()
+      loadBundledManualAnnotations()
     })()
   </script>
 </body>

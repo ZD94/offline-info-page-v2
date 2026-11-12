@@ -1,0 +1,3296 @@
+{
+  "metadata": {
+    "schemaVersion": 2,
+    "screenshotFolderName": "我的tab",
+    "sourceLocale": "en",
+    "sourceLanguage": "英文",
+    "targetLocale": "en",
+    "targetLanguage": "英文",
+    "exportedAt": "2026-11-11T08:18:02.994Z",
+    "targetCount": 57,
+    "pointCount": 189,
+    "subItemCount": 24,
+    "imagePointCount": 7
+  },
+  "targets": {
+    "profile-tab-01::main": {
+      "pageName": "profile-tab-01",
+      "pageTitle": "ios支付成功",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/ios支付成功.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6808738425925925,
+          "y": 0.07646466267294252,
+          "sourceText": "Member center",
+          "translation": "",
+          "translations": {
+            "zh": "会员中心"
+          },
+          "androidTranslationId": "title_my_member",
+          "iosTranslationId": "Mine_Page_Vip_Page_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-02::main": {
+      "pageName": "profile-tab-02",
+      "pageTitle": "设备管理搜索按钮",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/设备管理搜索按钮.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.4368441358024691,
+          "y": 0.09038016381766381,
+          "sourceText": "Bluetooth treadmill",
+          "translation": "",
+          "translations": {
+            "zh": "蓝牙跑步机"
+          },
+          "androidTranslationId": "bluetooth_treadmill",
+          "iosTranslationId": "Device_Page_Treadmill_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.927295524691358,
+          "y": 0.09238336894586895,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "how_to_connect",
+          "iosTranslationId": "Device_Page_How_Connect",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6521315586419754,
+          "y": 0.6866052350427351,
+          "sourceText": "Re-scan",
+          "translation": "",
+          "translations": {
+            "zh": "重新扫描"
+          },
+          "androidTranslationId": "search_again",
+          "iosTranslationId": "Device_Page_Search_Again",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.31086033950617287,
+          "y": 0.8073406339031339,
+          "sourceText": "Supported Brands",
+          "translation": "",
+          "translations": {
+            "zh": "支持品牌"
+          },
+          "androidTranslationId": "supported_brands",
+          "iosTranslationId": "Device_Page_Support_Title",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.4442714942893401,
+          "y": 0.1793967181908867,
+          "sourceText": "Connected",
+          "translation": "",
+          "translations": {
+            "zh": "已连接"
+          },
+          "androidTranslationId": "connected",
+          "iosTranslationId": "Device_Page_Search_Did",
+          "subItems": [
+            {
+              "sourceText": "Connecting...",
+              "translation": "",
+              "translations": {
+                "zh": "连接中..."
+              },
+              "androidTranslationId": "connecting",
+              "iosTranslationId": "Device_Page_Search_Ing"
+            },
+            {
+              "sourceText": "Not connected",
+              "translation": "",
+              "translations": {
+                "zh": "未连接"
+              },
+              "androidTranslationId": "not_connected",
+              "iosTranslationId": "Device_Page_Search_Not"
+            }
+          ]
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-04::main": {
+      "pageName": "profile-tab-04",
+      "pageTitle": "我的tab2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.34696180555555556,
+          "y": 0.21914669804592782,
+          "sourceText": "VIP Membership Center",
+          "translation": "",
+          "translations": {
+            "zh": "VIP会员中心"
+          },
+          "androidTranslationId": "vip_membership_center",
+          "iosTranslationId": "Mine_Page_Vip_Center_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7857542438271605,
+          "y": 0.23109221223791185,
+          "sourceText": "Join Now",
+          "translation": "",
+          "translations": {
+            "zh": "立即加入"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Mine_Page_Vip_Open",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.27045717592592594,
+          "y": 0.3502041434888033,
+          "sourceText": "My favorites",
+          "translation": "",
+          "translations": {
+            "zh": "我的收藏"
+          },
+          "androidTranslationId": "my_favorites",
+          "iosTranslationId": "Mine_Page_My_Favorites_Title",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.7071277006172839,
+          "y": 0.3537164812437598,
+          "sourceText": "Device management",
+          "translation": "",
+          "translations": {
+            "zh": "设备管理"
+          },
+          "androidTranslationId": "device_management",
+          "iosTranslationId": "Mine_Page_Equipment_Title",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.48431712962962964,
+          "y": 0.41048887462558836,
+          "sourceText": "Sports data center",
+          "translation": "",
+          "translations": {
+            "zh": "运动数据中心"
+          },
+          "androidTranslationId": "sports_data_center",
+          "iosTranslationId": "Mine_Page_Sport_Data_Title",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.7347029320987655,
+          "y": 0.4068160747396948,
+          "sourceText": "more",
+          "translation": "",
+          "translations": {
+            "zh": "更多"
+          },
+          "androidTranslationId": "more",
+          "iosTranslationId": "Flag_see_more",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "x": 0.19951774691358024,
+          "y": 0.4822733918128655,
+          "sourceText": "Total Days",
+          "translation": "",
+          "translations": {
+            "zh": "总天数"
+          },
+          "androidTranslationId": "total_days",
+          "iosTranslationId": "Mine_Page_Sport_Total_Days",
+          "subItems": []
+        },
+        {
+          "number": 8,
+          "x": 0.5824845679012346,
+          "y": 0.4812794180573385,
+          "sourceText": "Total Minutes",
+          "translation": "",
+          "translations": {
+            "zh": "总分钟"
+          },
+          "androidTranslationId": "total_minutes",
+          "iosTranslationId": "Mine_Page_Sport_Total_Minutes",
+          "subItems": []
+        },
+        {
+          "number": 9,
+          "x": 0.7775077160493827,
+          "y": 0.48681536157466837,
+          "sourceText": "Total Count",
+          "translation": "",
+          "translations": {
+            "zh": "总次数"
+          },
+          "androidTranslationId": "total_count",
+          "iosTranslationId": "Mine_Page_Sport_Total_Count",
+          "subItems": []
+        },
+        {
+          "number": 10,
+          "x": 0.32502893518518516,
+          "y": 0.566092568820425,
+          "sourceText": "Playground",
+          "translation": "",
+          "translations": {
+            "zh": "自由训练"
+          },
+          "androidTranslationId": "playground",
+          "iosTranslationId": "FreeRunning_Tab_Title",
+          "subItems": []
+        },
+        {
+          "number": 11,
+          "x": 0.23571566358024693,
+          "y": 0.659347810583369,
+          "sourceText": "JOIN",
+          "translation": "",
+          "translations": {
+            "zh": "加入"
+          },
+          "androidTranslationId": "join_upper",
+          "iosTranslationId": "FreeRunning_Page_Title_Join",
+          "subItems": []
+        },
+        {
+          "number": 12,
+          "x": 0.5793742068527918,
+          "y": 0.1169029313931219,
+          "sourceText": "Sign up or log in",
+          "translation": "",
+          "translations": {
+            "zh": "注册或登录"
+          },
+          "androidTranslationId": "settings_bind_email",
+          "iosTranslationId": "Setting_Page_Item_Email_Content",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-05::main": {
+      "pageName": "profile-tab-05",
+      "pageTitle": "我的tab3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab3.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.671653163580247,
+          "y": 0.6382471433409986,
+          "sourceText": "Register now",
+          "translation": "",
+          "translations": {
+            "zh": "立即注册"
+          },
+          "androidTranslationId": "register_email_bind_title",
+          "iosTranslationId": "Register_Email_Bind_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.17845293209876542,
+          "y": 0.694324117154215,
+          "sourceText": "Email",
+          "translation": "",
+          "translations": {
+            "zh": "邮箱"
+          },
+          "androidTranslationId": "register_email_bind_email_title",
+          "iosTranslationId": "Register_Email_Bind_Email_Title",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.28073881172839504,
+          "y": 0.7887275611886554,
+          "sourceText": "Password",
+          "translation": "",
+          "translations": {
+            "zh": "密码"
+          },
+          "androidTranslationId": "register_email_bind_password_title",
+          "iosTranslationId": "Register_Email_Bind_Password_Title",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.6336033950617284,
+          "y": 0.8549699627431057,
+          "sourceText": "Cannot be less than 6 characters",
+          "translation": "",
+          "translations": {
+            "zh": "不能少于6个字符"
+          },
+          "androidTranslationId": "register_email_bind_error_message_1",
+          "iosTranslationId": "Register_Email_Bind_Error_Message_1",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.7495081018518519,
+          "y": 0.8626976487156176,
+          "sourceText": "Email binding failed. Please contact customer support at help@onespax.com.",
+          "translation": "",
+          "translations": {
+            "zh": "邮箱绑定失败，请联系客服 help@onespax.com。"
+          },
+          "androidTranslationId": "register_email_bind_error_message_2",
+          "iosTranslationId": "Register_Email_Bind_Error_Message_2",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.6778549382716049,
+          "y": 0.9083952796049699,
+          "sourceText": "Continue",
+          "translation": "",
+          "translations": {
+            "zh": "继续"
+          },
+          "androidTranslationId": "register_email_bind_continue",
+          "iosTranslationId": "Register_Email_Bind_Continue",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "x": 0.8046296296296296,
+          "y": 0.960488083141701,
+          "sourceText": "Already have an account? Log in",
+          "translation": "",
+          "translations": {
+            "zh": "已有账号？登录"
+          },
+          "androidTranslationId": "register_email_bind_already",
+          "iosTranslationId": "Register_Email_Bind_Already",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-06::main": {
+      "pageName": "profile-tab-06",
+      "pageTitle": "我的tab4",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab4.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.945997299382716,
+          "y": 0.7087232828850027,
+          "sourceText": "This email address has been registered. Do you want to log in directly to this account?",
+          "translation": "",
+          "translations": {
+            "zh": "该邮箱已注册，是否直接登录此账号？"
+          },
+          "androidTranslationId": "register_email_duplicate_title",
+          "iosTranslationId": "Register_Email_Duplicate_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.6811246141975309,
+          "y": 0.7765165695135212,
+          "sourceText": "No worries\\nyour membership will move to this account.",
+          "translation": "",
+          "translations": {
+            "zh": "请放心，\\n你的会员权益将转移至该账号。"
+          },
+          "androidTranslationId": "register_email_duplicate_desc",
+          "iosTranslationId": "Register_Email_Duplicate_Desc",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.5408757716049383,
+          "y": 0.8690660819651674,
+          "sourceText": "Try to bind another email address",
+          "translation": "",
+          "translations": {
+            "zh": "尝试绑定其他邮箱"
+          },
+          "androidTranslationId": "register_email_duplicate_login",
+          "iosTranslationId": "Register_Email_Duplicate_Login",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.8338927469135803,
+          "y": 0.9464543558479063,
+          "sourceText": "Try to bind another email address",
+          "translation": "",
+          "translations": {
+            "zh": "尝试绑定其他邮箱"
+          },
+          "androidTranslationId": "register_email_duplicate_login",
+          "iosTranslationId": "Register_Email_Duplicate_Login_Desc",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-08::main": {
+      "pageName": "profile-tab-08",
+      "pageTitle": "我的tab-操场跑1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-操场跑1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.56015625,
+          "y": 0.315221934297417,
+          "sourceText": "Notice",
+          "translation": "",
+          "translations": {
+            "zh": "提示"
+          },
+          "androidTranslationId": "alert_notice",
+          "iosTranslationId": "Alert_Notice_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.5935763888888889,
+          "y": 0.40219844520605197,
+          "sourceText": "Do you want to exit?",
+          "translation": "",
+          "translations": {
+            "zh": "确定要退出吗？"
+          },
+          "androidTranslationId": "alert_sure_exit",
+          "iosTranslationId": "Alert_Sure_Quit",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.4132716049382716,
+          "y": 0.6723020981359191,
+          "sourceText": "Exit",
+          "translation": "",
+          "translations": {
+            "zh": "退出"
+          },
+          "androidTranslationId": "exit_alert_end",
+          "iosTranslationId": "Alert_Sure_Quit_Sport",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.5979938271604939,
+          "y": 0.6985705926607039,
+          "sourceText": "Continue",
+          "translation": "",
+          "translations": {
+            "zh": "继续"
+          },
+          "androidTranslationId": "exit_alert_continue",
+          "iosTranslationId": "Alert_Sure_Stay_Sport",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-09::main": {
+      "pageName": "profile-tab-09",
+      "pageTitle": "我的tab-操场跑2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-操场跑2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.8783757716049383,
+          "y": 0.43550948758672575,
+          "sourceText": "Speed",
+          "translation": "",
+          "translations": {
+            "zh": "速度"
+          },
+          "androidTranslationId": "speed",
+          "iosTranslationId": "Flag_Speed",
+          "subItems": [
+            {
+              "sourceText": "Resistance",
+              "translation": "",
+              "translations": {
+                "zh": "阻力"
+              },
+              "androidTranslationId": "adjust_the_resistance",
+              "iosTranslationId": "Flag_Resistance"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.8802565586419753,
+          "y": 0.6536821867424559,
+          "sourceText": "Incline",
+          "translation": "",
+          "translations": {
+            "zh": "坡度"
+          },
+          "androidTranslationId": "adjust_the_incline",
+          "iosTranslationId": "Flag_Incline",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.3539158950617284,
+          "y": 0.8382303769957369,
+          "sourceText": "Kcal",
+          "translation": "",
+          "translations": {
+            "zh": "千卡"
+          },
+          "androidTranslationId": "sport_unit_kcal",
+          "iosTranslationId": "FreeRunning_Page_Bottom_Consume",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.47541473765432096,
+          "y": 0.8014712028755329,
+          "sourceText": "Duration",
+          "translation": "",
+          "translations": {
+            "zh": "时长"
+          },
+          "androidTranslationId": "sport_unit_duration",
+          "iosTranslationId": "FreeRunning_Page_Bottom_Duration",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.5940972222222223,
+          "y": 0.806173200702165,
+          "sourceText": "Distance (km)",
+          "translation": "",
+          "translations": {
+            "zh": "距离（km）"
+          },
+          "androidTranslationId": "sport_unit_distance_km",
+          "iosTranslationId": "FreeRunning_Page_Bottom_Distance",
+          "subItems": []
+        }
+      ],
+      "imageItems": [
+        {
+          "number": 1,
+          "x": 0.12472029320987654,
+          "y": 0.16009780155479394,
+          "androidResourceId": "ic_play_ground_bluetooth1",
+          "iosResourceId": "ic_freeRun_unconnected"
+        },
+        {
+          "number": 2,
+          "x": 0.11261574074074074,
+          "y": 0.347571679344646,
+          "androidResourceId": "ic_play_ground_bluetooth2",
+          "iosResourceId": "ic_freeRun_connected"
+        },
+        {
+          "number": 3,
+          "x": 0.2778838734567901,
+          "y": 0.19094290729750063,
+          "androidResourceId": "ic_play_ground_heart_rate1",
+          "iosResourceId": "free_run_page_connect_heart_rate_normal_image"
+        },
+        {
+          "number": 4,
+          "x": 0.2796489197530864,
+          "y": 0.3539454986207473,
+          "androidResourceId": "ic_play_ground_heart_rate2",
+          "iosResourceId": "free_run_page_connect_heart_rate_select_image"
+        },
+        {
+          "number": 5,
+          "x": 0.8610243055555555,
+          "y": 0.8945916576109672,
+          "androidResourceId": "run_goon_icon",
+          "iosResourceId": "ble_resume"
+        }
+      ]
+    },
+    "profile-tab-10::main": {
+      "pageName": "profile-tab-10",
+      "pageTitle": "我的tab-操场跑3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-操场跑3.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.3899787808641975,
+          "y": 0.23664632617236478,
+          "sourceText": "Incline",
+          "translation": "",
+          "translations": {
+            "zh": "坡度"
+          },
+          "androidTranslationId": "adjust_the_incline",
+          "iosTranslationId": "Flag_Incline",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7293499228395062,
+          "y": 0.24640558388364123,
+          "sourceText": "Speed",
+          "translation": "",
+          "translations": {
+            "zh": "速度"
+          },
+          "androidTranslationId": "adjust_the_speed",
+          "iosTranslationId": "Flag_Speed",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-11::main": {
+      "pageName": "profile-tab-11",
+      "pageTitle": "我的tab-操场跑4",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-操场跑4.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [],
+      "imageItems": [
+        {
+          "number": 1,
+          "x": 0.8386863425925926,
+          "y": 0.7856933879461674,
+          "androidResourceId": "run_pause_icon",
+          "iosResourceId": "ble_pause"
+        }
+      ]
+    },
+    "profile-tab-12::main": {
+      "pageName": "profile-tab-12",
+      "pageTitle": "我的tab-操场跑5",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-操场跑5.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5212191358024691,
+          "y": 0.2314427819108919,
+          "sourceText": "Bluetooth connection successful",
+          "translation": "",
+          "translations": {
+            "zh": "蓝牙连接成功"
+          },
+          "androidTranslationId": "bluetooth_connection_successful",
+          "iosTranslationId": "Alert_Bluetooth_Connect_Status_Success",
+          "subItems": [
+            {
+              "sourceText": "The bluetooth device has been activated, and data connection synchronization is in progress",
+              "translation": "",
+              "translations": {
+                "zh": "蓝牙设备已激活，正在同步数据连接"
+              },
+              "androidTranslationId": "bluetooth_open_data_sync",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Start"
+            },
+            {
+              "sourceText": "The bluetooth component is about to enter sleep mode. Please try stepping on the pedal or tapping the screen to keep the Bluetooth enabled. Once the Bluetooth enters sleep mode, it will no longer be able to continue syncing device data",
+              "translation": "",
+              "translations": {
+                "zh": "蓝牙组件即将进入休眠模式，请尝试踩踏踏板或点击屏幕以保持蓝牙开启。蓝牙进入休眠模式后，将无法继续同步设备数据"
+              },
+              "androidTranslationId": "please_try_step",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Sleep"
+            },
+            {
+              "sourceText": "Bluetooth connection failed. Please try to reconnect",
+              "translation": "",
+              "translations": {
+                "zh": "蓝牙连接失败，请尝试重新连接"
+              },
+              "androidTranslationId": "bluetooth_reconnect",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Fail"
+            },
+            {
+              "sourceText": "Bluetooth has been disconnected. Please try to reconnect",
+              "translation": "",
+              "translations": {
+                "zh": "蓝牙已断开，请尝试重新连接"
+              },
+              "androidTranslationId": "bluetooth_disconnected_reconnect",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Lost"
+            },
+            {
+              "sourceText": "Bluetooth connecting",
+              "translation": "",
+              "translations": {
+                "zh": "蓝牙连接中"
+              },
+              "androidTranslationId": "bluetooth_connecting",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Ing"
+            },
+            {
+              "sourceText": "Bluetooth not connected",
+              "translation": "",
+              "translations": {
+                "zh": "蓝牙未连接"
+              },
+              "androidTranslationId": "bluetooth_not_connected",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Over"
+            }
+          ]
+        }
+      ],
+      "imageItems": [
+        {
+          "number": 1,
+          "x": 0.8437596450617284,
+          "y": 0.8331940148792109,
+          "androidResourceId": "run_start_icon",
+          "iosResourceId": "ble_start"
+        }
+      ]
+    },
+    "profile-tab-13::main": {
+      "pageName": "profile-tab-13",
+      "pageTitle": "我的tab-操场跑6",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-操场跑6.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.4189236111111111,
+          "y": 0.21637549109755078,
+          "sourceText": "Bluetooth connecting",
+          "translation": "",
+          "translations": {
+            "zh": "蓝牙连接中"
+          },
+          "androidTranslationId": "bluetooth_connecting",
+          "iosTranslationId": "Alert_Bluetooth_Connect_Status_Ing",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.6559027777777777,
+          "y": 0.093392125720973,
+          "sourceText": "Paired Devices",
+          "translation": "",
+          "translations": {
+            "zh": "已配对设备"
+          },
+          "androidTranslationId": "paired_devices",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Common_Device",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6716917438271605,
+          "y": 0.30631948507899354,
+          "sourceText": "Add Device",
+          "translation": "",
+          "translations": {
+            "zh": "添加设备"
+          },
+          "androidTranslationId": "add_device",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Device",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-14::main": {
+      "pageName": "profile-tab-14",
+      "pageTitle": "我的tab-操场跑7",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-操场跑7.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.652710262345679,
+          "y": 0.10135417537407004,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_How_Connect_Heart_Device",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.6546585648148148,
+          "y": 0.2844186240909471,
+          "sourceText": "1. For Apple Watch, download the SPAX app on your watch and allow SPAX to access Apple Health.",
+          "translation": "",
+          "translations": {
+            "zh": "1. 使用 Apple Watch 时，请在手表上下载 SPAX App，并允许 SPAX 访问 Apple Health。"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_Heart_T_1",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6530189043209876,
+          "y": 0.4286132241076653,
+          "sourceText": "2. For other devices, turn on Heart Rate Broadcast and connect in SPAX.",
+          "translation": "",
+          "translations": {
+            "zh": "2. 使用其他设备时，请开启心率广播，并在 SPAX 中连接。"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_Heart_T_2",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-15::main": {
+      "pageName": "profile-tab-15",
+      "pageTitle": "我的tab-操场跑8",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-操场跑8.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6400366512345679,
+          "y": 0.09681935969238485,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "how_to_connect",
+          "iosTranslationId": "Device_Page_How_Connect",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.8240258487654321,
+          "y": 0.15623171445289644,
+          "sourceText": "1.Ensure that the hardware device is turned on",
+          "translation": "",
+          "translations": {
+            "zh": "1.确保硬件设备已开启"
+          },
+          "androidTranslationId": "ensure_turned_on",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_T_1",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6348958333333333,
+          "y": 0.39112262810331855,
+          "sourceText": "After the treadmill (exercise bike, elliptical machine, etc.) is powered on, Bluetooth is usually enabled by default. If you cannot find the Bluetooth device, you can try restarting the machine. (Some exercise bike devices require pedaling to power on)",
+          "translation": "",
+          "translations": {
+            "zh": "跑步机（室内单车、椭圆机等）通电后，蓝牙通常默认开启。如果无法找到蓝牙设备，可尝试重启机器。（部分室内单车设备需踩踏才能通电）"
+          },
+          "androidTranslationId": "ensure_turned_on_tips",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_V_1",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.6712577160493827,
+          "y": 0.5073560143776644,
+          "sourceText": "2.The Bluetooth on your phone is turned on",
+          "translation": "",
+          "translations": {
+            "zh": "2.手机蓝牙已开启"
+          },
+          "androidTranslationId": "bluetooth_phone_is_turned_on",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_T_2",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.6481770833333333,
+          "y": 0.652825378249603,
+          "sourceText": "On the settings center of your phone, make sure that Bluetooth is turned on, and grant nearby device permissions or location permissions to the SPAX App.",
+          "translation": "",
+          "translations": {
+            "zh": "请在手机设置中心确认蓝牙已开启，并为 SPAX App 授予附近设备权限或位置权限。"
+          },
+          "androidTranslationId": "phone_setting",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_V_2",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.6815007716049383,
+          "y": 0.7787135333946335,
+          "sourceText": "3.The phone is near the hardware device",
+          "translation": "",
+          "translations": {
+            "zh": "3.手机靠近硬件设备"
+          },
+          "androidTranslationId": "phone_near_device",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_T_3",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "x": 0.6282600308641976,
+          "y": 0.9078617403661289,
+          "sourceText": "The Bluetooth signal can be interfered with by other signals. Please make sure that your phone is placed near the hardware device and close any idle nearby Bluetooth devices.",
+          "translation": "",
+          "translations": {
+            "zh": "蓝牙信号可能受到其他信号干扰。请确保手机靠近硬件设备，并关闭附近闲置的蓝牙设备。"
+          },
+          "androidTranslationId": "phone_near_device_tips",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_V_3",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-16::main": {
+      "pageName": "profile-tab-16",
+      "pageTitle": "我的tab-操场跑9",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-操场跑9.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6525173611111111,
+          "y": 0.07276602858814679,
+          "sourceText": "Heart Rate Devices",
+          "translation": "",
+          "translations": {
+            "zh": "心率设备"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Heart_Device",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.6948784722222222,
+          "y": 0.20066036947254035,
+          "sourceText": "No Heart Rate Devices Found",
+          "translation": "",
+          "translations": {
+            "zh": "未发现心率设备"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Heart_Device_Empty",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6336226851851852,
+          "y": 0.3345105742706679,
+          "sourceText": "Paired Heart Rate Devices",
+          "translation": "",
+          "translations": {
+            "zh": "已配对的心率设备"
+          },
+          "androidTranslationId": "paired_heart_rate",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Heart_Common_Device",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.6098958333333333,
+          "y": 0.4761974421131823,
+          "sourceText": "Add Heart Rate Device",
+          "translation": "",
+          "translations": {
+            "zh": "添加心率设备"
+          },
+          "androidTranslationId": "add_heart_rate_devices",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Heart_Nearby_Device",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-17::main": {
+      "pageName": "profile-tab-17",
+      "pageTitle": "我的tab-操场跑10",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-操场跑10.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6612750771604938,
+          "y": 0.09335033018473628,
+          "sourceText": "Paired Devices",
+          "translation": "",
+          "translations": {
+            "zh": "已配对设备"
+          },
+          "androidTranslationId": "paired_devices",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Common_Device",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.6373746141975308,
+          "y": 0.33085346484995404,
+          "sourceText": "Add Device",
+          "translation": "",
+          "translations": {
+            "zh": "添加设备"
+          },
+          "androidTranslationId": "add_device",
+          "iosTranslationId": "FreeRunning_Page_Nearby_Device",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-18::main": {
+      "pageName": "profile-tab-18",
+      "pageTitle": "我的tab-会员中心1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-会员中心1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6817997685185185,
+          "y": 0.08264334045584046,
+          "sourceText": "Member center",
+          "translation": "",
+          "translations": {
+            "zh": "会员中心"
+          },
+          "androidTranslationId": "title_my_member",
+          "iosTranslationId": "Mine_Page_Vip_Page_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-20::main": {
+      "pageName": "profile-tab-20",
+      "pageTitle": "我的tab-会员中心3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-会员中心3.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.8254436728395061,
+          "y": 0.21712517806267806,
+          "sourceText": "Please enter the membership redemption code.",
+          "translation": "",
+          "translations": {
+            "zh": "请输入会员兑换码。"
+          },
+          "androidTranslationId": "redemption_code_title",
+          "iosTranslationId": "Alert_Input_Code",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.8063850308641975,
+          "y": 0.265326745014245,
+          "sourceText": "The redemption code is invalid",
+          "translation": "",
+          "translations": {
+            "zh": "兑换码无效"
+          },
+          "androidTranslationId": "the_redemption_code_is_invalid",
+          "iosTranslationId": "Alert_Exchange_Code_Invalid",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.26807484567901235,
+          "y": 0.3745548433048433,
+          "sourceText": "Cancel",
+          "translation": "",
+          "translations": {
+            "zh": "取消"
+          },
+          "androidTranslationId": "cancel_lower",
+          "iosTranslationId": "Alert_Cancel",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.7255208333333333,
+          "y": 0.3812366452991453,
+          "sourceText": "OK",
+          "translation": "",
+          "translations": {
+            "zh": "确定"
+          },
+          "androidTranslationId": "ok_upper",
+          "iosTranslationId": "Alert_OK",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-21::main": {
+      "pageName": "profile-tab-21",
+      "pageTitle": "我的tab-会员中心4",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-会员中心4.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7989293981481481,
+          "y": 0.23342236467236469,
+          "sourceText": "Please enter the membership redemption code.",
+          "translation": "",
+          "translations": {
+            "zh": "请输入会员兑换码。"
+          },
+          "androidTranslationId": "redemption_code_title",
+          "iosTranslationId": "Alert_Input_Code",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.4095968364197531,
+          "y": 0.37640669515669517,
+          "sourceText": "Cancel",
+          "translation": "",
+          "translations": {
+            "zh": "取消"
+          },
+          "androidTranslationId": "cancel_lower",
+          "iosTranslationId": "Alert_Cancel",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6118827160493827,
+          "y": 0.37510238603988605,
+          "sourceText": "OK",
+          "translation": "",
+          "translations": {
+            "zh": "确定"
+          },
+          "androidTranslationId": "ok_upper",
+          "iosTranslationId": "Alert_OK",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-22::main": {
+      "pageName": "profile-tab-22",
+      "pageTitle": "我的tab-设备管理1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7537133487654321,
+          "y": 0.07140313390313391,
+          "sourceText": "Device management",
+          "translation": "",
+          "translations": {
+            "zh": "设备管理"
+          },
+          "androidTranslationId": "device_management",
+          "iosTranslationId": "Device_Page_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.3638985339506173,
+          "y": 0.11390669515669516,
+          "sourceText": "Add Device",
+          "translation": "",
+          "translations": {
+            "zh": "添加设备"
+          },
+          "androidTranslationId": "add_device",
+          "iosTranslationId": "Device_Page_Add_Title",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.7891685956790123,
+          "y": 0.16899483618233618,
+          "sourceText": "Smartwatch/Fitness Band",
+          "translation": "",
+          "translations": {
+            "zh": "智能手表/手环"
+          },
+          "androidTranslationId": "watch_title",
+          "iosTranslationId": "Device_Page_Watch_Title",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.8009452160493827,
+          "y": 0.212798254985755,
+          "sourceText": "Supports Apple Watch, Coros, Garmin, and more.",
+          "translation": "",
+          "translations": {
+            "zh": "支持 Apple Watch、Coros、Garmin 等"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_Watch_Subtitle",
+          "subItems": [
+            {
+              "sourceText": "Supports brands including Huawei, Coros, Garmin, and more.",
+              "translation": "",
+              "translations": {
+                "zh": "支持华为、Coros、Garmin 等品牌。"
+              },
+              "androidTranslationId": "support_heart_device_brand",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "x": 0.7435281635802469,
+          "y": 0.27899750712250715,
+          "sourceText": "Color screen treadmill",
+          "translation": "",
+          "translations": {
+            "zh": "彩屏跑步机"
+          },
+          "androidTranslationId": "treadmill_color_screen",
+          "iosTranslationId": "Device_Page_Panel_Title",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.7888310185185186,
+          "y": 0.3380252849002849,
+          "sourceText": "Equipped with SPAX smart system and high-definition touchscreen",
+          "translation": "",
+          "translations": {
+            "zh": "搭载 SPAX 智能系统和高清触摸屏"
+          },
+          "androidTranslationId": "treadmill_color_screen_desc",
+          "iosTranslationId": "Device_Page_Panel_Subtitle",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "x": 0.6620949074074074,
+          "y": 0.3816150284900285,
+          "sourceText": "Bluetooth treadmill",
+          "translation": "",
+          "translations": {
+            "zh": "蓝牙跑步机"
+          },
+          "androidTranslationId": "bluetooth_treadmill",
+          "iosTranslationId": "Device_Page_Treadmill_Title",
+          "subItems": []
+        },
+        {
+          "number": 8,
+          "x": 0.6627797067901234,
+          "y": 0.4323628917378917,
+          "sourceText": "Supports Bluetooth connection with SPAX App",
+          "translation": "",
+          "translations": {
+            "zh": "支持与 SPAX App 蓝牙连接"
+          },
+          "androidTranslationId": "bluetooth_with_spax_app",
+          "iosTranslationId": "Device_Page_Treadmill_Subtitle",
+          "subItems": []
+        },
+        {
+          "number": 9,
+          "x": 0.5002604166666667,
+          "y": 0.4924991096866097,
+          "sourceText": "Indoor bike",
+          "translation": "",
+          "translations": {
+            "zh": "室内单车"
+          },
+          "androidTranslationId": "indoor_bike",
+          "iosTranslationId": "Device_Page_Bike_Title",
+          "subItems": []
+        },
+        {
+          "number": 10,
+          "x": 0.5966724537037037,
+          "y": 0.5406116452991453,
+          "sourceText": "Supports Bluetooth connection with SPAX App",
+          "translation": "",
+          "translations": {
+            "zh": "支持与 SPAX App 蓝牙连接"
+          },
+          "androidTranslationId": "bluetooth_with_spax_app",
+          "iosTranslationId": "Device_Page_Bike_Subtitle",
+          "subItems": []
+        },
+        {
+          "number": 11,
+          "x": 0.4265625,
+          "y": 0.6010060541310541,
+          "sourceText": "Elliptical",
+          "translation": "",
+          "translations": {
+            "zh": "椭圆机"
+          },
+          "androidTranslationId": "cross_training",
+          "iosTranslationId": "Device_Page_Cross_Title",
+          "subItems": []
+        },
+        {
+          "number": 12,
+          "x": 0.5186728395061728,
+          "y": 0.647707443019943,
+          "sourceText": "Supports Bluetooth connection with SPAX App",
+          "translation": "",
+          "translations": {
+            "zh": "支持与 SPAX App 蓝牙连接"
+          },
+          "androidTranslationId": "bluetooth_with_spax_app",
+          "iosTranslationId": "Device_Page_Cross_Subtitle",
+          "subItems": []
+        },
+        {
+          "number": 13,
+          "x": 0.38668016975308644,
+          "y": 0.7016203703703704,
+          "sourceText": "Rowing",
+          "translation": "",
+          "translations": {
+            "zh": "划船机"
+          },
+          "androidTranslationId": "rowing",
+          "iosTranslationId": "Device_Page_Rowing_Title",
+          "subItems": []
+        },
+        {
+          "number": 14,
+          "x": 0.6772762345679012,
+          "y": 0.7529870014245015,
+          "sourceText": "Supports Bluetooth connection with SPAX App",
+          "translation": "",
+          "translations": {
+            "zh": "支持与 SPAX App 蓝牙连接"
+          },
+          "androidTranslationId": "bluetooth_with_spax_app",
+          "iosTranslationId": "Device_Page_Rowing_Subtitle",
+          "subItems": []
+        },
+        {
+          "number": 15,
+          "x": 0.3254243827160494,
+          "y": 0.7929976851851852,
+          "sourceText": "AB wheel",
+          "translation": "",
+          "translations": {
+            "zh": "健腹轮"
+          },
+          "androidTranslationId": "ab_wheel",
+          "iosTranslationId": "Device_Page_AB_Title",
+          "subItems": []
+        },
+        {
+          "number": 16,
+          "x": 0.4968653549382716,
+          "y": 0.8075810185185185,
+          "sourceText": "NEW",
+          "translation": "",
+          "translations": {
+            "zh": "新"
+          },
+          "androidTranslationId": "device_new",
+          "iosTranslationId": "Flag_NEW",
+          "subItems": []
+        },
+        {
+          "number": 17,
+          "x": 0.7353780864197531,
+          "y": 0.8625934829059829,
+          "sourceText": "Currently supports Bluetooth connection with an abdominal wheel for counting",
+          "translation": "",
+          "translations": {
+            "zh": "目前支持连接健腹轮进行计数"
+          },
+          "androidTranslationId": "abdominal_wheel_desc",
+          "iosTranslationId": "Device_Page_AB_Subtitle",
+          "subItems": []
+        },
+        {
+          "number": 18,
+          "x": 0.3939429012345679,
+          "y": 0.9023726851851852,
+          "sourceText": "Smart jump rope",
+          "translation": "",
+          "translations": {
+            "zh": "智能跳绳"
+          },
+          "androidTranslationId": "jump_rope",
+          "iosTranslationId": "Device_Page_Jump_Rope_Title",
+          "subItems": []
+        },
+        {
+          "number": 19,
+          "x": 0.6627604166666666,
+          "y": 0.9169560185185185,
+          "sourceText": "NEW",
+          "translation": "",
+          "translations": {
+            "zh": "新"
+          },
+          "androidTranslationId": "device_new",
+          "iosTranslationId": "Flag_NEW",
+          "subItems": []
+        },
+        {
+          "number": 20,
+          "x": 0.7971836419753087,
+          "y": 0.9717993233618234,
+          "sourceText": "Supports connection with certain jump ropes that have Bluetooth functionality",
+          "translation": "",
+          "translations": {
+            "zh": "支持连接部分具备蓝牙功能的跳绳"
+          },
+          "androidTranslationId": "supports_connection_jr",
+          "iosTranslationId": "Device_Page_Jump_Rope_Subtitle",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-23::main": {
+      "pageName": "profile-tab-23",
+      "pageTitle": "我的tab-设备管理2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.4889371141975309,
+          "y": 0.1424456908831909,
+          "sourceText": "Paired Devices",
+          "translation": "",
+          "translations": {
+            "zh": "已配对设备"
+          },
+          "androidTranslationId": "paired_devices",
+          "iosTranslationId": "Device_Page_Historical_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.8725501543209877,
+          "y": 0.3362491096866097,
+          "sourceText": "You haven\\'t added any devices yet",
+          "translation": "",
+          "translations": {
+            "zh": "你还没有添加任何设备"
+          },
+          "androidTranslationId": "have_not_devices",
+          "iosTranslationId": "Device_Page_Histor_Empty_Tip",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-24::main": {
+      "pageName": "profile-tab-24",
+      "pageTitle": "我的tab-设备管理3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理3.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.4493248456790123,
+          "y": 0.2464832621082621,
+          "sourceText": "Connected",
+          "translation": "",
+          "translations": {
+            "zh": "已连接"
+          },
+          "androidTranslationId": "connected",
+          "iosTranslationId": "Device_Page_Search_Did",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-26::main": {
+      "pageName": "profile-tab-26",
+      "pageTitle": "我的tab-设备管理-彩屏跑步机2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-彩屏跑步机2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7615644290123457,
+          "y": 0.5518741096866097,
+          "sourceText": "You'll be able to take photo or login your equipment by scanning QR code.",
+          "translation": "",
+          "translations": {
+            "zh": "你可以扫描二维码拍照或登录你的设备。"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "NSCameraUsageDescription",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-27::main": {
+      "pageName": "profile-tab-27",
+      "pageTitle": "我的tab-设备管理-彩屏跑步机3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-彩屏跑步机3.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7049575617283951,
+          "y": 0.33855502136752136,
+          "sourceText": "Scan the QR code",
+          "translation": "",
+          "translations": {
+            "zh": "扫描设备上的二维码"
+          },
+          "androidTranslationId": "login_scanner_hint1",
+          "iosTranslationId": "Scan_Page_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7555555555555555,
+          "y": 0.3668669871794872,
+          "sourceText": "on the device to log in",
+          "translation": "",
+          "translations": {
+            "zh": "进行登录"
+          },
+          "androidTranslationId": "login_scanner_hint2",
+          "iosTranslationId": "Scan_Page_Subtitle",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-29::main": {
+      "pageName": "profile-tab-29",
+      "pageTitle": "我的tab-设备管理-单车1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-单车1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5760320216049383,
+          "y": 0.07290776353276353,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_How_Connect",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-30::main": {
+      "pageName": "profile-tab-30",
+      "pageTitle": "我的tab-设备管理-单车2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-单车2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6634162808641976,
+          "y": 0.07484419515669516,
+          "sourceText": "Indoor bike",
+          "translation": "",
+          "translations": {
+            "zh": "室内单车"
+          },
+          "androidTranslationId": "indoor_bike",
+          "iosTranslationId": "Device_Page_Bike_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.47075617283950616,
+          "y": 0.43949875356125356,
+          "sourceText": "Supported Brands",
+          "translation": "",
+          "translations": {
+            "zh": "支持品牌"
+          },
+          "androidTranslationId": "supported_brands",
+          "iosTranslationId": "Device_Page_Support_Title",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6888985339506173,
+          "y": 0.9238425925925926,
+          "sourceText": "For more details, please contact the customer service of the brand",
+          "translation": "",
+          "translations": {
+            "zh": "如需了解更多详情，请联系品牌客服"
+          },
+          "androidTranslationId": "contact_the_customer_service",
+          "iosTranslationId": "Mine_Page_Support_Brand_Tip",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-31::main": {
+      "pageName": "profile-tab-31",
+      "pageTitle": "我的tab-设备管理-划船机1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-划船机1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6237750771604939,
+          "y": 0.07818287037037037,
+          "sourceText": "Rowing",
+          "translation": "",
+          "translations": {
+            "zh": "划船机"
+          },
+          "androidTranslationId": "rowing",
+          "iosTranslationId": "Device_Page_Rowing_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-32::main": {
+      "pageName": "profile-tab-32",
+      "pageTitle": "我的tab-设备管理-划船机2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-划船机2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6106577932098766,
+          "y": 0.07586360398860399,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_How_Connect",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-33::main": {
+      "pageName": "profile-tab-33",
+      "pageTitle": "我的tab-设备管理-健腹轮1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-健腹轮1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6762924382716049,
+          "y": 0.07414529914529915,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_How_Connect",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-34::main": {
+      "pageName": "profile-tab-34",
+      "pageTitle": "我的tab-设备管理-健腹轮2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-健腹轮2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6287712191358025,
+          "y": 0.08523415242165241,
+          "sourceText": "AB wheel",
+          "translation": "",
+          "translations": {
+            "zh": "健腹轮"
+          },
+          "androidTranslationId": "ab_wheel",
+          "iosTranslationId": "Device_Page_AB_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7782986111111111,
+          "y": 0.21366631054131055,
+          "sourceText": "Turn on the bluetooth function of your mobile phone, start the ab wheel and make sure the electronic display is on\\nSearch and connect your ab wheel, and you can record exercise data in real time",
+          "translation": "",
+          "translations": {
+            "zh": "打开手机蓝牙功能，启动健腹轮并确保电子显示屏已开启\\n搜索并连接你的健腹轮，即可实时记录运动数据"
+          },
+          "androidTranslationId": "ensure_ab_wheel_desc",
+          "iosTranslationId": "Device_Page_Search_Empty_Tip_Ab",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6536072530864198,
+          "y": 0.3786636396011396,
+          "sourceText": "Scan",
+          "translation": "",
+          "translations": {
+            "zh": "扫描"
+          },
+          "androidTranslationId": "search_for_device",
+          "iosTranslationId": "Device_Page_Search",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-35::main": {
+      "pageName": "profile-tab-35",
+      "pageTitle": "我的tab-设备管理-跑步机1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-跑步机1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5959297839506172,
+          "y": 0.07847222222222222,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_How_Connect",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-36::main": {
+      "pageName": "profile-tab-36",
+      "pageTitle": "我的tab-设备管理-跑步机2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-跑步机2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7168113425925926,
+          "y": 0.07445690883190884,
+          "sourceText": "Bluetooth treadmill",
+          "translation": "",
+          "translations": {
+            "zh": "蓝牙跑步机"
+          },
+          "androidTranslationId": "bluetooth_treadmill",
+          "iosTranslationId": "Device_Page_Treadmill_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.9255497685185186,
+          "y": 0.08932959401709402,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "how_to_connect",
+          "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6465374228395062,
+          "y": 0.9186298076923077,
+          "sourceText": "For more details, please contact the customer service of the brand",
+          "translation": "",
+          "translations": {
+            "zh": "如需了解更多详情，请联系品牌客服"
+          },
+          "androidTranslationId": "contact_the_customer_service",
+          "iosTranslationId": "Mine_Page_Support_Brand_Tip",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-37::main": {
+      "pageName": "profile-tab-37",
+      "pageTitle": "我的tab-设备管理-跑步机3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-跑步机3.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5752507716049383,
+          "y": 0.09760505698005698,
+          "sourceText": "Bluetooth treadmill",
+          "translation": "",
+          "translations": {
+            "zh": "蓝牙跑步机"
+          },
+          "androidTranslationId": "bluetooth_treadmill",
+          "iosTranslationId": "Device_Page_Treadmill_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.8979938271604938,
+          "y": 0.09944355413105413,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "how_to_connect",
+          "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-38::main": {
+      "pageName": "profile-tab-38",
+      "pageTitle": "我的tab-设备管理-跑步机4",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-跑步机4.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7423225308641975,
+          "y": 0.0729255698005698,
+          "sourceText": "Bluetooth treadmill",
+          "translation": "",
+          "translations": {
+            "zh": "蓝牙跑步机"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_Treadmill_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.8948591820987655,
+          "y": 0.10166043447293448,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "how_to_connect",
+          "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.44752121913580245,
+          "y": 0.18167289886039886,
+          "sourceText": "Connected",
+          "translation": "",
+          "translations": {
+            "zh": "已连接"
+          },
+          "androidTranslationId": "connected",
+          "iosTranslationId": "Device_Page_Search_Did",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.49325810185185187,
+          "y": 0.2889734686609687,
+          "sourceText": "Not connected",
+          "translation": "",
+          "translations": {
+            "zh": "未连接"
+          },
+          "androidTranslationId": "not_connected",
+          "iosTranslationId": "Device_Page_Search_Not",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.6636863425925926,
+          "y": 0.5624821937321938,
+          "sourceText": "Scan",
+          "translation": "",
+          "translations": {
+            "zh": "扫描"
+          },
+          "androidTranslationId": "search_for_device",
+          "iosTranslationId": "Device_Page_Search",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.43624614197530864,
+          "y": 0.6711805555555556,
+          "sourceText": "Supported Brands",
+          "translation": "",
+          "translations": {
+            "zh": "支持品牌"
+          },
+          "androidTranslationId": "supported_brands",
+          "iosTranslationId": "Device_Page_Support_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-39::main": {
+      "pageName": "profile-tab-39",
+      "pageTitle": "我的tab-设备管理-手表1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-手表1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6544077932098765,
+          "y": 0.09393251424501424,
+          "sourceText": "Smartwatch/Fitness Band",
+          "translation": "",
+          "translations": {
+            "zh": "智能手表/手环"
+          },
+          "androidTranslationId": "watch_title",
+          "iosTranslationId": "Device_Page_Watch_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.9089988425925926,
+          "y": 0.10192307692307692,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "how_to_connect",
+          "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.47844328703703703,
+          "y": 0.18098290598290598,
+          "sourceText": "Connecting...",
+          "translation": "",
+          "translations": {
+            "zh": "连接中..."
+          },
+          "androidTranslationId": "connecting",
+          "iosTranslationId": "Device_Page_Search_Ing",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.6495563271604938,
+          "y": 0.2714565527065527,
+          "sourceText": "Scan",
+          "translation": "",
+          "translations": {
+            "zh": "扫描"
+          },
+          "androidTranslationId": "search_for_device",
+          "iosTranslationId": "Device_Page_Search",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.8304205246913581,
+          "y": 0.34467592592592594,
+          "sourceText": "Apple Watch authorization required",
+          "translation": "",
+          "translations": {
+            "zh": "需要 Apple Watch 授权"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_Search_Empty_Tip_Watch_Tip",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "x": 0.755150462962963,
+          "y": 0.4649661680911681,
+          "sourceText": "Supported brands",
+          "translation": "",
+          "translations": {
+            "zh": "支持品牌"
+          },
+          "androidTranslationId": "supported_brands",
+          "iosTranslationId": "Device_Page_Search_Empty_Tip_Watch_Brand_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-40::main": {
+      "pageName": "profile-tab-40",
+      "pageTitle": "我的tab-设备管理-手表2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-手表2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5344039351851851,
+          "y": 0.10121527777777778,
+          "sourceText": "Smartwatch/Fitness Band",
+          "translation": "",
+          "translations": {
+            "zh": "智能手表/手环"
+          },
+          "androidTranslationId": "watch_title",
+          "iosTranslationId": "Device_Page_Watch_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.8752893518518519,
+          "y": 0.10180733618233619,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "how_to_connect",
+          "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.5367476851851852,
+          "y": 0.17418981481481483,
+          "sourceText": "Not connected",
+          "translation": "",
+          "translations": {
+            "zh": "未连接"
+          },
+          "androidTranslationId": "not_connected",
+          "iosTranslationId": "Device_Page_Search_Not",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.6592689043209876,
+          "y": 0.27411413817663816,
+          "sourceText": "Scan",
+          "translation": "",
+          "translations": {
+            "zh": "扫描"
+          },
+          "androidTranslationId": "search_for_device",
+          "iosTranslationId": "Device_Page_Search",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.8399112654320988,
+          "y": 0.3449652777777778,
+          "sourceText": "Apple Watch authorization required",
+          "translation": "",
+          "translations": {
+            "zh": "需要 Apple Watch 授权"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_Search_Empty_Tip_Watch_Tip",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.7525848765432098,
+          "y": 0.4733573717948718,
+          "sourceText": "Supported brands",
+          "translation": "",
+          "translations": {
+            "zh": "支持品牌"
+          },
+          "androidTranslationId": "supported_brands",
+          "iosTranslationId": "Device_Page_Search_Empty_Tip_Watch_Brand_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-41::main": {
+      "pageName": "profile-tab-41",
+      "pageTitle": "我的tab-设备管理-手表3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-手表3.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.591772762345679,
+          "y": 0.07462606837606837,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_How_Connect",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-42::main": {
+      "pageName": "profile-tab-42",
+      "pageTitle": "我的tab-设备管理-手表4",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-手表4.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7881655092592592,
+          "y": 0.3776397792022792,
+          "sourceText": "In order to ensure that your Apple Watch can normally record exercise data and synchronize heart rate in real time, please install SPAX on the Watch App and enable the following permissions",
+          "translation": "",
+          "translations": {
+            "zh": "为确保你的 Apple Watch 能正常记录运动数据并实时同步心率，请在 Watch App 上安装 SPAX 并开启以下权限"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_Watch_Page_Content",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.31849922839506173,
+          "y": 0.442886396011396,
+          "sourceText": "Health",
+          "translation": "",
+          "translations": {
+            "zh": "健康"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_Watch_Page_Health_Title",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.7198688271604938,
+          "y": 0.479389245014245,
+          "sourceText": "Once enabled, it will record health data",
+          "translation": "",
+          "translations": {
+            "zh": "开启后将记录健康数据"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_Watch_Page_Health_Subtitle",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.4502025462962963,
+          "y": 0.5814191595441596,
+          "sourceText": "Please turn on the health and sports and fitness authorization to allow SPAX to read and synchronize your exercise data.\\nIf the permission is turned off, you can turn it on in Settings > Privacy > Health > SPAX.",
+          "translation": "",
+          "translations": {
+            "zh": "请开启健康与运动健身授权，允许 SPAX 读取并同步你的运动数据。\\n如果权限已关闭，你可以在“设置 > 隐私 > 健康 > SPAX”中重新开启。"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_Watch_Page_Health_Tip_Content",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-43::main": {
+      "pageName": "profile-tab-43",
+      "pageTitle": "我的tab-设备管理-跳绳1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-跳绳1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.635619212962963,
+          "y": 0.08567040598290598,
+          "sourceText": "AB wheel",
+          "translation": "",
+          "translations": {
+            "zh": "健腹轮"
+          },
+          "androidTranslationId": "ab_wheel",
+          "iosTranslationId": "Device_Page_AB_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.9028742283950617,
+          "y": 0.3064414173789174,
+          "sourceText": "Turn on the bluetooth function of your mobile phone, start the ab wheel and make sure the electronic display is on\\nSearch and connect your ab wheel, and you can record exercise data in real time",
+          "translation": "",
+          "translations": {
+            "zh": "打开手机蓝牙功能，启动健腹轮并确保电子显示屏已开启\\n搜索并连接你的健腹轮，即可实时记录运动数据"
+          },
+          "androidTranslationId": "ensure_ab_wheel_desc",
+          "iosTranslationId": "Device_Page_Search_Empty_Tip_Ab",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.7038001543209876,
+          "y": 0.3865696225071225,
+          "sourceText": "Scan",
+          "translation": "",
+          "translations": {
+            "zh": "扫描"
+          },
+          "androidTranslationId": "search_for_device",
+          "iosTranslationId": "Device_Page_Search",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.464429012345679,
+          "y": 0.48428151709401707,
+          "sourceText": "Supported Brands",
+          "translation": "",
+          "translations": {
+            "zh": "支持品牌"
+          },
+          "androidTranslationId": "supported_brands",
+          "iosTranslationId": "Device_Page_Support_Title",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.37309992283950616,
+          "y": 0.6920272435897435,
+          "sourceText": "For more details, please contact the customer service of the brand",
+          "translation": "",
+          "translations": {
+            "zh": "如需了解更多详情，请联系品牌客服"
+          },
+          "androidTranslationId": "contact_the_customer_service",
+          "iosTranslationId": "Mine_Page_Support_Brand_Tip",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-44::main": {
+      "pageName": "profile-tab-44",
+      "pageTitle": "我的tab-设备管理-跳绳2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-跳绳2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7059027777777778,
+          "y": 0.07703436609686609,
+          "sourceText": "Smart jump rope",
+          "translation": "",
+          "translations": {
+            "zh": "智能跳绳"
+          },
+          "androidTranslationId": "jump_rope",
+          "iosTranslationId": "Device_Page_Jump_Rope_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.8573495370370371,
+          "y": 0.10012019230769231,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "how_to_connect",
+          "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.5313946759259259,
+          "y": 0.2092637108262108,
+          "sourceText": "Turn on the bluetooth function of your mobile phone, start the smart skipping rope and make sure the electronic display is on\\nSearch and connect your skipping rope, you can record exercise data in real time",
+          "translation": "",
+          "translations": {
+            "zh": "打开手机蓝牙功能，启动智能跳绳并确保电子显示屏已开启\\n搜索并连接你的跳绳，即可实时记录运动数据"
+          },
+          "androidTranslationId": "ensure_jr_desc",
+          "iosTranslationId": "Device_Page_Search_Empty_Tip_Jump_Rope",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.68125,
+          "y": 0.3502003205128205,
+          "sourceText": "Scan",
+          "translation": "",
+          "translations": {
+            "zh": "扫描"
+          },
+          "androidTranslationId": "search_for_device",
+          "iosTranslationId": "Device_Page_Search",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.44265046296296295,
+          "y": 0.47530270655270657,
+          "sourceText": "Supported Brands",
+          "translation": "",
+          "translations": {
+            "zh": "支持品牌"
+          },
+          "androidTranslationId": "supported_brands",
+          "iosTranslationId": "Device_Page_Support_Title",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.48074845679012346,
+          "y": 0.706721866096866,
+          "sourceText": "For more details, please contact the customer service of the brand",
+          "translation": "",
+          "translations": {
+            "zh": "如需了解更多详情，请联系品牌客服"
+          },
+          "androidTranslationId": "contact_the_customer_service",
+          "iosTranslationId": "Mine_Page_Support_Brand_Tip",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-45::main": {
+      "pageName": "profile-tab-45",
+      "pageTitle": "我的tab-设备管理-椭圆机1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-椭圆机1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6511863425925926,
+          "y": 0.07357104700854701,
+          "sourceText": "Elliptical",
+          "translation": "",
+          "translations": {
+            "zh": "椭圆机"
+          },
+          "androidTranslationId": "cross_training",
+          "iosTranslationId": "Device_Page_Cross_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-46::main": {
+      "pageName": "profile-tab-46",
+      "pageTitle": "我的tab-设备管理-椭圆机2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-椭圆机2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.8543016975308642,
+          "y": 0.10290242165242165,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "how_to_connect",
+          "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-47::main": {
+      "pageName": "profile-tab-47",
+      "pageTitle": "我的tab-设备管理-椭圆机3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设备管理-椭圆机3.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5737750771604938,
+          "y": 0.07230235042735043,
+          "sourceText": "Help",
+          "translation": "",
+          "translations": {
+            "zh": "帮助"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Device_Page_How_Connect",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-48::main": {
+      "pageName": "profile-tab-48",
+      "pageTitle": "我的tab-设置-关于我们页面",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设置-关于我们页面.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.666261574074074,
+          "y": 0.06907496438746438,
+          "sourceText": "About us",
+          "translation": "",
+          "translations": {
+            "zh": "关于我们"
+          },
+          "androidTranslationId": "settings_about_us",
+          "iosTranslationId": "Setting_Page_Item_About_Us",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.4048804012345679,
+          "y": 0.33865295584045585,
+          "sourceText": "Current Version",
+          "translation": "",
+          "translations": {
+            "zh": "当前版本"
+          },
+          "androidTranslationId": "about_us_current_version",
+          "iosTranslationId": "Setting_Page_Item_Version",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.3915702160493827,
+          "y": 0.4211850071225071,
+          "sourceText": "User Agreement",
+          "translation": "",
+          "translations": {
+            "zh": "用户协议"
+          },
+          "androidTranslationId": "about_us_user_agreement",
+          "iosTranslationId": "Setting_Page_Item_Agreement",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.36726466049382717,
+          "y": 0.4911636396011396,
+          "sourceText": "Privacy Policy",
+          "translation": "",
+          "translations": {
+            "zh": "隐私政策"
+          },
+          "androidTranslationId": "about_us_privacy_policy",
+          "iosTranslationId": "Setting_Page_Item_PrivacyPolicy",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.48268711419753085,
+          "y": 0.5570690883190883,
+          "sourceText": "Upload Debug File",
+          "translation": "",
+          "translations": {
+            "zh": "上传调试文件"
+          },
+          "androidTranslationId": "about_us_upload_log",
+          "iosTranslationId": "Setting_Page_Item_Upload_Debug_File",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-49::main": {
+      "pageName": "profile-tab-49",
+      "pageTitle": "我的tab-设置-关于我们页面1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设置-关于我们页面1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6960744598765433,
+          "y": 0.5071225071225072,
+          "sourceText": "Upload successful.",
+          "translation": "",
+          "translations": {
+            "zh": "上传成功。"
+          },
+          "androidTranslationId": "upload_log_completed",
+          "iosTranslationId": "Alert_Upload_Success",
+          "subItems": [
+            {
+              "sourceText": "Upload failed.",
+              "translation": "",
+              "translations": {
+                "zh": "上传失败。"
+              },
+              "androidTranslationId": "upload_log_failed",
+              "iosTranslationId": "Alert_Upload_Error"
+            }
+          ]
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-50::main": {
+      "pageName": "profile-tab-50",
+      "pageTitle": "我的tab-设置-关于我们页面-隐私协议",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设置-关于我们页面-隐私协议.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6912519290123457,
+          "y": 0.08048878205128206,
+          "sourceText": "'Privacy Policy'",
+          "translation": "",
+          "translations": {
+            "zh": "“隐私政策”"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Privacy_Content_Pr",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-51::main": {
+      "pageName": "profile-tab-51",
+      "pageTitle": "我的tab-设置-关于我们页面-用户协议",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设置-关于我们页面-用户协议.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7030189043209877,
+          "y": 0.08497596153846154,
+          "sourceText": "'Terms of Use'",
+          "translation": "",
+          "translations": {
+            "zh": "“使用条款”"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Privacy_Content_Ag",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-52::main": {
+      "pageName": "profile-tab-52",
+      "pageTitle": "我的tab-设置页面",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设置页面.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6590277777777778,
+          "y": 0.07853454415954415,
+          "sourceText": "Settings",
+          "translation": "",
+          "translations": {
+            "zh": "设置"
+          },
+          "androidTranslationId": "title_activity_setprofile",
+          "iosTranslationId": "Setting_Page_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.31296296296296294,
+          "y": 0.1372952279202279,
+          "sourceText": "Email",
+          "translation": "",
+          "translations": {
+            "zh": "邮箱"
+          },
+          "androidTranslationId": "email",
+          "iosTranslationId": "Setting_Page_Item_Email",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.4175443672839506,
+          "y": 0.19659009971509972,
+          "sourceText": "Help Feedback",
+          "translation": "",
+          "translations": {
+            "zh": "帮助与反馈"
+          },
+          "androidTranslationId": "settings_activity_feedback",
+          "iosTranslationId": "Setting_Page_Item_Help_Feedback",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.40209297839506175,
+          "y": 0.2777866809116809,
+          "sourceText": "About us",
+          "translation": "",
+          "translations": {
+            "zh": "关于我们"
+          },
+          "androidTranslationId": "settings_about_us",
+          "iosTranslationId": "Setting_Page_Item_About_Us",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.3798900462962963,
+          "y": 0.35524394586894587,
+          "sourceText": "Automatic resistance adjustment",
+          "translation": "",
+          "translations": {
+            "zh": "自动阻力调节"
+          },
+          "androidTranslationId": "settings_resistance_adjustment",
+          "iosTranslationId": "Setting_Page_Item_Auto_Resistance",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-53::main": {
+      "pageName": "profile-tab-53",
+      "pageTitle": "我的tab-设置页面1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设置页面1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7394825317935975,
+          "y": 0.4879098637160977,
+          "sourceText": "Are you sure you want to log out?",
+          "translation": "",
+          "translations": {
+            "zh": "确定要退出登录吗？"
+          },
+          "androidTranslationId": "settings_logout_msg",
+          "iosTranslationId": "Alert_Log_Out_Tip",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7619353895629294,
+          "y": 0.5587235190932398,
+          "sourceText": "OK",
+          "translation": "",
+          "translations": {
+            "zh": "确定"
+          },
+          "androidTranslationId": "ok_upper",
+          "iosTranslationId": "Alert_OK",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.4681771670808361,
+          "y": 0.5561732559708541,
+          "sourceText": "CANCEL",
+          "translation": "",
+          "translations": {
+            "zh": "取消"
+          },
+          "androidTranslationId": "cancel_upper",
+          "iosTranslationId": "Alert_CANCEL",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-54::main": {
+      "pageName": "profile-tab-54",
+      "pageTitle": "我的tab-设置页面2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-设置页面2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6683818155240462,
+          "y": 0.06907299959519633,
+          "sourceText": "Settings",
+          "translation": "",
+          "translations": {
+            "zh": "设置"
+          },
+          "androidTranslationId": "title_activity_setprofile",
+          "iosTranslationId": "Setting_Page_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.30726501973395703,
+          "y": 0.12866009985157198,
+          "sourceText": "Email",
+          "translation": "",
+          "translations": {
+            "zh": "邮箱"
+          },
+          "androidTranslationId": "Email",
+          "iosTranslationId": "Setting_Page_Item_Email",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.4270135945037275,
+          "y": 0.19774659290244231,
+          "sourceText": "Help Feedback",
+          "translation": "",
+          "translations": {
+            "zh": "帮助与反馈"
+          },
+          "androidTranslationId": "settings_activity_feedback",
+          "iosTranslationId": "Setting_Page_Item_Help_Feedback",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.36901037859961994,
+          "y": 0.26600998515719876,
+          "sourceText": "About us",
+          "translation": "",
+          "translations": {
+            "zh": "关于我们"
+          },
+          "androidTranslationId": "settings_about_us",
+          "iosTranslationId": "Setting_Page_Item_About_Us",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.746966817716708,
+          "y": 0.3255566050465524,
+          "sourceText": "Automatic resistance adjustment",
+          "translation": "",
+          "translations": {
+            "zh": "自动阻力调节"
+          },
+          "androidTranslationId": "settings_resistance_adjustment",
+          "iosTranslationId": "Setting_Page_Item_Auto_Resistance",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.7132875310627101,
+          "y": 0.8921063284307111,
+          "sourceText": "Log out",
+          "translation": "",
+          "translations": {
+            "zh": "退出登录"
+          },
+          "androidTranslationId": "settings_logout",
+          "iosTranslationId": "Setting_Page_Log_Out",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "x": 0.10144715684841397,
+          "y": 0.38600728646606397,
+          "sourceText": "Subscriptions",
+          "translation": "",
+          "translations": {
+            "zh": "订阅"
+          },
+          "androidTranslationId": "Subscriptions",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 8,
+          "x": 0.6852214588510451,
+          "y": 0.13215490487113749,
+          "sourceText": "\"Sign up or log in  \"",
+          "translation": "",
+          "translations": {
+            "zh": "“注册或登录  ”"
+          },
+          "androidTranslationId": "settings_bind_email",
+          "iosTranslationId": "Setting_Page_Item_Email_Content",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-57::main": {
+      "pageName": "profile-tab-57",
+      "pageTitle": "我的tab-我的收藏1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-我的收藏1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6758661014471569,
+          "y": 0.07080016192146808,
+          "sourceText": "My favorites",
+          "translation": "",
+          "translations": {
+            "zh": "我的收藏"
+          },
+          "androidTranslationId": "my_favorites",
+          "iosTranslationId": "Favorites_Page_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.5505043122350534,
+          "y": 0.6304007556335177,
+          "sourceText": "No favorites found",
+          "translation": "",
+          "translations": {
+            "zh": "暂无收藏"
+          },
+          "androidTranslationId": "no_favorites_found",
+          "iosTranslationId": "Favorites_Page_Empty_Tip",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-58::main": {
+      "pageName": "profile-tab-58",
+      "pageTitle": "我的tab-我的收藏2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-我的收藏2.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6328314573892706,
+          "y": 0.5466333828093375,
+          "sourceText": "Added to my favorites",
+          "translation": "",
+          "translations": {
+            "zh": "已添加到我的收藏"
+          },
+          "androidTranslationId": "added_to_my_favorites",
+          "iosTranslationId": "Favorites_Page_Add_Success_Tip",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-59::main": {
+      "pageName": "profile-tab-59",
+      "pageTitle": "我的tab-我的收藏3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-我的收藏3.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6197339570238269,
+          "y": 0.5397247335042504,
+          "sourceText": "Removed from favorites",
+          "translation": "",
+          "translations": {
+            "zh": "已取消收藏"
+          },
+          "androidTranslationId": "removed_from_favorites",
+          "iosTranslationId": "Favorites_Page_Cancel_Success_Tip",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-60::main": {
+      "pageName": "profile-tab-60",
+      "pageTitle": "我的tab-运动结果页1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-运动结果页1.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6515421721970472,
+          "y": 0.1243421940358926,
+          "sourceText": "Exercise record",
+          "translation": "",
+          "translations": {
+            "zh": "运动记录"
+          },
+          "androidTranslationId": "exercise_record_title",
+          "iosTranslationId": "Mine_Page_Sport_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7694196754860401,
+          "y": 0.5699500742140062,
+          "sourceText": "Exercise statistics",
+          "translation": "",
+          "translations": {
+            "zh": "运动统计"
+          },
+          "androidTranslationId": "exercise_statistics",
+          "iosTranslationId": "Mine_Page_Sport_Exercise_Statistics",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.2791989475222921,
+          "y": 0.6537174470381865,
+          "sourceText": "Total exercise",
+          "translation": "",
+          "translations": {
+            "zh": "总运动"
+          },
+          "androidTranslationId": "total_exercise",
+          "iosTranslationId": "Mine_Page_Sport_Total_Exercise",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.9022657506212542,
+          "y": 0.8333423289704494,
+          "sourceText": "times",
+          "translation": "",
+          "translations": {
+            "zh": "次"
+          },
+          "androidTranslationId": "record_time",
+          "iosTranslationId": "Unit_times",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.06963894167519369,
+          "y": 0.7564836054513561,
+          "sourceText": "June",
+          "translation": "",
+          "translations": {
+            "zh": "六月"
+          },
+          "androidTranslationId": "complete_6month",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "January",
+              "translation": "",
+              "translations": {
+                "zh": "一月"
+              },
+              "androidTranslationId": "complete_1month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "February",
+              "translation": "",
+              "translations": {
+                "zh": "二月"
+              },
+              "androidTranslationId": "complete_2month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "March",
+              "translation": "",
+              "translations": {
+                "zh": "三月"
+              },
+              "androidTranslationId": "complete_3month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "April",
+              "translation": "",
+              "translations": {
+                "zh": "4月"
+              },
+              "androidTranslationId": "complete_4month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "May",
+              "translation": "",
+              "translations": {
+                "zh": "5月"
+              },
+              "androidTranslationId": "complete_5month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "July",
+              "translation": "",
+              "translations": {
+                "zh": "7月"
+              },
+              "androidTranslationId": "complete_7month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "August",
+              "translation": "",
+              "translations": {
+                "zh": "8月"
+              },
+              "androidTranslationId": "complete_8month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "September",
+              "translation": "",
+              "translations": {
+                "zh": "9月"
+              },
+              "androidTranslationId": "complete_9month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "October",
+              "translation": "",
+              "translations": {
+                "zh": "10月"
+              },
+              "androidTranslationId": "complete_10month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "November",
+              "translation": "",
+              "translations": {
+                "zh": "11月"
+              },
+              "androidTranslationId": "complete_11month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "December",
+              "translation": "",
+              "translations": {
+                "zh": "12月"
+              },
+              "androidTranslationId": "complete_12month",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "x": 0.9116211080251425,
+          "y": 0.8981109162056403,
+          "sourceText": "\" · playback course\"",
+          "translation": "",
+          "translations": {
+            "zh": "\" · 录播课程\""
+          },
+          "androidTranslationId": "playback_course",
+          "iosTranslationId": "Mine_Page_Sport_Playback",
+          "subItems": [
+            {
+              "sourceText": "\" · Live course\"",
+              "translation": "",
+              "translations": {
+                "zh": "\" · 直播课程\""
+              },
+              "androidTranslationId": "live_course",
+              "iosTranslationId": "Mine_Page_Sport_Live"
+            },
+            {
+              "sourceText": "\" · free\"",
+              "translation": "",
+              "translations": {
+                "zh": "\" · 自由训练\""
+              },
+              "androidTranslationId": "free",
+              "iosTranslationId": "Mine_Page_Sport_Free"
+            }
+          ]
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-62::main": {
+      "pageName": "profile-tab-62",
+      "pageTitle": "我的tab-运动结果页3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-运动结果页3.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.12654611761130527,
+          "y": 0.6714590288102785,
+          "sourceText": "Cancel",
+          "translation": "",
+          "translations": {
+            "zh": "取消"
+          },
+          "androidTranslationId": "cancel_lower",
+          "iosTranslationId": "Alert_Cancel",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7742288406017322,
+          "y": 0.6671809689454933,
+          "sourceText": "Done",
+          "translation": "",
+          "translations": {
+            "zh": "完成"
+          },
+          "androidTranslationId": "done",
+          "iosTranslationId": "Alert_Done",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6575292508737274,
+          "y": 0.732502033831739,
+          "sourceText": "Restore default",
+          "translation": "",
+          "translations": {
+            "zh": "恢复默认"
+          },
+          "androidTranslationId": "restore_default",
+          "iosTranslationId": "Alert_Select_Sport_Day_Reste",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-66::main": {
+      "pageName": "profile-tab-66",
+      "pageTitle": "我的tab-运动结果页7",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-运动结果页7.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.44572430931150414,
+          "y": 0.5259074348940763,
+          "sourceText": "Heart Rate Stories",
+          "translation": "",
+          "translations": {
+            "zh": "心率故事"
+          },
+          "androidTranslationId": "reslut_heart_rate_stories",
+          "iosTranslationId": "ExerciseResult_Page_Heart_Rate_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-67::main": {
+      "pageName": "profile-tab-67",
+      "pageTitle": "我的tab-运动结果页8",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/我的tab-运动结果页8.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5205671685426108,
+          "y": 0.9490622048306572,
+          "sourceText": "Share",
+          "translation": "",
+          "translations": {
+            "zh": "分享"
+          },
+          "androidTranslationId": "result_share",
+          "iosTranslationId": "Share_View_Title_Share",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-68::main": {
+      "pageName": "profile-tab-68",
+      "pageTitle": "运动结果页分享",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/运动结果页分享.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7522997400928657,
+          "y": 0.8281608419916341,
+          "sourceText": "Share with friends",
+          "translation": "",
+          "translations": {
+            "zh": "分享给好友"
+          },
+          "androidTranslationId": "result_share_friends",
+          "iosTranslationId": "Share_View_Share_Title_Share",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.3205618666588792,
+          "y": 0.9473350425043854,
+          "sourceText": "Share",
+          "translation": "",
+          "translations": {
+            "zh": "分享"
+          },
+          "androidTranslationId": "result_share",
+          "iosTranslationId": "Share_View_Title_Share",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.15982828607306604,
+          "y": 0.7841182026717042,
+          "sourceText": "Shared from <font color=#FFFFFF>@SPAX</font>",
+          "translation": "",
+          "translations": {
+            "zh": "分享自 <font color=#FFFFFF>@SPAX</font>"
+          },
+          "androidTranslationId": "result_share_from_spax",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.3151372144670051,
+          "y": 0.7456686853509488,
+          "sourceText": "Shared by @SPAX",
+          "translation": "",
+          "translations": {
+            "zh": "由 @SPAX 分享"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "ExerciseResult_Page_Share_Brand_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    },
+    "profile-tab-69::main": {
+      "pageName": "profile-tab-69",
+      "pageTitle": "支付成功",
+      "variantId": null,
+      "imageRef": "assets/screenshots/我的tab/支付成功.jpg?v=offline-info-page-v2-20261110-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6075606757614214,
+          "y": 0.4703699291663994,
+          "sourceText": "支付成功",
+          "translation": "",
+          "translations": {
+            "zh": "支付成功"
+          },
+          "androidTranslationId": "",
+          "iosTranslationId": "global_pay_successful",
+          "subItems": []
+        }
+      ],
+      "imageItems": []
+    }
+  }
+}
