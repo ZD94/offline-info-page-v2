@@ -1571,14 +1571,12 @@
         <button id="exportAndroidTranslations" class="action-button" type="button" hidden>导出安卓翻译结果</button>
         <button id="exportIosTranslations" class="action-button" type="button" hidden>导出IOS翻译结果</button>
       </div>
-      <p class="export-hint">导出 JSON 会按页面、子项和打点编号保留文本、备注打点的原文、译文 ID 与备注，以及图片打点的安卓 / iOS 资源 ID。导入会覆盖 JSON 中包含页面的本地标注，未包含的页面保持不变。</p>
+      <p class="export-hint">导出 JSON 会按页面、子项和打点编号保留文本、备注打点的原文、译文 ID 与备注，以及图片打点的安卓 / iOS 资源 ID。</p>
       <div class="manual-annotation-footer">
-        <p id="manualAnnotationStatus" class="review-status" role="status" aria-live="polite">修改会自动暂存，切换页面前请保存当前页</p>
+        <p id="manualAnnotationStatus" class="review-status" role="status" aria-live="polite">修改会在停止输入 600ms 后自动保存</p>
         <div class="manual-annotation-footer-actions">
           <button id="checkManualAnnotations" class="action-button check" type="button">检查当前标注结果</button>
-          <button id="importManualAnnotations" class="action-button import" type="button">导入标注 JSON</button>
         </div>
-        <input id="manualAnnotationImportFile" type="file" accept=".json,application/json" hidden>
       </div>
       <section id="manualAnnotationCheckResult" class="manual-annotation-check-result" aria-labelledby="manualAnnotationCheckTitle" hidden>
         <div class="manual-annotation-check-heading">
@@ -1691,13 +1689,14 @@
       const TRANSLATION_LANGUAGE_STORAGE_KEY = 'offline-info-page-v2:translation-review-language:v1'
       const TRANSLATION_ID_SOURCE_LANGUAGE = 'en'
       const ANNOTATION_STORAGE_KEY = 'offline-info-page-v2:screenshot-annotations:v1'
+      const BUNDLED_ANNOTATION_FINGERPRINT_STORAGE_KEY = 'offline-info-page-v2:bundled-annotation-fingerprints:v1'
       const ANNOTATION_TEXT_POINT_COLOR = '#ff3b5c'
       const ANNOTATION_IMAGE_POINT_COLOR = '#007aff'
       const ANNOTATION_NOTE_POINT_COLOR = '#ff9500'
       const ANNOTATION_POINT_RADIUS = 15
+      const MANUAL_ANNOTATION_AUTO_SAVE_DELAY_MS = 600
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const BUNDLED_MANUAL_ANNOTATIONS_PATH = '标注结果/我的tab/标注-最终结果.json'
       const ASSET_VERSION = 'offline-info-page-v2-20261112-01'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
@@ -1755,8 +1754,6 @@
         resetManualAnnotation: document.querySelector('#resetCurrentManualAnnotation'),
         saveManualAnnotation: document.querySelector('#saveCurrentManualAnnotation'),
         checkManualAnnotations: document.querySelector('#checkManualAnnotations'),
-        importManualAnnotations: document.querySelector('#importManualAnnotations'),
-        manualAnnotationImportFile: document.querySelector('#manualAnnotationImportFile'),
         exportManualAnnotations: document.querySelector('#exportManualAnnotations'),
         manualAnnotationStatus: document.querySelector('#manualAnnotationStatus'),
         manualAnnotationCheckResult: document.querySelector('#manualAnnotationCheckResult'),
@@ -1817,11 +1814,15 @@
       let currentPage = Number(readStorage(screenshotTabPageStorageKey(currentScreenshotTabId), readStorage(PAGE_STORAGE_KEY, '0')))
       let currentVariantId = null
       let savedAnnotations = readSavedAnnotations()
+      let bundledManualAnnotationFingerprints = readBundledManualAnnotationFingerprints()
       let currentAnnotationKey = null
       let currentAnnotationImageRef = ''
       let currentAnnotationStrokes = []
       let currentAnnotationImageResources = emptyAnnotationImageResources()
       const unsavedManualAnnotationTargets = new Set()
+      const bundledManualAnnotationLoads = new Map()
+      const loadedBundledManualAnnotationTabs = new Set()
+      let manualAnnotationAutoSaveTimer = null
       let activeAnnotationStroke = null
       let activeAnnotationPointerId = null
       let annotationEnabled = false
@@ -1864,6 +1865,7 @@
               id: 'profile-tab',
               label: DEFAULT_SCREENSHOT_DIRECTORY,
               directory: DEFAULT_SCREENSHOT_DIRECTORY,
+              annotationFile: `标注结果/${DEFAULT_SCREENSHOT_DIRECTORY}/标注-最终结果.json`,
               pages: fallbackPages,
               reviewPages: fallbackReviewPages,
               variants: window.QUESTIONNAIRE_VARIANTS,
@@ -1878,6 +1880,7 @@
             id,
             label: String(tab?.label || directory),
             directory,
+            annotationFile: typeof tab?.annotationFile === 'string' ? tab.annotationFile.trim() : '',
             pages: pages.length > 0 ? pages : fallbackPages,
             reviewPages: tabReviewPages.length > 0
               ? tabReviewPages
@@ -2133,6 +2136,54 @@
         }
       }
 
+      function readBundledManualAnnotationFingerprints () {
+        try {
+          const payload = JSON.parse(localStorage.getItem(BUNDLED_ANNOTATION_FINGERPRINT_STORAGE_KEY) ?? '{}')
+          if (!payload || typeof payload !== 'object' || Array.isArray(payload)) return {}
+          return Object.fromEntries(Object.entries(payload).filter(([tabId, fingerprint]) => {
+            return tabId && typeof fingerprint === 'string' && fingerprint
+          }))
+        } catch {
+          return {}
+        }
+      }
+
+      function persistBundledManualAnnotationFingerprints () {
+        try {
+          localStorage.setItem(BUNDLED_ANNOTATION_FINGERPRINT_STORAGE_KEY, JSON.stringify(bundledManualAnnotationFingerprints))
+          return true
+        } catch {
+          return false
+        }
+      }
+
+      function manualAnnotationSourceFingerprint (source) {
+        let hash = 2166136261
+        for (let index = 0; index < source.length; index += 1) {
+          hash ^= source.charCodeAt(index)
+          hash = Math.imul(hash, 16777619)
+        }
+        return `${source.length}:${(hash >>> 0).toString(16).padStart(8, '0')}`
+      }
+
+      function savedAnnotationsContainScreenshotTab (tab) {
+        const pageNames = new Set(cloneScreenshotPages(tab?.pages).map(page => page.name))
+        return Object.keys(savedAnnotations.targets).some(targetKey => {
+          const separatorIndex = targetKey.indexOf('::')
+          const pageName = separatorIndex >= 0 ? targetKey.slice(0, separatorIndex) : targetKey
+          return pageNames.has(pageName)
+        })
+      }
+
+      function rememberBundledManualAnnotationFingerprint (tabId, fingerprint) {
+        const previousFingerprint = bundledManualAnnotationFingerprints[tabId]
+        bundledManualAnnotationFingerprints[tabId] = fingerprint
+        if (persistBundledManualAnnotationFingerprints()) return true
+        if (previousFingerprint) bundledManualAnnotationFingerprints[tabId] = previousFingerprint
+        else delete bundledManualAnnotationFingerprints[tabId]
+        return false
+      }
+
       function annotationTargetKey (pageIndex = currentPage, variantIdentifier = currentVariantId) {
         const page = baselinePages[pageIndex]
         const pageId = page?.name ?? `page-${pageIndex + 1}`
@@ -2366,10 +2417,7 @@
         currentAnnotationStrokes.push(marker)
         markCurrentManualAnnotationsDirty()
         renderAnnotations()
-        const saved = saveCurrentAnnotations({ automatic: true })
-        setAnnotationStatus(saved
-          ? `已添加${markerLabel}编号 ${markerNumber}，修改已暂存，请点击右侧“保存当前页”确认`
-          : `已添加${markerLabel}编号 ${markerNumber}，但浏览器存储不可用`)
+        setAnnotationStatus(`已添加${markerLabel}编号 ${markerNumber}，将在 600ms 内自动保存`)
         refreshManualAnnotationReview()
         refreshTranslationImageResources()
       }
@@ -2759,6 +2807,7 @@
         elements.screenshotTabSelect.value = currentScreenshotTabId
         renderScreenshotThumbnails()
         renderPage()
+        loadBundledManualAnnotations(tab)
       }
 
       function selectScreenshotTab (tabId) {
@@ -2926,6 +2975,7 @@
         const variants = variantsForPage(currentPage)
         const exists = id === null || variants.some((variant, index) => variantId(variant, index) === id)
         if (!exists || id === currentVariantId) return
+        if (!flushManualAnnotationAutoSave()) return
 
         currentVariantId = id
         syncVariantButtons()
@@ -3595,13 +3645,6 @@
         if (!['sourceText', 'androidTranslationId', 'iosTranslationId', 'note'].includes(field)) return
         annotationPointReview(stroke)[field] = value
         markCurrentManualAnnotationsDirty()
-        const persisted = saveCurrentAnnotations({ silent: true })
-        const message = persisted
-          ? `编号 ${stroke.number} 的修改已暂存，请点击“保存当前页”确认`
-          : '浏览器存储不可用，人工标注仅在本次打开期间有效'
-        setAnnotationStatus(message)
-        elements.manualAnnotationStatus.textContent = message
-        updateManualAnnotationActionState()
       }
 
       function updateManualAnnotationTranslation (stroke, language, value) {
@@ -3610,13 +3653,6 @@
         if (value) translations[language] = value
         else delete translations[language]
         markCurrentManualAnnotationsDirty()
-        const persisted = saveCurrentAnnotations({ silent: true })
-        const message = persisted
-          ? `编号 ${stroke.number} 的${languageLabels[language]}译文已暂存，请点击“保存当前页”确认`
-          : '浏览器存储不可用，译文仅在本次打开期间有效'
-        setAnnotationStatus(message)
-        elements.manualAnnotationStatus.textContent = message
-        updateManualAnnotationActionState()
       }
 
       function updateManualAnnotationSubItemField (stroke, subItemIndex, field, value) {
@@ -3625,13 +3661,6 @@
         if (!subItem) return
         subItem[field] = value
         markCurrentManualAnnotationsDirty()
-        const persisted = saveCurrentAnnotations({ silent: true })
-        const message = persisted
-          ? `编号 ${stroke.number} 的子项 ${subItemIndex + 1} 已暂存，请点击“保存当前页”确认`
-          : '浏览器存储不可用，子项修改仅在本次打开期间有效'
-        setAnnotationStatus(message)
-        elements.manualAnnotationStatus.textContent = message
-        updateManualAnnotationActionState()
       }
 
       function updateManualAnnotationSubItemTranslation (stroke, subItemIndex, language, value) {
@@ -3641,24 +3670,14 @@
         if (value) subItem.translations[language] = value
         else delete subItem.translations[language]
         markCurrentManualAnnotationsDirty()
-        const persisted = saveCurrentAnnotations({ silent: true })
-        const message = persisted
-          ? `编号 ${stroke.number} 的子项 ${subItemIndex + 1} ${languageLabels[language]}译文已暂存，请点击“保存当前页”确认`
-          : '浏览器存储不可用，子项译文仅在本次打开期间有效'
-        setAnnotationStatus(message)
-        elements.manualAnnotationStatus.textContent = message
-        updateManualAnnotationActionState()
       }
 
       function addManualAnnotationSubItem (stroke) {
         const review = annotationPointReview(stroke)
         review.subItems.push(emptyManualAnnotationSubItem(stroke.type === 'note-point'))
         markCurrentManualAnnotationsDirty()
-        const persisted = saveCurrentAnnotations({ silent: true })
         renderChineseTexts(currentPage)
-        const message = persisted
-          ? `已为编号 ${stroke.number} 新增子项，修改已暂存，请点击“保存当前页”确认`
-          : '已新增子项，但浏览器存储不可用'
+        const message = `已为编号 ${stroke.number} 新增子项，将在 600ms 内自动保存`
         setAnnotationStatus(message)
         elements.manualAnnotationStatus.textContent = message
       }
@@ -3668,11 +3687,8 @@
         if (!review.subItems[subItemIndex]) return
         review.subItems.splice(subItemIndex, 1)
         markCurrentManualAnnotationsDirty()
-        const persisted = saveCurrentAnnotations({ silent: true })
         renderChineseTexts(currentPage)
-        const message = persisted
-          ? `已删除编号 ${stroke.number} 的子项 ${subItemIndex + 1}，修改已暂存，请点击“保存当前页”确认`
-          : '已删除子项，但浏览器存储不可用'
+        const message = `已删除编号 ${stroke.number} 的子项 ${subItemIndex + 1}，将在 600ms 内自动保存`
         setAnnotationStatus(message)
         elements.manualAnnotationStatus.textContent = message
       }
@@ -3681,13 +3697,6 @@
         if (!['androidResourceId', 'iosResourceId'].includes(field)) return
         annotationImagePointResources(stroke)[field] = value
         markCurrentManualAnnotationsDirty()
-        const persisted = saveCurrentAnnotations({ silent: true })
-        const message = persisted
-          ? `图片编号 ${stroke.number} 的修改已暂存，请点击“保存当前页”确认`
-          : '浏览器存储不可用，图片资源信息仅在本次打开期间有效'
-        setAnnotationStatus(message)
-        elements.manualAnnotationStatus.textContent = message
-        updateManualAnnotationActionState()
       }
 
       function createManualAnnotationDeleteButton (stroke, markerLabel) {
@@ -3716,12 +3725,9 @@
         markCurrentManualAnnotationsDirty()
         renderAnnotations()
         updateAnnotationControls()
-        const persisted = saveCurrentAnnotations({ silent: true })
         refreshManualAnnotationReview()
         refreshTranslationImageResources()
-        const message = persisted
-          ? `已删除${markerLabel} ${markerNumber}，修改已暂存，请点击“保存当前页”确认`
-          : `已删除${markerLabel} ${markerNumber}，但浏览器存储不可用`
+        const message = `已删除${markerLabel} ${markerNumber}，将在 600ms 内自动保存`
         setAnnotationStatus(message)
         elements.manualAnnotationStatus.textContent = message
       }
@@ -3740,10 +3746,6 @@
           .some(field => resources[field].trim())
       }
 
-      function currentManualAnnotationHasMarkers () {
-        return numberedPointStrokes().length > 0 || imagePointStrokes().length > 0 || notePointStrokes().length > 0
-      }
-
       function annotationTargetHasMarkers (targetKey) {
         const strokes = targetKey === currentAnnotationKey
           ? currentAnnotationStrokes
@@ -3752,20 +3754,37 @@
           notePointStrokes(strokes).length > 0
       }
 
-      function unsavedTargetsForCurrentScreenshotTab () {
-        const pageNameSet = new Set(baselinePages.map(page => page.name))
-        return Array.from(unsavedManualAnnotationTargets).filter(targetKey => {
-          const [pageName] = targetKey.split('::')
-          return pageNameSet.has(pageName) && annotationTargetHasMarkers(targetKey)
-        })
+      function clearManualAnnotationAutoSaveTimer () {
+        if (manualAnnotationAutoSaveTimer === null) return
+        window.clearTimeout(manualAnnotationAutoSaveTimer)
+        manualAnnotationAutoSaveTimer = null
+      }
+
+      function scheduleManualAnnotationAutoSave () {
+        clearManualAnnotationAutoSaveTimer()
+        manualAnnotationAutoSaveTimer = window.setTimeout(function () {
+          manualAnnotationAutoSaveTimer = null
+          if (currentAnnotationKey && unsavedManualAnnotationTargets.has(currentAnnotationKey)) {
+            saveCurrentManualAnnotations({ automatic: true, validate: false })
+          }
+        }, MANUAL_ANNOTATION_AUTO_SAVE_DELAY_MS)
+      }
+
+      function flushManualAnnotationAutoSave () {
+        clearManualAnnotationAutoSaveTimer()
+        if (!currentAnnotationKey || !unsavedManualAnnotationTargets.has(currentAnnotationKey)) return true
+        return saveCurrentManualAnnotations({ automatic: true, validate: false })
       }
 
       function markCurrentManualAnnotationsDirty () {
         if (!currentAnnotationKey) return
         unsavedManualAnnotationTargets.add(currentAnnotationKey)
         elements.manualAnnotationCheckResult.hidden = true
-        elements.manualAnnotationStatus.textContent = '当前页有未保存的人工标注，请点击“保存当前页”'
+        const message = '当前页有修改，正在自动保存…'
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
         updateManualAnnotationActionState()
+        scheduleManualAnnotationAutoSave()
       }
 
       function markCurrentManualAnnotationsSaved () {
@@ -3797,24 +3816,11 @@
 
       function canNavigateFromCurrentPage () {
         if (!canProceedWithManualAnnotations('切换页面')) return false
-        if (!currentManualAnnotationHasMarkers() || !unsavedManualAnnotationTargets.has(currentAnnotationKey)) return true
-        const message = '当前页有未保存的人工标注，请先点击右侧“保存当前页”，再切换页面。'
-        setAnnotationStatus(message)
-        elements.manualAnnotationStatus.textContent = message
-        window.alert(message)
-        elements.saveManualAnnotation.focus()
-        return false
+        return flushManualAnnotationAutoSave()
       }
 
       function canSwitchFromCurrentScreenshotTab () {
-        const unsavedTargets = unsavedTargetsForCurrentScreenshotTab()
-        if (unsavedTargets.length === 0) return true
-        const message = `当前截图 Tab“${currentScreenshotTab.label}”有 ${unsavedTargets.length} 个页面存在未保存的人工标注，请先逐页点击右侧“保存当前页”，再切换截图 Tab。`
-        setAnnotationStatus(message)
-        elements.manualAnnotationStatus.textContent = message
-        window.alert(message)
-        if (unsavedManualAnnotationTargets.has(currentAnnotationKey)) elements.saveManualAnnotation.focus()
-        return false
+        return flushManualAnnotationAutoSave()
       }
 
       function updateManualAnnotationActionState (markers = numberedPointStrokes(), imageMarkers = imagePointStrokes(), noteMarkers = notePointStrokes()) {
@@ -3833,6 +3839,7 @@
       }
 
       function resetCurrentManualAnnotations () {
+        clearManualAnnotationAutoSaveTimer()
         elements.manualAnnotationCheckResult.hidden = true
         const markers = numberedPointStrokes()
         const imageMarkers = imagePointStrokes()
@@ -3861,17 +3868,23 @@
           : '当前页已重置，但浏览器存储不可用'
       }
 
-      function saveCurrentManualAnnotations () {
-        if (!canProceedWithManualAnnotations('保存当前页')) return
+      function saveCurrentManualAnnotations (options) {
+        const automatic = options?.automatic === true
+        const validate = options?.validate !== false
+        clearManualAnnotationAutoSaveTimer()
+        if (validate && !canProceedWithManualAnnotations('保存当前页')) return false
         const markers = numberedPointStrokes()
         const imageMarkers = imagePointStrokes()
         const noteMarkers = notePointStrokes()
         const persisted = saveCurrentAnnotations({ silent: true })
         if (persisted) markCurrentManualAnnotationsSaved()
-        elements.manualAnnotationStatus.textContent = persisted
-          ? `当前页 ${markers.length} 个文本打点、${imageMarkers.length} 个图片打点和 ${noteMarkers.length} 个备注打点已保存`
+        const message = persisted
+          ? `当前页 ${markers.length} 个文本打点、${imageMarkers.length} 个图片打点和 ${noteMarkers.length} 个备注打点${automatic ? '已自动保存到本浏览器' : '已保存'}`
           : '保存失败：浏览器存储不可用'
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
         updateManualAnnotationActionState(markers, imageMarkers, noteMarkers)
+        return persisted
       }
 
       function manualAnnotationCheckTargetDetails (targetKey) {
@@ -4019,7 +4032,7 @@
       }
 
       function checkManualAnnotationResults () {
-        saveCurrentAnnotations({ silent: true })
+        flushManualAnnotationAutoSave()
         renderManualAnnotationCheckReport(createManualAnnotationCheckReport())
       }
 
@@ -4188,7 +4201,7 @@
         return marker
       }
 
-      function normalizeManualAnnotationImport (payload) {
+      function normalizeManualAnnotationImport (payload, tab = currentScreenshotTab) {
         if (!payload || typeof payload !== 'object' || Array.isArray(payload)) {
           throw new Error('文件根节点必须是 JSON 对象')
         }
@@ -4198,6 +4211,15 @@
         if (!payload.targets || typeof payload.targets !== 'object' || Array.isArray(payload.targets)) {
           throw new Error('targets 必须是页面标注对象')
         }
+        const importPages = cloneScreenshotPages(tab?.pages)
+        const importVariants = tab?.variants && typeof tab.variants === 'object' ? tab.variants : {}
+        const declaredDirectory = typeof payload.metadata?.screenshotFolderName === 'string'
+          ? payload.metadata.screenshotFolderName.trim()
+          : ''
+        if (declaredDirectory && declaredDirectory !== tab?.directory) {
+          throw new Error(`标注 JSON 属于“${declaredDirectory}”，不能用于“${tab?.label || tab?.directory || '当前'}”`)
+        }
+        if (importPages.length === 0) throw new Error('当前截图 Tab 没有可匹配的页面')
         const entries = Object.entries(payload.targets)
         if (entries.length === 0) throw new Error('JSON 中没有可导入的页面标注')
         const importLanguage = manualAnnotationImportLanguage(payload.metadata)
@@ -4214,7 +4236,7 @@
           const keyParts = targetKey.split('::')
           if (keyParts.length !== 2) throw new Error(`无法识别页面标识 ${targetKey}`)
           const [pageName, state] = keyParts
-          const pageIndex = baselinePages.findIndex(page => page.name === pageName)
+          const pageIndex = importPages.findIndex(page => page.name === pageName)
           if (pageIndex < 0) throw new Error(`当前 V2 页面中不存在 ${pageName}`)
           if (target.pageName !== undefined && target.pageName !== pageName) {
             throw new Error(`${targetKey} 的 pageName 与页面标识不一致`)
@@ -4226,7 +4248,8 @@
               throw new Error(`无法识别页面状态 ${targetKey}`)
             }
             importedVariantId = state.slice('variant:'.length)
-            const knownVariant = variantsForPage(pageIndex)
+            const variants = Array.isArray(importVariants[pageName]) ? importVariants[pageName] : []
+            const knownVariant = variants
               .some((variant, index) => variantId(variant, index) === importedVariantId)
             if (!knownVariant) throw new Error(`${pageName} 中不存在子项 ${importedVariantId}`)
           }
@@ -4274,9 +4297,14 @@
         return { targets, targetCount: entries.length, pointCount, subItemCount, imagePointCount, notePointCount }
       }
 
-      function applyManualAnnotationImport (imported) {
+      function applyManualAnnotationImport (imported, { replacePageNames = [] } = {}) {
         const previousAnnotations = savedAnnotations
-        const nextTargets = { ...savedAnnotations.targets }
+        const replacementPages = new Set(replacePageNames)
+        const nextTargets = Object.fromEntries(Object.entries(savedAnnotations.targets).filter(([targetKey]) => {
+          const separatorIndex = targetKey.indexOf('::')
+          const pageName = separatorIndex >= 0 ? targetKey.slice(0, separatorIndex) : targetKey
+          return !replacementPages.has(pageName)
+        }))
         const importedAt = new Date().toISOString()
         Object.entries(imported.targets).forEach(([targetKey, target]) => {
           if (target.strokes.length === 0) {
@@ -4326,47 +4354,52 @@
         return true
       }
 
-      async function loadBundledManualAnnotations () {
-        try {
-          const sourceUrl = new URL(BUNDLED_MANUAL_ANNOTATIONS_PATH, document.baseURI)
-          sourceUrl.searchParams.set('cacheBust', String(Date.now()))
-          const response = await fetch(sourceUrl, { cache: 'no-store' })
-          if (!response.ok) throw new Error(`HTTP ${response.status}`)
-          applyManualAnnotationImport(normalizeManualAnnotationImport(await response.json()))
-        } catch (error) {
-          const detail = typeof error?.message === 'string' ? error.message : '文件内容无效'
-          const message = `内置中文标注加载失败：${detail}`
-          setAnnotationStatus(message)
-          elements.manualAnnotationStatus.textContent = message
-        }
-      }
+      async function loadBundledManualAnnotations (tab = currentScreenshotTab) {
+        const tabId = String(tab?.id || '')
+        const sourcePath = typeof tab?.annotationFile === 'string' ? tab.annotationFile.trim() : ''
+        if (!tabId || !sourcePath || loadedBundledManualAnnotationTabs.has(tabId)) return false
+        if (bundledManualAnnotationLoads.has(tabId)) return bundledManualAnnotationLoads.get(tabId)
 
-      function openManualAnnotationImport () {
-        elements.manualAnnotationImportFile.value = ''
-        elements.manualAnnotationImportFile.click()
-      }
-
-      async function importManualAnnotationsFromFile (event) {
-        const input = event.currentTarget
-        const file = input.files?.[0]
-        if (!file) return
-        try {
-          const payload = JSON.parse(await file.text())
-          const imported = normalizeManualAnnotationImport(payload)
-          const confirmed = window.confirm(`将导入 ${imported.targetCount} 个页面的标注，并覆盖这些页面当前保存的内容。未包含的页面会保留。是否继续？`)
-          if (!confirmed) {
-            elements.manualAnnotationStatus.textContent = '已取消导入，现有标注未改变'
-            return
+        const load = (async function () {
+          try {
+            const sourceUrl = new URL(sourcePath, document.baseURI)
+            sourceUrl.searchParams.set('cacheBust', String(Date.now()))
+            const response = await fetch(sourceUrl, { cache: 'no-store' })
+            if (!response.ok) throw new Error(`HTTP ${response.status}`)
+            const source = await response.text()
+            const fingerprint = manualAnnotationSourceFingerprint(source)
+            const imported = normalizeManualAnnotationImport(JSON.parse(source), tab)
+            if (currentScreenshotTab.id !== tabId) return false
+            if (bundledManualAnnotationFingerprints[tabId] === fingerprint) {
+              loadedBundledManualAnnotationTabs.add(tabId)
+              return true
+            }
+            if (!bundledManualAnnotationFingerprints[tabId] && savedAnnotationsContainScreenshotTab(tab)) {
+              rememberBundledManualAnnotationFingerprint(tabId, fingerprint)
+              loadedBundledManualAnnotationTabs.add(tabId)
+              return true
+            }
+            const applied = applyManualAnnotationImport(imported, {
+              replacePageNames: cloneScreenshotPages(tab.pages).map(page => page.name)
+            })
+            if (applied) {
+              rememberBundledManualAnnotationFingerprint(tabId, fingerprint)
+              loadedBundledManualAnnotationTabs.add(tabId)
+            }
+            return applied
+          } catch (error) {
+            if (currentScreenshotTab.id !== tabId) return false
+            const detail = typeof error?.message === 'string' ? error.message : '文件内容无效'
+            const message = `${tab.label}内置标注加载失败：${detail}`
+            setAnnotationStatus(message)
+            elements.manualAnnotationStatus.textContent = message
+            return false
+          } finally {
+            bundledManualAnnotationLoads.delete(tabId)
           }
-          applyManualAnnotationImport(imported)
-        } catch (error) {
-          const detail = typeof error?.message === 'string' ? error.message : '文件内容无效'
-          const message = `导入失败：${detail}`
-          setAnnotationStatus(message)
-          elements.manualAnnotationStatus.textContent = message
-        } finally {
-          input.value = ''
-        }
+        })()
+        bundledManualAnnotationLoads.set(tabId, load)
+        return load
       }
 
       function manualAnnotationExportLanguageMetadata (language = currentLanguage) {
@@ -4379,7 +4412,7 @@
       }
 
       function exportManualAnnotations () {
-        saveCurrentAnnotations({ silent: true })
+        flushManualAnnotationAutoSave()
         const exportedAt = new Date()
         const exported = createManualAnnotationExport()
         const payload = {
@@ -5135,6 +5168,7 @@
           elements.translationReviewStatus.textContent = `多语言译文核对需选择目标语言，已保留${languageLabels[currentLanguage]}`
           return
         }
+        if (!flushManualAnnotationAutoSave()) return
         currentLanguage = language
         if (currentLanguage === 'zh') setAnnotationEnabled(false)
         elements.manualAnnotationCheckResult.hidden = true
@@ -5174,6 +5208,7 @@
 
       function selectReviewMode (mode, shouldRender = true) {
         if (!['baseline', 'translation'].includes(mode)) return
+        if (!flushManualAnnotationAutoSave()) return
         currentReviewMode = mode
         writeStorage(REVIEW_MODE_STORAGE_KEY, currentReviewMode)
         if (currentReviewMode === 'translation' && currentLanguage === 'zh') {
@@ -5252,8 +5287,6 @@
       elements.saveManualAnnotation.addEventListener('click', saveCurrentManualAnnotations)
       elements.checkManualAnnotations.addEventListener('click', checkManualAnnotationResults)
       elements.closeManualAnnotationCheck.addEventListener('click', closeManualAnnotationCheckResult)
-      elements.importManualAnnotations.addEventListener('click', openManualAnnotationImport)
-      elements.manualAnnotationImportFile.addEventListener('change', importManualAnnotationsFromFile)
       elements.exportManualAnnotations.addEventListener('click', exportManualAnnotations)
       elements.annotationCanvas.addEventListener('pointerdown', beginAnnotationStroke)
       elements.annotationCanvas.addEventListener('pointermove', continueAnnotationStroke)
@@ -5277,7 +5310,7 @@
       } else {
         window.addEventListener('resize', syncAnnotationCanvas)
       }
-      window.addEventListener('pagehide', function () { saveCurrentAnnotations({ silent: true }) })
+      window.addEventListener('pagehide', flushManualAnnotationAutoSave)
 
       renderLanguage()
       selectReviewMode(currentReviewMode, false)
@@ -5285,7 +5318,7 @@
       renderScreenshotTabSelector()
       renderScreenshotThumbnails()
       renderPage()
-      loadBundledManualAnnotations()
+      loadBundledManualAnnotations(currentScreenshotTab)
     })()
   </script>
 </body>
