@@ -122,10 +122,10 @@
       justify-content: center;
       align-items: start;
       gap: clamp(22px, 2vw, 30px);
-      width: min(1318px, calc(100% - 230px));
+      width: min(1318px, calc(100% - 32px));
       min-height: calc(100vh - 100px);
-      margin: 18px 16px 32px auto;
-      padding-left: 0;
+      margin: 18px auto 32px;
+      padding-left: 88px;
     }
 
     .screenshot-panel {
@@ -1207,29 +1207,20 @@
       margin-top: 0;
     }
 
-    .manual-annotation-check-launcher {
-      position: fixed;
-      z-index: 8;
-      top: calc(var(--page-header-height) + 18px);
-      left: 16px;
-    }
-
-    .manual-annotation-check-launcher .action-button.check {
+    .manual-annotation-check-action {
+      position: absolute;
+      top: 0;
+      left: 0;
       min-width: 178px;
       padding-inline: 18px;
       color: #0b57c7;
       border-color: #9cbcf0;
       background: #f7faff;
-      box-shadow: 0 10px 28px rgba(30, 42, 65, .1);
     }
 
-    .manual-annotation-check-launcher .action-button.check:hover:not(:disabled) {
+    .manual-annotation-check-action:hover:not(:disabled) {
       border-color: #5f91df;
       background: #edf4ff;
-    }
-
-    body:has(#manualAnnotationCheckResult:not([hidden])) .manual-annotation-check-launcher {
-      display: none;
     }
 
     .manual-annotation-check-result {
@@ -1303,6 +1294,11 @@
       margin-left: calc(var(--check-result-width) + 28px);
     }
 
+    body:has(#manualAnnotationCheckResult:not([hidden])) .manual-annotation-check-action {
+      min-width: 148px;
+      padding-inline: 8px;
+    }
+
     .manual-annotation-check-group {
       padding: 9px 11px;
       border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
@@ -1368,9 +1364,7 @@
     @media (max-width: 1260px) {
       .workspace {
         grid-template-columns: minmax(340px, 400px) minmax(0, 1fr);
-        width: calc(100% - 230px);
-        margin-right: 16px;
-        margin-left: auto;
+        width: calc(100% - 24px);
         gap: 20px;
       }
     }
@@ -1383,13 +1377,6 @@
     }
 
     @media (max-width: 1180px) {
-      .manual-annotation-check-launcher {
-        z-index: 19;
-        top: auto;
-        bottom: 12px;
-        left: 12px;
-      }
-
       .manual-annotation-check-result {
         z-index: 20;
         top: auto;
@@ -1408,11 +1395,6 @@
         padding-left: 0;
       }
 
-      .workspace {
-        width: min(100% - 24px, 760px);
-        margin: 18px auto 32px;
-        padding-left: 0;
-      }
     }
 
     @media (max-width: 700px) {
@@ -1477,10 +1459,6 @@
     </div>
   </header>
 
-  <div class="manual-annotation-check-launcher">
-    <button id="checkManualAnnotations" class="action-button check" type="button">检查当前标注结果</button>
-  </div>
-
   <section id="manualAnnotationCheckResult" class="manual-annotation-check-result" aria-labelledby="manualAnnotationCheckTitle" hidden>
     <div class="manual-annotation-check-heading">
       <strong id="manualAnnotationCheckTitle" class="manual-annotation-check-title">当前标注检查结果</strong>
@@ -1538,6 +1516,7 @@
 
     <section id="pageContent" class="content-area" aria-labelledby="chineseTextTitle">
       <div class="baseline-heading">
+        <button id="checkManualAnnotations" class="action-button check manual-annotation-check-action" type="button">检查当前标注结果</button>
         <h2 class="baseline-title">人工标注</h2>
         <span class="readonly-badge editable-badge">自动保存</span>
       </div>
@@ -1673,7 +1652,7 @@
       const MANUAL_ANNOTATION_AUTO_SAVE_DELAY_MS = 600
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261113-08'
+      const ASSET_VERSION = 'offline-info-page-v2-20261113-09'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
       let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
