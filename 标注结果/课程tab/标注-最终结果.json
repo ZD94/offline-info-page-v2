@@ -1,0 +1,752 @@
+{
+  "metadata": {
+    "schemaVersion": 2,
+    "screenshotFolderName": "课程tab",
+    "sourceLocale": "en",
+    "sourceLanguage": "英文",
+    "targetLocale": "en",
+    "targetLanguage": "英文",
+    "exportedAt": "2026-11-13T11:03:25.403Z",
+    "targetCount": 14,
+    "pointCount": 33,
+    "subItemCount": 15,
+    "imagePointCount": 0,
+    "notePointCount": 9
+  },
+  "targets": {
+    "course-tab-03::main": {
+      "pageName": "course-tab-03",
+      "pageTitle": "课程tab3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程tab3.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.2940997936141799,
+          "y": 0.08168875797741777,
+          "sourceText": "Course",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "home_tab_course",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.871008862449921,
+          "y": 0.10323304579563784,
+          "sourceText": "View all",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "view_all",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "course-tab-04::main": {
+      "pageName": "course-tab-04",
+      "pageTitle": "课程tab教练1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程tab教练1.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.2261138764113148,
+          "y": 0.1831264464548706,
+          "sourceText": "Filter",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "filter",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "course-tab-08::main": {
+      "pageName": "course-tab-08",
+      "pageTitle": "课程tab运营3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程tab运营3.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6767633847274493,
+          "y": 0.8815204432288379,
+          "sourceText": "No relevant content available at the moment",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "no_content",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.45338108534660676,
+          "y": 0.6247843467283821,
+          "sourceText": "The network connection is not available, please check the network settings",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "network_error",
+          "iosTranslationId": "",
+          "note": "API请求失败toast",
+          "subItems": []
+        }
+      ]
+    },
+    "course-tab-05::main": {
+      "pageName": "course-tab-05",
+      "pageTitle": "课程tab教练2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程tab教练2.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6728784751729999,
+          "y": 0.8079107931832527,
+          "sourceText": "No more data",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "load_end",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "course-tab-25::main": {
+      "pageName": "course-tab-25",
+      "pageTitle": "课程-全部课程4",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程-全部课程4.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.46115090445550566,
+          "y": 0.5062907637281717,
+          "sourceText": "Scroll to top",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "scroll_to_top",
+          "iosTranslationId": "",
+          "note": "滑动到最底部了，可以快速到滑动回顶部",
+          "subItems": []
+        }
+      ]
+    },
+    "course-tab-12::main": {
+      "pageName": "course-tab-12",
+      "pageTitle": "课程-课程详情1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程-课程详情1.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.4028772611387641,
+          "y": 0.6086261308647171,
+          "sourceText": "minutes",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "minutes",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.6515114726235279,
+          "y": 0.6687706010239147,
+          "sourceText": "kcal",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "kcal_lowercase",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.8185625834648537,
+          "y": 0.6669752437057297,
+          "sourceText": "km",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "km",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.4902877261138764,
+          "y": 0.8127778946630199,
+          "sourceText": "Course introduction",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "course_introduction",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.24553842418356198,
+          "y": 0.9219159828880006,
+          "sourceText": "Get Started",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "course_start",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Appointment successful",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "appointment_successful",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Make an appointment immediately",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "appointment_immediately",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "x": 0.4436688114604832,
+          "y": 0.6768497089557473,
+          "sourceText": "Fitness equipment",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "fitness_equipment",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.562158552871191,
+          "y": 0.5574584472964443,
+          "sourceText": "Network connection not available, please check network settings",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "network_not_available",
+          "iosTranslationId": "",
+          "note": "网络不可用的时候的toast",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.2707903362874833,
+          "y": 0.7881618626832176,
+          "sourceText": "Special features of this course",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "special_features_of_this_course",
+          "iosTranslationId": "",
+          "note": "介绍课程特点的标题",
+          "subItems": [
+            {
+              "sourceText": "Suitable population",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "suitable_population",
+              "iosTranslationId": "",
+              "note": "适合人群的标题"
+            },
+            {
+              "sourceText": "Areas of exercise",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "areas_of_exercise",
+              "iosTranslationId": "",
+              "note": "锻炼部位的标题"
+            },
+            {
+              "sourceText": "Course schedule",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "course_schedule",
+              "iosTranslationId": "",
+              "note": "课程安排的标题"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "x": 0.6670511108413257,
+          "y": 0.8456132968651378,
+          "sourceText": "Content",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "content",
+          "iosTranslationId": "",
+          "note": "课程安排的阶段表格标题",
+          "subItems": [
+            {
+              "sourceText": "Duration",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "sport_unit_duration",
+              "iosTranslationId": "",
+              "note": "课程安排的阶段表格持续时间标题"
+            },
+            {
+              "sourceText": "Speed",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "speed",
+              "iosTranslationId": "",
+              "note": "课程安排的阶段表格持续速度标题"
+            },
+            {
+              "sourceText": "Resistance",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "resistance",
+              "iosTranslationId": "",
+              "note": "课程安排的阶段表格持续阻力标题"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "x": 0.7797134879203593,
+          "y": 0.7702082895013675,
+          "sourceText": "More",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "more_first_up",
+          "iosTranslationId": "",
+          "note": "营销位，更多设备型号",
+          "subItems": []
+        }
+      ]
+    },
+    "course-tab-14::main": {
+      "pageName": "course-tab-14",
+      "pageTitle": "课程-课程中2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程-课程中2.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5685279187817259,
+          "y": 0.3352072783452064,
+          "sourceText": "Notice",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "alert_notice",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.618020304568528,
+          "y": 0.4423225474208222,
+          "sourceText": "Do you want to exit?",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "alert_sure_exit",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Workouts under 2 minutes won’t be saved. End now?",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "exit_alert_less_than_2_mins",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "x": 0.41243654822335024,
+          "y": 0.679684147283495,
+          "sourceText": "Exit",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "exit_alert_end",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.5951776649746193,
+          "y": 0.7032443567075788,
+          "sourceText": "Continue",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "exit_alert_continue",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "course-tab-13::main": {
+      "pageName": "course-tab-13",
+      "pageTitle": "课程-课程中1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程-课程中1.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5190355329949239,
+          "y": 0.123723285554888,
+          "sourceText": "Why did you quit the course?",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "why_quit_the_course",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.5951776649746193,
+          "y": 0.35168655051068576,
+          "sourceText": "Too intense",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "too_intense",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.399746192893401,
+          "y": 0.4505621835035619,
+          "sourceText": "Too easy for me.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "too_easy_for_me",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.6091370558375635,
+          "y": 0.5423568792378337,
+          "sourceText": "Just browsing for now.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "just_browsing",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.3883248730964467,
+          "y": 0.6384859668697965,
+          "sourceText": "Don\\'t like the coach.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "don_t_like_coach",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.5989847715736041,
+          "y": 0.7389494463994507,
+          "sourceText": "Not interested.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "not_interested",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "x": 0.43274111675126903,
+          "y": 0.8378250793923269,
+          "sourceText": "Cancel",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "cancel_lower",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "course-tab-15::main": {
+      "pageName": "course-tab-15",
+      "pageTitle": "课程-课程中3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程-课程中3.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.9238578680203046,
+          "y": 0.7875145507896318,
+          "sourceText": "Congratulations on completing session %1$s of your training program.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "finish_course_format",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Today\\'s plan has been completed in full!",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "today_completed_all",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.39908725048455557,
+          "y": 0.6394349287812219,
+          "sourceText": "Valuable member users, you can watch this paid course in its entirety",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "vip_watch_full_paid_course",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "watch_complte_by_trail_card",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "You can watch the complete video by using an experience card",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Paid courses offer a 2-minute trial, and you can watch the complete course by purchasing it",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "offer_a_2_minute_trial",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Using a trial card",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "using_a_trial_card",
+              "iosTranslationId": ""
+            }
+          ]
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "course-tab-17::main": {
+      "pageName": "course-tab-17",
+      "pageTitle": "课程-课程中5",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程-课程中5.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6181541755189439,
+          "y": 0.5055389870989885,
+          "sourceText": "Finish",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "session_finish",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.3504056771981458,
+          "y": 0.5768769174358879,
+          "sourceText": "This session is over. See you next time!",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "session_over",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "course-tab-21::main": {
+      "pageName": "course-tab-21",
+      "pageTitle": "课程连接蓝牙",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程连接蓝牙.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5725152295793952,
+          "y": 0.17409632930939145,
+          "sourceText": "The Bluetooth device has been activated, and data connection synchronization is in progress",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "bluetooth_open_data_sync",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.6952332687414029,
+          "y": 0.7951786369833455,
+          "sourceText": "Cadence",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "sport_unit_bike_cadence",
+          "iosTranslationId": "",
+          "note": "单车踏频",
+          "subItems": [
+            {
+              "sourceText": "Cadence",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "sport_unit_cross_trainer_cadence",
+              "iosTranslationId": "",
+              "note": "椭圆机踏频"
+            },
+            {
+              "sourceText": "Cadence",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "sport_unit_rowing_cadence",
+              "iosTranslationId": "",
+              "note": "划船机桨率"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.7895537879673613,
+          "y": 0.7842054525186997,
+          "sourceText": "Speed (km/h)",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "sport_unit_speed_km_hour",
+          "iosTranslationId": "",
+          "note": "速度单位",
+          "subItems": []
+        }
+      ]
+    },
+    "course-tab-18::main": {
+      "pageName": "course-tab-18",
+      "pageTitle": "课程-课程中6",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程-课程中6.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.4893509590404419,
+          "y": 0.5340742262202364,
+          "sourceText": "Loading, will play soon",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "loading_will_play_soon",
+          "iosTranslationId": "",
+          "note": "播放卡顿的时候，视频缓冲提示",
+          "subItems": []
+        }
+      ]
+    },
+    "course-tab-36::main": {
+      "pageName": "course-tab-36",
+      "pageTitle": "课程-全部课程15",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程-全部课程15.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.4730382378159315,
+          "y": 0.18635829671850757,
+          "sourceText": "Scroll to top",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "scroll_to_top",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "course-tab-55::main": {
+      "pageName": "course-tab-55",
+      "pageTitle": "课程自动调速",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程自动调速.jpg?v=offline-info-page-v2-20261113-02",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5583164309227567,
+          "y": 0.11484120017530706,
+          "sourceText": "Automatically adjust suggested resistance level?",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "whether_auto_resistance",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7702839953174397,
+          "y": 0.390268197212919,
+          "sourceText": "Tips: After automatic follow, the device will automatically adjust the resistance level, pay attention to the speed change.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.33519269521829625,
+          "y": 0.5318222098318467,
+          "sourceText": "NO",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "NO",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.6130831815256608,
+          "y": 0.5120704443079829,
+          "sourceText": "YES",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "YES",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.5573022475995456,
+          "y": 0.8149302350697022,
+          "sourceText": "Remember my option, do not remind me again within 15 days",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "remember_my_option",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    }
+  }
+}

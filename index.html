@@ -1618,7 +1618,7 @@
   <script src="assets/data/post-questionnaire-text.js?v=20261109-01"></script>
   <script src="assets/data/zh-questionnaire-variants.js?v=20261109-01"></script>
   <script src="assets/data/review-questionnaire-text.js?v=20261109-01"></script>
-  <script src="assets/data/profile-tab-pages.js?v=20261113-02"></script>
+  <script src="assets/data/profile-tab-pages.js?v=20261113-03"></script>
   <script src="assets/data/ai-questionnaire-translations.js?v=20261109-02"></script>
   <script src="assets/data/deepseek-questionnaire-translations.js?v=20261109-04"></script>
   <script>
@@ -3051,6 +3051,7 @@
         const noteMarkers = notePointStrokes()
         const isEnglishSource = currentLanguage === 'en'
         const isReadOnly = currentLanguage === 'zh'
+        const isTranslationReadOnly = currentLanguage !== 'en'
         const currentLanguageLabel = languageLabels[currentLanguage]
         elements.chineseTextCount.textContent = `${markers.length} 个文本打点 · ${imageMarkers.length} 个图片打点 · ${noteMarkers.length} 个备注打点`
         syncScreenshotThumbnailAnnotationState()
@@ -3117,14 +3118,8 @@
             translationInput.lang = languageCodes[currentLanguage]
             translationInput.dir = 'auto'
             translationInput.placeholder = `请输入${currentLanguageLabel}译文`
-            translationInput.setAttribute('aria-label', `编号 ${stroke.number} ${currentLanguageLabel}译文${isReadOnly ? '，只读' : ''}`)
-            translationInput.readOnly = isReadOnly
-            if (!isReadOnly) {
-              translationInput.addEventListener('input', function () {
-                resizeTextarea(translationInput)
-                updateManualAnnotationTranslation(stroke, currentLanguage, translationInput.value)
-              })
-            }
+            translationInput.setAttribute('aria-label', `编号 ${stroke.number} ${currentLanguageLabel}译文${isTranslationReadOnly ? '，只读' : ''}`)
+            translationInput.readOnly = isTranslationReadOnly
             translationField.append(translationLabel, translationInput)
           }
 
@@ -3278,6 +3273,7 @@
         const includesNote = stroke.type === 'note-point'
         const isEnglishSource = currentLanguage === 'en'
         const isReadOnly = currentLanguage === 'zh'
+        const isTranslationReadOnly = currentLanguage !== 'en'
         const currentLanguageLabel = languageLabels[currentLanguage]
         const section = document.createElement('section')
         section.className = 'manual-annotation-subitems'
@@ -3364,14 +3360,8 @@
             translationInput.lang = languageCodes[currentLanguage]
             translationInput.dir = 'auto'
             translationInput.placeholder = `请输入${currentLanguageLabel}译文`
-            translationInput.setAttribute('aria-label', `${markerLabel} ${stroke.number} 子项 ${subItemIndex + 1} ${currentLanguageLabel}译文${isReadOnly ? '，只读' : ''}`)
-            translationInput.readOnly = isReadOnly
-            if (!isReadOnly) {
-              translationInput.addEventListener('input', function () {
-                resizeTextarea(translationInput)
-                updateManualAnnotationSubItemTranslation(stroke, subItemIndex, currentLanguage, translationInput.value)
-              })
-            }
+            translationInput.setAttribute('aria-label', `${markerLabel} ${stroke.number} 子项 ${subItemIndex + 1} ${currentLanguageLabel}译文${isTranslationReadOnly ? '，只读' : ''}`)
+            translationInput.readOnly = isTranslationReadOnly
             translationField.append(translationLabel, translationInput)
           }
 

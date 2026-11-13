@@ -346,6 +346,7 @@
     id: 'course-tab',
     label: '课程tab',
     directory: '课程tab',
+    annotationFile: '标注结果/课程tab/标注-最终结果.json',
     pages: copyPages(coursePages),
     reviewPages: copyPages(coursePages),
     variants: {},
