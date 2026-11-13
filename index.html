@@ -1287,7 +1287,7 @@
       line-height: 1.65;
     }
 
-    body:has(#manualAnnotationCheckResult:not([hidden])) .workspace {
+    .workspace {
       transform: translateX(var(--manual-annotation-workspace-shift, 0px));
     }
 
@@ -1380,7 +1380,7 @@
         max-height: min(62dvh, 600px);
       }
 
-      body:has(#manualAnnotationCheckResult:not([hidden])) .workspace {
+      .workspace {
         transform: none;
       }
 
@@ -1642,7 +1642,7 @@
       const MANUAL_ANNOTATION_CHECK_GAP_PX = 16
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261113-11'
+      const ASSET_VERSION = 'offline-info-page-v2-20261113-12'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
       let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
@@ -3989,12 +3989,13 @@
       function syncManualAnnotationCheckWorkspaceShift () {
         const propertyName = '--manual-annotation-workspace-shift'
         elements.workspace.style.removeProperty(propertyName)
-        if (elements.manualAnnotationCheckResult.hidden || window.matchMedia('(max-width: 1180px)').matches) return 0
+        if (window.matchMedia('(max-width: 1180px)').matches) return 0
 
-        const resultRect = elements.manualAnnotationCheckResult.getBoundingClientRect()
+        const resultStyle = getComputedStyle(elements.manualAnnotationCheckResult)
+        const reservedResultRight = (Number.parseFloat(resultStyle.left) || 0) + (Number.parseFloat(resultStyle.width) || 0) + window.scrollX
         const thumbnailRect = elements.screenshotThumbnails.getBoundingClientRect()
         const baselineThumbnailLeft = thumbnailRect.left + window.scrollX
-        const shift = Math.max(0, Math.ceil(resultRect.right + MANUAL_ANNOTATION_CHECK_GAP_PX - baselineThumbnailLeft))
+        const shift = Math.max(0, Math.ceil(reservedResultRight + MANUAL_ANNOTATION_CHECK_GAP_PX - baselineThumbnailLeft))
         elements.workspace.style.setProperty(propertyName, `${shift}px`)
         return shift
       }
@@ -5275,6 +5276,7 @@
       renderScreenshotTabSelector()
       renderScreenshotThumbnails()
       renderPage()
+      syncManualAnnotationCheckWorkspaceShift()
       loadBundledManualAnnotations(currentScreenshotTab)
     })()
   </script>
