@@ -1673,7 +1673,7 @@
   <script src="assets/data/post-questionnaire-text.js?v=20261109-01"></script>
   <script src="assets/data/zh-questionnaire-variants.js?v=20261109-01"></script>
   <script src="assets/data/review-questionnaire-text.js?v=20261109-01"></script>
-  <script src="assets/data/profile-tab-pages.js?v=20261112-01"></script>
+  <script src="assets/data/profile-tab-pages.js?v=20261113-02"></script>
   <script src="assets/data/ai-questionnaire-translations.js?v=20261109-02"></script>
   <script src="assets/data/deepseek-questionnaire-translations.js?v=20261109-04"></script>
   <script>
@@ -1697,7 +1697,7 @@
       const MANUAL_ANNOTATION_AUTO_SAVE_DELAY_MS = 600
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261112-01'
+      const ASSET_VERSION = 'offline-info-page-v2-20261113-02'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
       let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
@@ -4357,7 +4357,16 @@
       async function loadBundledManualAnnotations (tab = currentScreenshotTab) {
         const tabId = String(tab?.id || '')
         const sourcePath = typeof tab?.annotationFile === 'string' ? tab.annotationFile.trim() : ''
-        if (!tabId || !sourcePath || loadedBundledManualAnnotationTabs.has(tabId)) return false
+        if (!tabId) return false
+        if (!sourcePath) {
+          if (currentScreenshotTab.id === tabId) {
+            const message = `${tab.label}暂无内置标注`
+            setAnnotationStatus(message)
+            elements.manualAnnotationStatus.textContent = message
+          }
+          return false
+        }
+        if (loadedBundledManualAnnotationTabs.has(tabId)) return false
         if (bundledManualAnnotationLoads.has(tabId)) return bundledManualAnnotationLoads.get(tabId)
 
         const load = (async function () {
