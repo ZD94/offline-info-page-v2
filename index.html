@@ -1288,15 +1288,7 @@
     }
 
     body:has(#manualAnnotationCheckResult:not([hidden])) .workspace {
-      grid-template-columns: minmax(340px, 400px) minmax(0, 1fr);
-      width: min(1318px, calc(100% - var(--check-result-width) - 44px));
-      margin-right: 16px;
-      margin-left: calc(var(--check-result-width) + 28px);
-    }
-
-    body:has(#manualAnnotationCheckResult:not([hidden])) .manual-annotation-check-action {
-      min-width: 148px;
-      padding-inline: 8px;
+      transform: translateX(var(--manual-annotation-workspace-shift, 0px));
     }
 
     .manual-annotation-check-group {
@@ -1389,10 +1381,7 @@
       }
 
       body:has(#manualAnnotationCheckResult:not([hidden])) .workspace {
-        grid-template-columns: 1fr;
-        width: min(100% - 24px, 760px);
-        margin: 18px auto 32px;
-        padding-left: 0;
+        transform: none;
       }
 
     }
@@ -1650,9 +1639,10 @@
       const ANNOTATION_NOTE_POINT_COLOR = '#ff9500'
       const ANNOTATION_POINT_RADIUS = 15
       const MANUAL_ANNOTATION_AUTO_SAVE_DELAY_MS = 600
+      const MANUAL_ANNOTATION_CHECK_GAP_PX = 16
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261113-09'
+      const ASSET_VERSION = 'offline-info-page-v2-20261113-10'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
       let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
@@ -1680,6 +1670,8 @@
       let currentReviewMode = 'baseline'
       const elements = {
         pageHeader: document.querySelector('.page-header'),
+        workspace: document.querySelector('.workspace'),
+        screenshotPanel: document.querySelector('.screenshot-panel'),
         screenshotTabSelect: document.querySelector('#screenshotTabSelect'),
         pageKicker: document.querySelector('#pageKicker'),
         pageTitle: document.querySelector('#pageTitle'),
@@ -3992,6 +3984,20 @@
         setAnnotationStatus(message)
         elements.manualAnnotationStatus.textContent = message
         elements.manualAnnotationCheckIssues.scrollTop = 0
+        syncManualAnnotationCheckWorkspaceShift()
+      }
+
+      function syncManualAnnotationCheckWorkspaceShift () {
+        const propertyName = '--manual-annotation-workspace-shift'
+        elements.workspace.style.removeProperty(propertyName)
+        if (elements.manualAnnotationCheckResult.hidden || window.matchMedia('(max-width: 1180px)').matches) return 0
+
+        const resultRect = elements.manualAnnotationCheckResult.getBoundingClientRect()
+        const screenshotRect = elements.screenshotPanel.getBoundingClientRect()
+        const baselineScreenshotLeft = screenshotRect.left + window.scrollX
+        const shift = Math.max(0, Math.ceil(resultRect.right + MANUAL_ANNOTATION_CHECK_GAP_PX - baselineScreenshotLeft))
+        elements.workspace.style.setProperty(propertyName, `${shift}px`)
+        return shift
       }
 
       function checkManualAnnotationResults () {
@@ -4007,6 +4013,7 @@
 
       function closeManualAnnotationCheckResult () {
         elements.manualAnnotationCheckResult.hidden = true
+        syncManualAnnotationCheckWorkspaceShift()
         elements.checkManualAnnotations.focus()
       }
 
@@ -5237,6 +5244,7 @@
       elements.saveManualAnnotation.addEventListener('click', saveCurrentManualAnnotations)
       elements.checkManualAnnotations.addEventListener('click', checkManualAnnotationResults)
       elements.closeManualAnnotationCheck.addEventListener('click', closeManualAnnotationCheckResult)
+      window.addEventListener('resize', syncManualAnnotationCheckWorkspaceShift)
       elements.exportManualAnnotations.addEventListener('click', exportManualAnnotations)
       elements.annotationCanvas.addEventListener('pointerdown', beginAnnotationStroke)
       elements.annotationCanvas.addEventListener('pointermove', continueAnnotationStroke)
