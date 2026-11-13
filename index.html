@@ -571,58 +571,6 @@
       border-color: var(--focus);
     }
 
-    .review-mode-toolbar {
-      display: flex;
-      justify-content: flex-end;
-      margin: 0;
-    }
-
-    .header-review-mode {
-      position: absolute;
-      top: 50%;
-      right: 24px;
-      transform: translateY(-50%);
-    }
-
-    .review-mode-switch {
-      display: inline-flex;
-      gap: 4px;
-      padding: 4px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--surface-soft);
-    }
-
-    .review-mode-button {
-      min-height: 36px;
-      padding: 8px 13px;
-      border: 0;
-      border-radius: 9px;
-      color: #647086;
-      background: transparent;
-      font-size: 13px;
-      font-weight: 800;
-      white-space: nowrap;
-      cursor: pointer;
-      transition: color .18s ease, background .18s ease, box-shadow .18s ease;
-    }
-
-    .review-mode-button:hover:not(.is-selected) {
-      color: var(--text);
-      background: #fff;
-    }
-
-    .review-mode-button.is-selected {
-      color: #fff;
-      background: var(--active);
-      box-shadow: 0 4px 10px rgba(25, 40, 60, .16);
-    }
-
-    .review-mode-button:focus-visible {
-      outline: 3px solid var(--focus);
-      outline-offset: 2px;
-    }
-
     .baseline-title {
       margin: 0;
       color: var(--text);
@@ -1404,11 +1352,6 @@
       border: 0;
     }
 
-    @media (max-width: 1580px) {
-      .header-inner { justify-content: space-between; gap: 16px; }
-      .header-review-mode { position: static; flex: 0 0 auto; transform: none; }
-    }
-
     @media (max-width: 1260px) {
       .workspace {
         grid-template-columns: minmax(340px, 400px) minmax(0, 1fr);
@@ -1418,8 +1361,6 @@
     }
 
     @media (max-width: 980px) {
-      .header-inner { flex-direction: column; align-items: stretch; }
-      .header-review-mode { align-self: flex-end; }
       .workspace { grid-template-columns: 1fr; width: min(100% - 24px, 760px); }
       .screenshot-panel { position: static; display: block; width: min(100%, 500px); height: auto; margin: 0 auto; }
       .image-stage { flex: none; height: min(68vh, 720px); min-height: 460px; max-height: 720px; }
@@ -1464,10 +1405,6 @@
       .content-area { margin-inline: 10px; padding: 18px; }
       .content-heading { gap: 10px; }
       .baseline-title { font-size: 25px; }
-      .review-mode-toolbar { justify-content: stretch; }
-      .header-review-mode { width: 100%; }
-      .review-mode-switch { width: 100%; }
-      .review-mode-button { flex: 1; min-width: 0; white-space: normal; }
       .manual-annotation-footer { align-items: stretch; flex-direction: column; }
       .manual-annotation-footer-actions { display: grid; grid-template-columns: 1fr; }
       .manual-annotation-footer .action-button.check,
@@ -1492,12 +1429,6 @@
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="uk">乌克兰语</button>
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="ar-SA">阿拉伯语（沙特）</button>
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="zh">中文</button>
-      </div>
-      <div class="review-mode-toolbar header-review-mode" hidden>
-        <div class="review-mode-switch" role="tablist" aria-label="选择人工核对模式">
-          <button id="baselineReviewTab" class="review-mode-button is-selected" type="button" role="tab" aria-selected="true" aria-controls="baselineReviewView" tabindex="0" data-review-mode="baseline">中文基准核对</button>
-          <button id="translationReviewTab" class="review-mode-button" type="button" role="tab" aria-selected="false" aria-controls="translationReviewView" tabindex="-1" data-review-mode="translation">多语言译文核对</button>
-        </div>
       </div>
     </div>
   </header>
@@ -1607,7 +1538,7 @@
     </section>
 
     <section class="content-area review-panel" aria-label="文案核对" hidden>
-      <div id="baselineReviewView" class="review-view" role="tabpanel" aria-labelledby="baselineReviewTab">
+      <div id="baselineReviewView" class="review-view" role="region" aria-labelledby="manualReviewTitle">
         <div class="baseline-heading">
           <h2 id="manualReviewTitle" class="baseline-title">人工核对</h2>
           <span class="readonly-badge editable-badge">可编辑</span>
@@ -1632,9 +1563,9 @@
         <p id="reviewStatus" class="review-status" role="status" aria-live="polite">已加载人工核对初始稿</p>
       </div>
 
-      <div id="translationReviewView" class="review-view" role="tabpanel" aria-labelledby="translationReviewTab" hidden>
+      <div id="translationReviewView" class="review-view" role="region" aria-labelledby="translationReviewHeading" hidden>
         <div class="baseline-heading">
-          <h2 class="baseline-title">多语言译文核对</h2>
+          <h2 id="translationReviewHeading" class="baseline-title">多语言译文核对</h2>
           <span class="readonly-badge editable-badge">译文可编辑</span>
         </div>
         <div class="content-heading">
@@ -1684,7 +1615,6 @@
       const PAGE_STORAGE_KEY = 'offline-info-page-v2:questionnaire-page:v1'
       const SCREENSHOT_TAB_STORAGE_KEY = 'offline-info-page-v2:screenshot-tab:v1'
       const REVIEW_STORAGE_KEY = 'offline-info-page-v2:manual-review:v1'
-      const REVIEW_MODE_STORAGE_KEY = 'offline-info-page-v2:review-mode:v1'
       const TRANSLATION_REVIEW_STORAGE_KEY = 'offline-info-page-v2:translation-review:v1'
       const TRANSLATION_LANGUAGE_STORAGE_KEY = 'offline-info-page-v2:translation-review-language:v1'
       const TRANSLATION_ID_SOURCE_LANGUAGE = 'en'
@@ -1697,7 +1627,7 @@
       const MANUAL_ANNOTATION_AUTO_SAVE_DELAY_MS = 600
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261113-04'
+      const ASSET_VERSION = 'offline-info-page-v2-20261113-05'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
       let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
@@ -1722,8 +1652,7 @@
       }
       const languageCodes = { zh: 'zh-CN', en: 'en', th: 'th', ms: 'ms', de: 'de', tr: 'tr', fr: 'fr', uk: 'uk', 'ar-SA': 'ar-SA' }
       const languageButtons = Array.from(document.querySelectorAll('.language-button'))
-      const reviewModeButtons = Array.from(document.querySelectorAll('.review-mode-button'))
-      let currentReviewMode = readStorage(REVIEW_MODE_STORAGE_KEY, 'baseline')
+      let currentReviewMode = 'baseline'
       const elements = {
         pageHeader: document.querySelector('.page-header'),
         screenshotTabSelect: document.querySelector('#screenshotTabSelect'),
@@ -5211,19 +5140,12 @@
         if (!['baseline', 'translation'].includes(mode)) return
         if (!flushManualAnnotationAutoSave()) return
         currentReviewMode = mode
-        writeStorage(REVIEW_MODE_STORAGE_KEY, currentReviewMode)
         if (currentReviewMode === 'translation' && currentLanguage === 'zh') {
           currentLanguage = currentTranslationLanguage
           writeStorage(LANGUAGE_STORAGE_KEY, currentLanguage)
           renderLanguage()
           renderAiTranslations(currentPage)
         }
-        reviewModeButtons.forEach(function (button) {
-          const selected = button.dataset.reviewMode === currentReviewMode
-          button.classList.toggle('is-selected', selected)
-          button.setAttribute('aria-selected', String(selected))
-          button.tabIndex = selected ? 0 : -1
-        })
         elements.baselineReviewView.hidden = currentReviewMode !== 'baseline'
         elements.translationReviewView.hidden = currentReviewMode !== 'translation'
         if (shouldRender) renderActiveReview(currentPage)
@@ -5245,25 +5167,6 @@
           event.preventDefault()
           selectLanguage(languageButtons[nextIndex].dataset.language, true)
           languageButtons[nextIndex].focus()
-        })
-      })
-
-      reviewModeButtons.forEach(function (button, index) {
-        button.addEventListener('click', function () {
-          selectReviewMode(button.dataset.reviewMode)
-        })
-
-        button.addEventListener('keydown', function (event) {
-          let nextIndex = index
-          if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = (index + 1) % reviewModeButtons.length
-          else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = (index - 1 + reviewModeButtons.length) % reviewModeButtons.length
-          else if (event.key === 'Home') nextIndex = 0
-          else if (event.key === 'End') nextIndex = reviewModeButtons.length - 1
-          else return
-
-          event.preventDefault()
-          selectReviewMode(reviewModeButtons[nextIndex].dataset.reviewMode)
-          reviewModeButtons[nextIndex].focus()
         })
       })
 
