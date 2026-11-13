@@ -1505,7 +1505,7 @@
 
     <section id="pageContent" class="content-area" aria-labelledby="chineseTextTitle">
       <div class="baseline-heading">
-        <button id="checkManualAnnotations" class="action-button check manual-annotation-check-action" type="button">检查当前标注结果</button>
+        <button id="checkManualAnnotations" class="action-button check manual-annotation-check-action" type="button" aria-controls="manualAnnotationCheckResult" aria-expanded="false">检查当前标注结果</button>
         <h2 class="baseline-title">人工标注</h2>
         <span class="readonly-badge editable-badge">自动保存</span>
       </div>
@@ -1642,7 +1642,7 @@
       const MANUAL_ANNOTATION_CHECK_GAP_PX = 16
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261113-12'
+      const ASSET_VERSION = 'offline-info-page-v2-20261113-13'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
       let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
@@ -3934,6 +3934,7 @@
         const stats = report.stats
         const isSuccess = issueCount === 0
         elements.manualAnnotationCheckResult.hidden = false
+        elements.checkManualAnnotations.setAttribute('aria-expanded', 'true')
         elements.manualAnnotationCheckResult.classList.toggle('is-success', isSuccess)
         elements.manualAnnotationCheckTitle.textContent = isSuccess
           ? '当前标注检查通过'
@@ -4001,8 +4002,13 @@
       }
 
       function checkManualAnnotationResults () {
+        if (!elements.manualAnnotationCheckResult.hidden) {
+          closeManualAnnotationCheckResult()
+          return false
+        }
         flushManualAnnotationAutoSave()
         renderManualAnnotationCheckReport(createManualAnnotationCheckReport())
+        return true
       }
 
       function refreshManualAnnotationCheckResultIfOpen () {
@@ -4013,6 +4019,7 @@
 
       function closeManualAnnotationCheckResult () {
         elements.manualAnnotationCheckResult.hidden = true
+        elements.checkManualAnnotations.setAttribute('aria-expanded', 'false')
         syncManualAnnotationCheckWorkspaceShift()
         elements.checkManualAnnotations.focus()
       }
