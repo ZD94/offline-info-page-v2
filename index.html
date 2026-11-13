@@ -122,10 +122,10 @@
       justify-content: center;
       align-items: start;
       gap: clamp(22px, 2vw, 30px);
-      width: min(1318px, calc(100% - 32px));
+      width: min(1318px, calc(100% - 230px));
       min-height: calc(100vh - 100px);
-      margin: 18px auto 32px;
-      padding-left: 88px;
+      margin: 18px 16px 32px auto;
+      padding-left: 0;
     }
 
     .screenshot-panel {
@@ -1200,42 +1200,36 @@
     }
 
     .manual-annotation-footer {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 16px;
       margin-top: 10px;
     }
 
     .manual-annotation-footer .review-status {
-      flex: 1 1 auto;
       margin-top: 0;
     }
 
-    .manual-annotation-footer-actions {
-      display: flex;
-      flex: 0 0 auto;
-      align-items: center;
-      gap: 10px;
+    .manual-annotation-check-launcher {
+      position: fixed;
+      z-index: 8;
+      top: calc(var(--page-header-height) + 18px);
+      left: 16px;
     }
 
-    .manual-annotation-footer .action-button.check,
-    .manual-annotation-footer .action-button.import {
-      flex: 0 0 auto;
-      min-width: 148px;
-      padding-inline: 18px;
-    }
-
-    .manual-annotation-footer .action-button.check {
+    .manual-annotation-check-launcher .action-button.check {
       min-width: 178px;
+      padding-inline: 18px;
       color: #0b57c7;
       border-color: #9cbcf0;
       background: #f7faff;
+      box-shadow: 0 10px 28px rgba(30, 42, 65, .1);
     }
 
-    .manual-annotation-footer .action-button.check:hover:not(:disabled) {
+    .manual-annotation-check-launcher .action-button.check:hover:not(:disabled) {
       border-color: #5f91df;
       background: #edf4ff;
+    }
+
+    body:has(#manualAnnotationCheckResult:not([hidden])) .manual-annotation-check-launcher {
+      display: none;
     }
 
     .manual-annotation-check-result {
@@ -1374,7 +1368,9 @@
     @media (max-width: 1260px) {
       .workspace {
         grid-template-columns: minmax(340px, 400px) minmax(0, 1fr);
-        width: calc(100% - 24px);
+        width: calc(100% - 230px);
+        margin-right: 16px;
+        margin-left: auto;
         gap: 20px;
       }
     }
@@ -1387,6 +1383,13 @@
     }
 
     @media (max-width: 1180px) {
+      .manual-annotation-check-launcher {
+        z-index: 19;
+        top: auto;
+        bottom: 12px;
+        left: 12px;
+      }
+
       .manual-annotation-check-result {
         z-index: 20;
         top: auto;
@@ -1400,6 +1403,12 @@
 
       body:has(#manualAnnotationCheckResult:not([hidden])) .workspace {
         grid-template-columns: 1fr;
+        width: min(100% - 24px, 760px);
+        margin: 18px auto 32px;
+        padding-left: 0;
+      }
+
+      .workspace {
         width: min(100% - 24px, 760px);
         margin: 18px auto 32px;
         padding-left: 0;
@@ -1444,10 +1453,6 @@
       .content-area { margin-inline: 10px; padding: 18px; }
       .content-heading { gap: 10px; }
       .baseline-title { font-size: 25px; }
-      .manual-annotation-footer { align-items: stretch; flex-direction: column; }
-      .manual-annotation-footer-actions { display: grid; grid-template-columns: 1fr; }
-      .manual-annotation-footer .action-button.check,
-      .manual-annotation-footer .action-button.import { width: 100%; min-width: 0; }
       .chinese-text-item { grid-template-columns: 34px minmax(0, 1fr); }
       .ai-translation-item { grid-template-columns: 34px minmax(0, 1fr); }
       .review-text-item { grid-template-columns: 34px minmax(0, 1fr); }
@@ -1471,6 +1476,10 @@
       </div>
     </div>
   </header>
+
+  <div class="manual-annotation-check-launcher">
+    <button id="checkManualAnnotations" class="action-button check" type="button">检查当前标注结果</button>
+  </div>
 
   <section id="manualAnnotationCheckResult" class="manual-annotation-check-result" aria-labelledby="manualAnnotationCheckTitle" hidden>
     <div class="manual-annotation-check-heading">
@@ -1553,9 +1562,6 @@
       <p class="export-hint">导出 JSON 会按页面、子项和打点编号保留文本、备注打点的原文、译文 ID 与备注，以及图片打点的安卓 / iOS 资源 ID。</p>
       <div class="manual-annotation-footer">
         <p id="manualAnnotationStatus" class="review-status" role="status" aria-live="polite">修改会在停止输入 600ms 后自动保存</p>
-        <div class="manual-annotation-footer-actions">
-          <button id="checkManualAnnotations" class="action-button check" type="button">检查当前标注结果</button>
-        </div>
       </div>
     </section>
 
@@ -1667,7 +1673,7 @@
       const MANUAL_ANNOTATION_AUTO_SAVE_DELAY_MS = 600
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261113-07'
+      const ASSET_VERSION = 'offline-info-page-v2-20261113-08'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
       let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
