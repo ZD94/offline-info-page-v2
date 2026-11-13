@@ -22,6 +22,7 @@
       --active-text: #ffffff;
       --focus: #8bb8ff;
       --page-header-height: 98px;
+      --check-result-width: clamp(280px, 22vw, 340px);
       font-family: Inter, "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
     }
 
@@ -1238,12 +1239,22 @@
     }
 
     .manual-annotation-check-result {
-      margin-top: 12px;
+      position: fixed;
+      z-index: 8;
+      top: calc(var(--page-header-height) + 18px);
+      left: 16px;
+      display: flex;
+      flex-direction: column;
+      width: var(--check-result-width);
+      max-height: calc(100vh - var(--page-header-height) - 36px);
+      max-height: calc(100dvh - var(--page-header-height) - 36px);
       padding: 14px 16px;
+      overflow: hidden;
       border: 1px solid #f0b3bd;
       border-radius: 12px;
       color: #5f2330;
       background: #fff7f8;
+      box-shadow: 0 14px 38px rgba(30, 42, 65, .12);
     }
 
     .manual-annotation-check-result[hidden] { display: none; }
@@ -1282,12 +1293,20 @@
 
     .manual-annotation-check-issues {
       display: grid;
+      flex: 1 1 auto;
       gap: 10px;
-      max-height: 260px;
+      min-height: 0;
       margin: 10px 0 0;
       overflow: auto;
       font-size: 12px;
       line-height: 1.65;
+    }
+
+    body:has(#manualAnnotationCheckResult:not([hidden])) .workspace {
+      grid-template-columns: minmax(340px, 400px) minmax(0, 1fr);
+      width: min(1318px, calc(100% - var(--check-result-width) - 44px));
+      margin-right: 16px;
+      margin-left: calc(var(--check-result-width) + 28px);
     }
 
     .manual-annotation-check-group {
@@ -1367,6 +1386,26 @@
       .content-area { min-height: 420px; margin: 0 0 20px; padding: 22px; }
     }
 
+    @media (max-width: 1180px) {
+      .manual-annotation-check-result {
+        z-index: 20;
+        top: auto;
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        width: auto;
+        max-height: min(62vh, 600px);
+        max-height: min(62dvh, 600px);
+      }
+
+      body:has(#manualAnnotationCheckResult:not([hidden])) .workspace {
+        grid-template-columns: 1fr;
+        width: min(100% - 24px, 760px);
+        margin: 18px auto 32px;
+        padding-left: 0;
+      }
+    }
+
     @media (max-width: 700px) {
       .workspace { padding-left: 0; }
       .screenshot-panel { overflow: hidden; }
@@ -1432,6 +1471,15 @@
       </div>
     </div>
   </header>
+
+  <section id="manualAnnotationCheckResult" class="manual-annotation-check-result" aria-labelledby="manualAnnotationCheckTitle" hidden>
+    <div class="manual-annotation-check-heading">
+      <strong id="manualAnnotationCheckTitle" class="manual-annotation-check-title">当前标注检查结果</strong>
+      <button id="closeManualAnnotationCheck" class="manual-annotation-check-close" type="button">关闭</button>
+    </div>
+    <p id="manualAnnotationCheckSummary" class="manual-annotation-check-summary"></p>
+    <div id="manualAnnotationCheckIssues" class="manual-annotation-check-issues"></div>
+  </section>
 
   <main class="workspace">
     <aside class="screenshot-panel" aria-label="问卷截图浏览器">
@@ -1509,14 +1557,6 @@
           <button id="checkManualAnnotations" class="action-button check" type="button">检查当前标注结果</button>
         </div>
       </div>
-      <section id="manualAnnotationCheckResult" class="manual-annotation-check-result" aria-labelledby="manualAnnotationCheckTitle" hidden>
-        <div class="manual-annotation-check-heading">
-          <strong id="manualAnnotationCheckTitle" class="manual-annotation-check-title">当前标注检查结果</strong>
-          <button id="closeManualAnnotationCheck" class="manual-annotation-check-close" type="button">关闭</button>
-        </div>
-        <p id="manualAnnotationCheckSummary" class="manual-annotation-check-summary"></p>
-        <div id="manualAnnotationCheckIssues" class="manual-annotation-check-issues"></div>
-      </section>
     </section>
 
     <section class="content-area ai-panel" aria-labelledby="aiTranslationTitle" hidden>
@@ -1627,7 +1667,7 @@
       const MANUAL_ANNOTATION_AUTO_SAVE_DELAY_MS = 600
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261113-05'
+      const ASSET_VERSION = 'offline-info-page-v2-20261113-06'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
       let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
@@ -3957,7 +3997,7 @@
           : `检查完成：发现 ${issueCount} 个标注问题`
         setAnnotationStatus(message)
         elements.manualAnnotationStatus.textContent = message
-        elements.manualAnnotationCheckResult.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+        elements.manualAnnotationCheckIssues.scrollTop = 0
       }
 
       function checkManualAnnotationResults () {
