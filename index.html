@@ -1697,7 +1697,7 @@
       const MANUAL_ANNOTATION_AUTO_SAVE_DELAY_MS = 600
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261113-03'
+      const ASSET_VERSION = 'offline-info-page-v2-20261113-04'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
       let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
@@ -4443,7 +4443,7 @@
         const url = URL.createObjectURL(blob)
         const link = document.createElement('a')
         const tabName = safeAnnotatedImageFileName(currentScreenshotTab.label)
-        const fileName = `${tabName}-${baselinePages.length}页-${exported.pointCount}文本-${exported.imagePointCount}图片-${exported.notePointCount}备注.json`
+        const fileName = `${tabName}-共${baselinePages.length}页-文本标注${exported.pointCount}个-图片标注${exported.imagePointCount}个-备注标注${exported.notePointCount}个.json`
         link.href = url
         link.download = fileName
         document.body.append(link)
