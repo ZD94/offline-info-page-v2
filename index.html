@@ -1667,7 +1667,7 @@
       const MANUAL_ANNOTATION_AUTO_SAVE_DELAY_MS = 600
       const SCREENSHOT_LANGUAGE = 'zh'
       const DEFAULT_SCREENSHOT_DIRECTORY = '我的tab'
-      const ASSET_VERSION = 'offline-info-page-v2-20261113-06'
+      const ASSET_VERSION = 'offline-info-page-v2-20261113-07'
       const screenshotTabs = normalizeScreenshotTabs(window.SCREENSHOT_TABS)
       let currentScreenshotTabId = readStorage(SCREENSHOT_TAB_STORAGE_KEY, screenshotTabs[0].id)
       let currentScreenshotTab = screenshotTabs.find(tab => tab.id === currentScreenshotTabId) ?? screenshotTabs[0]
@@ -2759,6 +2759,7 @@
       }
 
       function activateScreenshotTab (tab) {
+        const shouldRefreshManualAnnotationCheck = !elements.manualAnnotationCheckResult.hidden
         currentScreenshotTab = tab
         currentScreenshotTabId = tab.id
         screenshotDirectory = tab.directory
@@ -2776,7 +2777,15 @@
         elements.screenshotTabSelect.value = currentScreenshotTabId
         renderScreenshotThumbnails()
         renderPage()
-        loadBundledManualAnnotations(tab)
+        const bundledAnnotationLoad = loadBundledManualAnnotations(tab, {
+          preserveManualAnnotationCheck: shouldRefreshManualAnnotationCheck
+        })
+        if (shouldRefreshManualAnnotationCheck) {
+          refreshManualAnnotationCheckResultIfOpen()
+          bundledAnnotationLoad.then(function () {
+            if (currentScreenshotTab.id === tab.id) refreshManualAnnotationCheckResultIfOpen()
+          })
+        }
       }
 
       function selectScreenshotTab (tabId) {
@@ -4005,6 +4014,12 @@
         renderManualAnnotationCheckReport(createManualAnnotationCheckReport())
       }
 
+      function refreshManualAnnotationCheckResultIfOpen () {
+        if (elements.manualAnnotationCheckResult.hidden) return false
+        renderManualAnnotationCheckReport(createManualAnnotationCheckReport())
+        return true
+      }
+
       function closeManualAnnotationCheckResult () {
         elements.manualAnnotationCheckResult.hidden = true
         elements.checkManualAnnotations.focus()
@@ -4266,7 +4281,10 @@
         return { targets, targetCount: entries.length, pointCount, subItemCount, imagePointCount, notePointCount }
       }
 
-      function applyManualAnnotationImport (imported, { replacePageNames = [] } = {}) {
+      function applyManualAnnotationImport (imported, {
+        replacePageNames = [],
+        preserveManualAnnotationCheck = false
+      } = {}) {
         const previousAnnotations = savedAnnotations
         const replacementPages = new Set(replacePageNames)
         const nextTargets = Object.fromEntries(Object.entries(savedAnnotations.targets).filter(([targetKey]) => {
@@ -4295,7 +4313,7 @@
           elements.manualAnnotationStatus.textContent = message
           return false
         }
-        elements.manualAnnotationCheckResult.hidden = true
+        if (!preserveManualAnnotationCheck) elements.manualAnnotationCheckResult.hidden = true
 
         Object.keys(imported.targets).forEach(targetKey => {
           unsavedManualAnnotationTargets.delete(targetKey)
@@ -4323,7 +4341,9 @@
         return true
       }
 
-      async function loadBundledManualAnnotations (tab = currentScreenshotTab) {
+      async function loadBundledManualAnnotations (tab = currentScreenshotTab, {
+        preserveManualAnnotationCheck = false
+      } = {}) {
         const tabId = String(tab?.id || '')
         const sourcePath = typeof tab?.annotationFile === 'string' ? tab.annotationFile.trim() : ''
         if (!tabId) return false
@@ -4358,7 +4378,8 @@
               return true
             }
             const applied = applyManualAnnotationImport(imported, {
-              replacePageNames: cloneScreenshotPages(tab.pages).map(page => page.name)
+              replacePageNames: cloneScreenshotPages(tab.pages).map(page => page.name),
+              preserveManualAnnotationCheck
             })
             if (applied) {
               rememberBundledManualAnnotationFingerprint(tabId, fingerprint)
