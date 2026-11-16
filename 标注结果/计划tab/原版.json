@@ -1,0 +1,1257 @@
+{
+  "metadata": {
+    "schemaVersion": 2,
+    "screenshotFolderName": "计划tab",
+    "sourceLocale": "en",
+    "sourceLanguage": "英文",
+    "targetLocale": "en",
+    "targetLanguage": "英文",
+    "exportedAt": "2026-11-12T08:33:45.286Z",
+    "targetCount": 22,
+    "pointCount": 61,
+    "subItemCount": 23,
+    "imagePointCount": 0,
+    "notePointCount": 14
+  },
+  "targets": {
+    "plan-tab-01::main": {
+      "pageName": "plan-tab-01",
+      "pageTitle": "计划tab1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab1.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.23157574836650965,
+          "y": 0.07269896484977698,
+          "sourceText": "Today",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "plan_tab_today",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.6867041483057286,
+          "y": 0.24167531629590147,
+          "sourceText": "plan_tab_add_training",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "plan_tab_add_training_desc",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.8675885123841361,
+          "y": 0.2836564086739417,
+          "sourceText": "add training plan, single session course.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "plan_tab_add_training_desc",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.4610849414982525,
+          "y": 0.3709428563413471,
+          "sourceText": "Curated Training Plans",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "curated_training_plans",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.9434432457073393,
+          "y": 0.37252784245518555,
+          "sourceText": "all plan",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "all_plan",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.45135997568758546,
+          "y": 0.6034448901730861,
+          "sourceText": "Body Stats History",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "body_stats_history",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "x": 0.7431089500075976,
+          "y": 0.6077229500378714,
+          "sourceText": "Track weight",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "track_weight",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Track waist size",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "track_waist_size",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "x": 0.07792128855796991,
+          "y": 0.679538250063119,
+          "sourceText": "Weight",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "plan_tab_weight",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 9,
+          "x": 0.18295091931317428,
+          "y": 0.6950093977052767,
+          "sourceText": "Waist",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "plan_tab_waist",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 10,
+          "x": 0.8306336423036013,
+          "y": 0.6939013100681685,
+          "sourceText": "set a target weight",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "set_a_target_weight",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "set a target waist size",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "set_a_target_waist_size",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "target weight",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "target_weight",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "target waist size",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "target_waist_size",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "x": 0.5135997568758547,
+          "y": 0.7872612001009902,
+          "sourceText": "Waist size is an important indicator to measure training effectiveness. Please record it quickly.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "waist_tips",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 12,
+          "x": 0.36578027655371526,
+          "y": 0.9766740539175808,
+          "sourceText": "Plan",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "home_tab_plan",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-03::main": {
+      "pageName": "plan-tab-03",
+      "pageTitle": "计划tab3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab3.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.09348123385503723,
+          "y": 0.11219737986366314,
+          "sourceText": "Jan.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "short_1month",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "short_2month",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "Feb.",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Mar.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "short_3month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Apr.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "short_4month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "May",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "short_5month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Jun.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "short_6month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Jul.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "short_7month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Aug.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "short_8month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Sep.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "short_9month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Oct.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "short_10month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Nov.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "short_11month",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Dec.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "short_12month",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.5213797295243884,
+          "y": 0.07650012623783208,
+          "sourceText": "back to today",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "plan_tab_back_to_today",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-04::main": {
+      "pageName": "plan-tab-04",
+      "pageTitle": "计划tab4",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab4.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.47080990730891964,
+          "y": 0.8483042051224507,
+          "sourceText": "Select the type of training",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "select_training_type",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.27047561160917793,
+          "y": 0.9526467865458523,
+          "sourceText": "Training plan",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "training_plan",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.7411639568454642,
+          "y": 0.9661121553005863,
+          "sourceText": "Add courses",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "add_course",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-06::main": {
+      "pageName": "plan-tab-06",
+      "pageTitle": "计划tab6",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab6.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5058197842273211,
+          "y": 0.8734395601312873,
+          "sourceText": "Confirm",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "confirm",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.14599604923263942,
+          "y": 0.6555109826913906,
+          "sourceText": "Set weight",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "set_weight",
+          "iosTranslationId": "",
+          "note": "设置体重/目标体重的时候，有个标题",
+          "subItems": []
+        }
+      ]
+    },
+    "plan-tab-10::main": {
+      "pageName": "plan-tab-10",
+      "pageTitle": "计划tab10",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab10.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.9118754174002793,
+          "y": 0.5763037562768255,
+          "sourceText": "Details",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "view_details",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Manage",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "plan_tab_manage_plan",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.2668629712828608,
+          "y": 0.24975453754874183,
+          "sourceText": "total expenditure",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "total_expenditure",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6321109829397122,
+          "y": 0.2701910399192078,
+          "sourceText": "training duration",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "training_duration",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.9546172059984215,
+          "y": 0.29442870367772883,
+          "sourceText": "total class hours",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "total_class_hours",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 2,
+          "x": 0.6068544714953554,
+          "y": 0.5098746037534715,
+          "sourceText": "The course has not been unlocked yet",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "course_not_unlocked_yet",
+          "iosTranslationId": "",
+          "note": "没有开通会员，点击课程item toast的提示",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.2396636512658612,
+          "y": 0.4804611888798496,
+          "sourceText": "No additional training plan",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "no_additional_training_plan",
+          "iosTranslationId": "",
+          "note": "没有计划的时候提示",
+          "subItems": [
+            {
+              "sourceText": "Add training plan, single session course",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "add_training_plan_single_session_course",
+              "iosTranslationId": "",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "x": 0.6262825572217837,
+          "y": 0.3195640586865655,
+          "sourceText": "This Week\\'s Recipes",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "week_recipes",
+          "iosTranslationId": "",
+          "note": "本周食谱",
+          "subItems": []
+        }
+      ]
+    },
+    "plan-tab-11::main": {
+      "pageName": "plan-tab-11",
+      "pageTitle": "计划tab-全部计划1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-全部计划1.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.9434432457073393,
+          "y": 0.09155048110640447,
+          "sourceText": "Filter",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "filter",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-13::main": {
+      "pageName": "plan-tab-13",
+      "pageTitle": "计划tab-全部计划3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-全部计划3.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6750341893329281,
+          "y": 0.965004067663478,
+          "sourceText": "No more data",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "load_end",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Loading in progress ..",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "loading",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "load_failed",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "Loading failed, please click me to retry",
+              "iosTranslationId": ""
+            }
+          ]
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-14::main": {
+      "pageName": "plan-tab-14",
+      "pageTitle": "计划tab-全部计划-筛选1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-全部计划-筛选1.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.37939522868864917,
+          "y": 0.24954414116194912,
+          "sourceText": "Plan Filter",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "plan_filter",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.25297067314997723,
+          "y": 0.6339663926838163,
+          "sourceText": "Coaches",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "filter_coaches",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.21601580306944235,
+          "y": 0.9032737677784947,
+          "sourceText": "Reset",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "reset",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.7858987995745328,
+          "y": 0.8869049288860212,
+          "sourceText": "Done",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "done",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-16::main": {
+      "pageName": "plan-tab-16",
+      "pageTitle": "计划tab-训练计划1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划1.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.2121258167451755,
+          "y": 0.1507981036272337,
+          "sourceText": "Overview",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "overview",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.4435800030390518,
+          "y": 0.16626925126939154,
+          "sourceText": "Schedule",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "schedule",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.7897887858987995,
+          "y": 0.15438886862849607,
+          "sourceText": "Recommended",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "recommended",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.4805348731195867,
+          "y": 0.8933991640250232,
+          "sourceText": "Join Plan",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "join_plan",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Purchased. Start training",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "purchased_start_training",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "x": 0.2121258167451755,
+          "y": 0.3260582938255674,
+          "sourceText": "%1$s Day",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "which_day",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.1304361039355721,
+          "y": 0.3628636350885067,
+          "sourceText": "Not completed",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "not_completed",
+          "iosTranslationId": "",
+          "note": "课程状态",
+          "subItems": [
+            {
+              "sourceText": "Completed",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "completed",
+              "iosTranslationId": "",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    "plan-tab-17::main": {
+      "pageName": "plan-tab-17",
+      "pageTitle": "计划tab-训练计划2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划2.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.40662513295851693,
+          "y": 0.267497966168261,
+          "sourceText": "%1$d week · %2$d class · %3$s",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "plan_summary_desc",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-19::main": {
+      "pageName": "plan-tab-19",
+      "pageTitle": "计划tab-训练计划4",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划4.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7606138884667983,
+          "y": 0.07449434735040816,
+          "sourceText": "Training plan settings",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "training_plan_settings",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Smart training plan settings",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "smart_training_plan_settings",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.21407080990730892,
+          "y": 0.19388728364238225,
+          "sourceText": "Training day reminder time",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "training_day_reminder_time",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.4922048320923872,
+          "y": 0.8860072376357057,
+          "sourceText": "Exit training plan",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "exit_training_plan",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.4922048320923872,
+          "y": 0.41762280135775803,
+          "sourceText": "The progress of the training plan will be lost after exiting. Are you sure you want to exit?",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "exit_plan_warning",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.702264093602796,
+          "y": 0.588184138917721,
+          "sourceText": "Confirm exit",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "confirm_exit",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.29576052271691233,
+          "y": 0.583695682666143,
+          "sourceText": "Not sure",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "not_sure",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-20::main": {
+      "pageName": "plan-tab-20",
+      "pageTitle": "计划tab-训练计划5",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划5.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5058197842273211,
+          "y": 0.7100597525738491,
+          "sourceText": "Choose a time",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "choose_a_time",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.08764625436863699,
+          "y": 0.7147586052122198,
+          "sourceText": "cancel",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "cancel_lower_all",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.9025983893025377,
+          "y": 0.7001851488203776,
+          "sourceText": "done",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "done_lower_all",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.49998480474092083,
+          "y": 0.62836984879513,
+          "sourceText": "Modification successful",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "modification_successful",
+          "iosTranslationId": "",
+          "note": "修改时间成功 toast",
+          "subItems": []
+        }
+      ]
+    },
+    "plan-tab-23::main": {
+      "pageName": "plan-tab-23",
+      "pageTitle": "计划tab-训练计划8",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划8.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5116547637137213,
+          "y": 0.4059528151036553,
+          "sourceText": "To train in advance",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "plan_tab_train_in_advance",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.10515119282783772,
+          "y": 0.43716161247790836,
+          "sourceText": "The training content of the next training day will be moved forward to today, and the next training day will be adjusted to a rest day.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "plan_tab_train_in_advance_tips",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.3852302081750494,
+          "y": 0.5772014475271411,
+          "sourceText": "No",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "no",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 3,
+          "x": 0.4610849414982525,
+          "y": 0.6786405588128033,
+          "sourceText": "Today has been adjusted to a training day.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "plan_tab_advence_adjusted",
+          "iosTranslationId": "",
+          "note": "今天就设置为训练日成功toast",
+          "subItems": []
+        }
+      ]
+    },
+    "plan-tab-24::main": {
+      "pageName": "plan-tab-24",
+      "pageTitle": "计划tab-训练计划9",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划9.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.144051056070506,
+          "y": 0.45960389373579824,
+          "sourceText": "adjust today as a training day",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "adjust_today_as_a_training_day",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.8520285670870689,
+          "y": 0.4472466126181726,
+          "sourceText": "Pre-train",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "pre_training",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.36967026287798205,
+          "y": 0.4050551238533397,
+          "sourceText": "Rest day",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "rest_day",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-25::main": {
+      "pageName": "plan-tab-25",
+      "pageTitle": "计划tab-训练计划10",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划10.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5777845312262574,
+          "y": 0.43895699497853957,
+          "sourceText": "Training plan added successfully<",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "training_plan_added_successfully",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-26::main": {
+      "pageName": "plan-tab-26",
+      "pageTitle": "计划tab-训练计划11",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划11.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.575839538064124,
+          "y": 0.13574774875866133,
+          "sourceText": "Select training day reminder time",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "select_training_day_reminder_time",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.47469989363318643,
+          "y": 0.4551154374842203,
+          "sourceText": "Select plan start time",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "select_plan_start_time",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.35411031758091477,
+          "y": 0.6077229500378714,
+          "sourceText": "Today",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "today",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.6361343260902599,
+          "y": 0.6077229500378714,
+          "sourceText": "Tomorrow",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "tomorrow",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.632244339765993,
+          "y": 0.8949841501388616,
+          "sourceText": "View my training plan",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "view_my_training_plan",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.32104543382464673,
+          "y": 0.17862653238701715,
+          "sourceText": "Choose a training day",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "choose_a_training_day",
+          "iosTranslationId": "",
+          "note": "选择是一周当中哪几天作为训练日",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.4610849414982525,
+          "y": 0.24415799366005556,
+          "sourceText": "This program requires selecting %1$d training days",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "requires_training_days",
+          "iosTranslationId": "",
+          "note": "总共可以选择多少天",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.4299650509041179,
+          "y": 0.9147333576458047,
+          "sourceText": "Next",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "next",
+          "iosTranslationId": "",
+          "note": "下一步，跳转到当前页",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.42218507825558427,
+          "y": 0.6626925126939154,
+          "sourceText": "Training plan added successfully",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "training_plan_added_successfully",
+          "iosTranslationId": "",
+          "note": "添加计划成功toast",
+          "subItems": []
+        }
+      ]
+    },
+    "plan-tab-27::main": {
+      "pageName": "plan-tab-27",
+      "pageTitle": "计划tab-训练计划-添加课程1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划-添加课程1.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5252697158486552,
+          "y": 0.4165147137206497,
+          "sourceText": "Confirm deletion?",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "confirm_deletion",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7839538064123993,
+          "y": 0.47597273262827167,
+          "sourceText": "Confirm deletion of the added course?",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "confirm_deletion_of_the_added_course",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.4844248594438535,
+          "y": 0.7282239739669537,
+          "sourceText": "delete successful",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "delete_succ",
+          "iosTranslationId": "",
+          "note": "删除成功toast",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.6730891961707947,
+          "y": 0.7264285914663225,
+          "sourceText": "elete failed",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "delete_failed",
+          "iosTranslationId": "",
+          "note": "删除失败toast",
+          "subItems": []
+        }
+      ]
+    },
+    "plan-tab-28::main": {
+      "pageName": "plan-tab-28",
+      "pageTitle": "计划tab-训练计划-添加课程2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划-添加课程2.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7567239021425315,
+          "y": 0.07269896484977698,
+          "sourceText": "Course management",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "course_management",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-29::main": {
+      "pageName": "plan-tab-29",
+      "pageTitle": "计划tab-训练计划-添加课程3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划-添加课程3.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.622519373955326,
+          "y": 0.49192077874715967,
+          "sourceText": "successfully_added",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Adding failed",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "adding_failed",
+              "iosTranslationId": ""
+            }
+          ]
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-30::main": {
+      "pageName": "plan-tab-30",
+      "pageTitle": "计划tab-训练计划-添加课程4",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划-添加课程4.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.16350098769184016,
+          "y": 0.9156310488961202,
+          "sourceText": "Selected %1$d class",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "selected_class_format",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "plan-tab-34::main": {
+      "pageName": "plan-tab-34",
+      "pageTitle": "计划tab-训练计划-添加课程8",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划-添加课程8.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.6361343260902599,
+          "y": 0.5439868712654642,
+          "sourceText": "No relevant content available at the moment",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "no_content",
+          "iosTranslationId": "",
+          "note": "没有推荐课程中间的提示",
+          "subItems": []
+        }
+      ]
+    },
+    "plan-tab-33::main": {
+      "pageName": "plan-tab-33",
+      "pageTitle": "计划tab-训练计划-添加课程7",
+      "variantId": null,
+      "imageRef": "assets/screenshots/计划tab/计划tab-训练计划-添加课程7.jpg?v=offline-info-page-v2-20261112-01",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.2374107278529099,
+          "y": 0.26031643616573624,
+          "sourceText": "Filter",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "filter",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    }
+  }
+}
