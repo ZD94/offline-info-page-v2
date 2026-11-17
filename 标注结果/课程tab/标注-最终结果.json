@@ -6,10 +6,10 @@
     "sourceLanguage": "英文",
     "targetLocale": "en",
     "targetLanguage": "英文",
-    "exportedAt": "2026-11-13T11:03:25.403Z",
-    "targetCount": 14,
-    "pointCount": 33,
-    "subItemCount": 15,
+    "exportedAt": "2026-11-16T08:11:00.266Z",
+    "targetCount": 16,
+    "pointCount": 37,
+    "subItemCount": 20,
     "imagePointCount": 0,
     "notePointCount": 9
   },
@@ -18,7 +18,7 @@
       "pageName": "course-tab-03",
       "pageTitle": "课程tab3",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程tab3.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程tab3.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -28,7 +28,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "home_tab_course",
-          "iosTranslationId": "",
+          "iosTranslationId": "Course_Page_Title",
           "subItems": []
         },
         {
@@ -39,7 +39,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "view_all",
-          "iosTranslationId": "",
+          "iosTranslationId": "Course_Page_View_All",
           "subItems": []
         }
       ],
@@ -50,7 +50,7 @@
       "pageName": "course-tab-04",
       "pageTitle": "课程tab教练1",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程tab教练1.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程tab教练1.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -60,7 +60,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "filter",
-          "iosTranslationId": "",
+          "iosTranslationId": "Course_Page_Filter_Title",
           "subItems": []
         }
       ],
@@ -71,7 +71,7 @@
       "pageName": "course-tab-08",
       "pageTitle": "课程tab运营3",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程tab运营3.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程tab运营3.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -81,7 +81,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "no_content",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Empty_Tip",
           "subItems": []
         }
       ],
@@ -95,7 +95,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "network_error",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Empty_Network_Tip",
           "note": "API请求失败toast",
           "subItems": []
         }
@@ -105,7 +105,7 @@
       "pageName": "course-tab-05",
       "pageTitle": "课程tab教练2",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程tab教练2.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程tab教练2.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -115,7 +115,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "load_end",
-          "iosTranslationId": "",
+          "iosTranslationId": "MJRefreshBackFooterNoMoreDataText",
           "subItems": []
         }
       ],
@@ -126,7 +126,7 @@
       "pageName": "course-tab-25",
       "pageTitle": "课程-全部课程4",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程-全部课程4.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程-全部课程4.jpg?v=offline-info-page-v2-20261113-13",
       "items": [],
       "imageItems": [],
       "noteItems": [
@@ -138,7 +138,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "scroll_to_top",
-          "iosTranslationId": "",
+          "iosTranslationId": "Course_Page_Filter_Click_Top",
           "note": "滑动到最底部了，可以快速到滑动回顶部",
           "subItems": []
         }
@@ -148,7 +148,7 @@
       "pageName": "course-tab-12",
       "pageTitle": "课程-课程详情1",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程-课程详情1.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程-课程详情1.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -158,7 +158,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "minutes",
-          "iosTranslationId": "",
+          "iosTranslationId": "Unit_minutes",
           "subItems": []
         },
         {
@@ -169,7 +169,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "kcal_lowercase",
-          "iosTranslationId": "",
+          "iosTranslationId": "Unit_kcal",
           "subItems": []
         },
         {
@@ -180,7 +180,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "km",
-          "iosTranslationId": "",
+          "iosTranslationId": "Unit_km",
           "subItems": []
         },
         {
@@ -191,7 +191,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "course_introduction",
-          "iosTranslationId": "",
+          "iosTranslationId": "Course_Page_Info_Intorduction",
           "subItems": []
         },
         {
@@ -202,21 +202,21 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "course_start",
-          "iosTranslationId": "",
+          "iosTranslationId": "Course_Detail_Page_Start",
           "subItems": [
             {
               "sourceText": "Appointment successful",
               "translation": "",
               "translations": {},
               "androidTranslationId": "appointment_successful",
-              "iosTranslationId": ""
+              "iosTranslationId": "Course_Detail_Page_Appointment_Success"
             },
             {
               "sourceText": "Make an appointment immediately",
               "translation": "",
               "translations": {},
               "androidTranslationId": "appointment_immediately",
-              "iosTranslationId": ""
+              "iosTranslationId": "Course_Detail_Page_Appointment_Make"
             }
           ]
         },
@@ -228,7 +228,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "fitness_equipment",
-          "iosTranslationId": "",
+          "iosTranslationId": "Course_Detail_Page_Equipment",
           "subItems": []
         }
       ],
@@ -242,7 +242,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "network_not_available",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Empty_Network_Tip",
           "note": "网络不可用的时候的toast",
           "subItems": []
         },
@@ -254,7 +254,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "special_features_of_this_course",
-          "iosTranslationId": "",
+          "iosTranslationId": "Course_Page_Info_Intorduction",
           "note": "介绍课程特点的标题",
           "subItems": [
             {
@@ -278,7 +278,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "course_schedule",
-              "iosTranslationId": "",
+              "iosTranslationId": "Course_Detail_Page_Plan_Title",
               "note": "课程安排的标题"
             }
           ]
@@ -291,7 +291,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "content",
-          "iosTranslationId": "",
+          "iosTranslationId": "Course_Detail_Page_Content",
           "note": "课程安排的阶段表格标题",
           "subItems": [
             {
@@ -299,7 +299,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_unit_duration",
-              "iosTranslationId": "",
+              "iosTranslationId": "Flag_Duration",
               "note": "课程安排的阶段表格持续时间标题"
             },
             {
@@ -307,7 +307,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "speed",
-              "iosTranslationId": "",
+              "iosTranslationId": "Flag_Speed",
               "note": "课程安排的阶段表格持续速度标题"
             },
             {
@@ -315,7 +315,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "resistance",
-              "iosTranslationId": "",
+              "iosTranslationId": "Course_Detail_Page_Recommended_Resistance",
               "note": "课程安排的阶段表格持续阻力标题"
             }
           ]
@@ -328,7 +328,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "more_first_up",
-          "iosTranslationId": "",
+          "iosTranslationId": "Flag_More",
           "note": "营销位，更多设备型号",
           "subItems": []
         }
@@ -338,7 +338,7 @@
       "pageName": "course-tab-14",
       "pageTitle": "课程-课程中2",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程-课程中2.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程-课程中2.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -348,7 +348,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "alert_notice",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Notice_Title",
           "subItems": []
         },
         {
@@ -359,14 +359,14 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "alert_sure_exit",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Sure_Quit",
           "subItems": [
             {
               "sourceText": "Workouts under 2 minutes won’t be saved. End now?",
               "translation": "",
               "translations": {},
               "androidTranslationId": "exit_alert_less_than_2_mins",
-              "iosTranslationId": ""
+              "iosTranslationId": "Alert_2_Min_Quit_Title"
             }
           ]
         },
@@ -378,7 +378,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "exit_alert_end",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Sure_Quit_Sport",
           "subItems": []
         },
         {
@@ -389,7 +389,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "exit_alert_continue",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Sure_Stay_Sport",
           "subItems": []
         }
       ],
@@ -400,7 +400,7 @@
       "pageName": "course-tab-13",
       "pageTitle": "课程-课程中1",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程-课程中1.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程-课程中1.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -410,7 +410,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "why_quit_the_course",
-          "iosTranslationId": "",
+          "iosTranslationId": "Live_Page_Quit_Feedback_Title",
           "subItems": []
         },
         {
@@ -421,7 +421,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "too_intense",
-          "iosTranslationId": "",
+          "iosTranslationId": "Live_Page_Quit_Feedback_Reason_1",
           "subItems": []
         },
         {
@@ -432,7 +432,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "too_easy_for_me",
-          "iosTranslationId": "",
+          "iosTranslationId": "Live_Page_Quit_Feedback_Reason_2",
           "subItems": []
         },
         {
@@ -443,7 +443,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "just_browsing",
-          "iosTranslationId": "",
+          "iosTranslationId": "Live_Page_Quit_Feedback_Reason_3",
           "subItems": []
         },
         {
@@ -454,7 +454,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "don_t_like_coach",
-          "iosTranslationId": "",
+          "iosTranslationId": "Live_Page_Quit_Feedback_Reason_4",
           "subItems": []
         },
         {
@@ -465,7 +465,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "not_interested",
-          "iosTranslationId": "",
+          "iosTranslationId": "Live_Page_Quit_Feedback_Reason_5",
           "subItems": []
         },
         {
@@ -476,7 +476,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "cancel_lower",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Cancel",
           "subItems": []
         }
       ],
@@ -487,7 +487,7 @@
       "pageName": "course-tab-15",
       "pageTitle": "课程-课程中3",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程-课程中3.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程-课程中3.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -504,7 +504,21 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "today_completed_all",
-              "iosTranslationId": ""
+              "iosTranslationId": "Live_Page_Course_Finshed_Tip_All"
+            },
+            {
+              "sourceText": "Congratulations on completing session ",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Live_Page_Course_Finshed_Tip_Course_1"
+            },
+            {
+              "sourceText": " of your training program.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Live_Page_Course_Finshed_Tip_Course_2"
             }
           ]
         },
@@ -516,13 +530,13 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "vip_watch_full_paid_course",
-          "iosTranslationId": "",
+          "iosTranslationId": "Live_Page_Try_Tip_Vip_Content",
           "subItems": [
             {
-              "sourceText": "watch_complte_by_trail_card",
+              "sourceText": "You can watch the complete video by using an experience card",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "You can watch the complete video by using an experience card",
+              "androidTranslationId": "watch_complte_by_trail_card",
               "iosTranslationId": ""
             },
             {
@@ -549,7 +563,7 @@
       "pageName": "course-tab-17",
       "pageTitle": "课程-课程中5",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程-课程中5.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程-课程中5.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -559,7 +573,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "session_finish",
-          "iosTranslationId": "",
+          "iosTranslationId": "Flag_Finish",
           "subItems": []
         },
         {
@@ -570,7 +584,18 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "session_over",
-          "iosTranslationId": "",
+          "iosTranslationId": "Live_Page_Course_Finshed_Sport_Tip_Content",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.603495796319797,
+          "y": 0.32211827310960434,
+          "sourceText": "Beginner Interval Run",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Live_Page_Course_Finshed_Sport_Tip_Title",
           "subItems": []
         }
       ],
@@ -581,7 +606,7 @@
       "pageName": "course-tab-21",
       "pageTitle": "课程连接蓝牙",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程连接蓝牙.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程连接蓝牙.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -591,7 +616,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "bluetooth_open_data_sync",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Bluetooth_Connect_Status_Start",
           "subItems": []
         }
       ],
@@ -605,7 +630,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "sport_unit_bike_cadence",
-          "iosTranslationId": "",
+          "iosTranslationId": "Unit_Cadence",
           "note": "单车踏频",
           "subItems": [
             {
@@ -613,7 +638,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_unit_cross_trainer_cadence",
-              "iosTranslationId": "",
+              "iosTranslationId": "Unit_Cadence",
               "note": "椭圆机踏频"
             },
             {
@@ -621,7 +646,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_unit_rowing_cadence",
-              "iosTranslationId": "",
+              "iosTranslationId": "Unit_Cadence",
               "note": "划船机桨率"
             }
           ]
@@ -634,7 +659,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "sport_unit_speed_km_hour",
-          "iosTranslationId": "",
+          "iosTranslationId": "Unit_Speed_km/h",
           "note": "速度单位",
           "subItems": []
         }
@@ -644,7 +669,7 @@
       "pageName": "course-tab-18",
       "pageTitle": "课程-课程中6",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程-课程中6.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程-课程中6.jpg?v=offline-info-page-v2-20261113-13",
       "items": [],
       "imageItems": [],
       "noteItems": [
@@ -666,7 +691,7 @@
       "pageName": "course-tab-36",
       "pageTitle": "课程-全部课程15",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程-全部课程15.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程-全部课程15.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -676,7 +701,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "scroll_to_top",
-          "iosTranslationId": "",
+          "iosTranslationId": "Course_Page_Filter_Click_Top",
           "subItems": []
         }
       ],
@@ -687,7 +712,7 @@
       "pageName": "course-tab-55",
       "pageTitle": "课程自动调速",
       "variantId": null,
-      "imageRef": "assets/screenshots/课程tab/课程自动调速.jpg?v=offline-info-page-v2-20261113-02",
+      "imageRef": "assets/screenshots/课程tab/课程自动调速.jpg?v=offline-info-page-v2-20261113-13",
       "items": [
         {
           "number": 1,
@@ -697,8 +722,16 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "whether_auto_resistance",
-          "iosTranslationId": "",
-          "subItems": []
+          "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Resistance_Tip",
+          "subItems": [
+            {
+              "sourceText": "Automatically adjust suggested speed?",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Speed_Tip"
+            }
+          ]
         },
         {
           "number": 2,
@@ -708,8 +741,16 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "",
-          "iosTranslationId": "",
-          "subItems": []
+          "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Speed_Content",
+          "subItems": [
+            {
+              "sourceText": "Tip: After automatic follow, the bicycle will automatically adjust the resistance, please pay attention to the change of resistance.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Resistance_Content"
+            }
+          ]
         },
         {
           "number": 3,
@@ -719,8 +760,16 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "NO",
-          "iosTranslationId": "",
-          "subItems": []
+          "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Resistance_No",
+          "subItems": [
+            {
+              "sourceText": "NO",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Speed_No"
+            }
+          ]
         },
         {
           "number": 4,
@@ -730,7 +779,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "YES",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Yes",
           "subItems": []
         },
         {
@@ -741,7 +790,60 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "remember_my_option",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Rember",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "course-tab-06::main": {
+      "pageName": "course-tab-06",
+      "pageTitle": "课程tab运营1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程tab运营1.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7966667988578681,
+          "y": 0.8848198004196868,
+          "sourceText": "No relevant content available at the moment",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Empty_Tip",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "course-tab-19::main": {
+      "pageName": "course-tab-19",
+      "pageTitle": "课程-课程中7",
+      "variantId": null,
+      "imageRef": "assets/screenshots/课程tab/课程-课程中7.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6528989530456852,
+          "y": 0.46744914599605186,
+          "sourceText": "Workouts under 2 minutes won’t be saved. End now?",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_2_Min_Quit_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.550761421319797,
+          "y": 0.3150802506222642,
+          "sourceText": "Notice",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Notice_Title",
           "subItems": []
         }
       ],

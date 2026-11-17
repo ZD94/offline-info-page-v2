@@ -1,0 +1,828 @@
+{
+  "metadata": {
+    "schemaVersion": 2,
+    "screenshotFolderName": "首页tab",
+    "sourceLocale": "en",
+    "sourceLanguage": "英文",
+    "targetLocale": "en",
+    "targetLanguage": "英文",
+    "exportedAt": "2026-11-17T02:25:50.357Z",
+    "targetCount": 15,
+    "pointCount": 29,
+    "subItemCount": 26,
+    "imagePointCount": 0,
+    "notePointCount": 11
+  },
+  "targets": {
+    "home-tab-11::main": {
+      "pageName": "home-tab-11",
+      "pageTitle": "课程详情页3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/课程详情页3.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.4920051117414207,
+          "y": 0.5413002314327793,
+          "sourceText": "Find more in the store",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "find_more_in_store",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-05::main": {
+      "pageName": "home-tab-05",
+      "pageTitle": "单车连接蓝牙上课3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/单车连接蓝牙上课3.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6687817258883249,
+          "y": 0.2418690465974427,
+          "sourceText": "Automatically adjust suggested resistance?",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "whether_auto_resistance",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7119289340101523,
+          "y": 0.4670471123315884,
+          "sourceText": "Tips: After automatic follow, the device will automatically adjust the resistance, pay attention to the speed change.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "whether_auto_resistance_desc",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-06::main": {
+      "pageName": "home-tab-06",
+      "pageTitle": "单车实景跑1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/单车实景跑1.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.14593908629441624,
+          "y": 0.634557624646014,
+          "sourceText": "minutes",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "minutes",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-07::main": {
+      "pageName": "home-tab-07",
+      "pageTitle": "单车实景跑2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/单车实景跑2.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.9098579579944155,
+          "y": 0.883315800547023,
+          "sourceText": "Let\\'s Go",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "lets_go",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.48640281655942696,
+          "y": 0.38779718072796127,
+          "sourceText": "Brief introduction",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "brief_introduction",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.4747480878960787,
+          "y": 0.610421488182902,
+          "sourceText": "Retry",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "retry",
+          "iosTranslationId": "",
+          "note": "请求失败，重试",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.16978268787179798,
+          "y": 0.912041517637983,
+          "sourceText": "Join Now",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "home_tab_join_now",
+          "iosTranslationId": "",
+          "note": "不是会员的时候，需要付费标题",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.630144470074056,
+          "y": 0.9452556280244057,
+          "sourceText": "Get full access with membership",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "membership_unlocks_all_scenes",
+          "iosTranslationId": "",
+          "note": "开通会员解锁所有实景",
+          "subItems": []
+        }
+      ]
+    },
+    "home-tab-17::main": {
+      "pageName": "home-tab-17",
+      "pageTitle": "首页tab6",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页tab6.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.3698555299259439,
+          "y": 0.06912125675012273,
+          "sourceText": "All Categories",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "home_tab_all_categories",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7680587592570111,
+          "y": 0.3061084227505435,
+          "sourceText": "Long press and drag to sort",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "home_tab_long_press_sort",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-18::main": {
+      "pageName": "home-tab-18",
+      "pageTitle": "首页tab7",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页tab7.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7700503915973529,
+          "y": 0.42279855247285886,
+          "sourceText": "All",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "all",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.5291421285896424,
+          "y": 0.43087777372569924,
+          "sourceText": "Today\\'s pending tasks",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "pending_tasks",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Awesome! %1$s",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "today_finish_encourage_format",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "x": 0.32903284560743123,
+          "y": 0.4856369399949505,
+          "sourceText": "You need to complete %1$d classes",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "not_complete_classes_format",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "The tasks for today have been finished",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "today_finished",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "x": 0.21440713982150447,
+          "y": 0.9662804724100205,
+          "sourceText": "Home",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "home_tab_home",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.6612531115293546,
+          "y": 0.5394984150138862,
+          "sourceText": "Rest day",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "rest_day",
+          "iosTranslationId": "",
+          "note": "休息日",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.9002185659644223,
+          "y": 0.44793390748169554,
+          "sourceText": "Add courses",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "add_course",
+          "iosTranslationId": "",
+          "note": "休息日加课",
+          "subItems": []
+        }
+      ]
+    },
+    "home-tab-19::main": {
+      "pageName": "home-tab-19",
+      "pageTitle": "首页tab计划1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页tab计划1.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6961879324996965,
+          "y": 0.6804404235921172,
+          "sourceText": "Join Now",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "home_tab_join_now",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-24::main": {
+      "pageName": "home-tab-24",
+      "pageTitle": "首页tab-跑步机模式跑1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页tab-跑步机模式跑1.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7690355329949239,
+          "y": 0.15367779589734787,
+          "sourceText": "Precautions and risk considerations for pattern running",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "mode_warning_title",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7652284263959391,
+          "y": 0.5272079649815467,
+          "sourceText": "\"Course Notice and Risk Warning:\n\nThe SPAX running course, including all courses within the SPAX App (hereinafter referred to as \"Courses\"), is a product developed and operated by SPAX and its affiliates. The ownership and intellectual property rights of the Courses belong to SPAX and its affiliated companies. Exercise carries certain risks, and before starting the Courses, you should take a responsible attitude towards yourself and take reasonable precautions and assess your own capabilities. You should also confirm that you have carefully read and accepted this \"Course Notice and Risk Warning\".\n\nThis notice applies to all SPAX users.\n\nThe following groups are not suitable for participating in the Courses: teenagers under 16 years old, elderly people over 60 years old, those who are preparing for pregnancy, pregnant women and mothers within one year of breastfeeding, those who have undergone surgery within 6 months or major surgery within one year, individuals with diabetes, gout, severe metabolic diseases, cardiovascular and cerebrovascular diseases, lung diseases, orthopedic injuries, spinal diseases, joint injuries, and other individuals who have been advised by a doctor not to exercise.\n\nBefore participating in the Courses, you should go to a medical institution for a physical examination and consult a doctor about your physical condition to ensure that you have the physical condition to participate in the Courses.\n\nBefore and after participating in the Courses, please do not consume alcoholic beverages or any stimulants prohibited by national laws and regulations.\n\nIf you have any physical conditions that may affect or may be affected during the Courses, or if you feel any discomfort during the Courses, please stop immediately.\n\nIf you ignore the above notice but still insist on participating in the Courses, you will bear all risks, damages, and liabilities, and SPAX will not assume any legal responsibility or any compensation or reimbursement arising therefrom.\n\nIf you have any questions about equipment use or course content, please carefully read the relevant equipment instructions or course action guidelines to avoid the risk of injury. After participating in the Courses, please start slowly and progress gradually.\n\nDue to differences in personal physique, basic forms, and exercise abilities, SPAX cannot guarantee that all users will achieve a certain desired fitness effect.\n\nEntering the training means that you have fully understood all the risks, damages, and liabilities that may arise from participating in the training courses, and voluntarily assume such risks and liabilities.\"",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "spax_warn",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.7538071065989848,
+          "y": 0.7441850484936915,
+          "sourceText": "I have carefully read and accepted the course notice and risk warning, and I agree to bear all risks, damages, and liabilities arising from participating in the courses on my own.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "accept_warning",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.6560913705583756,
+          "y": 0.8540468629302206,
+          "sourceText": "Agree",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "agree",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.3286802030456853,
+          "y": 0.8293279546820016,
+          "sourceText": "Disagree",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "disagree",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-25::main": {
+      "pageName": "home-tab-25",
+      "pageTitle": "首页tab-跑步机模式跑2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页tab-跑步机模式跑2.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5558375634517766,
+          "y": 0.49699596601150114,
+          "sourceText": "Please read and agree to the relevant precautions..",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "read_warning",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-27::main": {
+      "pageName": "home-tab-27",
+      "pageTitle": "首页tab-跑步机模式跑4",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页tab-跑步机模式跑4.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.8121827411167513,
+          "y": 0.20586215775469915,
+          "sourceText": "Warm-Up",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "heart_rate_step1",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Fat Burn",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "heart_rate_step2",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Cardio",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "heart_rate_step3",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Endurance",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "heart_rate_step4",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Peak",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "heart_rate_step5",
+              "iosTranslationId": ""
+            }
+          ]
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-29::main": {
+      "pageName": "home-tab-29",
+      "pageTitle": "首页tab-跑步机模式跑6",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页tab-跑步机模式跑6.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.06080187190874893,
+          "y": 0.6131119978831653,
+          "sourceText": "Current %1$s %2s",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "current_control_format",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "resistance",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "resistance_low",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "speed_low",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "speed",
+              "iosTranslationId": ""
+            }
+          ]
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.5081772746055296,
+          "y": 0.4700035358632541,
+          "sourceText": "What are your thoughts on this pattern?",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "ask_thoughts_this_pattern",
+          "iosTranslationId": "",
+          "note": "结束时给这个模式打分",
+          "subItems": [
+            {
+              "sourceText": "Submit",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "submit",
+              "iosTranslationId": "",
+              "note": ""
+            },
+            {
+              "sourceText": "The input needs to be greater than 0",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "input_greater_0",
+              "iosTranslationId": "",
+              "note": "输入的要大于0"
+            },
+            {
+              "sourceText": "Submission successful",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "submission_successful",
+              "iosTranslationId": "",
+              "note": "提交成功toast"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.485667754280601,
+          "y": 0.08316270089105761,
+          "sourceText": "Next speed",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "next_speed",
+          "iosTranslationId": "",
+          "note": "提前15s提示下一个速度",
+          "subItems": [
+            {
+              "sourceText": "Next resistance",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "next_resistance",
+              "iosTranslationId": "",
+              "note": "下一阻力"
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "x": 0.6193176061694843,
+          "y": 0.42485387384427953,
+          "sourceText": "Completed %1$d km",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "completed_km_format",
+          "iosTranslationId": "",
+          "note": "完成多少公里进度图示",
+          "subItems": [
+            {
+              "sourceText": "The program has been completed %1$s",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "completed_percent_format",
+              "iosTranslationId": "",
+              "note": "完成当前的百分比"
+            },
+            {
+              "sourceText": "Keep up the good work!!",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "keep_up_the_good_work",
+              "iosTranslationId": "",
+              "note": "进度下面的鼓励的话"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "x": 0.23806380350707773,
+          "y": 0.44307511049990816,
+          "sourceText": "Current {0} is too low",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "too_low_format",
+          "iosTranslationId": "",
+          "note": "速度/阻力太低体提示 标题",
+          "subItems": [
+            {
+              "sourceText": "Current %1$s is too high",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "too_high_format",
+              "iosTranslationId": "",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "x": 0.24931856366954208,
+          "y": 0.6135876835546231,
+          "sourceText": "If you have the capacity, you can adjust the %1$s to the recommended level",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "too_low_desc_format",
+          "iosTranslationId": "",
+          "note": "速度/阻力太低的描述",
+          "subItems": [
+            {
+              "sourceText": "If you feel difficulty in breathing, you can adjust the  %1$s to the recommended level.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "too_high_desc_format",
+              "iosTranslationId": "",
+              "note": "速度/阻力太高的描述"
+            }
+          ]
+        }
+      ]
+    },
+    "home-tab-32::main": {
+      "pageName": "home-tab-32",
+      "pageTitle": "首页tab-跑步机自由运动1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页tab-跑步机自由运动1.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.27649487436010145,
+          "y": 0.469982993239527,
+          "sourceText": "Pace",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "sport_unit_pace",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Power w",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "sport_unit_power_w",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Max consecutive jump count",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "sport_max_consecutive_jump_count",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Number of interruptions",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "sport_unit_interruptions",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "avg rpm",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "sport_unit_avg_rpm",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "RPM",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "sport_unit_rpm",
+              "iosTranslationId": ""
+            },
+            {
+              "sourceText": "SPM",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "sport_unit_spm",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.7678238245695228,
+          "y": 0.4618428014899174,
+          "sourceText": "Heart Rate",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "sport_unit_heart_rate",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-33::main": {
+      "pageName": "home-tab-33",
+      "pageTitle": "首页tab-跑步机自由运动2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页tab-跑步机自由运动2.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7717387003231858,
+          "y": 0.49983042923314563,
+          "sourceText": "AI Heart Rate Zones",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "ai_heart_rate_zones",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.5250955062800594,
+          "y": 0.3659694375149362,
+          "sourceText": "AI detected that you\\'re about to enter the orange fat-burning zone. Stay with it. Your best shape is within reach.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "target_13_step_2_min_low_90",
+          "iosTranslationId": "",
+          "note": "中间飘过的弹幕",
+          "subItems": [
+            {
+              "sourceText": "You\\'re now in the orange high fat-burning zone. Your results will prove every drop of sweat was worth it.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "target_13_step_2_min",
+              "iosTranslationId": "",
+              "note": ""
+            },
+            {
+              "sourceText": "If you\\'re feeling tired, slow down a bit and keep your heart rate in the optimal fat-burning zone.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "target_13_step_4_max",
+              "iosTranslationId": "",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    "home-tab-36::main": {
+      "pageName": "home-tab-36",
+      "pageTitle": "首页单车-模式跑2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页单车-模式跑2.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.10932938726679745,
+          "y": 0.5890677703951847,
+          "sourceText": "Suggested speed",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "suggested_speed",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Suggested resistance",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "suggested_resistance",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.30997089146260276,
+          "y": 0.5964364029714763,
+          "sourceText": "Current speed",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "current_speed",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Current resistance",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "current_resistance",
+              "iosTranslationId": ""
+            }
+          ]
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-41::main": {
+      "pageName": "home-tab-41",
+      "pageTitle": "首页单车-模式跑7",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页单车-模式跑7.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6339951546931526,
+          "y": 0.48426834219504167,
+          "sourceText": "This device does not currently support that feature",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "not_support_that_feature",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.5636554451560828,
+          "y": 0.3344379162341354,
+          "sourceText": "Notice",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "alert_notice",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.5728803098655251,
+          "y": 0.6588170668486669,
+          "sourceText": "Exit",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "exit_alert_end",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    }
+  }
+}

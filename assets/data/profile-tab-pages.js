@@ -338,6 +338,7 @@
     id: 'home-tab',
     label: '首页tab',
     directory: '首页tab',
+    annotationFile: '标注结果/首页tab/标注-最终结果.json',
     pages: copyPages(homePages),
     reviewPages: copyPages(homePages),
     variants: {},
