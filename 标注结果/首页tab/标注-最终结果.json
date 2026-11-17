@@ -6,35 +6,14 @@
     "sourceLanguage": "英文",
     "targetLocale": "en",
     "targetLanguage": "英文",
-    "exportedAt": "2026-11-17T02:25:50.357Z",
-    "targetCount": 15,
-    "pointCount": 29,
-    "subItemCount": 26,
+    "exportedAt": "2026-11-17T07:16:59.308Z",
+    "targetCount": 18,
+    "pointCount": 43,
+    "subItemCount": 29,
     "imagePointCount": 0,
-    "notePointCount": 11
+    "notePointCount": 12
   },
   "targets": {
-    "home-tab-11::main": {
-      "pageName": "home-tab-11",
-      "pageTitle": "课程详情页3",
-      "variantId": null,
-      "imageRef": "assets/screenshots/首页tab/课程详情页3.jpg?v=offline-info-page-v2-20261113-13",
-      "items": [
-        {
-          "number": 1,
-          "x": 0.4920051117414207,
-          "y": 0.5413002314327793,
-          "sourceText": "Find more in the store",
-          "translation": "",
-          "translations": {},
-          "androidTranslationId": "find_more_in_store",
-          "iosTranslationId": "",
-          "subItems": []
-        }
-      ],
-      "imageItems": [],
-      "noteItems": []
-    },
     "home-tab-05::main": {
       "pageName": "home-tab-05",
       "pageTitle": "单车连接蓝牙上课3",
@@ -156,6 +135,27 @@
           "subItems": []
         }
       ]
+    },
+    "home-tab-11::main": {
+      "pageName": "home-tab-11",
+      "pageTitle": "课程详情页3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/课程详情页3.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.4920051117414207,
+          "y": 0.5413002314327793,
+          "sourceText": "Find more in the store",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "find_more_in_store",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
     },
     "home-tab-17::main": {
       "pageName": "home-tab-17",
@@ -819,6 +819,1266 @@
           "androidTranslationId": "exit_alert_end",
           "iosTranslationId": "",
           "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-42::main": {
+      "pageName": "home-tab-42",
+      "pageTitle": "首页单车模式骑行",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页单车模式骑行.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5901008741604109,
+          "y": 0.14165964524444,
+          "sourceText": "%1$s-Ratings",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "person_rating_format",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.1395369584832647,
+          "y": 0.17091942174837016,
+          "sourceText": "Duration",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "sport_unit_duration",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.3648304691584014,
+          "y": 0.1670633148952855,
+          "sourceText": "Distance",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "mode_distance",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.6881680823268952,
+          "y": 0.2131710339826455,
+          "sourceText": "Consumption",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "mode_consumption",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.9134615930020319,
+          "y": 0.16224314896709435,
+          "sourceText": "Max resistance",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "mode_max_resistance",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "Max speed",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "mode_max_speed",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "x": 0.8738264212303166,
+          "y": 0.26635835761873333,
+          "sourceText": "Level",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "mode_level",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "x": 0.15413933121827544,
+          "y": 0.2682864110452756,
+          "sourceText": "min",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "mode_min",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 8,
+          "x": 0.5045957166401321,
+          "y": 0.2908658460827099,
+          "sourceText": "Mode Introduction",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "mode_introduction",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 9,
+          "x": 0.3523140696400492,
+          "y": 0.595092534784766,
+          "sourceText": "Mode plan",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "mode_plan",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 10,
+          "x": 0.644360964121863,
+          "y": 0.9290233107477927,
+          "sourceText": "Let\\'s Go",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "lets_go",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": [
+        {
+          "number": 1,
+          "x": 0.3022490317850414,
+          "y": 0.9180424222238303,
+          "sourceText": "Unlock All Workouts",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "activate_membership",
+          "iosTranslationId": "",
+          "note": "不是会员的时候",
+          "subItems": [
+            {
+              "sourceText": "Get full access with membership",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "membership_unlocks_all_scenes",
+              "iosTranslationId": "",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    "home-tab-45::main": {
+      "pageName": "home-tab-45",
+      "pageTitle": "首页单车椭圆机tab1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页单车椭圆机tab1.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.13536501204994766,
+          "y": 0.11023075412526023,
+          "sourceText": "All Courses",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "all_courses",
+          "iosTranslationId": "",
+          "subItems": [
+            {
+              "sourceText": "All plan",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "All_plan",
+              "iosTranslationId": ""
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.5692634073393512,
+          "y": 0.12417909350356866,
+          "sourceText": "(total %1$d class)",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "total_class_format",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-58::main": {
+      "pageName": "home-tab-58",
+      "pageTitle": "首页单车运营tab1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页单车运营tab1.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6923553725086004,
+          "y": 0.07456166864872121,
+          "sourceText": "Free exercise",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "free_exercise",
+          "iosTranslationId": "",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.8592663108606651,
+          "y": 0.43795563037036567,
+          "sourceText": "The following methods can also record exercise data",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "other_sport_mode",
+          "iosTranslationId": "",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-62::main": {
+      "pageName": "home-tab-62",
+      "pageTitle": "首页单车自由运动",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页单车自由运动.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7611833756345178,
+          "y": 0.5994465265877997,
+          "sourceText": "The following methods can also record exercise data",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Free_Exercise_Page_Segmentation_Content",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-66::main": {
+      "pageName": "home-tab-66",
+      "pageTitle": "首页模式跑1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页模式跑1.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.30110842322335024,
+          "y": 0.6073591804195035,
+          "sourceText": "Mode plan",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Plan",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-70::main": {
+      "pageName": "home-tab-70",
+      "pageTitle": "首页跑步机实景跑2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页跑步机实景跑2.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.15580385469543148,
+          "y": 0.2221530936239595,
+          "sourceText": "Achieved the goal",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Goal_Did_Complete",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-74::main": {
+      "pageName": "home-tab-74",
+      "pageTitle": "首页跑步机实景跑6",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页跑步机实景跑6.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7203065513959391,
+          "y": 0.6783393964940575,
+          "sourceText": "km",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Unit_km",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-75::main": {
+      "pageName": "home-tab-75",
+      "pageTitle": "首页跑步机实景跑7",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页跑步机实景跑7.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6490918464467005,
+          "y": 0.533043462324405,
+          "sourceText": "Set goals",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Set_Goals",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.29691465736040606,
+          "y": 0.6290032896846851,
+          "sourceText": "Distance",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Flag_Distance",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.641041402284264,
+          "y": 0.6210264915833554,
+          "sourceText": "Duration",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Flag_Duration",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.2588138483502538,
+          "y": 0.9013232046477105,
+          "sourceText": "Run without goal",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Run_Out_Goal",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "x": 0.8811766338832487,
+          "y": 0.8839538527797377,
+          "sourceText": "Start",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Popup_Start",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "x": 0.5523873730964467,
+          "y": 0.7771032447836964,
+          "sourceText": "minutes",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Unit_minutes",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-84::main": {
+      "pageName": "home-tab-84",
+      "pageTitle": "首页切换tab",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页切换tab.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.8729973032994924,
+          "y": 0.3629053688753677,
+          "sourceText": "Long press and drag to sort",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Can_Drag",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.3746430837563452,
+          "y": 0.07306490483739428,
+          "sourceText": "All Categories",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_All_Class",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-86::main": {
+      "pageName": "home-tab-86",
+      "pageTitle": "首页实景跑2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页实景跑2.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.17753608819796954,
+          "y": 0.9044662738593774,
+          "sourceText": "Let’s Go",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Start",
+          "subItems": [
+            {
+              "sourceText": "Unlock All Workouts",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open"
+            },
+            {
+              "sourceText": "Get full access with membership",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open_Subtitle_Programmed"
+            },
+            {
+              "sourceText": "Get full access with membership",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open_Subtitle_Scenes"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.49278236040609136,
+          "y": 0.3966086008302101,
+          "sourceText": "Mode Introduction",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Introduction",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-90::main": {
+      "pageName": "home-tab-90",
+      "pageTitle": "首页椭圆机实景跑2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页椭圆机实景跑2.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5626685437817259,
+          "y": 0.29948073126770236,
+          "sourceText": "Notice",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Notice_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.6965121351522843,
+          "y": 0.42753840872028154,
+          "sourceText": "Workouts under 2 minutes won’t be saved. End now?",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_2_Min_Quit_Title",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.3718571541878173,
+          "y": 0.6982018710840271,
+          "sourceText": "Exit",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Sure_Quit_Sport",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.6044475729695431,
+          "y": 0.7370826538494549,
+          "sourceText": "Continue",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Sure_Stay_Sport",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-93::main": {
+      "pageName": "home-tab-93",
+      "pageTitle": "首页椭圆机实景跑5",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页椭圆机实景跑5.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6075111040609137,
+          "y": 0.2339284181615312,
+          "sourceText": "The bluetooth device has been activated, and data connection synchronization is in progress",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Bluetooth_Connect_Status_Start",
+          "subItems": [
+            {
+              "sourceText": "The bluetooth component is about to enter sleep mode. Please try stepping on the pedal or tapping the screen to keep the Bluetooth enabled. Once the Bluetooth enters sleep mode, it will no longer be able to continue syncing device data",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Sleep"
+            },
+            {
+              "sourceText": "The bluetooth component is about to enter sleep mode.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Sleep_Title"
+            },
+            {
+              "sourceText": "Please try stepping on the pedal or tapping the screen to keep the bluetooth enabled. Once the bluetooth enters sleep mode, it will no longer be able to continue syncing device data",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Sleep_Content"
+            },
+            {
+              "sourceText": "Bluetooth connection failed. Please try to reconnect",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Fail"
+            },
+            {
+              "sourceText": "Bluetooth has been disconnected. Please try to reconnect",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Lost"
+            },
+            {
+              "sourceText": "Bluetooth connecting",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Ing"
+            },
+            {
+              "sourceText": "Bluetooth not connected",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Over"
+            },
+            {
+              "sourceText": "Bluetooth connection successful",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Success"
+            },
+            {
+              "sourceText": "Treadmill not connected",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Bluetooth_Connect_Status_Fail_Treadmill"
+            }
+          ]
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-95::main": {
+      "pageName": "home-tab-95",
+      "pageTitle": "首页椭圆机实景跑7",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页椭圆机实景跑7.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7413646097715736,
+          "y": 0.5866033880912898,
+          "sourceText": "Speed",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Flag_Speed",
+          "subItems": [
+            {
+              "sourceText": "Incline",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Incline"
+            },
+            {
+              "sourceText": "Resistance",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Resistance"
+            },
+            {
+              "sourceText": "Count",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_Count"
+            }
+          ]
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-96::main": {
+      "pageName": "home-tab-96",
+      "pageTitle": "首页椭圆机自由运动1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页椭圆机自由运动1.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.5908252696700508,
+          "y": 0.6629957763383327,
+          "sourceText": "Speed",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Flag_Speed_Adjust",
+          "subItems": [
+            {
+              "sourceText": "Incline",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Incline_Adjust"
+            },
+            {
+              "sourceText": "Resistance",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Resistance_Adjust"
+            }
+          ]
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-97::main": {
+      "pageName": "home-tab-97",
+      "pageTitle": "首页椭圆机自由运动2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页椭圆机自由运动2.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6033173381979695,
+          "y": 0.23925989720285487,
+          "sourceText": "Distance (km)",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Unit_Distance_km",
+          "subItems": [
+            {
+              "sourceText": "Duration",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Duration"
+            },
+            {
+              "sourceText": "Kcal",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_Kcal"
+            },
+            {
+              "sourceText": "Pace",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_Pace"
+            },
+            {
+              "sourceText": "Heart Rate",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_Heart_Rate"
+            },
+            {
+              "sourceText": "RPM",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_RPM"
+            },
+            {
+              "sourceText": "SPM",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_SPM"
+            },
+            {
+              "sourceText": "times",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_times"
+            },
+            {
+              "sourceText": "s",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_s"
+            },
+            {
+              "sourceText": "Count",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_Count"
+            },
+            {
+              "sourceText": "rpm time/min",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_RPM_T/M"
+            },
+            {
+              "sourceText": "Max consecutive jump count",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_Max_Consecutive_Count"
+            },
+            {
+              "sourceText": "Number of interruptions",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_Interruptions_Count"
+            }
+          ]
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-110::main": {
+      "pageName": "home-tab-110",
+      "pageTitle": "首页运营tab2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页运营tab2.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6630115799492385,
+          "y": 0.9111418596340112,
+          "sourceText": "Let’s Go",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Free_Exercise_Page_Bottom_Start",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.6658272525380711,
+          "y": 0.07188281758286065,
+          "sourceText": "Free exercise",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Free_Exercise_Page_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-111::main": {
+      "pageName": "home-tab-111",
+      "pageTitle": "首页运营tab3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页运营tab3.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.24406131027918782,
+          "y": 0.0358566467208533,
+          "sourceText": "Running",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Segment_Title_Running",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.38325864530456855,
+          "y": 0.036067406463909685,
+          "sourceText": "Cycling",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Segment_Title_Cycling",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.594434089467005,
+          "y": 0.038115441358392364,
+          "sourceText": "Cross Training",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Segment_Title_Cross_Training",
+          "subItems": [
+            {
+              "sourceText": "Rowing",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_Segment_Title_Rowing"
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "x": 0.15848072652284265,
+          "y": 0.3495541973261003,
+          "sourceText": "Duration",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_List_Duration",
+          "subItems": [
+            {
+              "sourceText": "Distance",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_List_Distance"
+            },
+            {
+              "sourceText": "Consumption",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_List_Kcal"
+            },
+            {
+              "sourceText": "Max speed",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Speed"
+            },
+            {
+              "sourceText": "Max resistance",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Resis"
+            },
+            {
+              "sourceText": "Total length",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_List_How_Long"
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "x": 0.1477831535532995,
+          "y": 0.4343712487056603,
+          "sourceText": "min",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_List_Duration_Unit",
+          "subItems": [
+            {
+              "sourceText": "km",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_List_Distance_Unit"
+            },
+            {
+              "sourceText": "kcal",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_List_Kcal_Unit"
+            },
+            {
+              "sourceText": "km/h",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Speed_Unit"
+            },
+            {
+              "sourceText": "level",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Resis_Unit"
+            },
+            {
+              "sourceText": "KM",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_List_How_Long_Unit"
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "x": 0.9050305361675127,
+          "y": 0.6877686041290583,
+          "sourceText": "Ratings",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Com_Person_Count",
+          "subItems": []
+        }
+      ],
+      "imageItems": [
+        {
+          "number": 1,
+          "x": 0.22637412753807107,
+          "y": 0.15257172703864233,
+          "androidResourceId": "",
+          "iosResourceId": "train_plan_detail_page_free_flag_icon_image"
+        },
+        {
+          "number": 2,
+          "x": 0.3211552189086294,
+          "y": 0.1534330929450467,
+          "androidResourceId": "",
+          "iosResourceId": "train_plan_detail_page_vip_flag_icon_image"
+        },
+        {
+          "number": 3,
+          "x": 0.41569836611675126,
+          "y": 0.15463350713375912,
+          "androidResourceId": "",
+          "iosResourceId": "train_plan_detail_page_vip_buy_flag_icon_image"
+        },
+        {
+          "number": 4,
+          "x": 0.5328858661167513,
+          "y": 0.15735963859285798,
+          "androidResourceId": "",
+          "iosResourceId": "train_plan_detail_page_unlock_flag_icon_image"
+        }
+      ],
+      "noteItems": []
+    },
+    "home-tab-115::main": {
+      "pageName": "home-tab-115",
+      "pageTitle": "首页自由训练tab1",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页自由训练tab1.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6906329314720813,
+          "y": 0.5735230781918647,
+          "sourceText": "Join Now",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Card_Join_Now",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-118::main": {
+      "pageName": "home-tab-118",
+      "pageTitle": "首页自由训练tab5",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页自由训练tab5.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.20608938769035534,
+          "y": 0.9365658990735735,
+          "sourceText": "Home",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Home_Page_Tab_Title",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.4594999206852792,
+          "y": 0.9311227996224651,
+          "sourceText": "Plan",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Plan_Page_Tab_Title",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.685546875,
+          "y": 0.9330242190435173,
+          "sourceText": "Course",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Course_Page_Tab_Title",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.9347933851522843,
+          "y": 0.9242318723712304,
+          "sourceText": "Profile",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Mine_Page_Tab_Title",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-119::main": {
+      "pageName": "home-tab-119",
+      "pageTitle": "首页自由训练tab6",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/首页自由训练tab6.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.08596724302030456,
+          "y": 0.29599831392205556,
+          "sourceText": "All courses",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Collection_Page_All_Courses",
+          "subItems": [
+            {
+              "sourceText": "All plan",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Collection_Page_All_Plan"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "x": 0.310983105964467,
+          "y": 0.2982800172273181,
+          "sourceText": "total",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Collection_Page_All_Total",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.44958558058375636,
+          "y": 0.29738657918610084,
+          "sourceText": "class",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Collection_Page_All_Class",
+          "subItems": []
+        }
+      ],
+      "imageItems": [
+        {
+          "number": 1,
+          "x": 0.08295328362944163,
+          "y": 0.3987665973297657,
+          "androidResourceId": "",
+          "iosResourceId": "home_page_collection_rank_no_1_image"
+        },
+        {
+          "number": 2,
+          "x": 0.06838911802030456,
+          "y": 0.5683869548882515,
+          "androidResourceId": "",
+          "iosResourceId": "home_page_collection_rank_no_2_image"
+        },
+        {
+          "number": 3,
+          "x": 0.0641953521573604,
+          "y": 0.7462361058930257,
+          "androidResourceId": "",
+          "iosResourceId": "home_page_collection_rank_no_3_image"
+        }
+      ],
+      "noteItems": []
+    },
+    "home-tab-122::main": {
+      "pageName": "home-tab-122",
+      "pageTitle": "椭圆机连接蓝牙课程3",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/椭圆机连接蓝牙课程3.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7307066941624365,
+          "y": 0.7207321259977685,
+          "sourceText": "Valuable member users, you can watch this paid course in its entirety",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Live_Page_Try_Tip_Vip_Content",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.7099460659898477,
+          "y": 0.936850914084628,
+          "sourceText": "Duration",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Flag_Duration",
+          "subItems": [
+            {
+              "sourceText": "KCAL",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_Kcal"
+            },
+            {
+              "sourceText": "Distance (km)",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_Distance_km"
+            },
+            {
+              "sourceText": "Score",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Score_DF"
+            },
+            {
+              "sourceText": "Cadence",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_Cadence"
+            },
+            {
+              "sourceText": "Speed km/h",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_Speed_km/h"
+            },
+            {
+              "sourceText": "Power",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Live_Page_Bottom_Unit_Power"
+            },
+            {
+              "sourceText": "Step Count",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Live_Page_Bottom_Unit_Step_Count"
+            },
+            {
+              "sourceText": "SPM",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Live_Page_Bottom_Unit_SPM"
+            },
+            {
+              "sourceText": "Count",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Live_Page_Bottom_Unit_Count"
+            },
+            {
+              "sourceText": "Number of interruptions",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Live_Page_Bottom_Unit_Break_Count"
+            }
+          ]
         }
       ],
       "imageItems": [],
