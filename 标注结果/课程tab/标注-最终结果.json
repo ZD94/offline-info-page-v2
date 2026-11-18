@@ -27,7 +27,16 @@
           "sourceText": "Course",
           "reviewedSourceText": "Classes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คลาส",
+            "ms": "Kelas",
+            "de": "Kurse",
+            "tr": "Dersler",
+            "fr": "Cours",
+            "uk": "Заняття",
+            "ar-SA": "الحصص",
+            "zh": "课程"
+          },
           "androidTranslationId": "home_tab_course",
           "iosTranslationId": "Course_Page_Title",
           "subItems": []
@@ -38,7 +47,16 @@
           "y": 0.10323304579563784,
           "sourceText": "View all",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ดูทั้งหมด",
+            "ms": "Lihat semua",
+            "de": "Alle anzeigen",
+            "tr": "Tümünü görüntüle",
+            "fr": "Tout afficher",
+            "uk": "Переглянути все",
+            "ar-SA": "عرض الكل",
+            "zh": "查看全部"
+          },
           "androidTranslationId": "view_all",
           "iosTranslationId": "Course_Page_View_All",
           "subItems": []
@@ -59,7 +77,16 @@
           "y": 0.1831264464548706,
           "sourceText": "Filter",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "กรอง",
+            "ms": "Tapis",
+            "de": "Filtern",
+            "tr": "Filtrele",
+            "fr": "Filtrer",
+            "uk": "Фільтрувати",
+            "ar-SA": "تصفية",
+            "zh": "筛选"
+          },
           "androidTranslationId": "filter",
           "iosTranslationId": "Course_Page_Filter_Title",
           "subItems": []
@@ -81,7 +108,16 @@
           "sourceText": "No relevant content available at the moment",
           "reviewedSourceText": "No content available right now",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ขณะนี้ยังไม่มีเนื้อหา",
+            "ms": "Tiada kandungan tersedia buat masa ini",
+            "de": "Derzeit sind keine Inhalte verfügbar",
+            "tr": "Şu anda kullanılabilir içerik yok",
+            "fr": "Aucun contenu disponible pour le moment",
+            "uk": "Наразі немає доступного вмісту",
+            "ar-SA": "لا يوجد محتوى متاح حاليًا",
+            "zh": "当前暂无内容"
+          },
           "androidTranslationId": "no_content",
           "iosTranslationId": "Alert_Empty_Tip",
           "subItems": []
@@ -96,7 +132,16 @@
           "sourceText": "The network connection is not available, please check the network settings",
           "reviewedSourceText": "No network connection. Please check your network settings.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไม่มีการเชื่อมต่อเครือข่าย โปรดตรวจสอบการตั้งค่าเครือข่าย",
+            "ms": "Tiada sambungan rangkaian. Sila semak tetapan rangkaian anda.",
+            "de": "Keine Netzwerkverbindung. Bitte überprüfe deine Netzwerkeinstellungen.",
+            "tr": "Ağ bağlantısı yok. Lütfen ağ ayarlarınızı kontrol edin.",
+            "fr": "Aucune connexion réseau. Vérifiez vos paramètres réseau.",
+            "uk": "Немає з’єднання з мережею. Перевірте налаштування мережі.",
+            "ar-SA": "لا يوجد اتصال بالشبكة. يُرجى التحقق من إعدادات الشبكة.",
+            "zh": "网络未连接，请检查网络设置。"
+          },
           "androidTranslationId": "network_error",
           "iosTranslationId": "Alert_Empty_Network_Tip",
           "note": "API请求失败toast",
@@ -117,7 +162,16 @@
           "sourceText": "No more data",
           "reviewedSourceText": "No more courses",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไม่มีคลาสเพิ่มเติม",
+            "ms": "Tiada lagi kelas",
+            "de": "Keine weiteren Kurse",
+            "tr": "Başka ders yok",
+            "fr": "Aucun autre cours",
+            "uk": "Більше немає занять",
+            "ar-SA": "لا توجد حصص أخرى",
+            "zh": "没有更多课程"
+          },
           "androidTranslationId": "load_end",
           "iosTranslationId": "MJRefreshBackFooterNoMoreDataText",
           "subItems": []
@@ -140,7 +194,16 @@
           "y": 0.5062907637281717,
           "sourceText": "Scroll to top",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เลื่อนไปด้านบน",
+            "ms": "Tatal ke atas",
+            "de": "Nach oben",
+            "tr": "Başa dön",
+            "fr": "Revenir en haut",
+            "uk": "Прокрутити вгору",
+            "ar-SA": "العودة إلى الأعلى",
+            "zh": "回到顶部"
+          },
           "androidTranslationId": "scroll_to_top",
           "iosTranslationId": "Course_Page_Filter_Click_Top",
           "note": "滑动到最底部了，可以快速到滑动回顶部",
@@ -160,7 +223,16 @@
           "y": 0.6086261308647171,
           "sourceText": "minutes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "นาที",
+            "ms": "minit",
+            "de": "Minuten",
+            "tr": "dakika",
+            "fr": "minutes",
+            "uk": "хвилини",
+            "ar-SA": "دقائق",
+            "zh": "分钟"
+          },
           "androidTranslationId": "minutes",
           "iosTranslationId": "Unit_minutes",
           "subItems": []
@@ -171,7 +243,16 @@
           "y": 0.6687706010239147,
           "sourceText": "kcal",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "kcal",
+            "ms": "kcal",
+            "de": "kcal",
+            "tr": "kcal",
+            "fr": "kcal",
+            "uk": "kcal",
+            "ar-SA": "kcal",
+            "zh": "kcal"
+          },
           "androidTranslationId": "kcal_lowercase",
           "iosTranslationId": "Unit_kcal",
           "subItems": []
@@ -182,7 +263,16 @@
           "y": 0.6669752437057297,
           "sourceText": "km",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "km",
+            "ms": "km",
+            "de": "km",
+            "tr": "km",
+            "fr": "km",
+            "uk": "km",
+            "ar-SA": "km",
+            "zh": "km"
+          },
           "androidTranslationId": "km",
           "iosTranslationId": "Unit_km",
           "subItems": []
@@ -194,7 +284,16 @@
           "sourceText": "Course introduction",
           "reviewedSourceText": "About this class",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เกี่ยวกับคลาสนี้",
+            "ms": "Tentang kelas ini",
+            "de": "Über diesen Kurs",
+            "tr": "Bu ders hakkında",
+            "fr": "À propos de ce cours",
+            "uk": "Про це заняття",
+            "ar-SA": "حول هذه الحصة",
+            "zh": "课程简介"
+          },
           "androidTranslationId": "course_introduction",
           "iosTranslationId": "Course_Page_Info_Intorduction",
           "subItems": []
@@ -205,7 +304,16 @@
           "y": 0.9219159828880006,
           "sourceText": "Get Started",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เริ่มเลย",
+            "ms": "Mulakan",
+            "de": "Loslegen",
+            "tr": "Başla",
+            "fr": "Commencer",
+            "uk": "Почати",
+            "ar-SA": "ابدأ",
+            "zh": "开始"
+          },
           "androidTranslationId": "course_start",
           "iosTranslationId": "Course_Detail_Page_Start",
           "subItems": [
@@ -213,7 +321,16 @@
               "sourceText": "Appointment successful",
               "reviewedSourceText": "Booked",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จองแล้ว",
+                "ms": "Telah ditempah",
+                "de": "Gebucht",
+                "tr": "Rezervasyon yapıldı",
+                "fr": "Réservé",
+                "uk": "Заброньовано",
+                "ar-SA": "تم الحجز",
+                "zh": "已预约"
+              },
               "androidTranslationId": "appointment_successful",
               "iosTranslationId": "Course_Detail_Page_Appointment_Success"
             },
@@ -221,7 +338,16 @@
               "sourceText": "Make an appointment immediately",
               "reviewedSourceText": "Book now",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จองเลย",
+                "ms": "Tempah sekarang",
+                "de": "Jetzt buchen",
+                "tr": "Şimdi rezervasyon yap",
+                "fr": "Réserver",
+                "uk": "Забронювати",
+                "ar-SA": "احجز الآن",
+                "zh": "立即预约"
+              },
               "androidTranslationId": "appointment_immediately",
               "iosTranslationId": "Course_Detail_Page_Appointment_Make"
             }
@@ -233,7 +359,16 @@
           "y": 0.6768497089557473,
           "sourceText": "Fitness equipment",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "อุปกรณ์ออกกำลังกาย",
+            "ms": "Peralatan kecergasan",
+            "de": "Fitnessgeräte",
+            "tr": "Fitness ekipmanları",
+            "fr": "Matériel de fitness",
+            "uk": "Фітнес-обладнання",
+            "ar-SA": "معدات اللياقة البدنية",
+            "zh": "健身器材"
+          },
           "androidTranslationId": "fitness_equipment",
           "iosTranslationId": "Course_Detail_Page_Equipment",
           "subItems": []
@@ -248,7 +383,16 @@
           "sourceText": "Network connection not available, please check network settings",
           "reviewedSourceText": "No network connection. Please check your network settings.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไม่มีการเชื่อมต่อเครือข่าย โปรดตรวจสอบการตั้งค่าเครือข่าย",
+            "ms": "Tiada sambungan rangkaian. Sila semak tetapan rangkaian anda.",
+            "de": "Keine Netzwerkverbindung. Bitte überprüfe deine Netzwerkeinstellungen.",
+            "tr": "Ağ bağlantısı yok. Lütfen ağ ayarlarınızı kontrol edin.",
+            "fr": "Aucune connexion réseau. Vérifiez vos paramètres réseau.",
+            "uk": "Немає з’єднання з мережею. Перевірте налаштування мережі.",
+            "ar-SA": "لا يوجد اتصال بالشبكة. يُرجى التحقق من إعدادات الشبكة.",
+            "zh": "网络未连接，请检查网络设置。"
+          },
           "androidTranslationId": "network_not_available",
           "iosTranslationId": "Alert_Empty_Network_Tip",
           "note": "网络不可用的时候的toast",
@@ -261,7 +405,16 @@
           "sourceText": "Special features of this course",
           "reviewedSourceText": "Class highlights",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "จุดเด่นของคลาส",
+            "ms": "Sorotan kelas",
+            "de": "Kurs-Highlights",
+            "tr": "Dersin öne çıkanları",
+            "fr": "Points forts du cours",
+            "uk": "Переваги заняття",
+            "ar-SA": "أبرز مميزات الحصة",
+            "zh": "课程亮点"
+          },
           "androidTranslationId": "special_features_of_this_course",
           "iosTranslationId": "Course_Page_Info_Intorduction",
           "note": "介绍课程特点的标题",
@@ -270,7 +423,16 @@
               "sourceText": "Suitable population",
               "reviewedSourceText": "Who it's for",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เหมาะสำหรับใคร",
+                "ms": "Sesuai untuk",
+                "de": "Geeignet für",
+                "tr": "Kimler için uygun",
+                "fr": "À qui s’adresse ce cours",
+                "uk": "Для кого це заняття",
+                "ar-SA": "الفئة المناسبة",
+                "zh": "适合人群"
+              },
               "androidTranslationId": "suitable_population",
               "iosTranslationId": "",
               "note": "适合人群的标题"
@@ -279,7 +441,16 @@
               "sourceText": "Areas of exercise",
               "reviewedSourceText": "Target areas",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "บริเวณเป้าหมาย",
+                "ms": "Bahagian sasaran",
+                "de": "Zielbereiche",
+                "tr": "Hedef bölgeler",
+                "fr": "Zones ciblées",
+                "uk": "Цільові зони",
+                "ar-SA": "المناطق المستهدفة",
+                "zh": "目标部位"
+              },
               "androidTranslationId": "areas_of_exercise",
               "iosTranslationId": "",
               "note": "锻炼部位的标题"
@@ -287,7 +458,16 @@
             {
               "sourceText": "Course schedule",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ตารางคลาส",
+                "ms": "Jadual kelas",
+                "de": "Kursplan",
+                "tr": "Ders programı",
+                "fr": "Programme du cours",
+                "uk": "Розклад курсу",
+                "ar-SA": "جدول الحصص",
+                "zh": "课程安排"
+              },
               "androidTranslationId": "course_schedule",
               "iosTranslationId": "Course_Detail_Page_Plan_Title",
               "note": "课程安排的标题"
@@ -300,7 +480,16 @@
           "y": 0.8456132968651378,
           "sourceText": "Content",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เนื้อหา",
+            "ms": "Kandungan",
+            "de": "Inhalt",
+            "tr": "İçerik",
+            "fr": "Contenu",
+            "uk": "Зміст",
+            "ar-SA": "المحتوى",
+            "zh": "内容"
+          },
           "androidTranslationId": "content",
           "iosTranslationId": "Course_Detail_Page_Content",
           "note": "课程安排的阶段表格标题",
@@ -308,7 +497,16 @@
             {
               "sourceText": "Duration",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ระยะเวลา",
+                "ms": "Tempoh",
+                "de": "Dauer",
+                "tr": "Süre",
+                "fr": "Durée",
+                "uk": "Тривалість",
+                "ar-SA": "المدة",
+                "zh": "时长"
+              },
               "androidTranslationId": "sport_unit_duration",
               "iosTranslationId": "Flag_Duration",
               "note": "课程安排的阶段表格持续时间标题"
@@ -316,7 +514,16 @@
             {
               "sourceText": "Speed",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ความเร็ว",
+                "ms": "Kelajuan",
+                "de": "Geschwindigkeit",
+                "tr": "Hız",
+                "fr": "Vitesse",
+                "uk": "Швидкість",
+                "ar-SA": "السرعة",
+                "zh": "速度"
+              },
               "androidTranslationId": "speed",
               "iosTranslationId": "Flag_Speed",
               "note": "课程安排的阶段表格持续速度标题"
@@ -324,7 +531,16 @@
             {
               "sourceText": "Resistance",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แรงต้าน",
+                "ms": "Rintangan",
+                "de": "Widerstand",
+                "tr": "Direnç",
+                "fr": "Résistance",
+                "uk": "Опір",
+                "ar-SA": "المقاومة",
+                "zh": "阻力"
+              },
               "androidTranslationId": "resistance",
               "iosTranslationId": "Course_Detail_Page_Recommended_Resistance",
               "note": "课程安排的阶段表格持续阻力标题"
@@ -337,7 +553,16 @@
           "y": 0.7702082895013675,
           "sourceText": "More",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เพิ่มเติม",
+            "ms": "Lagi",
+            "de": "Mehr",
+            "tr": "Daha fazla",
+            "fr": "Plus",
+            "uk": "Більше",
+            "ar-SA": "المزيد",
+            "zh": "更多"
+          },
           "androidTranslationId": "more_first_up",
           "iosTranslationId": "Flag_More",
           "note": "营销位，更多设备型号",
@@ -357,7 +582,16 @@
           "y": 0.3352072783452064,
           "sourceText": "Notice",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แจ้งเตือน",
+            "ms": "Notis",
+            "de": "Hinweis",
+            "tr": "Uyarı",
+            "fr": "Avis",
+            "uk": "Увага",
+            "ar-SA": "تنبيه",
+            "zh": "提示"
+          },
           "androidTranslationId": "alert_notice",
           "iosTranslationId": "Alert_Notice_Title",
           "subItems": []
@@ -368,14 +602,32 @@
           "y": 0.4423225474208222,
           "sourceText": "Do you want to exit?",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คุณต้องการออกหรือไม่",
+            "ms": "Adakah anda mahu keluar?",
+            "de": "Möchtest du das Training beenden?",
+            "tr": "Çıkmak istiyor musunuz?",
+            "fr": "Voulez-vous quitter ?",
+            "uk": "Ви хочете вийти?",
+            "ar-SA": "هل تريد الخروج؟",
+            "zh": "确定要退出吗？"
+          },
           "androidTranslationId": "alert_sure_exit",
           "iosTranslationId": "Alert_Sure_Quit",
           "subItems": [
             {
               "sourceText": "Workouts under 2 minutes won’t be saved. End now?",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "การฝึกที่สั้นกว่า 2 นาทีจะไม่ถูกบันทึก ต้องการจบตอนนี้หรือไม่",
+                "ms": "Latihan kurang daripada 2 minit tidak akan disimpan. Tamatkan sekarang?",
+                "de": "Trainings unter 2 Minuten werden nicht gespeichert. Jetzt beenden?",
+                "tr": "2 dakikadan kısa antrenmanlar kaydedilmez. Şimdi sonlandırmak istiyor musunuz?",
+                "fr": "Les entraînements de moins de 2 minutes ne seront pas enregistrés. Terminer maintenant ?",
+                "uk": "Тренування тривалістю менше 2 хвилин не зберігаються. Завершити зараз?",
+                "ar-SA": "لن يتم حفظ التمارين التي تقل مدتها عن 2 دقيقة. هل تريد الإنهاء الآن؟",
+                "zh": "少于 2 分钟的训练不会保存，确定现在结束吗？"
+              },
               "androidTranslationId": "exit_alert_less_than_2_mins",
               "iosTranslationId": "Alert_2_Min_Quit_Title"
             }
@@ -387,7 +639,16 @@
           "y": 0.679684147283495,
           "sourceText": "Exit",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ออก",
+            "ms": "Keluar",
+            "de": "Beenden",
+            "tr": "Çık",
+            "fr": "Quitter",
+            "uk": "Вийти",
+            "ar-SA": "خروج",
+            "zh": "退出"
+          },
           "androidTranslationId": "exit_alert_end",
           "iosTranslationId": "Alert_Sure_Quit_Sport",
           "subItems": []
@@ -398,7 +659,16 @@
           "y": 0.7032443567075788,
           "sourceText": "Continue",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ดำเนินการต่อ",
+            "ms": "Teruskan",
+            "de": "Fortsetzen",
+            "tr": "Devam et",
+            "fr": "Continuer",
+            "uk": "Продовжити",
+            "ar-SA": "متابعة",
+            "zh": "继续"
+          },
           "androidTranslationId": "exit_alert_continue",
           "iosTranslationId": "Alert_Sure_Stay_Sport",
           "subItems": []
@@ -419,7 +689,16 @@
           "y": 0.123723285554888,
           "sourceText": "Why did you quit the course?",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เหตุใดคุณจึงออกจากคลาส",
+            "ms": "Mengapakah anda keluar daripada kelas?",
+            "de": "Warum hast du den Kurs beendet?",
+            "tr": "Dersten neden çıktınız?",
+            "fr": "Pourquoi avez-vous quitté le cours ?",
+            "uk": "Чому ви вийшли із заняття?",
+            "ar-SA": "لماذا غادرت الحصة؟",
+            "zh": "您为什么退出课程？"
+          },
           "androidTranslationId": "why_quit_the_course",
           "iosTranslationId": "Live_Page_Quit_Feedback_Title",
           "subItems": []
@@ -430,7 +709,16 @@
           "y": 0.35168655051068576,
           "sourceText": "Too intense",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "หนักเกินไป",
+            "ms": "Terlalu mencabar",
+            "de": "Zu intensiv",
+            "tr": "Çok yoğun",
+            "fr": "Trop intense",
+            "uk": "Надто інтенсивно",
+            "ar-SA": "شديدة جدًا",
+            "zh": "强度太大"
+          },
           "androidTranslationId": "too_intense",
           "iosTranslationId": "Live_Page_Quit_Feedback_Reason_1",
           "subItems": []
@@ -442,7 +730,16 @@
           "sourceText": "Too easy for me.",
           "reviewedSourceText": "Too easy",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ง่ายเกินไป",
+            "ms": "Terlalu mudah",
+            "de": "Zu einfach",
+            "tr": "Çok kolay",
+            "fr": "Trop facile",
+            "uk": "Надто легко",
+            "ar-SA": "سهلة جدًا",
+            "zh": "太简单"
+          },
           "androidTranslationId": "too_easy_for_me",
           "iosTranslationId": "Live_Page_Quit_Feedback_Reason_2",
           "subItems": []
@@ -454,7 +751,16 @@
           "sourceText": "Just browsing for now.",
           "reviewedSourceText": "Just browsing",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แค่เข้ามาดู",
+            "ms": "Sekadar melihat-lihat",
+            "de": "Nur umgesehen",
+            "tr": "Sadece göz atıyordum",
+            "fr": "Je regardais simplement",
+            "uk": "Хотілося лише переглянути",
+            "ar-SA": "كنت أتصفح فقط",
+            "zh": "只是随便看看"
+          },
           "androidTranslationId": "just_browsing",
           "iosTranslationId": "Live_Page_Quit_Feedback_Reason_3",
           "subItems": []
@@ -466,7 +772,16 @@
           "sourceText": "Don\\'t like the coach.",
           "reviewedSourceText": "Don't like the coach",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไม่ชอบโค้ช",
+            "ms": "Tidak suka jurulatih",
+            "de": "Der Coach gefällt mir nicht",
+            "tr": "Antrenörü beğenmedim",
+            "fr": "Je n’aime pas le coach",
+            "uk": "Не подобається тренер",
+            "ar-SA": "لم يعجبني المدرب",
+            "zh": "不喜欢教练"
+          },
           "androidTranslationId": "don_t_like_coach",
           "iosTranslationId": "Live_Page_Quit_Feedback_Reason_4",
           "subItems": []
@@ -478,7 +793,16 @@
           "sourceText": "Not interested.",
           "reviewedSourceText": "Not interested",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไม่สนใจ",
+            "ms": "Tidak berminat",
+            "de": "Kein Interesse",
+            "tr": "İlgilenmiyorum",
+            "fr": "Cela ne m’intéresse pas",
+            "uk": "Нецікаво",
+            "ar-SA": "غير مهتم",
+            "zh": "不感兴趣"
+          },
           "androidTranslationId": "not_interested",
           "iosTranslationId": "Live_Page_Quit_Feedback_Reason_5",
           "subItems": []
@@ -489,7 +813,16 @@
           "y": 0.8378250793923269,
           "sourceText": "Cancel",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ยกเลิก",
+            "ms": "Batal",
+            "de": "Abbrechen",
+            "tr": "İptal",
+            "fr": "Annuler",
+            "uk": "Скасувати",
+            "ar-SA": "إلغاء",
+            "zh": "取消"
+          },
           "androidTranslationId": "cancel_lower",
           "iosTranslationId": "Alert_Cancel",
           "subItems": []
@@ -510,28 +843,64 @@
           "y": 0.7875145507896318,
           "sourceText": "Congratulations on completing session %1$s of your training program.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ขอแสดงความยินดีที่คุณฝึกเซสชันที่ %1$s ของโปรแกรมการฝึกสำเร็จ",
+            "ms": "Tahniah kerana melengkapkan sesi %1$s dalam program latihan anda.",
+            "de": "Glückwunsch zum Abschluss von Einheit %1$s deines Trainingsprogramms.",
+            "tr": "Antrenman programınızın %1$s. seansını tamamladığınız için tebrikler.",
+            "fr": "Félicitations, vous avez terminé la séance %1$s de votre programme d’entraînement.",
+            "uk": "Вітаємо із завершенням заняття %1$s вашої програми тренувань.",
+            "ar-SA": "تهانينا على إكمال الجلسة %1$s من برنامجك التدريبي.",
+            "zh": "恭喜完成训练计划的第 %1$s 节训练。"
+          },
           "androidTranslationId": "finish_course_format",
           "iosTranslationId": "",
           "subItems": [
             {
               "sourceText": "Today\\'s plan has been completed in full!",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คุณทำแผนของวันนี้ครบทั้งหมดแล้ว",
+                "ms": "Pelan hari ini telah diselesaikan sepenuhnya!",
+                "de": "Du hast den heutigen Plan vollständig abgeschlossen!",
+                "tr": "Bugünkü planın tamamını bitirdiniz!",
+                "fr": "Vous avez terminé l’intégralité du programme d’aujourd’hui !",
+                "uk": "Сьогоднішній план повністю виконано!",
+                "ar-SA": "لقد أكملت خطة اليوم بالكامل!",
+                "zh": "今天的计划已全部完成！"
+              },
               "androidTranslationId": "today_completed_all",
               "iosTranslationId": "Live_Page_Course_Finshed_Tip_All"
             },
             {
               "sourceText": "Congratulations on completing session ",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ขอแสดงความยินดีที่คุณฝึกเซสชันที่ ",
+                "ms": "Tahniah kerana melengkapkan sesi ",
+                "de": "Glückwunsch zum Abschluss von Einheit ",
+                "tr": "Antrenman programınızın ",
+                "fr": "Félicitations, vous avez terminé la séance ",
+                "uk": "Вітаємо із завершенням заняття ",
+                "ar-SA": "تهانينا على إكمال الجلسة ",
+                "zh": "恭喜完成训练计划的第 "
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Live_Page_Course_Finshed_Tip_Course_1"
             },
             {
               "sourceText": " of your training program.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": " ของโปรแกรมการฝึกสำเร็จ",
+                "ms": " dalam program latihan anda.",
+                "de": " deines Trainingsprogramms.",
+                "tr": ". seansını tamamladığınız için tebrikler.",
+                "fr": " de votre programme d’entraînement.",
+                "uk": " вашої програми тренувань.",
+                "ar-SA": " من برنامجك التدريبي.",
+                "zh": " 节训练。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Live_Page_Course_Finshed_Tip_Course_2"
             }
@@ -543,28 +912,64 @@
           "y": 0.6394349287812219,
           "sourceText": "Valuable member users, you can watch this paid course in its entirety",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "สมาชิกสามารถรับชมคลาสแบบชำระเงินนี้ได้เต็มรูปแบบ",
+            "ms": "Ahli boleh menonton kelas berbayar ini sepenuhnya",
+            "de": "Als Mitglied kannst du diesen kostenpflichtigen Kurs vollständig ansehen",
+            "tr": "Üyeler bu ücretli dersi baştan sona izleyebilir",
+            "fr": "Les membres peuvent regarder l’intégralité de ce cours payant",
+            "uk": "Учасники можуть повністю переглянути це платне заняття",
+            "ar-SA": "يمكن للأعضاء مشاهدة هذه الحصة المدفوعة بالكامل",
+            "zh": "会员可完整观看本付费课程"
+          },
           "androidTranslationId": "vip_watch_full_paid_course",
           "iosTranslationId": "Live_Page_Try_Tip_Vip_Content",
           "subItems": [
             {
               "sourceText": "You can watch the complete video by using an experience card",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ใช้บัตรทดลองเพื่อรับชมวิดีโอฉบับเต็มได้",
+                "ms": "Anda boleh menonton video penuh dengan menggunakan pas percubaan",
+                "de": "Mit einer Testkarte kannst du das vollständige Video ansehen",
+                "tr": "Deneme kartı kullanarak videonun tamamını izleyebilirsiniz",
+                "fr": "Vous pouvez regarder la vidéo complète avec une carte d’essai",
+                "uk": "За допомогою пробної картки можна переглянути повне відео",
+                "ar-SA": "يمكنك مشاهدة الفيديو بالكامل باستخدام بطاقة تجريبية",
+                "zh": "使用体验卡可观看完整视频"
+              },
               "androidTranslationId": "watch_complte_by_trail_card",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Paid courses offer a 2-minute trial, and you can watch the complete course by purchasing it",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คลาสแบบชำระเงินทดลองรับชมได้ 2 นาที และซื้อคลาสเพื่อรับชมฉบับเต็มได้",
+                "ms": "Kursus berbayar menawarkan percubaan selama 2 minit. Beli kursus untuk menontonnya sepenuhnya",
+                "de": "Kostenpflichtige Kurse bieten eine 2-minütige Vorschau. Kaufe den Kurs, um ihn vollständig anzusehen",
+                "tr": "Ücretli derslerde 2 dakikalık deneme sunulur. Dersin tamamını izlemek için satın alabilirsiniz",
+                "fr": "Les cours payants proposent un essai de 2 minutes. Achetez le cours pour le regarder en entier",
+                "uk": "Для платних занять доступний 2-хвилинний пробний перегляд. Придбайте заняття, щоб переглянути його повністю",
+                "ar-SA": "توفر الحصص المدفوعة تجربة لمدة 2 دقيقة، ويمكنك شراء الحصة لمشاهدتها بالكامل",
+                "zh": "付费课程可试看 2 分钟，购买后即可观看完整课程"
+              },
               "androidTranslationId": "offer_a_2_minute_trial",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Using a trial card",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ใช้บัตรทดลอง",
+                "ms": "Gunakan pas percubaan",
+                "de": "Testkarte verwenden",
+                "tr": "Deneme kartı kullan",
+                "fr": "Utiliser une carte d’essai",
+                "uk": "Використати пробну картку",
+                "ar-SA": "استخدام بطاقة تجريبية",
+                "zh": "使用体验卡"
+              },
               "androidTranslationId": "using_a_trial_card",
               "iosTranslationId": ""
             }
@@ -586,7 +991,16 @@
           "y": 0.5055389870989885,
           "sourceText": "Finish",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เสร็จสิ้น",
+            "ms": "Selesai",
+            "de": "Beenden",
+            "tr": "Bitir",
+            "fr": "Terminer",
+            "uk": "Завершити",
+            "ar-SA": "إنهاء",
+            "zh": "完成"
+          },
           "androidTranslationId": "session_finish",
           "iosTranslationId": "Flag_Finish",
           "subItems": []
@@ -597,7 +1011,16 @@
           "y": 0.5768769174358879,
           "sourceText": "This session is over. See you next time!",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เซสชันนี้จบแล้ว แล้วพบกันใหม่ครั้งหน้า",
+            "ms": "Sesi ini telah tamat. Jumpa lagi pada sesi akan datang!",
+            "de": "Diese Einheit ist beendet. Bis zum nächsten Mal!",
+            "tr": "Bu seans sona erdi. Bir sonraki sefer görüşürüz!",
+            "fr": "Cette séance est terminée. À la prochaine !",
+            "uk": "Це заняття завершено. До наступної зустрічі!",
+            "ar-SA": "انتهت هذه الجلسة. نراك في المرة القادمة!",
+            "zh": "本次训练已结束，下次见！"
+          },
           "androidTranslationId": "session_over",
           "iosTranslationId": "Live_Page_Course_Finshed_Sport_Tip_Content",
           "subItems": []
@@ -608,7 +1031,16 @@
           "y": 0.32211827310960434,
           "sourceText": "Beginner Interval Run",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "การวิ่งอินเทอร์วัลสำหรับผู้เริ่มต้น",
+            "ms": "Larian Interval untuk Pemula",
+            "de": "Intervalllauf für Einsteiger",
+            "tr": "Başlangıç Seviye Interval Koşusu",
+            "fr": "Course fractionnée pour débutants",
+            "uk": "Інтервальний біг для початківців",
+            "ar-SA": "الجري المتقطع للمبتدئين",
+            "zh": "初级间歇跑"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Live_Page_Course_Finshed_Sport_Tip_Title",
           "subItems": []
@@ -630,7 +1062,16 @@
           "sourceText": "The Bluetooth device has been activated, and data connection synchronization is in progress",
           "reviewedSourceText": "The Bluetooth device is connected. Syncing data…",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เชื่อมต่ออุปกรณ์ Bluetooth แล้ว กำลังซิงค์ข้อมูล…",
+            "ms": "Peranti Bluetooth telah disambungkan. Sedang menyegerakkan data…",
+            "de": "Das Bluetooth-Gerät ist verbunden. Daten werden synchronisiert…",
+            "tr": "Bluetooth cihazı bağlandı. Veriler eşitleniyor…",
+            "fr": "L’appareil Bluetooth est connecté. Synchronisation des données…",
+            "uk": "Пристрій Bluetooth підключено. Синхронізація даних…",
+            "ar-SA": "تم توصيل جهاز Bluetooth. جارٍ مزامنة البيانات…",
+            "zh": "Bluetooth 设备已连接，正在同步数据…"
+          },
           "androidTranslationId": "bluetooth_open_data_sync",
           "iosTranslationId": "Alert_Bluetooth_Connect_Status_Start",
           "subItems": []
@@ -644,7 +1085,16 @@
           "y": 0.7951786369833455,
           "sourceText": "Cadence",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "รอบขา",
+            "ms": "Kadens",
+            "de": "Trittfrequenz",
+            "tr": "Kadans",
+            "fr": "Cadence",
+            "uk": "Каденс",
+            "ar-SA": "معدل الخطوات",
+            "zh": "踏频"
+          },
           "androidTranslationId": "sport_unit_bike_cadence",
           "iosTranslationId": "Unit_Cadence",
           "note": "单车踏频",
@@ -652,7 +1102,16 @@
             {
               "sourceText": "Cadence",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "รอบขา",
+                "ms": "Kadens",
+                "de": "Trittfrequenz",
+                "tr": "Kadans",
+                "fr": "Cadence",
+                "uk": "Каденс",
+                "ar-SA": "معدل الخطوات",
+                "zh": "踏频"
+              },
               "androidTranslationId": "sport_unit_cross_trainer_cadence",
               "iosTranslationId": "Unit_Cadence",
               "note": "椭圆机踏频"
@@ -660,7 +1119,16 @@
             {
               "sourceText": "Cadence",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "รอบขา",
+                "ms": "Kadens",
+                "de": "Trittfrequenz",
+                "tr": "Kadans",
+                "fr": "Cadence",
+                "uk": "Каденс",
+                "ar-SA": "معدل الخطوات",
+                "zh": "踏频"
+              },
               "androidTranslationId": "sport_unit_rowing_cadence",
               "iosTranslationId": "Unit_Cadence",
               "note": "划船机桨率"
@@ -673,7 +1141,16 @@
           "y": 0.7842054525186997,
           "sourceText": "Speed (km/h)",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ความเร็ว (km/h)",
+            "ms": "Kelajuan (km/h)",
+            "de": "Geschwindigkeit (km/h)",
+            "tr": "Hız (km/h)",
+            "fr": "Vitesse (km/h)",
+            "uk": "Швидкість (km/h)",
+            "ar-SA": "السرعة (km/h)",
+            "zh": "速度 (km/h)"
+          },
           "androidTranslationId": "sport_unit_speed_km_hour",
           "iosTranslationId": "Unit_Speed_km/h",
           "note": "速度单位",
@@ -696,7 +1173,16 @@
           "sourceText": "Loading, will play soon",
           "reviewedSourceText": "Loading, playback will start soon",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "กำลังโหลด การเล่นจะเริ่มในไม่ช้า",
+            "ms": "Sedang dimuatkan, main balik akan bermula sebentar lagi",
+            "de": "Wird geladen. Die Wiedergabe beginnt in Kürze",
+            "tr": "Yükleniyor, oynatma yakında başlayacak",
+            "fr": "Chargement en cours, la lecture va bientôt commencer",
+            "uk": "Завантаження. Відтворення скоро почнеться",
+            "ar-SA": "جارٍ التحميل، وسيبدأ التشغيل قريبًا",
+            "zh": "正在加载，即将开始播放"
+          },
           "androidTranslationId": "loading_will_play_soon",
           "iosTranslationId": "",
           "note": "播放卡顿的时候，视频缓冲提示",
@@ -716,7 +1202,16 @@
           "y": 0.18635829671850757,
           "sourceText": "Scroll to top",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เลื่อนไปด้านบน",
+            "ms": "Tatal ke atas",
+            "de": "Nach oben",
+            "tr": "Başa dön",
+            "fr": "Revenir en haut",
+            "uk": "Прокрутити вгору",
+            "ar-SA": "العودة إلى الأعلى",
+            "zh": "回到顶部"
+          },
           "androidTranslationId": "scroll_to_top",
           "iosTranslationId": "Course_Page_Filter_Click_Top",
           "subItems": []
@@ -737,14 +1232,32 @@
           "y": 0.11484120017530706,
           "sourceText": "Automatically adjust suggested resistance level?",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ปรับระดับแรงต้านตามค่าที่แนะนำโดยอัตโนมัติหรือไม่",
+            "ms": "Laraskan tahap rintangan yang disyorkan secara automatik?",
+            "de": "Empfohlenen Widerstand automatisch einstellen?",
+            "tr": "Önerilen direnç seviyesi otomatik olarak ayarlansın mı?",
+            "fr": "Ajuster automatiquement le niveau de résistance recommandé ?",
+            "uk": "Автоматично встановлювати рекомендований рівень опору?",
+            "ar-SA": "هل تريد ضبط مستوى المقاومة المقترح تلقائيًا؟",
+            "zh": "是否自动调节至建议阻力等级？"
+          },
           "androidTranslationId": "whether_auto_resistance",
           "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Resistance_Tip",
           "subItems": [
             {
               "sourceText": "Automatically adjust suggested speed?",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ปรับความเร็วตามค่าที่แนะนำโดยอัตโนมัติหรือไม่",
+                "ms": "Laraskan kelajuan yang disyorkan secara automatik?",
+                "de": "Empfohlene Geschwindigkeit automatisch einstellen?",
+                "tr": "Önerilen hız otomatik olarak ayarlansın mı?",
+                "fr": "Ajuster automatiquement la vitesse recommandée ?",
+                "uk": "Автоматично встановлювати рекомендовану швидкість?",
+                "ar-SA": "هل تريد ضبط السرعة المقترحة تلقائيًا؟",
+                "zh": "是否自动调节至建议速度？"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Speed_Tip"
             }
@@ -757,7 +1270,16 @@
           "sourceText": "Tips: After automatic follow, the device will automatically adjust the resistance level, pay attention to the speed change.",
           "reviewedSourceText": "Tip: When auto-follow is on, the device will automatically adjust the resistance level. Pay attention to the speed change.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เคล็ดลับ: เมื่อเปิดโหมดติดตามอัตโนมัติ อุปกรณ์จะปรับระดับแรงต้านโดยอัตโนมัติ โปรดสังเกตการเปลี่ยนแปลงของความเร็ว",
+            "ms": "Petua: Apabila pelarasan automatik dihidupkan, peranti akan melaraskan tahap rintangan secara automatik. Perhatikan perubahan kelajuan.",
+            "de": "Tipp: Wenn die automatische Anpassung aktiviert ist, stellt das Gerät den Widerstand automatisch ein. Achte auf die Geschwindigkeitsänderung.",
+            "tr": "İpucu: Otomatik takip açıkken cihaz direnç seviyesini otomatik olarak ayarlar. Hız değişimine dikkat edin.",
+            "fr": "Conseil : lorsque le suivi automatique est activé, l’appareil ajuste automatiquement le niveau de résistance. Soyez attentif aux changements de vitesse.",
+            "uk": "Порада: коли ввімкнено автоматичне регулювання, пристрій автоматично змінює рівень опору. Стежте за зміною швидкості.",
+            "ar-SA": "نصيحة: عند تشغيل المتابعة التلقائية، سيضبط الجهاز مستوى المقاومة تلقائيًا. انتبه إلى تغير السرعة.",
+            "zh": "提示：开启自动跟随后，设备将自动调节阻力等级，请留意速度变化。"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Speed_Content",
           "subItems": [
@@ -765,7 +1287,16 @@
               "sourceText": "Tip: After automatic follow, the bicycle will automatically adjust the resistance, please pay attention to the change of resistance.",
               "reviewedSourceText": "Tip: When auto-follow is on, the bike will automatically adjust the resistance. Pay attention to the change in resistance.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เคล็ดลับ: เมื่อเปิดโหมดติดตามอัตโนมัติ จักรยานจะปรับแรงต้านโดยอัตโนมัติ โปรดสังเกตการเปลี่ยนแปลงของแรงต้าน",
+                "ms": "Petua: Apabila pelarasan automatik dihidupkan, basikal akan melaraskan rintangan secara automatik. Perhatikan perubahan rintangan.",
+                "de": "Tipp: Wenn die automatische Anpassung aktiviert ist, stellt das Bike den Widerstand automatisch ein. Achte auf die Widerstandsänderung.",
+                "tr": "İpucu: Otomatik takip açıkken bisiklet direnci otomatik olarak ayarlar. Direnç değişimine dikkat edin.",
+                "fr": "Conseil : lorsque le suivi automatique est activé, le vélo ajuste automatiquement la résistance. Soyez attentif aux changements de résistance.",
+                "uk": "Порада: коли ввімкнено автоматичне регулювання, велотренажер автоматично змінює опір. Стежте за зміною опору.",
+                "ar-SA": "نصيحة: عند تشغيل المتابعة التلقائية، ستضبط الدراجة المقاومة تلقائيًا. انتبه إلى تغير المقاومة.",
+                "zh": "提示：开启自动跟随后，单车将自动调节阻力，请留意阻力变化。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Resistance_Content"
             }
@@ -778,7 +1309,16 @@
           "sourceText": "NO",
           "reviewedSourceText": "No",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไม่",
+            "ms": "Tidak",
+            "de": "Nein",
+            "tr": "Hayır",
+            "fr": "Non",
+            "uk": "Ні",
+            "ar-SA": "لا",
+            "zh": "否"
+          },
           "androidTranslationId": "NO",
           "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Resistance_No",
           "subItems": [
@@ -786,7 +1326,16 @@
               "sourceText": "NO",
               "reviewedSourceText": "No",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ไม่",
+                "ms": "Tidak",
+                "de": "Nein",
+                "tr": "Hayır",
+                "fr": "Non",
+                "uk": "Ні",
+                "ar-SA": "لا",
+                "zh": "否"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Speed_No"
             }
@@ -799,7 +1348,16 @@
           "sourceText": "YES",
           "reviewedSourceText": "Yes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ใช่",
+            "ms": "Ya",
+            "de": "Ja",
+            "tr": "Evet",
+            "fr": "Oui",
+            "uk": "Так",
+            "ar-SA": "نعم",
+            "zh": "是"
+          },
           "androidTranslationId": "YES",
           "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Yes",
           "subItems": []
@@ -811,7 +1369,16 @@
           "sourceText": "Remember my option, do not remind me again within 15 days",
           "reviewedSourceText": "Remember my choice, no more reminders for 15 days",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "จดจำตัวเลือกของฉันและไม่ต้องแจ้งเตือนอีกเป็นเวลา 15 วัน",
+            "ms": "Ingat pilihan saya dan jangan ingatkan lagi selama 15 hari",
+            "de": "Meine Auswahl merken und 15 Tage lang nicht mehr erinnern",
+            "tr": "Seçimimi hatırla ve 15 gün boyunca tekrar hatırlatma",
+            "fr": "Mémoriser mon choix et ne plus me le rappeler pendant 15 jours",
+            "uk": "Запам’ятати мій вибір і не нагадувати протягом 15 днів",
+            "ar-SA": "تذكّر اختياري وعدم عرض تذكيرات لمدة 15 يومًا",
+            "zh": "记住我的选择，15 天内不再提醒"
+          },
           "androidTranslationId": "remember_my_option",
           "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Rember",
           "subItems": []
@@ -833,7 +1400,16 @@
           "sourceText": "No relevant content available at the moment",
           "reviewedSourceText": "No content available right now",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ขณะนี้ยังไม่มีเนื้อหา",
+            "ms": "Tiada kandungan tersedia buat masa ini",
+            "de": "Derzeit sind keine Inhalte verfügbar",
+            "tr": "Şu anda kullanılabilir içerik yok",
+            "fr": "Aucun contenu disponible pour le moment",
+            "uk": "Наразі немає доступного вмісту",
+            "ar-SA": "لا يوجد محتوى متاح حاليًا",
+            "zh": "当前暂无内容"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_Empty_Tip",
           "subItems": []
@@ -854,7 +1430,16 @@
           "y": 0.46744914599605186,
           "sourceText": "Workouts under 2 minutes won’t be saved. End now?",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "การฝึกที่สั้นกว่า 2 นาทีจะไม่ถูกบันทึก ต้องการจบตอนนี้หรือไม่",
+            "ms": "Latihan kurang daripada 2 minit tidak akan disimpan. Tamatkan sekarang?",
+            "de": "Trainings unter 2 Minuten werden nicht gespeichert. Jetzt beenden?",
+            "tr": "2 dakikadan kısa antrenmanlar kaydedilmez. Şimdi sonlandırmak istiyor musunuz?",
+            "fr": "Les entraînements de moins de 2 minutes ne seront pas enregistrés. Terminer maintenant ?",
+            "uk": "Тренування тривалістю менше 2 хвилин не зберігаються. Завершити зараз?",
+            "ar-SA": "لن يتم حفظ التمارين التي تقل مدتها عن 2 دقيقة. هل تريد الإنهاء الآن؟",
+            "zh": "少于 2 分钟的训练不会保存，确定现在结束吗？"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_2_Min_Quit_Title",
           "subItems": []
@@ -865,7 +1450,16 @@
           "y": 0.3150802506222642,
           "sourceText": "Notice",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แจ้งเตือน",
+            "ms": "Notis",
+            "de": "Hinweis",
+            "tr": "Uyarı",
+            "fr": "Avis",
+            "uk": "Увага",
+            "ar-SA": "تنبيه",
+            "zh": "提示"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_Notice_Title",
           "subItems": []

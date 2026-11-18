@@ -26,7 +26,14 @@
           "sourceText": "Member center",
           "translation": "",
           "translations": {
-            "zh": "会员中心"
+            "zh": "会员中心",
+            "th": "ศูนย์สมาชิก",
+            "ms": "Pusat Ahli",
+            "de": "Mitgliedercenter",
+            "tr": "Üyelik merkezi",
+            "fr": "Centre d’adhésion",
+            "uk": "Центр учасника",
+            "ar-SA": "مركز العضوية"
           },
           "androidTranslationId": "title_my_member",
           "iosTranslationId": "Mine_Page_Vip_Page_Title",
@@ -48,7 +55,14 @@
           "sourceText": "Bluetooth treadmill",
           "translation": "",
           "translations": {
-            "zh": "蓝牙跑步机"
+            "zh": "蓝牙跑步机",
+            "th": "ลู่วิ่ง Bluetooth",
+            "ms": "Treadmil Bluetooth",
+            "de": "Bluetooth-Laufband",
+            "tr": "Bluetooth koşu bandı",
+            "fr": "Tapis de course Bluetooth",
+            "uk": "Бігова доріжка Bluetooth",
+            "ar-SA": "جهاز مشي Bluetooth"
           },
           "androidTranslationId": "bluetooth_treadmill",
           "iosTranslationId": "Device_Page_Treadmill_Title",
@@ -61,7 +75,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "how_to_connect",
           "iosTranslationId": "Device_Page_How_Connect",
@@ -74,7 +95,14 @@
           "sourceText": "Re-scan",
           "translation": "",
           "translations": {
-            "zh": "重新扫描"
+            "zh": "重新扫描",
+            "th": "สแกนอีกครั้ง",
+            "ms": "Imbas semula",
+            "de": "Erneut scannen",
+            "tr": "Yeniden tara",
+            "fr": "Relancer la recherche",
+            "uk": "Сканувати ще раз",
+            "ar-SA": "إعادة الفحص"
           },
           "androidTranslationId": "search_again",
           "iosTranslationId": "Device_Page_Search_Again",
@@ -87,7 +115,14 @@
           "sourceText": "Supported Brands",
           "translation": "",
           "translations": {
-            "zh": "支持品牌"
+            "zh": "支持品牌",
+            "th": "แบรนด์ที่รองรับ",
+            "ms": "Jenama Disokong",
+            "de": "Unterstützte Marken",
+            "tr": "Desteklenen markalar",
+            "fr": "Marques compatibles",
+            "uk": "Підтримувані бренди",
+            "ar-SA": "العلامات التجارية المدعومة"
           },
           "androidTranslationId": "supported_brands",
           "iosTranslationId": "Device_Page_Support_Title",
@@ -100,7 +135,14 @@
           "sourceText": "Connected",
           "translation": "",
           "translations": {
-            "zh": "已连接"
+            "zh": "已连接",
+            "th": "เชื่อมต่อแล้ว",
+            "ms": "Disambungkan",
+            "de": "Verbunden",
+            "tr": "Bağlandı",
+            "fr": "Connecté",
+            "uk": "Підключено",
+            "ar-SA": "متصل"
           },
           "androidTranslationId": "connected",
           "iosTranslationId": "Device_Page_Search_Did",
@@ -109,7 +151,14 @@
               "sourceText": "Connecting...",
               "translation": "",
               "translations": {
-                "zh": "连接中..."
+                "zh": "连接中...",
+                "th": "กำลังเชื่อมต่อ...",
+                "ms": "Menyambung...",
+                "de": "Verbinden...",
+                "tr": "Bağlanıyor...",
+                "fr": "Connexion...",
+                "uk": "Підключення...",
+                "ar-SA": "جارٍ الاتصال..."
               },
               "androidTranslationId": "connecting",
               "iosTranslationId": "Device_Page_Search_Ing"
@@ -118,7 +167,14 @@
               "sourceText": "Not connected",
               "translation": "",
               "translations": {
-                "zh": "未连接"
+                "zh": "未连接",
+                "th": "ยังไม่ได้เชื่อมต่อ",
+                "ms": "Tidak disambungkan",
+                "de": "Nicht verbunden",
+                "tr": "Bağlı değil",
+                "fr": "Non connecté",
+                "uk": "Не підключено",
+                "ar-SA": "غير متصل"
               },
               "androidTranslationId": "not_connected",
               "iosTranslationId": "Device_Page_Search_Not"
@@ -141,7 +197,14 @@
           "sourceText": "VIP Membership Center",
           "translation": "",
           "translations": {
-            "zh": "VIP会员中心"
+            "zh": "VIP会员中心",
+            "th": "ศูนย์สมาชิก VIP",
+            "ms": "Pusat Keahlian VIP",
+            "de": "VIP-Mitgliedercenter",
+            "tr": "VIP Üyelik Merkezi",
+            "fr": "Centre d’adhésion VIP",
+            "uk": "Центр учасника VIP",
+            "ar-SA": "مركز عضوية VIP"
           },
           "androidTranslationId": "vip_membership_center",
           "iosTranslationId": "Mine_Page_Vip_Center_Title",
@@ -154,7 +217,14 @@
           "sourceText": "Join Now",
           "translation": "",
           "translations": {
-            "zh": "立即加入"
+            "zh": "立即加入",
+            "th": "สมัครเลย",
+            "ms": "Sertai Sekarang",
+            "de": "Jetzt beitreten",
+            "tr": "Hemen katıl",
+            "fr": "Rejoindre",
+            "uk": "Приєднатися",
+            "ar-SA": "انضم الآن"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Mine_Page_Vip_Open",
@@ -168,7 +238,14 @@
           "reviewedSourceText": "My Favorites",
           "translation": "",
           "translations": {
-            "zh": "我的收藏"
+            "zh": "我的收藏",
+            "th": "รายการโปรดของฉัน",
+            "ms": "Kegemaran saya",
+            "de": "Meine Favoriten",
+            "tr": "Favorilerim",
+            "fr": "Mes favoris",
+            "uk": "Моє обране",
+            "ar-SA": "مفضلاتي"
           },
           "androidTranslationId": "my_favorites",
           "iosTranslationId": "Mine_Page_My_Favorites_Title",
@@ -182,7 +259,14 @@
           "reviewedSourceText": "Device Management",
           "translation": "",
           "translations": {
-            "zh": "设备管理"
+            "zh": "设备管理",
+            "th": "การจัดการอุปกรณ์",
+            "ms": "Pengurusan peranti",
+            "de": "Geräteverwaltung",
+            "tr": "Cihaz yönetimi",
+            "fr": "Gestion des appareils",
+            "uk": "Керування пристроями",
+            "ar-SA": "إدارة الأجهزة"
           },
           "androidTranslationId": "device_management",
           "iosTranslationId": "Mine_Page_Equipment_Title",
@@ -196,7 +280,14 @@
           "reviewedSourceText": "Sports Data Center",
           "translation": "",
           "translations": {
-            "zh": "运动数据中心"
+            "zh": "运动数据中心",
+            "th": "ศูนย์ข้อมูลการออกกำลังกาย",
+            "ms": "Pusat data sukan",
+            "de": "Sportdaten-Center",
+            "tr": "Spor veri merkezi",
+            "fr": "Centre de données sportives",
+            "uk": "Центр спортивних даних",
+            "ar-SA": "مركز بيانات الرياضة"
           },
           "androidTranslationId": "sports_data_center",
           "iosTranslationId": "Mine_Page_Sport_Data_Title",
@@ -210,7 +301,14 @@
           "reviewedSourceText": "More",
           "translation": "",
           "translations": {
-            "zh": "更多"
+            "zh": "更多",
+            "th": "เพิ่มเติม",
+            "ms": "Lagi",
+            "de": "Mehr",
+            "tr": "Daha fazla",
+            "fr": "Plus",
+            "uk": "Більше",
+            "ar-SA": "المزيد"
           },
           "androidTranslationId": "more",
           "iosTranslationId": "Flag_see_more",
@@ -223,7 +321,14 @@
           "sourceText": "Total Days",
           "translation": "",
           "translations": {
-            "zh": "总天数"
+            "zh": "总天数",
+            "th": "จำนวนวันทั้งหมด",
+            "ms": "Jumlah Hari",
+            "de": "Gesamte Tage",
+            "tr": "Toplam gün",
+            "fr": "Jours au total",
+            "uk": "Усього днів",
+            "ar-SA": "إجمالي الأيام"
           },
           "androidTranslationId": "total_days",
           "iosTranslationId": "Mine_Page_Sport_Total_Days",
@@ -236,7 +341,14 @@
           "sourceText": "Total Minutes",
           "translation": "",
           "translations": {
-            "zh": "总分钟"
+            "zh": "总分钟",
+            "th": "นาทีทั้งหมด",
+            "ms": "Jumlah Minit",
+            "de": "Gesamte Minuten",
+            "tr": "Toplam dakika",
+            "fr": "Minutes au total",
+            "uk": "Усього хвилин",
+            "ar-SA": "إجمالي الدقائق"
           },
           "androidTranslationId": "total_minutes",
           "iosTranslationId": "Mine_Page_Sport_Total_Minutes",
@@ -249,7 +361,14 @@
           "sourceText": "Total Count",
           "translation": "",
           "translations": {
-            "zh": "总次数"
+            "zh": "总次数",
+            "th": "จำนวนครั้งทั้งหมด",
+            "ms": "Jumlah Kiraan",
+            "de": "Gesamtanzahl",
+            "tr": "Toplam sayı",
+            "fr": "Nombre total",
+            "uk": "Усього разів",
+            "ar-SA": "إجمالي المرات"
           },
           "androidTranslationId": "total_count",
           "iosTranslationId": "Mine_Page_Sport_Total_Count",
@@ -262,7 +381,14 @@
           "sourceText": "Playground",
           "translation": "",
           "translations": {
-            "zh": "自由训练"
+            "zh": "自由训练",
+            "th": "สนามเด็กเล่น",
+            "ms": "Taman Permainan",
+            "de": "Spielfeld",
+            "tr": "Oyun alanı",
+            "fr": "Terrain de jeu",
+            "uk": "Майданчик",
+            "ar-SA": "الملعب"
           },
           "androidTranslationId": "playground",
           "iosTranslationId": "FreeRunning_Tab_Title",
@@ -276,7 +402,14 @@
           "reviewedSourceText": "Join",
           "translation": "",
           "translations": {
-            "zh": "加入"
+            "zh": "加入",
+            "th": "เข้าร่วม",
+            "ms": "Sertai",
+            "de": "Beitreten",
+            "tr": "Katıl",
+            "fr": "Rejoindre",
+            "uk": "Приєднатися",
+            "ar-SA": "انضم"
           },
           "androidTranslationId": "join_upper",
           "iosTranslationId": "FreeRunning_Page_Title_Join",
@@ -289,7 +422,14 @@
           "sourceText": "Sign up or log in",
           "translation": "",
           "translations": {
-            "zh": "注册或登录"
+            "zh": "注册或登录",
+            "th": "สมัครสมาชิกหรือเข้าสู่ระบบ",
+            "ms": "Daftar atau log masuk",
+            "de": "Registrieren oder anmelden",
+            "tr": "Kaydolun veya giriş yapın",
+            "fr": "S’inscrire ou se connecter",
+            "uk": "Зареєструватися або ввійти",
+            "ar-SA": "التسجيل أو تسجيل الدخول"
           },
           "androidTranslationId": "settings_bind_email",
           "iosTranslationId": "Setting_Page_Item_Email_Content",
@@ -311,7 +451,14 @@
           "sourceText": "Register now",
           "translation": "",
           "translations": {
-            "zh": "立即注册"
+            "zh": "立即注册",
+            "th": "สมัครเลย",
+            "ms": "Daftar sekarang",
+            "de": "Jetzt registrieren",
+            "tr": "Şimdi kaydolun",
+            "fr": "S’inscrire",
+            "uk": "Зареєструватися",
+            "ar-SA": "سجّل الآن"
           },
           "androidTranslationId": "register_email_bind_title",
           "iosTranslationId": "Register_Email_Bind_Title",
@@ -324,7 +471,14 @@
           "sourceText": "Email",
           "translation": "",
           "translations": {
-            "zh": "邮箱"
+            "zh": "邮箱",
+            "th": "อีเมล",
+            "ms": "E-mel",
+            "de": "E-Mail",
+            "tr": "E-posta",
+            "fr": "E-mail",
+            "uk": "Ел. пошта",
+            "ar-SA": "البريد الإلكتروني"
           },
           "androidTranslationId": "register_email_bind_email_title",
           "iosTranslationId": "Register_Email_Bind_Email_Title",
@@ -337,7 +491,14 @@
           "sourceText": "Password",
           "translation": "",
           "translations": {
-            "zh": "密码"
+            "zh": "密码",
+            "th": "รหัสผ่าน",
+            "ms": "Kata laluan",
+            "de": "Passwort",
+            "tr": "Şifre",
+            "fr": "Mot de passe",
+            "uk": "Пароль",
+            "ar-SA": "كلمة المرور"
           },
           "androidTranslationId": "register_email_bind_password_title",
           "iosTranslationId": "Register_Email_Bind_Password_Title",
@@ -351,7 +512,14 @@
           "reviewedSourceText": "Must be at least 6 characters",
           "translation": "",
           "translations": {
-            "zh": "不能少于6个字符"
+            "zh": "不能少于6个字符",
+            "th": "ต้องมีอย่างน้อย 6 อักขระ",
+            "ms": "Mesti sekurang-kurangnya 6 aksara",
+            "de": "Muss mindestens 6 Zeichen lang sein",
+            "tr": "En az 6 karakter olmalıdır",
+            "fr": "Doit contenir au moins 6 caractères",
+            "uk": "Має містити щонайменше 6 символів",
+            "ar-SA": "يجب ألا يقل عن 6 أحرف"
           },
           "androidTranslationId": "register_email_bind_error_message_1",
           "iosTranslationId": "Register_Email_Bind_Error_Message_1",
@@ -364,7 +532,14 @@
           "sourceText": "Email binding failed. Please contact customer support at help@onespax.com.",
           "translation": "",
           "translations": {
-            "zh": "邮箱绑定失败，请联系客服 help@onespax.com。"
+            "zh": "邮箱绑定失败，请联系客服 help@onespax.com。",
+            "th": "ผูกอีเมลไม่สำเร็จ กรุณาติดต่อฝ่ายบริการลูกค้าที่ help@onespax.com",
+            "ms": "Pengikatan e-mel gagal. Sila hubungi sokongan pelanggan di help@onespax.com.",
+            "de": "E-Mail-Verknüpfung fehlgeschlagen. Bitte wende dich an den Kundensupport unter help@onespax.com.",
+            "tr": "E-posta bağlama başarısız oldu. Lütfen help@onespax.com adresinden müşteri desteğine ulaşın.",
+            "fr": "Échec de la liaison de l’e-mail. Veuillez contacter le service client à l’adresse help@onespax.com.",
+            "uk": "Не вдалося прив’язати електронну пошту. Зверніться до служби підтримки за адресою help@onespax.com.",
+            "ar-SA": "فشل ربط البريد الإلكتروني. يرجى التواصل مع دعم العملاء على help@onespax.com."
           },
           "androidTranslationId": "register_email_bind_error_message_2",
           "iosTranslationId": "Register_Email_Bind_Error_Message_2",
@@ -377,7 +552,14 @@
           "sourceText": "Continue",
           "translation": "",
           "translations": {
-            "zh": "继续"
+            "zh": "继续",
+            "th": "ดำเนินการต่อ",
+            "ms": "Teruskan",
+            "de": "Weiter",
+            "tr": "Devam",
+            "fr": "Continuer",
+            "uk": "Продовжити",
+            "ar-SA": "متابعة"
           },
           "androidTranslationId": "register_email_bind_continue",
           "iosTranslationId": "Register_Email_Bind_Continue",
@@ -390,7 +572,14 @@
           "sourceText": "Already have an account? Log in",
           "translation": "",
           "translations": {
-            "zh": "已有账号？登录"
+            "zh": "已有账号？登录",
+            "th": "มีบัญชีอยู่แล้ว? เข้าสู่ระบบ",
+            "ms": "Sudah mempunyai akaun? Log masuk",
+            "de": "Du hast schon ein Konto? Anmelden",
+            "tr": "Zaten bir hesabınız var mı? Giriş yapın",
+            "fr": "Vous avez déjà un compte ? Se connecter",
+            "uk": "Уже маєте обліковий запис? Увійти",
+            "ar-SA": "لديك حساب بالفعل؟ تسجيل الدخول"
           },
           "androidTranslationId": "register_email_bind_already",
           "iosTranslationId": "Register_Email_Bind_Already",
@@ -412,7 +601,14 @@
           "sourceText": "This email address has been registered. Do you want to log in directly to this account?",
           "translation": "",
           "translations": {
-            "zh": "该邮箱已注册，是否直接登录此账号？"
+            "zh": "该邮箱已注册，是否直接登录此账号？",
+            "th": "อีเมลนี้ถูกลงทะเบียนแล้ว ต้องการเข้าสู่ระบบด้วยบัญชีนี้โดยตรงหรือไม่?",
+            "ms": "Alamat e-mel ini telah didaftarkan. Adakah anda mahu log masuk terus ke akaun ini?",
+            "de": "Diese E-Mail-Adresse ist bereits registriert. Möchtest du dich direkt bei diesem Konto anmelden?",
+            "tr": "Bu e-posta adresi zaten kayıtlı. Doğrudan bu hesaba giriş yapmak istiyor musunuz?",
+            "fr": "Cette adresse e-mail est déjà enregistrée. Voulez-vous vous connecter directement à ce compte ?",
+            "uk": "Цю електронну адресу вже зареєстровано. Бажаєте увійти безпосередньо до цього облікового запису?",
+            "ar-SA": "تم تسجيل هذا البريد الإلكتروني بالفعل. هل تريد تسجيل الدخول مباشرة إلى هذا الحساب؟"
           },
           "androidTranslationId": "register_email_duplicate_title",
           "iosTranslationId": "Register_Email_Duplicate_Title",
@@ -425,7 +621,14 @@
           "sourceText": "No worries\\nyour membership will move to this account.",
           "translation": "",
           "translations": {
-            "zh": "请放心，\\n你的会员权益将转移至该账号。"
+            "zh": "请放心，\\n你的会员权益将转移至该账号。",
+            "th": "ไม่ต้องกังวล\\nสมาชิกของคุณจะย้ายไปยังบัญชีนี้",
+            "ms": "Jangan risau\\nkeahlian anda akan dipindahkan ke akaun ini.",
+            "de": "Keine Sorge,\\ndeine Mitgliedschaft wird auf dieses Konto übertragen.",
+            "tr": "Endişelenmeyin\\nüyeliğiniz bu hesaba aktarılacak.",
+            "fr": "Pas d’inquiétude,\\nvotre abonnement sera transféré sur ce compte.",
+            "uk": "Не хвилюйтеся,\\nваше членство буде перенесено до цього облікового запису.",
+            "ar-SA": "لا تقلق،\\nستنتقل عضويتك إلى هذا الحساب."
           },
           "androidTranslationId": "register_email_duplicate_desc",
           "iosTranslationId": "Register_Email_Duplicate_Desc",
@@ -439,7 +642,14 @@
           "reviewedSourceText": "Bind a different email address",
           "translation": "",
           "translations": {
-            "zh": "尝试绑定其他邮箱"
+            "zh": "尝试绑定其他邮箱",
+            "th": "เชื่อมโยงที่อยู่อีเมลอื่น",
+            "ms": "Pautkan alamat e-mel lain",
+            "de": "Andere E-Mail-Adresse verknüpfen",
+            "tr": "Farklı bir e-posta adresi bağlayın",
+            "fr": "Associer une autre adresse e-mail",
+            "uk": "Прив’язати іншу адресу електронної пошти",
+            "ar-SA": "ربط عنوان بريد إلكتروني مختلف"
           },
           "androidTranslationId": "register_email_duplicate_login",
           "iosTranslationId": "Register_Email_Duplicate_Login",
@@ -453,7 +663,14 @@
           "reviewedSourceText": "Bind a different email address",
           "translation": "",
           "translations": {
-            "zh": "尝试绑定其他邮箱"
+            "zh": "尝试绑定其他邮箱",
+            "th": "เชื่อมโยงที่อยู่อีเมลอื่น",
+            "ms": "Pautkan alamat e-mel lain",
+            "de": "Andere E-Mail-Adresse verknüpfen",
+            "tr": "Farklı bir e-posta adresi bağlayın",
+            "fr": "Associer une autre adresse e-mail",
+            "uk": "Прив’язати іншу адресу електронної пошти",
+            "ar-SA": "ربط عنوان بريد إلكتروني مختلف"
           },
           "androidTranslationId": "register_email_duplicate_login",
           "iosTranslationId": "Register_Email_Duplicate_Login_Desc",
@@ -475,7 +692,14 @@
           "sourceText": "Notice",
           "translation": "",
           "translations": {
-            "zh": "提示"
+            "zh": "提示",
+            "th": "แจ้งเตือน",
+            "ms": "Notis",
+            "de": "Hinweis",
+            "tr": "Uyarı",
+            "fr": "Avis",
+            "uk": "Увага",
+            "ar-SA": "تنبيه"
           },
           "androidTranslationId": "alert_notice",
           "iosTranslationId": "Alert_Notice_Title",
@@ -488,7 +712,14 @@
           "sourceText": "Do you want to exit?",
           "translation": "",
           "translations": {
-            "zh": "确定要退出吗？"
+            "zh": "确定要退出吗？",
+            "th": "ต้องการออกหรือไม่?",
+            "ms": "Adakah anda mahu keluar?",
+            "de": "Möchtest du wirklich beenden?",
+            "tr": "Çıkmak istiyor musunuz?",
+            "fr": "Voulez-vous quitter ?",
+            "uk": "Бажаєте вийти?",
+            "ar-SA": "هل تريد الخروج؟"
           },
           "androidTranslationId": "alert_sure_exit",
           "iosTranslationId": "Alert_Sure_Quit",
@@ -501,7 +732,14 @@
           "sourceText": "Exit",
           "translation": "",
           "translations": {
-            "zh": "退出"
+            "zh": "退出",
+            "th": "ออก",
+            "ms": "Keluar",
+            "de": "Beenden",
+            "tr": "Çık",
+            "fr": "Quitter",
+            "uk": "Вийти",
+            "ar-SA": "خروج"
           },
           "androidTranslationId": "exit_alert_end",
           "iosTranslationId": "Alert_Sure_Quit_Sport",
@@ -514,7 +752,14 @@
           "sourceText": "Continue",
           "translation": "",
           "translations": {
-            "zh": "继续"
+            "zh": "继续",
+            "th": "ดำเนินการต่อ",
+            "ms": "Teruskan",
+            "de": "Weiter",
+            "tr": "Devam",
+            "fr": "Continuer",
+            "uk": "Продовжити",
+            "ar-SA": "متابعة"
           },
           "androidTranslationId": "exit_alert_continue",
           "iosTranslationId": "Alert_Sure_Stay_Sport",
@@ -536,7 +781,14 @@
           "sourceText": "Speed",
           "translation": "",
           "translations": {
-            "zh": "速度"
+            "zh": "速度",
+            "th": "ความเร็ว",
+            "ms": "Kelajuan",
+            "de": "Geschwindigkeit",
+            "tr": "Hız",
+            "fr": "Vitesse",
+            "uk": "Швидкість",
+            "ar-SA": "السرعة"
           },
           "androidTranslationId": "speed",
           "iosTranslationId": "Flag_Speed",
@@ -545,7 +797,14 @@
               "sourceText": "Resistance",
               "translation": "",
               "translations": {
-                "zh": "阻力"
+                "zh": "阻力",
+                "th": "แรงต้าน",
+                "ms": "Rintangan",
+                "de": "Widerstand",
+                "tr": "Direnç",
+                "fr": "Résistance",
+                "uk": "Опір",
+                "ar-SA": "المقاومة"
               },
               "androidTranslationId": "adjust_the_resistance",
               "iosTranslationId": "Flag_Resistance"
@@ -559,7 +818,14 @@
           "sourceText": "Incline",
           "translation": "",
           "translations": {
-            "zh": "坡度"
+            "zh": "坡度",
+            "th": "ความชัน",
+            "ms": "Kecondongan",
+            "de": "Steigung",
+            "tr": "Eğim",
+            "fr": "Inclinaison",
+            "uk": "Нахил",
+            "ar-SA": "الميل"
           },
           "androidTranslationId": "adjust_the_incline",
           "iosTranslationId": "Flag_Incline",
@@ -572,7 +838,14 @@
           "sourceText": "Kcal",
           "translation": "",
           "translations": {
-            "zh": "千卡"
+            "zh": "千卡",
+            "th": "Kcal",
+            "ms": "Kcal",
+            "de": "Kcal",
+            "tr": "Kcal",
+            "fr": "Kcal",
+            "uk": "Kcal",
+            "ar-SA": "Kcal"
           },
           "androidTranslationId": "sport_unit_kcal",
           "iosTranslationId": "FreeRunning_Page_Bottom_Consume",
@@ -585,7 +858,14 @@
           "sourceText": "Duration",
           "translation": "",
           "translations": {
-            "zh": "时长"
+            "zh": "时长",
+            "th": "ระยะเวลา",
+            "ms": "Tempoh",
+            "de": "Dauer",
+            "tr": "Süre",
+            "fr": "Durée",
+            "uk": "Тривалість",
+            "ar-SA": "المدة"
           },
           "androidTranslationId": "sport_unit_duration",
           "iosTranslationId": "FreeRunning_Page_Bottom_Duration",
@@ -598,7 +878,14 @@
           "sourceText": "Distance (km)",
           "translation": "",
           "translations": {
-            "zh": "距离（km）"
+            "zh": "距离（km）",
+            "th": "ระยะทาง (km)",
+            "ms": "Jarak (km)",
+            "de": "Distanz (km)",
+            "tr": "Mesafe (km)",
+            "fr": "Distance (km)",
+            "uk": "Відстань (km)",
+            "ar-SA": "المسافة (km)"
           },
           "androidTranslationId": "sport_unit_distance_km",
           "iosTranslationId": "FreeRunning_Page_Bottom_Distance",
@@ -656,7 +943,14 @@
           "sourceText": "Incline",
           "translation": "",
           "translations": {
-            "zh": "坡度"
+            "zh": "坡度",
+            "th": "ความชัน",
+            "ms": "Kecondongan",
+            "de": "Steigung",
+            "tr": "Eğim",
+            "fr": "Inclinaison",
+            "uk": "Нахил",
+            "ar-SA": "الميل"
           },
           "androidTranslationId": "adjust_the_incline",
           "iosTranslationId": "Flag_Incline",
@@ -669,7 +963,14 @@
           "sourceText": "Speed",
           "translation": "",
           "translations": {
-            "zh": "速度"
+            "zh": "速度",
+            "th": "ความเร็ว",
+            "ms": "Kelajuan",
+            "de": "Geschwindigkeit",
+            "tr": "Hız",
+            "fr": "Vitesse",
+            "uk": "Швидкість",
+            "ar-SA": "السرعة"
           },
           "androidTranslationId": "adjust_the_speed",
           "iosTranslationId": "Flag_Speed",
@@ -707,7 +1008,14 @@
           "sourceText": "Bluetooth connection successful",
           "translation": "",
           "translations": {
-            "zh": "蓝牙连接成功"
+            "zh": "蓝牙连接成功",
+            "th": "เชื่อมต่อ Bluetooth สำเร็จ",
+            "ms": "Sambungan Bluetooth berjaya",
+            "de": "Bluetooth-Verbindung erfolgreich",
+            "tr": "Bluetooth bağlantısı başarılı",
+            "fr": "Connexion Bluetooth réussie",
+            "uk": "Успішне підключення через Bluetooth",
+            "ar-SA": "تم اتصال Bluetooth بنجاح"
           },
           "androidTranslationId": "bluetooth_connection_successful",
           "iosTranslationId": "Alert_Bluetooth_Connect_Status_Success",
@@ -717,7 +1025,14 @@
               "reviewedSourceText": "The bluetooth device has been activated, and data synchronization is in progress",
               "translation": "",
               "translations": {
-                "zh": "蓝牙设备已激活，正在同步数据连接"
+                "zh": "蓝牙设备已激活，正在同步数据连接",
+                "th": "อุปกรณ์ bluetooth เปิดใช้งานแล้ว และกำลังซิงค์ข้อมูล",
+                "ms": "Peranti bluetooth telah diaktifkan dan penyegerakan data sedang dijalankan",
+                "de": "Das bluetooth-Gerät wurde aktiviert. Die Daten werden synchronisiert.",
+                "tr": "bluetooth cihazı etkinleştirildi ve veriler eşitleniyor",
+                "fr": "L’appareil bluetooth a été activé et la synchronisation des données est en cours",
+                "uk": "Пристрій bluetooth активовано, синхронізація даних триває",
+                "ar-SA": "تم تنشيط جهاز bluetooth، وجارٍ مزامنة البيانات"
               },
               "androidTranslationId": "bluetooth_open_data_sync",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Start"
@@ -727,7 +1042,14 @@
               "reviewedSourceText": "The bluetooth component is about to enter sleep mode. Please try stepping on the pedal or tapping the screen to keep Bluetooth enabled. Once Bluetooth enters sleep mode, it will no longer be able to sync device data",
               "translation": "",
               "translations": {
-                "zh": "蓝牙组件即将进入休眠模式，请尝试踩踏踏板或点击屏幕以保持蓝牙开启。蓝牙进入休眠模式后，将无法继续同步设备数据"
+                "zh": "蓝牙组件即将进入休眠模式，请尝试踩踏踏板或点击屏幕以保持蓝牙开启。蓝牙进入休眠模式后，将无法继续同步设备数据",
+                "th": "ส่วนประกอบ bluetooth กำลังจะเข้าสู่โหมดสลีป โปรดลองเหยียบแป้นหรือแตะหน้าจอเพื่อให้ Bluetooth ยังคงเปิดใช้งานอยู่ เมื่อ Bluetooth เข้าสู่โหมดสลีปแล้ว จะไม่สามารถซิงค์ข้อมูลอุปกรณ์ได้อีก",
+                "ms": "Komponen bluetooth akan memasuki mod tidur. Cuba kayuh pedal atau ketik skrin untuk memastikan Bluetooth kekal aktif. Setelah Bluetooth memasuki mod tidur, data peranti tidak lagi dapat disegerakkan.",
+                "de": "Die bluetooth-Komponente wechselt gleich in den Ruhemodus. Tritt auf das Pedal oder tippe auf den Bildschirm, damit Bluetooth aktiviert bleibt. Sobald Bluetooth in den Ruhemodus wechselt, können keine Gerätedaten mehr synchronisiert werden.",
+                "tr": "bluetooth bileşeni uyku moduna geçmek üzere. Bluetooth bağlantısını etkin tutmak için pedala basmayı veya ekrana dokunmayı deneyin. Bluetooth uyku moduna geçtiğinde cihaz verileri artık eşitlenemez.",
+                "fr": "Le composant bluetooth est sur le point de passer en veille. Essayez d’appuyer sur la pédale ou de toucher l’écran pour maintenir Bluetooth activé. Une fois Bluetooth en veille, les données de l’appareil ne pourront plus être synchronisées.",
+                "uk": "Компонент bluetooth незабаром перейде в режим сну. Спробуйте натиснути на педаль або торкнутися екрана, щоб Bluetooth залишався активним. Після переходу Bluetooth у режим сну дані пристрою більше не синхронізуватимуться.",
+                "ar-SA": "مكوّن bluetooth على وشك الدخول في وضع السكون. جرّب الضغط على الدواسة أو النقر على الشاشة لإبقاء Bluetooth مفعّلًا. بعد دخول Bluetooth في وضع السكون، لن يعود بإمكانه مزامنة بيانات الجهاز."
               },
               "androidTranslationId": "please_try_step",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Sleep"
@@ -737,7 +1059,14 @@
               "reviewedSourceText": "Bluetooth connection failed. Please try reconnecting",
               "translation": "",
               "translations": {
-                "zh": "蓝牙连接失败，请尝试重新连接"
+                "zh": "蓝牙连接失败，请尝试重新连接",
+                "th": "การเชื่อมต่อ Bluetooth ล้มเหลว โปรดลองเชื่อมต่ออีกครั้ง",
+                "ms": "Sambungan Bluetooth gagal. Cuba sambungkan semula",
+                "de": "Bluetooth-Verbindung fehlgeschlagen. Versuche erneut, eine Verbindung herzustellen",
+                "tr": "Bluetooth bağlantısı başarısız oldu. Yeniden bağlanmayı deneyin",
+                "fr": "Échec de la connexion Bluetooth. Essayez de vous reconnecter",
+                "uk": "Не вдалося підключитися через Bluetooth. Спробуйте підключитися ще раз",
+                "ar-SA": "فشل اتصال Bluetooth. حاول إعادة الاتصال"
               },
               "androidTranslationId": "bluetooth_reconnect",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Fail"
@@ -747,7 +1076,14 @@
               "reviewedSourceText": "Bluetooth has been disconnected. Please try reconnecting",
               "translation": "",
               "translations": {
-                "zh": "蓝牙已断开，请尝试重新连接"
+                "zh": "蓝牙已断开，请尝试重新连接",
+                "th": "ตัดการเชื่อมต่อ Bluetooth แล้ว โปรดลองเชื่อมต่ออีกครั้ง",
+                "ms": "Sambungan Bluetooth telah terputus. Cuba sambungkan semula",
+                "de": "Bluetooth wurde getrennt. Versuche erneut, eine Verbindung herzustellen",
+                "tr": "Bluetooth bağlantısı kesildi. Yeniden bağlanmayı deneyin",
+                "fr": "Bluetooth a été déconnecté. Essayez de vous reconnecter",
+                "uk": "З’єднання Bluetooth розірвано. Спробуйте підключитися ще раз",
+                "ar-SA": "تم قطع اتصال Bluetooth. حاول إعادة الاتصال"
               },
               "androidTranslationId": "bluetooth_disconnected_reconnect",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Lost"
@@ -756,7 +1092,14 @@
               "sourceText": "Bluetooth connecting",
               "translation": "",
               "translations": {
-                "zh": "蓝牙连接中"
+                "zh": "蓝牙连接中",
+                "th": "กำลังเชื่อมต่อ Bluetooth",
+                "ms": "Sedang menyambung Bluetooth",
+                "de": "Bluetooth wird verbunden",
+                "tr": "Bluetooth'a bağlanılıyor",
+                "fr": "Connexion Bluetooth en cours",
+                "uk": "Підключення через Bluetooth",
+                "ar-SA": "جارٍ الاتصال عبر Bluetooth"
               },
               "androidTranslationId": "bluetooth_connecting",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Ing"
@@ -765,7 +1108,14 @@
               "sourceText": "Bluetooth not connected",
               "translation": "",
               "translations": {
-                "zh": "蓝牙未连接"
+                "zh": "蓝牙未连接",
+                "th": "ยังไม่ได้เชื่อมต่อ Bluetooth",
+                "ms": "Bluetooth tidak disambungkan",
+                "de": "Bluetooth nicht verbunden",
+                "tr": "Bluetooth bağlı değil",
+                "fr": "Bluetooth non connecté",
+                "uk": "Bluetooth не підключено",
+                "ar-SA": "Bluetooth غير متصل"
               },
               "androidTranslationId": "bluetooth_not_connected",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Over"
@@ -796,7 +1146,14 @@
           "sourceText": "Bluetooth connecting",
           "translation": "",
           "translations": {
-            "zh": "蓝牙连接中"
+            "zh": "蓝牙连接中",
+            "th": "กำลังเชื่อมต่อ Bluetooth",
+            "ms": "Sedang menyambung Bluetooth",
+            "de": "Bluetooth wird verbunden",
+            "tr": "Bluetooth'a bağlanılıyor",
+            "fr": "Connexion Bluetooth en cours",
+            "uk": "Підключення через Bluetooth",
+            "ar-SA": "جارٍ الاتصال عبر Bluetooth"
           },
           "androidTranslationId": "bluetooth_connecting",
           "iosTranslationId": "Alert_Bluetooth_Connect_Status_Ing",
@@ -809,7 +1166,14 @@
           "sourceText": "Paired Devices",
           "translation": "",
           "translations": {
-            "zh": "已配对设备"
+            "zh": "已配对设备",
+            "th": "อุปกรณ์ที่จับคู่แล้ว",
+            "ms": "Peranti Berpasangan",
+            "de": "Gekoppelte Geräte",
+            "tr": "Eşleştirilmiş Cihazlar",
+            "fr": "Appareils associés",
+            "uk": "Сполучені пристрої",
+            "ar-SA": "الأجهزة المقترنة"
           },
           "androidTranslationId": "paired_devices",
           "iosTranslationId": "FreeRunning_Page_Nearby_Common_Device",
@@ -822,7 +1186,14 @@
           "sourceText": "Add Device",
           "translation": "",
           "translations": {
-            "zh": "添加设备"
+            "zh": "添加设备",
+            "th": "เพิ่มอุปกรณ์",
+            "ms": "Tambah Peranti",
+            "de": "Gerät hinzufügen",
+            "tr": "Cihaz Ekle",
+            "fr": "Ajouter un appareil",
+            "uk": "Додати пристрій",
+            "ar-SA": "إضافة جهاز"
           },
           "androidTranslationId": "add_device",
           "iosTranslationId": "FreeRunning_Page_Nearby_Device",
@@ -844,7 +1215,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_How_Connect_Heart_Device",
@@ -857,7 +1235,14 @@
           "sourceText": "1. For Apple Watch, download the SPAX app on your watch and allow SPAX to access Apple Health.",
           "translation": "",
           "translations": {
-            "zh": "1. 使用 Apple Watch 时，请在手表上下载 SPAX App，并允许 SPAX 访问 Apple Health。"
+            "zh": "1. 使用 Apple Watch 时，请在手表上下载 SPAX App，并允许 SPAX 访问 Apple Health。",
+            "th": "1. สำหรับ Apple Watch ให้ดาวน์โหลดแอป SPAX บนนาฬิกาและอนุญาตให้ SPAX เข้าถึง Apple Health",
+            "ms": "1. Untuk Apple Watch, muat turun App SPAX pada jam anda dan benarkan SPAX mengakses Apple Health.",
+            "de": "1. Lade für die Apple Watch die SPAX App auf deiner Uhr herunter und erlaube SPAX den Zugriff auf Apple Health.",
+            "tr": "1. Apple Watch için saatinizde SPAX uygulamasını indirin ve SPAX'ın Apple Health'e erişmesine izin verin.",
+            "fr": "1. Pour l’Apple Watch, téléchargez l’app SPAX sur votre montre et autorisez SPAX à accéder à Apple Health.",
+            "uk": "1. Для Apple Watch завантажте застосунок SPAX на годинник і дозвольте SPAX доступ до Apple Health.",
+            "ar-SA": "1. بالنسبة إلى Apple Watch، نزّل تطبيق SPAX على ساعتك واسمح لـ SPAX بالوصول إلى Apple Health."
           },
           "androidTranslationId": "",
           "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_Heart_T_1",
@@ -870,7 +1255,14 @@
           "sourceText": "2. For other devices, turn on Heart Rate Broadcast and connect in SPAX.",
           "translation": "",
           "translations": {
-            "zh": "2. 使用其他设备时，请开启心率广播，并在 SPAX 中连接。"
+            "zh": "2. 使用其他设备时，请开启心率广播，并在 SPAX 中连接。",
+            "th": "2. สำหรับอุปกรณ์อื่น ให้เปิดการกระจายอัตราการเต้นของหัวใจแล้วเชื่อมต่อใน SPAX",
+            "ms": "2. Untuk peranti lain, hidupkan Siaran Kadar Denyutan Jantung dan sambungkan dalam SPAX.",
+            "de": "2. Aktiviere bei anderen Geräten die Herzfrequenzübertragung und verbinde das Gerät in SPAX.",
+            "tr": "2. Diğer cihazlar için Kalp Atış Hızı Yayını'nı açın ve SPAX üzerinden bağlanın.",
+            "fr": "2. Pour les autres appareils, activez la diffusion de fréquence cardiaque et connectez-vous dans SPAX.",
+            "uk": "2. Для інших пристроїв увімкніть передавання частоти серцевих скорочень і підключіться в SPAX.",
+            "ar-SA": "2. للأجهزة الأخرى، فعّل ميزة بث معدل ضربات القلب ثم اتصل بها في SPAX."
           },
           "androidTranslationId": "",
           "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_Heart_T_2",
@@ -892,7 +1284,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "how_to_connect",
           "iosTranslationId": "Device_Page_How_Connect",
@@ -906,7 +1305,14 @@
           "reviewedSourceText": "1. Make sure the hardware device is turned on",
           "translation": "",
           "translations": {
-            "zh": "1.确保硬件设备已开启"
+            "zh": "1.确保硬件设备已开启",
+            "th": "1. ตรวจสอบว่าอุปกรณ์เปิดอยู่",
+            "ms": "1. Pastikan peranti perkakasan dihidupkan",
+            "de": "1. Stelle sicher, dass das Gerät eingeschaltet ist",
+            "tr": "1. Donanım cihazının açık olduğundan emin olun",
+            "fr": "1. Vérifiez que l’appareil est allumé",
+            "uk": "1. Переконайтеся, що пристрій увімкнено",
+            "ar-SA": "1. تأكد من تشغيل الجهاز"
           },
           "androidTranslationId": "ensure_turned_on",
           "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_T_1",
@@ -920,7 +1326,14 @@
           "reviewedSourceText": "After the treadmill (exercise bike, elliptical, etc.) is powered on, Bluetooth is usually enabled by default. If you cannot find the Bluetooth device, try restarting the machine. (Some exercise bikes require pedaling to power on.)",
           "translation": "",
           "translations": {
-            "zh": "跑步机（室内单车、椭圆机等）通电后，蓝牙通常默认开启。如果无法找到蓝牙设备，可尝试重启机器。（部分室内单车设备需踩踏才能通电）"
+            "zh": "跑步机（室内单车、椭圆机等）通电后，蓝牙通常默认开启。如果无法找到蓝牙设备，可尝试重启机器。（部分室内单车设备需踩踏才能通电）",
+            "th": "หลังจากเปิดลู่วิ่ง (จักรยานออกกำลังกาย เครื่องอิลลิปติคอล ฯลฯ) โดยปกติ Bluetooth จะเปิดใช้งานตามค่าเริ่มต้น หากไม่พบอุปกรณ์ Bluetooth ให้ลองรีสตาร์ทเครื่อง (จักรยานออกกำลังกายบางรุ่นต้องปั่นเพื่อเปิดเครื่อง)",
+            "ms": "Selepas treadmill (basikal senaman, mesin elips dan sebagainya) dihidupkan, Bluetooth biasanya diaktifkan secara lalai. Jika anda tidak dapat menemukan peranti Bluetooth, cuba mulakan semula mesin. (Sesetengah basikal senaman perlu dikayuh untuk dihidupkan.)",
+            "de": "Nach dem Einschalten des Laufbands (Indoor-Bike, Crosstrainer usw.) ist Bluetooth normalerweise standardmäßig aktiviert. Wenn du das Bluetooth-Gerät nicht findest, starte das Gerät neu. (Einige Indoor-Bikes müssen zum Einschalten getreten werden.)",
+            "tr": "Koşu bandı (kondisyon bisikleti, eliptik bisiklet vb.) açıldığında Bluetooth genellikle varsayılan olarak etkinleşir. Bluetooth cihazını bulamıyorsanız makineyi yeniden başlatmayı deneyin. (Bazı kondisyon bisikletlerinin açılması için pedal çevrilmesi gerekir.)",
+            "fr": "Une fois le tapis de course (vélo d’intérieur, vélo elliptique, etc.) allumé, Bluetooth est généralement activé par défaut. Si vous ne trouvez pas l’appareil Bluetooth, essayez de redémarrer la machine. (Certains vélos d’intérieur doivent être utilisés pour s’allumer.)",
+            "uk": "Після ввімкнення бігової доріжки (велотренажера, еліптичного тренажера тощо) Bluetooth зазвичай активується автоматично. Якщо пристрій Bluetooth не вдається знайти, спробуйте перезапустити тренажер. (Деякі велотренажери вмикаються лише під час обертання педалей.)",
+            "ar-SA": "بعد تشغيل جهاز المشي (الدراجة الرياضية أو الجهاز الإهليلجي وغيرهما)، يتم عادةً تفعيل Bluetooth افتراضيًا. إذا تعذر العثور على جهاز Bluetooth، فجرّب إعادة تشغيل الجهاز. (تتطلب بعض الدراجات الرياضية تدوير الدواسات لتشغيلها.)"
           },
           "androidTranslationId": "ensure_turned_on_tips",
           "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_V_1",
@@ -934,7 +1347,14 @@
           "reviewedSourceText": "2. The Bluetooth on your phone is turned on",
           "translation": "",
           "translations": {
-            "zh": "2.手机蓝牙已开启"
+            "zh": "2.手机蓝牙已开启",
+            "th": "2. เปิด Bluetooth บนโทรศัพท์แล้ว",
+            "ms": "2. Bluetooth pada telefon anda dihidupkan",
+            "de": "2. Bluetooth ist auf deinem Smartphone aktiviert",
+            "tr": "2. Telefonunuzda Bluetooth açık",
+            "fr": "2. Bluetooth est activé sur votre téléphone",
+            "uk": "2. Bluetooth на телефоні ввімкнено",
+            "ar-SA": "2. تم تشغيل Bluetooth على هاتفك"
           },
           "androidTranslationId": "bluetooth_phone_is_turned_on",
           "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_T_2",
@@ -948,7 +1368,14 @@
           "reviewedSourceText": "In your phone's settings, make sure that Bluetooth is turned on, and grant nearby device or location permissions to the SPAX app.",
           "translation": "",
           "translations": {
-            "zh": "请在手机设置中心确认蓝牙已开启，并为 SPAX App 授予附近设备权限或位置权限。"
+            "zh": "请在手机设置中心确认蓝牙已开启，并为 SPAX App 授予附近设备权限或位置权限。",
+            "th": "ในการตั้งค่าโทรศัพท์ ตรวจสอบว่าเปิด Bluetooth แล้ว และอนุญาตสิทธิ์อุปกรณ์ใกล้เคียงหรือตำแหน่งที่ตั้งให้แอป SPAX",
+            "ms": "Dalam tetapan telefon anda, pastikan Bluetooth dihidupkan dan berikan kebenaran peranti berdekatan atau lokasi kepada aplikasi SPAX.",
+            "de": "Stelle in den Einstellungen deines Smartphones sicher, dass Bluetooth aktiviert ist, und gewähre der SPAX-App die Berechtigung für Geräte in der Nähe oder den Standort.",
+            "tr": "Telefonunuzun ayarlarında Bluetooth'un açık olduğundan emin olun ve SPAX uygulamasına yakındaki cihazlar veya konum izni verin.",
+            "fr": "Dans les réglages de votre téléphone, vérifiez que Bluetooth est activé et accordez à l’app SPAX l’autorisation d’accéder aux appareils à proximité ou à la localisation.",
+            "uk": "У налаштуваннях телефону переконайтеся, що Bluetooth увімкнено, і надайте застосунку SPAX дозвіл на доступ до пристроїв поблизу або геоданих.",
+            "ar-SA": "في إعدادات هاتفك، تأكد من تشغيل Bluetooth وامنح تطبيق SPAX إذن الوصول إلى الأجهزة القريبة أو الموقع."
           },
           "androidTranslationId": "phone_setting",
           "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_V_2",
@@ -962,7 +1389,14 @@
           "reviewedSourceText": "3. The phone is near the hardware device",
           "translation": "",
           "translations": {
-            "zh": "3.手机靠近硬件设备"
+            "zh": "3.手机靠近硬件设备",
+            "th": "3. โทรศัพท์อยู่ใกล้อุปกรณ์",
+            "ms": "3. Telefon berada berhampiran peranti perkakasan",
+            "de": "3. Das Smartphone befindet sich in der Nähe des Geräts",
+            "tr": "3. Telefon donanım cihazına yakın",
+            "fr": "3. Le téléphone se trouve à proximité de l’appareil",
+            "uk": "3. Телефон розташований поруч із пристроєм",
+            "ar-SA": "3. الهاتف قريب من الجهاز"
           },
           "androidTranslationId": "phone_near_device",
           "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_T_3",
@@ -976,7 +1410,14 @@
           "reviewedSourceText": "The Bluetooth signal can be interfered with by other signals. Make sure your phone is placed near the hardware device and close any idle nearby Bluetooth devices.",
           "translation": "",
           "translations": {
-            "zh": "蓝牙信号可能受到其他信号干扰。请确保手机靠近硬件设备，并关闭附近闲置的蓝牙设备。"
+            "zh": "蓝牙信号可能受到其他信号干扰。请确保手机靠近硬件设备，并关闭附近闲置的蓝牙设备。",
+            "th": "สัญญาณ Bluetooth อาจถูกรบกวนจากสัญญาณอื่น วางโทรศัพท์ไว้ใกล้อุปกรณ์และปิดอุปกรณ์ Bluetooth ใกล้เคียงที่ไม่ได้ใช้งาน",
+            "ms": "Isyarat Bluetooth boleh terganggu oleh isyarat lain. Pastikan telefon anda diletakkan berhampiran peranti dan matikan mana-mana peranti Bluetooth berdekatan yang tidak digunakan.",
+            "de": "Das Bluetooth-Signal kann durch andere Signale gestört werden. Lege dein Smartphone in die Nähe des Geräts und schalte ungenutzte Bluetooth-Geräte in der Umgebung aus.",
+            "tr": "Bluetooth sinyali diğer sinyallerden etkilenebilir. Telefonunuzu donanım cihazının yakınına yerleştirin ve kullanılmayan yakındaki Bluetooth cihazlarını kapatın.",
+            "fr": "Le signal Bluetooth peut être perturbé par d’autres signaux. Placez votre téléphone à proximité de l’appareil et désactivez les appareils Bluetooth inutilisés situés à proximité.",
+            "uk": "На сигнал Bluetooth можуть впливати інші сигнали. Розмістіть телефон поруч із пристроєм і вимкніть невикористовувані пристрої Bluetooth поблизу.",
+            "ar-SA": "قد يتأثر اتصال Bluetooth بإشارات أخرى. ضع هاتفك بالقرب من الجهاز وأوقف تشغيل أجهزة Bluetooth القريبة غير المستخدمة."
           },
           "androidTranslationId": "phone_near_device_tips",
           "iosTranslationId": "FreeRunning_Page_Nearby_Device_Help_V_3",
@@ -998,7 +1439,14 @@
           "sourceText": "Heart Rate Devices",
           "translation": "",
           "translations": {
-            "zh": "心率设备"
+            "zh": "心率设备",
+            "th": "อุปกรณ์วัดอัตราการเต้นของหัวใจ",
+            "ms": "Peranti Kadar Denyutan Jantung",
+            "de": "Herzfrequenzgeräte",
+            "tr": "Kalp Atış Hızı Cihazları",
+            "fr": "Appareils de fréquence cardiaque",
+            "uk": "Пристрої для вимірювання частоти серцевих скорочень",
+            "ar-SA": "أجهزة معدل ضربات القلب"
           },
           "androidTranslationId": "",
           "iosTranslationId": "FreeRunning_Page_Nearby_Heart_Device",
@@ -1011,7 +1459,14 @@
           "sourceText": "No Heart Rate Devices Found",
           "translation": "",
           "translations": {
-            "zh": "未发现心率设备"
+            "zh": "未发现心率设备",
+            "th": "ไม่พบอุปกรณ์วัดอัตราการเต้นของหัวใจ",
+            "ms": "Tiada Peranti Kadar Denyutan Jantung Ditemui",
+            "de": "Keine Herzfrequenzgeräte gefunden",
+            "tr": "Kalp Atış Hızı Cihazı Bulunamadı",
+            "fr": "Aucun appareil de fréquence cardiaque trouvé",
+            "uk": "Пристроїв для вимірювання частоти серцевих скорочень не знайдено",
+            "ar-SA": "لم يتم العثور على أجهزة معدل ضربات القلب"
           },
           "androidTranslationId": "",
           "iosTranslationId": "FreeRunning_Page_Nearby_Heart_Device_Empty",
@@ -1024,7 +1479,14 @@
           "sourceText": "Paired Heart Rate Devices",
           "translation": "",
           "translations": {
-            "zh": "已配对的心率设备"
+            "zh": "已配对的心率设备",
+            "th": "อุปกรณ์วัดอัตราการเต้นของหัวใจที่เชื่อมต่อแล้ว",
+            "ms": "Peranti Kadar Denyutan Jantung Berpasangan",
+            "de": "Gekoppelte Herzfrequenzgeräte",
+            "tr": "Eşleştirilmiş Kalp Atış Hızı Cihazları",
+            "fr": "Appareils de fréquence cardiaque associés",
+            "uk": "Підключені пристрої для вимірювання частоти серцевих скорочень",
+            "ar-SA": "أجهزة معدل ضربات القلب المقترنة"
           },
           "androidTranslationId": "paired_heart_rate",
           "iosTranslationId": "FreeRunning_Page_Nearby_Heart_Common_Device",
@@ -1037,7 +1499,14 @@
           "sourceText": "Add Heart Rate Device",
           "translation": "",
           "translations": {
-            "zh": "添加心率设备"
+            "zh": "添加心率设备",
+            "th": "เพิ่มอุปกรณ์วัดอัตราการเต้นของหัวใจ",
+            "ms": "Tambah Peranti Kadar Denyutan Jantung",
+            "de": "Herzfrequenzgerät hinzufügen",
+            "tr": "Kalp Atış Hızı Cihazı Ekle",
+            "fr": "Ajouter un appareil de fréquence cardiaque",
+            "uk": "Додати пристрій для вимірювання частоти серцевих скорочень",
+            "ar-SA": "إضافة جهاز معدل ضربات القلب"
           },
           "androidTranslationId": "add_heart_rate_devices",
           "iosTranslationId": "FreeRunning_Page_Nearby_Heart_Nearby_Device",
@@ -1059,7 +1528,14 @@
           "sourceText": "Paired Devices",
           "translation": "",
           "translations": {
-            "zh": "已配对设备"
+            "zh": "已配对设备",
+            "th": "อุปกรณ์ที่จับคู่แล้ว",
+            "ms": "Peranti Berpasangan",
+            "de": "Gekoppelte Geräte",
+            "tr": "Eşleştirilmiş Cihazlar",
+            "fr": "Appareils associés",
+            "uk": "Сполучені пристрої",
+            "ar-SA": "الأجهزة المقترنة"
           },
           "androidTranslationId": "paired_devices",
           "iosTranslationId": "FreeRunning_Page_Nearby_Common_Device",
@@ -1072,7 +1548,14 @@
           "sourceText": "Add Device",
           "translation": "",
           "translations": {
-            "zh": "添加设备"
+            "zh": "添加设备",
+            "th": "เพิ่มอุปกรณ์",
+            "ms": "Tambah Peranti",
+            "de": "Gerät hinzufügen",
+            "tr": "Cihaz Ekle",
+            "fr": "Ajouter un appareil",
+            "uk": "Додати пристрій",
+            "ar-SA": "إضافة جهاز"
           },
           "androidTranslationId": "add_device",
           "iosTranslationId": "FreeRunning_Page_Nearby_Device",
@@ -1095,7 +1578,14 @@
           "reviewedSourceText": "Membership",
           "translation": "",
           "translations": {
-            "zh": "会员中心"
+            "zh": "会员中心",
+            "th": "การเป็นสมาชิก",
+            "ms": "Keahlian",
+            "de": "Mitgliedschaft",
+            "tr": "Üyelik",
+            "fr": "Abonnement",
+            "uk": "Членство",
+            "ar-SA": "العضوية"
           },
           "androidTranslationId": "title_my_member",
           "iosTranslationId": "Mine_Page_Vip_Page_Title",
@@ -1117,7 +1607,14 @@
           "sourceText": "Please enter the membership redemption code.",
           "translation": "",
           "translations": {
-            "zh": "请输入会员兑换码。"
+            "zh": "请输入会员兑换码。",
+            "th": "โปรดป้อนรหัสแลกรับสมาชิก",
+            "ms": "Sila masukkan kod penebusan keahlian.",
+            "de": "Bitte gib den Einlösecode für die Mitgliedschaft ein.",
+            "tr": "Lütfen üyelik kullanım kodunu girin.",
+            "fr": "Veuillez saisir le code d’échange de l’abonnement.",
+            "uk": "Будь ласка, введіть код активації членства.",
+            "ar-SA": "يرجى إدخال رمز استرداد العضوية."
           },
           "androidTranslationId": "redemption_code_title",
           "iosTranslationId": "Alert_Input_Code",
@@ -1130,7 +1627,14 @@
           "sourceText": "The redemption code is invalid",
           "translation": "",
           "translations": {
-            "zh": "兑换码无效"
+            "zh": "兑换码无效",
+            "th": "รหัสแลกรับไม่ถูกต้อง",
+            "ms": "Kod penebusan tidak sah",
+            "de": "Der Einlösecode ist ungültig",
+            "tr": "Kullanım kodu geçersiz",
+            "fr": "Le code d’échange n’est pas valide",
+            "uk": "Код активації недійсний",
+            "ar-SA": "رمز الاسترداد غير صالح"
           },
           "androidTranslationId": "the_redemption_code_is_invalid",
           "iosTranslationId": "Alert_Exchange_Code_Invalid",
@@ -1143,7 +1647,14 @@
           "sourceText": "Cancel",
           "translation": "",
           "translations": {
-            "zh": "取消"
+            "zh": "取消",
+            "th": "ยกเลิก",
+            "ms": "Batal",
+            "de": "Abbrechen",
+            "tr": "İptal",
+            "fr": "Annuler",
+            "uk": "Скасувати",
+            "ar-SA": "إلغاء"
           },
           "androidTranslationId": "cancel_lower",
           "iosTranslationId": "Alert_Cancel",
@@ -1156,7 +1667,14 @@
           "sourceText": "OK",
           "translation": "",
           "translations": {
-            "zh": "确定"
+            "zh": "确定",
+            "th": "ตกลง",
+            "ms": "OK",
+            "de": "OK",
+            "tr": "Tamam",
+            "fr": "OK",
+            "uk": "OK",
+            "ar-SA": "موافق"
           },
           "androidTranslationId": "ok_upper",
           "iosTranslationId": "Alert_OK",
@@ -1178,7 +1696,14 @@
           "sourceText": "Please enter the membership redemption code.",
           "translation": "",
           "translations": {
-            "zh": "请输入会员兑换码。"
+            "zh": "请输入会员兑换码。",
+            "th": "โปรดป้อนรหัสแลกรับสมาชิก",
+            "ms": "Sila masukkan kod penebusan keahlian.",
+            "de": "Bitte gib den Einlösecode für die Mitgliedschaft ein.",
+            "tr": "Lütfen üyelik kullanım kodunu girin.",
+            "fr": "Veuillez saisir le code d’échange de l’abonnement.",
+            "uk": "Будь ласка, введіть код активації членства.",
+            "ar-SA": "يرجى إدخال رمز استرداد العضوية."
           },
           "androidTranslationId": "redemption_code_title",
           "iosTranslationId": "Alert_Input_Code",
@@ -1191,7 +1716,14 @@
           "sourceText": "Cancel",
           "translation": "",
           "translations": {
-            "zh": "取消"
+            "zh": "取消",
+            "th": "ยกเลิก",
+            "ms": "Batal",
+            "de": "Abbrechen",
+            "tr": "İptal",
+            "fr": "Annuler",
+            "uk": "Скасувати",
+            "ar-SA": "إلغاء"
           },
           "androidTranslationId": "cancel_lower",
           "iosTranslationId": "Alert_Cancel",
@@ -1204,7 +1736,14 @@
           "sourceText": "OK",
           "translation": "",
           "translations": {
-            "zh": "确定"
+            "zh": "确定",
+            "th": "ตกลง",
+            "ms": "OK",
+            "de": "OK",
+            "tr": "Tamam",
+            "fr": "OK",
+            "uk": "OK",
+            "ar-SA": "موافق"
           },
           "androidTranslationId": "ok_upper",
           "iosTranslationId": "Alert_OK",
@@ -1226,7 +1765,14 @@
           "sourceText": "Device management",
           "translation": "",
           "translations": {
-            "zh": "设备管理"
+            "zh": "设备管理",
+            "th": "จัดการอุปกรณ์",
+            "ms": "Pengurusan peranti",
+            "de": "Geräteverwaltung",
+            "tr": "Cihaz yönetimi",
+            "fr": "Gestion des appareils",
+            "uk": "Керування пристроями",
+            "ar-SA": "إدارة الأجهزة"
           },
           "androidTranslationId": "device_management",
           "iosTranslationId": "Device_Page_Title",
@@ -1239,7 +1785,14 @@
           "sourceText": "Add Device",
           "translation": "",
           "translations": {
-            "zh": "添加设备"
+            "zh": "添加设备",
+            "th": "เพิ่มอุปกรณ์",
+            "ms": "Tambah Peranti",
+            "de": "Gerät hinzufügen",
+            "tr": "Cihaz Ekle",
+            "fr": "Ajouter un appareil",
+            "uk": "Додати пристрій",
+            "ar-SA": "إضافة جهاز"
           },
           "androidTranslationId": "add_device",
           "iosTranslationId": "Device_Page_Add_Title",
@@ -1252,7 +1805,14 @@
           "sourceText": "Smartwatch/Fitness Band",
           "translation": "",
           "translations": {
-            "zh": "智能手表/手环"
+            "zh": "智能手表/手环",
+            "th": "สมาร์ทวอทช์/สายรัดข้อมือฟิตเนส",
+            "ms": "Jam Pintar/Gelang Kecergasan",
+            "de": "Smartwatch/Fitnessarmband",
+            "tr": "Akıllı Saat/Fitness Bilekliği",
+            "fr": "Montre connectée/Bracelet d’activité",
+            "uk": "Смартгодинник/фітнес-браслет",
+            "ar-SA": "ساعة ذكية/سوار لياقة"
           },
           "androidTranslationId": "watch_title",
           "iosTranslationId": "Device_Page_Watch_Title",
@@ -1265,7 +1825,14 @@
           "sourceText": "Supports Apple Watch, Coros, Garmin, and more.",
           "translation": "",
           "translations": {
-            "zh": "支持 Apple Watch、Coros、Garmin 等"
+            "zh": "支持 Apple Watch、Coros、Garmin 等",
+            "th": "รองรับ Apple Watch, Coros, Garmin และอื่นๆ",
+            "ms": "Menyokong Apple Watch, Coros, Garmin dan banyak lagi.",
+            "de": "Unterstützt Apple Watch, Coros, Garmin und mehr.",
+            "tr": "Apple Watch, Coros, Garmin ve daha fazlasını destekler.",
+            "fr": "Compatible avec Apple Watch, Coros, Garmin et plus encore.",
+            "uk": "Підтримує Apple Watch, Coros, Garmin та інші.",
+            "ar-SA": "يدعم Apple Watch وCoros وGarmin وغيرها."
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_Watch_Subtitle",
@@ -1274,7 +1841,14 @@
               "sourceText": "Supports brands including Huawei, Coros, Garmin, and more.",
               "translation": "",
               "translations": {
-                "zh": "支持华为、Coros、Garmin 等品牌。"
+                "zh": "支持华为、Coros、Garmin 等品牌。",
+                "th": "รองรับแบรนด์ต่าง ๆ รวมถึง Huawei, Coros, Garmin และอื่น ๆ",
+                "ms": "Menyokong jenama termasuk Huawei, Coros, Garmin dan lain-lain.",
+                "de": "Unterstützt unter anderem die Marken Huawei, Coros und Garmin.",
+                "tr": "Huawei, Coros, Garmin ve diğer markaları destekler.",
+                "fr": "Compatible notamment avec les marques Huawei, Coros et Garmin.",
+                "uk": "Підтримує Huawei, Coros, Garmin та інші бренди.",
+                "ar-SA": "يدعم علامات تجارية تشمل Huawei وCoros وGarmin وغيرها."
               },
               "androidTranslationId": "support_heart_device_brand",
               "iosTranslationId": ""
@@ -1288,7 +1862,14 @@
           "sourceText": "Color screen treadmill",
           "translation": "",
           "translations": {
-            "zh": "彩屏跑步机"
+            "zh": "彩屏跑步机",
+            "th": "ลู่วิ่งจอสี",
+            "ms": "Treadmil skrin warna",
+            "de": "Laufband mit Farbdisplay",
+            "tr": "Renkli ekranlı koşu bandı",
+            "fr": "Tapis de course à écran couleur",
+            "uk": "Бігова доріжка з кольоровим екраном",
+            "ar-SA": "جهاز مشي بشاشة ملونة"
           },
           "androidTranslationId": "treadmill_color_screen",
           "iosTranslationId": "Device_Page_Panel_Title",
@@ -1301,7 +1882,14 @@
           "sourceText": "Equipped with SPAX smart system and high-definition touchscreen",
           "translation": "",
           "translations": {
-            "zh": "搭载 SPAX 智能系统和高清触摸屏"
+            "zh": "搭载 SPAX 智能系统和高清触摸屏",
+            "th": "มาพร้อมระบบอัจฉริยะ SPAX และหน้าจอสัมผัสความละเอียดสูง",
+            "ms": "Dilengkapi dengan sistem pintar SPAX dan skrin sentuh definisi tinggi",
+            "de": "Ausgestattet mit SPAX Smart System und hochauflösendem Touchscreen",
+            "tr": "SPAX akıllı sistemi ve yüksek çözünürlüklü dokunmatik ekranla donatılmıştır",
+            "fr": "Équipé du système intelligent SPAX et d’un écran tactile haute définition",
+            "uk": "Оснащена розумною системою SPAX і HD-сенсорним екраном",
+            "ar-SA": "مزوّد بنظام SPAX الذكي وشاشة لمس عالية الدقة"
           },
           "androidTranslationId": "treadmill_color_screen_desc",
           "iosTranslationId": "Device_Page_Panel_Subtitle",
@@ -1314,7 +1902,14 @@
           "sourceText": "Bluetooth treadmill",
           "translation": "",
           "translations": {
-            "zh": "蓝牙跑步机"
+            "zh": "蓝牙跑步机",
+            "th": "ลู่วิ่ง Bluetooth",
+            "ms": "Treadmil Bluetooth",
+            "de": "Bluetooth-Laufband",
+            "tr": "Bluetooth koşu bandı",
+            "fr": "Tapis de course Bluetooth",
+            "uk": "Бігова доріжка Bluetooth",
+            "ar-SA": "جهاز مشي Bluetooth"
           },
           "androidTranslationId": "bluetooth_treadmill",
           "iosTranslationId": "Device_Page_Treadmill_Title",
@@ -1327,7 +1922,14 @@
           "sourceText": "Supports Bluetooth connection with SPAX App",
           "translation": "",
           "translations": {
-            "zh": "支持与 SPAX App 蓝牙连接"
+            "zh": "支持与 SPAX App 蓝牙连接",
+            "th": "รองรับการเชื่อมต่อ Bluetooth กับแอป SPAX",
+            "ms": "Menyokong sambungan Bluetooth dengan aplikasi SPAX",
+            "de": "Unterstützt die Bluetooth-Verbindung mit der SPAX-App",
+            "tr": "SPAX uygulamasıyla Bluetooth bağlantısını destekler",
+            "fr": "Prend en charge la connexion Bluetooth avec l’app SPAX",
+            "uk": "Підтримує підключення через Bluetooth до застосунку SPAX",
+            "ar-SA": "يدعم اتصال Bluetooth بتطبيق SPAX"
           },
           "androidTranslationId": "bluetooth_with_spax_app",
           "iosTranslationId": "Device_Page_Treadmill_Subtitle",
@@ -1340,7 +1942,14 @@
           "sourceText": "Indoor bike",
           "translation": "",
           "translations": {
-            "zh": "室内单车"
+            "zh": "室内单车",
+            "th": "จักรยานออกกำลังกาย",
+            "ms": "Basikal senaman dalaman",
+            "de": "Indoor-Bike",
+            "tr": "Kondisyon bisikleti",
+            "fr": "Vélo d’intérieur",
+            "uk": "Велотренажер",
+            "ar-SA": "دراجة تمرين داخلية"
           },
           "androidTranslationId": "indoor_bike",
           "iosTranslationId": "Device_Page_Bike_Title",
@@ -1353,7 +1962,14 @@
           "sourceText": "Supports Bluetooth connection with SPAX App",
           "translation": "",
           "translations": {
-            "zh": "支持与 SPAX App 蓝牙连接"
+            "zh": "支持与 SPAX App 蓝牙连接",
+            "th": "รองรับการเชื่อมต่อ Bluetooth กับแอป SPAX",
+            "ms": "Menyokong sambungan Bluetooth dengan aplikasi SPAX",
+            "de": "Unterstützt die Bluetooth-Verbindung mit der SPAX-App",
+            "tr": "SPAX uygulamasıyla Bluetooth bağlantısını destekler",
+            "fr": "Prend en charge la connexion Bluetooth avec l’app SPAX",
+            "uk": "Підтримує підключення через Bluetooth до застосунку SPAX",
+            "ar-SA": "يدعم اتصال Bluetooth بتطبيق SPAX"
           },
           "androidTranslationId": "bluetooth_with_spax_app",
           "iosTranslationId": "Device_Page_Bike_Subtitle",
@@ -1366,7 +1982,14 @@
           "sourceText": "Elliptical",
           "translation": "",
           "translations": {
-            "zh": "椭圆机"
+            "zh": "椭圆机",
+            "th": "เครื่องอิลลิปติคอล",
+            "ms": "Mesin elips",
+            "de": "Crosstrainer",
+            "tr": "Eliptik bisiklet",
+            "fr": "Vélo elliptique",
+            "uk": "Еліптичний тренажер",
+            "ar-SA": "جهاز إليبتيكال"
           },
           "androidTranslationId": "cross_training",
           "iosTranslationId": "Device_Page_Cross_Title",
@@ -1379,7 +2002,14 @@
           "sourceText": "Supports Bluetooth connection with SPAX App",
           "translation": "",
           "translations": {
-            "zh": "支持与 SPAX App 蓝牙连接"
+            "zh": "支持与 SPAX App 蓝牙连接",
+            "th": "รองรับการเชื่อมต่อ Bluetooth กับแอป SPAX",
+            "ms": "Menyokong sambungan Bluetooth dengan aplikasi SPAX",
+            "de": "Unterstützt die Bluetooth-Verbindung mit der SPAX-App",
+            "tr": "SPAX uygulamasıyla Bluetooth bağlantısını destekler",
+            "fr": "Prend en charge la connexion Bluetooth avec l’app SPAX",
+            "uk": "Підтримує підключення через Bluetooth до застосунку SPAX",
+            "ar-SA": "يدعم اتصال Bluetooth بتطبيق SPAX"
           },
           "androidTranslationId": "bluetooth_with_spax_app",
           "iosTranslationId": "Device_Page_Cross_Subtitle",
@@ -1393,7 +2023,14 @@
           "reviewedSourceText": "Rowing machine",
           "translation": "",
           "translations": {
-            "zh": "划船机"
+            "zh": "划船机",
+            "th": "เครื่องพายเรือ",
+            "ms": "Mesin mendayung",
+            "de": "Rudergerät",
+            "tr": "Kürek makinesi",
+            "fr": "Rameur",
+            "uk": "Гребний тренажер",
+            "ar-SA": "جهاز التجديف"
           },
           "androidTranslationId": "rowing",
           "iosTranslationId": "Device_Page_Rowing_Title",
@@ -1406,7 +2043,14 @@
           "sourceText": "Supports Bluetooth connection with SPAX App",
           "translation": "",
           "translations": {
-            "zh": "支持与 SPAX App 蓝牙连接"
+            "zh": "支持与 SPAX App 蓝牙连接",
+            "th": "รองรับการเชื่อมต่อ Bluetooth กับแอป SPAX",
+            "ms": "Menyokong sambungan Bluetooth dengan aplikasi SPAX",
+            "de": "Unterstützt die Bluetooth-Verbindung mit der SPAX-App",
+            "tr": "SPAX uygulamasıyla Bluetooth bağlantısını destekler",
+            "fr": "Prend en charge la connexion Bluetooth avec l’app SPAX",
+            "uk": "Підтримує підключення через Bluetooth до застосунку SPAX",
+            "ar-SA": "يدعم اتصال Bluetooth بتطبيق SPAX"
           },
           "androidTranslationId": "bluetooth_with_spax_app",
           "iosTranslationId": "Device_Page_Rowing_Subtitle",
@@ -1420,7 +2064,14 @@
           "reviewedSourceText": "Ab wheel",
           "translation": "",
           "translations": {
-            "zh": "健腹轮"
+            "zh": "健腹轮",
+            "th": "ลูกล้อบริหารหน้าท้อง",
+            "ms": "Roda abdomen",
+            "de": "Bauchroller",
+            "tr": "Karın tekerleği",
+            "fr": "Roue abdominale",
+            "uk": "Ролик для преса",
+            "ar-SA": "عجلة تمارين البطن"
           },
           "androidTranslationId": "ab_wheel",
           "iosTranslationId": "Device_Page_AB_Title",
@@ -1433,7 +2084,14 @@
           "sourceText": "NEW",
           "translation": "",
           "translations": {
-            "zh": "新"
+            "zh": "新",
+            "th": "ใหม่",
+            "ms": "BAHARU",
+            "de": "NEU",
+            "tr": "YENİ",
+            "fr": "NOUVEAU",
+            "uk": "НОВЕ",
+            "ar-SA": "جديد"
           },
           "androidTranslationId": "device_new",
           "iosTranslationId": "Flag_NEW",
@@ -1447,7 +2105,14 @@
           "reviewedSourceText": "Currently supports Bluetooth connection with an ab wheel for counting",
           "translation": "",
           "translations": {
-            "zh": "目前支持连接健腹轮进行计数"
+            "zh": "目前支持连接健腹轮进行计数",
+            "th": "ปัจจุบันรองรับการเชื่อมต่อ Bluetooth กับลูกล้อบริหารหน้าท้องเพื่อนับจำนวน",
+            "ms": "Pada masa ini menyokong sambungan Bluetooth dengan roda abdomen untuk mengira ulangan",
+            "de": "Unterstützt derzeit die Bluetooth-Verbindung mit einem Bauchroller zum Zählen",
+            "tr": "Şu anda sayım için karın tekerleğiyle Bluetooth bağlantısını destekler",
+            "fr": "Prend actuellement en charge la connexion Bluetooth à une roue abdominale pour compter les répétitions",
+            "uk": "Наразі підтримується підключення ролика для преса через Bluetooth для підрахунку повторень",
+            "ar-SA": "يدعم حاليًا اتصال Bluetooth بعجلة تمارين البطن لعدّ التكرارات"
           },
           "androidTranslationId": "abdominal_wheel_desc",
           "iosTranslationId": "Device_Page_AB_Subtitle",
@@ -1460,7 +2125,14 @@
           "sourceText": "Smart jump rope",
           "translation": "",
           "translations": {
-            "zh": "智能跳绳"
+            "zh": "智能跳绳",
+            "th": "เชือกกระโดดอัจฉริยะ",
+            "ms": "Tali lompat pintar",
+            "de": "Smartes Springseil",
+            "tr": "Akıllı atlama ipi",
+            "fr": "Corde à sauter intelligente",
+            "uk": "Розумна скакалка",
+            "ar-SA": "حبل قفز ذكي"
           },
           "androidTranslationId": "jump_rope",
           "iosTranslationId": "Device_Page_Jump_Rope_Title",
@@ -1473,7 +2145,14 @@
           "sourceText": "NEW",
           "translation": "",
           "translations": {
-            "zh": "新"
+            "zh": "新",
+            "th": "ใหม่",
+            "ms": "BAHARU",
+            "de": "NEU",
+            "tr": "YENİ",
+            "fr": "NOUVEAU",
+            "uk": "НОВЕ",
+            "ar-SA": "جديد"
           },
           "androidTranslationId": "device_new",
           "iosTranslationId": "Flag_NEW",
@@ -1486,7 +2165,14 @@
           "sourceText": "Supports connection with certain jump ropes that have Bluetooth functionality",
           "translation": "",
           "translations": {
-            "zh": "支持连接部分具备蓝牙功能的跳绳"
+            "zh": "支持连接部分具备蓝牙功能的跳绳",
+            "th": "รองรับการเชื่อมต่อกับเชือกกระโดดบางรุ่นที่มีฟังก์ชัน Bluetooth",
+            "ms": "Menyokong sambungan dengan tali lompat tertentu yang mempunyai fungsi Bluetooth",
+            "de": "Unterstützt die Verbindung mit bestimmten Springseilen mit Bluetooth-Funktion",
+            "tr": "Bluetooth özelliğine sahip belirli atlama ipleriyle bağlantıyı destekler",
+            "fr": "Prend en charge la connexion avec certaines cordes à sauter équipées de Bluetooth",
+            "uk": "Підтримує підключення до деяких скакалок із функцією Bluetooth",
+            "ar-SA": "يدعم الاتصال ببعض حبال القفز المزودة بوظيفة Bluetooth"
           },
           "androidTranslationId": "supports_connection_jr",
           "iosTranslationId": "Device_Page_Jump_Rope_Subtitle",
@@ -1508,7 +2194,14 @@
           "sourceText": "Paired Devices",
           "translation": "",
           "translations": {
-            "zh": "已配对设备"
+            "zh": "已配对设备",
+            "th": "อุปกรณ์ที่จับคู่แล้ว",
+            "ms": "Peranti Berpasangan",
+            "de": "Gekoppelte Geräte",
+            "tr": "Eşleştirilmiş Cihazlar",
+            "fr": "Appareils associés",
+            "uk": "Сполучені пристрої",
+            "ar-SA": "الأجهزة المقترنة"
           },
           "androidTranslationId": "paired_devices",
           "iosTranslationId": "Device_Page_Historical_Title",
@@ -1521,7 +2214,14 @@
           "sourceText": "You haven\\'t added any devices yet",
           "translation": "",
           "translations": {
-            "zh": "你还没有添加任何设备"
+            "zh": "你还没有添加任何设备",
+            "th": "คุณยังไม่ได้เพิ่มอุปกรณ์ใดๆ",
+            "ms": "Anda belum menambah sebarang peranti",
+            "de": "Du hast noch keine Geräte hinzugefügt",
+            "tr": "Henüz hiçbir cihaz eklemediniz",
+            "fr": "Vous n'avez encore ajouté aucun appareil",
+            "uk": "Ви ще не додали жодного пристрою",
+            "ar-SA": "لم تضف أي أجهزة بعد"
           },
           "androidTranslationId": "have_not_devices",
           "iosTranslationId": "Device_Page_Histor_Empty_Tip",
@@ -1543,7 +2243,14 @@
           "sourceText": "Connected",
           "translation": "",
           "translations": {
-            "zh": "已连接"
+            "zh": "已连接",
+            "th": "เชื่อมต่อแล้ว",
+            "ms": "Disambungkan",
+            "de": "Verbunden",
+            "tr": "Bağlandı",
+            "fr": "Connecté",
+            "uk": "Підключено",
+            "ar-SA": "متصل"
           },
           "androidTranslationId": "connected",
           "iosTranslationId": "Device_Page_Search_Did",
@@ -1566,7 +2273,14 @@
           "reviewedSourceText": "You'll be able to take photos or log in to your equipment by scanning a QR code.",
           "translation": "",
           "translations": {
-            "zh": "你可以扫描二维码拍照或登录你的设备。"
+            "zh": "你可以扫描二维码拍照或登录你的设备。",
+            "th": "คุณจะสามารถถ่ายภาพหรือเข้าสู่ระบบอุปกรณ์ได้ด้วยการสแกนรหัส QR",
+            "ms": "Anda boleh mengambil foto atau log masuk ke peralatan dengan mengimbas kod QR.",
+            "de": "Durch Scannen eines QR-Codes kannst du Fotos aufnehmen oder dich bei deinem Gerät anmelden.",
+            "tr": "QR kodunu tarayarak fotoğraf çekebilir veya ekipmanınızda oturum açabilirsiniz.",
+            "fr": "Vous pourrez prendre des photos ou vous connecter à votre équipement en scannant un code QR.",
+            "uk": "Відсканувавши QR-код, ви зможете робити фотографії або входити в обліковий запис на обладнанні.",
+            "ar-SA": "ستتمكن من التقاط الصور أو تسجيل الدخول إلى جهازك عن طريق مسح رمز QR."
           },
           "androidTranslationId": "",
           "iosTranslationId": "NSCameraUsageDescription",
@@ -1588,7 +2302,14 @@
           "sourceText": "Scan the QR code",
           "translation": "",
           "translations": {
-            "zh": "扫描设备上的二维码"
+            "zh": "扫描设备上的二维码",
+            "th": "สแกน QR code",
+            "ms": "Imbas kod QR",
+            "de": "Scanne den QR-Code",
+            "tr": "QR kodunu tarayın",
+            "fr": "Scannez le QR code",
+            "uk": "Відскануйте QR-код",
+            "ar-SA": "امسح رمز QR"
           },
           "androidTranslationId": "login_scanner_hint1",
           "iosTranslationId": "Scan_Page_Title",
@@ -1601,7 +2322,14 @@
           "sourceText": "on the device to log in",
           "translation": "",
           "translations": {
-            "zh": "进行登录"
+            "zh": "进行登录",
+            "th": "บนอุปกรณ์เพื่อเข้าสู่ระบบ",
+            "ms": "pada peranti untuk log masuk",
+            "de": "auf dem Gerät, um dich anzumelden",
+            "tr": "oturum açmak için cihazdaki",
+            "fr": "sur l'appareil pour vous connecter",
+            "uk": "на пристрої, щоб увійти",
+            "ar-SA": "على الجهاز لتسجيل الدخول"
           },
           "androidTranslationId": "login_scanner_hint2",
           "iosTranslationId": "Scan_Page_Subtitle",
@@ -1623,7 +2351,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_How_Connect",
@@ -1645,7 +2380,14 @@
           "sourceText": "Indoor bike",
           "translation": "",
           "translations": {
-            "zh": "室内单车"
+            "zh": "室内单车",
+            "th": "จักรยานออกกำลังกาย",
+            "ms": "Basikal senaman dalaman",
+            "de": "Indoor-Bike",
+            "tr": "Kondisyon bisikleti",
+            "fr": "Vélo d’intérieur",
+            "uk": "Велотренажер",
+            "ar-SA": "دراجة تمرين داخلية"
           },
           "androidTranslationId": "indoor_bike",
           "iosTranslationId": "Device_Page_Bike_Title",
@@ -1658,7 +2400,14 @@
           "sourceText": "Supported Brands",
           "translation": "",
           "translations": {
-            "zh": "支持品牌"
+            "zh": "支持品牌",
+            "th": "แบรนด์ที่รองรับ",
+            "ms": "Jenama Disokong",
+            "de": "Unterstützte Marken",
+            "tr": "Desteklenen markalar",
+            "fr": "Marques compatibles",
+            "uk": "Підтримувані бренди",
+            "ar-SA": "العلامات التجارية المدعومة"
           },
           "androidTranslationId": "supported_brands",
           "iosTranslationId": "Device_Page_Support_Title",
@@ -1672,7 +2421,14 @@
           "reviewedSourceText": "For more details, please contact the brand's customer service.",
           "translation": "",
           "translations": {
-            "zh": "如需了解更多详情，请联系品牌客服"
+            "zh": "如需了解更多详情，请联系品牌客服",
+            "th": "สำหรับรายละเอียดเพิ่มเติม โปรดติดต่อฝ่ายบริการลูกค้าของแบรนด์",
+            "ms": "Untuk maklumat lanjut, sila hubungi khidmat pelanggan jenama tersebut.",
+            "de": "Weitere Informationen erhältst du beim Kundenservice der Marke.",
+            "tr": "Daha fazla bilgi için markanın müşteri hizmetleriyle iletişime geçin.",
+            "fr": "Pour plus de détails, contactez le service client de la marque.",
+            "uk": "Щоб дізнатися більше, зверніться до служби підтримки бренду.",
+            "ar-SA": "لمزيد من التفاصيل، يُرجى التواصل مع خدمة عملاء العلامة التجارية."
           },
           "androidTranslationId": "contact_the_customer_service",
           "iosTranslationId": "Mine_Page_Support_Brand_Tip",
@@ -1694,7 +2450,14 @@
           "sourceText": "Rowing",
           "translation": "",
           "translations": {
-            "zh": "划船机"
+            "zh": "划船机",
+            "th": "เครื่องพายเรือ",
+            "ms": "Mesin mendayung",
+            "de": "Rudergerät",
+            "tr": "Kürek makinesi",
+            "fr": "Rameur",
+            "uk": "Гребний тренажер",
+            "ar-SA": "جهاز التجديف"
           },
           "androidTranslationId": "rowing",
           "iosTranslationId": "Device_Page_Rowing_Title",
@@ -1716,7 +2479,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_How_Connect",
@@ -1738,7 +2508,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_How_Connect",
@@ -1761,7 +2538,14 @@
           "reviewedSourceText": "Ab wheel",
           "translation": "",
           "translations": {
-            "zh": "健腹轮"
+            "zh": "健腹轮",
+            "th": "ลูกล้อบริหารหน้าท้อง",
+            "ms": "Roda abdomen",
+            "de": "Bauchroller",
+            "tr": "Karın tekerleği",
+            "fr": "Roue abdominale",
+            "uk": "Ролик для преса",
+            "ar-SA": "عجلة تمارين البطن"
           },
           "androidTranslationId": "ab_wheel",
           "iosTranslationId": "Device_Page_AB_Title",
@@ -1775,7 +2559,14 @@
           "reviewedSourceText": "Turn on the bluetooth function on your phone, start the ab wheel, and make sure the electronic display is on\\nSearch for and connect your ab wheel to record exercise data in real time.",
           "translation": "",
           "translations": {
-            "zh": "打开手机蓝牙功能，启动健腹轮并确保电子显示屏已开启\\n搜索并连接你的健腹轮，即可实时记录运动数据"
+            "zh": "打开手机蓝牙功能，启动健腹轮并确保电子显示屏已开启\\n搜索并连接你的健腹轮，即可实时记录运动数据",
+            "th": "เปิดฟังก์ชัน bluetooth บนโทรศัพท์ เริ่มใช้งานลูกล้อบริหารหน้าท้อง และตรวจสอบว่าจอแสดงผลอิเล็กทรอนิกส์เปิดอยู่\\nค้นหาและเชื่อมต่อลูกล้อบริหารหน้าท้องเพื่อบันทึกข้อมูลการออกกำลังกายแบบเรียลไทม์",
+            "ms": "Hidupkan fungsi bluetooth pada telefon anda, aktifkan roda abdomen dan pastikan paparan elektronik dihidupkan\\nCari dan sambungkan roda abdomen anda untuk merekod data senaman dalam masa nyata.",
+            "de": "Aktiviere die bluetooth-Funktion auf deinem Smartphone, starte den Bauchroller und stelle sicher, dass die elektronische Anzeige eingeschaltet ist\\nSuche deinen Bauchroller und verbinde ihn, um Trainingsdaten in Echtzeit aufzuzeichnen.",
+            "tr": "Telefonunuzda bluetooth işlevini açın, karın tekerleğini çalıştırın ve elektronik ekranın açık olduğundan emin olun\\nGerçek zamanlı egzersiz verilerini kaydetmek için karın tekerleğinizi arayıp bağlayın.",
+            "fr": "Activez la fonction bluetooth de votre téléphone, démarrez la roue abdominale et vérifiez que l’écran électronique est allumé\\nRecherchez et connectez votre roue abdominale pour enregistrer vos données d’entraînement en temps réel.",
+            "uk": "Увімкніть функцію bluetooth на телефоні, запустіть ролик для преса та переконайтеся, що електронний дисплей увімкнено\\nЗнайдіть і підключіть ролик для преса, щоб записувати дані тренування в реальному часі.",
+            "ar-SA": "شغّل وظيفة bluetooth على هاتفك، وابدأ تشغيل عجلة تمارين البطن، وتأكد من تشغيل الشاشة الإلكترونية\\nابحث عن عجلة تمارين البطن واتصل بها لتسجيل بيانات التمرين في الوقت الفعلي."
           },
           "androidTranslationId": "ensure_ab_wheel_desc",
           "iosTranslationId": "Device_Page_Search_Empty_Tip_Ab",
@@ -1788,7 +2579,14 @@
           "sourceText": "Scan",
           "translation": "",
           "translations": {
-            "zh": "扫描"
+            "zh": "扫描",
+            "th": "สแกน",
+            "ms": "Imbas",
+            "de": "Scannen",
+            "tr": "Tara",
+            "fr": "Scanner",
+            "uk": "Сканувати",
+            "ar-SA": "مسح"
           },
           "androidTranslationId": "search_for_device",
           "iosTranslationId": "Device_Page_Search",
@@ -1810,7 +2608,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_How_Connect",
@@ -1832,7 +2637,14 @@
           "sourceText": "Bluetooth treadmill",
           "translation": "",
           "translations": {
-            "zh": "蓝牙跑步机"
+            "zh": "蓝牙跑步机",
+            "th": "ลู่วิ่ง Bluetooth",
+            "ms": "Treadmil Bluetooth",
+            "de": "Bluetooth-Laufband",
+            "tr": "Bluetooth koşu bandı",
+            "fr": "Tapis de course Bluetooth",
+            "uk": "Бігова доріжка Bluetooth",
+            "ar-SA": "جهاز مشي Bluetooth"
           },
           "androidTranslationId": "bluetooth_treadmill",
           "iosTranslationId": "Device_Page_Treadmill_Title",
@@ -1845,7 +2657,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "how_to_connect",
           "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
@@ -1859,7 +2678,14 @@
           "reviewedSourceText": "For more details, please contact the brand's customer service.",
           "translation": "",
           "translations": {
-            "zh": "如需了解更多详情，请联系品牌客服"
+            "zh": "如需了解更多详情，请联系品牌客服",
+            "th": "สำหรับรายละเอียดเพิ่มเติม โปรดติดต่อฝ่ายบริการลูกค้าของแบรนด์",
+            "ms": "Untuk maklumat lanjut, sila hubungi khidmat pelanggan jenama tersebut.",
+            "de": "Weitere Informationen erhältst du beim Kundenservice der Marke.",
+            "tr": "Daha fazla bilgi için markanın müşteri hizmetleriyle iletişime geçin.",
+            "fr": "Pour plus de détails, contactez le service client de la marque.",
+            "uk": "Щоб дізнатися більше, зверніться до служби підтримки бренду.",
+            "ar-SA": "لمزيد من التفاصيل، يُرجى التواصل مع خدمة عملاء العلامة التجارية."
           },
           "androidTranslationId": "contact_the_customer_service",
           "iosTranslationId": "Mine_Page_Support_Brand_Tip",
@@ -1881,7 +2707,14 @@
           "sourceText": "Bluetooth treadmill",
           "translation": "",
           "translations": {
-            "zh": "蓝牙跑步机"
+            "zh": "蓝牙跑步机",
+            "th": "ลู่วิ่ง Bluetooth",
+            "ms": "Treadmil Bluetooth",
+            "de": "Bluetooth-Laufband",
+            "tr": "Bluetooth koşu bandı",
+            "fr": "Tapis de course Bluetooth",
+            "uk": "Бігова доріжка Bluetooth",
+            "ar-SA": "جهاز مشي Bluetooth"
           },
           "androidTranslationId": "bluetooth_treadmill",
           "iosTranslationId": "Device_Page_Treadmill_Title",
@@ -1894,7 +2727,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "how_to_connect",
           "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
@@ -1916,7 +2756,14 @@
           "sourceText": "Bluetooth treadmill",
           "translation": "",
           "translations": {
-            "zh": "蓝牙跑步机"
+            "zh": "蓝牙跑步机",
+            "th": "ลู่วิ่ง Bluetooth",
+            "ms": "Treadmil Bluetooth",
+            "de": "Bluetooth-Laufband",
+            "tr": "Bluetooth koşu bandı",
+            "fr": "Tapis de course Bluetooth",
+            "uk": "Бігова доріжка Bluetooth",
+            "ar-SA": "جهاز مشي Bluetooth"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_Treadmill_Title",
@@ -1929,7 +2776,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "how_to_connect",
           "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
@@ -1942,7 +2796,14 @@
           "sourceText": "Connected",
           "translation": "",
           "translations": {
-            "zh": "已连接"
+            "zh": "已连接",
+            "th": "เชื่อมต่อแล้ว",
+            "ms": "Disambungkan",
+            "de": "Verbunden",
+            "tr": "Bağlandı",
+            "fr": "Connecté",
+            "uk": "Підключено",
+            "ar-SA": "متصل"
           },
           "androidTranslationId": "connected",
           "iosTranslationId": "Device_Page_Search_Did",
@@ -1955,7 +2816,14 @@
           "sourceText": "Not connected",
           "translation": "",
           "translations": {
-            "zh": "未连接"
+            "zh": "未连接",
+            "th": "ยังไม่ได้เชื่อมต่อ",
+            "ms": "Tidak disambungkan",
+            "de": "Nicht verbunden",
+            "tr": "Bağlı değil",
+            "fr": "Non connecté",
+            "uk": "Не підключено",
+            "ar-SA": "غير متصل"
           },
           "androidTranslationId": "not_connected",
           "iosTranslationId": "Device_Page_Search_Not",
@@ -1968,7 +2836,14 @@
           "sourceText": "Scan",
           "translation": "",
           "translations": {
-            "zh": "扫描"
+            "zh": "扫描",
+            "th": "สแกน",
+            "ms": "Imbas",
+            "de": "Scannen",
+            "tr": "Tara",
+            "fr": "Scanner",
+            "uk": "Сканувати",
+            "ar-SA": "مسح"
           },
           "androidTranslationId": "search_for_device",
           "iosTranslationId": "Device_Page_Search",
@@ -1981,7 +2856,14 @@
           "sourceText": "Supported Brands",
           "translation": "",
           "translations": {
-            "zh": "支持品牌"
+            "zh": "支持品牌",
+            "th": "แบรนด์ที่รองรับ",
+            "ms": "Jenama Disokong",
+            "de": "Unterstützte Marken",
+            "tr": "Desteklenen markalar",
+            "fr": "Marques compatibles",
+            "uk": "Підтримувані бренди",
+            "ar-SA": "العلامات التجارية المدعومة"
           },
           "androidTranslationId": "supported_brands",
           "iosTranslationId": "Device_Page_Support_Title",
@@ -2003,7 +2885,14 @@
           "sourceText": "Smartwatch/Fitness Band",
           "translation": "",
           "translations": {
-            "zh": "智能手表/手环"
+            "zh": "智能手表/手环",
+            "th": "สมาร์ทวอทช์/สายรัดข้อมือฟิตเนส",
+            "ms": "Jam Pintar/Gelang Kecergasan",
+            "de": "Smartwatch/Fitnessarmband",
+            "tr": "Akıllı Saat/Fitness Bilekliği",
+            "fr": "Montre connectée/Bracelet d’activité",
+            "uk": "Смартгодинник/фітнес-браслет",
+            "ar-SA": "ساعة ذكية/سوار لياقة"
           },
           "androidTranslationId": "watch_title",
           "iosTranslationId": "Device_Page_Watch_Title",
@@ -2016,7 +2905,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "how_to_connect",
           "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
@@ -2029,7 +2925,14 @@
           "sourceText": "Connecting...",
           "translation": "",
           "translations": {
-            "zh": "连接中..."
+            "zh": "连接中...",
+            "th": "กำลังเชื่อมต่อ...",
+            "ms": "Menyambung...",
+            "de": "Verbinden...",
+            "tr": "Bağlanıyor...",
+            "fr": "Connexion...",
+            "uk": "Підключення...",
+            "ar-SA": "جارٍ الاتصال..."
           },
           "androidTranslationId": "connecting",
           "iosTranslationId": "Device_Page_Search_Ing",
@@ -2042,7 +2945,14 @@
           "sourceText": "Scan",
           "translation": "",
           "translations": {
-            "zh": "扫描"
+            "zh": "扫描",
+            "th": "สแกน",
+            "ms": "Imbas",
+            "de": "Scannen",
+            "tr": "Tara",
+            "fr": "Scanner",
+            "uk": "Сканувати",
+            "ar-SA": "مسح"
           },
           "androidTranslationId": "search_for_device",
           "iosTranslationId": "Device_Page_Search",
@@ -2055,7 +2965,14 @@
           "sourceText": "Apple Watch authorization required",
           "translation": "",
           "translations": {
-            "zh": "需要 Apple Watch 授权"
+            "zh": "需要 Apple Watch 授权",
+            "th": "ต้องอนุญาตการเข้าถึง Apple Watch",
+            "ms": "Kebenaran Apple Watch diperlukan",
+            "de": "Apple Watch-Autorisierung erforderlich",
+            "tr": "Apple Watch yetkilendirmesi gerekli",
+            "fr": "Autorisation Apple Watch requise",
+            "uk": "Потрібна авторизація Apple Watch",
+            "ar-SA": "يلزم تفويض Apple Watch"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_Search_Empty_Tip_Watch_Tip",
@@ -2068,7 +2985,14 @@
           "sourceText": "Supported brands",
           "translation": "",
           "translations": {
-            "zh": "支持品牌"
+            "zh": "支持品牌",
+            "th": "แบรนด์ที่รองรับ",
+            "ms": "Jenama yang disokong",
+            "de": "Unterstützte Marken",
+            "tr": "Desteklenen markalar",
+            "fr": "Marques prises en charge",
+            "uk": "Підтримувані бренди",
+            "ar-SA": "العلامات التجارية المدعومة"
           },
           "androidTranslationId": "supported_brands",
           "iosTranslationId": "Device_Page_Search_Empty_Tip_Watch_Brand_Title",
@@ -2090,7 +3014,14 @@
           "sourceText": "Smartwatch/Fitness Band",
           "translation": "",
           "translations": {
-            "zh": "智能手表/手环"
+            "zh": "智能手表/手环",
+            "th": "สมาร์ทวอทช์/สายรัดข้อมือฟิตเนส",
+            "ms": "Jam Pintar/Gelang Kecergasan",
+            "de": "Smartwatch/Fitnessarmband",
+            "tr": "Akıllı Saat/Fitness Bilekliği",
+            "fr": "Montre connectée/Bracelet d’activité",
+            "uk": "Смартгодинник/фітнес-браслет",
+            "ar-SA": "ساعة ذكية/سوار لياقة"
           },
           "androidTranslationId": "watch_title",
           "iosTranslationId": "Device_Page_Watch_Title",
@@ -2103,7 +3034,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "how_to_connect",
           "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
@@ -2116,7 +3054,14 @@
           "sourceText": "Not connected",
           "translation": "",
           "translations": {
-            "zh": "未连接"
+            "zh": "未连接",
+            "th": "ยังไม่ได้เชื่อมต่อ",
+            "ms": "Tidak disambungkan",
+            "de": "Nicht verbunden",
+            "tr": "Bağlı değil",
+            "fr": "Non connecté",
+            "uk": "Не підключено",
+            "ar-SA": "غير متصل"
           },
           "androidTranslationId": "not_connected",
           "iosTranslationId": "Device_Page_Search_Not",
@@ -2129,7 +3074,14 @@
           "sourceText": "Scan",
           "translation": "",
           "translations": {
-            "zh": "扫描"
+            "zh": "扫描",
+            "th": "สแกน",
+            "ms": "Imbas",
+            "de": "Scannen",
+            "tr": "Tara",
+            "fr": "Scanner",
+            "uk": "Сканувати",
+            "ar-SA": "مسح"
           },
           "androidTranslationId": "search_for_device",
           "iosTranslationId": "Device_Page_Search",
@@ -2142,7 +3094,14 @@
           "sourceText": "Apple Watch authorization required",
           "translation": "",
           "translations": {
-            "zh": "需要 Apple Watch 授权"
+            "zh": "需要 Apple Watch 授权",
+            "th": "ต้องอนุญาตการเข้าถึง Apple Watch",
+            "ms": "Kebenaran Apple Watch diperlukan",
+            "de": "Apple Watch-Autorisierung erforderlich",
+            "tr": "Apple Watch yetkilendirmesi gerekli",
+            "fr": "Autorisation Apple Watch requise",
+            "uk": "Потрібна авторизація Apple Watch",
+            "ar-SA": "يلزم تفويض Apple Watch"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_Search_Empty_Tip_Watch_Tip",
@@ -2155,7 +3114,14 @@
           "sourceText": "Supported brands",
           "translation": "",
           "translations": {
-            "zh": "支持品牌"
+            "zh": "支持品牌",
+            "th": "แบรนด์ที่รองรับ",
+            "ms": "Jenama yang disokong",
+            "de": "Unterstützte Marken",
+            "tr": "Desteklenen markalar",
+            "fr": "Marques prises en charge",
+            "uk": "Підтримувані бренди",
+            "ar-SA": "العلامات التجارية المدعومة"
           },
           "androidTranslationId": "supported_brands",
           "iosTranslationId": "Device_Page_Search_Empty_Tip_Watch_Brand_Title",
@@ -2177,7 +3143,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_How_Connect",
@@ -2200,7 +3173,14 @@
           "reviewedSourceText": "To ensure that your Apple Watch can record workout data and sync your heart rate in real time, install SPAX on the Watch App and enable the following permissions.",
           "translation": "",
           "translations": {
-            "zh": "为确保你的 Apple Watch 能正常记录运动数据并实时同步心率，请在 Watch App 上安装 SPAX 并开启以下权限"
+            "zh": "为确保你的 Apple Watch 能正常记录运动数据并实时同步心率，请在 Watch App 上安装 SPAX 并开启以下权限",
+            "th": "เพื่อให้ Apple Watch บันทึกข้อมูลการออกกำลังกายและซิงค์อัตราการเต้นของหัวใจแบบเรียลไทม์ได้ ให้ติดตั้ง SPAX ผ่านแอป Watch และเปิดสิทธิ์ต่อไปนี้",
+            "ms": "Untuk memastikan Apple Watch boleh merekod data senaman dan menyegerakkan kadar denyutan jantung dalam masa nyata, pasang SPAX melalui aplikasi Watch dan aktifkan kebenaran berikut.",
+            "de": "Damit deine Apple Watch Trainingsdaten aufzeichnen und deine Herzfrequenz in Echtzeit synchronisieren kann, installiere SPAX über die Watch-App und aktiviere die folgenden Berechtigungen.",
+            "tr": "Apple Watch'unuzun antrenman verilerini kaydedebilmesi ve kalp atış hızınızı gerçek zamanlı olarak eşitleyebilmesi için Watch uygulamasından SPAX'i yükleyin ve aşağıdaki izinleri etkinleştirin.",
+            "fr": "Pour permettre à votre Apple Watch d’enregistrer les données d’entraînement et de synchroniser votre fréquence cardiaque en temps réel, installez SPAX depuis l’app Watch et activez les autorisations suivantes.",
+            "uk": "Щоб Apple Watch могла записувати дані тренувань і синхронізувати частоту серцевих скорочень у реальному часі, установіть SPAX через програму Watch і надайте наведені нижче дозволи.",
+            "ar-SA": "لضمان قدرة Apple Watch على تسجيل بيانات التمرين ومزامنة معدل ضربات القلب في الوقت الفعلي، ثبّت SPAX من تطبيق Watch وفعّل الأذونات التالية."
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_Watch_Page_Content",
@@ -2213,7 +3193,14 @@
           "sourceText": "Health",
           "translation": "",
           "translations": {
-            "zh": "健康"
+            "zh": "健康",
+            "th": "สุขภาพ",
+            "ms": "Kesihatan",
+            "de": "Gesundheit",
+            "tr": "Sağlık",
+            "fr": "Santé",
+            "uk": "Здоров'я",
+            "ar-SA": "الصحة"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_Watch_Page_Health_Title",
@@ -2227,7 +3214,14 @@
           "reviewedSourceText": "When enabled, it records health data",
           "translation": "",
           "translations": {
-            "zh": "开启后将记录健康数据"
+            "zh": "开启后将记录健康数据",
+            "th": "เมื่อเปิดใช้งาน ระบบจะบันทึกข้อมูลสุขภาพ",
+            "ms": "Apabila diaktifkan, data kesihatan akan direkodkan",
+            "de": "Wenn aktiviert, werden Gesundheitsdaten aufgezeichnet",
+            "tr": "Etkinleştirildiğinde sağlık verilerini kaydeder",
+            "fr": "Une fois activé, les données de santé sont enregistrées",
+            "uk": "Після ввімкнення записуються дані про здоров’я",
+            "ar-SA": "عند التفعيل، يتم تسجيل البيانات الصحية"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_Watch_Page_Health_Subtitle",
@@ -2241,7 +3235,14 @@
           "reviewedSourceText": "Turn on Health and Fitness permissions to allow SPAX to read and sync your workout data.\\nIf the permission is off, you can turn it on in Settings > Privacy > Health > SPAX.",
           "translation": "",
           "translations": {
-            "zh": "请开启健康与运动健身授权，允许 SPAX 读取并同步你的运动数据。\\n如果权限已关闭，你可以在“设置 > 隐私 > 健康 > SPAX”中重新开启。"
+            "zh": "请开启健康与运动健身授权，允许 SPAX 读取并同步你的运动数据。\\n如果权限已关闭，你可以在“设置 > 隐私 > 健康 > SPAX”中重新开启。",
+            "th": "เปิดสิทธิ์สุขภาพและฟิตเนสเพื่ออนุญาตให้ SPAX อ่านและซิงค์ข้อมูลการออกกำลังกายของคุณ\\nหากปิดสิทธิ์อยู่ คุณสามารถเปิดได้ที่ การตั้งค่า > ความเป็นส่วนตัว > สุขภาพ > SPAX",
+            "ms": "Hidupkan kebenaran Kesihatan dan Kecergasan untuk membolehkan SPAX membaca dan menyegerakkan data senaman anda.\\nJika kebenaran dimatikan, anda boleh menghidupkannya di Tetapan > Privasi > Kesihatan > SPAX.",
+            "de": "Aktiviere die Berechtigungen für Gesundheit und Fitness, damit SPAX deine Trainingsdaten lesen und synchronisieren kann.\\nWenn die Berechtigung deaktiviert ist, kannst du sie unter Einstellungen > Datenschutz > Gesundheit > SPAX aktivieren.",
+            "tr": "SPAX'in antrenman verilerinizi okuyup eşitlemesine izin vermek için Sağlık ve Fitness izinlerini açın.\\nİzin kapalıysa Ayarlar > Gizlilik > Sağlık > SPAX bölümünden açabilirsiniz.",
+            "fr": "Activez les autorisations Santé et Activité physique pour permettre à SPAX de lire et synchroniser vos données d’entraînement.\\nSi l’autorisation est désactivée, vous pouvez l’activer dans Réglages > Confidentialité > Santé > SPAX.",
+            "uk": "Увімкніть дозволи для здоров’я та фітнесу, щоб SPAX міг читати й синхронізувати дані ваших тренувань.\\nЯкщо дозвіл вимкнено, увімкніть його в меню «Налаштування > Конфіденційність > Здоров’я > SPAX».",
+            "ar-SA": "فعّل أذونات الصحة واللياقة للسماح لـ SPAX بقراءة بيانات تمارينك ومزامنتها.\\nإذا كان الإذن متوقفًا، فيمكنك تفعيله من الإعدادات > الخصوصية > الصحة > SPAX."
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_Watch_Page_Health_Tip_Content",
@@ -2263,7 +3264,14 @@
           "sourceText": "AB wheel",
           "translation": "",
           "translations": {
-            "zh": "健腹轮"
+            "zh": "健腹轮",
+            "th": "ลูกล้อบริหารหน้าท้อง",
+            "ms": "Roda abdomen",
+            "de": "Bauchroller",
+            "tr": "Karın tekerleği",
+            "fr": "Roue abdominale",
+            "uk": "Ролик для преса",
+            "ar-SA": "عجلة تمارين البطن"
           },
           "androidTranslationId": "ab_wheel",
           "iosTranslationId": "Device_Page_AB_Title",
@@ -2276,7 +3284,14 @@
           "sourceText": "Turn on the bluetooth function of your mobile phone, start the ab wheel and make sure the electronic display is on\\nSearch and connect your ab wheel, and you can record exercise data in real time",
           "translation": "",
           "translations": {
-            "zh": "打开手机蓝牙功能，启动健腹轮并确保电子显示屏已开启\\n搜索并连接你的健腹轮，即可实时记录运动数据"
+            "zh": "打开手机蓝牙功能，启动健腹轮并确保电子显示屏已开启\\n搜索并连接你的健腹轮，即可实时记录运动数据",
+            "th": "เปิดฟังก์ชัน bluetooth บนโทรศัพท์มือถือ เริ่มใช้งานลูกล้อบริหารหน้าท้อง และตรวจสอบว่าจอแสดงผลอิเล็กทรอนิกส์เปิดอยู่\\nค้นหาและเชื่อมต่อลูกล้อบริหารหน้าท้องเพื่อบันทึกข้อมูลการออกกำลังกายแบบเรียลไทม์",
+            "ms": "Hidupkan fungsi bluetooth pada telefon bimbit anda, aktifkan roda abdomen dan pastikan paparan elektronik dihidupkan\\nCari dan sambungkan roda abdomen anda untuk merekod data senaman dalam masa nyata",
+            "de": "Aktiviere die bluetooth-Funktion auf deinem Smartphone, starte den Bauchroller und stelle sicher, dass die elektronische Anzeige eingeschaltet ist\\nSuche deinen Bauchroller und verbinde ihn, um Trainingsdaten in Echtzeit aufzuzeichnen",
+            "tr": "Telefonunuzda bluetooth işlevini açın, karın tekerleğini çalıştırın ve elektronik ekranın açık olduğundan emin olun\\nGerçek zamanlı egzersiz verilerini kaydetmek için karın tekerleğinizi arayıp bağlayın",
+            "fr": "Activez la fonction bluetooth de votre téléphone, démarrez la roue abdominale et vérifiez que l’écran électronique est allumé\\nRecherchez et connectez votre roue abdominale pour enregistrer vos données d’entraînement en temps réel",
+            "uk": "Увімкніть функцію bluetooth на телефоні, запустіть ролик для преса та переконайтеся, що електронний дисплей увімкнено\\nЗнайдіть і підключіть ролик для преса, щоб записувати дані тренування в реальному часі",
+            "ar-SA": "شغّل وظيفة bluetooth على هاتفك، وابدأ تشغيل عجلة تمارين البطن، وتأكد من تشغيل الشاشة الإلكترونية\\nابحث عن عجلة تمارين البطن واتصل بها لتسجيل بيانات التمرين في الوقت الفعلي"
           },
           "androidTranslationId": "ensure_ab_wheel_desc",
           "iosTranslationId": "Device_Page_Search_Empty_Tip_Ab",
@@ -2289,7 +3304,14 @@
           "sourceText": "Scan",
           "translation": "",
           "translations": {
-            "zh": "扫描"
+            "zh": "扫描",
+            "th": "สแกน",
+            "ms": "Imbas",
+            "de": "Scannen",
+            "tr": "Tara",
+            "fr": "Scanner",
+            "uk": "Сканувати",
+            "ar-SA": "مسح"
           },
           "androidTranslationId": "search_for_device",
           "iosTranslationId": "Device_Page_Search",
@@ -2302,7 +3324,14 @@
           "sourceText": "Supported Brands",
           "translation": "",
           "translations": {
-            "zh": "支持品牌"
+            "zh": "支持品牌",
+            "th": "แบรนด์ที่รองรับ",
+            "ms": "Jenama Disokong",
+            "de": "Unterstützte Marken",
+            "tr": "Desteklenen markalar",
+            "fr": "Marques compatibles",
+            "uk": "Підтримувані бренди",
+            "ar-SA": "العلامات التجارية المدعومة"
           },
           "androidTranslationId": "supported_brands",
           "iosTranslationId": "Device_Page_Support_Title",
@@ -2315,7 +3344,14 @@
           "sourceText": "For more details, please contact the customer service of the brand",
           "translation": "",
           "translations": {
-            "zh": "如需了解更多详情，请联系品牌客服"
+            "zh": "如需了解更多详情，请联系品牌客服",
+            "th": "สำหรับรายละเอียดเพิ่มเติม โปรดติดต่อฝ่ายบริการลูกค้าของแบรนด์",
+            "ms": "Untuk maklumat lanjut, sila hubungi perkhidmatan pelanggan jenama tersebut",
+            "de": "Für weitere Details wende dich bitte an den Kundenservice der Marke",
+            "tr": "Daha fazla bilgi için lütfen markanın müşteri hizmetleriyle iletişime geçin",
+            "fr": "Pour plus de détails, veuillez contacter le service client de la marque",
+            "uk": "Щоб дізнатися більше, зверніться до служби підтримки бренду",
+            "ar-SA": "لمزيد من التفاصيل، يُرجى التواصل مع خدمة عملاء العلامة التجارية"
           },
           "androidTranslationId": "contact_the_customer_service",
           "iosTranslationId": "Mine_Page_Support_Brand_Tip",
@@ -2337,7 +3373,14 @@
           "sourceText": "Smart jump rope",
           "translation": "",
           "translations": {
-            "zh": "智能跳绳"
+            "zh": "智能跳绳",
+            "th": "เชือกกระโดดอัจฉริยะ",
+            "ms": "Tali lompat pintar",
+            "de": "Smartes Springseil",
+            "tr": "Akıllı atlama ipi",
+            "fr": "Corde à sauter intelligente",
+            "uk": "Розумна скакалка",
+            "ar-SA": "حبل قفز ذكي"
           },
           "androidTranslationId": "jump_rope",
           "iosTranslationId": "Device_Page_Jump_Rope_Title",
@@ -2350,7 +3393,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "how_to_connect",
           "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
@@ -2364,7 +3414,14 @@
           "reviewedSourceText": "Turn on the bluetooth function on your phone, turn on the smart jump rope, and make sure the display is on.\\nSearch for and connect your jump rope to record workout data in real time.",
           "translation": "",
           "translations": {
-            "zh": "打开手机蓝牙功能，启动智能跳绳并确保电子显示屏已开启\\n搜索并连接你的跳绳，即可实时记录运动数据"
+            "zh": "打开手机蓝牙功能，启动智能跳绳并确保电子显示屏已开启\\n搜索并连接你的跳绳，即可实时记录运动数据",
+            "th": "เปิดฟังก์ชัน bluetooth บนโทรศัพท์ เปิดเชือกกระโดดอัจฉริยะ และตรวจสอบว่าหน้าจอเปิดอยู่\\nค้นหาและเชื่อมต่อเชือกกระโดดเพื่อบันทึกข้อมูลการออกกำลังกายแบบเรียลไทม์",
+            "ms": "Hidupkan fungsi bluetooth pada telefon anda, hidupkan tali lompat pintar dan pastikan paparan dihidupkan.\\nCari dan sambungkan tali lompat anda untuk merekod data senaman dalam masa nyata.",
+            "de": "Aktiviere die bluetooth-Funktion auf deinem Smartphone, schalte das smarte Springseil ein und stelle sicher, dass das Display eingeschaltet ist.\\nSuche dein Springseil und verbinde es, um Trainingsdaten in Echtzeit aufzuzeichnen.",
+            "tr": "Telefonunuzda bluetooth işlevini açın, akıllı atlama ipini çalıştırın ve ekranın açık olduğundan emin olun.\\nGerçek zamanlı antrenman verilerini kaydetmek için atlama ipinizi arayıp bağlayın.",
+            "fr": "Activez la fonction bluetooth de votre téléphone, allumez la corde à sauter intelligente et vérifiez que l’écran est allumé.\\nRecherchez et connectez votre corde à sauter pour enregistrer vos données d’entraînement en temps réel.",
+            "uk": "Увімкніть функцію bluetooth на телефоні, увімкніть розумну скакалку та переконайтеся, що дисплей працює.\\nЗнайдіть і підключіть скакалку, щоб записувати дані тренування в реальному часі.",
+            "ar-SA": "شغّل وظيفة bluetooth على هاتفك، وشغّل حبل القفز الذكي، وتأكد من تشغيل الشاشة.\\nابحث عن حبل القفز واتصل به لتسجيل بيانات التمرين في الوقت الفعلي."
           },
           "androidTranslationId": "ensure_jr_desc",
           "iosTranslationId": "Device_Page_Search_Empty_Tip_Jump_Rope",
@@ -2377,7 +3434,14 @@
           "sourceText": "Scan",
           "translation": "",
           "translations": {
-            "zh": "扫描"
+            "zh": "扫描",
+            "th": "สแกน",
+            "ms": "Imbas",
+            "de": "Scannen",
+            "tr": "Tara",
+            "fr": "Scanner",
+            "uk": "Сканувати",
+            "ar-SA": "مسح"
           },
           "androidTranslationId": "search_for_device",
           "iosTranslationId": "Device_Page_Search",
@@ -2390,7 +3454,14 @@
           "sourceText": "Supported Brands",
           "translation": "",
           "translations": {
-            "zh": "支持品牌"
+            "zh": "支持品牌",
+            "th": "แบรนด์ที่รองรับ",
+            "ms": "Jenama Disokong",
+            "de": "Unterstützte Marken",
+            "tr": "Desteklenen markalar",
+            "fr": "Marques compatibles",
+            "uk": "Підтримувані бренди",
+            "ar-SA": "العلامات التجارية المدعومة"
           },
           "androidTranslationId": "supported_brands",
           "iosTranslationId": "Device_Page_Support_Title",
@@ -2404,7 +3475,14 @@
           "reviewedSourceText": "For more details, contact the brand's customer service.",
           "translation": "",
           "translations": {
-            "zh": "如需了解更多详情，请联系品牌客服"
+            "zh": "如需了解更多详情，请联系品牌客服",
+            "th": "สำหรับรายละเอียดเพิ่มเติม โปรดติดต่อฝ่ายบริการลูกค้าของแบรนด์",
+            "ms": "Untuk maklumat lanjut, hubungi khidmat pelanggan jenama tersebut.",
+            "de": "Weitere Informationen erhältst du beim Kundenservice der Marke.",
+            "tr": "Daha fazla bilgi için markanın müşteri hizmetleriyle iletişime geçin.",
+            "fr": "Pour plus de détails, contactez le service client de la marque.",
+            "uk": "Щоб дізнатися більше, зверніться до служби підтримки бренду.",
+            "ar-SA": "لمزيد من التفاصيل، تواصل مع خدمة عملاء العلامة التجارية."
           },
           "androidTranslationId": "contact_the_customer_service",
           "iosTranslationId": "Mine_Page_Support_Brand_Tip",
@@ -2426,7 +3504,14 @@
           "sourceText": "Elliptical",
           "translation": "",
           "translations": {
-            "zh": "椭圆机"
+            "zh": "椭圆机",
+            "th": "เครื่องอิลลิปติคอล",
+            "ms": "Mesin elips",
+            "de": "Crosstrainer",
+            "tr": "Eliptik bisiklet",
+            "fr": "Vélo elliptique",
+            "uk": "Еліптичний тренажер",
+            "ar-SA": "جهاز إليبتيكال"
           },
           "androidTranslationId": "cross_training",
           "iosTranslationId": "Device_Page_Cross_Title",
@@ -2448,7 +3533,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "how_to_connect",
           "iosTranslationId": "Device_Page_How_Connect_Bar_Title",
@@ -2470,7 +3562,14 @@
           "sourceText": "Help",
           "translation": "",
           "translations": {
-            "zh": "帮助"
+            "zh": "帮助",
+            "th": "ช่วยเหลือ",
+            "ms": "Bantuan",
+            "de": "Hilfe",
+            "tr": "Yardım",
+            "fr": "Aide",
+            "uk": "Довідка",
+            "ar-SA": "مساعدة"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Device_Page_How_Connect",
@@ -2493,7 +3592,14 @@
           "reviewedSourceText": "About Us",
           "translation": "",
           "translations": {
-            "zh": "关于我们"
+            "zh": "关于我们",
+            "th": "เกี่ยวกับเรา",
+            "ms": "Perihal kami",
+            "de": "Über uns",
+            "tr": "Hakkımızda",
+            "fr": "À propos de nous",
+            "uk": "Про нас",
+            "ar-SA": "من نحن"
           },
           "androidTranslationId": "settings_about_us",
           "iosTranslationId": "Setting_Page_Item_About_Us",
@@ -2506,7 +3612,14 @@
           "sourceText": "Current Version",
           "translation": "",
           "translations": {
-            "zh": "当前版本"
+            "zh": "当前版本",
+            "th": "เวอร์ชันปัจจุบัน",
+            "ms": "Versi Semasa",
+            "de": "Aktuelle Version",
+            "tr": "Geçerli Sürüm",
+            "fr": "Version actuelle",
+            "uk": "Поточна версія",
+            "ar-SA": "الإصدار الحالي"
           },
           "androidTranslationId": "about_us_current_version",
           "iosTranslationId": "Setting_Page_Item_Version",
@@ -2519,7 +3632,14 @@
           "sourceText": "User Agreement",
           "translation": "",
           "translations": {
-            "zh": "用户协议"
+            "zh": "用户协议",
+            "th": "ข้อตกลงผู้ใช้",
+            "ms": "Perjanjian Pengguna",
+            "de": "Nutzungsvereinbarung",
+            "tr": "Kullanıcı Sözleşmesi",
+            "fr": "Conditions d'utilisation",
+            "uk": "Угода користувача",
+            "ar-SA": "اتفاقية المستخدم"
           },
           "androidTranslationId": "about_us_user_agreement",
           "iosTranslationId": "Setting_Page_Item_Agreement",
@@ -2532,7 +3652,14 @@
           "sourceText": "Privacy Policy",
           "translation": "",
           "translations": {
-            "zh": "隐私政策"
+            "zh": "隐私政策",
+            "th": "นโยบายความเป็นส่วนตัว",
+            "ms": "Dasar Privasi",
+            "de": "Datenschutzerklärung",
+            "tr": "Gizlilik Politikası",
+            "fr": "Politique de confidentialité",
+            "uk": "Політика конфіденційності",
+            "ar-SA": "سياسة الخصوصية"
           },
           "androidTranslationId": "about_us_privacy_policy",
           "iosTranslationId": "Setting_Page_Item_PrivacyPolicy",
@@ -2545,7 +3672,14 @@
           "sourceText": "Upload Debug File",
           "translation": "",
           "translations": {
-            "zh": "上传调试文件"
+            "zh": "上传调试文件",
+            "th": "อัปโหลดไฟล์ดีบัก",
+            "ms": "Muat Naik Fail Nyahpepijat",
+            "de": "Debug-Datei hochladen",
+            "tr": "Hata Ayıklama Dosyasını Yükle",
+            "fr": "Envoyer le fichier de débogage",
+            "uk": "Завантажити файл діагностики",
+            "ar-SA": "رفع ملف التصحيح"
           },
           "androidTranslationId": "about_us_upload_log",
           "iosTranslationId": "Setting_Page_Item_Upload_Debug_File",
@@ -2567,7 +3701,14 @@
           "sourceText": "Upload successful.",
           "translation": "",
           "translations": {
-            "zh": "上传成功。"
+            "zh": "上传成功。",
+            "th": "อัปโหลดสำเร็จ",
+            "ms": "Muat naik berjaya.",
+            "de": "Upload erfolgreich.",
+            "tr": "Yükleme başarılı.",
+            "fr": "Envoi réussi.",
+            "uk": "Завантаження успішне.",
+            "ar-SA": "تم الرفع بنجاح."
           },
           "androidTranslationId": "upload_log_completed",
           "iosTranslationId": "Alert_Upload_Success",
@@ -2576,7 +3717,14 @@
               "sourceText": "Upload failed.",
               "translation": "",
               "translations": {
-                "zh": "上传失败。"
+                "zh": "上传失败。",
+                "th": "อัปโหลดไม่สำเร็จ",
+                "ms": "Muat naik gagal.",
+                "de": "Upload fehlgeschlagen.",
+                "tr": "Yükleme başarısız.",
+                "fr": "Échec de l’envoi.",
+                "uk": "Не вдалося завантажити.",
+                "ar-SA": "فشل الرفع."
               },
               "androidTranslationId": "upload_log_failed",
               "iosTranslationId": "Alert_Upload_Error"
@@ -2600,7 +3748,14 @@
           "reviewedSourceText": "Privacy Policy",
           "translation": "",
           "translations": {
-            "zh": "“隐私政策”"
+            "zh": "“隐私政策”",
+            "th": "นโยบายความเป็นส่วนตัว",
+            "ms": "Dasar Privasi",
+            "de": "Datenschutzerklärung",
+            "tr": "Gizlilik Politikası",
+            "fr": "Politique de confidentialité",
+            "uk": "Політика конфіденційності",
+            "ar-SA": "سياسة الخصوصية"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_Privacy_Content_Pr",
@@ -2623,7 +3778,14 @@
           "reviewedSourceText": "Terms of Use",
           "translation": "",
           "translations": {
-            "zh": "“使用条款”"
+            "zh": "“使用条款”",
+            "th": "ข้อกำหนดการใช้งาน",
+            "ms": "Terma Penggunaan",
+            "de": "Nutzungsbedingungen",
+            "tr": "Kullanım Koşulları",
+            "fr": "Conditions d’utilisation",
+            "uk": "Умови використання",
+            "ar-SA": "شروط الاستخدام"
           },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_Privacy_Content_Ag",
@@ -2645,7 +3807,14 @@
           "sourceText": "Settings",
           "translation": "",
           "translations": {
-            "zh": "设置"
+            "zh": "设置",
+            "th": "การตั้งค่า",
+            "ms": "Tetapan",
+            "de": "Einstellungen",
+            "tr": "Ayarlar",
+            "fr": "Paramètres",
+            "uk": "Налаштування",
+            "ar-SA": "الإعدادات"
           },
           "androidTranslationId": "title_activity_setprofile",
           "iosTranslationId": "Setting_Page_Title",
@@ -2658,7 +3827,14 @@
           "sourceText": "Email",
           "translation": "",
           "translations": {
-            "zh": "邮箱"
+            "zh": "邮箱",
+            "th": "อีเมล",
+            "ms": "E-mel",
+            "de": "E-Mail",
+            "tr": "E-posta",
+            "fr": "E-mail",
+            "uk": "Ел. пошта",
+            "ar-SA": "البريد الإلكتروني"
           },
           "androidTranslationId": "email",
           "iosTranslationId": "Setting_Page_Item_Email",
@@ -2672,7 +3848,14 @@
           "reviewedSourceText": "Help & Feedback",
           "translation": "",
           "translations": {
-            "zh": "帮助与反馈"
+            "zh": "帮助与反馈",
+            "th": "ความช่วยเหลือและข้อเสนอแนะ",
+            "ms": "Bantuan & Maklum Balas",
+            "de": "Hilfe & Feedback",
+            "tr": "Yardım ve Geri Bildirim",
+            "fr": "Aide et commentaires",
+            "uk": "Допомога та відгуки",
+            "ar-SA": "المساعدة والملاحظات"
           },
           "androidTranslationId": "settings_activity_feedback",
           "iosTranslationId": "Setting_Page_Item_Help_Feedback",
@@ -2686,7 +3869,14 @@
           "reviewedSourceText": "About Us",
           "translation": "",
           "translations": {
-            "zh": "关于我们"
+            "zh": "关于我们",
+            "th": "เกี่ยวกับเรา",
+            "ms": "Perihal kami",
+            "de": "Über uns",
+            "tr": "Hakkımızda",
+            "fr": "À propos de nous",
+            "uk": "Про нас",
+            "ar-SA": "من نحن"
           },
           "androidTranslationId": "settings_about_us",
           "iosTranslationId": "Setting_Page_Item_About_Us",
@@ -2699,7 +3889,14 @@
           "sourceText": "Automatic resistance adjustment",
           "translation": "",
           "translations": {
-            "zh": "自动阻力调节"
+            "zh": "自动阻力调节",
+            "th": "ปรับแรงต้านอัตโนมัติ",
+            "ms": "Pelarasan rintangan automatik",
+            "de": "Automatische Widerstandsanpassung",
+            "tr": "Otomatik direnç ayarı",
+            "fr": "Ajustement automatique de la résistance",
+            "uk": "Автоматичне регулювання опору",
+            "ar-SA": "ضبط المقاومة تلقائيًا"
           },
           "androidTranslationId": "settings_resistance_adjustment",
           "iosTranslationId": "Setting_Page_Item_Auto_Resistance",
@@ -2721,7 +3918,14 @@
           "sourceText": "Are you sure you want to log out?",
           "translation": "",
           "translations": {
-            "zh": "确定要退出登录吗？"
+            "zh": "确定要退出登录吗？",
+            "th": "ยืนยันว่าต้องการออกจากระบบหรือไม่?",
+            "ms": "Adakah anda pasti mahu log keluar?",
+            "de": "Möchtest du dich wirklich abmelden?",
+            "tr": "Çıkış yapmak istediğinizden emin misiniz?",
+            "fr": "Voulez-vous vraiment vous déconnecter ?",
+            "uk": "Ви впевнені, що хочете вийти?",
+            "ar-SA": "هل أنت متأكد من أنك تريد تسجيل الخروج؟"
           },
           "androidTranslationId": "settings_logout_msg",
           "iosTranslationId": "Alert_Log_Out_Tip",
@@ -2734,7 +3938,14 @@
           "sourceText": "OK",
           "translation": "",
           "translations": {
-            "zh": "确定"
+            "zh": "确定",
+            "th": "ตกลง",
+            "ms": "OK",
+            "de": "OK",
+            "tr": "Tamam",
+            "fr": "OK",
+            "uk": "OK",
+            "ar-SA": "موافق"
           },
           "androidTranslationId": "ok_upper",
           "iosTranslationId": "Alert_OK",
@@ -2748,7 +3959,14 @@
           "reviewedSourceText": "Cancel",
           "translation": "",
           "translations": {
-            "zh": "取消"
+            "zh": "取消",
+            "th": "ยกเลิก",
+            "ms": "Batal",
+            "de": "Abbrechen",
+            "tr": "İptal",
+            "fr": "Annuler",
+            "uk": "Скасувати",
+            "ar-SA": "إلغاء"
           },
           "androidTranslationId": "cancel_upper",
           "iosTranslationId": "Alert_CANCEL",
@@ -2770,7 +3988,14 @@
           "sourceText": "Settings",
           "translation": "",
           "translations": {
-            "zh": "设置"
+            "zh": "设置",
+            "th": "การตั้งค่า",
+            "ms": "Tetapan",
+            "de": "Einstellungen",
+            "tr": "Ayarlar",
+            "fr": "Paramètres",
+            "uk": "Налаштування",
+            "ar-SA": "الإعدادات"
           },
           "androidTranslationId": "title_activity_setprofile",
           "iosTranslationId": "Setting_Page_Title",
@@ -2783,7 +4008,14 @@
           "sourceText": "Email",
           "translation": "",
           "translations": {
-            "zh": "邮箱"
+            "zh": "邮箱",
+            "th": "อีเมล",
+            "ms": "E-mel",
+            "de": "E-Mail",
+            "tr": "E-posta",
+            "fr": "E-mail",
+            "uk": "Ел. пошта",
+            "ar-SA": "البريد الإلكتروني"
           },
           "androidTranslationId": "Email",
           "iosTranslationId": "Setting_Page_Item_Email",
@@ -2797,7 +4029,14 @@
           "reviewedSourceText": "Help & Feedback",
           "translation": "",
           "translations": {
-            "zh": "帮助与反馈"
+            "zh": "帮助与反馈",
+            "th": "ความช่วยเหลือและข้อเสนอแนะ",
+            "ms": "Bantuan & Maklum Balas",
+            "de": "Hilfe & Feedback",
+            "tr": "Yardım ve Geri Bildirim",
+            "fr": "Aide et commentaires",
+            "uk": "Допомога та відгуки",
+            "ar-SA": "المساعدة والملاحظات"
           },
           "androidTranslationId": "settings_activity_feedback",
           "iosTranslationId": "Setting_Page_Item_Help_Feedback",
@@ -2810,7 +4049,14 @@
           "sourceText": "About us",
           "translation": "",
           "translations": {
-            "zh": "关于我们"
+            "zh": "关于我们",
+            "th": "เกี่ยวกับเรา",
+            "ms": "Tentang kami",
+            "de": "Über uns",
+            "tr": "Hakkımızda",
+            "fr": "À propos",
+            "uk": "Про нас",
+            "ar-SA": "من نحن"
           },
           "androidTranslationId": "settings_about_us",
           "iosTranslationId": "Setting_Page_Item_About_Us",
@@ -2823,7 +4069,14 @@
           "sourceText": "Automatic resistance adjustment",
           "translation": "",
           "translations": {
-            "zh": "自动阻力调节"
+            "zh": "自动阻力调节",
+            "th": "ปรับแรงต้านอัตโนมัติ",
+            "ms": "Pelarasan rintangan automatik",
+            "de": "Automatische Widerstandsanpassung",
+            "tr": "Otomatik direnç ayarı",
+            "fr": "Ajustement automatique de la résistance",
+            "uk": "Автоматичне регулювання опору",
+            "ar-SA": "ضبط المقاومة تلقائيًا"
           },
           "androidTranslationId": "settings_resistance_adjustment",
           "iosTranslationId": "Setting_Page_Item_Auto_Resistance",
@@ -2836,7 +4089,14 @@
           "sourceText": "Log out",
           "translation": "",
           "translations": {
-            "zh": "退出登录"
+            "zh": "退出登录",
+            "th": "ออกจากระบบ",
+            "ms": "Log keluar",
+            "de": "Abmelden",
+            "tr": "Çıkış yap",
+            "fr": "Se déconnecter",
+            "uk": "Вийти",
+            "ar-SA": "تسجيل الخروج"
           },
           "androidTranslationId": "settings_logout",
           "iosTranslationId": "Setting_Page_Log_Out",
@@ -2849,7 +4109,14 @@
           "sourceText": "Subscriptions",
           "translation": "",
           "translations": {
-            "zh": "订阅"
+            "zh": "订阅",
+            "th": "การสมัครสมาชิก",
+            "ms": "Langganan",
+            "de": "Abonnements",
+            "tr": "Abonelikler",
+            "fr": "Abonnements",
+            "uk": "Підписки",
+            "ar-SA": "الاشتراكات"
           },
           "androidTranslationId": "Subscriptions",
           "iosTranslationId": "",
@@ -2863,7 +4130,14 @@
           "reviewedSourceText": "Sign up or log in",
           "translation": "",
           "translations": {
-            "zh": "“注册或登录  ”"
+            "zh": "“注册或登录  ”",
+            "th": "สมัครสมาชิกหรือเข้าสู่ระบบ",
+            "ms": "Daftar atau log masuk",
+            "de": "Registrieren oder anmelden",
+            "tr": "Kaydolun veya giriş yapın",
+            "fr": "S’inscrire ou se connecter",
+            "uk": "Зареєструватися або ввійти",
+            "ar-SA": "التسجيل أو تسجيل الدخول"
           },
           "androidTranslationId": "settings_bind_email",
           "iosTranslationId": "Setting_Page_Item_Email_Content",
@@ -2886,7 +4160,14 @@
           "reviewedSourceText": "Favorites",
           "translation": "",
           "translations": {
-            "zh": "我的收藏"
+            "zh": "我的收藏",
+            "th": "รายการโปรด",
+            "ms": "Kegemaran",
+            "de": "Favoriten",
+            "tr": "Favoriler",
+            "fr": "Favoris",
+            "uk": "Обране",
+            "ar-SA": "المفضلة"
           },
           "androidTranslationId": "my_favorites",
           "iosTranslationId": "Favorites_Page_Title",
@@ -2899,7 +4180,14 @@
           "sourceText": "No favorites found",
           "translation": "",
           "translations": {
-            "zh": "暂无收藏"
+            "zh": "暂无收藏",
+            "th": "ไม่พบรายการโปรด",
+            "ms": "Tiada kegemaran ditemui",
+            "de": "Keine Favoriten gefunden",
+            "tr": "Favori bulunamadı",
+            "fr": "Aucun favori trouvé",
+            "uk": "Обране не знайдено",
+            "ar-SA": "لا توجد مفضلات"
           },
           "androidTranslationId": "no_favorites_found",
           "iosTranslationId": "Favorites_Page_Empty_Tip",
@@ -2922,7 +4210,14 @@
           "reviewedSourceText": "Added to favorites",
           "translation": "",
           "translations": {
-            "zh": "已添加到我的收藏"
+            "zh": "已添加到我的收藏",
+            "th": "เพิ่มในรายการโปรดแล้ว",
+            "ms": "Ditambahkan pada kegemaran",
+            "de": "Zu Favoriten hinzugefügt",
+            "tr": "Favorilere eklendi",
+            "fr": "Ajouté aux favoris",
+            "uk": "Додано до обраного",
+            "ar-SA": "تمت الإضافة إلى المفضلة"
           },
           "androidTranslationId": "added_to_my_favorites",
           "iosTranslationId": "Favorites_Page_Add_Success_Tip",
@@ -2944,7 +4239,14 @@
           "sourceText": "Removed from favorites",
           "translation": "",
           "translations": {
-            "zh": "已取消收藏"
+            "zh": "已取消收藏",
+            "th": "นำออกจากรายการโปรดแล้ว",
+            "ms": "Dialih keluar daripada kegemaran",
+            "de": "Aus den Favoriten entfernt",
+            "tr": "Favorilerden kaldırıldı",
+            "fr": "Retiré des favoris",
+            "uk": "Видалено з обраного",
+            "ar-SA": "تمت الإزالة من المفضلات"
           },
           "androidTranslationId": "removed_from_favorites",
           "iosTranslationId": "Favorites_Page_Cancel_Success_Tip",
@@ -2966,7 +4268,14 @@
           "sourceText": "Exercise record",
           "translation": "",
           "translations": {
-            "zh": "运动记录"
+            "zh": "运动记录",
+            "th": "บันทึกการออกกำลังกาย",
+            "ms": "Rekod senaman",
+            "de": "Trainingsverlauf",
+            "tr": "Egzersiz kaydı",
+            "fr": "Historique d’entraînement",
+            "uk": "Запис тренування",
+            "ar-SA": "سجل التمارين"
           },
           "androidTranslationId": "exercise_record_title",
           "iosTranslationId": "Mine_Page_Sport_Title",
@@ -2979,7 +4288,14 @@
           "sourceText": "Exercise statistics",
           "translation": "",
           "translations": {
-            "zh": "运动统计"
+            "zh": "运动统计",
+            "th": "สถิติการออกกำลังกาย",
+            "ms": "Statistik senaman",
+            "de": "Trainingsstatistik",
+            "tr": "Egzersiz istatistikleri",
+            "fr": "Statistiques d’entraînement",
+            "uk": "Статистика тренувань",
+            "ar-SA": "إحصاءات التمارين"
           },
           "androidTranslationId": "exercise_statistics",
           "iosTranslationId": "Mine_Page_Sport_Exercise_Statistics",
@@ -2992,7 +4308,14 @@
           "sourceText": "Total exercise",
           "translation": "",
           "translations": {
-            "zh": "总运动"
+            "zh": "总运动",
+            "th": "ออกกำลังกายทั้งหมด",
+            "ms": "Jumlah senaman",
+            "de": "Trainings gesamt",
+            "tr": "Toplam egzersiz",
+            "fr": "Total d’entraînements",
+            "uk": "Усього тренувань",
+            "ar-SA": "إجمالي التمارين"
           },
           "androidTranslationId": "total_exercise",
           "iosTranslationId": "Mine_Page_Sport_Total_Exercise",
@@ -3005,7 +4328,14 @@
           "sourceText": "times",
           "translation": "",
           "translations": {
-            "zh": "次"
+            "zh": "次",
+            "th": "ครั้ง",
+            "ms": "kali",
+            "de": "Mal",
+            "tr": "kez",
+            "fr": "fois",
+            "uk": "разів",
+            "ar-SA": "مرات"
           },
           "androidTranslationId": "record_time",
           "iosTranslationId": "Unit_times",
@@ -3018,7 +4348,14 @@
           "sourceText": "June",
           "translation": "",
           "translations": {
-            "zh": "六月"
+            "zh": "六月",
+            "th": "มิถุนายน",
+            "ms": "Jun",
+            "de": "Juni",
+            "tr": "Haziran",
+            "fr": "Juin",
+            "uk": "Червень",
+            "ar-SA": "يونيو"
           },
           "androidTranslationId": "complete_6month",
           "iosTranslationId": "",
@@ -3027,7 +4364,14 @@
               "sourceText": "January",
               "translation": "",
               "translations": {
-                "zh": "一月"
+                "zh": "一月",
+                "th": "มกราคม",
+                "ms": "Januari",
+                "de": "Januar",
+                "tr": "Ocak",
+                "fr": "Janvier",
+                "uk": "Січень",
+                "ar-SA": "يناير"
               },
               "androidTranslationId": "complete_1month",
               "iosTranslationId": ""
@@ -3036,7 +4380,14 @@
               "sourceText": "February",
               "translation": "",
               "translations": {
-                "zh": "二月"
+                "zh": "二月",
+                "th": "กุมภาพันธ์",
+                "ms": "Februari",
+                "de": "Februar",
+                "tr": "Şubat",
+                "fr": "Février",
+                "uk": "Лютий",
+                "ar-SA": "فبراير"
               },
               "androidTranslationId": "complete_2month",
               "iosTranslationId": ""
@@ -3045,7 +4396,14 @@
               "sourceText": "March",
               "translation": "",
               "translations": {
-                "zh": "三月"
+                "zh": "三月",
+                "th": "มีนาคม",
+                "ms": "Mac",
+                "de": "März",
+                "tr": "Mart",
+                "fr": "Mars",
+                "uk": "Березень",
+                "ar-SA": "مارس"
               },
               "androidTranslationId": "complete_3month",
               "iosTranslationId": ""
@@ -3054,7 +4412,14 @@
               "sourceText": "April",
               "translation": "",
               "translations": {
-                "zh": "4月"
+                "zh": "4月",
+                "th": "เมษายน",
+                "ms": "April",
+                "de": "April",
+                "tr": "Nisan",
+                "fr": "Avril",
+                "uk": "Квітень",
+                "ar-SA": "أبريل"
               },
               "androidTranslationId": "complete_4month",
               "iosTranslationId": ""
@@ -3063,7 +4428,14 @@
               "sourceText": "May",
               "translation": "",
               "translations": {
-                "zh": "5月"
+                "zh": "5月",
+                "th": "พฤษภาคม",
+                "ms": "Mei",
+                "de": "Mai",
+                "tr": "Mayıs",
+                "fr": "Mai",
+                "uk": "Травень",
+                "ar-SA": "مايو"
               },
               "androidTranslationId": "complete_5month",
               "iosTranslationId": ""
@@ -3072,7 +4444,14 @@
               "sourceText": "July",
               "translation": "",
               "translations": {
-                "zh": "7月"
+                "zh": "7月",
+                "th": "กรกฎาคม",
+                "ms": "Julai",
+                "de": "Juli",
+                "tr": "Temmuz",
+                "fr": "Juillet",
+                "uk": "Липень",
+                "ar-SA": "يوليو"
               },
               "androidTranslationId": "complete_7month",
               "iosTranslationId": ""
@@ -3081,7 +4460,14 @@
               "sourceText": "August",
               "translation": "",
               "translations": {
-                "zh": "8月"
+                "zh": "8月",
+                "th": "สิงหาคม",
+                "ms": "Ogos",
+                "de": "August",
+                "tr": "Ağustos",
+                "fr": "Août",
+                "uk": "Серпень",
+                "ar-SA": "أغسطس"
               },
               "androidTranslationId": "complete_8month",
               "iosTranslationId": ""
@@ -3090,7 +4476,14 @@
               "sourceText": "September",
               "translation": "",
               "translations": {
-                "zh": "9月"
+                "zh": "9月",
+                "th": "กันยายน",
+                "ms": "September",
+                "de": "September",
+                "tr": "Eylül",
+                "fr": "Septembre",
+                "uk": "Вересень",
+                "ar-SA": "سبتمبر"
               },
               "androidTranslationId": "complete_9month",
               "iosTranslationId": ""
@@ -3099,7 +4492,14 @@
               "sourceText": "October",
               "translation": "",
               "translations": {
-                "zh": "10月"
+                "zh": "10月",
+                "th": "ตุลาคม",
+                "ms": "Oktober",
+                "de": "Oktober",
+                "tr": "Ekim",
+                "fr": "Octobre",
+                "uk": "Жовтень",
+                "ar-SA": "أكتوبر"
               },
               "androidTranslationId": "complete_10month",
               "iosTranslationId": ""
@@ -3108,7 +4508,14 @@
               "sourceText": "November",
               "translation": "",
               "translations": {
-                "zh": "11月"
+                "zh": "11月",
+                "th": "พฤศจิกายน",
+                "ms": "November",
+                "de": "November",
+                "tr": "Kasım",
+                "fr": "Novembre",
+                "uk": "Листопад",
+                "ar-SA": "نوفمبر"
               },
               "androidTranslationId": "complete_11month",
               "iosTranslationId": ""
@@ -3117,7 +4524,14 @@
               "sourceText": "December",
               "translation": "",
               "translations": {
-                "zh": "12月"
+                "zh": "12月",
+                "th": "ธันวาคม",
+                "ms": "Disember",
+                "de": "Dezember",
+                "tr": "Aralık",
+                "fr": "Décembre",
+                "uk": "Грудень",
+                "ar-SA": "ديسمبر"
               },
               "androidTranslationId": "complete_12month",
               "iosTranslationId": ""
@@ -3132,7 +4546,14 @@
           "reviewedSourceText": "Playback class",
           "translation": "",
           "translations": {
-            "zh": "\" · 录播课程\""
+            "zh": "\" · 录播课程\"",
+            "th": "คลาสย้อนหลัง",
+            "ms": "Kelas rakaman",
+            "de": "On-Demand-Kurs",
+            "tr": "Kayıttan ders",
+            "fr": "Cours à la demande",
+            "uk": "Заняття в записі",
+            "ar-SA": "حصة مسجلة"
           },
           "androidTranslationId": "playback_course",
           "iosTranslationId": "Mine_Page_Sport_Playback",
@@ -3142,7 +4563,14 @@
               "reviewedSourceText": "Live class",
               "translation": "",
               "translations": {
-                "zh": "\" · 直播课程\""
+                "zh": "\" · 直播课程\"",
+                "th": "คลาสสด",
+                "ms": "Kelas langsung",
+                "de": "Live-Kurs",
+                "tr": "Canlı ders",
+                "fr": "Cours en direct",
+                "uk": "Заняття наживо",
+                "ar-SA": "حصة مباشرة"
               },
               "androidTranslationId": "live_course",
               "iosTranslationId": "Mine_Page_Sport_Live"
@@ -3152,7 +4580,14 @@
               "reviewedSourceText": "Free",
               "translation": "",
               "translations": {
-                "zh": "\" · 自由训练\""
+                "zh": "\" · 自由训练\"",
+                "th": "การฝึกอิสระ",
+                "ms": "Latihan bebas",
+                "de": "Freies Training",
+                "tr": "Serbest antrenman",
+                "fr": "Entraînement libre",
+                "uk": "Вільне тренування",
+                "ar-SA": "تمرين حر"
               },
               "androidTranslationId": "free",
               "iosTranslationId": "Mine_Page_Sport_Free"
@@ -3175,7 +4610,14 @@
           "sourceText": "Cancel",
           "translation": "",
           "translations": {
-            "zh": "取消"
+            "zh": "取消",
+            "th": "ยกเลิก",
+            "ms": "Batal",
+            "de": "Abbrechen",
+            "tr": "İptal",
+            "fr": "Annuler",
+            "uk": "Скасувати",
+            "ar-SA": "إلغاء"
           },
           "androidTranslationId": "cancel_lower",
           "iosTranslationId": "Alert_Cancel",
@@ -3188,7 +4630,14 @@
           "sourceText": "Done",
           "translation": "",
           "translations": {
-            "zh": "完成"
+            "zh": "完成",
+            "th": "เสร็จสิ้น",
+            "ms": "Selesai",
+            "de": "Fertig",
+            "tr": "Bitti",
+            "fr": "Terminé",
+            "uk": "Готово",
+            "ar-SA": "تم"
           },
           "androidTranslationId": "done",
           "iosTranslationId": "Alert_Done",
@@ -3201,7 +4650,14 @@
           "sourceText": "Restore default",
           "translation": "",
           "translations": {
-            "zh": "恢复默认"
+            "zh": "恢复默认",
+            "th": "คืนค่าเริ่มต้น",
+            "ms": "Pulihkan tetapan asal",
+            "de": "Standard wiederherstellen",
+            "tr": "Varsayılana dön",
+            "fr": "Rétablir les valeurs par défaut",
+            "uk": "Відновити за замовчуванням",
+            "ar-SA": "استعادة الإعدادات الافتراضية"
           },
           "androidTranslationId": "restore_default",
           "iosTranslationId": "Alert_Select_Sport_Day_Reste",
@@ -3224,7 +4680,14 @@
           "reviewedSourceText": "Heart Rate Zones",
           "translation": "",
           "translations": {
-            "zh": "心率故事"
+            "zh": "心率故事",
+            "th": "โซนอัตราการเต้นของหัวใจ",
+            "ms": "Zon kadar denyutan jantung",
+            "de": "Herzfrequenzzonen",
+            "tr": "Kalp atış hızı bölgeleri",
+            "fr": "Zones de fréquence cardiaque",
+            "uk": "Зони частоти серцевих скорочень",
+            "ar-SA": "مناطق معدل ضربات القلب"
           },
           "androidTranslationId": "reslut_heart_rate_stories",
           "iosTranslationId": "ExerciseResult_Page_Heart_Rate_Title",
@@ -3246,7 +4709,14 @@
           "sourceText": "Share",
           "translation": "",
           "translations": {
-            "zh": "分享"
+            "zh": "分享",
+            "th": "แชร์",
+            "ms": "Kongsi",
+            "de": "Teilen",
+            "tr": "Paylaş",
+            "fr": "Partager",
+            "uk": "Поділитися",
+            "ar-SA": "مشاركة"
           },
           "androidTranslationId": "result_share",
           "iosTranslationId": "Share_View_Title_Share",
@@ -3268,7 +4738,14 @@
           "sourceText": "Share with friends",
           "translation": "",
           "translations": {
-            "zh": "分享给好友"
+            "zh": "分享给好友",
+            "th": "แชร์ให้เพื่อน",
+            "ms": "Kongsi dengan rakan",
+            "de": "Mit Freunden teilen",
+            "tr": "Arkadaşlarınızla paylaşın",
+            "fr": "Partager avec des amis",
+            "uk": "Поділитися з друзями",
+            "ar-SA": "شارك مع الأصدقاء"
           },
           "androidTranslationId": "result_share_friends",
           "iosTranslationId": "Share_View_Share_Title_Share",
@@ -3281,7 +4758,14 @@
           "sourceText": "Share",
           "translation": "",
           "translations": {
-            "zh": "分享"
+            "zh": "分享",
+            "th": "แชร์",
+            "ms": "Kongsi",
+            "de": "Teilen",
+            "tr": "Paylaş",
+            "fr": "Partager",
+            "uk": "Поділитися",
+            "ar-SA": "مشاركة"
           },
           "androidTranslationId": "result_share",
           "iosTranslationId": "Share_View_Title_Share",
@@ -3294,7 +4778,14 @@
           "sourceText": "Shared from <font color=#FFFFFF>@SPAX</font>",
           "translation": "",
           "translations": {
-            "zh": "分享自 <font color=#FFFFFF>@SPAX</font>"
+            "zh": "分享自 <font color=#FFFFFF>@SPAX</font>",
+            "th": "แชร์จาก <font color=#FFFFFF>@SPAX</font>",
+            "ms": "Dikongsi daripada <font color=#FFFFFF>@SPAX</font>",
+            "de": "Geteilt von <font color=#FFFFFF>@SPAX</font>",
+            "tr": "<font color=#FFFFFF>@SPAX</font> tarafından paylaşıldı",
+            "fr": "Partagé depuis <font color=#FFFFFF>@SPAX</font>",
+            "uk": "Надіслано з <font color=#FFFFFF>@SPAX</font>",
+            "ar-SA": "تمت المشاركة من <font color=#FFFFFF>@SPAX</font>"
           },
           "androidTranslationId": "result_share_from_spax",
           "iosTranslationId": "",
@@ -3307,7 +4798,14 @@
           "sourceText": "Shared by @SPAX",
           "translation": "",
           "translations": {
-            "zh": "由 @SPAX 分享"
+            "zh": "由 @SPAX 分享",
+            "th": "แชร์โดย @SPAX",
+            "ms": "Dikongsi oleh @SPAX",
+            "de": "Geteilt von @SPAX",
+            "tr": "@SPAX tarafından paylaşıldı",
+            "fr": "Partagé par @SPAX",
+            "uk": "Поширено @SPAX",
+            "ar-SA": "تمت المشاركة بواسطة @SPAX"
           },
           "androidTranslationId": "",
           "iosTranslationId": "ExerciseResult_Page_Share_Brand_Title",
@@ -3330,7 +4828,14 @@
           "reviewedSourceText": "Payment successful",
           "translation": "",
           "translations": {
-            "zh": "支付成功"
+            "zh": "支付成功",
+            "th": "ชำระเงินสำเร็จ",
+            "ms": "Pembayaran berjaya",
+            "de": "Zahlung erfolgreich",
+            "tr": "Ödeme başarılı",
+            "fr": "Paiement réussi",
+            "uk": "Оплату успішно здійснено",
+            "ar-SA": "تم الدفع بنجاح"
           },
           "androidTranslationId": "",
           "iosTranslationId": "global_pay_successful",

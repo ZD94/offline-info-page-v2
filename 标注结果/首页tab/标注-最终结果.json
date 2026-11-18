@@ -26,7 +26,16 @@
           "y": 0.7261391611527515,
           "sourceText": "Enable health permissions",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เปิดสิทธิ์สุขภาพ",
+            "ms": "Aktifkan kebenaran Kesihatan",
+            "de": "Gesundheitsberechtigungen aktivieren",
+            "tr": "Sağlık izinlerini etkinleştirin",
+            "fr": "Activer les autorisations Santé",
+            "uk": "Увімкнути дозволи для здоров’я",
+            "ar-SA": "تفعيل أذونات الصحة",
+            "zh": "开启健康权限"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_Health_Permissions_Popup_Content",
           "subItems": []
@@ -38,7 +47,16 @@
           "sourceText": "To manage activities, steps, running and other sports data, you need to enable the device's ‘Health’ permission.",
           "reviewedSourceText": "To manage activities, steps, running, and other sports data, you need to enable the device's Health permission.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "หากต้องการจัดการกิจกรรม จำนวนก้าว การวิ่ง และข้อมูลการออกกำลังกายอื่น ๆ คุณต้องเปิดสิทธิ์สุขภาพของอุปกรณ์",
+            "ms": "Untuk mengurus aktiviti, langkah, larian dan data sukan lain, anda perlu mengaktifkan kebenaran Kesihatan pada peranti.",
+            "de": "Um Aktivitäten, Schritte, Läufe und andere Sportdaten zu verwalten, musst du die Gesundheitsberechtigung des Geräts aktivieren.",
+            "tr": "Aktiviteleri, adımları, koşuları ve diğer spor verilerini yönetmek için cihazın Sağlık iznini etkinleştirmeniz gerekir.",
+            "fr": "Pour gérer les activités, les pas, la course et d’autres données sportives, vous devez activer l’autorisation Santé de l’appareil.",
+            "uk": "Щоб керувати активністю, кроками, пробіжками та іншими спортивними даними, увімкніть дозвіл «Здоров’я» на пристрої.",
+            "ar-SA": "لإدارة الأنشطة والخطوات والجري وغيرها من البيانات الرياضية، يلزم تفعيل إذن الصحة على الجهاز.",
+            "zh": "如需管理活动、步数、跑步及其他运动数据，请开启设备的健康权限。"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_Health_Permissions_Popup_Desc",
           "subItems": []
@@ -49,7 +67,16 @@
           "y": 0.9239537288709515,
           "sourceText": "Enable",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เปิด",
+            "ms": "Aktifkan",
+            "de": "Aktivieren",
+            "tr": "Etkinleştir",
+            "fr": "Activer",
+            "uk": "Увімкнути",
+            "ar-SA": "تفعيل",
+            "zh": "开启"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_Open_Now",
           "subItems": []
@@ -60,7 +87,16 @@
           "y": 0.5591659116492327,
           "sourceText": "No",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไม่",
+            "ms": "Tidak",
+            "de": "Nein",
+            "tr": "Hayır",
+            "fr": "Non",
+            "uk": "Ні",
+            "ar-SA": "لا",
+            "zh": "否"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_No_Open",
           "subItems": []
@@ -81,91 +117,208 @@
           "y": 0.42812234027949375,
           "sourceText": "You have not granted this app permission to use bluetooth. SPAX App can only connect your treadmill through Bluetooth after obtaining Bluetooth permission.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คุณยังไม่ได้อนุญาตให้แอปนี้ใช้ bluetooth โดย SPAX App จะเชื่อมต่อลู่วิ่งผ่าน Bluetooth ได้เมื่อได้รับสิทธิ์ Bluetooth แล้วเท่านั้น",
+            "ms": "Anda belum memberikan kebenaran kepada aplikasi ini untuk menggunakan bluetooth. SPAX App hanya boleh menyambungkan treadmil anda melalui Bluetooth selepas mendapat kebenaran Bluetooth.",
+            "de": "Du hast dieser App keine Berechtigung zur Nutzung von bluetooth erteilt. SPAX App kann dein Laufband erst nach Erteilung der Bluetooth-Berechtigung über Bluetooth verbinden.",
+            "tr": "Bu uygulamaya bluetooth kullanma izni vermediniz. SPAX App, koşu bandınıza yalnızca Bluetooth izni alındıktan sonra Bluetooth üzerinden bağlanabilir.",
+            "fr": "Vous n’avez pas autorisé cette app à utiliser bluetooth. SPAX App ne peut se connecter à votre tapis de course via Bluetooth qu’après avoir obtenu l’autorisation Bluetooth.",
+            "uk": "Ви не надали цій програмі дозвіл на використання bluetooth. SPAX App зможе підключити бігову доріжку через Bluetooth лише після отримання дозволу Bluetooth.",
+            "ar-SA": "لم تمنح هذا التطبيق إذن استخدام bluetooth. لا يمكن لـ SPAX App الاتصال بجهاز المشي عبر Bluetooth إلا بعد الحصول على إذن Bluetooth.",
+            "zh": "您尚未授权此 App 使用 bluetooth。SPAX App 只有在获得 Bluetooth 权限后才能通过 Bluetooth 连接跑步机。"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "NSBluetoothAlwaysUsageDescription",
           "subItems": [
             {
               "sourceText": "You have not granted this app permission to use bluetooth. SPAX App can only connect your treadmill through Bluetooth after obtaining Bluetooth permission.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คุณยังไม่ได้อนุญาตให้แอปนี้ใช้ bluetooth โดย SPAX App จะเชื่อมต่อลู่วิ่งผ่าน Bluetooth ได้เมื่อได้รับสิทธิ์ Bluetooth แล้วเท่านั้น",
+                "ms": "Anda belum memberikan kebenaran kepada aplikasi ini untuk menggunakan bluetooth. SPAX App hanya boleh menyambungkan treadmil anda melalui Bluetooth selepas mendapat kebenaran Bluetooth.",
+                "de": "Du hast dieser App keine Berechtigung zur Nutzung von bluetooth erteilt. SPAX App kann dein Laufband erst nach Erteilung der Bluetooth-Berechtigung über Bluetooth verbinden.",
+                "tr": "Bu uygulamaya bluetooth kullanma izni vermediniz. SPAX App, koşu bandınıza yalnızca Bluetooth izni alındıktan sonra Bluetooth üzerinden bağlanabilir.",
+                "fr": "Vous n’avez pas autorisé cette app à utiliser bluetooth. SPAX App ne peut se connecter à votre tapis de course via Bluetooth qu’après avoir obtenu l’autorisation Bluetooth.",
+                "uk": "Ви не надали цій програмі дозвіл на використання bluetooth. SPAX App зможе підключити бігову доріжку через Bluetooth лише після отримання дозволу Bluetooth.",
+                "ar-SA": "لم تمنح هذا التطبيق إذن استخدام bluetooth. لا يمكن لـ SPAX App الاتصال بجهاز المشي عبر Bluetooth إلا بعد الحصول على إذن Bluetooth.",
+                "zh": "您尚未授权此 App 使用 bluetooth。SPAX App 只有在获得 Bluetooth 权限后才能通过 Bluetooth 连接跑步机。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSBluetoothPeripheralUsageDescription"
             },
             {
               "sourceText": "You'll be able to take photo or login your equipment by scanning QR code.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คุณสามารถถ่ายรูปหรือเข้าสู่ระบบอุปกรณ์ได้ด้วยการสแกน QR code",
+                "ms": "Anda boleh mengambil foto atau log masuk ke peralatan dengan mengimbas QR code.",
+                "de": "Durch Scannen eines QR code kannst du Fotos aufnehmen oder dich bei deinem Gerät anmelden.",
+                "tr": "QR code tarayarak fotoğraf çekebilir veya ekipmanınızda oturum açabilirsiniz.",
+                "fr": "Vous pourrez prendre une photo ou vous connecter à votre équipement en scannant un QR code.",
+                "uk": "Відсканувавши QR code, ви зможете зробити фотографію або ввійти на обладнанні.",
+                "ar-SA": "ستتمكن من التقاط صورة أو تسجيل الدخول إلى جهازك عن طريق مسح QR code.",
+                "zh": "扫描 QR code 后，您可以拍照或登录设备。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSCameraUsageDescription"
             },
             {
               "sourceText": "You have not granted this app permission to use location.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คุณยังไม่ได้อนุญาตให้แอปนี้ใช้ตำแหน่งที่ตั้ง",
+                "ms": "Anda belum memberikan kebenaran lokasi kepada aplikasi ini.",
+                "de": "Du hast dieser App keinen Zugriff auf deinen Standort gewährt.",
+                "tr": "Bu uygulamaya konum izni vermediniz.",
+                "fr": "Vous n’avez pas autorisé cette app à accéder à votre position.",
+                "uk": "Ви не надали цій програмі доступ до геоданих.",
+                "ar-SA": "لم تمنح هذا التطبيق إذن الوصول إلى الموقع.",
+                "zh": "您尚未授权此 App 使用位置信息。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSLocationAlwaysAndWhenInUseUsageDescription"
             },
             {
               "sourceText": "You have not granted this app permission to use location.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คุณยังไม่ได้อนุญาตให้แอปนี้ใช้ตำแหน่งที่ตั้ง",
+                "ms": "Anda belum memberikan kebenaran lokasi kepada aplikasi ini.",
+                "de": "Du hast dieser App keinen Zugriff auf deinen Standort gewährt.",
+                "tr": "Bu uygulamaya konum izni vermediniz.",
+                "fr": "Vous n’avez pas autorisé cette app à accéder à votre position.",
+                "uk": "Ви не надали цій програмі доступ до геоданих.",
+                "ar-SA": "لم تمنح هذا التطبيق إذن الوصول إلى الموقع.",
+                "zh": "您尚未授权此 App 使用位置信息。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSLocationAlwaysUsageDescription"
             },
             {
               "sourceText": "You have not granted this app permission to use location.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คุณยังไม่ได้อนุญาตให้แอปนี้ใช้ตำแหน่งที่ตั้ง",
+                "ms": "Anda belum memberikan kebenaran lokasi kepada aplikasi ini.",
+                "de": "Du hast dieser App keinen Zugriff auf deinen Standort gewährt.",
+                "tr": "Bu uygulamaya konum izni vermediniz.",
+                "fr": "Vous n’avez pas autorisé cette app à accéder à votre position.",
+                "uk": "Ви не надали цій програмі доступ до геоданих.",
+                "ar-SA": "لم تمنح هذا التطبيق إذن الوصول إلى الموقع.",
+                "zh": "您尚未授权此 App 使用位置信息。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSLocationWhenInUseUsageDescription"
             },
             {
               "sourceText": "Need your consent in order to access the microphone.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ต้องได้รับความยินยอมจากคุณเพื่อเข้าถึงไมโครโฟน",
+                "ms": "Kebenaran anda diperlukan untuk mengakses mikrofon.",
+                "de": "Für den Zugriff auf das Mikrofon ist deine Zustimmung erforderlich.",
+                "tr": "Mikrofona erişmek için izniniz gerekir.",
+                "fr": "Votre autorisation est requise pour accéder au microphone.",
+                "uk": "Для доступу до мікрофона потрібна ваша згода.",
+                "ar-SA": "يلزم الحصول على موافقتك للوصول إلى الميكروفون.",
+                "zh": "需要获得您的同意才能访问麦克风。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSMicrophoneUsageDescription"
             },
             {
               "sourceText": "Need your consent in order to access your photo.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ต้องได้รับความยินยอมจากคุณเพื่อเข้าถึงรูปภาพ",
+                "ms": "Kebenaran anda diperlukan untuk mengakses foto.",
+                "de": "Für den Zugriff auf deine Fotos ist deine Zustimmung erforderlich.",
+                "tr": "Fotoğraflarınıza erişmek için izniniz gerekir.",
+                "fr": "Votre autorisation est requise pour accéder à vos photos.",
+                "uk": "Для доступу до ваших фотографій потрібна ваша згода.",
+                "ar-SA": "يلزم الحصول على موافقتك للوصول إلى صورك.",
+                "zh": "需要获得您的同意才能访问照片。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSPhotoLibraryAddUsageDescription"
             },
             {
               "sourceText": "Need your consent in order to access your photo.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ต้องได้รับความยินยอมจากคุณเพื่อเข้าถึงรูปภาพ",
+                "ms": "Kebenaran anda diperlukan untuk mengakses foto.",
+                "de": "Für den Zugriff auf deine Fotos ist deine Zustimmung erforderlich.",
+                "tr": "Fotoğraflarınıza erişmek için izniniz gerekir.",
+                "fr": "Votre autorisation est requise pour accéder à vos photos.",
+                "uk": "Для доступу до ваших фотографій потрібна ваша згода.",
+                "ar-SA": "يلزم الحصول على موافقتك للوصول إلى صورك.",
+                "zh": "需要获得您的同意才能访问照片。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSPhotoLibraryUsageDescription"
             },
             {
               "sourceText": "SPAX requires you to turn on the local network permission to use the function of controlling and synchronizing treadmill data.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "SPAX ต้องการสิทธิ์เครือข่ายภายในเพื่อควบคุมและซิงค์ข้อมูลลู่วิ่ง",
+                "ms": "SPAX memerlukan anda mengaktifkan kebenaran rangkaian setempat untuk mengawal dan menyegerakkan data treadmil.",
+                "de": "SPAX benötigt die Berechtigung für das lokale Netzwerk, um Laufbanddaten zu steuern und zu synchronisieren.",
+                "tr": "Koşu bandı verilerini kontrol etmek ve eşitlemek için SPAX'e yerel ağ izni vermeniz gerekir.",
+                "fr": "SPAX nécessite l’autorisation d’accès au réseau local pour contrôler et synchroniser les données du tapis de course.",
+                "uk": "Щоб керувати даними бігової доріжки та синхронізувати їх, SPAX потрібен дозвіл на доступ до локальної мережі.",
+                "ar-SA": "يتطلب SPAX تفعيل إذن الشبكة المحلية للتحكم في بيانات جهاز المشي ومزامنتها.",
+                "zh": "SPAX 需要开启本地网络权限，以控制并同步跑步机数据。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSLocalNetworkUsageDescription"
             },
             {
               "sourceText": "SPAX can save exercise records to the Health App through this permission.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "สิทธิ์นี้ช่วยให้ SPAX บันทึกข้อมูลการออกกำลังกายไปยัง Health App ได้",
+                "ms": "Kebenaran ini membolehkan SPAX menyimpan rekod senaman ke Health App.",
+                "de": "Mit dieser Berechtigung kann SPAX Trainingsdaten in der Health App speichern.",
+                "tr": "Bu izin sayesinde SPAX egzersiz kayıtlarını Health App'e kaydedebilir.",
+                "fr": "Cette autorisation permet à SPAX d’enregistrer vos activités dans Health App.",
+                "uk": "Цей дозвіл дає SPAX змогу зберігати записи про тренування в Health App.",
+                "ar-SA": "يسمح هذا الإذن لـ SPAX بحفظ سجلات التمارين في Health App.",
+                "zh": "通过此权限，SPAX 可以将运动记录保存到 Health App。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSHealthShareUsageDescription"
             },
             {
               "sourceText": "SPAX can use this permission to apply the exercise data in the Health App to the record.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "สิทธิ์นี้ช่วยให้ SPAX นำข้อมูลการออกกำลังกายใน Health App มาใช้กับบันทึกได้",
+                "ms": "Kebenaran ini membolehkan SPAX menggunakan data senaman dalam Health App pada rekod anda.",
+                "de": "Mit dieser Berechtigung kann SPAX Trainingsdaten aus der Health App in deine Aufzeichnungen übernehmen.",
+                "tr": "Bu izin sayesinde SPAX, Health App'teki egzersiz verilerini kayıtlarınıza aktarabilir.",
+                "fr": "Cette autorisation permet à SPAX d’intégrer les données d’exercice de Health App à vos activités.",
+                "uk": "Цей дозвіл дає SPAX змогу додавати дані тренувань із Health App до ваших записів.",
+                "ar-SA": "يسمح هذا الإذن لـ SPAX بإضافة بيانات التمارين من Health App إلى سجلاتك.",
+                "zh": "通过此权限，SPAX 可以将 Health App 中的运动数据应用到记录中。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSHealthUpdateUsageDescription"
             },
             {
               "sourceText": "SPAX needs to use your calendar to remind you of upcoming training camp plans.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "SPAX ต้องใช้ปฏิทินเพื่อแจ้งเตือนแผนแคมป์ฝึกที่กำลังจะมาถึง",
+                "ms": "SPAX memerlukan akses kepada kalendar anda untuk mengingatkan anda tentang rancangan kem latihan yang akan datang.",
+                "de": "SPAX benötigt Zugriff auf deinen Kalender, um dich an bevorstehende Trainingscamp-Pläne zu erinnern.",
+                "tr": "SPAX, yaklaşan antrenman kampı planlarını hatırlatmak için takviminize erişmelidir.",
+                "fr": "SPAX doit accéder à votre calendrier pour vous rappeler les prochains programmes de camp d’entraînement.",
+                "uk": "SPAX потрібен доступ до вашого календаря, щоб нагадувати про майбутні плани тренувального табору.",
+                "ar-SA": "يحتاج SPAX إلى استخدام تقويمك لتذكيرك بخطط معسكر التدريب القادمة.",
+                "zh": "SPAX 需要使用您的日历，提醒即将开始的训练营计划。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "NSCalendarsUsageDescription"
             }
@@ -187,7 +340,16 @@
           "y": 0.7235690380159615,
           "sourceText": "Valuable member users, you can watch this paid course in its entirety",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "สมาชิกสามารถรับชมคลาสแบบชำระเงินนี้ได้เต็มรูปแบบ",
+            "ms": "Ahli boleh menonton kelas berbayar ini sepenuhnya",
+            "de": "Als Mitglied kannst du diesen kostenpflichtigen Kurs vollständig ansehen",
+            "tr": "Üyeler bu ücretli dersi baştan sona izleyebilir",
+            "fr": "Les membres peuvent regarder l’intégralité de ce cours payant",
+            "uk": "Учасники можуть повністю переглянути це платне заняття",
+            "ar-SA": "يمكن للأعضاء مشاهدة هذه الحصة المدفوعة بالكامل",
+            "zh": "会员可完整观看本付费课程"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Live_Page_Try_Tip_Vip_Content",
           "subItems": []
@@ -208,7 +370,16 @@
           "y": 0.2418690465974427,
           "sourceText": "Automatically adjust suggested resistance?",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ปรับแรงต้านตามค่าที่แนะนำโดยอัตโนมัติหรือไม่",
+            "ms": "Laraskan rintangan yang disyorkan secara automatik?",
+            "de": "Empfohlenen Widerstand automatisch einstellen?",
+            "tr": "Önerilen direnç otomatik olarak ayarlansın mı?",
+            "fr": "Ajuster automatiquement la résistance recommandée ?",
+            "uk": "Автоматично встановлювати рекомендований опір?",
+            "ar-SA": "هل تريد ضبط المقاومة المقترحة تلقائيًا؟",
+            "zh": "是否自动调节至建议阻力？"
+          },
           "androidTranslationId": "whether_auto_resistance",
           "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Resistance_Tip",
           "subItems": []
@@ -220,7 +391,16 @@
           "sourceText": "Tips: After automatic follow, the device will automatically adjust the resistance, pay attention to the speed change.",
           "reviewedSourceText": "Tip: After automatic follow is enabled, the bike will automatically adjust the resistance. Pay attention to changes in resistance.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เคล็ดลับ: เมื่อเปิดโหมดติดตามอัตโนมัติ จักรยานจะปรับแรงต้านโดยอัตโนมัติ โปรดสังเกตการเปลี่ยนแปลงของแรงต้าน",
+            "ms": "Petua: Selepas pelarasan automatik dihidupkan, basikal akan melaraskan rintangan secara automatik. Perhatikan perubahan rintangan.",
+            "de": "Tipp: Nach Aktivierung der automatischen Anpassung stellt das Bike den Widerstand automatisch ein. Achte auf die Widerstandsänderungen.",
+            "tr": "İpucu: Otomatik takip etkinleştirildiğinde bisiklet direnci otomatik olarak ayarlar. Direnç değişikliklerine dikkat edin.",
+            "fr": "Conseil : une fois le suivi automatique activé, le vélo ajuste automatiquement la résistance. Soyez attentif aux changements de résistance.",
+            "uk": "Порада: після ввімкнення автоматичного регулювання велотренажер автоматично змінюватиме опір. Стежте за змінами опору.",
+            "ar-SA": "نصيحة: بعد تفعيل المتابعة التلقائية، ستضبط الدراجة المقاومة تلقائيًا. انتبه إلى تغيرات المقاومة.",
+            "zh": "提示：开启自动跟随后，单车将自动调节阻力，请留意阻力变化。"
+          },
           "androidTranslationId": "whether_auto_resistance_desc",
           "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Speed_Content",
           "subItems": []
@@ -241,7 +421,16 @@
           "y": 0.634557624646014,
           "sourceText": "minutes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "นาที",
+            "ms": "minit",
+            "de": "Minuten",
+            "tr": "dakika",
+            "fr": "minutes",
+            "uk": "хвилини",
+            "ar-SA": "دقائق",
+            "zh": "分钟"
+          },
           "androidTranslationId": "minutes",
           "iosTranslationId": "Unit_minutes",
           "subItems": []
@@ -262,7 +451,16 @@
           "y": 0.883315800547023,
           "sourceText": "Let\\'s Go",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เริ่มกันเลย",
+            "ms": "Mari Mulakan",
+            "de": "Los geht’s",
+            "tr": "Haydi Başlayalım",
+            "fr": "C’est parti",
+            "uk": "Уперед",
+            "ar-SA": "هيا بنا",
+            "zh": "出发"
+          },
           "androidTranslationId": "lets_go",
           "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Start",
           "subItems": []
@@ -273,7 +471,16 @@
           "y": 0.38779718072796127,
           "sourceText": "Brief introduction",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แนะนำโดยย่อ",
+            "ms": "Pengenalan ringkas",
+            "de": "Kurzbeschreibung",
+            "tr": "Kısa tanıtım",
+            "fr": "Présentation",
+            "uk": "Короткий опис",
+            "ar-SA": "نبذة مختصرة",
+            "zh": "简介"
+          },
           "androidTranslationId": "brief_introduction",
           "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Introduction",
           "subItems": []
@@ -287,7 +494,16 @@
           "y": 0.610421488182902,
           "sourceText": "Retry",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ลองอีกครั้ง",
+            "ms": "Cuba lagi",
+            "de": "Erneut versuchen",
+            "tr": "Tekrar dene",
+            "fr": "Réessayer",
+            "uk": "Повторити",
+            "ar-SA": "إعادة المحاولة",
+            "zh": "重试"
+          },
           "androidTranslationId": "retry",
           "iosTranslationId": "",
           "note": "请求失败，重试",
@@ -299,7 +515,16 @@
           "y": 0.912041517637983,
           "sourceText": "Join Now",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เข้าร่วมเลย",
+            "ms": "Sertai sekarang",
+            "de": "Jetzt beitreten",
+            "tr": "Hemen katıl",
+            "fr": "Rejoindre",
+            "uk": "Приєднатися",
+            "ar-SA": "انضم الآن",
+            "zh": "立即加入"
+          },
           "androidTranslationId": "home_tab_join_now",
           "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open",
           "note": "不是会员的时候，需要付费标题",
@@ -311,7 +536,16 @@
           "y": 0.9452556280244057,
           "sourceText": "Get full access with membership",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "สมัครสมาชิกเพื่อเข้าถึงเนื้อหาทั้งหมด",
+            "ms": "Dapatkan akses penuh dengan keahlian",
+            "de": "Mit einer Mitgliedschaft erhältst du vollen Zugriff",
+            "tr": "Üyelikle tam erişim elde edin",
+            "fr": "Accédez à tout le contenu avec un abonnement",
+            "uk": "Отримайте повний доступ із членством",
+            "ar-SA": "احصل على وصول كامل من خلال العضوية",
+            "zh": "开通会员即可完整访问"
+          },
           "androidTranslationId": "membership_unlocks_all_scenes",
           "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open_Subtitle_Scenes",
           "note": "开通会员解锁所有实景",
@@ -331,7 +565,16 @@
           "y": 0.5413002314327793,
           "sourceText": "Find more in the store",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ดูเพิ่มเติมในร้านค้า",
+            "ms": "Temui lebih banyak di kedai",
+            "de": "Mehr im Store entdecken",
+            "tr": "Mağazada daha fazlasını keşfedin",
+            "fr": "Découvrez-en plus dans la boutique",
+            "uk": "Більше — у магазині",
+            "ar-SA": "اكتشف المزيد في المتجر",
+            "zh": "前往商店查看更多"
+          },
           "androidTranslationId": "find_more_in_store",
           "iosTranslationId": "Course_Page_Find_More",
           "subItems": []
@@ -352,7 +595,16 @@
           "y": 0.06912125675012273,
           "sourceText": "All Categories",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ทุกหมวดหมู่",
+            "ms": "Semua Kategori",
+            "de": "Alle Kategorien",
+            "tr": "Tüm Kategoriler",
+            "fr": "Toutes les catégories",
+            "uk": "Усі категорії",
+            "ar-SA": "جميع الفئات",
+            "zh": "全部分类"
+          },
           "androidTranslationId": "home_tab_all_categories",
           "iosTranslationId": "Home_Page_All_Class",
           "subItems": []
@@ -363,7 +615,16 @@
           "y": 0.3061084227505435,
           "sourceText": "Long press and drag to sort",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "กดค้างแล้วลากเพื่อจัดลำดับ",
+            "ms": "Tekan lama dan seret untuk menyusun",
+            "de": "Gedrückt halten und zum Sortieren ziehen",
+            "tr": "Sıralamak için basılı tutup sürükleyin",
+            "fr": "Appuyez longuement et faites glisser pour réorganiser",
+            "uk": "Натисніть і утримуйте, а потім перетягніть, щоб змінити порядок",
+            "ar-SA": "اضغط مطولًا واسحب لإعادة الترتيب",
+            "zh": "长按并拖动排序"
+          },
           "androidTranslationId": "home_tab_long_press_sort",
           "iosTranslationId": "Home_Page_Can_Drag",
           "subItems": []
@@ -384,7 +645,16 @@
           "y": 0.42279855247285886,
           "sourceText": "All",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ทั้งหมด",
+            "ms": "Semua",
+            "de": "Alle",
+            "tr": "Tümü",
+            "fr": "Tout",
+            "uk": "Усе",
+            "ar-SA": "الكل",
+            "zh": "全部"
+          },
           "androidTranslationId": "all",
           "iosTranslationId": "Alert_All",
           "subItems": []
@@ -396,14 +666,32 @@
           "sourceText": "Today\\'s pending tasks",
           "reviewedSourceText": "Today's tasks",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ภารกิจวันนี้",
+            "ms": "Tugasan hari ini",
+            "de": "Heutige Aufgaben",
+            "tr": "Bugünün görevleri",
+            "fr": "Tâches du jour",
+            "uk": "Сьогоднішні завдання",
+            "ar-SA": "مهام اليوم",
+            "zh": "今日任务"
+          },
           "androidTranslationId": "pending_tasks",
           "iosTranslationId": "Home_Page_Card_To_Be_Crouse",
           "subItems": [
             {
               "sourceText": "Awesome! %1$s",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ยอดเยี่ยม! %1$s",
+                "ms": "Hebat! %1$s",
+                "de": "Großartig! %1$s",
+                "tr": "Harika! %1$s",
+                "fr": "Bravo ! %1$s",
+                "uk": "Чудово! %1$s",
+                "ar-SA": "رائع! %1$s",
+                "zh": "太棒了！%1$s"
+              },
               "androidTranslationId": "today_finish_encourage_format",
               "iosTranslationId": "Home_Page_Card_Empty_Awesome"
             }
@@ -415,7 +703,16 @@
           "y": 0.4856369399949505,
           "sourceText": "You need to complete %1$d classes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คุณต้องเรียนให้ครบ %1$d คลาส",
+            "ms": "Anda perlu melengkapkan %1$d kelas",
+            "de": "Du musst %1$d Kurse abschließen",
+            "tr": "%1$d dersi tamamlamanız gerekiyor",
+            "fr": "Vous devez terminer %1$d cours",
+            "uk": "Вам потрібно завершити %1$d занять",
+            "ar-SA": "يلزمك إكمال %1$d حصص",
+            "zh": "您需要完成 %1$d 节课程"
+          },
           "androidTranslationId": "not_complete_classes_format",
           "iosTranslationId": "",
           "subItems": [
@@ -423,21 +720,48 @@
               "sourceText": "The tasks for today have been finished",
               "reviewedSourceText": "Today's tasks are complete",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ทำภารกิจวันนี้ครบแล้ว",
+                "ms": "Tugasan hari ini telah selesai",
+                "de": "Die heutigen Aufgaben sind erledigt",
+                "tr": "Bugünün görevleri tamamlandı",
+                "fr": "Les tâches du jour sont terminées",
+                "uk": "Сьогоднішні завдання виконано",
+                "ar-SA": "اكتملت مهام اليوم",
+                "zh": "今日任务已完成"
+              },
               "androidTranslationId": "today_finished",
               "iosTranslationId": "Home_Page_Card_Finished_Crouse"
             },
             {
               "sourceText": "You need to complete",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คุณต้องเรียนให้ครบ",
+                "ms": "Anda perlu melengkapkan",
+                "de": "Noch abzuschließen:",
+                "tr": "Tamamlamanız gereken",
+                "fr": "Vous devez terminer",
+                "uk": "Вам потрібно завершити",
+                "ar-SA": "يلزمك إكمال",
+                "zh": "您需要完成"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Home_Page_Card_To_Be_More_Crouse_First"
             },
             {
               "sourceText": "classes",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คลาส",
+                "ms": "kelas",
+                "de": "Kurse",
+                "tr": "ders",
+                "fr": "cours",
+                "uk": "заняття",
+                "ar-SA": "حصص",
+                "zh": "节课"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Home_Page_Card_To_Be_More_Crouse_Last"
             }
@@ -449,7 +773,16 @@
           "y": 0.9662804724100205,
           "sourceText": "Home",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "หน้าหลัก",
+            "ms": "Utama",
+            "de": "Start",
+            "tr": "Ana Sayfa",
+            "fr": "Accueil",
+            "uk": "Головна",
+            "ar-SA": "الرئيسية",
+            "zh": "首页"
+          },
           "androidTranslationId": "home_tab_home",
           "iosTranslationId": "Home_Page_Tab_Title",
           "subItems": []
@@ -463,7 +796,16 @@
           "y": 0.5394984150138862,
           "sourceText": "Rest day",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "วันพัก",
+            "ms": "Hari rehat",
+            "de": "Ruhetag",
+            "tr": "Dinlenme günü",
+            "fr": "Jour de repos",
+            "uk": "День відпочинку",
+            "ar-SA": "يوم راحة",
+            "zh": "休息日"
+          },
           "androidTranslationId": "rest_day",
           "iosTranslationId": "Plan_Page_Reset_Day",
           "note": "休息日",
@@ -476,7 +818,16 @@
           "sourceText": "Add courses",
           "reviewedSourceText": "Add classes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เพิ่มคลาส",
+            "ms": "Tambah kelas",
+            "de": "Kurse hinzufügen",
+            "tr": "Ders ekle",
+            "fr": "Ajouter des cours",
+            "uk": "Додати заняття",
+            "ar-SA": "إضافة حصص",
+            "zh": "添加课程"
+          },
           "androidTranslationId": "add_course",
           "iosTranslationId": "Home_Page_Card_Empty_Add",
           "note": "休息日加课",
@@ -496,7 +847,16 @@
           "y": 0.6804404235921172,
           "sourceText": "Join Now",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เข้าร่วมเลย",
+            "ms": "Sertai sekarang",
+            "de": "Jetzt beitreten",
+            "tr": "Hemen katıl",
+            "fr": "Rejoindre",
+            "uk": "Приєднатися",
+            "ar-SA": "انضم الآن",
+            "zh": "立即加入"
+          },
           "androidTranslationId": "home_tab_join_now",
           "iosTranslationId": "Home_Page_Card_Join_Now",
           "subItems": []
@@ -518,7 +878,16 @@
           "sourceText": "Precautions and risk considerations for pattern running",
           "reviewedSourceText": "Precautions and risk considerations for treadmill running",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ข้อควรระวังและข้อมูลความเสี่ยงสำหรับการวิ่งบนลู่วิ่ง",
+            "ms": "Langkah berjaga-jaga dan pertimbangan risiko untuk larian di atas treadmil",
+            "de": "Sicherheits- und Risikohinweise für das Laufbandtraining",
+            "tr": "Koşu bandında koşu için önlemler ve risk bilgileri",
+            "fr": "Précautions et risques liés à la course sur tapis",
+            "uk": "Застереження та ризики під час бігу на біговій доріжці",
+            "ar-SA": "احتياطات واعتبارات مخاطر الجري على جهاز المشي",
+            "zh": "跑步机跑步注意事项及风险提示"
+          },
           "androidTranslationId": "mode_warning_title",
           "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Warning_Title",
           "subItems": []
@@ -530,7 +899,16 @@
           "sourceText": "\"Course Notice and Risk Warning:\n\nThe SPAX running course, including all courses within the SPAX App (hereinafter referred to as \"Courses\"), is a product developed and operated by SPAX and its affiliates. The ownership and intellectual property rights of the Courses belong to SPAX and its affiliated companies. Exercise carries certain risks, and before starting the Courses, you should take a responsible attitude towards yourself and take reasonable precautions and assess your own capabilities. You should also confirm that you have carefully read and accepted this \"Course Notice and Risk Warning\".\n\nThis notice applies to all SPAX users.\n\nThe following groups are not suitable for participating in the Courses: teenagers under 16 years old, elderly people over 60 years old, those who are preparing for pregnancy, pregnant women and mothers within one year of breastfeeding, those who have undergone surgery within 6 months or major surgery within one year, individuals with diabetes, gout, severe metabolic diseases, cardiovascular and cerebrovascular diseases, lung diseases, orthopedic injuries, spinal diseases, joint injuries, and other individuals who have been advised by a doctor not to exercise.\n\nBefore participating in the Courses, you should go to a medical institution for a physical examination and consult a doctor about your physical condition to ensure that you have the physical condition to participate in the Courses.\n\nBefore and after participating in the Courses, please do not consume alcoholic beverages or any stimulants prohibited by national laws and regulations.\n\nIf you have any physical conditions that may affect or may be affected during the Courses, or if you feel any discomfort during the Courses, please stop immediately.\n\nIf you ignore the above notice but still insist on participating in the Courses, you will bear all risks, damages, and liabilities, and SPAX will not assume any legal responsibility or any compensation or reimbursement arising therefrom.\n\nIf you have any questions about equipment use or course content, please carefully read the relevant equipment instructions or course action guidelines to avoid the risk of injury. After participating in the Courses, please start slowly and progress gradually.\n\nDue to differences in personal physique, basic forms, and exercise abilities, SPAX cannot guarantee that all users will achieve a certain desired fitness effect.\n\nEntering the training means that you have fully understood all the risks, damages, and liabilities that may arise from participating in the training courses, and voluntarily assume such risks and liabilities.\"",
           "reviewedSourceText": "\"Course Notice and Risk Warning:\n\nThe SPAX running course, including all courses within the SPAX App (hereinafter referred to as \"Courses\"), is a product developed and operated by SPAX and its affiliates. The ownership and intellectual property rights of the Courses belong to SPAX and its affiliated companies. Exercise carries certain risks, and before starting the Courses, you should take a responsible attitude toward yourself, take reasonable precautions, and assess your own capabilities. You should also confirm that you have carefully read and accepted this \"Course Notice and Risk Warning\".\n\nThis notice applies to all SPAX users.\n\nThe following groups are not suitable for participating in the Courses: teenagers under 16 years old, elderly people over 60 years old, those who are preparing for pregnancy, pregnant women and mothers within one year of breastfeeding, those who have undergone surgery within 6 months or major surgery within one year, individuals with diabetes, gout, severe metabolic diseases, cardiovascular and cerebrovascular diseases, lung diseases, orthopedic injuries, spinal diseases, joint injuries, and other individuals who have been advised by a doctor not to exercise.\n\nBefore participating in the Courses, you should go to a medical institution for a physical examination and consult a doctor about your physical condition to ensure that you have the physical condition to participate in the Courses.\n\nBefore and after participating in the Courses, please do not consume alcoholic beverages or any stimulants prohibited by national laws and regulations.\n\nIf you have any physical conditions that may affect or may be affected during the Courses, or if you feel any discomfort during the Courses, please stop immediately.\n\nIf you ignore the above notice but still insist on participating in the Courses, you will bear all risks, damages, and liabilities, and SPAX will not assume any legal responsibility or any compensation or reimbursement arising therefrom.\n\nIf you have any questions about equipment use or course content, please carefully read the relevant equipment instructions or course action guidelines to avoid the risk of injury. After participating in the Courses, please start slowly and progress gradually.\n\nDue to differences in personal physique, basic forms, and exercise abilities, SPAX cannot guarantee that all users will achieve a certain desired fitness effect.\n\nEntering the training means that you have fully understood all the risks, damages, and liabilities that may arise from participating in the training courses, and voluntarily assume such risks and liabilities.\"",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ประกาศเกี่ยวกับคลาสและคำเตือนความเสี่ยง:\n\nคลาสวิ่งของ SPAX ซึ่งรวมถึงคลาสทั้งหมดภายใน SPAX App (ต่อไปนี้เรียกว่า \"คลาส\") เป็นผลิตภัณฑ์ที่พัฒนาและดำเนินงานโดย SPAX และบริษัทในเครือ กรรมสิทธิ์และสิทธิในทรัพย์สินทางปัญญาของคลาสเป็นของ SPAX และบริษัทในเครือ การออกกำลังกายมีความเสี่ยงบางประการ ก่อนเริ่มคลาส คุณควรรับผิดชอบต่อตนเอง ใช้มาตรการป้องกันที่เหมาะสม และประเมินความสามารถของตนเอง รวมทั้งยืนยันว่าได้อ่านและยอมรับ \"ประกาศเกี่ยวกับคลาสและคำเตือนความเสี่ยง\" นี้อย่างละเอียดแล้ว\n\nประกาศนี้ใช้กับผู้ใช้ SPAX ทุกคน\n\nบุคคลกลุ่มต่อไปนี้ไม่เหมาะสำหรับเข้าร่วมคลาส: เยาวชนอายุต่ำกว่า 16 ปี ผู้สูงอายุเกิน 60 ปี ผู้ที่กำลังเตรียมตั้งครรภ์ สตรีมีครรภ์และมารดาที่อยู่ในช่วงให้นมบุตรภายในหนึ่งปี ผู้ที่ได้รับการผ่าตัดภายใน 6 เดือนหรือผ่าตัดใหญ่ภายในหนึ่งปี ผู้ป่วยเบาหวาน โรคเกาต์ โรคระบบเผาผลาญรุนแรง โรคหัวใจและหลอดเลือดหรือหลอดเลือดสมอง โรคปอด การบาดเจ็บทางออร์โธปิดิกส์ โรคกระดูกสันหลัง การบาดเจ็บของข้อต่อ และบุคคลอื่นที่แพทย์แนะนำไม่ให้ออกกำลังกาย\n\nก่อนเข้าร่วมคลาส คุณควรเข้ารับการตรวจร่างกายในสถานพยาบาลและปรึกษาแพทย์เกี่ยวกับสภาพร่างกาย เพื่อให้แน่ใจว่าร่างกายของคุณพร้อมสำหรับการเข้าร่วมคลาส\n\nก่อนและหลังเข้าร่วมคลาส โปรดอย่าดื่มเครื่องดื่มแอลกอฮอล์หรือใช้สารกระตุ้นใด ๆ ที่กฎหมายและข้อบังคับของประเทศห้ามไว้\n\nหากคุณมีภาวะทางร่างกายที่อาจส่งผลต่อหรือได้รับผลกระทบระหว่างเข้าร่วมคลาส หรือรู้สึกไม่สบายระหว่างคลาส โปรดหยุดทันที\n\nหากคุณเพิกเฉยต่อประกาศข้างต้นแต่ยังยืนยันที่จะเข้าร่วมคลาส คุณจะต้องรับความเสี่ยง ความเสียหาย และความรับผิดทั้งหมดด้วยตนเอง และ SPAX จะไม่รับผิดทางกฎหมาย รวมถึงไม่รับผิดชอบค่าชดเชยหรือการคืนเงินใด ๆ ที่เกิดขึ้นจากกรณีดังกล่าว\n\nหากมีข้อสงสัยเกี่ยวกับการใช้อุปกรณ์หรือเนื้อหาคลาส โปรดอ่านคู่มืออุปกรณ์หรือคำแนะนำท่าฝึกที่เกี่ยวข้องอย่างละเอียดเพื่อหลีกเลี่ยงความเสี่ยงต่อการบาดเจ็บ เมื่อเริ่มเข้าร่วมคลาส โปรดเริ่มอย่างช้า ๆ และค่อย ๆ เพิ่มระดับ\n\nเนื่องจากแต่ละบุคคลมีสภาพร่างกาย พื้นฐาน และความสามารถในการออกกำลังกายแตกต่างกัน SPAX จึงไม่สามารถรับประกันได้ว่าผู้ใช้ทุกคนจะได้รับผลลัพธ์ด้านการออกกำลังกายตามที่คาดหวัง\n\nการเข้าสู่การฝึกหมายความว่าคุณเข้าใจอย่างครบถ้วนถึงความเสี่ยง ความเสียหาย และความรับผิดทั้งหมดที่อาจเกิดจากการเข้าร่วมคลาสฝึก และสมัครใจรับความเสี่ยงและความรับผิดดังกล่าว",
+            "ms": "Notis Kursus dan Amaran Risiko:\n\nKursus larian SPAX, termasuk semua kursus dalam SPAX App (selepas ini dirujuk sebagai \"Kursus\"), ialah produk yang dibangunkan dan dikendalikan oleh SPAX serta syarikat gabungannya. Hak milik dan hak harta intelek Kursus adalah milik SPAX dan syarikat gabungannya. Senaman melibatkan risiko tertentu. Sebelum memulakan Kursus, anda hendaklah bertanggungjawab terhadap diri sendiri, mengambil langkah berjaga-jaga yang munasabah dan menilai keupayaan diri. Anda juga hendaklah mengesahkan bahawa anda telah membaca dengan teliti dan menerima \"Notis Kursus dan Amaran Risiko\" ini\n\nNotis ini terpakai kepada semua pengguna SPAX\n\nGolongan berikut tidak sesuai menyertai Kursus: remaja di bawah umur 16 tahun, warga emas berumur lebih 60 tahun, mereka yang sedang membuat persediaan untuk hamil, wanita hamil dan ibu yang masih dalam tempoh satu tahun penyusuan, mereka yang menjalani pembedahan dalam tempoh 6 bulan atau pembedahan besar dalam tempoh satu tahun, individu yang menghidap diabetes, gout, penyakit metabolik yang serius, penyakit kardiovaskular dan serebrovaskular, penyakit paru-paru, kecederaan ortopedik, penyakit tulang belakang, kecederaan sendi, serta individu lain yang telah dinasihatkan oleh doktor supaya tidak bersenam\n\nSebelum menyertai Kursus, anda hendaklah menjalani pemeriksaan fizikal di institusi perubatan dan berunding dengan doktor tentang keadaan fizikal anda bagi memastikan anda layak secara fizikal untuk menyertai Kursus\n\nSebelum dan selepas menyertai Kursus, jangan mengambil minuman beralkohol atau sebarang bahan perangsang yang dilarang oleh undang-undang dan peraturan negara\n\nJika anda mempunyai sebarang keadaan fizikal yang mungkin menjejaskan atau terjejas semasa Kursus, atau jika anda berasa tidak selesa semasa Kursus, sila berhenti serta-merta\n\nJika anda mengabaikan notis di atas tetapi masih berkeras untuk menyertai Kursus, anda akan menanggung semua risiko, kerosakan dan liabiliti. SPAX tidak akan menanggung sebarang tanggungjawab undang-undang, pampasan atau bayaran balik yang timbul daripadanya\n\nJika anda mempunyai sebarang pertanyaan tentang penggunaan peralatan atau kandungan kursus, baca dengan teliti arahan peralatan atau panduan pergerakan kursus yang berkaitan untuk mengelakkan risiko kecederaan. Apabila menyertai Kursus, mulakan secara perlahan-lahan dan tingkatkan secara beransur-ansur\n\nDisebabkan perbezaan keadaan fizikal, asas dan keupayaan bersenam setiap individu, SPAX tidak dapat menjamin bahawa semua pengguna akan mencapai kesan kecergasan tertentu yang diingini\n\nDengan memasuki latihan, anda mengakui bahawa anda telah memahami sepenuhnya semua risiko, kerosakan dan liabiliti yang mungkin timbul daripada penyertaan dalam kursus latihan, serta secara sukarela menanggung risiko dan liabiliti tersebut",
+            "de": "Kurs- und Risikohinweis:\n\nDer SPAX-Laufkurs einschließlich aller Kurse innerhalb der SPAX App (nachfolgend \"Kurse\") ist ein von SPAX und seinen verbundenen Unternehmen entwickeltes und betriebenes Produkt. Das Eigentum und die geistigen Eigentumsrechte an den Kursen liegen bei SPAX und seinen verbundenen Unternehmen. Sport ist mit gewissen Risiken verbunden. Bevor du mit den Kursen beginnst, solltest du verantwortungsvoll mit dir selbst umgehen, angemessene Vorsichtsmaßnahmen treffen und deine eigenen Fähigkeiten einschätzen. Außerdem bestätigst du, dass du diesen \"Kurs- und Risikohinweis\" sorgfältig gelesen und akzeptiert hast\n\nDieser Hinweis gilt für alle SPAX-Nutzer\n\nDie folgenden Personengruppen sind für eine Teilnahme an den Kursen nicht geeignet: Jugendliche unter 16 Jahren, ältere Menschen über 60 Jahre, Personen mit Kinderwunsch, Schwangere und stillende Mütter innerhalb eines Jahres, Personen, die sich innerhalb der letzten 6 Monate einer Operation oder innerhalb eines Jahres einer größeren Operation unterzogen haben, sowie Personen mit Diabetes, Gicht, schweren Stoffwechselerkrankungen, Herz-Kreislauf- oder zerebrovaskulären Erkrankungen, Lungenerkrankungen, orthopädischen Verletzungen, Wirbelsäulenerkrankungen, Gelenkverletzungen und andere Personen, denen ein Arzt vom Sport abgeraten hat\n\nVor der Teilnahme an den Kursen solltest du dich in einer medizinischen Einrichtung untersuchen lassen und deinen körperlichen Zustand mit einem Arzt besprechen, um sicherzustellen, dass du körperlich zur Teilnahme an den Kursen in der Lage bist\n\nVor und nach der Teilnahme an den Kursen darfst du keine alkoholischen Getränke oder andere Stimulanzien konsumieren, die durch nationale Gesetze und Vorschriften verboten sind\n\nWenn bei dir körperliche Beschwerden oder Erkrankungen vorliegen, die sich im Verlauf der Kurse auswirken oder durch diese verschlimmern könnten, oder wenn du dich im Verlauf der Kurse unwohl fühlst, beende das Training sofort\n\nWenn du den vorstehenden Hinweis ignorierst und dennoch auf einer Teilnahme an den Kursen bestehst, trägst du sämtliche Risiken, Schäden und Haftungen selbst. SPAX übernimmt weder eine rechtliche Verantwortung noch daraus entstehende Entschädigungen oder Erstattungen\n\nWenn du Fragen zur Nutzung der Geräte oder zu den Kursinhalten hast, lies bitte die entsprechenden Geräteanleitungen oder Bewegungshinweise des Kurses sorgfältig, um Verletzungen zu vermeiden. Beginne bei der Teilnahme an den Kursen langsam und steigere dich schrittweise\n\nAufgrund individueller Unterschiede bei Körperbau, Grundlagen und Trainingsfähigkeit kann SPAX nicht garantieren, dass alle Nutzer einen bestimmten gewünschten Fitnesseffekt erzielen\n\nMit dem Start des Trainings bestätigst du, dass du alle Risiken, Schäden und Haftungen, die aus der Teilnahme an den Trainingskursen entstehen können, vollständig verstanden hast und diese freiwillig übernimmst",
+            "tr": "Ders Bilgilendirmesi ve Risk Uyarısı:\n\nSPAX koşu dersi ve SPAX App içindeki tüm dersler (bundan böyle \"Dersler\" olarak anılacaktır), SPAX ve bağlı şirketleri tarafından geliştirilip işletilen bir üründür. Derslerin mülkiyeti ve fikrî mülkiyet hakları SPAX ile bağlı şirketlerine aittir. Egzersiz belirli riskler taşır. Derslere başlamadan önce kendinize karşı sorumlu davranmalı, makul önlemler almalı ve kendi kapasitenizi değerlendirmelisiniz. Ayrıca bu \"Ders Bilgilendirmesi ve Risk Uyarısı\" metnini dikkatle okuyup kabul ettiğinizi onaylamalısınız\n\nBu bildirim tüm SPAX kullanıcıları için geçerlidir\n\nAşağıdaki gruplar Derslere katılmaya uygun değildir: 16 yaşından küçük gençler, 60 yaşından büyük kişiler, hamileliğe hazırlananlar, hamileler ve bir yıl içinde emziren anneler, son 6 ay içinde ameliyat veya bir yıl içinde büyük bir ameliyat geçirenler; diyabet, gut, ciddi metabolik hastalık, kalp-damar ve beyin-damar hastalığı, akciğer hastalığı, ortopedik yaralanma, omurga hastalığı ya da eklem yaralanması bulunanlar ve doktor tarafından egzersiz yapmaması önerilen diğer kişiler\n\nDerslere katılmadan önce bir sağlık kuruluşunda fiziksel muayene yaptırmalı ve Derslere katılmaya fiziksel olarak uygun olduğunuzdan emin olmak için sağlık durumunuz hakkında bir doktora danışmalısınız\n\nDerslere katılmadan önce ve katıldıktan sonra alkollü içecekler veya ulusal yasa ve yönetmeliklerle yasaklanmış herhangi bir uyarıcı madde tüketmeyin\n\nDersler sırasında etkilenebilecek veya Dersleri etkileyebilecek herhangi bir fiziksel rahatsızlığınız varsa ya da Dersler sırasında kendinizi kötü hissederseniz hemen durun\n\nYukarıdaki bildirimi dikkate almayıp Derslere katılmakta ısrar ederseniz tüm riskleri, zararları ve sorumlulukları siz üstlenirsiniz. SPAX bunlardan doğan hiçbir hukuki sorumluluğu, tazminatı veya geri ödemeyi kabul etmez\n\nEkipman kullanımı veya ders içeriği hakkında sorularınız varsa yaralanma riskini önlemek için ilgili ekipman talimatlarını ya da ders hareket yönergelerini dikkatle okuyun. Derslere katılırken yavaş başlayın ve kademeli olarak ilerleyin\n\nKişisel fiziksel yapı, temel durum ve egzersiz kapasitesi farklılıkları nedeniyle SPAX tüm kullanıcıların belirli bir fitness sonucuna ulaşacağını garanti edemez\n\nAntrenmana girmeniz, antrenman derslerine katılımdan kaynaklanabilecek tüm riskleri, zararları ve sorumlulukları tamamen anladığınız ve bunları gönüllü olarak üstlendiğiniz anlamına gelir",
+            "fr": "Avis relatif aux cours et aux risques :\n\nLe cours de course SPAX, ainsi que tous les cours proposés dans SPAX App (ci-après les \"Cours\"), est un produit développé et exploité par SPAX et ses sociétés affiliées. La propriété et les droits de propriété intellectuelle des Cours appartiennent à SPAX et à ses sociétés affiliées. Toute activité physique comporte certains risques. Avant de commencer les Cours, vous devez adopter une attitude responsable envers vous-même, prendre des précautions raisonnables et évaluer vos propres capacités. Vous devez également confirmer avoir lu attentivement et accepté le présent \"Avis relatif aux cours et aux risques\"\n\nCet avis s’applique à tous les utilisateurs de SPAX\n\nLes personnes suivantes ne doivent pas participer aux Cours : les adolescents de moins de 16 ans, les personnes de plus de 60 ans, les personnes préparant une grossesse, les femmes enceintes et les mères qui allaitent depuis moins d’un an, les personnes ayant subi une intervention chirurgicale au cours des 6 derniers mois ou une intervention majeure au cours de la dernière année, les personnes atteintes de diabète, de goutte, de maladies métaboliques graves, de maladies cardiovasculaires ou cérébrovasculaires, de maladies pulmonaires, de lésions orthopédiques, de maladies de la colonne vertébrale ou de lésions articulaires, ainsi que toute personne à qui un médecin a déconseillé de faire de l’exercice\n\nAvant de participer aux Cours, vous devez vous soumettre à un examen physique dans un établissement médical et consulter un médecin au sujet de votre état afin de vous assurer que vous êtes physiquement apte à y participer\n\nAvant et après les Cours, ne consommez aucune boisson alcoolisée ni aucun stimulant interdit par les lois et réglementations nationales\n\nSi vous présentez un état physique susceptible d’avoir une incidence sur les Cours ou d’être affecté par ceux-ci, ou si vous ressentez une gêne pendant les Cours, arrêtez immédiatement\n\nSi vous ignorez l’avis ci-dessus et insistez pour participer aux Cours, vous assumerez l’ensemble des risques, dommages et responsabilités. SPAX n’assumera aucune responsabilité juridique ni aucune indemnisation ou aucun remboursement en découlant\n\nSi vous avez des questions sur l’utilisation de l’équipement ou le contenu des cours, lisez attentivement les instructions de l’équipement ou les consignes relatives aux mouvements afin d’éviter tout risque de blessure. Lorsque vous participez aux Cours, commencez doucement et progressez graduellement\n\nEn raison des différences de constitution physique, de condition de base et de capacité d’exercice, SPAX ne peut garantir que tous les utilisateurs obtiendront un résultat de remise en forme particulier\n\nLe fait de commencer l’entraînement signifie que vous avez pleinement compris tous les risques, dommages et responsabilités pouvant découler de votre participation aux cours d’entraînement et que vous les assumez volontairement",
+            "uk": "Повідомлення про заняття та попередження про ризики:\n\nБігове заняття SPAX, включно з усіма заняттями в SPAX App (далі — \"Заняття\"), є продуктом, розробленим і керованим SPAX та його афілійованими компаніями. Право власності та права інтелектуальної власності на Заняття належать SPAX і його афілійованим компаніям. Фізичні вправи пов’язані з певними ризиками. Перед початком Занять відповідально поставтеся до власного здоров’я, уживіть належних запобіжних заходів і оцініть свої можливості. Ви також повинні підтвердити, що уважно прочитали й прийняли це \"Повідомлення про заняття та попередження про ризики\"\n\nЦе повідомлення стосується всіх користувачів SPAX\n\nДо Занять не слід долучатися таким особам: підліткам віком до 16 років, людям віком понад 60 років, тим, хто готується до вагітності, вагітним жінкам і матерям упродовж одного року грудного вигодовування, особам, які перенесли операцію протягом останніх 6 місяців або значну операцію протягом одного року, людям із діабетом, подагрою, тяжкими метаболічними захворюваннями, серцево-судинними чи цереброваскулярними захворюваннями, хворобами легень, ортопедичними травмами, захворюваннями хребта, травмами суглобів, а також іншим особам, яким лікар не рекомендував фізичні вправи\n\nПеред участю в Заняттях пройдіть медичний огляд і проконсультуйтеся з лікарем щодо свого фізичного стану, щоб переконатися, що він дає змогу брати участь у Заняттях\n\nДо та після Занять не вживайте алкогольних напоїв або будь-яких стимуляторів, заборонених національними законами й нормативними актами\n\nЯкщо у вас є фізичні стани, які можуть вплинути на Заняття або погіршитися під час них, чи ви відчуєте будь-який дискомфорт під час Занять, негайно зупиніться\n\nЯкщо ви проігноруєте наведене вище повідомлення, але все одно наполягатимете на участі в Заняттях, ви самостійно нестимете всі ризики, збитки та відповідальність. SPAX не нестиме юридичної відповідальності та не виплачуватиме жодних компенсацій чи відшкодувань, що випливають із цього\n\nЯкщо у вас є запитання щодо використання обладнання або змісту занять, уважно прочитайте відповідні інструкції до обладнання або вказівки щодо виконання рухів, щоб уникнути травм. Під час участі в Заняттях починайте повільно й збільшуйте навантаження поступово\n\nЧерез відмінності у фізичному стані, базовій підготовці та здатності до вправ SPAX не може гарантувати, що всі користувачі досягнуть певного бажаного результату\n\nПочинаючи тренування, ви підтверджуєте, що повністю розумієте всі ризики, збитки та відповідальність, які можуть виникнути внаслідок участі в тренувальних заняттях, і добровільно берете їх на себе",
+            "ar-SA": "إشعار الحصص وتحذير المخاطر:\n\nحصة الجري من SPAX، بما في ذلك جميع الحصص داخل SPAX App (ويُشار إليها فيما بعد باسم \"الحصص\")، هي منتج طورته وتشغله SPAX والشركات التابعة لها. تعود ملكية الحصص وحقوق الملكية الفكرية الخاصة بها إلى SPAX والشركات التابعة لها. تنطوي ممارسة الرياضة على مخاطر معينة. وقبل بدء الحصص، يجب أن تتعامل بمسؤولية تجاه نفسك، وتتخذ الاحتياطات المعقولة، وتقيّم قدراتك الشخصية. كما يجب أن تؤكد أنك قرأت \"إشعار الحصص وتحذير المخاطر\" هذا بعناية ووافقت عليه\n\nينطبق هذا الإشعار على جميع مستخدمي SPAX\n\nالفئات التالية غير مناسبة للمشاركة في الحصص: المراهقون دون سن 16 عامًا، وكبار السن فوق 60 عامًا، ومن يستعدون للحمل، والحوامل والأمهات خلال عام واحد من الرضاعة الطبيعية، ومن خضعوا لعملية جراحية خلال 6 أشهر أو لعملية جراحية كبرى خلال عام واحد، والمصابون بالسكري أو النقرس أو أمراض الأيض الشديدة أو أمراض القلب والأوعية الدموية أو الأوعية الدماغية أو أمراض الرئة أو إصابات العظام أو أمراض العمود الفقري أو إصابات المفاصل، وغيرهم ممن نصحهم الطبيب بعدم ممارسة الرياضة\n\nقبل المشاركة في الحصص، ينبغي إجراء فحص بدني في منشأة طبية واستشارة الطبيب بشأن حالتك الجسدية للتأكد من أنك مؤهل بدنيًا للمشاركة فيها\n\nقبل المشاركة في الحصص وبعدها، يُرجى عدم تناول المشروبات الكحولية أو أي منشطات تحظرها القوانين واللوائح الوطنية\n\nإذا كانت لديك أي حالة جسدية قد تؤثر في الحصص أو تتأثر بها، أو شعرت بأي انزعاج أثناء الحصص، فتوقف فورًا\n\nإذا تجاهلت الإشعار أعلاه وأصررت على المشاركة في الحصص، فستتحمل جميع المخاطر والأضرار والمسؤوليات، ولن تتحمل SPAX أي مسؤولية قانونية أو أي تعويض أو رد مبالغ ينشأ عن ذلك\n\nإذا كانت لديك أسئلة حول استخدام المعدات أو محتوى الحصة، فاقرأ بعناية تعليمات المعدات ذات الصلة أو إرشادات حركات الحصة لتجنب خطر الإصابة. وعند المشاركة في الحصص، ابدأ ببطء وتدرج في التقدم\n\nنظرًا لاختلاف البنية الجسدية والحالة الأساسية والقدرات الرياضية بين الأفراد، لا تستطيع SPAX ضمان تحقيق جميع المستخدمين لنتيجة لياقة بدنية محددة\n\nيعني بدء التدريب أنك تفهم تمامًا جميع المخاطر والأضرار والمسؤوليات التي قد تنشأ عن المشاركة في الحصص التدريبية، وأنك تتحمل هذه المخاطر والمسؤوليات طوعًا",
+            "zh": "课程须知及风险提示：\n\nSPAX 跑步课程，包括 SPAX App 内的全部课程（以下简称“课程”），是由 SPAX 及其关联公司开发和运营的产品。课程的所有权及知识产权归 SPAX 及其关联公司所有。运动存在一定风险，在开始课程前，您应以对自己负责的态度采取合理的防护措施，并评估自身能力。您还应确认已仔细阅读并接受本《课程须知及风险提示》\n\n本提示适用于所有 SPAX 用户\n\n以下人群不适合参加课程：未满 16 周岁的青少年、超过 60 周岁的老年人、备孕人群、孕妇及处于一年哺乳期内的母亲、6 个月内接受过手术或一年内接受过重大手术的人群，以及患有糖尿病、痛风、严重代谢性疾病、心脑血管疾病、肺部疾病、骨科损伤、脊柱疾病、关节损伤的人群和其他经医生建议不宜运动的人群\n\n参加课程前，您应前往医疗机构进行身体检查，并就自身身体状况咨询医生，以确保具备参加课程的身体条件\n\n参加课程前后，请勿饮用含酒精的饮品，也不得使用国家法律法规禁止的任何兴奋剂\n\n如果您存在可能影响课程或在课程中受到影响的身体状况，或者在课程中感到任何不适，请立即停止\n\n如果您无视上述提示仍坚持参加课程，由此产生的一切风险、损害和责任均由您自行承担，SPAX 不承担任何法律责任，也不承担由此产生的任何赔偿或补偿\n\n如果您对设备使用或课程内容有任何疑问，请仔细阅读相关设备说明或课程动作指引，以避免受伤风险。参加课程时，请从较低强度开始并循序渐进\n\n由于个人体质、基础状况和运动能力存在差异，SPAX 无法保证所有用户都能达到某种预期的健身效果\n\n进入训练即表示您已充分了解参加训练课程可能产生的一切风险、损害和责任，并自愿承担相关风险和责任"
+          },
           "androidTranslationId": "spax_warn",
           "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Warning_Content",
           "subItems": []
@@ -541,7 +919,16 @@
           "y": 0.7441850484936915,
           "sourceText": "I have carefully read and accepted the course notice and risk warning, and I agree to bear all risks, damages, and liabilities arising from participating in the courses on my own.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ฉันได้อ่านและยอมรับประกาศและคำเตือนความเสี่ยงของคลาสอย่างละเอียดแล้ว และตกลงที่จะรับความเสี่ยง ความเสียหาย และความรับผิดทั้งหมดที่เกิดจากการเข้าร่วมคลาสด้วยตนเอง",
+            "ms": "Saya telah membaca dengan teliti dan menerima notis kursus serta amaran risiko, dan bersetuju untuk menanggung sendiri semua risiko, kerosakan dan liabiliti yang timbul daripada penyertaan dalam kursus.",
+            "de": "Ich habe die Kurs- und Risikohinweise sorgfältig gelesen und akzeptiert und erkläre mich damit einverstanden, alle aus der Teilnahme entstehenden Risiken, Schäden und Haftungen selbst zu tragen.",
+            "tr": "Ders bilgilendirmesini ve risk uyarısını dikkatle okuyup kabul ettim; derslere katılımdan doğabilecek tüm riskleri, zararları ve sorumlulukları üstlenmeyi kabul ediyorum.",
+            "fr": "J’ai lu attentivement et accepté l’avis relatif aux cours et aux risques, et j’accepte d’assumer l’ensemble des risques, dommages et responsabilités découlant de ma participation aux cours.",
+            "uk": "Мною уважно прочитано й прийнято повідомлення про заняття та попередження про ризики; я погоджуюся самостійно нести всі ризики, збитки й відповідальність, пов’язані з участю в заняттях.",
+            "ar-SA": "لقد قرأت إشعار الحصص وتحذير المخاطر بعناية ووافقت عليهما، وأوافق على تحمل جميع المخاطر والأضرار والمسؤوليات الناشئة عن المشاركة في الحصص.",
+            "zh": "我已仔细阅读并接受课程须知及风险提示，并同意自行承担参加课程所产生的一切风险、损害和责任。"
+          },
           "androidTranslationId": "accept_warning",
           "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Warning_Tip_Title",
           "subItems": []
@@ -552,7 +939,16 @@
           "y": 0.8540468629302206,
           "sourceText": "Agree",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ยอมรับ",
+            "ms": "Setuju",
+            "de": "Zustimmen",
+            "tr": "Kabul ediyorum",
+            "fr": "Accepter",
+            "uk": "Погоджуюся",
+            "ar-SA": "أوافق",
+            "zh": "同意"
+          },
           "androidTranslationId": "agree",
           "iosTranslationId": "Alert_Privacy_Agree",
           "subItems": []
@@ -563,7 +959,16 @@
           "y": 0.8293279546820016,
           "sourceText": "Disagree",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไม่ยอมรับ",
+            "ms": "Tidak setuju",
+            "de": "Ablehnen",
+            "tr": "Kabul etmiyorum",
+            "fr": "Refuser",
+            "uk": "Не погоджуюся",
+            "ar-SA": "لا أوافق",
+            "zh": "不同意"
+          },
           "androidTranslationId": "disagree",
           "iosTranslationId": "Alert_Privacy_Disagree",
           "subItems": []
@@ -585,7 +990,16 @@
           "sourceText": "Please read and agree to the relevant precautions and risk information",
           "reviewedSourceText": "Please read and agree to the precautions and risk information",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "โปรดอ่านและยอมรับข้อควรระวังและข้อมูลความเสี่ยง",
+            "ms": "Sila baca dan setujui langkah berjaga-jaga serta maklumat risiko",
+            "de": "Bitte lies und akzeptiere die Sicherheits- und Risikohinweise",
+            "tr": "Lütfen önlemleri ve risk bilgilerini okuyup kabul edin",
+            "fr": "Veuillez lire et accepter les précautions et les informations sur les risques",
+            "uk": "Прочитайте та прийміть застереження й інформацію про ризики",
+            "ar-SA": "يُرجى قراءة الاحتياطات ومعلومات المخاطر والموافقة عليها",
+            "zh": "请阅读并同意注意事项及风险提示"
+          },
           "androidTranslationId": "read_warning",
           "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Warning_Yes_No",
           "subItems": []
@@ -606,35 +1020,80 @@
           "y": 0.20586215775469915,
           "sourceText": "Warm-Up",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "วอร์มอัป",
+            "ms": "Pemanasan",
+            "de": "Aufwärmen",
+            "tr": "Isınma",
+            "fr": "Échauffement",
+            "uk": "Розминка",
+            "ar-SA": "الإحماء",
+            "zh": "热身"
+          },
           "androidTranslationId": "heart_rate_step1",
           "iosTranslationId": "",
           "subItems": [
             {
               "sourceText": "Fat Burn",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เผาผลาญไขมัน",
+                "ms": "Pembakaran lemak",
+                "de": "Fettverbrennung",
+                "tr": "Yağ yakımı",
+                "fr": "Brûlage des graisses",
+                "uk": "Спалювання жиру",
+                "ar-SA": "حرق الدهون",
+                "zh": "燃脂"
+              },
               "androidTranslationId": "heart_rate_step2",
               "iosTranslationId": "Free_Exercise_Page_AI_Heart_Tip_Level_2"
             },
             {
               "sourceText": "Cardio",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คาร์ดิโอ",
+                "ms": "Kardio",
+                "de": "Cardio",
+                "tr": "Kardiyo",
+                "fr": "Cardio",
+                "uk": "Кардіо",
+                "ar-SA": "تمارين القلب",
+                "zh": "心肺"
+              },
               "androidTranslationId": "heart_rate_step3",
               "iosTranslationId": "Free_Exercise_Page_AI_Heart_Tip_Level_3"
             },
             {
               "sourceText": "Endurance",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ความทนทาน",
+                "ms": "Daya tahan",
+                "de": "Ausdauer",
+                "tr": "Dayanıklılık",
+                "fr": "Endurance",
+                "uk": "Витривалість",
+                "ar-SA": "التحمل",
+                "zh": "耐力"
+              },
               "androidTranslationId": "heart_rate_step4",
               "iosTranslationId": "Free_Exercise_Page_AI_Heart_Tip_Level_4"
             },
             {
               "sourceText": "Peak",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "สูงสุด",
+                "ms": "Puncak",
+                "de": "Maximum",
+                "tr": "Zirve",
+                "fr": "Maximum",
+                "uk": "Пікове навантаження",
+                "ar-SA": "الذروة",
+                "zh": "峰值"
+              },
               "androidTranslationId": "heart_rate_step5",
               "iosTranslationId": "Free_Exercise_Page_AI_Heart_Tip_Level_5"
             }
@@ -656,35 +1115,80 @@
           "y": 0.6131119978831653,
           "sourceText": "Current %1$s %2s",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "%1$s ปัจจุบัน %2s",
+            "ms": "%1$s semasa %2s",
+            "de": "Aktuell: %1$s %2s",
+            "tr": "Mevcut %1$s %2s",
+            "fr": "%1$s actuelle : %2s",
+            "uk": "Поточне значення %1$s: %2s",
+            "ar-SA": "%1$s الحالي %2s",
+            "zh": "当前%1$s %2s"
+          },
           "androidTranslationId": "current_control_format",
           "iosTranslationId": "",
           "subItems": [
             {
               "sourceText": "resistance",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แรงต้าน",
+                "ms": "rintangan",
+                "de": "Widerstand",
+                "tr": "direnç",
+                "fr": "résistance",
+                "uk": "опір",
+                "ar-SA": "المقاومة",
+                "zh": "阻力"
+              },
               "androidTranslationId": "resistance_low",
               "iosTranslationId": ""
             },
             {
               "sourceText": "speed",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ความเร็ว",
+                "ms": "kelajuan",
+                "de": "Geschwindigkeit",
+                "tr": "hız",
+                "fr": "vitesse",
+                "uk": "швидкість",
+                "ar-SA": "السرعة",
+                "zh": "速度"
+              },
               "androidTranslationId": "speed_low",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Current speed",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ความเร็วปัจจุบัน",
+                "ms": "Kelajuan semasa",
+                "de": "Aktuelle Geschwindigkeit",
+                "tr": "Mevcut hız",
+                "fr": "Vitesse actuelle",
+                "uk": "Поточна швидкість",
+                "ar-SA": "السرعة الحالية",
+                "zh": "当前速度"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Speed_Current"
             },
             {
               "sourceText": "Current resistance",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แรงต้านปัจจุบัน",
+                "ms": "Rintangan semasa",
+                "de": "Aktueller Widerstand",
+                "tr": "Mevcut direnç",
+                "fr": "Résistance actuelle",
+                "uk": "Поточний опір",
+                "ar-SA": "المقاومة الحالية",
+                "zh": "当前阻力"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Resistance_Current"
             }
@@ -700,7 +1204,16 @@
           "sourceText": "What are your thoughts on this pattern?",
           "reviewedSourceText": "How was this workout?",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "การฝึกครั้งนี้เป็นอย่างไรบ้าง",
+            "ms": "Bagaimanakah latihan ini?",
+            "de": "Wie war dieses Training?",
+            "tr": "Bu antrenman nasıldı?",
+            "fr": "Comment s’est passé cet entraînement ?",
+            "uk": "Як пройшло це тренування?",
+            "ar-SA": "كيف كان هذا التمرين؟",
+            "zh": "本次训练感觉如何？"
+          },
           "androidTranslationId": "ask_thoughts_this_pattern",
           "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Evaluate_Title",
           "note": "结束时给这个模式打分",
@@ -708,7 +1221,16 @@
             {
               "sourceText": "Submit",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ส่ง",
+                "ms": "Hantar",
+                "de": "Senden",
+                "tr": "Gönder",
+                "fr": "Envoyer",
+                "uk": "Надіслати",
+                "ar-SA": "إرسال",
+                "zh": "提交"
+              },
               "androidTranslationId": "submit",
               "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Evaluate_Submit",
               "note": ""
@@ -717,7 +1239,16 @@
               "sourceText": "The input needs to be greater than 0",
               "reviewedSourceText": "The input must be greater than 0",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ค่าที่ป้อนต้องมากกว่า 0",
+                "ms": "Nilai yang dimasukkan mestilah lebih besar daripada 0",
+                "de": "Der eingegebene Wert muss größer als 0 sein",
+                "tr": "Girilen değer 0'dan büyük olmalıdır",
+                "fr": "La valeur saisie doit être supérieure à 0",
+                "uk": "Введене значення має бути більше за 0",
+                "ar-SA": "يجب أن تكون القيمة المدخلة أكبر من 0",
+                "zh": "输入值必须大于 0"
+              },
               "androidTranslationId": "input_greater_0",
               "iosTranslationId": "",
               "note": "输入的要大于0"
@@ -725,7 +1256,16 @@
             {
               "sourceText": "Submission successful",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ส่งสำเร็จ",
+                "ms": "Berjaya dihantar",
+                "de": "Erfolgreich gesendet",
+                "tr": "Başarıyla gönderildi",
+                "fr": "Envoi réussi",
+                "uk": "Успішно надіслано",
+                "ar-SA": "تم الإرسال بنجاح",
+                "zh": "提交成功"
+              },
               "androidTranslationId": "submission_successful",
               "iosTranslationId": "Alert_Submit_Success",
               "note": "提交成功toast"
@@ -738,7 +1278,16 @@
           "y": 0.08316270089105761,
           "sourceText": "Next speed",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ความเร็วถัดไป",
+            "ms": "Kelajuan seterusnya",
+            "de": "Nächste Geschwindigkeit",
+            "tr": "Sonraki hız",
+            "fr": "Vitesse suivante",
+            "uk": "Наступна швидкість",
+            "ar-SA": "السرعة التالية",
+            "zh": "下一速度"
+          },
           "androidTranslationId": "next_speed",
           "iosTranslationId": "Live_Page_Tip_Next_Speed",
           "note": "提前15s提示下一个速度",
@@ -746,7 +1295,16 @@
             {
               "sourceText": "Next resistance",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แรงต้านถัดไป",
+                "ms": "Rintangan seterusnya",
+                "de": "Nächster Widerstand",
+                "tr": "Sonraki direnç",
+                "fr": "Résistance suivante",
+                "uk": "Наступний опір",
+                "ar-SA": "المقاومة التالية",
+                "zh": "下一阻力"
+              },
               "androidTranslationId": "next_resistance",
               "iosTranslationId": "Live_Page_Tip_Next_Resistance",
               "note": "下一阻力"
@@ -759,7 +1317,16 @@
           "y": 0.42485387384427953,
           "sourceText": "Completed %1$d km",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ทำระยะทางครบ %1$d km",
+            "ms": "Selesai %1$d km",
+            "de": "%1$d km abgeschlossen",
+            "tr": "%1$d km tamamlandı",
+            "fr": "%1$d km parcourus",
+            "uk": "Подолано %1$d km",
+            "ar-SA": "تم إكمال %1$d km",
+            "zh": "已完成 %1$d km"
+          },
           "androidTranslationId": "completed_km_format",
           "iosTranslationId": "",
           "note": "完成多少公里进度图示",
@@ -767,7 +1334,16 @@
             {
               "sourceText": "The program has been completed %1$s",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ทำโปรแกรมสำเร็จแล้ว %1$s",
+                "ms": "Program telah diselesaikan %1$s",
+                "de": "Programm abgeschlossen: %1$s",
+                "tr": "Program tamamlandı %1$s",
+                "fr": "Programme terminé : %1$s",
+                "uk": "Програму завершено: %1$s",
+                "ar-SA": "تم إكمال البرنامج %1$s",
+                "zh": "计划已完成 %1$s"
+              },
               "androidTranslationId": "completed_percent_format",
               "iosTranslationId": "",
               "note": "完成当前的百分比"
@@ -776,7 +1352,16 @@
               "sourceText": "Keep up the good work!!",
               "reviewedSourceText": "Keep up the good work!",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ทำได้ดีมาก รักษาความต่อเนื่องไว้",
+                "ms": "Teruskan usaha yang baik!",
+                "de": "Weiter so!",
+                "tr": "Böyle devam edin!",
+                "fr": "Continuez comme ça !",
+                "uk": "Так тримати!",
+                "ar-SA": "واصل العمل الرائع!",
+                "zh": "继续保持！"
+              },
               "androidTranslationId": "keep_up_the_good_work",
               "iosTranslationId": "",
               "note": "进度下面的鼓励的话"
@@ -784,7 +1369,16 @@
             {
               "sourceText": "Completed",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เสร็จสิ้นแล้ว",
+                "ms": "Selesai",
+                "de": "Abgeschlossen",
+                "tr": "Tamamlandı",
+                "fr": "Terminé",
+                "uk": "Завершено",
+                "ar-SA": "مكتمل",
+                "zh": "已完成"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Alert_Km_Did_Complete_1",
               "note": ""
@@ -792,7 +1386,16 @@
             {
               "sourceText": "km",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "km",
+                "ms": "km",
+                "de": "km",
+                "tr": "km",
+                "fr": "km",
+                "uk": "km",
+                "ar-SA": "km",
+                "zh": "km"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Unit_km",
               "note": ""
@@ -800,7 +1403,16 @@
             {
               "sourceText": "Let's go!",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ไปกันเลย",
+                "ms": "Mari mulakan!",
+                "de": "Los geht’s!",
+                "tr": "Haydi başlayalım!",
+                "fr": "C’est parti !",
+                "uk": "Уперед!",
+                "ar-SA": "هيا بنا!",
+                "zh": "出发！"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Alert_Km_Did_Complete_Subtitle",
               "note": ""
@@ -808,7 +1420,16 @@
             {
               "sourceText": "You have completed",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คุณทำสำเร็จแล้ว",
+                "ms": "Anda telah menyelesaikan",
+                "de": "Du hast abgeschlossen",
+                "tr": "Tamamladınız",
+                "fr": "Vous avez terminé",
+                "uk": "Ви завершили",
+                "ar-SA": "لقد أكملت",
+                "zh": "您已完成"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Alert_Km_Did_Complete_2",
               "note": ""
@@ -821,7 +1442,16 @@
           "y": 0.44307511049990816,
           "sourceText": "Current {0} is too low",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "{0} ปัจจุบันต่ำเกินไป",
+            "ms": "{0} semasa terlalu rendah",
+            "de": "Aktueller Wert für {0} ist zu niedrig",
+            "tr": "Mevcut {0} çok düşük",
+            "fr": "La valeur actuelle de {0} est trop faible",
+            "uk": "Поточне значення {0} надто низьке",
+            "ar-SA": "قيمة {0} الحالية منخفضة جدًا",
+            "zh": "当前{0}过低"
+          },
           "androidTranslationId": "too_low_format",
           "iosTranslationId": "",
           "note": "速度/阻力太低体提示 标题",
@@ -829,7 +1459,16 @@
             {
               "sourceText": "Current %1$s is too high",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "%1$s ปัจจุบันสูงเกินไป",
+                "ms": "%1$s semasa terlalu tinggi",
+                "de": "Aktueller Wert für %1$s ist zu hoch",
+                "tr": "Mevcut %1$s çok yüksek",
+                "fr": "La valeur actuelle de %1$s est trop élevée",
+                "uk": "Поточне значення %1$s надто високе",
+                "ar-SA": "قيمة %1$s الحالية مرتفعة جدًا",
+                "zh": "当前%1$s过高"
+              },
               "androidTranslationId": "too_high_format",
               "iosTranslationId": "",
               "note": ""
@@ -838,7 +1477,16 @@
               "sourceText": " is to high",
               "reviewedSourceText": " is too high",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": " สูงเกินไป",
+                "ms": " terlalu tinggi",
+                "de": " ist zu hoch",
+                "tr": " çok yüksek",
+                "fr": " est trop élevée",
+                "uk": " — зависоке значення",
+                "ar-SA": " مرتفع جدًا",
+                "zh": "过高"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Little_H",
               "note": ""
@@ -846,7 +1494,16 @@
             {
               "sourceText": " is just right",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": " อยู่ในระดับพอดี",
+                "ms": " adalah sesuai",
+                "de": " ist genau richtig",
+                "tr": " tam uygun",
+                "fr": " est idéale",
+                "uk": " — оптимальне значення",
+                "ar-SA": " مناسب",
+                "zh": "正合适"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Little_N",
               "note": ""
@@ -855,7 +1512,16 @@
               "sourceText": " is to low",
               "reviewedSourceText": " is too low",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": " ต่ำเกินไป",
+                "ms": " terlalu rendah",
+                "de": " ist zu niedrig",
+                "tr": " çok düşük",
+                "fr": " est trop faible",
+                "uk": " — занизьке значення",
+                "ar-SA": " منخفض جدًا",
+                "zh": "过低"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Little_S",
               "note": ""
@@ -868,7 +1534,16 @@
           "y": 0.6135876835546231,
           "sourceText": "If you have the capacity, you can adjust the %1$s to the recommended level",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "หากยังไหว คุณสามารถปรับ %1$s ไปยังระดับที่แนะนำได้",
+            "ms": "Jika anda masih mampu, laraskan %1$s kepada tahap yang disyorkan",
+            "de": "Wenn du noch Reserven hast, kannst du %1$s auf die empfohlene Stufe einstellen",
+            "tr": "Kendinizi iyi hissediyorsanız %1$s değerini önerilen seviyeye ayarlayabilirsiniz",
+            "fr": "Si vous vous en sentez capable, vous pouvez régler %1$s au niveau recommandé",
+            "uk": "Якщо ви маєте достатньо сил, установіть %1$s на рекомендований рівень",
+            "ar-SA": "إذا كنت قادرًا، يمكنك ضبط %1$s على المستوى الموصى به",
+            "zh": "如果体力允许，可将%1$s调至建议等级"
+          },
           "androidTranslationId": "too_low_desc_format",
           "iosTranslationId": "",
           "note": "速度/阻力太低的描述",
@@ -877,7 +1552,16 @@
               "sourceText": "If you feel difficulty in breathing, you can adjust the  %1$s to the recommended level.",
               "reviewedSourceText": "If you feel short of breath, you can adjust the %1$s to the recommended level.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "หากรู้สึกหายใจไม่ทัน คุณสามารถปรับ %1$s ไปยังระดับที่แนะนำได้",
+                "ms": "Jika anda berasa sesak nafas, laraskan %1$s kepada tahap yang disyorkan.",
+                "de": "Wenn du außer Atem bist, kannst du %1$s auf die empfohlene Stufe einstellen.",
+                "tr": "Nefes darlığı hissederseniz %1$s değerini önerilen seviyeye ayarlayabilirsiniz.",
+                "fr": "Si vous êtes essoufflé, vous pouvez régler %1$s au niveau recommandé.",
+                "uk": "Якщо вам бракує повітря, установіть %1$s на рекомендований рівень.",
+                "ar-SA": "إذا شعرت بضيق في التنفس، يمكنك ضبط %1$s على المستوى الموصى به.",
+                "zh": "如果感到气短，可将%1$s调至建议等级。"
+              },
               "androidTranslationId": "too_high_desc_format",
               "iosTranslationId": "",
               "note": "速度/阻力太高的描述"
@@ -886,7 +1570,16 @@
               "sourceText": "If you feel short of breath, adjust to the recommended",
               "reviewedSourceText": "If you feel short of breath, adjust to the recommended level",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "หากรู้สึกหายใจไม่ทัน ให้ปรับไปยังระดับที่แนะนำ",
+                "ms": "Jika anda berasa sesak nafas, laraskan kepada tahap yang disyorkan",
+                "de": "Wenn du außer Atem bist, stelle die empfohlene Stufe ein",
+                "tr": "Nefes darlığı hissederseniz önerilen seviyeye ayarlayın",
+                "fr": "Si vous êtes essoufflé, réglez au niveau recommandé",
+                "uk": "Якщо вам бракує повітря, установіть рекомендований рівень",
+                "ar-SA": "إذا شعرت بضيق في التنفس، فاضبطه على المستوى الموصى به",
+                "zh": "如果感到气短，请调至建议等级"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Little_H_Tip",
               "note": ""
@@ -894,7 +1587,16 @@
             {
               "sourceText": "Keep it up!",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ทำต่อไป",
+                "ms": "Teruskan!",
+                "de": "Bleib dran!",
+                "tr": "Devam edin!",
+                "fr": "Continuez !",
+                "uk": "Продовжуйте!",
+                "ar-SA": "استمر!",
+                "zh": "继续保持！"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Little_N_Tip",
               "note": ""
@@ -903,7 +1605,16 @@
               "sourceText": "If you feel short of breath, adjust to the recommended",
               "reviewedSourceText": "If you feel short of breath, adjust to the recommended level",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "หากรู้สึกหายใจไม่ทัน ให้ปรับไปยังระดับที่แนะนำ",
+                "ms": "Jika anda berasa sesak nafas, laraskan kepada tahap yang disyorkan",
+                "de": "Wenn du außer Atem bist, stelle die empfohlene Stufe ein",
+                "tr": "Nefes darlığı hissederseniz önerilen seviyeye ayarlayın",
+                "fr": "Si vous êtes essoufflé, réglez au niveau recommandé",
+                "uk": "Якщо вам бракує повітря, установіть рекомендований рівень",
+                "ar-SA": "إذا شعرت بضيق في التنفس، فاضبطه على المستوى الموصى به",
+                "zh": "如果感到气短，请调至建议等级"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Little_S_Tip",
               "note": ""
@@ -924,7 +1635,16 @@
           "y": 0.469982993239527,
           "sourceText": "Pace",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เพซ",
+            "ms": "Rentak",
+            "de": "Tempo",
+            "tr": "Tempo",
+            "fr": "Allure",
+            "uk": "Темп",
+            "ar-SA": "الوتيرة",
+            "zh": "配速"
+          },
           "androidTranslationId": "sport_unit_pace",
           "iosTranslationId": "Unit_Pace",
           "subItems": [
@@ -932,7 +1652,16 @@
               "sourceText": "Power w",
               "reviewedSourceText": "Power (W)",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "กำลัง (W)",
+                "ms": "Kuasa (W)",
+                "de": "Leistung (W)",
+                "tr": "Güç (W)",
+                "fr": "Puissance (W)",
+                "uk": "Потужність (W)",
+                "ar-SA": "القدرة (W)",
+                "zh": "功率 (W)"
+              },
               "androidTranslationId": "sport_unit_power_w",
               "iosTranslationId": "Share_View_Data_Unit_Power"
             },
@@ -940,7 +1669,16 @@
               "sourceText": "Max consecutive jump count",
               "reviewedSourceText": "Max consecutive jumps",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จำนวนกระโดดต่อเนื่องสูงสุด",
+                "ms": "Lompatan berturut-turut maksimum",
+                "de": "Maximale Sprünge in Folge",
+                "tr": "Maksimum kesintisiz atlama",
+                "fr": "Maximum de sauts consécutifs",
+                "uk": "Максимум послідовних стрибків",
+                "ar-SA": "الحد الأقصى للقفزات المتتالية",
+                "zh": "最大连续跳跃次数"
+              },
               "androidTranslationId": "sport_max_consecutive_jump_count",
               "iosTranslationId": "Unit_Max_Consecutive_Count"
             },
@@ -948,7 +1686,16 @@
               "sourceText": "Number of interruptions",
               "reviewedSourceText": "Interruptions",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จำนวนครั้งที่หยุด",
+                "ms": "Gangguan",
+                "de": "Unterbrechungen",
+                "tr": "Kesintiler",
+                "fr": "Interruptions",
+                "uk": "Переривання",
+                "ar-SA": "مرات التوقف",
+                "zh": "中断次数"
+              },
               "androidTranslationId": "sport_unit_interruptions",
               "iosTranslationId": "Unit_Interruptions_Count"
             },
@@ -956,21 +1703,48 @@
               "sourceText": "avg rpm",
               "reviewedSourceText": "Avg rpm",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "rpm เฉลี่ย",
+                "ms": "Purata rpm",
+                "de": "Durchschn. rpm",
+                "tr": "Ort. rpm",
+                "fr": "rpm moy.",
+                "uk": "Сер. rpm",
+                "ar-SA": "متوسط rpm",
+                "zh": "平均 rpm"
+              },
               "androidTranslationId": "sport_unit_avg_rpm",
               "iosTranslationId": "Share_View_Data_Unit_Avg_Rpm"
             },
             {
               "sourceText": "RPM",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "RPM",
+                "ms": "RPM",
+                "de": "RPM",
+                "tr": "RPM",
+                "fr": "RPM",
+                "uk": "RPM",
+                "ar-SA": "RPM",
+                "zh": "RPM"
+              },
               "androidTranslationId": "sport_unit_rpm",
               "iosTranslationId": "Unit_RPM"
             },
             {
               "sourceText": "SPM",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "SPM",
+                "ms": "SPM",
+                "de": "SPM",
+                "tr": "SPM",
+                "fr": "SPM",
+                "uk": "SPM",
+                "ar-SA": "SPM",
+                "zh": "SPM"
+              },
               "androidTranslationId": "sport_unit_spm",
               "iosTranslationId": "Unit_SPM"
             }
@@ -982,7 +1756,16 @@
           "y": 0.4618428014899174,
           "sourceText": "Heart Rate",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "อัตราการเต้นของหัวใจ",
+            "ms": "Kadar denyutan jantung",
+            "de": "Herzfrequenz",
+            "tr": "Kalp atış hızı",
+            "fr": "Fréquence cardiaque",
+            "uk": "Частота серцевих скорочень",
+            "ar-SA": "معدل ضربات القلب",
+            "zh": "心率"
+          },
           "androidTranslationId": "sport_unit_heart_rate",
           "iosTranslationId": "Unit_Heart_Rate",
           "subItems": []
@@ -1003,7 +1786,16 @@
           "y": 0.49983042923314563,
           "sourceText": "AI Heart Rate Zones",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "โซนอัตราการเต้นของหัวใจ AI",
+            "ms": "Zon Kadar Denyutan Jantung AI",
+            "de": "AI-Herzfrequenzzonen",
+            "tr": "AI Kalp Atış Hızı Bölgeleri",
+            "fr": "Zones de fréquence cardiaque AI",
+            "uk": "Зони пульсу AI",
+            "ar-SA": "مناطق معدل ضربات القلب بالذكاء الاصطناعي AI",
+            "zh": "AI 心率区间"
+          },
           "androidTranslationId": "ai_heart_rate_zones",
           "iosTranslationId": "Free_Exercise_Page_AI_Heart_Rate",
           "subItems": []
@@ -1018,7 +1810,16 @@
           "sourceText": "AI detected that you\\'re about to enter the orange fat-burning zone. Stay with it. Your best shape is within reach.",
           "reviewedSourceText": "AI detected that you're about to enter the orange fat-burning zone. Stay with it. Your best shape is within reach.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "AI ตรวจพบว่าคุณกำลังจะเข้าสู่โซนเผาผลาญไขมันสีส้ม รักษาระดับนี้ไว้ เป้าหมายรูปร่างที่ดีที่สุดอยู่ไม่ไกล",
+            "ms": "AI mengesan bahawa anda hampir memasuki zon pembakaran lemak jingga. Teruskan. Bentuk terbaik anda semakin hampir.",
+            "de": "AI erkennt, dass du gleich die orange Fettverbrennungszone erreichst. Bleib dran – deine Bestform ist zum Greifen nah.",
+            "tr": "AI, turuncu yağ yakma bölgesine girmek üzere olduğunuzu algıladı. Devam edin; en iyi formunuza çok az kaldı.",
+            "fr": "AI détecte que vous êtes sur le point d’entrer dans la zone orange de combustion des graisses. Continuez, votre meilleure forme est à portée de main.",
+            "uk": "AI визначив, що ви наближаєтеся до помаранчевої зони спалювання жиру. Продовжуйте — ваша найкраща форма вже близько.",
+            "ar-SA": "اكتشف AI أنك على وشك دخول المنطقة البرتقالية لحرق الدهون. استمر، فأفضل لياقة لك أصبحت في متناولك.",
+            "zh": "AI 检测到您即将进入橙色燃脂区。继续保持，理想状态触手可及。"
+          },
           "androidTranslationId": "target_13_step_2_min_low_90",
           "iosTranslationId": "Free_Exercise_Page_AI_Heart_Danmaku_Tip_1",
           "note": "中间飘过的弹幕",
@@ -1027,7 +1828,16 @@
               "sourceText": "You\\'re now in the orange high fat-burning zone. Your results will prove every drop of sweat was worth it.",
               "reviewedSourceText": "You're now in the orange high fat-burning zone. Your results will prove every drop of sweat was worth it.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ตอนนี้คุณอยู่ในโซนเผาผลาญไขมันสูงสีส้มแล้ว ผลลัพธ์จะพิสูจน์ว่าทุกหยดเหงื่อคุ้มค่า",
+                "ms": "Anda kini berada dalam zon pembakaran lemak tinggi berwarna jingga. Hasilnya akan membuktikan bahawa setiap titis peluh berbaloi.",
+                "de": "Du bist jetzt in der orangefarbenen Zone mit hoher Fettverbrennung. Deine Ergebnisse werden zeigen, dass sich jeder Schweißtropfen gelohnt hat.",
+                "tr": "Şu anda turuncu yüksek yağ yakma bölgesindesiniz. Sonuçlarınız, döktüğünüz her damla terin karşılığını verecek.",
+                "fr": "Vous êtes maintenant dans la zone orange de forte combustion des graisses. Vos résultats prouveront que chaque goutte de sueur en valait la peine.",
+                "uk": "Зараз ви в помаранчевій зоні інтенсивного спалювання жиру. Результат доведе, що кожна крапля поту була недаремною.",
+                "ar-SA": "أنت الآن في المنطقة البرتقالية ذات الحرق المرتفع للدهون. وستثبت نتائجك أن كل قطرة عرق كانت تستحق العناء.",
+                "zh": "您已进入橙色高效燃脂区。训练成果会证明，每一滴汗水都值得。"
+              },
               "androidTranslationId": "target_13_step_2_min",
               "iosTranslationId": "Free_Exercise_Page_AI_Heart_Danmaku_Tip_2",
               "note": ""
@@ -1036,7 +1846,16 @@
               "sourceText": "If you\\'re feeling tired, slow down a bit and keep your heart rate in the optimal fat-burning zone.",
               "reviewedSourceText": "If you're feeling tired, slow down a bit and keep your heart rate in the optimal fat-burning zone.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "หากรู้สึกเหนื่อย ให้ชะลอลงเล็กน้อยและรักษาอัตราการเต้นของหัวใจไว้ในโซนเผาผลาญไขมันที่เหมาะสม",
+                "ms": "Jika anda berasa letih, perlahankan sedikit dan kekalkan kadar denyutan jantung dalam zon pembakaran lemak yang optimum.",
+                "de": "Wenn du müde wirst, reduziere das Tempo etwas und halte deine Herzfrequenz in der optimalen Fettverbrennungszone.",
+                "tr": "Yorgun hissediyorsanız biraz yavaşlayın ve kalp atış hızınızı ideal yağ yakma bölgesinde tutun.",
+                "fr": "Si vous vous sentez fatigué, ralentissez légèrement et maintenez votre fréquence cardiaque dans la zone optimale de combustion des graisses.",
+                "uk": "Якщо ви втомилися, трохи сповільніться й утримуйте пульс в оптимальній зоні спалювання жиру.",
+                "ar-SA": "إذا شعرت بالتعب، فخفف السرعة قليلًا وحافظ على معدل ضربات قلبك ضمن المنطقة المثالية لحرق الدهون.",
+                "zh": "如果感到疲劳，请适当减速，将心率保持在最佳燃脂区间。"
+              },
               "androidTranslationId": "target_13_step_4_max",
               "iosTranslationId": "Free_Exercise_Page_AI_Heart_Danmaku_Tip_3",
               "note": ""
@@ -1057,14 +1876,32 @@
           "y": 0.5890677703951847,
           "sourceText": "Suggested speed",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ความเร็วที่แนะนำ",
+            "ms": "Kelajuan yang disyorkan",
+            "de": "Empfohlene Geschwindigkeit",
+            "tr": "Önerilen hız",
+            "fr": "Vitesse recommandée",
+            "uk": "Рекомендована швидкість",
+            "ar-SA": "السرعة المقترحة",
+            "zh": "建议速度"
+          },
           "androidTranslationId": "suggested_speed",
           "iosTranslationId": "Flag_Speed_Recommend",
           "subItems": [
             {
               "sourceText": "Suggested resistance",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แรงต้านที่แนะนำ",
+                "ms": "Rintangan yang disyorkan",
+                "de": "Empfohlener Widerstand",
+                "tr": "Önerilen direnç",
+                "fr": "Résistance recommandée",
+                "uk": "Рекомендований опір",
+                "ar-SA": "المقاومة المقترحة",
+                "zh": "建议阻力"
+              },
               "androidTranslationId": "suggested_resistance",
               "iosTranslationId": "Flag_Resistance_Recommend"
             }
@@ -1076,14 +1913,32 @@
           "y": 0.5964364029714763,
           "sourceText": "Current speed",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ความเร็วปัจจุบัน",
+            "ms": "Kelajuan semasa",
+            "de": "Aktuelle Geschwindigkeit",
+            "tr": "Mevcut hız",
+            "fr": "Vitesse actuelle",
+            "uk": "Поточна швидкість",
+            "ar-SA": "السرعة الحالية",
+            "zh": "当前速度"
+          },
           "androidTranslationId": "current_speed",
           "iosTranslationId": "Flag_Speed_Current",
           "subItems": [
             {
               "sourceText": "Current resistance",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แรงต้านปัจจุบัน",
+                "ms": "Rintangan semasa",
+                "de": "Aktueller Widerstand",
+                "tr": "Mevcut direnç",
+                "fr": "Résistance actuelle",
+                "uk": "Поточний опір",
+                "ar-SA": "المقاومة الحالية",
+                "zh": "当前阻力"
+              },
               "androidTranslationId": "current_resistance",
               "iosTranslationId": "Flag_Resistance_Current"
             }
@@ -1105,7 +1960,16 @@
           "y": 0.48426834219504167,
           "sourceText": "This device does not currently support that feature",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "อุปกรณ์นี้ยังไม่รองรับฟีเจอร์ดังกล่าว",
+            "ms": "Peranti ini belum menyokong ciri tersebut",
+            "de": "Dieses Gerät unterstützt diese Funktion derzeit nicht",
+            "tr": "Bu cihaz şu anda bu özelliği desteklemiyor",
+            "fr": "Cet appareil ne prend pas encore en charge cette fonctionnalité",
+            "uk": "Цей пристрій наразі не підтримує цю функцію",
+            "ar-SA": "هذا الجهاز لا يدعم هذه الميزة حاليًا",
+            "zh": "当前设备暂不支持该功能"
+          },
           "androidTranslationId": "not_support_that_feature",
           "iosTranslationId": "Alert_Mode_Not_Support_Device",
           "subItems": []
@@ -1116,7 +1980,16 @@
           "y": 0.3344379162341354,
           "sourceText": "Notice",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แจ้งเตือน",
+            "ms": "Notis",
+            "de": "Hinweis",
+            "tr": "Uyarı",
+            "fr": "Avis",
+            "uk": "Увага",
+            "ar-SA": "تنبيه",
+            "zh": "提示"
+          },
           "androidTranslationId": "alert_notice",
           "iosTranslationId": "Alert_Notice_Title",
           "subItems": []
@@ -1128,7 +2001,16 @@
           "sourceText": "Exit",
           "reviewedSourceText": "End",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "สิ้นสุด",
+            "ms": "Tamat",
+            "de": "Beenden",
+            "tr": "Bitir",
+            "fr": "Terminer",
+            "uk": "Завершити",
+            "ar-SA": "إنهاء",
+            "zh": "结束"
+          },
           "androidTranslationId": "exit_alert_end",
           "iosTranslationId": "Alert_End",
           "subItems": []
@@ -1149,7 +2031,16 @@
           "y": 0.14165964524444,
           "sourceText": "%1$s-Ratings",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "%1$s-คะแนน",
+            "ms": "%1$s-Penilaian",
+            "de": "%1$s-Bewertungen",
+            "tr": "%1$s-Değerlendirmeleri",
+            "fr": "%1$s-Évaluations",
+            "uk": "%1$s-Оцінки",
+            "ar-SA": "%1$s-التقييمات",
+            "zh": "%1$s-评分"
+          },
           "androidTranslationId": "person_rating_format",
           "iosTranslationId": "",
           "subItems": []
@@ -1160,7 +2051,16 @@
           "y": 0.17091942174837016,
           "sourceText": "Duration",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ระยะเวลา",
+            "ms": "Tempoh",
+            "de": "Dauer",
+            "tr": "Süre",
+            "fr": "Durée",
+            "uk": "Тривалість",
+            "ar-SA": "المدة",
+            "zh": "时长"
+          },
           "androidTranslationId": "sport_unit_duration",
           "iosTranslationId": "",
           "subItems": []
@@ -1171,7 +2071,16 @@
           "y": 0.1670633148952855,
           "sourceText": "Distance",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ระยะทาง",
+            "ms": "Jarak",
+            "de": "Distanz",
+            "tr": "Mesafe",
+            "fr": "Distance",
+            "uk": "Відстань",
+            "ar-SA": "المسافة",
+            "zh": "距离"
+          },
           "androidTranslationId": "mode_distance",
           "iosTranslationId": "",
           "subItems": []
@@ -1182,7 +2091,16 @@
           "y": 0.2131710339826455,
           "sourceText": "Consumption",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แคลอรีที่เผาผลาญ",
+            "ms": "Kalori dibakar",
+            "de": "Kalorienverbrauch",
+            "tr": "Yakılan kalori",
+            "fr": "Calories brûlées",
+            "uk": "Спалені калорії",
+            "ar-SA": "السعرات الحرارية المحروقة",
+            "zh": "消耗热量"
+          },
           "androidTranslationId": "mode_consumption",
           "iosTranslationId": "Home_Page_Enjoy_Run_List_Kcal",
           "subItems": []
@@ -1193,14 +2111,32 @@
           "y": 0.16224314896709435,
           "sourceText": "Max resistance",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แรงต้านสูงสุด",
+            "ms": "Rintangan maksimum",
+            "de": "Maximaler Widerstand",
+            "tr": "Maksimum direnç",
+            "fr": "Résistance maximale",
+            "uk": "Максимальний опір",
+            "ar-SA": "الحد الأقصى للمقاومة",
+            "zh": "最大阻力"
+          },
           "androidTranslationId": "mode_max_resistance",
           "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Resis",
           "subItems": [
             {
               "sourceText": "Max speed",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ความเร็วสูงสุด",
+                "ms": "Kelajuan maksimum",
+                "de": "Maximale Geschwindigkeit",
+                "tr": "Maksimum hız",
+                "fr": "Vitesse maximale",
+                "uk": "Максимальна швидкість",
+                "ar-SA": "السرعة القصوى",
+                "zh": "最大速度"
+              },
               "androidTranslationId": "mode_max_speed",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Speed"
             }
@@ -1212,7 +2148,16 @@
           "y": 0.26635835761873333,
           "sourceText": "Level",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ระดับ",
+            "ms": "Tahap",
+            "de": "Stufe",
+            "tr": "Seviye",
+            "fr": "Niveau",
+            "uk": "Рівень",
+            "ar-SA": "المستوى",
+            "zh": "等级"
+          },
           "androidTranslationId": "mode_level",
           "iosTranslationId": "",
           "subItems": []
@@ -1223,7 +2168,16 @@
           "y": 0.2682864110452756,
           "sourceText": "min",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "min",
+            "ms": "min",
+            "de": "min",
+            "tr": "min",
+            "fr": "min",
+            "uk": "min",
+            "ar-SA": "min",
+            "zh": "min"
+          },
           "androidTranslationId": "mode_min",
           "iosTranslationId": "",
           "subItems": []
@@ -1234,7 +2188,16 @@
           "y": 0.2908658460827099,
           "sourceText": "Mode Introduction",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แนะนำโหมด",
+            "ms": "Pengenalan mod",
+            "de": "Modusbeschreibung",
+            "tr": "Mod Tanıtımı",
+            "fr": "Présentation du mode",
+            "uk": "Опис режиму",
+            "ar-SA": "مقدمة عن الوضع",
+            "zh": "模式介绍"
+          },
           "androidTranslationId": "mode_introduction",
           "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Introduction",
           "subItems": []
@@ -1245,7 +2208,16 @@
           "y": 0.595092534784766,
           "sourceText": "Mode plan",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แผนโหมด",
+            "ms": "Pelan mod",
+            "de": "Modusplan",
+            "tr": "Mod planı",
+            "fr": "Programme du mode",
+            "uk": "План режиму",
+            "ar-SA": "خطة الوضع",
+            "zh": "模式计划"
+          },
           "androidTranslationId": "mode_plan",
           "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Plan",
           "subItems": []
@@ -1256,7 +2228,16 @@
           "y": 0.9290233107477927,
           "sourceText": "Let\\'s Go",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เริ่มกันเลย",
+            "ms": "Mari Mulakan",
+            "de": "Los geht’s",
+            "tr": "Haydi Başlayalım",
+            "fr": "C’est parti",
+            "uk": "Уперед",
+            "ar-SA": "هيا بنا",
+            "zh": "出发"
+          },
           "androidTranslationId": "lets_go",
           "iosTranslationId": "",
           "subItems": []
@@ -1270,7 +2251,16 @@
           "y": 0.9180424222238303,
           "sourceText": "Unlock All Workouts",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ปลดล็อกการฝึกทั้งหมด",
+            "ms": "Buka Kunci Semua Latihan",
+            "de": "Alle Trainings freischalten",
+            "tr": "Tüm Antrenmanların Kilidini Aç",
+            "fr": "Débloquer tous les entraînements",
+            "uk": "Розблокувати всі тренування",
+            "ar-SA": "فتح جميع التمارين",
+            "zh": "解锁全部训练"
+          },
           "androidTranslationId": "activate_membership",
           "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open",
           "note": "不是会员的时候",
@@ -1278,7 +2268,16 @@
             {
               "sourceText": "Get full access with membership",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "สมัครสมาชิกเพื่อเข้าถึงเนื้อหาทั้งหมด",
+                "ms": "Dapatkan akses penuh dengan keahlian",
+                "de": "Mit einer Mitgliedschaft erhältst du vollen Zugriff",
+                "tr": "Üyelikle tam erişim elde edin",
+                "fr": "Accédez à tout le contenu avec un abonnement",
+                "uk": "Отримайте повний доступ із членством",
+                "ar-SA": "احصل على وصول كامل من خلال العضوية",
+                "zh": "开通会员即可完整访问"
+              },
               "androidTranslationId": "membership_unlocks_all_scenes",
               "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open_Subtitle_Scenes",
               "note": ""
@@ -1300,7 +2299,16 @@
           "sourceText": "All Courses",
           "reviewedSourceText": "All classes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คลาสทั้งหมด",
+            "ms": "Semua kelas",
+            "de": "Alle Kurse",
+            "tr": "Tüm dersler",
+            "fr": "Tous les cours",
+            "uk": "Усі заняття",
+            "ar-SA": "جميع الحصص",
+            "zh": "全部课程"
+          },
           "androidTranslationId": "all_courses",
           "iosTranslationId": "Training_Plan_List_All_Crouse",
           "subItems": [
@@ -1308,7 +2316,16 @@
               "sourceText": "All plan",
               "reviewedSourceText": "All plans",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แผนทั้งหมด",
+                "ms": "Semua pelan",
+                "de": "Alle Pläne",
+                "tr": "Tüm planlar",
+                "fr": "Tous les programmes",
+                "uk": "Усі плани",
+                "ar-SA": "جميع الخطط",
+                "zh": "全部计划"
+              },
               "androidTranslationId": "All_plan",
               "iosTranslationId": "Collection_Page_All_Plan"
             }
@@ -1321,7 +2338,16 @@
           "sourceText": "(total %1$d class)",
           "reviewedSourceText": "(total %1$d classes)",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "(ทั้งหมด %1$d คลาส)",
+            "ms": "(jumlah %1$d kelas)",
+            "de": "(insgesamt %1$d Kurse)",
+            "tr": "(toplam %1$d ders)",
+            "fr": "(%1$d cours au total)",
+            "uk": "(усього занять: %1$d)",
+            "ar-SA": "(الإجمالي %1$d حصص)",
+            "zh": "（共 %1$d 节课）"
+          },
           "androidTranslationId": "total_class_format",
           "iosTranslationId": "",
           "subItems": []
@@ -1342,7 +2368,16 @@
           "y": 0.07456166864872121,
           "sourceText": "Free exercise",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "การฝึกอิสระ",
+            "ms": "Latihan bebas",
+            "de": "Freies Training",
+            "tr": "Serbest antrenman",
+            "fr": "Entraînement libre",
+            "uk": "Вільне тренування",
+            "ar-SA": "تمرين حر",
+            "zh": "自由训练"
+          },
           "androidTranslationId": "free_exercise",
           "iosTranslationId": "Free_Exercise_Page_Title",
           "subItems": []
@@ -1354,7 +2389,16 @@
           "sourceText": "The following methods can also record exercise data",
           "reviewedSourceText": "You can also record workout data with the following methods",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คุณยังสามารถบันทึกข้อมูลการฝึกด้วยวิธีต่อไปนี้",
+            "ms": "Anda juga boleh merekod data latihan dengan kaedah berikut",
+            "de": "Du kannst Trainingsdaten auch mit den folgenden Methoden aufzeichnen",
+            "tr": "Antrenman verilerini aşağıdaki yöntemlerle de kaydedebilirsiniz",
+            "fr": "Vous pouvez également enregistrer vos données d’entraînement avec les méthodes suivantes",
+            "uk": "Ви також можете записувати дані тренувань такими способами",
+            "ar-SA": "يمكنك أيضًا تسجيل بيانات التمرين بالطرق التالية",
+            "zh": "您还可以通过以下方式记录训练数据"
+          },
           "androidTranslationId": "other_sport_mode",
           "iosTranslationId": "Free_Exercise_Page_Segmentation_Content",
           "subItems": []
@@ -1376,7 +2420,16 @@
           "sourceText": "The following methods can also record exercise data",
           "reviewedSourceText": "You can also record workout data using these methods",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คุณยังสามารถบันทึกข้อมูลการฝึกด้วยวิธีเหล่านี้",
+            "ms": "Anda juga boleh merekod data latihan menggunakan kaedah ini",
+            "de": "Du kannst Trainingsdaten auch mit diesen Methoden aufzeichnen",
+            "tr": "Antrenman verilerini bu yöntemlerle de kaydedebilirsiniz",
+            "fr": "Vous pouvez également enregistrer vos données d’entraînement avec ces méthodes",
+            "uk": "Ви також можете записувати дані тренувань цими способами",
+            "ar-SA": "يمكنك أيضًا تسجيل بيانات التمرين بهذه الطرق",
+            "zh": "您还可以使用以下方式记录训练数据"
+          },
           "androidTranslationId": "other_sport_mode",
           "iosTranslationId": "Free_Exercise_Page_Segmentation_Content",
           "subItems": []
@@ -1398,7 +2451,16 @@
           "sourceText": "Mode plan",
           "reviewedSourceText": "Plan mode",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "โหมดแผน",
+            "ms": "Mod pelan",
+            "de": "Planmodus",
+            "tr": "Plan modu",
+            "fr": "Mode programme",
+            "uk": "Режим плану",
+            "ar-SA": "وضع الخطة",
+            "zh": "计划模式"
+          },
           "androidTranslationId": "mode_plan",
           "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Plan",
           "subItems": []
@@ -1420,7 +2482,16 @@
           "sourceText": "Achieved the goal",
           "reviewedSourceText": "Goal achieved",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "บรรลุเป้าหมายแล้ว",
+            "ms": "Matlamat dicapai",
+            "de": "Ziel erreicht",
+            "tr": "Hedefe ulaşıldı",
+            "fr": "Objectif atteint",
+            "uk": "Цілі досягнуто",
+            "ar-SA": "تم تحقيق الهدف",
+            "zh": "目标已达成"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_Goal_Did_Complete",
           "subItems": []
@@ -1441,7 +2512,16 @@
           "y": 0.6783393964940575,
           "sourceText": "km",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "km",
+            "ms": "km",
+            "de": "km",
+            "tr": "km",
+            "fr": "km",
+            "uk": "km",
+            "ar-SA": "km",
+            "zh": "km"
+          },
           "androidTranslationId": "mode_unit_km",
           "iosTranslationId": "Unit_km",
           "subItems": []
@@ -1462,7 +2542,16 @@
           "y": 0.533043462324405,
           "sourceText": "Set goals",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ตั้งเป้าหมาย",
+            "ms": "Tetapkan matlamat",
+            "de": "Ziele festlegen",
+            "tr": "Hedef belirle",
+            "fr": "Définir des objectifs",
+            "uk": "Установити цілі",
+            "ar-SA": "تحديد الأهداف",
+            "zh": "设置目标"
+          },
           "androidTranslationId": "set_goals",
           "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Set_Goals",
           "subItems": []
@@ -1473,7 +2562,16 @@
           "y": 0.6290032896846851,
           "sourceText": "Distance",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ระยะทาง",
+            "ms": "Jarak",
+            "de": "Distanz",
+            "tr": "Mesafe",
+            "fr": "Distance",
+            "uk": "Відстань",
+            "ar-SA": "المسافة",
+            "zh": "距离"
+          },
           "androidTranslationId": "mode_distance",
           "iosTranslationId": "Flag_Distance",
           "subItems": []
@@ -1484,7 +2582,16 @@
           "y": 0.6210264915833554,
           "sourceText": "Duration",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ระยะเวลา",
+            "ms": "Tempoh",
+            "de": "Dauer",
+            "tr": "Süre",
+            "fr": "Durée",
+            "uk": "Тривалість",
+            "ar-SA": "المدة",
+            "zh": "时长"
+          },
           "androidTranslationId": "sport_unit_duration",
           "iosTranslationId": "Flag_Duration",
           "subItems": []
@@ -1495,7 +2602,16 @@
           "y": 0.9013232046477105,
           "sourceText": "Run without goal",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "วิ่งโดยไม่ตั้งเป้าหมาย",
+            "ms": "Berlari tanpa matlamat",
+            "de": "Ohne Ziel laufen",
+            "tr": "Hedefsiz koş",
+            "fr": "Courir sans objectif",
+            "uk": "Біг без цілі",
+            "ar-SA": "الجري دون هدف",
+            "zh": "无目标跑步"
+          },
           "androidTranslationId": "without_goal",
           "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Run_Out_Goal",
           "subItems": []
@@ -1506,7 +2622,16 @@
           "y": 0.8839538527797377,
           "sourceText": "Start",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เริ่ม",
+            "ms": "Mula",
+            "de": "Start",
+            "tr": "Başla",
+            "fr": "Démarrer",
+            "uk": "Почати",
+            "ar-SA": "بدء",
+            "zh": "开始"
+          },
           "androidTranslationId": "start_exercising",
           "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Popup_Start",
           "subItems": []
@@ -1517,7 +2642,16 @@
           "y": 0.7771032447836964,
           "sourceText": "minutes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "นาที",
+            "ms": "minit",
+            "de": "Minuten",
+            "tr": "dakika",
+            "fr": "minutes",
+            "uk": "хвилини",
+            "ar-SA": "دقائق",
+            "zh": "分钟"
+          },
           "androidTranslationId": "minutes",
           "iosTranslationId": "Unit_minutes",
           "subItems": []
@@ -1538,7 +2672,16 @@
           "y": 0.3629053688753677,
           "sourceText": "Long press and drag to sort",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "กดค้างแล้วลากเพื่อจัดลำดับ",
+            "ms": "Tekan lama dan seret untuk menyusun",
+            "de": "Gedrückt halten und zum Sortieren ziehen",
+            "tr": "Sıralamak için basılı tutup sürükleyin",
+            "fr": "Appuyez longuement et faites glisser pour réorganiser",
+            "uk": "Натисніть і утримуйте, а потім перетягніть, щоб змінити порядок",
+            "ar-SA": "اضغط مطولًا واسحب لإعادة الترتيب",
+            "zh": "长按并拖动排序"
+          },
           "androidTranslationId": "home_tab_long_press_sort",
           "iosTranslationId": "Home_Page_Can_Drag",
           "subItems": []
@@ -1549,7 +2692,16 @@
           "y": 0.07306490483739428,
           "sourceText": "All Categories",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ทุกหมวดหมู่",
+            "ms": "Semua Kategori",
+            "de": "Alle Kategorien",
+            "tr": "Tüm Kategoriler",
+            "fr": "Toutes les catégories",
+            "uk": "Усі категорії",
+            "ar-SA": "جميع الفئات",
+            "zh": "全部分类"
+          },
           "androidTranslationId": "home_tab_all_categories",
           "iosTranslationId": "Home_Page_All_Class",
           "subItems": []
@@ -1570,28 +2722,64 @@
           "y": 0.9044662738593774,
           "sourceText": "Let’s Go",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไปกันเลย",
+            "ms": "Mari Mulakan",
+            "de": "Los geht’s",
+            "tr": "Haydi Başlayalım",
+            "fr": "C’est parti",
+            "uk": "Уперед",
+            "ar-SA": "هيا بنا",
+            "zh": "出发"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Start",
           "subItems": [
             {
               "sourceText": "Unlock All Workouts",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ปลดล็อกการฝึกทั้งหมด",
+                "ms": "Buka Kunci Semua Latihan",
+                "de": "Alle Trainings freischalten",
+                "tr": "Tüm Antrenmanların Kilidini Aç",
+                "fr": "Débloquer tous les entraînements",
+                "uk": "Розблокувати всі тренування",
+                "ar-SA": "فتح جميع التمارين",
+                "zh": "解锁全部训练"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open"
             },
             {
               "sourceText": "Get full access with membership",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "สมัครสมาชิกเพื่อเข้าถึงเนื้อหาทั้งหมด",
+                "ms": "Dapatkan akses penuh dengan keahlian",
+                "de": "Mit einer Mitgliedschaft erhältst du vollen Zugriff",
+                "tr": "Üyelikle tam erişim elde edin",
+                "fr": "Accédez à tout le contenu avec un abonnement",
+                "uk": "Отримайте повний доступ із членством",
+                "ar-SA": "احصل على وصول كامل من خلال العضوية",
+                "zh": "开通会员即可完整访问"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open_Subtitle_Programmed"
             },
             {
               "sourceText": "Get full access with membership",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "สมัครสมาชิกเพื่อเข้าถึงเนื้อหาทั้งหมด",
+                "ms": "Dapatkan akses penuh dengan keahlian",
+                "de": "Mit einer Mitgliedschaft erhältst du vollen Zugriff",
+                "tr": "Üyelikle tam erişim elde edin",
+                "fr": "Accédez à tout le contenu avec un abonnement",
+                "uk": "Отримайте повний доступ із членством",
+                "ar-SA": "احصل على وصول كامل من خلال العضوية",
+                "zh": "开通会员即可完整访问"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open_Subtitle_Scenes"
             }
@@ -1603,7 +2791,16 @@
           "y": 0.3966086008302101,
           "sourceText": "Mode Introduction",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แนะนำโหมด",
+            "ms": "Pengenalan mod",
+            "de": "Modusbeschreibung",
+            "tr": "Mod Tanıtımı",
+            "fr": "Présentation du mode",
+            "uk": "Опис режиму",
+            "ar-SA": "مقدمة عن الوضع",
+            "zh": "模式介绍"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Introduction",
           "subItems": []
@@ -1624,7 +2821,16 @@
           "y": 0.29948073126770236,
           "sourceText": "Notice",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แจ้งเตือน",
+            "ms": "Notis",
+            "de": "Hinweis",
+            "tr": "Uyarı",
+            "fr": "Avis",
+            "uk": "Увага",
+            "ar-SA": "تنبيه",
+            "zh": "提示"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_Notice_Title",
           "subItems": []
@@ -1635,7 +2841,16 @@
           "y": 0.42753840872028154,
           "sourceText": "Workouts under 2 minutes won’t be saved. End now?",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "การฝึกที่สั้นกว่า 2 นาทีจะไม่ถูกบันทึก ต้องการจบตอนนี้หรือไม่",
+            "ms": "Latihan kurang daripada 2 minit tidak akan disimpan. Tamatkan sekarang?",
+            "de": "Trainings unter 2 Minuten werden nicht gespeichert. Jetzt beenden?",
+            "tr": "2 dakikadan kısa antrenmanlar kaydedilmez. Şimdi sonlandırmak istiyor musunuz?",
+            "fr": "Les entraînements de moins de 2 minutes ne seront pas enregistrés. Terminer maintenant ?",
+            "uk": "Тренування тривалістю менше 2 хвилин не зберігаються. Завершити зараз?",
+            "ar-SA": "لن يتم حفظ التمارين التي تقل مدتها عن 2 دقيقة. هل تريد الإنهاء الآن؟",
+            "zh": "少于 2 分钟的训练不会保存，确定现在结束吗？"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_2_Min_Quit_Title",
           "subItems": []
@@ -1646,7 +2861,16 @@
           "y": 0.6982018710840271,
           "sourceText": "Exit",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ออก",
+            "ms": "Keluar",
+            "de": "Beenden",
+            "tr": "Çık",
+            "fr": "Quitter",
+            "uk": "Вийти",
+            "ar-SA": "خروج",
+            "zh": "退出"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_Sure_Quit_Sport",
           "subItems": []
@@ -1657,7 +2881,16 @@
           "y": 0.7370826538494549,
           "sourceText": "Continue",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ดำเนินการต่อ",
+            "ms": "Teruskan",
+            "de": "Fortsetzen",
+            "tr": "Devam et",
+            "fr": "Continuer",
+            "uk": "Продовжити",
+            "ar-SA": "متابعة",
+            "zh": "继续"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_Sure_Stay_Sport",
           "subItems": []
@@ -1679,7 +2912,16 @@
           "sourceText": "The bluetooth device has been activated, and data connection synchronization is in progress",
           "reviewedSourceText": "The bluetooth device has been activated. Data synchronization is in progress.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เปิดใช้งานอุปกรณ์ bluetooth แล้ว กำลังซิงค์ข้อมูล",
+            "ms": "Peranti bluetooth telah diaktifkan. Data sedang disegerakkan.",
+            "de": "Das bluetooth-Gerät wurde aktiviert. Daten werden synchronisiert.",
+            "tr": "bluetooth cihazı etkinleştirildi. Veriler eşitleniyor.",
+            "fr": "L’appareil bluetooth est activé. Synchronisation des données en cours.",
+            "uk": "Пристрій bluetooth активовано. Триває синхронізація даних.",
+            "ar-SA": "تم تفعيل جهاز bluetooth. جارٍ مزامنة البيانات.",
+            "zh": "bluetooth 设备已启用，正在同步数据。"
+          },
           "androidTranslationId": "bluetooth_open_data_sync",
           "iosTranslationId": "Alert_Bluetooth_Connect_Status_Start",
           "subItems": [
@@ -1687,14 +2929,32 @@
               "sourceText": "The bluetooth component is about to enter sleep mode. Please try stepping on the pedal or tapping the screen to keep the Bluetooth enabled. Once the Bluetooth enters sleep mode, it will no longer be able to continue syncing device data",
               "reviewedSourceText": "The bluetooth component is about to enter sleep mode. Step on the pedal or tap the screen to keep Bluetooth enabled. Once Bluetooth enters sleep mode, it can no longer sync device data.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ส่วนประกอบ bluetooth กำลังจะเข้าสู่โหมดสลีป เหยียบแป้นหรือแตะหน้าจอเพื่อให้ Bluetooth ทำงานต่อ เมื่อ Bluetooth เข้าสู่โหมดสลีปแล้ว จะไม่สามารถซิงค์ข้อมูลอุปกรณ์ได้",
+                "ms": "Komponen bluetooth akan memasuki mod tidur. Kayuh pedal atau ketik skrin untuk mengekalkan Bluetooth aktif. Setelah Bluetooth memasuki mod tidur, data peranti tidak lagi dapat disegerakkan.",
+                "de": "Die bluetooth-Komponente wechselt gleich in den Ruhemodus. Tritt in die Pedale oder tippe auf den Bildschirm, damit Bluetooth aktiviert bleibt. Sobald Bluetooth im Ruhemodus ist, können keine Gerätedaten mehr synchronisiert werden.",
+                "tr": "bluetooth bileşeni uyku moduna geçmek üzere. Bluetooth bağlantısını etkin tutmak için pedala basın veya ekrana dokunun. Bluetooth uyku moduna geçtiğinde cihaz verileri artık eşitlenemez.",
+                "fr": "Le composant bluetooth va passer en veille. Pédalez ou touchez l’écran pour maintenir Bluetooth activé. Une fois Bluetooth en veille, les données de l’appareil ne pourront plus être synchronisées.",
+                "uk": "Компонент bluetooth незабаром перейде в режим сну. Натисніть на педаль або торкніться екрана, щоб Bluetooth залишався активним. Після переходу Bluetooth у режим сну дані пристрою більше не синхронізуватимуться.",
+                "ar-SA": "مكوّن bluetooth على وشك الدخول في وضع السكون. اضغط على الدواسة أو المس الشاشة لإبقاء Bluetooth مفعّلًا. بعد دخول Bluetooth في وضع السكون، لن يعود بإمكانه مزامنة بيانات الجهاز.",
+                "zh": "bluetooth 组件即将进入休眠模式。请踩动踏板或点击屏幕以保持 Bluetooth 启用；Bluetooth 进入休眠后将无法继续同步设备数据。"
+              },
               "androidTranslationId": "please_try_step",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Sleep"
             },
             {
               "sourceText": "The bluetooth component is about to enter sleep mode.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ส่วนประกอบ bluetooth กำลังจะเข้าสู่โหมดสลีป",
+                "ms": "Komponen bluetooth akan memasuki mod tidur.",
+                "de": "Die bluetooth-Komponente wechselt gleich in den Ruhemodus.",
+                "tr": "bluetooth bileşeni uyku moduna geçmek üzere.",
+                "fr": "Le composant bluetooth va passer en veille.",
+                "uk": "Компонент bluetooth незабаром перейде в режим сну.",
+                "ar-SA": "مكوّن bluetooth على وشك الدخول في وضع السكون.",
+                "zh": "bluetooth 组件即将进入休眠模式。"
+              },
               "androidTranslationId": "bluetooth_reconnect",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Sleep_Title"
             },
@@ -1702,7 +2962,16 @@
               "sourceText": "Please try stepping on the pedal or tapping the screen to keep the bluetooth enabled. Once the bluetooth enters sleep mode, it will no longer be able to continue syncing device data",
               "reviewedSourceText": "Step on the pedal or tap the screen to keep bluetooth enabled. Once bluetooth enters sleep mode, it can no longer sync device data.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เหยียบแป้นหรือแตะหน้าจอเพื่อให้ bluetooth ทำงานต่อ เมื่อ bluetooth เข้าสู่โหมดสลีปแล้ว จะไม่สามารถซิงค์ข้อมูลอุปกรณ์ได้",
+                "ms": "Kayuh pedal atau ketik skrin untuk mengekalkan bluetooth aktif. Setelah bluetooth memasuki mod tidur, data peranti tidak lagi dapat disegerakkan.",
+                "de": "Tritt in die Pedale oder tippe auf den Bildschirm, damit bluetooth aktiviert bleibt. Sobald bluetooth im Ruhemodus ist, können keine Gerätedaten mehr synchronisiert werden.",
+                "tr": "bluetooth bağlantısını etkin tutmak için pedala basın veya ekrana dokunun. bluetooth uyku moduna geçtiğinde cihaz verileri artık eşitlenemez.",
+                "fr": "Pédalez ou touchez l’écran pour maintenir bluetooth activé. Une fois bluetooth en veille, les données de l’appareil ne pourront plus être synchronisées.",
+                "uk": "Натисніть на педаль або торкніться екрана, щоб bluetooth залишався активним. Після переходу bluetooth у режим сну дані пристрою більше не синхронізуватимуться.",
+                "ar-SA": "اضغط على الدواسة أو المس الشاشة لإبقاء bluetooth مفعّلًا. بعد دخول bluetooth في وضع السكون، لن يعود بإمكانه مزامنة بيانات الجهاز.",
+                "zh": "请踩动踏板或点击屏幕以保持 bluetooth 启用。bluetooth 进入休眠模式后将无法继续同步设备数据。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Sleep_Content"
             },
@@ -1710,7 +2979,16 @@
               "sourceText": "Bluetooth connection failed. Please try to reconnect",
               "reviewedSourceText": "Bluetooth connection failed. Please try reconnecting.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เชื่อมต่อ Bluetooth ไม่สำเร็จ โปรดลองเชื่อมต่อใหม่",
+                "ms": "Sambungan Bluetooth gagal. Cuba sambungkan semula.",
+                "de": "Bluetooth-Verbindung fehlgeschlagen. Versuche erneut, eine Verbindung herzustellen.",
+                "tr": "Bluetooth bağlantısı başarısız oldu. Lütfen yeniden bağlanmayı deneyin.",
+                "fr": "Échec de la connexion Bluetooth. Essayez de vous reconnecter.",
+                "uk": "Не вдалося підключитися через Bluetooth. Спробуйте підключитися знову.",
+                "ar-SA": "فشل اتصال Bluetooth. يُرجى محاولة إعادة الاتصال.",
+                "zh": "Bluetooth 连接失败，请尝试重新连接。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Fail"
             },
@@ -1718,7 +2996,16 @@
               "sourceText": "Bluetooth has been disconnected. Please try to reconnect",
               "reviewedSourceText": "Bluetooth has been disconnected. Please try reconnecting.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "Bluetooth ถูกตัดการเชื่อมต่อ โปรดลองเชื่อมต่อใหม่",
+                "ms": "Bluetooth telah terputus. Cuba sambungkan semula.",
+                "de": "Bluetooth wurde getrennt. Versuche erneut, eine Verbindung herzustellen.",
+                "tr": "Bluetooth bağlantısı kesildi. Lütfen yeniden bağlanmayı deneyin.",
+                "fr": "Bluetooth a été déconnecté. Essayez de vous reconnecter.",
+                "uk": "З’єднання Bluetooth розірвано. Спробуйте підключитися знову.",
+                "ar-SA": "تم قطع اتصال Bluetooth. يُرجى محاولة إعادة الاتصال.",
+                "zh": "Bluetooth 已断开，请尝试重新连接。"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Lost"
             },
@@ -1726,14 +3013,32 @@
               "sourceText": "Bluetooth connecting",
               "reviewedSourceText": "Connecting to Bluetooth…",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "กำลังเชื่อมต่อ Bluetooth…",
+                "ms": "Sedang menyambung ke Bluetooth…",
+                "de": "Verbindung mit Bluetooth wird hergestellt…",
+                "tr": "Bluetooth'a bağlanılıyor…",
+                "fr": "Connexion à Bluetooth…",
+                "uk": "Підключення до Bluetooth…",
+                "ar-SA": "جارٍ الاتصال بـ Bluetooth…",
+                "zh": "正在连接 Bluetooth…"
+              },
               "androidTranslationId": "bluetooth_connecting",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Ing"
             },
             {
               "sourceText": "Bluetooth not connected",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ยังไม่ได้เชื่อมต่อ Bluetooth",
+                "ms": "Bluetooth tidak disambungkan",
+                "de": "Bluetooth nicht verbunden",
+                "tr": "Bluetooth bağlı değil",
+                "fr": "Bluetooth non connecté",
+                "uk": "Bluetooth не підключено",
+                "ar-SA": "Bluetooth غير متصل",
+                "zh": "Bluetooth 未连接"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Over"
             },
@@ -1741,14 +3046,32 @@
               "sourceText": "Bluetooth connection successful",
               "reviewedSourceText": "Bluetooth connected successfully",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เชื่อมต่อ Bluetooth สำเร็จ",
+                "ms": "Bluetooth berjaya disambungkan",
+                "de": "Bluetooth erfolgreich verbunden",
+                "tr": "Bluetooth bağlantısı başarılı",
+                "fr": "Bluetooth connecté",
+                "uk": "Bluetooth успішно підключено",
+                "ar-SA": "تم اتصال Bluetooth بنجاح",
+                "zh": "Bluetooth 连接成功"
+              },
               "androidTranslationId": "bluetooth_connection_successful",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Success"
             },
             {
               "sourceText": "Treadmill not connected",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ยังไม่ได้เชื่อมต่อลู่วิ่ง",
+                "ms": "Treadmil tidak disambungkan",
+                "de": "Laufband nicht verbunden",
+                "tr": "Koşu bandı bağlı değil",
+                "fr": "Tapis de course non connecté",
+                "uk": "Бігову доріжку не підключено",
+                "ar-SA": "جهاز المشي غير متصل",
+                "zh": "跑步机未连接"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Fail_Treadmill"
             }
@@ -1770,28 +3093,64 @@
           "y": 0.5866033880912898,
           "sourceText": "Speed",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ความเร็ว",
+            "ms": "Kelajuan",
+            "de": "Geschwindigkeit",
+            "tr": "Hız",
+            "fr": "Vitesse",
+            "uk": "Швидкість",
+            "ar-SA": "السرعة",
+            "zh": "速度"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Flag_Speed",
           "subItems": [
             {
               "sourceText": "Incline",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ความชัน",
+                "ms": "Kecondongan",
+                "de": "Steigung",
+                "tr": "Eğim",
+                "fr": "Inclinaison",
+                "uk": "Нахил",
+                "ar-SA": "الميل",
+                "zh": "坡度"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Incline"
             },
             {
               "sourceText": "Resistance",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แรงต้าน",
+                "ms": "Rintangan",
+                "de": "Widerstand",
+                "tr": "Direnç",
+                "fr": "Résistance",
+                "uk": "Опір",
+                "ar-SA": "المقاومة",
+                "zh": "阻力"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Resistance"
             },
             {
               "sourceText": "Count",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จำนวน",
+                "ms": "Kiraan",
+                "de": "Anzahl",
+                "tr": "Sayı",
+                "fr": "Nombre",
+                "uk": "Кількість",
+                "ar-SA": "العدد",
+                "zh": "次数"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Unit_Count"
             }
@@ -1813,21 +3172,48 @@
           "y": 0.6629957763383327,
           "sourceText": "Speed",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ความเร็ว",
+            "ms": "Kelajuan",
+            "de": "Geschwindigkeit",
+            "tr": "Hız",
+            "fr": "Vitesse",
+            "uk": "Швидкість",
+            "ar-SA": "السرعة",
+            "zh": "速度"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Flag_Speed_Adjust",
           "subItems": [
             {
               "sourceText": "Incline",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ความชัน",
+                "ms": "Kecondongan",
+                "de": "Steigung",
+                "tr": "Eğim",
+                "fr": "Inclinaison",
+                "uk": "Нахил",
+                "ar-SA": "الميل",
+                "zh": "坡度"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Incline_Adjust"
             },
             {
               "sourceText": "Resistance",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แรงต้าน",
+                "ms": "Rintangan",
+                "de": "Widerstand",
+                "tr": "Direnç",
+                "fr": "Résistance",
+                "uk": "Опір",
+                "ar-SA": "المقاومة",
+                "zh": "阻力"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Flag_Resistance_Adjust"
             }
@@ -1849,49 +3235,112 @@
           "y": 0.23925989720285487,
           "sourceText": "Distance (km)",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ระยะทาง (km)",
+            "ms": "Jarak (km)",
+            "de": "Distanz (km)",
+            "tr": "Mesafe (km)",
+            "fr": "Distance (km)",
+            "uk": "Відстань (km)",
+            "ar-SA": "المسافة (km)",
+            "zh": "距离 (km)"
+          },
           "androidTranslationId": "sport_unit_distance_km",
           "iosTranslationId": "Unit_Distance_km",
           "subItems": [
             {
               "sourceText": "Duration",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ระยะเวลา",
+                "ms": "Tempoh",
+                "de": "Dauer",
+                "tr": "Süre",
+                "fr": "Durée",
+                "uk": "Тривалість",
+                "ar-SA": "المدة",
+                "zh": "时长"
+              },
               "androidTranslationId": "sport_unit_duration",
               "iosTranslationId": "Flag_Duration"
             },
             {
               "sourceText": "Kcal",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "Kcal",
+                "ms": "Kcal",
+                "de": "Kcal",
+                "tr": "Kcal",
+                "fr": "Kcal",
+                "uk": "Kcal",
+                "ar-SA": "Kcal",
+                "zh": "Kcal"
+              },
               "androidTranslationId": "sport_unit_kcal",
               "iosTranslationId": "Unit_Kcal"
             },
             {
               "sourceText": "Pace",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เพซ",
+                "ms": "Rentak",
+                "de": "Tempo",
+                "tr": "Tempo",
+                "fr": "Allure",
+                "uk": "Темп",
+                "ar-SA": "الوتيرة",
+                "zh": "配速"
+              },
               "androidTranslationId": "sport_unit_pace",
               "iosTranslationId": "Unit_Pace"
             },
             {
               "sourceText": "Heart Rate",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "อัตราการเต้นของหัวใจ",
+                "ms": "Kadar denyutan jantung",
+                "de": "Herzfrequenz",
+                "tr": "Kalp atış hızı",
+                "fr": "Fréquence cardiaque",
+                "uk": "Частота серцевих скорочень",
+                "ar-SA": "معدل ضربات القلب",
+                "zh": "心率"
+              },
               "androidTranslationId": "sport_unit_heart_rate",
               "iosTranslationId": "Unit_Heart_Rate"
             },
             {
               "sourceText": "RPM",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "RPM",
+                "ms": "RPM",
+                "de": "RPM",
+                "tr": "RPM",
+                "fr": "RPM",
+                "uk": "RPM",
+                "ar-SA": "RPM",
+                "zh": "RPM"
+              },
               "androidTranslationId": "sport_unit_rpm",
               "iosTranslationId": "Unit_RPM"
             },
             {
               "sourceText": "SPM",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "SPM",
+                "ms": "SPM",
+                "de": "SPM",
+                "tr": "SPM",
+                "fr": "SPM",
+                "uk": "SPM",
+                "ar-SA": "SPM",
+                "zh": "SPM"
+              },
               "androidTranslationId": "sport_unit_spm",
               "iosTranslationId": "Unit_SPM"
             },
@@ -1899,42 +3348,96 @@
               "sourceText": "times",
               "reviewedSourceText": "Times",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ครั้ง",
+                "ms": "Kali",
+                "de": "Mal",
+                "tr": "Kez",
+                "fr": "Fois",
+                "uk": "Рази",
+                "ar-SA": "مرات",
+                "zh": "次"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Unit_times"
             },
             {
               "sourceText": "s",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "s",
+                "ms": "s",
+                "de": "s",
+                "tr": "s",
+                "fr": "s",
+                "uk": "s",
+                "ar-SA": "s",
+                "zh": "s"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Unit_s"
             },
             {
               "sourceText": "Count",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จำนวน",
+                "ms": "Kiraan",
+                "de": "Anzahl",
+                "tr": "Sayı",
+                "fr": "Nombre",
+                "uk": "Кількість",
+                "ar-SA": "العدد",
+                "zh": "次数"
+              },
               "androidTranslationId": "sport_unit_count",
               "iosTranslationId": "Unit_Count"
             },
             {
               "sourceText": "rpm time/min",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "rpm รอบ/min",
+                "ms": "rpm putaran/min",
+                "de": "rpm Umdrehungen/min",
+                "tr": "rpm devir/min",
+                "fr": "rpm tr/min",
+                "uk": "rpm об/min",
+                "ar-SA": "rpm دورة/min",
+                "zh": "rpm 转/min"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Unit_RPM_T/M"
             },
             {
               "sourceText": "Max consecutive jump count",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จำนวนกระโดดต่อเนื่องสูงสุด",
+                "ms": "Bilangan lompatan berturut-turut maksimum",
+                "de": "Maximale Anzahl Sprünge in Folge",
+                "tr": "Maksimum kesintisiz atlama sayısı",
+                "fr": "Nombre maximal de sauts consécutifs",
+                "uk": "Максимальна кількість послідовних стрибків",
+                "ar-SA": "الحد الأقصى لعدد القفزات المتتالية",
+                "zh": "最大连续跳跃次数"
+              },
               "androidTranslationId": "sport_max_consecutive_jump_count",
               "iosTranslationId": "Unit_Max_Consecutive_Count"
             },
             {
               "sourceText": "Number of interruptions",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จำนวนครั้งที่หยุด",
+                "ms": "Bilangan gangguan",
+                "de": "Anzahl der Unterbrechungen",
+                "tr": "Kesinti sayısı",
+                "fr": "Nombre d’interruptions",
+                "uk": "Кількість переривань",
+                "ar-SA": "عدد مرات التوقف",
+                "zh": "中断次数"
+              },
               "androidTranslationId": "sport_unit_interruptions",
               "iosTranslationId": "Unit_Interruptions_Count"
             }
@@ -1956,7 +3459,16 @@
           "y": 0.9111418596340112,
           "sourceText": "Let’s Go",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไปกันเลย",
+            "ms": "Mari Mulakan",
+            "de": "Los geht’s",
+            "tr": "Haydi Başlayalım",
+            "fr": "C’est parti",
+            "uk": "Уперед",
+            "ar-SA": "هيا بنا",
+            "zh": "出发"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Free_Exercise_Page_Bottom_Start",
           "subItems": []
@@ -1967,7 +3479,16 @@
           "y": 0.07188281758286065,
           "sourceText": "Free exercise",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "การฝึกอิสระ",
+            "ms": "Latihan bebas",
+            "de": "Freies Training",
+            "tr": "Serbest antrenman",
+            "fr": "Entraînement libre",
+            "uk": "Вільне тренування",
+            "ar-SA": "تمرين حر",
+            "zh": "自由训练"
+          },
           "androidTranslationId": "free_exercise",
           "iosTranslationId": "Free_Exercise_Page_Title",
           "subItems": []
@@ -1988,7 +3509,16 @@
           "y": 0.0358566467208533,
           "sourceText": "Running",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "การวิ่ง",
+            "ms": "Larian",
+            "de": "Laufen",
+            "tr": "Koşu",
+            "fr": "Course",
+            "uk": "Біг",
+            "ar-SA": "الجري",
+            "zh": "跑步"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Home_Page_Enjoy_Run_Segment_Title_Running",
           "subItems": []
@@ -1999,7 +3529,16 @@
           "y": 0.036067406463909685,
           "sourceText": "Cycling",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "การปั่นจักรยาน",
+            "ms": "Berbasikal",
+            "de": "Radfahren",
+            "tr": "Bisiklet",
+            "fr": "Cyclisme",
+            "uk": "Велотренування",
+            "ar-SA": "ركوب الدراجة",
+            "zh": "骑行"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Home_Page_Enjoy_Run_Segment_Title_Cycling",
           "subItems": []
@@ -2010,14 +3549,32 @@
           "y": 0.038115441358392364,
           "sourceText": "Cross Training",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "การฝึกแบบครอสเทรนนิง",
+            "ms": "Latihan silang",
+            "de": "Cross-Training",
+            "tr": "Çapraz Antrenman",
+            "fr": "Entraînement croisé",
+            "uk": "Крос-тренінг",
+            "ar-SA": "التدريب المتقاطع",
+            "zh": "交叉训练"
+          },
           "androidTranslationId": "mode_scene_tab_cross_training",
           "iosTranslationId": "Home_Page_Enjoy_Run_Segment_Title_Cross_Training",
           "subItems": [
             {
               "sourceText": "Rowing",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "การพายเรือ",
+                "ms": "Mendayung",
+                "de": "Rudern",
+                "tr": "Kürek",
+                "fr": "Rameur",
+                "uk": "Веслування",
+                "ar-SA": "التجديف",
+                "zh": "划船"
+              },
               "androidTranslationId": "mode_scene_tab_rowing",
               "iosTranslationId": "Home_Page_Enjoy_Run_Segment_Title_Rowing"
             }
@@ -2029,42 +3586,96 @@
           "y": 0.3495541973261003,
           "sourceText": "Duration",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ระยะเวลา",
+            "ms": "Tempoh",
+            "de": "Dauer",
+            "tr": "Süre",
+            "fr": "Durée",
+            "uk": "Тривалість",
+            "ar-SA": "المدة",
+            "zh": "时长"
+          },
           "androidTranslationId": "sport_unit_duration",
           "iosTranslationId": "Home_Page_Enjoy_Run_List_Duration",
           "subItems": [
             {
               "sourceText": "Distance",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ระยะทาง",
+                "ms": "Jarak",
+                "de": "Distanz",
+                "tr": "Mesafe",
+                "fr": "Distance",
+                "uk": "Відстань",
+                "ar-SA": "المسافة",
+                "zh": "距离"
+              },
               "androidTranslationId": "mode_distance",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Distance"
             },
             {
               "sourceText": "Consumption",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แคลอรีที่เผาผลาญ",
+                "ms": "Kalori dibakar",
+                "de": "Kalorienverbrauch",
+                "tr": "Yakılan kalori",
+                "fr": "Calories brûlées",
+                "uk": "Спалені калорії",
+                "ar-SA": "السعرات الحرارية المحروقة",
+                "zh": "消耗热量"
+              },
               "androidTranslationId": "mode_consumption",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Kcal"
             },
             {
               "sourceText": "Max speed",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ความเร็วสูงสุด",
+                "ms": "Kelajuan maksimum",
+                "de": "Maximale Geschwindigkeit",
+                "tr": "Maksimum hız",
+                "fr": "Vitesse maximale",
+                "uk": "Максимальна швидкість",
+                "ar-SA": "السرعة القصوى",
+                "zh": "最大速度"
+              },
               "androidTranslationId": "mode_max_speed",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Speed"
             },
             {
               "sourceText": "Max resistance",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แรงต้านสูงสุด",
+                "ms": "Rintangan maksimum",
+                "de": "Maximaler Widerstand",
+                "tr": "Maksimum direnç",
+                "fr": "Résistance maximale",
+                "uk": "Максимальний опір",
+                "ar-SA": "الحد الأقصى للمقاومة",
+                "zh": "最大阻力"
+              },
               "androidTranslationId": "mode_max_resistance",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Resis"
             },
             {
               "sourceText": "Total length",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ระยะเวลารวม",
+                "ms": "Jumlah tempoh",
+                "de": "Gesamtdauer",
+                "tr": "Toplam süre",
+                "fr": "Durée totale",
+                "uk": "Загальна тривалість",
+                "ar-SA": "المدة الإجمالية",
+                "zh": "总时长"
+              },
               "androidTranslationId": "total_length",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_How_Long"
             }
@@ -2076,42 +3687,96 @@
           "y": 0.4343712487056603,
           "sourceText": "min",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "min",
+            "ms": "min",
+            "de": "min",
+            "tr": "min",
+            "fr": "min",
+            "uk": "min",
+            "ar-SA": "min",
+            "zh": "min"
+          },
           "androidTranslationId": "mode_min",
           "iosTranslationId": "Home_Page_Enjoy_Run_List_Duration_Unit",
           "subItems": [
             {
               "sourceText": "km",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "km",
+                "ms": "km",
+                "de": "km",
+                "tr": "km",
+                "fr": "km",
+                "uk": "km",
+                "ar-SA": "km",
+                "zh": "km"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Distance_Unit"
             },
             {
               "sourceText": "kcal",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "kcal",
+                "ms": "kcal",
+                "de": "kcal",
+                "tr": "kcal",
+                "fr": "kcal",
+                "uk": "kcal",
+                "ar-SA": "kcal",
+                "zh": "kcal"
+              },
               "androidTranslationId": "kcal_lowercase",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Kcal_Unit"
             },
             {
               "sourceText": "km/h",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "km/h",
+                "ms": "km/h",
+                "de": "km/h",
+                "tr": "km/h",
+                "fr": "km/h",
+                "uk": "km/h",
+                "ar-SA": "km/h",
+                "zh": "km/h"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Speed_Unit"
             },
             {
               "sourceText": "level",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ระดับ",
+                "ms": "tahap",
+                "de": "Stufe",
+                "tr": "seviye",
+                "fr": "niveau",
+                "uk": "рівень",
+                "ar-SA": "المستوى",
+                "zh": "等级"
+              },
               "androidTranslationId": "mode_level",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Resis_Unit"
             },
             {
               "sourceText": "KM",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "KM",
+                "ms": "KM",
+                "de": "KM",
+                "tr": "KM",
+                "fr": "KM",
+                "uk": "KM",
+                "ar-SA": "KM",
+                "zh": "KM"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_How_Long_Unit"
             }
@@ -2123,7 +3788,16 @@
           "y": 0.6877686041290583,
           "sourceText": "Ratings",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คะแนน",
+            "ms": "Penilaian",
+            "de": "Bewertungen",
+            "tr": "Değerlendirmeler",
+            "fr": "Évaluations",
+            "uk": "Оцінки",
+            "ar-SA": "التقييمات",
+            "zh": "评分"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Home_Page_Enjoy_Run_Com_Person_Count",
           "subItems": []
@@ -2173,7 +3847,16 @@
           "y": 0.5735230781918647,
           "sourceText": "Join Now",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เข้าร่วมเลย",
+            "ms": "Sertai sekarang",
+            "de": "Jetzt beitreten",
+            "tr": "Hemen katıl",
+            "fr": "Rejoindre",
+            "uk": "Приєднатися",
+            "ar-SA": "انضم الآن",
+            "zh": "立即加入"
+          },
           "androidTranslationId": "home_tab_join_now",
           "iosTranslationId": "Home_Page_Card_Join_Now",
           "subItems": []
@@ -2194,7 +3877,16 @@
           "y": 0.9365658990735735,
           "sourceText": "Home",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "หน้าหลัก",
+            "ms": "Utama",
+            "de": "Start",
+            "tr": "Ana Sayfa",
+            "fr": "Accueil",
+            "uk": "Головна",
+            "ar-SA": "الرئيسية",
+            "zh": "首页"
+          },
           "androidTranslationId": "home_tab_home",
           "iosTranslationId": "Home_Page_Tab_Title",
           "subItems": []
@@ -2205,7 +3897,16 @@
           "y": 0.9311227996224651,
           "sourceText": "Plan",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แผน",
+            "ms": "Pelan",
+            "de": "Plan",
+            "tr": "Plan",
+            "fr": "Programme",
+            "uk": "План",
+            "ar-SA": "الخطة",
+            "zh": "计划"
+          },
           "androidTranslationId": "home_tab_plan",
           "iosTranslationId": "Plan_Page_Tab_Title",
           "subItems": []
@@ -2217,7 +3918,16 @@
           "sourceText": "Course",
           "reviewedSourceText": "Classes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คลาส",
+            "ms": "Kelas",
+            "de": "Kurse",
+            "tr": "Dersler",
+            "fr": "Cours",
+            "uk": "Заняття",
+            "ar-SA": "الحصص",
+            "zh": "课程"
+          },
           "androidTranslationId": "home_tab_course",
           "iosTranslationId": "Course_Page_Tab_Title",
           "subItems": []
@@ -2228,7 +3938,16 @@
           "y": 0.9242318723712304,
           "sourceText": "Profile",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "โปรไฟล์",
+            "ms": "Profil",
+            "de": "Profil",
+            "tr": "Profil",
+            "fr": "Profil",
+            "uk": "Профіль",
+            "ar-SA": "الملف الشخصي",
+            "zh": "我的"
+          },
           "androidTranslationId": "home_tab_my",
           "iosTranslationId": "Mine_Page_Tab_Title",
           "subItems": []
@@ -2249,7 +3968,16 @@
           "y": 0.29599831392205556,
           "sourceText": "All courses",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คอร์สทั้งหมด",
+            "ms": "Semua kursus",
+            "de": "Alle Kurse",
+            "tr": "Tüm kurslar",
+            "fr": "Tous les cours",
+            "uk": "Усі курси",
+            "ar-SA": "جميع الدورات",
+            "zh": "全部课程"
+          },
           "androidTranslationId": "all_courses",
           "iosTranslationId": "Collection_Page_All_Courses",
           "subItems": [
@@ -2257,7 +3985,16 @@
               "sourceText": "All plan",
               "reviewedSourceText": "All plans",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "แผนทั้งหมด",
+                "ms": "Semua pelan",
+                "de": "Alle Pläne",
+                "tr": "Tüm planlar",
+                "fr": "Tous les programmes",
+                "uk": "Усі плани",
+                "ar-SA": "جميع الخطط",
+                "zh": "全部计划"
+              },
               "androidTranslationId": "All_plan",
               "iosTranslationId": "Collection_Page_All_Plan"
             }
@@ -2270,7 +4007,16 @@
           "sourceText": "total",
           "reviewedSourceText": "Total",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "รวม",
+            "ms": "Jumlah",
+            "de": "Gesamt",
+            "tr": "Toplam",
+            "fr": "Total",
+            "uk": "Усього",
+            "ar-SA": "الإجمالي",
+            "zh": "总计"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Collection_Page_All_Total",
           "subItems": []
@@ -2282,7 +4028,16 @@
           "sourceText": "class",
           "reviewedSourceText": "classes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คลาส",
+            "ms": "kelas",
+            "de": "Kurse",
+            "tr": "ders",
+            "fr": "cours",
+            "uk": "заняття",
+            "ar-SA": "حصص",
+            "zh": "节课"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Collection_Page_All_Class",
           "subItems": []
@@ -2325,7 +4080,16 @@
           "y": 0.7207321259977685,
           "sourceText": "Valuable member users, you can watch this paid course in its entirety",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "สมาชิกสามารถรับชมคลาสแบบชำระเงินนี้ได้เต็มรูปแบบ",
+            "ms": "Ahli boleh menonton kelas berbayar ini sepenuhnya",
+            "de": "Als Mitglied kannst du diesen kostenpflichtigen Kurs vollständig ansehen",
+            "tr": "Üyeler bu ücretli dersi baştan sona izleyebilir",
+            "fr": "Les membres peuvent regarder l’intégralité de ce cours payant",
+            "uk": "Учасники можуть повністю переглянути це платне заняття",
+            "ar-SA": "يمكن للأعضاء مشاهدة هذه الحصة المدفوعة بالكامل",
+            "zh": "会员可完整观看本付费课程"
+          },
           "androidTranslationId": "vip_watch_full_paid_course",
           "iosTranslationId": "Live_Page_Try_Tip_Vip_Content",
           "subItems": []
@@ -2336,77 +4100,176 @@
           "y": 0.936850914084628,
           "sourceText": "Duration",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ระยะเวลา",
+            "ms": "Tempoh",
+            "de": "Dauer",
+            "tr": "Süre",
+            "fr": "Durée",
+            "uk": "Тривалість",
+            "ar-SA": "المدة",
+            "zh": "时长"
+          },
           "androidTranslationId": "sport_unit_duration",
           "iosTranslationId": "Flag_Duration",
           "subItems": [
             {
               "sourceText": "KCAL",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "KCAL",
+                "ms": "KCAL",
+                "de": "KCAL",
+                "tr": "KCAL",
+                "fr": "KCAL",
+                "uk": "KCAL",
+                "ar-SA": "KCAL",
+                "zh": "KCAL"
+              },
               "androidTranslationId": "sport_unit_KCAL",
               "iosTranslationId": "Unit_Kcal"
             },
             {
               "sourceText": "Distance (km)",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ระยะทาง (km)",
+                "ms": "Jarak (km)",
+                "de": "Distanz (km)",
+                "tr": "Mesafe (km)",
+                "fr": "Distance (km)",
+                "uk": "Відстань (km)",
+                "ar-SA": "المسافة (km)",
+                "zh": "距离 (km)"
+              },
               "androidTranslationId": "sport_unit_distance_km",
               "iosTranslationId": "Unit_Distance_km"
             },
             {
               "sourceText": "Score",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คะแนน",
+                "ms": "Skor",
+                "de": "Punktzahl",
+                "tr": "Puan",
+                "fr": "Score",
+                "uk": "Бали",
+                "ar-SA": "النتيجة",
+                "zh": "得分"
+              },
               "androidTranslationId": "sport_unit_score",
               "iosTranslationId": "Flag_Score_DF"
             },
             {
               "sourceText": "Cadence",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "รอบขา",
+                "ms": "Kadens",
+                "de": "Trittfrequenz",
+                "tr": "Kadans",
+                "fr": "Cadence",
+                "uk": "Каденс",
+                "ar-SA": "معدل الخطوات",
+                "zh": "踏频"
+              },
               "androidTranslationId": "sport_unit_cadence",
               "iosTranslationId": "Unit_Cadence"
             },
             {
               "sourceText": "Speed km/h",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ความเร็ว km/h",
+                "ms": "Kelajuan km/h",
+                "de": "Geschwindigkeit km/h",
+                "tr": "Hız km/h",
+                "fr": "Vitesse km/h",
+                "uk": "Швидкість km/h",
+                "ar-SA": "السرعة km/h",
+                "zh": "速度 km/h"
+              },
               "androidTranslationId": "sport_unit_speed_km_hour",
               "iosTranslationId": "Unit_Speed_km/h"
             },
             {
               "sourceText": "Power",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "กำลัง",
+                "ms": "Kuasa",
+                "de": "Leistung",
+                "tr": "Güç",
+                "fr": "Puissance",
+                "uk": "Потужність",
+                "ar-SA": "القدرة",
+                "zh": "功率"
+              },
               "androidTranslationId": "sport_unit_power",
               "iosTranslationId": "Live_Page_Bottom_Unit_Power"
             },
             {
               "sourceText": "Step Count",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จำนวนก้าว",
+                "ms": "Bilangan langkah",
+                "de": "Schrittzahl",
+                "tr": "Adım Sayısı",
+                "fr": "Nombre de pas",
+                "uk": "Кількість кроків",
+                "ar-SA": "عدد الخطوات",
+                "zh": "步数"
+              },
               "androidTranslationId": "sport_unit_step_count",
               "iosTranslationId": "Live_Page_Bottom_Unit_Step_Count"
             },
             {
               "sourceText": "SPM",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "SPM",
+                "ms": "SPM",
+                "de": "SPM",
+                "tr": "SPM",
+                "fr": "SPM",
+                "uk": "SPM",
+                "ar-SA": "SPM",
+                "zh": "SPM"
+              },
               "androidTranslationId": "sport_unit_spm",
               "iosTranslationId": "Live_Page_Bottom_Unit_SPM"
             },
             {
               "sourceText": "Count",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จำนวน",
+                "ms": "Kiraan",
+                "de": "Anzahl",
+                "tr": "Sayı",
+                "fr": "Nombre",
+                "uk": "Кількість",
+                "ar-SA": "العدد",
+                "zh": "次数"
+              },
               "androidTranslationId": "sport_unit_count",
               "iosTranslationId": "Live_Page_Bottom_Unit_Count"
             },
             {
               "sourceText": "Number of interruptions",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จำนวนครั้งที่หยุด",
+                "ms": "Bilangan gangguan",
+                "de": "Anzahl der Unterbrechungen",
+                "tr": "Kesinti sayısı",
+                "fr": "Nombre d’interruptions",
+                "uk": "Кількість переривань",
+                "ar-SA": "عدد مرات التوقف",
+                "zh": "中断次数"
+              },
               "androidTranslationId": "sport_unit_interruptions",
               "iosTranslationId": "Live_Page_Bottom_Unit_Break_Count"
             }

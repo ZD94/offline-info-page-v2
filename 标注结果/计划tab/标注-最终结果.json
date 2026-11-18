@@ -26,7 +26,16 @@
           "y": 0.07269896484977698,
           "sourceText": "Today",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "วันนี้",
+            "ms": "Hari ini",
+            "de": "Heute",
+            "tr": "Bugün",
+            "fr": "Aujourd’hui",
+            "uk": "Сьогодні",
+            "ar-SA": "اليوم",
+            "zh": "今天"
+          },
           "androidTranslationId": "plan_tab_today",
           "iosTranslationId": "Plan_Page_Today",
           "subItems": []
@@ -37,7 +46,16 @@
           "y": 0.24167531629590147,
           "sourceText": "Add training",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เพิ่มการฝึก",
+            "ms": "Tambah latihan",
+            "de": "Training hinzufügen",
+            "tr": "Antrenman ekle",
+            "fr": "Ajouter un entraînement",
+            "uk": "Додати тренування",
+            "ar-SA": "إضافة تمرين",
+            "zh": "添加训练"
+          },
           "androidTranslationId": "plan_tab_add_training_desc",
           "iosTranslationId": "Plan_Page_Add_Training",
           "subItems": []
@@ -49,7 +67,16 @@
           "sourceText": "Add training plan, single session course.",
           "reviewedSourceText": "Add a training plan or a single-session class.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เพิ่มแผนการฝึกหรือคลาสแบบครั้งเดียว",
+            "ms": "Tambah pelan latihan atau kelas satu sesi.",
+            "de": "Füge einen Trainingsplan oder einen Einzelkurs hinzu.",
+            "tr": "Bir antrenman planı veya tek seanslık ders ekleyin.",
+            "fr": "Ajoutez un programme d’entraînement ou un cours à la séance.",
+            "uk": "Додайте план тренувань або разове заняття.",
+            "ar-SA": "أضف خطة تدريب أو حصة واحدة.",
+            "zh": "添加训练计划或单次课程。"
+          },
           "androidTranslationId": "plan_tab_add_training_desc",
           "iosTranslationId": "Plan_Page_Add_Training_Sub",
           "subItems": []
@@ -60,7 +87,16 @@
           "y": 0.3709428563413471,
           "sourceText": "Curated Training Plans",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แผนการฝึกที่คัดสรร",
+            "ms": "Pelan Latihan Pilihan",
+            "de": "Ausgewählte Trainingspläne",
+            "tr": "Özenle Seçilmiş Antrenman Planları",
+            "fr": "Programmes d’entraînement sélectionnés",
+            "uk": "Добірні плани тренувань",
+            "ar-SA": "خطط تدريب مختارة",
+            "zh": "精选训练计划"
+          },
           "androidTranslationId": "curated_training_plans",
           "iosTranslationId": "Plan_Page_Selected_Training",
           "subItems": []
@@ -72,7 +108,16 @@
           "sourceText": "all plan",
           "reviewedSourceText": "All plans",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แผนทั้งหมด",
+            "ms": "Semua pelan",
+            "de": "Alle Pläne",
+            "tr": "Tüm planlar",
+            "fr": "Tous les programmes",
+            "uk": "Усі плани",
+            "ar-SA": "جميع الخطط",
+            "zh": "全部计划"
+          },
           "androidTranslationId": "all_plan",
           "iosTranslationId": "Plan_All",
           "subItems": []
@@ -83,7 +128,16 @@
           "y": 0.6034448901730861,
           "sourceText": "Body Stats History",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ประวัติค่าสถิติร่างกาย",
+            "ms": "Sejarah Statistik Badan",
+            "de": "Verlauf der Körperwerte",
+            "tr": "Vücut İstatistik Kayıtları",
+            "fr": "Historique des mensurations",
+            "uk": "Історія показників тіла",
+            "ar-SA": "سجل قياسات الجسم",
+            "zh": "身体数据历史"
+          },
           "androidTranslationId": "body_stats_history",
           "iosTranslationId": "Plan_Page_Body_Management",
           "subItems": []
@@ -94,14 +148,32 @@
           "y": 0.6077229500378714,
           "sourceText": "Track weight",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "บันทึกน้ำหนัก",
+            "ms": "Rekod berat badan",
+            "de": "Gewicht erfassen",
+            "tr": "Kilo takibi",
+            "fr": "Suivre le poids",
+            "uk": "Відстежувати вагу",
+            "ar-SA": "تتبّع الوزن",
+            "zh": "记录体重"
+          },
           "androidTranslationId": "track_weight",
           "iosTranslationId": "Plan_Page_Body_Management_Weight_Track",
           "subItems": [
             {
               "sourceText": "Track waist size",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "บันทึกรอบเอว",
+                "ms": "Rekod ukuran pinggang",
+                "de": "Taillenumfang erfassen",
+                "tr": "Bel çevresini takip et",
+                "fr": "Suivre le tour de taille",
+                "uk": "Відстежувати обхват талії",
+                "ar-SA": "تتبّع محيط الخصر",
+                "zh": "记录腰围"
+              },
               "androidTranslationId": "track_waist_size",
               "iosTranslationId": "Plan_Page_Body_Management_Waist_Track"
             }
@@ -113,7 +185,16 @@
           "y": 0.679538250063119,
           "sourceText": "Weight",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "น้ำหนัก",
+            "ms": "Berat",
+            "de": "Gewicht",
+            "tr": "Kilo",
+            "fr": "Poids",
+            "uk": "Вага",
+            "ar-SA": "الوزن",
+            "zh": "体重"
+          },
           "androidTranslationId": "plan_tab_weight",
           "iosTranslationId": "Plan_Page_Body_Management_Weight",
           "subItems": []
@@ -124,7 +205,16 @@
           "y": 0.6950093977052767,
           "sourceText": "Waist",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "รอบเอว",
+            "ms": "Ukuran pinggang",
+            "de": "Taillenumfang",
+            "tr": "Bel çevresi",
+            "fr": "Tour de taille",
+            "uk": "Обхват талії",
+            "ar-SA": "محيط الخصر",
+            "zh": "腰围"
+          },
           "androidTranslationId": "plan_tab_waist",
           "iosTranslationId": "Plan_Page_Body_Management_Waist",
           "subItems": []
@@ -136,7 +226,16 @@
           "sourceText": "set a target weight",
           "reviewedSourceText": "Set a target weight",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ตั้งน้ำหนักเป้าหมาย",
+            "ms": "Tetapkan sasaran berat badan",
+            "de": "Zielgewicht festlegen",
+            "tr": "Hedef kilo belirleyin",
+            "fr": "Définir un poids cible",
+            "uk": "Установити цільову вагу",
+            "ar-SA": "تحديد الوزن المستهدف",
+            "zh": "设置目标体重"
+          },
           "androidTranslationId": "set_a_target_weight",
           "iosTranslationId": "Plan_Page_Body_Management_Weight_Target_Set",
           "subItems": [
@@ -144,21 +243,48 @@
               "sourceText": "set a target waist size",
               "reviewedSourceText": "Set a target waist size",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ตั้งรอบเอวเป้าหมาย",
+                "ms": "Tetapkan sasaran ukuran pinggang",
+                "de": "Ziel-Taillenumfang festlegen",
+                "tr": "Hedef bel çevresini belirleyin",
+                "fr": "Définir un tour de taille cible",
+                "uk": "Установити цільовий обхват талії",
+                "ar-SA": "تحديد محيط الخصر المستهدف",
+                "zh": "设置目标腰围"
+              },
               "androidTranslationId": "set_a_target_waist_size",
               "iosTranslationId": "Plan_Page_Body_Management_Waist_Target_Set"
             },
             {
               "sourceText": "target weight",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "น้ำหนักเป้าหมาย",
+                "ms": "sasaran berat badan",
+                "de": "Zielgewicht",
+                "tr": "hedef kilo",
+                "fr": "poids cible",
+                "uk": "цільова вага",
+                "ar-SA": "الوزن المستهدف",
+                "zh": "目标体重"
+              },
               "androidTranslationId": "target_weight",
               "iosTranslationId": "Plan_Page_Body_Management_Weight_Target"
             },
             {
               "sourceText": "target waist size",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "รอบเอวเป้าหมาย",
+                "ms": "sasaran ukuran pinggang",
+                "de": "Ziel-Taillenumfang",
+                "tr": "hedef bel çevresi",
+                "fr": "tour de taille cible",
+                "uk": "цільовий обхват талії",
+                "ar-SA": "محيط الخصر المستهدف",
+                "zh": "目标腰围"
+              },
               "androidTranslationId": "target_waist_size",
               "iosTranslationId": "Plan_Page_Body_Management_Waist_Target"
             }
@@ -171,7 +297,16 @@
           "sourceText": "Waist size is an important indicator to measure training effectiveness. Please record it quickly.",
           "reviewedSourceText": "Waist size is an important indicator of training effectiveness. Please record it promptly.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "รอบเอวเป็นตัวชี้วัดสำคัญของประสิทธิผลการฝึก โปรดบันทึกให้เป็นปัจจุบัน",
+            "ms": "Ukuran pinggang ialah petunjuk penting keberkesanan latihan. Sila rekodkannya dengan segera.",
+            "de": "Der Taillenumfang ist ein wichtiger Indikator für den Trainingserfolg. Bitte erfasse ihn zeitnah.",
+            "tr": "Bel çevresi, antrenman etkinliğinin önemli bir göstergesidir. Lütfen düzenli olarak kaydedin.",
+            "fr": "Le tour de taille est un indicateur important de l’efficacité de l’entraînement. Pensez à le renseigner régulièrement.",
+            "uk": "Обхват талії — важливий показник ефективності тренувань. Своєчасно записуйте його.",
+            "ar-SA": "يُعد محيط الخصر مؤشرًا مهمًا على فعالية التدريب. يُرجى تسجيله بانتظام.",
+            "zh": "腰围是衡量训练效果的重要指标，请及时记录。"
+          },
           "androidTranslationId": "waist_tips",
           "iosTranslationId": "Plan_Page_Body_Management_Waist_Tip",
           "subItems": []
@@ -182,7 +317,16 @@
           "y": 0.9766740539175808,
           "sourceText": "Plan",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แผน",
+            "ms": "Pelan",
+            "de": "Plan",
+            "tr": "Plan",
+            "fr": "Programme",
+            "uk": "План",
+            "ar-SA": "الخطة",
+            "zh": "计划"
+          },
           "androidTranslationId": "home_tab_plan",
           "iosTranslationId": "Plan",
           "subItems": []
@@ -203,84 +347,192 @@
           "y": 0.11219737986366314,
           "sourceText": "Jan.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ม.ค.",
+            "ms": "Jan",
+            "de": "Jan.",
+            "tr": "Oca",
+            "fr": "janv.",
+            "uk": "січ.",
+            "ar-SA": "يناير",
+            "zh": "一月"
+          },
           "androidTranslationId": "short_1month",
           "iosTranslationId": "",
           "subItems": [
             {
               "sourceText": "short_2month",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "short_2month",
+                "ms": "short_2month",
+                "de": "short_2month",
+                "tr": "short_2month",
+                "fr": "short_2month",
+                "uk": "short_2month",
+                "ar-SA": "short_2month",
+                "zh": "short_2month"
+              },
               "androidTranslationId": "Feb.",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Mar.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "มี.ค.",
+                "ms": "Mac",
+                "de": "März",
+                "tr": "Mar",
+                "fr": "mars",
+                "uk": "бер.",
+                "ar-SA": "مارس",
+                "zh": "三月"
+              },
               "androidTranslationId": "short_3month",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Apr.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เม.ย.",
+                "ms": "Apr",
+                "de": "Apr.",
+                "tr": "Nis",
+                "fr": "avr.",
+                "uk": "квіт.",
+                "ar-SA": "أبريل",
+                "zh": "四月"
+              },
               "androidTranslationId": "short_4month",
               "iosTranslationId": ""
             },
             {
               "sourceText": "May",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "พ.ค.",
+                "ms": "Mei",
+                "de": "Mai",
+                "tr": "May",
+                "fr": "mai",
+                "uk": "трав.",
+                "ar-SA": "مايو",
+                "zh": "五月"
+              },
               "androidTranslationId": "short_5month",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Jun.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "มิ.ย.",
+                "ms": "Jun",
+                "de": "Juni",
+                "tr": "Haz",
+                "fr": "juin",
+                "uk": "черв.",
+                "ar-SA": "يونيو",
+                "zh": "六月"
+              },
               "androidTranslationId": "short_6month",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Jul.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ก.ค.",
+                "ms": "Jul",
+                "de": "Juli",
+                "tr": "Tem",
+                "fr": "juil.",
+                "uk": "лип.",
+                "ar-SA": "يوليو",
+                "zh": "七月"
+              },
               "androidTranslationId": "short_7month",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Aug.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ส.ค.",
+                "ms": "Ogo",
+                "de": "Aug.",
+                "tr": "Ağu",
+                "fr": "août",
+                "uk": "серп.",
+                "ar-SA": "أغسطس",
+                "zh": "八月"
+              },
               "androidTranslationId": "short_8month",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Sep.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ก.ย.",
+                "ms": "Sep",
+                "de": "Sept.",
+                "tr": "Eyl",
+                "fr": "sept.",
+                "uk": "вер.",
+                "ar-SA": "سبتمبر",
+                "zh": "九月"
+              },
               "androidTranslationId": "short_9month",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Oct.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ต.ค.",
+                "ms": "Okt",
+                "de": "Okt.",
+                "tr": "Eki",
+                "fr": "oct.",
+                "uk": "жовт.",
+                "ar-SA": "أكتوبر",
+                "zh": "十月"
+              },
               "androidTranslationId": "short_10month",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Nov.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "พ.ย.",
+                "ms": "Nov",
+                "de": "Nov.",
+                "tr": "Kas",
+                "fr": "nov.",
+                "uk": "лист.",
+                "ar-SA": "نوفمبر",
+                "zh": "十一月"
+              },
               "androidTranslationId": "short_11month",
               "iosTranslationId": ""
             },
             {
               "sourceText": "Dec.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ธ.ค.",
+                "ms": "Dis",
+                "de": "Dez.",
+                "tr": "Ara",
+                "fr": "déc.",
+                "uk": "груд.",
+                "ar-SA": "ديسمبر",
+                "zh": "十二月"
+              },
               "androidTranslationId": "short_12month",
               "iosTranslationId": ""
             }
@@ -293,7 +545,16 @@
           "sourceText": "back to today",
           "reviewedSourceText": "Back to today",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "กลับไปยังวันนี้",
+            "ms": "Kembali ke hari ini",
+            "de": "Zurück zu heute",
+            "tr": "Bugüne dön",
+            "fr": "Revenir à aujourd’hui",
+            "uk": "Повернутися до сьогодні",
+            "ar-SA": "العودة إلى اليوم",
+            "zh": "回到今天"
+          },
           "androidTranslationId": "plan_tab_back_to_today",
           "iosTranslationId": "Plan_Page_Today_Back",
           "subItems": []
@@ -314,7 +575,16 @@
           "y": 0.8483042051224507,
           "sourceText": "Select the type of training",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เลือกประเภทการฝึก",
+            "ms": "Pilih jenis latihan",
+            "de": "Trainingsart auswählen",
+            "tr": "Antrenman türünü seçin",
+            "fr": "Sélectionner le type d’entraînement",
+            "uk": "Виберіть тип тренування",
+            "ar-SA": "اختر نوع التدريب",
+            "zh": "选择训练类型"
+          },
           "androidTranslationId": "select_training_type",
           "iosTranslationId": "Plan_Page_Add_Popup_Title",
           "subItems": []
@@ -325,7 +595,16 @@
           "y": 0.9526467865458523,
           "sourceText": "Training plan",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แผนการฝึก",
+            "ms": "Pelan latihan",
+            "de": "Trainingsplan",
+            "tr": "Antrenman planı",
+            "fr": "Programme d’entraînement",
+            "uk": "План тренувань",
+            "ar-SA": "خطة التدريب",
+            "zh": "训练计划"
+          },
           "androidTranslationId": "training_plan",
           "iosTranslationId": "Training_Plan_Detail_Page_Title",
           "subItems": []
@@ -337,7 +616,16 @@
           "sourceText": "Add courses",
           "reviewedSourceText": "Add classes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เพิ่มคลาส",
+            "ms": "Tambah kelas",
+            "de": "Kurse hinzufügen",
+            "tr": "Ders ekle",
+            "fr": "Ajouter des cours",
+            "uk": "Додати заняття",
+            "ar-SA": "إضافة حصص",
+            "zh": "添加课程"
+          },
           "androidTranslationId": "add_course",
           "iosTranslationId": "Home_Page_Card_Empty_Add",
           "subItems": []
@@ -358,7 +646,16 @@
           "y": 0.8734395601312873,
           "sourceText": "Confirm",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ยืนยัน",
+            "ms": "Sahkan",
+            "de": "Bestätigen",
+            "tr": "Onayla",
+            "fr": "Confirmer",
+            "uk": "Підтвердити",
+            "ar-SA": "تأكيد",
+            "zh": "确认"
+          },
           "androidTranslationId": "confirm",
           "iosTranslationId": "Alert_Confirm",
           "subItems": []
@@ -372,7 +669,16 @@
           "y": 0.6555109826913906,
           "sourceText": "Set weight",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ตั้งน้ำหนัก",
+            "ms": "Tetapkan berat badan",
+            "de": "Gewicht festlegen",
+            "tr": "Kilo belirle",
+            "fr": "Définir le poids",
+            "uk": "Установити вагу",
+            "ar-SA": "تحديد الوزن",
+            "zh": "设置体重"
+          },
           "androidTranslationId": "set_weight",
           "iosTranslationId": "",
           "note": "设置体重/目标体重的时候，有个标题",
@@ -392,14 +698,32 @@
           "y": 0.5763037562768255,
           "sourceText": "Details",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "รายละเอียด",
+            "ms": "Butiran",
+            "de": "Details",
+            "tr": "Ayrıntılar",
+            "fr": "Détails",
+            "uk": "Докладніше",
+            "ar-SA": "التفاصيل",
+            "zh": "详情"
+          },
           "androidTranslationId": "view_details",
           "iosTranslationId": "Plan_Page_View_Plan_Detail",
           "subItems": [
             {
               "sourceText": "Manage",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "จัดการ",
+                "ms": "Urus",
+                "de": "Verwalten",
+                "tr": "Yönet",
+                "fr": "Gérer",
+                "uk": "Керувати",
+                "ar-SA": "إدارة",
+                "zh": "管理"
+              },
               "androidTranslationId": "plan_tab_manage_plan",
               "iosTranslationId": "Plan_Page_Manage_Plan"
             }
@@ -412,7 +736,16 @@
           "sourceText": "total expenditure",
           "reviewedSourceText": "Total calories",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แคลอรีรวม",
+            "ms": "Jumlah kalori",
+            "de": "Gesamtkalorien",
+            "tr": "Toplam kalori",
+            "fr": "Calories totales",
+            "uk": "Загальна кількість калорій",
+            "ar-SA": "إجمالي السعرات الحرارية",
+            "zh": "总消耗热量"
+          },
           "androidTranslationId": "total_expenditure",
           "iosTranslationId": "Plan_Page_Total_Kcal",
           "subItems": []
@@ -424,7 +757,16 @@
           "sourceText": "training duration",
           "reviewedSourceText": "Training duration",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ระยะเวลาการฝึก",
+            "ms": "Tempoh latihan",
+            "de": "Trainingsdauer",
+            "tr": "Antrenman süresi",
+            "fr": "Durée d’entraînement",
+            "uk": "Тривалість тренувань",
+            "ar-SA": "مدة التدريب",
+            "zh": "训练时长"
+          },
           "androidTranslationId": "training_duration",
           "iosTranslationId": "Plan_Page_Total_Duration",
           "subItems": []
@@ -436,7 +778,16 @@
           "sourceText": "total class hours",
           "reviewedSourceText": "Total class hours",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ชั่วโมงคลาสทั้งหมด",
+            "ms": "Jumlah jam kelas",
+            "de": "Gesamte Kursdauer",
+            "tr": "Toplam ders saati",
+            "fr": "Durée totale des cours",
+            "uk": "Загальна тривалість занять",
+            "ar-SA": "إجمالي ساعات الحصص",
+            "zh": "课程总时长"
+          },
           "androidTranslationId": "total_class_hours",
           "iosTranslationId": "Plan_Page_Total_Class",
           "subItems": []
@@ -451,7 +802,16 @@
           "sourceText": "The course has not been unlocked yet",
           "reviewedSourceText": "This class hasn't been unlocked yet",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คลาสนี้ยังไม่ปลดล็อก",
+            "ms": "Kelas ini belum dibuka kuncinya",
+            "de": "Dieser Kurs ist noch nicht freigeschaltet",
+            "tr": "Bu dersin kilidi henüz açılmadı",
+            "fr": "Ce cours n’est pas encore débloqué",
+            "uk": "Це заняття ще не розблоковано",
+            "ar-SA": "لم يتم فتح هذه الحصة بعد",
+            "zh": "该课程尚未解锁"
+          },
           "androidTranslationId": "course_not_unlocked_yet",
           "iosTranslationId": "Flag_Course_Not_Unlocked",
           "note": "没有开通会员，点击课程item toast的提示",
@@ -463,7 +823,16 @@
           "y": 0.4804611888798496,
           "sourceText": "No additional training plan",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไม่มีแผนการฝึกเพิ่มเติม",
+            "ms": "Tiada pelan latihan tambahan",
+            "de": "Kein zusätzlicher Trainingsplan",
+            "tr": "Ek antrenman planı yok",
+            "fr": "Aucun programme d’entraînement supplémentaire",
+            "uk": "Немає додаткового плану тренувань",
+            "ar-SA": "لا توجد خطة تدريب إضافية",
+            "zh": "暂无其他训练计划"
+          },
           "androidTranslationId": "no_additional_training_plan",
           "iosTranslationId": "",
           "note": "没有计划的时候提示",
@@ -472,7 +841,16 @@
               "sourceText": "Add training plan, single session course",
               "reviewedSourceText": "Add training plan or single-session class",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เพิ่มแผนการฝึกหรือคลาสแบบครั้งเดียว",
+                "ms": "Tambah pelan latihan atau kelas satu sesi",
+                "de": "Trainingsplan oder Einzelkurs hinzufügen",
+                "tr": "Antrenman planı veya tek seanslık ders ekle",
+                "fr": "Ajouter un programme d’entraînement ou un cours à la séance",
+                "uk": "Додати план тренувань або разове заняття",
+                "ar-SA": "إضافة خطة تدريب أو حصة واحدة",
+                "zh": "添加训练计划或单次课程"
+              },
               "androidTranslationId": "add_training_plan_single_session_course",
               "iosTranslationId": "Plan_Page_Add_Training_Sub",
               "note": ""
@@ -486,7 +864,16 @@
           "sourceText": "This Week\\'s Recipes",
           "reviewedSourceText": "This Week's Recipes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "สูตรอาหารประจำสัปดาห์นี้",
+            "ms": "Resipi Minggu Ini",
+            "de": "Rezepte dieser Woche",
+            "tr": "Bu Haftanın Tarifleri",
+            "fr": "Recettes de la semaine",
+            "uk": "Рецепти цього тижня",
+            "ar-SA": "وصفات هذا الأسبوع",
+            "zh": "本周食谱"
+          },
           "androidTranslationId": "week_recipes",
           "iosTranslationId": "",
           "note": "本周食谱",
@@ -506,7 +893,16 @@
           "y": 0.09155048110640447,
           "sourceText": "Filter",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "กรอง",
+            "ms": "Tapis",
+            "de": "Filtern",
+            "tr": "Filtrele",
+            "fr": "Filtrer",
+            "uk": "Фільтрувати",
+            "ar-SA": "تصفية",
+            "zh": "筛选"
+          },
           "androidTranslationId": "filter",
           "iosTranslationId": "Training_Plan_List_Filter_Content",
           "subItems": []
@@ -528,7 +924,16 @@
           "sourceText": "No more data",
           "reviewedSourceText": "No more plans",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไม่มีแผนเพิ่มเติม",
+            "ms": "Tiada lagi pelan",
+            "de": "Keine weiteren Pläne",
+            "tr": "Başka plan yok",
+            "fr": "Aucun autre programme",
+            "uk": "Більше немає планів",
+            "ar-SA": "لا توجد خطط أخرى",
+            "zh": "没有更多计划"
+          },
           "androidTranslationId": "load_end",
           "iosTranslationId": "MJRefreshBackFooterNoMoreDataText",
           "subItems": [
@@ -536,7 +941,16 @@
               "sourceText": "Loading in progress ..",
               "reviewedSourceText": "Loading…",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "กำลังโหลด…",
+                "ms": "Sedang dimuatkan…",
+                "de": "Wird geladen…",
+                "tr": "Yükleniyor…",
+                "fr": "Chargement…",
+                "uk": "Завантаження…",
+                "ar-SA": "جارٍ التحميل…",
+                "zh": "正在加载…"
+              },
               "androidTranslationId": "loading",
               "iosTranslationId": "MJRefreshBackFooterRefreshingText"
             },
@@ -544,7 +958,16 @@
               "sourceText": "Loading failed, please click me to retry",
               "reviewedSourceText": "Loading failed. Tap to retry.",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "โหลดไม่สำเร็จ แตะเพื่อลองอีกครั้ง",
+                "ms": "Gagal memuatkan. Ketik untuk cuba lagi.",
+                "de": "Laden fehlgeschlagen. Tippe, um es erneut zu versuchen.",
+                "tr": "Yükleme başarısız. Tekrar denemek için dokunun.",
+                "fr": "Échec du chargement. Appuyez pour réessayer.",
+                "uk": "Не вдалося завантажити. Торкніться, щоб повторити.",
+                "ar-SA": "فشل التحميل. اضغط لإعادة المحاولة.",
+                "zh": "加载失败，点击重试。"
+              },
               "androidTranslationId": "load_failed",
               "iosTranslationId": ""
             }
@@ -567,7 +990,16 @@
           "sourceText": "Plan Filter",
           "reviewedSourceText": "Filter Plan",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "กรองแผน",
+            "ms": "Tapis pelan",
+            "de": "Trainingspläne filtern",
+            "tr": "Planları filtrele",
+            "fr": "Filtrer les programmes",
+            "uk": "Фільтрувати плани",
+            "ar-SA": "تصفية الخطط",
+            "zh": "筛选计划"
+          },
           "androidTranslationId": "plan_filter",
           "iosTranslationId": "Training_Plan_List_Filter_Popup_Title",
           "subItems": []
@@ -578,7 +1010,16 @@
           "y": 0.6339663926838163,
           "sourceText": "Coaches",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "โค้ช",
+            "ms": "Jurulatih",
+            "de": "Coaches",
+            "tr": "Antrenörler",
+            "fr": "Coachs",
+            "uk": "Тренери",
+            "ar-SA": "المدربون",
+            "zh": "教练"
+          },
           "androidTranslationId": "filter_coaches",
           "iosTranslationId": "Course_Page_Filter_Title_Coach",
           "subItems": []
@@ -589,7 +1030,16 @@
           "y": 0.9032737677784947,
           "sourceText": "Reset",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "รีเซ็ต",
+            "ms": "Tetapkan semula",
+            "de": "Zurücksetzen",
+            "tr": "Sıfırla",
+            "fr": "Réinitialiser",
+            "uk": "Скинути",
+            "ar-SA": "إعادة تعيين",
+            "zh": "重置"
+          },
           "androidTranslationId": "reset",
           "iosTranslationId": "Course_Page_Filter_Title_Reset",
           "subItems": []
@@ -600,7 +1050,16 @@
           "y": 0.8869049288860212,
           "sourceText": "Done",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เสร็จสิ้น",
+            "ms": "Selesai",
+            "de": "Fertig",
+            "tr": "Bitti",
+            "fr": "Terminé",
+            "uk": "Готово",
+            "ar-SA": "تم",
+            "zh": "完成"
+          },
           "androidTranslationId": "done",
           "iosTranslationId": "Course_Page_Filter_Title_Done",
           "subItems": []
@@ -621,7 +1080,16 @@
           "y": 0.1507981036272337,
           "sourceText": "Overview",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ภาพรวม",
+            "ms": "Gambaran keseluruhan",
+            "de": "Übersicht",
+            "tr": "Genel bakış",
+            "fr": "Aperçu",
+            "uk": "Огляд",
+            "ar-SA": "نظرة عامة",
+            "zh": "概览"
+          },
           "androidTranslationId": "overview",
           "iosTranslationId": "Training_Plan_Detail_Page_Content_Info",
           "subItems": []
@@ -632,7 +1100,16 @@
           "y": 0.16626925126939154,
           "sourceText": "Schedule",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "กำหนดการ",
+            "ms": "Jadual",
+            "de": "Zeitplan",
+            "tr": "Program",
+            "fr": "Planning",
+            "uk": "Розклад",
+            "ar-SA": "الجدول",
+            "zh": "训练安排"
+          },
           "androidTranslationId": "schedule",
           "iosTranslationId": "Training_Plan_Detail_Page_Content_Schedule",
           "subItems": []
@@ -643,7 +1120,16 @@
           "y": 0.15438886862849607,
           "sourceText": "Recommended",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "แนะนำ",
+            "ms": "Disyorkan",
+            "de": "Empfohlen",
+            "tr": "Önerilen",
+            "fr": "Recommandé",
+            "uk": "Рекомендовано",
+            "ar-SA": "موصى به",
+            "zh": "推荐"
+          },
           "androidTranslationId": "recommended",
           "iosTranslationId": "Training_Plan_Detail_Page_Content_Recommend",
           "subItems": []
@@ -654,14 +1140,32 @@
           "y": 0.8933991640250232,
           "sourceText": "Join Plan",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เข้าร่วมแผน",
+            "ms": "Sertai pelan",
+            "de": "Plan beitreten",
+            "tr": "Plana katıl",
+            "fr": "Rejoindre le programme",
+            "uk": "Приєднатися до плану",
+            "ar-SA": "الانضمام إلى الخطة",
+            "zh": "加入计划"
+          },
           "androidTranslationId": "join_plan",
           "iosTranslationId": "Training_Plan_Detail_Page_Join",
           "subItems": [
             {
               "sourceText": "Purchased. Start training",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "ซื้อแล้ว เริ่มฝึกได้เลย",
+                "ms": "Telah dibeli. Mulakan latihan",
+                "de": "Gekauft. Training starten",
+                "tr": "Satın alındı. Antrenmana başlayın",
+                "fr": "Acheté. Commencer l’entraînement",
+                "uk": "Придбано. Почати тренування",
+                "ar-SA": "تم الشراء. ابدأ التدريب",
+                "zh": "已购买，开始训练"
+              },
               "androidTranslationId": "purchased_start_training",
               "iosTranslationId": ""
             }
@@ -673,7 +1177,16 @@
           "y": 0.3260582938255674,
           "sourceText": "%1$s Day",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "วันที่ %1$s",
+            "ms": "Hari %1$s",
+            "de": "Tag %1$s",
+            "tr": "%1$s. Gün",
+            "fr": "Jour %1$s",
+            "uk": "День %1$s",
+            "ar-SA": "اليوم %1$s",
+            "zh": "第 %1$s 天"
+          },
           "androidTranslationId": "which_day",
           "iosTranslationId": "",
           "subItems": []
@@ -687,7 +1200,16 @@
           "y": 0.3628636350885067,
           "sourceText": "Not completed",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ยังไม่เสร็จสิ้น",
+            "ms": "Belum selesai",
+            "de": "Nicht abgeschlossen",
+            "tr": "Tamamlanmadı",
+            "fr": "Non terminé",
+            "uk": "Не завершено",
+            "ar-SA": "غير مكتمل",
+            "zh": "未完成"
+          },
           "androidTranslationId": "not_completed",
           "iosTranslationId": "Flag_Course_Undone",
           "note": "课程状态",
@@ -695,7 +1217,16 @@
             {
               "sourceText": "Completed",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เสร็จสิ้นแล้ว",
+                "ms": "Selesai",
+                "de": "Abgeschlossen",
+                "tr": "Tamamlandı",
+                "fr": "Terminé",
+                "uk": "Завершено",
+                "ar-SA": "مكتمل",
+                "zh": "已完成"
+              },
               "androidTranslationId": "completed",
               "iosTranslationId": "Flag_Course_Completed",
               "note": ""
@@ -717,7 +1248,16 @@
           "sourceText": "%1$d week · %2$d class · %3$s",
           "reviewedSourceText": "%1$d weeks · %2$d classes · %3$s",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "%1$d สัปดาห์ · %2$d คลาส · %3$s",
+            "ms": "%1$d minggu · %2$d kelas · %3$s",
+            "de": "%1$d Wochen · %2$d Kurse · %3$s",
+            "tr": "%1$d hafta · %2$d ders · %3$s",
+            "fr": "%1$d semaines · %2$d cours · %3$s",
+            "uk": "%1$d тиж. · %2$d занять · %3$s",
+            "ar-SA": "%1$d أسابيع · %2$d حصص · %3$s",
+            "zh": "%1$d 周 · %2$d 节课 · %3$s"
+          },
           "androidTranslationId": "plan_summary_desc",
           "iosTranslationId": "",
           "subItems": [
@@ -725,7 +1265,16 @@
               "sourceText": "week",
               "reviewedSourceText": "weeks",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "สัปดาห์",
+                "ms": "minggu",
+                "de": "Wochen",
+                "tr": "hafta",
+                "fr": "semaines",
+                "uk": "тижні",
+                "ar-SA": "أسابيع",
+                "zh": "周"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Unit_week"
             },
@@ -733,7 +1282,16 @@
               "sourceText": "class",
               "reviewedSourceText": "classes",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คลาส",
+                "ms": "kelas",
+                "de": "Kurse",
+                "tr": "ders",
+                "fr": "cours",
+                "uk": "заняття",
+                "ar-SA": "حصص",
+                "zh": "节课"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Unit_class"
             }
@@ -755,14 +1313,32 @@
           "y": 0.07449434735040816,
           "sourceText": "Training plan settings",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "การตั้งค่าแผนการฝึก",
+            "ms": "Tetapan pelan latihan",
+            "de": "Trainingsplaneinstellungen",
+            "tr": "Antrenman planı ayarları",
+            "fr": "Paramètres du programme d’entraînement",
+            "uk": "Налаштування плану тренувань",
+            "ar-SA": "إعدادات خطة التدريب",
+            "zh": "训练计划设置"
+          },
           "androidTranslationId": "training_plan_settings",
           "iosTranslationId": "Training_Plan_Setting_Page_Title",
           "subItems": [
             {
               "sourceText": "Smart training plan settings",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "การตั้งค่าแผนการฝึกอัจฉริยะ",
+                "ms": "Tetapan pelan latihan pintar",
+                "de": "Einstellungen für den smarten Trainingsplan",
+                "tr": "Akıllı antrenman planı ayarları",
+                "fr": "Paramètres du programme d’entraînement intelligent",
+                "uk": "Налаштування розумного плану тренувань",
+                "ar-SA": "إعدادات خطة التدريب الذكية",
+                "zh": "智能训练计划设置"
+              },
               "androidTranslationId": "smart_training_plan_settings",
               "iosTranslationId": "Training_Plan_Setting_Page_Smart_Title"
             }
@@ -774,7 +1350,16 @@
           "y": 0.19388728364238225,
           "sourceText": "Training day reminder time",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เวลาแจ้งเตือนวันฝึก",
+            "ms": "Masa peringatan hari latihan",
+            "de": "Erinnerungszeit an Trainingstagen",
+            "tr": "Antrenman günü hatırlatma saati",
+            "fr": "Heure de rappel les jours d’entraînement",
+            "uk": "Час нагадування в день тренування",
+            "ar-SA": "وقت التذكير بيوم التدريب",
+            "zh": "训练日提醒时间"
+          },
           "androidTranslationId": "training_day_reminder_time",
           "iosTranslationId": "Training_Plan_Setting_Page_Item_Reminder",
           "subItems": []
@@ -785,7 +1370,16 @@
           "y": 0.8860072376357057,
           "sourceText": "Exit training plan",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ออกจากแผนการฝึก",
+            "ms": "Keluar daripada pelan latihan",
+            "de": "Trainingsplan verlassen",
+            "tr": "Antrenman planından çık",
+            "fr": "Quitter le programme d’entraînement",
+            "uk": "Вийти з плану тренувань",
+            "ar-SA": "مغادرة خطة التدريب",
+            "zh": "退出训练计划"
+          },
           "androidTranslationId": "exit_training_plan",
           "iosTranslationId": "Training_Plan_Setting_Page_Log_Out",
           "subItems": []
@@ -797,7 +1391,16 @@
           "sourceText": "The progress of the training plan will be lost after exiting. Are you sure you want to exit?",
           "reviewedSourceText": "Your training plan progress will be lost if you exit. Are you sure you want to exit?",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "หากออก ความคืบหน้าในแผนการฝึกจะหายไป คุณแน่ใจหรือไม่ว่าต้องการออก",
+            "ms": "Jika anda keluar, kemajuan pelan latihan anda akan hilang. Adakah anda pasti mahu keluar?",
+            "de": "Wenn du den Plan verlässt, geht dein Trainingsfortschritt verloren. Möchtest du den Plan wirklich verlassen?",
+            "tr": "Çıkarsanız antrenman planındaki ilerlemeniz kaybolur. Çıkmak istediğinizden emin misiniz?",
+            "fr": "Si vous quittez le programme, votre progression sera perdue. Voulez-vous vraiment quitter le programme ?",
+            "uk": "Якщо ви вийдете, прогрес у плані тренувань буде втрачено. Ви справді хочете вийти?",
+            "ar-SA": "سيتم فقدان تقدمك في خطة التدريب إذا غادرت. هل أنت متأكد من رغبتك في المغادرة؟",
+            "zh": "退出后将丢失训练计划进度，确定要退出吗？"
+          },
           "androidTranslationId": "exit_plan_warning",
           "iosTranslationId": "Training_Plan_Setting_Page_Log_Out_Tip",
           "subItems": []
@@ -808,7 +1411,16 @@
           "y": 0.588184138917721,
           "sourceText": "Confirm exit",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ยืนยันการออก",
+            "ms": "Sahkan keluar",
+            "de": "Verlassen bestätigen",
+            "tr": "Çıkışı onayla",
+            "fr": "Confirmer la sortie",
+            "uk": "Підтвердити вихід",
+            "ar-SA": "تأكيد المغادرة",
+            "zh": "确认退出"
+          },
           "androidTranslationId": "confirm_exit",
           "iosTranslationId": "Alert_Confirm_Exit",
           "subItems": []
@@ -819,7 +1431,16 @@
           "y": 0.583695682666143,
           "sourceText": "Not sure",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ขอคิดดูก่อน",
+            "ms": "Belum pasti",
+            "de": "Doch nicht",
+            "tr": "Emin değilim",
+            "fr": "Pas maintenant",
+            "uk": "Ще подумаю",
+            "ar-SA": "ليس الآن",
+            "zh": "再想想"
+          },
           "androidTranslationId": "not_sure",
           "iosTranslationId": "Alert_Not_sure",
           "subItems": []
@@ -840,7 +1461,16 @@
           "y": 0.7100597525738491,
           "sourceText": "Choose a time",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เลือกเวลา",
+            "ms": "Pilih masa",
+            "de": "Zeit auswählen",
+            "tr": "Saat seçin",
+            "fr": "Choisir une heure",
+            "uk": "Виберіть час",
+            "ar-SA": "اختر وقتًا",
+            "zh": "选择时间"
+          },
           "androidTranslationId": "choose_a_time",
           "iosTranslationId": "Alert_Select_Time_Title",
           "subItems": []
@@ -852,7 +1482,16 @@
           "sourceText": "cancel",
           "reviewedSourceText": "Cancel",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ยกเลิก",
+            "ms": "Batal",
+            "de": "Abbrechen",
+            "tr": "İptal",
+            "fr": "Annuler",
+            "uk": "Скасувати",
+            "ar-SA": "إلغاء",
+            "zh": "取消"
+          },
           "androidTranslationId": "cancel_lower_all",
           "iosTranslationId": "Alert_cancel",
           "subItems": []
@@ -864,7 +1503,16 @@
           "sourceText": "done",
           "reviewedSourceText": "Done",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เสร็จสิ้น",
+            "ms": "Selesai",
+            "de": "Fertig",
+            "tr": "Bitti",
+            "fr": "Terminé",
+            "uk": "Готово",
+            "ar-SA": "تم",
+            "zh": "完成"
+          },
           "androidTranslationId": "done_lower_all",
           "iosTranslationId": "Alert_done",
           "subItems": []
@@ -879,7 +1527,16 @@
           "sourceText": "Modification successful",
           "reviewedSourceText": "Time updated",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "อัปเดตเวลาแล้ว",
+            "ms": "Masa dikemas kini",
+            "de": "Zeit aktualisiert",
+            "tr": "Saat güncellendi",
+            "fr": "Heure mise à jour",
+            "uk": "Час оновлено",
+            "ar-SA": "تم تحديث الوقت",
+            "zh": "时间已更新"
+          },
           "androidTranslationId": "modification_successful",
           "iosTranslationId": "Alert_Edit_Success",
           "note": "修改时间成功 toast",
@@ -900,7 +1557,16 @@
           "sourceText": "To train in advance",
           "reviewedSourceText": "Train in advance",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ฝึกล่วงหน้า",
+            "ms": "Berlatih lebih awal",
+            "de": "Vorzeitig trainieren",
+            "tr": "Önceden antrenman yap",
+            "fr": "S’entraîner à l’avance",
+            "uk": "Тренуватися заздалегідь",
+            "ar-SA": "التدريب مقدمًا",
+            "zh": "提前训练"
+          },
           "androidTranslationId": "plan_tab_train_in_advance",
           "iosTranslationId": "Plan_Page_Advance_Training_Tip_Title",
           "subItems": []
@@ -912,7 +1578,16 @@
           "sourceText": "The training content of the next training day will be moved forward to today, and the next training day will be adjusted to a rest day.",
           "reviewedSourceText": "The next training day's workout will be moved to today, and the next training day will become a rest day.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "การฝึกของวันฝึกถัดไปจะถูกเลื่อนมาเป็นวันนี้ และวันฝึกถัดไปจะเปลี่ยนเป็นวันพัก",
+            "ms": "Latihan pada hari latihan seterusnya akan dipindahkan ke hari ini, dan hari latihan seterusnya akan menjadi hari rehat.",
+            "de": "Das Training des nächsten Trainingstags wird auf heute vorgezogen. Der nächste Trainingstag wird dadurch zum Ruhetag.",
+            "tr": "Bir sonraki antrenman gününün antrenmanı bugüne alınacak ve sonraki antrenman günü dinlenme günü olacak.",
+            "fr": "La séance du prochain jour d’entraînement sera déplacée à aujourd’hui, et ce prochain jour deviendra un jour de repos.",
+            "uk": "Тренування з наступного тренувального дня буде перенесено на сьогодні, а наступний тренувальний день стане днем відпочинку.",
+            "ar-SA": "سيتم نقل تمرين يوم التدريب التالي إلى اليوم، وسيصبح يوم التدريب التالي يوم راحة.",
+            "zh": "下一训练日的训练将提前至今天，下一训练日将改为休息日。"
+          },
           "androidTranslationId": "plan_tab_train_in_advance_tips",
           "iosTranslationId": "Plan_Page_Advance_Training_Tip_Content",
           "subItems": []
@@ -923,7 +1598,16 @@
           "y": 0.5772014475271411,
           "sourceText": "No",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ไม่",
+            "ms": "Tidak",
+            "de": "Nein",
+            "tr": "Hayır",
+            "fr": "Non",
+            "uk": "Ні",
+            "ar-SA": "لا",
+            "zh": "否"
+          },
           "androidTranslationId": "no",
           "iosTranslationId": "Alert_No",
           "subItems": []
@@ -934,7 +1618,16 @@
           "y": 0.5801645480419881,
           "sourceText": "OK",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ตกลง",
+            "ms": "OK",
+            "de": "OK",
+            "tr": "Tamam",
+            "fr": "OK",
+            "uk": "Гаразд",
+            "ar-SA": "موافق",
+            "zh": "确定"
+          },
           "androidTranslationId": "",
           "iosTranslationId": "Alert_OK",
           "subItems": []
@@ -949,7 +1642,16 @@
           "sourceText": "Today has been adjusted to a training day.",
           "reviewedSourceText": "Today has been set as a training day.",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ตั้งค่าวันนี้เป็นวันฝึกแล้ว",
+            "ms": "Hari ini telah ditetapkan sebagai hari latihan.",
+            "de": "Heute wurde als Trainingstag festgelegt.",
+            "tr": "Bugün antrenman günü olarak ayarlandı.",
+            "fr": "Aujourd’hui a été défini comme jour d’entraînement.",
+            "uk": "Сьогодні встановлено як день тренування.",
+            "ar-SA": "تم تعيين اليوم كيوم تدريب.",
+            "zh": "今天已设为训练日。"
+          },
           "androidTranslationId": "plan_tab_advence_adjusted",
           "iosTranslationId": "",
           "note": "今天就设置为训练日成功toast，iOS没有这个提示",
@@ -970,7 +1672,16 @@
           "sourceText": "adjust today as a training day",
           "reviewedSourceText": "Set today as a training day",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ตั้งวันนี้เป็นวันฝึก",
+            "ms": "Tetapkan hari ini sebagai hari latihan",
+            "de": "Heute als Trainingstag festlegen",
+            "tr": "Bugünü antrenman günü olarak ayarla",
+            "fr": "Définir aujourd’hui comme jour d’entraînement",
+            "uk": "Установити сьогодні як день тренування",
+            "ar-SA": "تعيين اليوم كيوم تدريب",
+            "zh": "将今天设为训练日"
+          },
           "androidTranslationId": "adjust_today_as_a_training_day",
           "iosTranslationId": "Plan_Page_Set_Today",
           "subItems": []
@@ -982,7 +1693,16 @@
           "sourceText": "Pre-train",
           "reviewedSourceText": "Advance training",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ฝึกล่วงหน้า",
+            "ms": "Awalkan latihan",
+            "de": "Training vorziehen",
+            "tr": "Antrenmanı öne al",
+            "fr": "Avancer l’entraînement",
+            "uk": "Перенести тренування на раніше",
+            "ar-SA": "تقديم موعد التدريب",
+            "zh": "提前训练"
+          },
           "androidTranslationId": "pre_training",
           "iosTranslationId": "Plan_Page_Advance_Training",
           "subItems": []
@@ -993,7 +1713,16 @@
           "y": 0.4050551238533397,
           "sourceText": "Rest day",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "วันพัก",
+            "ms": "Hari rehat",
+            "de": "Ruhetag",
+            "tr": "Dinlenme günü",
+            "fr": "Jour de repos",
+            "uk": "День відпочинку",
+            "ar-SA": "يوم راحة",
+            "zh": "休息日"
+          },
           "androidTranslationId": "rest_day",
           "iosTranslationId": "Plan_Page_Reset_Day",
           "subItems": []
@@ -1014,7 +1743,16 @@
           "y": 0.43895699497853957,
           "sourceText": "Training plan added successfully",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เพิ่มแผนการฝึกสำเร็จ",
+            "ms": "Pelan latihan berjaya ditambahkan",
+            "de": "Trainingsplan erfolgreich hinzugefügt",
+            "tr": "Antrenman planı başarıyla eklendi",
+            "fr": "Programme d’entraînement ajouté",
+            "uk": "План тренувань успішно додано",
+            "ar-SA": "تمت إضافة خطة التدريب بنجاح",
+            "zh": "训练计划添加成功"
+          },
           "androidTranslationId": "training_plan_added_successfully",
           "iosTranslationId": "Alert_Add_Train_Plan_Success",
           "subItems": []
@@ -1035,7 +1773,16 @@
           "y": 0.13574774875866133,
           "sourceText": "Select training day reminder time",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เลือกเวลาแจ้งเตือนวันฝึก",
+            "ms": "Pilih masa peringatan hari latihan",
+            "de": "Erinnerungszeit für Trainingstage auswählen",
+            "tr": "Antrenman günü hatırlatma saatini seçin",
+            "fr": "Sélectionner l’heure de rappel des jours d’entraînement",
+            "uk": "Виберіть час нагадування в день тренування",
+            "ar-SA": "اختر وقت التذكير بيوم التدريب",
+            "zh": "选择训练日提醒时间"
+          },
           "androidTranslationId": "select_training_day_reminder_time",
           "iosTranslationId": "Plan_Page_Select_Train_Day_Time",
           "subItems": []
@@ -1046,7 +1793,16 @@
           "y": 0.4551154374842203,
           "sourceText": "Select plan start time",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เลือกเวลาเริ่มแผน",
+            "ms": "Pilih waktu mula pelan",
+            "de": "Startzeit des Plans auswählen",
+            "tr": "Plan başlangıç saatini seçin",
+            "fr": "Sélectionner l’heure de début du programme",
+            "uk": "Виберіть час початку плану",
+            "ar-SA": "اختر وقت بدء الخطة",
+            "zh": "选择计划开始时间"
+          },
           "androidTranslationId": "select_plan_start_time",
           "iosTranslationId": "Plan_Page_Select_Plan_Start_Subtitle",
           "subItems": []
@@ -1057,7 +1813,16 @@
           "y": 0.6077229500378714,
           "sourceText": "Today",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "วันนี้",
+            "ms": "Hari ini",
+            "de": "Heute",
+            "tr": "Bugün",
+            "fr": "Aujourd’hui",
+            "uk": "Сьогодні",
+            "ar-SA": "اليوم",
+            "zh": "今天"
+          },
           "androidTranslationId": "today",
           "iosTranslationId": "Flag_Today",
           "subItems": []
@@ -1068,7 +1833,16 @@
           "y": 0.6077229500378714,
           "sourceText": "Tomorrow",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "พรุ่งนี้",
+            "ms": "Esok",
+            "de": "Morgen",
+            "tr": "Yarın",
+            "fr": "Demain",
+            "uk": "Завтра",
+            "ar-SA": "غدًا",
+            "zh": "明天"
+          },
           "androidTranslationId": "tomorrow",
           "iosTranslationId": "Flag_Tomorrow",
           "subItems": []
@@ -1079,7 +1853,16 @@
           "y": 0.8949841501388616,
           "sourceText": "View my training plan",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ดูแผนการฝึกของฉัน",
+            "ms": "Lihat pelan latihan saya",
+            "de": "Meinen Trainingsplan anzeigen",
+            "tr": "Antrenman planımı görüntüle",
+            "fr": "Voir mon programme d’entraînement",
+            "uk": "Переглянути мій план тренувань",
+            "ar-SA": "عرض خطتي التدريبية",
+            "zh": "查看我的训练计划"
+          },
           "androidTranslationId": "view_my_training_plan",
           "iosTranslationId": "Plan_Page_Show_Me_Train_Plan",
           "subItems": []
@@ -1093,7 +1876,16 @@
           "y": 0.17862653238701715,
           "sourceText": "Choose a training day",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เลือกวันฝึก",
+            "ms": "Pilih hari latihan",
+            "de": "Trainingstag auswählen",
+            "tr": "Antrenman günü seçin",
+            "fr": "Choisir un jour d’entraînement",
+            "uk": "Виберіть день тренування",
+            "ar-SA": "اختر يوم التدريب",
+            "zh": "选择训练日"
+          },
           "androidTranslationId": "choose_a_training_day",
           "iosTranslationId": "Plan_Page_Select_Train_Day_Title",
           "note": "选择是一周当中哪几天作为训练日",
@@ -1105,7 +1897,16 @@
           "y": 0.24415799366005556,
           "sourceText": "This program requires selecting %1$d training days",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "โปรแกรมนี้กำหนดให้เลือกวันฝึก %1$d วัน",
+            "ms": "Program ini memerlukan anda memilih %1$d hari latihan",
+            "de": "Für dieses Programm musst du %1$d Trainingstage auswählen",
+            "tr": "Bu program için %1$d antrenman günü seçmeniz gerekir",
+            "fr": "Ce programme nécessite de sélectionner %1$d jours d’entraînement",
+            "uk": "Для цієї програми потрібно вибрати %1$d тренувальних днів",
+            "ar-SA": "يتطلب هذا البرنامج اختيار %1$d أيام تدريب",
+            "zh": "本计划需要选择 %1$d 个训练日"
+          },
           "androidTranslationId": "requires_training_days",
           "iosTranslationId": "",
           "note": "总共可以选择多少天",
@@ -1113,7 +1914,16 @@
             {
               "sourceText": "This program requires selecting",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "โปรแกรมนี้กำหนดให้เลือก",
+                "ms": "Program ini memerlukan pemilihan",
+                "de": "Für dieses Programm musst du auswählen",
+                "tr": "Bu program için seçim yapmanız gerekir",
+                "fr": "Ce programme nécessite de sélectionner",
+                "uk": "Для цієї програми потрібно вибрати",
+                "ar-SA": "يتطلب هذا البرنامج اختيار",
+                "zh": "本计划需要选择"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Plan_Page_Select_Train_Day_Subtitle_1",
               "note": ""
@@ -1121,7 +1931,16 @@
             {
               "sourceText": "training days",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "วันฝึก",
+                "ms": "hari latihan",
+                "de": "Trainingstage",
+                "tr": "antrenman günü",
+                "fr": "jours d’entraînement",
+                "uk": "тренувальні дні",
+                "ar-SA": "أيام تدريب",
+                "zh": "个训练日"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Plan_Page_Select_Train_Day_Subtitle_2",
               "note": ""
@@ -1134,7 +1953,16 @@
           "y": 0.9147333576458047,
           "sourceText": "Next",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ถัดไป",
+            "ms": "Seterusnya",
+            "de": "Weiter",
+            "tr": "İleri",
+            "fr": "Suivant",
+            "uk": "Далі",
+            "ar-SA": "التالي",
+            "zh": "下一步"
+          },
           "androidTranslationId": "next",
           "iosTranslationId": "Flag_Next",
           "note": "下一步，跳转到当前页",
@@ -1146,7 +1974,16 @@
           "y": 0.6626925126939154,
           "sourceText": "Training plan added successfully",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เพิ่มแผนการฝึกสำเร็จ",
+            "ms": "Pelan latihan berjaya ditambahkan",
+            "de": "Trainingsplan erfolgreich hinzugefügt",
+            "tr": "Antrenman planı başarıyla eklendi",
+            "fr": "Programme d’entraînement ajouté",
+            "uk": "План тренувань успішно додано",
+            "ar-SA": "تمت إضافة خطة التدريب بنجاح",
+            "zh": "训练计划添加成功"
+          },
           "androidTranslationId": "training_plan_added_successfully",
           "iosTranslationId": "Alert_Add_Train_Plan_Success",
           "note": "添加计划成功toast",
@@ -1166,7 +2003,16 @@
           "y": 0.4165147137206497,
           "sourceText": "Confirm deletion?",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ยืนยันการลบหรือไม่",
+            "ms": "Sahkan pemadaman?",
+            "de": "Löschen bestätigen?",
+            "tr": "Silme işlemi onaylansın mı?",
+            "fr": "Confirmer la suppression ?",
+            "uk": "Підтвердити видалення?",
+            "ar-SA": "تأكيد الحذف؟",
+            "zh": "确认删除？"
+          },
           "androidTranslationId": "confirm_deletion",
           "iosTranslationId": "Alert_Delete_Course_Title",
           "subItems": []
@@ -1178,7 +2024,16 @@
           "sourceText": "Confirm deletion of the added course?",
           "reviewedSourceText": "Are you sure you want to delete this class?",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "คุณแน่ใจหรือไม่ว่าต้องการลบคลาสนี้",
+            "ms": "Adakah anda pasti mahu memadamkan kelas ini?",
+            "de": "Möchtest du diesen Kurs wirklich löschen?",
+            "tr": "Bu dersi silmek istediğinizden emin misiniz?",
+            "fr": "Voulez-vous vraiment supprimer ce cours ?",
+            "uk": "Ви справді хочете видалити це заняття?",
+            "ar-SA": "هل أنت متأكد من رغبتك في حذف هذه الحصة؟",
+            "zh": "确定要删除该课程吗？"
+          },
           "androidTranslationId": "confirm_deletion_of_the_added_course",
           "iosTranslationId": "Alert_Delete_Course_Content",
           "subItems": []
@@ -1193,7 +2048,16 @@
           "sourceText": "delete successful",
           "reviewedSourceText": "Deleted successfully",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ลบสำเร็จ",
+            "ms": "Berjaya dipadamkan",
+            "de": "Erfolgreich gelöscht",
+            "tr": "Başarıyla silindi",
+            "fr": "Suppression réussie",
+            "uk": "Успішно видалено",
+            "ar-SA": "تم الحذف بنجاح",
+            "zh": "删除成功"
+          },
           "androidTranslationId": "delete_succ",
           "iosTranslationId": "",
           "note": "删除成功toast，iOS没有提示",
@@ -1206,7 +2070,16 @@
           "sourceText": "elete failed",
           "reviewedSourceText": "Delete failed",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ลบไม่สำเร็จ",
+            "ms": "Gagal memadamkan",
+            "de": "Löschen fehlgeschlagen",
+            "tr": "Silinemedi",
+            "fr": "Échec de la suppression",
+            "uk": "Не вдалося видалити",
+            "ar-SA": "فشل الحذف",
+            "zh": "删除失败"
+          },
           "androidTranslationId": "delete_failed",
           "iosTranslationId": "",
           "note": "删除失败toast，iOS没有提示",
@@ -1227,7 +2100,16 @@
           "sourceText": "Course management",
           "reviewedSourceText": "Manage classes",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "จัดการคลาส",
+            "ms": "Urus kelas",
+            "de": "Kurse verwalten",
+            "tr": "Dersleri yönet",
+            "fr": "Gérer les cours",
+            "uk": "Керувати заняттями",
+            "ar-SA": "إدارة الحصص",
+            "zh": "管理课程"
+          },
           "androidTranslationId": "course_management",
           "iosTranslationId": "Plan_Page_Course_Manage_Title",
           "subItems": []
@@ -1249,7 +2131,16 @@
           "sourceText": "Course added successfully",
           "reviewedSourceText": "Class added successfully",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เพิ่มคลาสสำเร็จ",
+            "ms": "Kelas berjaya ditambahkan",
+            "de": "Kurs erfolgreich hinzugefügt",
+            "tr": "Ders başarıyla eklendi",
+            "fr": "Cours ajouté",
+            "uk": "Заняття успішно додано",
+            "ar-SA": "تمت إضافة الحصة بنجاح",
+            "zh": "课程添加成功"
+          },
           "androidTranslationId": "successfully_added",
           "iosTranslationId": "Alert_Add_Course_Success",
           "subItems": [
@@ -1257,7 +2148,16 @@
               "sourceText": "Adding failed",
               "reviewedSourceText": "Failed to add class",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เพิ่มคลาสไม่สำเร็จ",
+                "ms": "Gagal menambah kelas",
+                "de": "Kurs konnte nicht hinzugefügt werden",
+                "tr": "Ders eklenemedi",
+                "fr": "Échec de l’ajout du cours",
+                "uk": "Не вдалося додати заняття",
+                "ar-SA": "فشلت إضافة الحصة",
+                "zh": "课程添加失败"
+              },
               "androidTranslationId": "adding_failed",
               "iosTranslationId": "Alert_Add_Course_Fail"
             }
@@ -1280,14 +2180,32 @@
           "sourceText": "Selected %1$d class",
           "reviewedSourceText": "%1$d classes selected",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "เลือกแล้ว %1$d คลาส",
+            "ms": "%1$d kelas dipilih",
+            "de": "%1$d Kurse ausgewählt",
+            "tr": "%1$d ders seçildi",
+            "fr": "%1$d cours sélectionnés",
+            "uk": "Вибрано занять: %1$d",
+            "ar-SA": "تم تحديد %1$d حصص",
+            "zh": "已选择 %1$d 节课"
+          },
           "androidTranslationId": "selected_class_format",
           "iosTranslationId": "",
           "subItems": [
             {
               "sourceText": "Selected",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "เลือกแล้ว",
+                "ms": "Dipilih",
+                "de": "Ausgewählt",
+                "tr": "Seçildi",
+                "fr": "Sélectionné",
+                "uk": "Вибрано",
+                "ar-SA": "محدد",
+                "zh": "已选择"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Plan_Page_Add_Did_Select"
             },
@@ -1295,7 +2213,16 @@
               "sourceText": "class",
               "reviewedSourceText": "classes",
               "translation": "",
-              "translations": {},
+              "translations": {
+                "th": "คลาส",
+                "ms": "kelas",
+                "de": "Kurse",
+                "tr": "ders",
+                "fr": "cours",
+                "uk": "заняття",
+                "ar-SA": "حصص",
+                "zh": "节课"
+              },
               "androidTranslationId": "",
               "iosTranslationId": "Unit_class"
             }
@@ -1320,7 +2247,16 @@
           "sourceText": "No relevant content available at the moment",
           "reviewedSourceText": "No favorites yet",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "ยังไม่มีรายการโปรด",
+            "ms": "Belum ada kegemaran",
+            "de": "Noch keine Favoriten",
+            "tr": "Henüz favori yok",
+            "fr": "Aucun favori pour le moment",
+            "uk": "Поки немає обраного",
+            "ar-SA": "لا توجد مفضلات بعد",
+            "zh": "暂无收藏"
+          },
           "androidTranslationId": "no_content",
           "iosTranslationId": "Alert_Empty_Tip",
           "note": "没有推荐课程中间的提示",
@@ -1340,7 +2276,16 @@
           "y": 0.26031643616573624,
           "sourceText": "Filter",
           "translation": "",
-          "translations": {},
+          "translations": {
+            "th": "กรอง",
+            "ms": "Tapis",
+            "de": "Filtern",
+            "tr": "Filtrele",
+            "fr": "Filtrer",
+            "uk": "Фільтрувати",
+            "ar-SA": "تصفية",
+            "zh": "筛选"
+          },
           "androidTranslationId": "filter",
           "iosTranslationId": "Course_Page_Filter_Title",
           "subItems": []
