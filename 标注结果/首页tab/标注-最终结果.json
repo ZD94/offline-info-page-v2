@@ -36,6 +36,7 @@
           "x": 0.8753370875634517,
           "y": 0.8732989228417941,
           "sourceText": "To manage activities, steps, running and other sports data, you need to enable the device's ‘Health’ permission.",
+          "reviewedSourceText": "To manage activities, steps, running, and other sports data, you need to enable the device's Health permission.",
           "translation": "",
           "translations": {},
           "androidTranslationId": "",
@@ -217,6 +218,7 @@
           "x": 0.7119289340101523,
           "y": 0.4670471123315884,
           "sourceText": "Tips: After automatic follow, the device will automatically adjust the resistance, pay attention to the speed change.",
+          "reviewedSourceText": "Tip: After automatic follow is enabled, the bike will automatically adjust the resistance. Pay attention to changes in resistance.",
           "translation": "",
           "translations": {},
           "androidTranslationId": "whether_auto_resistance_desc",
@@ -392,6 +394,7 @@
           "x": 0.5291421285896424,
           "y": 0.43087777372569924,
           "sourceText": "Today\\'s pending tasks",
+          "reviewedSourceText": "Today's tasks",
           "translation": "",
           "translations": {},
           "androidTranslationId": "pending_tasks",
@@ -418,6 +421,7 @@
           "subItems": [
             {
               "sourceText": "The tasks for today have been finished",
+              "reviewedSourceText": "Today's tasks are complete",
               "translation": "",
               "translations": {},
               "androidTranslationId": "today_finished",
@@ -470,6 +474,7 @@
           "x": 0.9002185659644223,
           "y": 0.44793390748169554,
           "sourceText": "Add courses",
+          "reviewedSourceText": "Add classes",
           "translation": "",
           "translations": {},
           "androidTranslationId": "add_course",
@@ -511,6 +516,7 @@
           "x": 0.7690355329949239,
           "y": 0.15367779589734787,
           "sourceText": "Precautions and risk considerations for pattern running",
+          "reviewedSourceText": "Precautions and risk considerations for treadmill running",
           "translation": "",
           "translations": {},
           "androidTranslationId": "mode_warning_title",
@@ -522,6 +528,7 @@
           "x": 0.7652284263959391,
           "y": 0.5272079649815467,
           "sourceText": "\"Course Notice and Risk Warning:\n\nThe SPAX running course, including all courses within the SPAX App (hereinafter referred to as \"Courses\"), is a product developed and operated by SPAX and its affiliates. The ownership and intellectual property rights of the Courses belong to SPAX and its affiliated companies. Exercise carries certain risks, and before starting the Courses, you should take a responsible attitude towards yourself and take reasonable precautions and assess your own capabilities. You should also confirm that you have carefully read and accepted this \"Course Notice and Risk Warning\".\n\nThis notice applies to all SPAX users.\n\nThe following groups are not suitable for participating in the Courses: teenagers under 16 years old, elderly people over 60 years old, those who are preparing for pregnancy, pregnant women and mothers within one year of breastfeeding, those who have undergone surgery within 6 months or major surgery within one year, individuals with diabetes, gout, severe metabolic diseases, cardiovascular and cerebrovascular diseases, lung diseases, orthopedic injuries, spinal diseases, joint injuries, and other individuals who have been advised by a doctor not to exercise.\n\nBefore participating in the Courses, you should go to a medical institution for a physical examination and consult a doctor about your physical condition to ensure that you have the physical condition to participate in the Courses.\n\nBefore and after participating in the Courses, please do not consume alcoholic beverages or any stimulants prohibited by national laws and regulations.\n\nIf you have any physical conditions that may affect or may be affected during the Courses, or if you feel any discomfort during the Courses, please stop immediately.\n\nIf you ignore the above notice but still insist on participating in the Courses, you will bear all risks, damages, and liabilities, and SPAX will not assume any legal responsibility or any compensation or reimbursement arising therefrom.\n\nIf you have any questions about equipment use or course content, please carefully read the relevant equipment instructions or course action guidelines to avoid the risk of injury. After participating in the Courses, please start slowly and progress gradually.\n\nDue to differences in personal physique, basic forms, and exercise abilities, SPAX cannot guarantee that all users will achieve a certain desired fitness effect.\n\nEntering the training means that you have fully understood all the risks, damages, and liabilities that may arise from participating in the training courses, and voluntarily assume such risks and liabilities.\"",
+          "reviewedSourceText": "\"Course Notice and Risk Warning:\n\nThe SPAX running course, including all courses within the SPAX App (hereinafter referred to as \"Courses\"), is a product developed and operated by SPAX and its affiliates. The ownership and intellectual property rights of the Courses belong to SPAX and its affiliated companies. Exercise carries certain risks, and before starting the Courses, you should take a responsible attitude toward yourself, take reasonable precautions, and assess your own capabilities. You should also confirm that you have carefully read and accepted this \"Course Notice and Risk Warning\".\n\nThis notice applies to all SPAX users.\n\nThe following groups are not suitable for participating in the Courses: teenagers under 16 years old, elderly people over 60 years old, those who are preparing for pregnancy, pregnant women and mothers within one year of breastfeeding, those who have undergone surgery within 6 months or major surgery within one year, individuals with diabetes, gout, severe metabolic diseases, cardiovascular and cerebrovascular diseases, lung diseases, orthopedic injuries, spinal diseases, joint injuries, and other individuals who have been advised by a doctor not to exercise.\n\nBefore participating in the Courses, you should go to a medical institution for a physical examination and consult a doctor about your physical condition to ensure that you have the physical condition to participate in the Courses.\n\nBefore and after participating in the Courses, please do not consume alcoholic beverages or any stimulants prohibited by national laws and regulations.\n\nIf you have any physical conditions that may affect or may be affected during the Courses, or if you feel any discomfort during the Courses, please stop immediately.\n\nIf you ignore the above notice but still insist on participating in the Courses, you will bear all risks, damages, and liabilities, and SPAX will not assume any legal responsibility or any compensation or reimbursement arising therefrom.\n\nIf you have any questions about equipment use or course content, please carefully read the relevant equipment instructions or course action guidelines to avoid the risk of injury. After participating in the Courses, please start slowly and progress gradually.\n\nDue to differences in personal physique, basic forms, and exercise abilities, SPAX cannot guarantee that all users will achieve a certain desired fitness effect.\n\nEntering the training means that you have fully understood all the risks, damages, and liabilities that may arise from participating in the training courses, and voluntarily assume such risks and liabilities.\"",
           "translation": "",
           "translations": {},
           "androidTranslationId": "spax_warn",
@@ -576,6 +583,7 @@
           "x": 0.5558375634517766,
           "y": 0.49699596601150114,
           "sourceText": "Please read and agree to the relevant precautions and risk information",
+          "reviewedSourceText": "Please read and agree to the precautions and risk information",
           "translation": "",
           "translations": {},
           "androidTranslationId": "read_warning",
@@ -690,6 +698,7 @@
           "x": 0.5081772746055296,
           "y": 0.4700035358632541,
           "sourceText": "What are your thoughts on this pattern?",
+          "reviewedSourceText": "How was this workout?",
           "translation": "",
           "translations": {},
           "androidTranslationId": "ask_thoughts_this_pattern",
@@ -706,6 +715,7 @@
             },
             {
               "sourceText": "The input needs to be greater than 0",
+              "reviewedSourceText": "The input must be greater than 0",
               "translation": "",
               "translations": {},
               "androidTranslationId": "input_greater_0",
@@ -764,6 +774,7 @@
             },
             {
               "sourceText": "Keep up the good work!!",
+              "reviewedSourceText": "Keep up the good work!",
               "translation": "",
               "translations": {},
               "androidTranslationId": "keep_up_the_good_work",
@@ -825,6 +836,7 @@
             },
             {
               "sourceText": " is to high",
+              "reviewedSourceText": " is too high",
               "translation": "",
               "translations": {},
               "androidTranslationId": "",
@@ -841,6 +853,7 @@
             },
             {
               "sourceText": " is to low",
+              "reviewedSourceText": " is too low",
               "translation": "",
               "translations": {},
               "androidTranslationId": "",
@@ -862,6 +875,7 @@
           "subItems": [
             {
               "sourceText": "If you feel difficulty in breathing, you can adjust the  %1$s to the recommended level.",
+              "reviewedSourceText": "If you feel short of breath, you can adjust the %1$s to the recommended level.",
               "translation": "",
               "translations": {},
               "androidTranslationId": "too_high_desc_format",
@@ -870,6 +884,7 @@
             },
             {
               "sourceText": "If you feel short of breath, adjust to the recommended",
+              "reviewedSourceText": "If you feel short of breath, adjust to the recommended level",
               "translation": "",
               "translations": {},
               "androidTranslationId": "",
@@ -886,6 +901,7 @@
             },
             {
               "sourceText": "If you feel short of breath, adjust to the recommended",
+              "reviewedSourceText": "If you feel short of breath, adjust to the recommended level",
               "translation": "",
               "translations": {},
               "androidTranslationId": "",
@@ -914,6 +930,7 @@
           "subItems": [
             {
               "sourceText": "Power w",
+              "reviewedSourceText": "Power (W)",
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_unit_power_w",
@@ -921,6 +938,7 @@
             },
             {
               "sourceText": "Max consecutive jump count",
+              "reviewedSourceText": "Max consecutive jumps",
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_max_consecutive_jump_count",
@@ -928,6 +946,7 @@
             },
             {
               "sourceText": "Number of interruptions",
+              "reviewedSourceText": "Interruptions",
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_unit_interruptions",
@@ -935,6 +954,7 @@
             },
             {
               "sourceText": "avg rpm",
+              "reviewedSourceText": "Avg rpm",
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_unit_avg_rpm",
@@ -996,6 +1016,7 @@
           "x": 0.5250955062800594,
           "y": 0.3659694375149362,
           "sourceText": "AI detected that you\\'re about to enter the orange fat-burning zone. Stay with it. Your best shape is within reach.",
+          "reviewedSourceText": "AI detected that you're about to enter the orange fat-burning zone. Stay with it. Your best shape is within reach.",
           "translation": "",
           "translations": {},
           "androidTranslationId": "target_13_step_2_min_low_90",
@@ -1004,6 +1025,7 @@
           "subItems": [
             {
               "sourceText": "You\\'re now in the orange high fat-burning zone. Your results will prove every drop of sweat was worth it.",
+              "reviewedSourceText": "You're now in the orange high fat-burning zone. Your results will prove every drop of sweat was worth it.",
               "translation": "",
               "translations": {},
               "androidTranslationId": "target_13_step_2_min",
@@ -1012,6 +1034,7 @@
             },
             {
               "sourceText": "If you\\'re feeling tired, slow down a bit and keep your heart rate in the optimal fat-burning zone.",
+              "reviewedSourceText": "If you're feeling tired, slow down a bit and keep your heart rate in the optimal fat-burning zone.",
               "translation": "",
               "translations": {},
               "androidTranslationId": "target_13_step_4_max",
@@ -1103,6 +1126,7 @@
           "x": 0.5728803098655251,
           "y": 0.6588170668486669,
           "sourceText": "Exit",
+          "reviewedSourceText": "End",
           "translation": "",
           "translations": {},
           "androidTranslationId": "exit_alert_end",
@@ -1274,6 +1298,7 @@
           "x": 0.13536501204994766,
           "y": 0.11023075412526023,
           "sourceText": "All Courses",
+          "reviewedSourceText": "All classes",
           "translation": "",
           "translations": {},
           "androidTranslationId": "all_courses",
@@ -1281,6 +1306,7 @@
           "subItems": [
             {
               "sourceText": "All plan",
+              "reviewedSourceText": "All plans",
               "translation": "",
               "translations": {},
               "androidTranslationId": "All_plan",
@@ -1293,6 +1319,7 @@
           "x": 0.5692634073393512,
           "y": 0.12417909350356866,
           "sourceText": "(total %1$d class)",
+          "reviewedSourceText": "(total %1$d classes)",
           "translation": "",
           "translations": {},
           "androidTranslationId": "total_class_format",
@@ -1325,6 +1352,7 @@
           "x": 0.8592663108606651,
           "y": 0.43795563037036567,
           "sourceText": "The following methods can also record exercise data",
+          "reviewedSourceText": "You can also record workout data with the following methods",
           "translation": "",
           "translations": {},
           "androidTranslationId": "other_sport_mode",
@@ -1346,6 +1374,7 @@
           "x": 0.7611833756345178,
           "y": 0.5994465265877997,
           "sourceText": "The following methods can also record exercise data",
+          "reviewedSourceText": "You can also record workout data using these methods",
           "translation": "",
           "translations": {},
           "androidTranslationId": "other_sport_mode",
@@ -1367,6 +1396,7 @@
           "x": 0.30110842322335024,
           "y": 0.6073591804195035,
           "sourceText": "Mode plan",
+          "reviewedSourceText": "Plan mode",
           "translation": "",
           "translations": {},
           "androidTranslationId": "mode_plan",
@@ -1388,6 +1418,7 @@
           "x": 0.15580385469543148,
           "y": 0.2221530936239595,
           "sourceText": "Achieved the goal",
+          "reviewedSourceText": "Goal achieved",
           "translation": "",
           "translations": {},
           "androidTranslationId": "",
@@ -1646,6 +1677,7 @@
           "x": 0.6075111040609137,
           "y": 0.2339284181615312,
           "sourceText": "The bluetooth device has been activated, and data connection synchronization is in progress",
+          "reviewedSourceText": "The bluetooth device has been activated. Data synchronization is in progress.",
           "translation": "",
           "translations": {},
           "androidTranslationId": "bluetooth_open_data_sync",
@@ -1653,6 +1685,7 @@
           "subItems": [
             {
               "sourceText": "The bluetooth component is about to enter sleep mode. Please try stepping on the pedal or tapping the screen to keep the Bluetooth enabled. Once the Bluetooth enters sleep mode, it will no longer be able to continue syncing device data",
+              "reviewedSourceText": "The bluetooth component is about to enter sleep mode. Step on the pedal or tap the screen to keep Bluetooth enabled. Once Bluetooth enters sleep mode, it can no longer sync device data.",
               "translation": "",
               "translations": {},
               "androidTranslationId": "please_try_step",
@@ -1667,6 +1700,7 @@
             },
             {
               "sourceText": "Please try stepping on the pedal or tapping the screen to keep the bluetooth enabled. Once the bluetooth enters sleep mode, it will no longer be able to continue syncing device data",
+              "reviewedSourceText": "Step on the pedal or tap the screen to keep bluetooth enabled. Once bluetooth enters sleep mode, it can no longer sync device data.",
               "translation": "",
               "translations": {},
               "androidTranslationId": "",
@@ -1674,6 +1708,7 @@
             },
             {
               "sourceText": "Bluetooth connection failed. Please try to reconnect",
+              "reviewedSourceText": "Bluetooth connection failed. Please try reconnecting.",
               "translation": "",
               "translations": {},
               "androidTranslationId": "",
@@ -1681,6 +1716,7 @@
             },
             {
               "sourceText": "Bluetooth has been disconnected. Please try to reconnect",
+              "reviewedSourceText": "Bluetooth has been disconnected. Please try reconnecting.",
               "translation": "",
               "translations": {},
               "androidTranslationId": "",
@@ -1688,6 +1724,7 @@
             },
             {
               "sourceText": "Bluetooth connecting",
+              "reviewedSourceText": "Connecting to Bluetooth…",
               "translation": "",
               "translations": {},
               "androidTranslationId": "bluetooth_connecting",
@@ -1702,6 +1739,7 @@
             },
             {
               "sourceText": "Bluetooth connection successful",
+              "reviewedSourceText": "Bluetooth connected successfully",
               "translation": "",
               "translations": {},
               "androidTranslationId": "bluetooth_connection_successful",
@@ -1859,6 +1897,7 @@
             },
             {
               "sourceText": "times",
+              "reviewedSourceText": "Times",
               "translation": "",
               "translations": {},
               "androidTranslationId": "",
@@ -2176,6 +2215,7 @@
           "x": 0.685546875,
           "y": 0.9330242190435173,
           "sourceText": "Course",
+          "reviewedSourceText": "Classes",
           "translation": "",
           "translations": {},
           "androidTranslationId": "home_tab_course",
@@ -2215,6 +2255,7 @@
           "subItems": [
             {
               "sourceText": "All plan",
+              "reviewedSourceText": "All plans",
               "translation": "",
               "translations": {},
               "androidTranslationId": "All_plan",
@@ -2227,6 +2268,7 @@
           "x": 0.310983105964467,
           "y": 0.2982800172273181,
           "sourceText": "total",
+          "reviewedSourceText": "Total",
           "translation": "",
           "translations": {},
           "androidTranslationId": "",
@@ -2238,6 +2280,7 @@
           "x": 0.44958558058375636,
           "y": 0.29738657918610084,
           "sourceText": "class",
+          "reviewedSourceText": "classes",
           "translation": "",
           "translations": {},
           "androidTranslationId": "",

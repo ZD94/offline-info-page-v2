@@ -165,6 +165,7 @@
           "x": 0.27045717592592594,
           "y": 0.3502041434888033,
           "sourceText": "My favorites",
+          "reviewedSourceText": "My Favorites",
           "translation": "",
           "translations": {
             "zh": "我的收藏"
@@ -178,6 +179,7 @@
           "x": 0.7071277006172839,
           "y": 0.3537164812437598,
           "sourceText": "Device management",
+          "reviewedSourceText": "Device Management",
           "translation": "",
           "translations": {
             "zh": "设备管理"
@@ -191,6 +193,7 @@
           "x": 0.48431712962962964,
           "y": 0.41048887462558836,
           "sourceText": "Sports data center",
+          "reviewedSourceText": "Sports Data Center",
           "translation": "",
           "translations": {
             "zh": "运动数据中心"
@@ -204,6 +207,7 @@
           "x": 0.7347029320987655,
           "y": 0.4068160747396948,
           "sourceText": "more",
+          "reviewedSourceText": "More",
           "translation": "",
           "translations": {
             "zh": "更多"
@@ -269,6 +273,7 @@
           "x": 0.23571566358024693,
           "y": 0.659347810583369,
           "sourceText": "JOIN",
+          "reviewedSourceText": "Join",
           "translation": "",
           "translations": {
             "zh": "加入"
@@ -343,6 +348,7 @@
           "x": 0.6336033950617284,
           "y": 0.8549699627431057,
           "sourceText": "Cannot be less than 6 characters",
+          "reviewedSourceText": "Must be at least 6 characters",
           "translation": "",
           "translations": {
             "zh": "不能少于6个字符"
@@ -430,6 +436,7 @@
           "x": 0.5408757716049383,
           "y": 0.8690660819651674,
           "sourceText": "Try to bind another email address",
+          "reviewedSourceText": "Bind a different email address",
           "translation": "",
           "translations": {
             "zh": "尝试绑定其他邮箱"
@@ -443,6 +450,7 @@
           "x": 0.8338927469135803,
           "y": 0.9464543558479063,
           "sourceText": "Try to bind another email address",
+          "reviewedSourceText": "Bind a different email address",
           "translation": "",
           "translations": {
             "zh": "尝试绑定其他邮箱"
@@ -706,6 +714,7 @@
           "subItems": [
             {
               "sourceText": "The bluetooth device has been activated, and data connection synchronization is in progress",
+              "reviewedSourceText": "The bluetooth device has been activated, and data synchronization is in progress",
               "translation": "",
               "translations": {
                 "zh": "蓝牙设备已激活，正在同步数据连接"
@@ -715,6 +724,7 @@
             },
             {
               "sourceText": "The bluetooth component is about to enter sleep mode. Please try stepping on the pedal or tapping the screen to keep the Bluetooth enabled. Once the Bluetooth enters sleep mode, it will no longer be able to continue syncing device data",
+              "reviewedSourceText": "The bluetooth component is about to enter sleep mode. Please try stepping on the pedal or tapping the screen to keep Bluetooth enabled. Once Bluetooth enters sleep mode, it will no longer be able to sync device data",
               "translation": "",
               "translations": {
                 "zh": "蓝牙组件即将进入休眠模式，请尝试踩踏踏板或点击屏幕以保持蓝牙开启。蓝牙进入休眠模式后，将无法继续同步设备数据"
@@ -724,6 +734,7 @@
             },
             {
               "sourceText": "Bluetooth connection failed. Please try to reconnect",
+              "reviewedSourceText": "Bluetooth connection failed. Please try reconnecting",
               "translation": "",
               "translations": {
                 "zh": "蓝牙连接失败，请尝试重新连接"
@@ -733,6 +744,7 @@
             },
             {
               "sourceText": "Bluetooth has been disconnected. Please try to reconnect",
+              "reviewedSourceText": "Bluetooth has been disconnected. Please try reconnecting",
               "translation": "",
               "translations": {
                 "zh": "蓝牙已断开，请尝试重新连接"
@@ -891,6 +903,7 @@
           "x": 0.8240258487654321,
           "y": 0.15623171445289644,
           "sourceText": "1.Ensure that the hardware device is turned on",
+          "reviewedSourceText": "1. Make sure the hardware device is turned on",
           "translation": "",
           "translations": {
             "zh": "1.确保硬件设备已开启"
@@ -904,6 +917,7 @@
           "x": 0.6348958333333333,
           "y": 0.39112262810331855,
           "sourceText": "After the treadmill (exercise bike, elliptical machine, etc.) is powered on, Bluetooth is usually enabled by default. If you cannot find the Bluetooth device, you can try restarting the machine. (Some exercise bike devices require pedaling to power on)",
+          "reviewedSourceText": "After the treadmill (exercise bike, elliptical, etc.) is powered on, Bluetooth is usually enabled by default. If you cannot find the Bluetooth device, try restarting the machine. (Some exercise bikes require pedaling to power on.)",
           "translation": "",
           "translations": {
             "zh": "跑步机（室内单车、椭圆机等）通电后，蓝牙通常默认开启。如果无法找到蓝牙设备，可尝试重启机器。（部分室内单车设备需踩踏才能通电）"
@@ -917,6 +931,7 @@
           "x": 0.6712577160493827,
           "y": 0.5073560143776644,
           "sourceText": "2.The Bluetooth on your phone is turned on",
+          "reviewedSourceText": "2. The Bluetooth on your phone is turned on",
           "translation": "",
           "translations": {
             "zh": "2.手机蓝牙已开启"
@@ -930,6 +945,7 @@
           "x": 0.6481770833333333,
           "y": 0.652825378249603,
           "sourceText": "On the settings center of your phone, make sure that Bluetooth is turned on, and grant nearby device permissions or location permissions to the SPAX App.",
+          "reviewedSourceText": "In your phone's settings, make sure that Bluetooth is turned on, and grant nearby device or location permissions to the SPAX app.",
           "translation": "",
           "translations": {
             "zh": "请在手机设置中心确认蓝牙已开启，并为 SPAX App 授予附近设备权限或位置权限。"
@@ -943,6 +959,7 @@
           "x": 0.6815007716049383,
           "y": 0.7787135333946335,
           "sourceText": "3.The phone is near the hardware device",
+          "reviewedSourceText": "3. The phone is near the hardware device",
           "translation": "",
           "translations": {
             "zh": "3.手机靠近硬件设备"
@@ -956,6 +973,7 @@
           "x": 0.6282600308641976,
           "y": 0.9078617403661289,
           "sourceText": "The Bluetooth signal can be interfered with by other signals. Please make sure that your phone is placed near the hardware device and close any idle nearby Bluetooth devices.",
+          "reviewedSourceText": "The Bluetooth signal can be interfered with by other signals. Make sure your phone is placed near the hardware device and close any idle nearby Bluetooth devices.",
           "translation": "",
           "translations": {
             "zh": "蓝牙信号可能受到其他信号干扰。请确保手机靠近硬件设备，并关闭附近闲置的蓝牙设备。"
@@ -1074,6 +1092,7 @@
           "x": 0.6817997685185185,
           "y": 0.08264334045584046,
           "sourceText": "Member center",
+          "reviewedSourceText": "Membership",
           "translation": "",
           "translations": {
             "zh": "会员中心"
@@ -1371,6 +1390,7 @@
           "x": 0.38668016975308644,
           "y": 0.7016203703703704,
           "sourceText": "Rowing",
+          "reviewedSourceText": "Rowing machine",
           "translation": "",
           "translations": {
             "zh": "划船机"
@@ -1397,6 +1417,7 @@
           "x": 0.3254243827160494,
           "y": 0.7929976851851852,
           "sourceText": "AB wheel",
+          "reviewedSourceText": "Ab wheel",
           "translation": "",
           "translations": {
             "zh": "健腹轮"
@@ -1423,6 +1444,7 @@
           "x": 0.7353780864197531,
           "y": 0.8625934829059829,
           "sourceText": "Currently supports Bluetooth connection with an abdominal wheel for counting",
+          "reviewedSourceText": "Currently supports Bluetooth connection with an ab wheel for counting",
           "translation": "",
           "translations": {
             "zh": "目前支持连接健腹轮进行计数"
@@ -1541,6 +1563,7 @@
           "x": 0.7615644290123457,
           "y": 0.5518741096866097,
           "sourceText": "You'll be able to take photo or login your equipment by scanning QR code.",
+          "reviewedSourceText": "You'll be able to take photos or log in to your equipment by scanning a QR code.",
           "translation": "",
           "translations": {
             "zh": "你可以扫描二维码拍照或登录你的设备。"
@@ -1646,6 +1669,7 @@
           "x": 0.6888985339506173,
           "y": 0.9238425925925926,
           "sourceText": "For more details, please contact the customer service of the brand",
+          "reviewedSourceText": "For more details, please contact the brand's customer service.",
           "translation": "",
           "translations": {
             "zh": "如需了解更多详情，请联系品牌客服"
@@ -1734,6 +1758,7 @@
           "x": 0.6287712191358025,
           "y": 0.08523415242165241,
           "sourceText": "AB wheel",
+          "reviewedSourceText": "Ab wheel",
           "translation": "",
           "translations": {
             "zh": "健腹轮"
@@ -1747,6 +1772,7 @@
           "x": 0.7782986111111111,
           "y": 0.21366631054131055,
           "sourceText": "Turn on the bluetooth function of your mobile phone, start the ab wheel and make sure the electronic display is on\\nSearch and connect your ab wheel, and you can record exercise data in real time",
+          "reviewedSourceText": "Turn on the bluetooth function on your phone, start the ab wheel, and make sure the electronic display is on\\nSearch for and connect your ab wheel to record exercise data in real time.",
           "translation": "",
           "translations": {
             "zh": "打开手机蓝牙功能，启动健腹轮并确保电子显示屏已开启\\n搜索并连接你的健腹轮，即可实时记录运动数据"
@@ -1830,6 +1856,7 @@
           "x": 0.6465374228395062,
           "y": 0.9186298076923077,
           "sourceText": "For more details, please contact the customer service of the brand",
+          "reviewedSourceText": "For more details, please contact the brand's customer service.",
           "translation": "",
           "translations": {
             "zh": "如需了解更多详情，请联系品牌客服"
@@ -2170,6 +2197,7 @@
           "x": 0.7881655092592592,
           "y": 0.3776397792022792,
           "sourceText": "In order to ensure that your Apple Watch can normally record exercise data and synchronize heart rate in real time, please install SPAX on the Watch App and enable the following permissions",
+          "reviewedSourceText": "To ensure that your Apple Watch can record workout data and sync your heart rate in real time, install SPAX on the Watch App and enable the following permissions.",
           "translation": "",
           "translations": {
             "zh": "为确保你的 Apple Watch 能正常记录运动数据并实时同步心率，请在 Watch App 上安装 SPAX 并开启以下权限"
@@ -2196,6 +2224,7 @@
           "x": 0.7198688271604938,
           "y": 0.479389245014245,
           "sourceText": "Once enabled, it will record health data",
+          "reviewedSourceText": "When enabled, it records health data",
           "translation": "",
           "translations": {
             "zh": "开启后将记录健康数据"
@@ -2209,6 +2238,7 @@
           "x": 0.4502025462962963,
           "y": 0.5814191595441596,
           "sourceText": "Please turn on the health and sports and fitness authorization to allow SPAX to read and synchronize your exercise data.\\nIf the permission is turned off, you can turn it on in Settings > Privacy > Health > SPAX.",
+          "reviewedSourceText": "Turn on Health and Fitness permissions to allow SPAX to read and sync your workout data.\\nIf the permission is off, you can turn it on in Settings > Privacy > Health > SPAX.",
           "translation": "",
           "translations": {
             "zh": "请开启健康与运动健身授权，允许 SPAX 读取并同步你的运动数据。\\n如果权限已关闭，你可以在“设置 > 隐私 > 健康 > SPAX”中重新开启。"
@@ -2331,6 +2361,7 @@
           "x": 0.5313946759259259,
           "y": 0.2092637108262108,
           "sourceText": "Turn on the bluetooth function of your mobile phone, start the smart skipping rope and make sure the electronic display is on\\nSearch and connect your skipping rope, you can record exercise data in real time",
+          "reviewedSourceText": "Turn on the bluetooth function on your phone, turn on the smart jump rope, and make sure the display is on.\\nSearch for and connect your jump rope to record workout data in real time.",
           "translation": "",
           "translations": {
             "zh": "打开手机蓝牙功能，启动智能跳绳并确保电子显示屏已开启\\n搜索并连接你的跳绳，即可实时记录运动数据"
@@ -2370,6 +2401,7 @@
           "x": 0.48074845679012346,
           "y": 0.706721866096866,
           "sourceText": "For more details, please contact the customer service of the brand",
+          "reviewedSourceText": "For more details, contact the brand's customer service.",
           "translation": "",
           "translations": {
             "zh": "如需了解更多详情，请联系品牌客服"
@@ -2458,6 +2490,7 @@
           "x": 0.666261574074074,
           "y": 0.06907496438746438,
           "sourceText": "About us",
+          "reviewedSourceText": "About Us",
           "translation": "",
           "translations": {
             "zh": "关于我们"
@@ -2564,6 +2597,7 @@
           "x": 0.6912519290123457,
           "y": 0.08048878205128206,
           "sourceText": "'Privacy Policy'",
+          "reviewedSourceText": "Privacy Policy",
           "translation": "",
           "translations": {
             "zh": "“隐私政策”"
@@ -2586,6 +2620,7 @@
           "x": 0.7030189043209877,
           "y": 0.08497596153846154,
           "sourceText": "'Terms of Use'",
+          "reviewedSourceText": "Terms of Use",
           "translation": "",
           "translations": {
             "zh": "“使用条款”"
@@ -2634,6 +2669,7 @@
           "x": 0.4175443672839506,
           "y": 0.19659009971509972,
           "sourceText": "Help Feedback",
+          "reviewedSourceText": "Help & Feedback",
           "translation": "",
           "translations": {
             "zh": "帮助与反馈"
@@ -2647,6 +2683,7 @@
           "x": 0.40209297839506175,
           "y": 0.2777866809116809,
           "sourceText": "About us",
+          "reviewedSourceText": "About Us",
           "translation": "",
           "translations": {
             "zh": "关于我们"
@@ -2708,6 +2745,7 @@
           "x": 0.4681771670808361,
           "y": 0.5561732559708541,
           "sourceText": "CANCEL",
+          "reviewedSourceText": "Cancel",
           "translation": "",
           "translations": {
             "zh": "取消"
@@ -2756,6 +2794,7 @@
           "x": 0.4270135945037275,
           "y": 0.19774659290244231,
           "sourceText": "Help Feedback",
+          "reviewedSourceText": "Help & Feedback",
           "translation": "",
           "translations": {
             "zh": "帮助与反馈"
@@ -2821,6 +2860,7 @@
           "x": 0.6852214588510451,
           "y": 0.13215490487113749,
           "sourceText": "\"Sign up or log in  \"",
+          "reviewedSourceText": "Sign up or log in",
           "translation": "",
           "translations": {
             "zh": "“注册或登录  ”"
@@ -2843,6 +2883,7 @@
           "x": 0.6758661014471569,
           "y": 0.07080016192146808,
           "sourceText": "My favorites",
+          "reviewedSourceText": "Favorites",
           "translation": "",
           "translations": {
             "zh": "我的收藏"
@@ -2878,6 +2919,7 @@
           "x": 0.6328314573892706,
           "y": 0.5466333828093375,
           "sourceText": "Added to my favorites",
+          "reviewedSourceText": "Added to favorites",
           "translation": "",
           "translations": {
             "zh": "已添加到我的收藏"
@@ -3087,6 +3129,7 @@
           "x": 0.9116211080251425,
           "y": 0.8981109162056403,
           "sourceText": "\" · playback course\"",
+          "reviewedSourceText": "Playback class",
           "translation": "",
           "translations": {
             "zh": "\" · 录播课程\""
@@ -3096,6 +3139,7 @@
           "subItems": [
             {
               "sourceText": "\" · Live course\"",
+              "reviewedSourceText": "Live class",
               "translation": "",
               "translations": {
                 "zh": "\" · 直播课程\""
@@ -3105,6 +3149,7 @@
             },
             {
               "sourceText": "\" · free\"",
+              "reviewedSourceText": "Free",
               "translation": "",
               "translations": {
                 "zh": "\" · 自由训练\""
@@ -3176,6 +3221,7 @@
           "x": 0.44572430931150414,
           "y": 0.5259074348940763,
           "sourceText": "Heart Rate Stories",
+          "reviewedSourceText": "Heart Rate Zones",
           "translation": "",
           "translations": {
             "zh": "心率故事"
@@ -3281,6 +3327,7 @@
           "x": 0.6075606757614214,
           "y": 0.4703699291663994,
           "sourceText": "支付成功",
+          "reviewedSourceText": "Payment successful",
           "translation": "",
           "translations": {
             "zh": "支付成功"
