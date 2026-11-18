@@ -6,14 +6,195 @@
     "sourceLanguage": "英文",
     "targetLocale": "en",
     "targetLanguage": "英文",
-    "exportedAt": "2026-11-17T07:16:59.308Z",
-    "targetCount": 18,
-    "pointCount": 43,
-    "subItemCount": 29,
-    "imagePointCount": 0,
+    "exportedAt": "2026-11-18T02:21:17.668Z",
+    "targetCount": 39,
+    "pointCount": 89,
+    "subItemCount": 106,
+    "imagePointCount": 7,
     "notePointCount": 12
   },
   "targets": {
+    "home-tab-01::main": {
+      "pageName": "home-tab-01",
+      "pageTitle": "IOS授权健康弹窗",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/IOS授权健康弹窗.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7895582170050761,
+          "y": 0.7261391611527515,
+          "sourceText": "Enable health permissions",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Health_Permissions_Popup_Content",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "x": 0.8753370875634517,
+          "y": 0.8732989228417941,
+          "sourceText": "To manage activities, steps, running and other sports data, you need to enable the device's ‘Health’ permission.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Health_Permissions_Popup_Desc",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "x": 0.6423600095177665,
+          "y": 0.9239537288709515,
+          "sourceText": "Enable",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_Open_Now",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "x": 0.8515922430203046,
+          "y": 0.5591659116492327,
+          "sourceText": "No",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Alert_No_Open",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-02::main": {
+      "pageName": "home-tab-02",
+      "pageTitle": "IOS授权蓝牙弹窗",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/IOS授权蓝牙弹窗.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.6838911802030457,
+          "y": 0.42812234027949375,
+          "sourceText": "You have not granted this app permission to use bluetooth. SPAX App can only connect your treadmill through Bluetooth after obtaining Bluetooth permission.",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "NSBluetoothAlwaysUsageDescription",
+          "subItems": [
+            {
+              "sourceText": "You have not granted this app permission to use bluetooth. SPAX App can only connect your treadmill through Bluetooth after obtaining Bluetooth permission.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSBluetoothPeripheralUsageDescription"
+            },
+            {
+              "sourceText": "You'll be able to take photo or login your equipment by scanning QR code.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSCameraUsageDescription"
+            },
+            {
+              "sourceText": "You have not granted this app permission to use location.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSLocationAlwaysAndWhenInUseUsageDescription"
+            },
+            {
+              "sourceText": "You have not granted this app permission to use location.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSLocationAlwaysUsageDescription"
+            },
+            {
+              "sourceText": "You have not granted this app permission to use location.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSLocationWhenInUseUsageDescription"
+            },
+            {
+              "sourceText": "Need your consent in order to access the microphone.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSMicrophoneUsageDescription"
+            },
+            {
+              "sourceText": "Need your consent in order to access your photo.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSPhotoLibraryAddUsageDescription"
+            },
+            {
+              "sourceText": "Need your consent in order to access your photo.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSPhotoLibraryUsageDescription"
+            },
+            {
+              "sourceText": "SPAX requires you to turn on the local network permission to use the function of controlling and synchronizing treadmill data.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSLocalNetworkUsageDescription"
+            },
+            {
+              "sourceText": "SPAX can save exercise records to the Health App through this permission.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSHealthShareUsageDescription"
+            },
+            {
+              "sourceText": "SPAX can use this permission to apply the exercise data in the Health App to the record.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSHealthUpdateUsageDescription"
+            },
+            {
+              "sourceText": "SPAX needs to use your calendar to remind you of upcoming training camp plans.",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "NSCalendarsUsageDescription"
+            }
+          ]
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
+    "home-tab-04::main": {
+      "pageName": "home-tab-04",
+      "pageTitle": "单车连接蓝牙上课2",
+      "variantId": null,
+      "imageRef": "assets/screenshots/首页tab/单车连接蓝牙上课2.jpg?v=offline-info-page-v2-20261113-13",
+      "items": [
+        {
+          "number": 1,
+          "x": 0.7739332170050761,
+          "y": 0.7235690380159615,
+          "sourceText": "Valuable member users, you can watch this paid course in its entirety",
+          "translation": "",
+          "translations": {},
+          "androidTranslationId": "",
+          "iosTranslationId": "Live_Page_Try_Tip_Vip_Content",
+          "subItems": []
+        }
+      ],
+      "imageItems": [],
+      "noteItems": []
+    },
     "home-tab-05::main": {
       "pageName": "home-tab-05",
       "pageTitle": "单车连接蓝牙上课3",
@@ -28,7 +209,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "whether_auto_resistance",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Resistance_Tip",
           "subItems": []
         },
         {
@@ -39,7 +220,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "whether_auto_resistance_desc",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Auto_Set_Speed_Content",
           "subItems": []
         }
       ],
@@ -60,7 +241,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "minutes",
-          "iosTranslationId": "",
+          "iosTranslationId": "Unit_minutes",
           "subItems": []
         }
       ],
@@ -81,7 +262,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "lets_go",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Start",
           "subItems": []
         },
         {
@@ -92,7 +273,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "brief_introduction",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Introduction",
           "subItems": []
         }
       ],
@@ -118,7 +299,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "home_tab_join_now",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open",
           "note": "不是会员的时候，需要付费标题",
           "subItems": []
         },
@@ -130,7 +311,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "membership_unlocks_all_scenes",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open_Subtitle_Scenes",
           "note": "开通会员解锁所有实景",
           "subItems": []
         }
@@ -150,7 +331,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "find_more_in_store",
-          "iosTranslationId": "",
+          "iosTranslationId": "Course_Page_Find_More",
           "subItems": []
         }
       ],
@@ -171,7 +352,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "home_tab_all_categories",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_All_Class",
           "subItems": []
         },
         {
@@ -182,7 +363,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "home_tab_long_press_sort",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Can_Drag",
           "subItems": []
         }
       ],
@@ -203,7 +384,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "all",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_All",
           "subItems": []
         },
         {
@@ -214,14 +395,14 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "pending_tasks",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Card_To_Be_Crouse",
           "subItems": [
             {
               "sourceText": "Awesome! %1$s",
               "translation": "",
               "translations": {},
               "androidTranslationId": "today_finish_encourage_format",
-              "iosTranslationId": ""
+              "iosTranslationId": "Home_Page_Card_Empty_Awesome"
             }
           ]
         },
@@ -240,7 +421,21 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "today_finished",
-              "iosTranslationId": ""
+              "iosTranslationId": "Home_Page_Card_Finished_Crouse"
+            },
+            {
+              "sourceText": "You need to complete",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Card_To_Be_More_Crouse_First"
+            },
+            {
+              "sourceText": "classes",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Home_Page_Card_To_Be_More_Crouse_Last"
             }
           ]
         },
@@ -252,7 +447,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "home_tab_home",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Tab_Title",
           "subItems": []
         }
       ],
@@ -266,7 +461,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "rest_day",
-          "iosTranslationId": "",
+          "iosTranslationId": "Plan_Page_Reset_Day",
           "note": "休息日",
           "subItems": []
         },
@@ -278,7 +473,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "add_course",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Card_Empty_Add",
           "note": "休息日加课",
           "subItems": []
         }
@@ -298,7 +493,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "home_tab_join_now",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Card_Join_Now",
           "subItems": []
         }
       ],
@@ -319,7 +514,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "mode_warning_title",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Warning_Title",
           "subItems": []
         },
         {
@@ -330,7 +525,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "spax_warn",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Warning_Content",
           "subItems": []
         },
         {
@@ -341,7 +536,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "accept_warning",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Warning_Tip_Title",
           "subItems": []
         },
         {
@@ -352,7 +547,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "agree",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Privacy_Agree",
           "subItems": []
         },
         {
@@ -363,7 +558,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "disagree",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Privacy_Disagree",
           "subItems": []
         }
       ],
@@ -380,11 +575,11 @@
           "number": 1,
           "x": 0.5558375634517766,
           "y": 0.49699596601150114,
-          "sourceText": "Please read and agree to the relevant precautions..",
+          "sourceText": "Please read and agree to the relevant precautions and risk information",
           "translation": "",
           "translations": {},
           "androidTranslationId": "read_warning",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Warning_Yes_No",
           "subItems": []
         }
       ],
@@ -412,28 +607,28 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "heart_rate_step2",
-              "iosTranslationId": ""
+              "iosTranslationId": "Free_Exercise_Page_AI_Heart_Tip_Level_2"
             },
             {
               "sourceText": "Cardio",
               "translation": "",
               "translations": {},
               "androidTranslationId": "heart_rate_step3",
-              "iosTranslationId": ""
+              "iosTranslationId": "Free_Exercise_Page_AI_Heart_Tip_Level_3"
             },
             {
               "sourceText": "Endurance",
               "translation": "",
               "translations": {},
               "androidTranslationId": "heart_rate_step4",
-              "iosTranslationId": ""
+              "iosTranslationId": "Free_Exercise_Page_AI_Heart_Tip_Level_4"
             },
             {
               "sourceText": "Peak",
               "translation": "",
               "translations": {},
               "androidTranslationId": "heart_rate_step5",
-              "iosTranslationId": ""
+              "iosTranslationId": "Free_Exercise_Page_AI_Heart_Tip_Level_5"
             }
           ]
         }
@@ -465,11 +660,25 @@
               "iosTranslationId": ""
             },
             {
-              "sourceText": "speed_low",
+              "sourceText": "speed",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "speed",
+              "androidTranslationId": "speed_low",
               "iosTranslationId": ""
+            },
+            {
+              "sourceText": "Current speed",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Speed_Current"
+            },
+            {
+              "sourceText": "Current resistance",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Resistance_Current"
             }
           ]
         }
@@ -484,7 +693,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "ask_thoughts_this_pattern",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Evaluate_Title",
           "note": "结束时给这个模式打分",
           "subItems": [
             {
@@ -492,7 +701,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "submit",
-              "iosTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Evaluate_Submit",
               "note": ""
             },
             {
@@ -508,7 +717,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "submission_successful",
-              "iosTranslationId": "",
+              "iosTranslationId": "Alert_Submit_Success",
               "note": "提交成功toast"
             }
           ]
@@ -521,7 +730,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "next_speed",
-          "iosTranslationId": "",
+          "iosTranslationId": "Live_Page_Tip_Next_Speed",
           "note": "提前15s提示下一个速度",
           "subItems": [
             {
@@ -529,7 +738,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "next_resistance",
-              "iosTranslationId": "",
+              "iosTranslationId": "Live_Page_Tip_Next_Resistance",
               "note": "下一阻力"
             }
           ]
@@ -560,6 +769,38 @@
               "androidTranslationId": "keep_up_the_good_work",
               "iosTranslationId": "",
               "note": "进度下面的鼓励的话"
+            },
+            {
+              "sourceText": "Completed",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Km_Did_Complete_1",
+              "note": ""
+            },
+            {
+              "sourceText": "km",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Unit_km",
+              "note": ""
+            },
+            {
+              "sourceText": "Let's go!",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Km_Did_Complete_Subtitle",
+              "note": ""
+            },
+            {
+              "sourceText": "You have completed",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Alert_Km_Did_Complete_2",
+              "note": ""
             }
           ]
         },
@@ -580,6 +821,30 @@
               "translations": {},
               "androidTranslationId": "too_high_format",
               "iosTranslationId": "",
+              "note": ""
+            },
+            {
+              "sourceText": " is to high",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Little_H",
+              "note": ""
+            },
+            {
+              "sourceText": " is just right",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Little_N",
+              "note": ""
+            },
+            {
+              "sourceText": " is to low",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Little_S",
               "note": ""
             }
           ]
@@ -602,6 +867,30 @@
               "androidTranslationId": "too_high_desc_format",
               "iosTranslationId": "",
               "note": "速度/阻力太高的描述"
+            },
+            {
+              "sourceText": "If you feel short of breath, adjust to the recommended",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Little_H_Tip",
+              "note": ""
+            },
+            {
+              "sourceText": "Keep it up!",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Little_N_Tip",
+              "note": ""
+            },
+            {
+              "sourceText": "If you feel short of breath, adjust to the recommended",
+              "translation": "",
+              "translations": {},
+              "androidTranslationId": "",
+              "iosTranslationId": "Flag_Little_S_Tip",
+              "note": ""
             }
           ]
         }
@@ -621,49 +910,49 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "sport_unit_pace",
-          "iosTranslationId": "",
+          "iosTranslationId": "Unit_Pace",
           "subItems": [
             {
               "sourceText": "Power w",
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_unit_power_w",
-              "iosTranslationId": ""
+              "iosTranslationId": "Share_View_Data_Unit_Power"
             },
             {
               "sourceText": "Max consecutive jump count",
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_max_consecutive_jump_count",
-              "iosTranslationId": ""
+              "iosTranslationId": "Unit_Max_Consecutive_Count"
             },
             {
               "sourceText": "Number of interruptions",
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_unit_interruptions",
-              "iosTranslationId": ""
+              "iosTranslationId": "Unit_Interruptions_Count"
             },
             {
               "sourceText": "avg rpm",
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_unit_avg_rpm",
-              "iosTranslationId": ""
+              "iosTranslationId": "Share_View_Data_Unit_Avg_Rpm"
             },
             {
               "sourceText": "RPM",
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_unit_rpm",
-              "iosTranslationId": ""
+              "iosTranslationId": "Unit_RPM"
             },
             {
               "sourceText": "SPM",
               "translation": "",
               "translations": {},
               "androidTranslationId": "sport_unit_spm",
-              "iosTranslationId": ""
+              "iosTranslationId": "Unit_SPM"
             }
           ]
         },
@@ -675,7 +964,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "sport_unit_heart_rate",
-          "iosTranslationId": "",
+          "iosTranslationId": "Unit_Heart_Rate",
           "subItems": []
         }
       ],
@@ -696,7 +985,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "ai_heart_rate_zones",
-          "iosTranslationId": "",
+          "iosTranslationId": "Free_Exercise_Page_AI_Heart_Rate",
           "subItems": []
         }
       ],
@@ -710,7 +999,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "target_13_step_2_min_low_90",
-          "iosTranslationId": "",
+          "iosTranslationId": "Free_Exercise_Page_AI_Heart_Danmaku_Tip_1",
           "note": "中间飘过的弹幕",
           "subItems": [
             {
@@ -718,7 +1007,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "target_13_step_2_min",
-              "iosTranslationId": "",
+              "iosTranslationId": "Free_Exercise_Page_AI_Heart_Danmaku_Tip_2",
               "note": ""
             },
             {
@@ -726,7 +1015,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "target_13_step_4_max",
-              "iosTranslationId": "",
+              "iosTranslationId": "Free_Exercise_Page_AI_Heart_Danmaku_Tip_3",
               "note": ""
             }
           ]
@@ -747,14 +1036,14 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "suggested_speed",
-          "iosTranslationId": "",
+          "iosTranslationId": "Flag_Speed_Recommend",
           "subItems": [
             {
               "sourceText": "Suggested resistance",
               "translation": "",
               "translations": {},
               "androidTranslationId": "suggested_resistance",
-              "iosTranslationId": ""
+              "iosTranslationId": "Flag_Resistance_Recommend"
             }
           ]
         },
@@ -766,14 +1055,14 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "current_speed",
-          "iosTranslationId": "",
+          "iosTranslationId": "Flag_Speed_Current",
           "subItems": [
             {
               "sourceText": "Current resistance",
               "translation": "",
               "translations": {},
               "androidTranslationId": "current_resistance",
-              "iosTranslationId": ""
+              "iosTranslationId": "Flag_Resistance_Current"
             }
           ]
         }
@@ -795,7 +1084,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "not_support_that_feature",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Mode_Not_Support_Device",
           "subItems": []
         },
         {
@@ -806,7 +1095,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "alert_notice",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_Notice_Title",
           "subItems": []
         },
         {
@@ -817,7 +1106,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "exit_alert_end",
-          "iosTranslationId": "",
+          "iosTranslationId": "Alert_End",
           "subItems": []
         }
       ],
@@ -871,7 +1160,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "mode_consumption",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_List_Kcal",
           "subItems": []
         },
         {
@@ -882,14 +1171,14 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "mode_max_resistance",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Resis",
           "subItems": [
             {
               "sourceText": "Max speed",
               "translation": "",
               "translations": {},
               "androidTranslationId": "mode_max_speed",
-              "iosTranslationId": ""
+              "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Speed"
             }
           ]
         },
@@ -923,7 +1212,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "mode_introduction",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Introduction",
           "subItems": []
         },
         {
@@ -934,7 +1223,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "mode_plan",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Plan",
           "subItems": []
         },
         {
@@ -959,7 +1248,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "activate_membership",
-          "iosTranslationId": "",
+          "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open",
           "note": "不是会员的时候",
           "subItems": [
             {
@@ -967,7 +1256,7 @@
               "translation": "",
               "translations": {},
               "androidTranslationId": "membership_unlocks_all_scenes",
-              "iosTranslationId": "",
+              "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Open_Subtitle_Scenes",
               "note": ""
             }
           ]
@@ -988,14 +1277,14 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "all_courses",
-          "iosTranslationId": "",
+          "iosTranslationId": "Training_Plan_List_All_Crouse",
           "subItems": [
             {
               "sourceText": "All plan",
               "translation": "",
               "translations": {},
               "androidTranslationId": "All_plan",
-              "iosTranslationId": ""
+              "iosTranslationId": "Collection_Page_All_Plan"
             }
           ]
         },
@@ -1028,7 +1317,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "free_exercise",
-          "iosTranslationId": "",
+          "iosTranslationId": "Free_Exercise_Page_Title",
           "subItems": []
         },
         {
@@ -1039,7 +1328,7 @@
           "translation": "",
           "translations": {},
           "androidTranslationId": "other_sport_mode",
-          "iosTranslationId": "",
+          "iosTranslationId": "Free_Exercise_Page_Segmentation_Content",
           "subItems": []
         }
       ],
@@ -1059,7 +1348,7 @@
           "sourceText": "The following methods can also record exercise data",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "other_sport_mode",
           "iosTranslationId": "Free_Exercise_Page_Segmentation_Content",
           "subItems": []
         }
@@ -1080,7 +1369,7 @@
           "sourceText": "Mode plan",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "mode_plan",
           "iosTranslationId": "Home_Page_Enjoy_Run_Mode_Plan",
           "subItems": []
         }
@@ -1122,7 +1411,7 @@
           "sourceText": "km",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "mode_unit_km",
           "iosTranslationId": "Unit_km",
           "subItems": []
         }
@@ -1143,7 +1432,7 @@
           "sourceText": "Set goals",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "set_goals",
           "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Set_Goals",
           "subItems": []
         },
@@ -1154,7 +1443,7 @@
           "sourceText": "Distance",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "mode_distance",
           "iosTranslationId": "Flag_Distance",
           "subItems": []
         },
@@ -1165,7 +1454,7 @@
           "sourceText": "Duration",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "sport_unit_duration",
           "iosTranslationId": "Flag_Duration",
           "subItems": []
         },
@@ -1176,7 +1465,7 @@
           "sourceText": "Run without goal",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "without_goal",
           "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Run_Out_Goal",
           "subItems": []
         },
@@ -1187,7 +1476,7 @@
           "sourceText": "Start",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "start_exercising",
           "iosTranslationId": "Home_Page_Enjoy_Run_Detail_Popup_Start",
           "subItems": []
         },
@@ -1198,7 +1487,7 @@
           "sourceText": "minutes",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "minutes",
           "iosTranslationId": "Unit_minutes",
           "subItems": []
         }
@@ -1219,7 +1508,7 @@
           "sourceText": "Long press and drag to sort",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "home_tab_long_press_sort",
           "iosTranslationId": "Home_Page_Can_Drag",
           "subItems": []
         },
@@ -1230,7 +1519,7 @@
           "sourceText": "All Categories",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "home_tab_all_categories",
           "iosTranslationId": "Home_Page_All_Class",
           "subItems": []
         }
@@ -1359,21 +1648,21 @@
           "sourceText": "The bluetooth device has been activated, and data connection synchronization is in progress",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "bluetooth_open_data_sync",
           "iosTranslationId": "Alert_Bluetooth_Connect_Status_Start",
           "subItems": [
             {
               "sourceText": "The bluetooth component is about to enter sleep mode. Please try stepping on the pedal or tapping the screen to keep the Bluetooth enabled. Once the Bluetooth enters sleep mode, it will no longer be able to continue syncing device data",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "please_try_step",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Sleep"
             },
             {
               "sourceText": "The bluetooth component is about to enter sleep mode.",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "bluetooth_reconnect",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Sleep_Title"
             },
             {
@@ -1401,7 +1690,7 @@
               "sourceText": "Bluetooth connecting",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "bluetooth_connecting",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Ing"
             },
             {
@@ -1415,7 +1704,7 @@
               "sourceText": "Bluetooth connection successful",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "bluetooth_connection_successful",
               "iosTranslationId": "Alert_Bluetooth_Connect_Status_Success"
             },
             {
@@ -1523,49 +1812,49 @@
           "sourceText": "Distance (km)",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "sport_unit_distance_km",
           "iosTranslationId": "Unit_Distance_km",
           "subItems": [
             {
               "sourceText": "Duration",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_duration",
               "iosTranslationId": "Flag_Duration"
             },
             {
               "sourceText": "Kcal",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_kcal",
               "iosTranslationId": "Unit_Kcal"
             },
             {
               "sourceText": "Pace",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_pace",
               "iosTranslationId": "Unit_Pace"
             },
             {
               "sourceText": "Heart Rate",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_heart_rate",
               "iosTranslationId": "Unit_Heart_Rate"
             },
             {
               "sourceText": "RPM",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_rpm",
               "iosTranslationId": "Unit_RPM"
             },
             {
               "sourceText": "SPM",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_spm",
               "iosTranslationId": "Unit_SPM"
             },
             {
@@ -1586,7 +1875,7 @@
               "sourceText": "Count",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_count",
               "iosTranslationId": "Unit_Count"
             },
             {
@@ -1600,14 +1889,14 @@
               "sourceText": "Max consecutive jump count",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_max_consecutive_jump_count",
               "iosTranslationId": "Unit_Max_Consecutive_Count"
             },
             {
               "sourceText": "Number of interruptions",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_interruptions",
               "iosTranslationId": "Unit_Interruptions_Count"
             }
           ]
@@ -1640,7 +1929,7 @@
           "sourceText": "Free exercise",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "free_exercise",
           "iosTranslationId": "Free_Exercise_Page_Title",
           "subItems": []
         }
@@ -1683,14 +1972,14 @@
           "sourceText": "Cross Training",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "mode_scene_tab_cross_training",
           "iosTranslationId": "Home_Page_Enjoy_Run_Segment_Title_Cross_Training",
           "subItems": [
             {
               "sourceText": "Rowing",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "mode_scene_tab_rowing",
               "iosTranslationId": "Home_Page_Enjoy_Run_Segment_Title_Rowing"
             }
           ]
@@ -1702,42 +1991,42 @@
           "sourceText": "Duration",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "sport_unit_duration",
           "iosTranslationId": "Home_Page_Enjoy_Run_List_Duration",
           "subItems": [
             {
               "sourceText": "Distance",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "mode_distance",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Distance"
             },
             {
               "sourceText": "Consumption",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "mode_consumption",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Kcal"
             },
             {
               "sourceText": "Max speed",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "mode_max_speed",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Speed"
             },
             {
               "sourceText": "Max resistance",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "mode_max_resistance",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Resis"
             },
             {
               "sourceText": "Total length",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "total_length",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_How_Long"
             }
           ]
@@ -1749,7 +2038,7 @@
           "sourceText": "min",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "mode_min",
           "iosTranslationId": "Home_Page_Enjoy_Run_List_Duration_Unit",
           "subItems": [
             {
@@ -1763,7 +2052,7 @@
               "sourceText": "kcal",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "kcal_lowercase",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Kcal_Unit"
             },
             {
@@ -1777,7 +2066,7 @@
               "sourceText": "level",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "mode_level",
               "iosTranslationId": "Home_Page_Enjoy_Run_List_Top_Resis_Unit"
             },
             {
@@ -1846,7 +2135,7 @@
           "sourceText": "Join Now",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "home_tab_join_now",
           "iosTranslationId": "Home_Page_Card_Join_Now",
           "subItems": []
         }
@@ -1867,7 +2156,7 @@
           "sourceText": "Home",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "home_tab_home",
           "iosTranslationId": "Home_Page_Tab_Title",
           "subItems": []
         },
@@ -1878,7 +2167,7 @@
           "sourceText": "Plan",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "home_tab_plan",
           "iosTranslationId": "Plan_Page_Tab_Title",
           "subItems": []
         },
@@ -1889,7 +2178,7 @@
           "sourceText": "Course",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "home_tab_course",
           "iosTranslationId": "Course_Page_Tab_Title",
           "subItems": []
         },
@@ -1900,7 +2189,7 @@
           "sourceText": "Profile",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "home_tab_my",
           "iosTranslationId": "Mine_Page_Tab_Title",
           "subItems": []
         }
@@ -1921,14 +2210,14 @@
           "sourceText": "All courses",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "all_courses",
           "iosTranslationId": "Collection_Page_All_Courses",
           "subItems": [
             {
               "sourceText": "All plan",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "All_plan",
               "iosTranslationId": "Collection_Page_All_Plan"
             }
           ]
@@ -1961,21 +2250,21 @@
           "number": 1,
           "x": 0.08295328362944163,
           "y": 0.3987665973297657,
-          "androidResourceId": "",
+          "androidResourceId": "ic_card_badge_1",
           "iosResourceId": "home_page_collection_rank_no_1_image"
         },
         {
           "number": 2,
           "x": 0.06838911802030456,
           "y": 0.5683869548882515,
-          "androidResourceId": "",
+          "androidResourceId": "ic_card_badge_2",
           "iosResourceId": "home_page_collection_rank_no_2_image"
         },
         {
           "number": 3,
           "x": 0.0641953521573604,
           "y": 0.7462361058930257,
-          "androidResourceId": "",
+          "androidResourceId": "ic_card_badge_3",
           "iosResourceId": "home_page_collection_rank_no_3_image"
         }
       ],
@@ -1994,7 +2283,7 @@
           "sourceText": "Valuable member users, you can watch this paid course in its entirety",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "vip_watch_full_paid_course",
           "iosTranslationId": "Live_Page_Try_Tip_Vip_Content",
           "subItems": []
         },
@@ -2005,77 +2294,77 @@
           "sourceText": "Duration",
           "translation": "",
           "translations": {},
-          "androidTranslationId": "",
+          "androidTranslationId": "sport_unit_duration",
           "iosTranslationId": "Flag_Duration",
           "subItems": [
             {
               "sourceText": "KCAL",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_KCAL",
               "iosTranslationId": "Unit_Kcal"
             },
             {
               "sourceText": "Distance (km)",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_distance_km",
               "iosTranslationId": "Unit_Distance_km"
             },
             {
               "sourceText": "Score",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_score",
               "iosTranslationId": "Flag_Score_DF"
             },
             {
               "sourceText": "Cadence",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_cadence",
               "iosTranslationId": "Unit_Cadence"
             },
             {
               "sourceText": "Speed km/h",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_speed_km_hour",
               "iosTranslationId": "Unit_Speed_km/h"
             },
             {
               "sourceText": "Power",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_power",
               "iosTranslationId": "Live_Page_Bottom_Unit_Power"
             },
             {
               "sourceText": "Step Count",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_step_count",
               "iosTranslationId": "Live_Page_Bottom_Unit_Step_Count"
             },
             {
               "sourceText": "SPM",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_spm",
               "iosTranslationId": "Live_Page_Bottom_Unit_SPM"
             },
             {
               "sourceText": "Count",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_count",
               "iosTranslationId": "Live_Page_Bottom_Unit_Count"
             },
             {
               "sourceText": "Number of interruptions",
               "translation": "",
               "translations": {},
-              "androidTranslationId": "",
+              "androidTranslationId": "sport_unit_interruptions",
               "iosTranslationId": "Live_Page_Bottom_Unit_Break_Count"
             }
           ]
