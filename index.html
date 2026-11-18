@@ -1671,6 +1671,14 @@
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="fr">法语</button>
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="uk">乌克兰语</button>
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="ar-SA">阿拉伯语（沙特）</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="es-ES">西班牙语（西班牙）</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="es-CO">西班牙语（哥伦比亚）</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="es-MX">西班牙语（墨西哥）</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="it">意大利语</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="id">印度尼西亚语</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="ru">俄语</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="ja">日语</button>
+        <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="ko">韩语</button>
         <button class="language-button" type="button" role="radio" aria-checked="false" tabindex="-1" data-language="zh">中文</button>
       </div>
     </div>
@@ -1904,9 +1912,35 @@
         tr: '土耳其语',
         fr: '法语',
         uk: '乌克兰语',
-        'ar-SA': '阿拉伯语（沙特）'
+        'ar-SA': '阿拉伯语（沙特）',
+        'es-ES': '西班牙语（西班牙）',
+        'es-CO': '西班牙语（哥伦比亚）',
+        'es-MX': '西班牙语（墨西哥）',
+        it: '意大利语',
+        id: '印度尼西亚语',
+        ru: '俄语',
+        ja: '日语',
+        ko: '韩语'
       }
-      const languageCodes = { zh: 'zh-CN', en: 'en', th: 'th', ms: 'ms', de: 'de', tr: 'tr', fr: 'fr', uk: 'uk', 'ar-SA': 'ar-SA' }
+      const languageCodes = {
+        zh: 'zh-CN',
+        en: 'en',
+        th: 'th',
+        ms: 'ms',
+        de: 'de',
+        tr: 'tr',
+        fr: 'fr',
+        uk: 'uk',
+        'ar-SA': 'ar-SA',
+        'es-ES': 'es-ES',
+        'es-CO': 'es-CO',
+        'es-MX': 'es-MX',
+        it: 'it-IT',
+        id: 'id-ID',
+        ru: 'ru-RU',
+        ja: 'ja-JP',
+        ko: 'ko-KR'
+      }
       const languageButtons = Array.from(document.querySelectorAll('.language-button'))
       let currentReviewMode = 'baseline'
       const elements = {
