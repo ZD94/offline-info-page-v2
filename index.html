@@ -616,6 +616,22 @@
       background: #edf9f2;
     }
 
+    .manual-annotation-summary-action {
+      cursor: pointer;
+      white-space: nowrap;
+      transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .manual-annotation-summary-action:hover {
+      border-color: #74bd95;
+      background: #e3f6eb;
+    }
+
+    .manual-annotation-summary-action:focus-visible {
+      outline: 3px solid rgba(33, 122, 75, .2);
+      outline-offset: 2px;
+    }
+
     .content-summary {
       display: flex;
       align-items: center;
@@ -1313,6 +1329,216 @@
       margin: 5px 0 0;
     }
 
+    .current-tab-point-summary-dialog {
+      display: block;
+      grid-column: 1 / -1;
+      min-width: 0;
+    }
+
+    .current-tab-point-summary-dialog[hidden] { display: none; }
+
+    .current-tab-point-summary-card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fbfcfe;
+    }
+
+    @media (min-width: 1501px) {
+      .workspace.is-image-point-summary-open {
+        grid-template-columns: minmax(360px, 420px) minmax(540px, 680px) minmax(360px, 440px);
+        gap: 20px;
+        width: min(1780px, calc(100% - 24px));
+        padding-left: 72px;
+      }
+
+      .workspace.is-image-point-summary-open > .screenshot-panel {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .workspace.is-image-point-summary-open > #pageContent {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .workspace.is-image-point-summary-open > .current-tab-point-summary-dialog {
+        position: sticky;
+        top: calc(var(--page-header-height) + 18px);
+        grid-column: 3;
+        grid-row: 1;
+        align-self: start;
+        max-height: calc(100vh - var(--page-header-height) - 36px);
+        max-height: calc(100dvh - var(--page-header-height) - 36px);
+      }
+
+      .workspace.is-image-point-summary-open .current-tab-point-summary-card {
+        max-height: calc(100vh - var(--page-header-height) - 36px);
+        max-height: calc(100dvh - var(--page-header-height) - 36px);
+      }
+
+      .workspace.is-image-point-summary-open .current-tab-point-summary-title { font-size: 18px; }
+
+      .workspace.is-image-point-summary-open .current-tab-point-summary-table-wrap {
+        border: 0;
+        border-radius: 0;
+      }
+
+      .workspace.is-image-point-summary-open .current-tab-point-summary-table {
+        min-width: 0;
+        table-layout: auto;
+      }
+
+      .workspace.is-image-point-summary-open .current-tab-point-summary-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .workspace.is-image-point-summary-open .current-tab-point-summary-table tbody {
+        display: grid;
+        gap: 10px;
+      }
+
+      .workspace.is-image-point-summary-open .current-tab-point-summary-table tr {
+        display: block;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--surface);
+      }
+
+      .workspace.is-image-point-summary-open .current-tab-point-summary-table td {
+        display: grid;
+        grid-template-columns: 84px minmax(0, 1fr);
+        gap: 8px;
+        padding: 8px 10px;
+        border-right: 0;
+        white-space: normal;
+      }
+
+      .workspace.is-image-point-summary-open .current-tab-point-summary-table td::before {
+        color: #657087;
+        content: attr(data-label);
+        font-weight: 800;
+      }
+    }
+
+    @media (max-width: 1500px) and (min-width: 981px) {
+      .current-tab-point-summary-dialog {
+        position: fixed;
+        z-index: 20;
+        right: 12px;
+        bottom: 12px;
+        width: min(720px, calc(100% - 24px));
+        max-height: min(72vh, 720px);
+        max-height: min(72dvh, 720px);
+      }
+
+      .current-tab-point-summary-card { max-height: inherit; }
+    }
+
+    .current-tab-point-summary-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .current-tab-point-summary-title {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .current-tab-point-summary-close {
+      padding: 7px 13px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      color: #4c586d;
+      background: var(--surface-soft);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .current-tab-point-summary-close:hover { border-color: #9eabba; }
+
+    .current-tab-point-summary-summary {
+      margin: 10px 0 14px;
+      color: #536078;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .current-tab-point-summary-table-wrap {
+      min-height: 0;
+      max-height: min(62vh, 680px);
+      max-height: min(62dvh, 680px);
+      overflow: auto;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .current-tab-point-summary-table {
+      width: 100%;
+      min-width: 700px;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .current-tab-point-summary-table th,
+    .current-tab-point-summary-table td {
+      padding: 10px 12px;
+      border-right: 1px solid #e7ebf1;
+      border-bottom: 1px solid #e7ebf1;
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+    }
+
+    .current-tab-point-summary-table th:last-child,
+    .current-tab-point-summary-table td:last-child { border-right: 0; }
+
+    .current-tab-point-summary-table tbody tr:last-child td { border-bottom: 0; }
+
+    .current-tab-point-summary-table th {
+      position: sticky;
+      z-index: 1;
+      top: 0;
+      color: #3f4a60;
+      background: #f4f7fb;
+      font-weight: 850;
+    }
+
+    .current-tab-point-summary-table th:nth-child(1) { width: 30%; }
+    .current-tab-point-summary-table th:nth-child(2) { width: 15%; }
+    .current-tab-point-summary-table th:nth-child(3),
+    .current-tab-point-summary-table th:nth-child(4) { width: 27.5%; }
+
+    .current-tab-point-summary-table td.is-empty {
+      color: #a0a9b8;
+      font-style: italic;
+    }
+
+    .current-tab-point-summary-empty {
+      margin: 0;
+      padding: 36px 18px;
+      color: var(--muted);
+      text-align: center;
+    }
+
     .action-button.export {
       color: #fff;
       border-color: #17613b;
@@ -1387,6 +1613,8 @@
     }
 
     @media (max-width: 700px) {
+      .current-tab-point-summary-card { padding: 12px; }
+      .current-tab-point-summary-title { font-size: 18px; }
       .workspace { padding-left: 0; }
       .screenshot-panel { overflow: hidden; }
       .image-stage {
@@ -1507,29 +1735,42 @@
       <div class="baseline-heading">
         <button id="checkManualAnnotations" class="action-button check manual-annotation-check-action" type="button" aria-controls="manualAnnotationCheckResult" aria-expanded="false">检查当前标注结果</button>
         <h2 class="baseline-title">人工标注</h2>
-        <span class="readonly-badge editable-badge">自动保存</span>
+        <button id="summarizeCurrentTabImagePoints" class="readonly-badge editable-badge manual-annotation-summary-action" type="button" aria-controls="currentTabImagePointSummaryDialog" aria-expanded="false">当前 Tab 图片打点汇总</button>
       </div>
-      <div class="content-heading">
-        <div>
-          <p id="chineseTextKicker" class="content-kicker">问卷页面 01</p>
-          <h3 id="chineseTextTitle" class="content-title">问卷介绍</h3>
+      <div id="manualAnnotationEditor">
+        <div class="content-heading">
+          <div>
+            <p id="chineseTextKicker" class="content-kicker">问卷页面 01</p>
+            <h3 id="chineseTextTitle" class="content-title">问卷介绍</h3>
+          </div>
+        </div>
+        <div class="content-summary">
+          <span>文本点填写原文与译文 ID；图片点填写安卓与 iOS 资源 ID</span>
+          <span id="chineseTextCount" class="text-count">0 个打点</span>
+        </div>
+        <ol id="chineseTextList" class="chinese-text-list" aria-live="polite"></ol>
+        <div class="review-actions">
+          <button id="resetCurrentManualAnnotation" class="action-button" type="button">重置当前页</button>
+          <button id="saveCurrentManualAnnotation" class="action-button primary" type="button">保存当前页</button>
+          <button id="exportManualAnnotations" class="action-button export" type="button">导出标注 JSON</button>
+          <button id="exportAndroidTranslations" class="action-button" type="button" hidden>导出安卓翻译结果</button>
+          <button id="exportIosTranslations" class="action-button" type="button" hidden>导出IOS翻译结果</button>
+        </div>
+        <p class="export-hint">导出 JSON 会按页面、子项和打点编号保留文本、备注打点的原文、译文 ID 与备注，以及图片打点的安卓 / iOS 资源 ID。</p>
+        <div class="manual-annotation-footer">
+          <p id="manualAnnotationStatus" class="review-status" role="status" aria-live="polite">修改会在停止输入 600ms 后自动保存</p>
         </div>
       </div>
-      <div class="content-summary">
-        <span>文本点填写原文与译文 ID；图片点填写安卓与 iOS 资源 ID</span>
-        <span id="chineseTextCount" class="text-count">0 个打点</span>
-      </div>
-      <ol id="chineseTextList" class="chinese-text-list" aria-live="polite"></ol>
-      <div class="review-actions">
-        <button id="resetCurrentManualAnnotation" class="action-button" type="button">重置当前页</button>
-        <button id="saveCurrentManualAnnotation" class="action-button primary" type="button">保存当前页</button>
-        <button id="exportManualAnnotations" class="action-button export" type="button">导出标注 JSON</button>
-        <button id="exportAndroidTranslations" class="action-button" type="button" hidden>导出安卓翻译结果</button>
-        <button id="exportIosTranslations" class="action-button" type="button" hidden>导出IOS翻译结果</button>
-      </div>
-      <p class="export-hint">导出 JSON 会按页面、子项和打点编号保留文本、备注打点的原文、译文 ID 与备注，以及图片打点的安卓 / iOS 资源 ID。</p>
-      <div class="manual-annotation-footer">
-        <p id="manualAnnotationStatus" class="review-status" role="status" aria-live="polite">修改会在停止输入 600ms 后自动保存</p>
+    </section>
+
+    <section id="currentTabImagePointSummaryDialog" class="current-tab-point-summary-dialog" role="region" aria-labelledby="currentTabImagePointSummaryTitle" hidden>
+      <div class="current-tab-point-summary-card">
+        <div class="current-tab-point-summary-heading">
+          <h2 id="currentTabImagePointSummaryTitle" class="current-tab-point-summary-title">当前 Tab 图片打点汇总</h2>
+          <button id="closeCurrentTabImagePointSummary" class="current-tab-point-summary-close" type="button">关闭</button>
+        </div>
+        <p id="currentTabImagePointSummarySummary" class="current-tab-point-summary-summary"></p>
+        <div id="currentTabImagePointSummaryContent" class="current-tab-point-summary-table-wrap"></div>
       </div>
     </section>
 
@@ -1706,6 +1947,13 @@
         manualAnnotationCheckSummary: document.querySelector('#manualAnnotationCheckSummary'),
         manualAnnotationCheckIssues: document.querySelector('#manualAnnotationCheckIssues'),
         closeManualAnnotationCheck: document.querySelector('#closeManualAnnotationCheck'),
+        summarizeCurrentTabImagePoints: document.querySelector('#summarizeCurrentTabImagePoints'),
+        currentTabImagePointSummaryDialog: document.querySelector('#currentTabImagePointSummaryDialog'),
+        currentTabImagePointSummaryTitle: document.querySelector('#currentTabImagePointSummaryTitle'),
+        currentTabImagePointSummarySummary: document.querySelector('#currentTabImagePointSummarySummary'),
+        currentTabImagePointSummaryContent: document.querySelector('#currentTabImagePointSummaryContent'),
+        closeCurrentTabImagePointSummary: document.querySelector('#closeCurrentTabImagePointSummary'),
+        manualAnnotationEditor: document.querySelector('#manualAnnotationEditor'),
         aiLanguageBadge: document.querySelector('#aiLanguageBadge'),
         aiTranslationKicker: document.querySelector('#aiTranslationKicker'),
         aiTranslationPageTitle: document.querySelector('#aiTranslationPageTitle'),
@@ -2736,6 +2984,7 @@
 
       function activateScreenshotTab (tab) {
         const shouldRefreshManualAnnotationCheck = !elements.manualAnnotationCheckResult.hidden
+        const shouldRefreshImagePointSummary = !elements.currentTabImagePointSummaryDialog.hidden
         currentScreenshotTab = tab
         currentScreenshotTabId = tab.id
         screenshotDirectory = tab.directory
@@ -2760,6 +3009,14 @@
           refreshManualAnnotationCheckResultIfOpen()
           bundledAnnotationLoad.then(function () {
             if (currentScreenshotTab.id === tab.id) refreshManualAnnotationCheckResultIfOpen()
+          })
+        }
+        if (shouldRefreshImagePointSummary) {
+          renderCurrentTabImagePointSummary(createCurrentTabImagePointSummary())
+          bundledAnnotationLoad.then(function () {
+            if (currentScreenshotTab.id === tab.id) {
+              renderCurrentTabImagePointSummary(createCurrentTabImagePointSummary())
+            }
           })
         }
       }
@@ -3850,6 +4107,119 @@
           pageName,
           label: `第 ${pageNumber} 页“${page.label ?? pageName}”${variantLabel}`
         }
+      }
+
+      function createCurrentTabImagePointSummary () {
+        const entries = []
+        const annotatedPageIndexes = new Set()
+        let imagePointCount = 0
+
+        Object.entries(savedAnnotations.targets).forEach(([targetKey, target]) => {
+          const details = manualAnnotationCheckTargetDetails(targetKey)
+          if (!details) return
+
+          imagePointStrokes(target?.strokes).forEach(stroke => {
+            const imagePointNumber = Number(stroke.number)
+            const resources = annotationImagePointResources(stroke)
+            annotatedPageIndexes.add(details.pageIndex)
+            imagePointCount += 1
+            entries.push({
+              pageIndex: details.pageIndex,
+              location: details.label,
+              imagePointNumber,
+              pointLabel: `图片打点 ${imagePointNumber}`,
+              androidResourceId: resources.androidResourceId.trim(),
+              iosResourceId: resources.iosResourceId.trim()
+            })
+          })
+        })
+
+        entries.sort((left, right) => {
+          return left.pageIndex - right.pageIndex ||
+            left.location.localeCompare(right.location, 'zh-CN') ||
+            left.imagePointNumber - right.imagePointNumber
+        })
+        return {
+          entries,
+          imagePointCount,
+          annotatedPageCount: annotatedPageIndexes.size,
+          pageCount: baselinePages.length
+        }
+      }
+
+      function renderCurrentTabImagePointSummary (report) {
+        elements.currentTabImagePointSummaryTitle.textContent = `当前 Tab“${currentScreenshotTab.label}”图片打点汇总`
+        elements.currentTabImagePointSummarySummary.textContent = `图片打点总数：${report.imagePointCount}；所在页数：${report.annotatedPageCount}/${report.pageCount}。`
+        elements.currentTabImagePointSummaryContent.replaceChildren()
+
+        if (report.entries.length === 0) {
+          const empty = document.createElement('p')
+          empty.className = 'current-tab-point-summary-empty'
+          empty.textContent = '当前 Tab 暂无图片打点。'
+          elements.currentTabImagePointSummaryContent.append(empty)
+          return
+        }
+
+        const table = document.createElement('table')
+        table.className = 'current-tab-point-summary-table'
+        const head = document.createElement('thead')
+        const headRow = document.createElement('tr')
+        ;['所在页数', '图片打点编号', '安卓资源 ID', 'iOS 资源 ID'].forEach(label => {
+          const heading = document.createElement('th')
+          heading.scope = 'col'
+          heading.textContent = label
+          headRow.append(heading)
+        })
+        head.append(headRow)
+
+        const body = document.createElement('tbody')
+        report.entries.forEach(entry => {
+          const row = document.createElement('tr')
+          const values = [
+            entry.location,
+            entry.pointLabel,
+            entry.androidResourceId,
+            entry.iosResourceId
+          ]
+          values.forEach((value, index) => {
+            const cell = document.createElement('td')
+            cell.dataset.label = ['所在页数', '图片打点编号', '安卓资源 ID', 'iOS 资源 ID'][index]
+            if (value) {
+              cell.textContent = value
+            } else {
+              cell.textContent = '未填写'
+              cell.className = 'is-empty'
+            }
+            row.append(cell)
+          })
+          body.append(row)
+        })
+        table.append(head, body)
+        elements.currentTabImagePointSummaryContent.append(table)
+      }
+
+      function closeCurrentTabImagePointSummary () {
+        if (elements.currentTabImagePointSummaryDialog.hidden) return false
+        elements.currentTabImagePointSummaryDialog.hidden = true
+        elements.workspace.classList.remove('is-image-point-summary-open')
+        elements.summarizeCurrentTabImagePoints.setAttribute('aria-expanded', 'false')
+        elements.summarizeCurrentTabImagePoints.focus()
+        return true
+      }
+
+      function toggleCurrentTabImagePointSummary () {
+        if (!elements.currentTabImagePointSummaryDialog.hidden) return closeCurrentTabImagePointSummary()
+        if (!flushManualAnnotationAutoSave()) return false
+        const report = createCurrentTabImagePointSummary()
+        renderCurrentTabImagePointSummary(report)
+        elements.workspace.classList.add('is-image-point-summary-open')
+        elements.currentTabImagePointSummaryDialog.hidden = false
+        elements.summarizeCurrentTabImagePoints.setAttribute('aria-expanded', 'true')
+        elements.closeCurrentTabImagePointSummary.focus()
+        const message = `已汇总当前 Tab 的 ${report.imagePointCount} 个图片打点，分布在 ${report.annotatedPageCount} 页`
+        setAnnotationStatus(message)
+        elements.manualAnnotationStatus.textContent = message
+        return true
       }
 
       function createManualAnnotationCheckReport () {
@@ -5241,6 +5611,11 @@
       elements.saveManualAnnotation.addEventListener('click', saveCurrentManualAnnotations)
       elements.checkManualAnnotations.addEventListener('click', checkManualAnnotationResults)
       elements.closeManualAnnotationCheck.addEventListener('click', closeManualAnnotationCheckResult)
+      elements.summarizeCurrentTabImagePoints.addEventListener('click', toggleCurrentTabImagePointSummary)
+      elements.closeCurrentTabImagePointSummary.addEventListener('click', closeCurrentTabImagePointSummary)
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !elements.currentTabImagePointSummaryDialog.hidden) closeCurrentTabImagePointSummary()
+      })
       window.addEventListener('resize', syncManualAnnotationCheckWorkspaceShift)
       elements.exportManualAnnotations.addEventListener('click', exportManualAnnotations)
       elements.annotationCanvas.addEventListener('pointerdown', beginAnnotationStroke)
