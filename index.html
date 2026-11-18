@@ -1735,7 +1735,7 @@
       <div class="baseline-heading">
         <button id="checkManualAnnotations" class="action-button check manual-annotation-check-action" type="button" aria-controls="manualAnnotationCheckResult" aria-expanded="false">检查当前标注结果</button>
         <h2 class="baseline-title">人工标注</h2>
-        <button id="summarizeCurrentTabImagePoints" class="readonly-badge editable-badge manual-annotation-summary-action" type="button" aria-controls="currentTabImagePointSummaryDialog" aria-expanded="false">当前 Tab 图片打点汇总</button>
+        <button id="summarizeCurrentTabImagePoints" class="readonly-badge editable-badge manual-annotation-summary-action" type="button" aria-controls="currentTabImagePointSummaryDialog" aria-expanded="false">四个 Tab 图片打点汇总</button>
       </div>
       <div id="manualAnnotationEditor">
         <div class="content-heading">
@@ -1766,7 +1766,7 @@
     <section id="currentTabImagePointSummaryDialog" class="current-tab-point-summary-dialog" role="region" aria-labelledby="currentTabImagePointSummaryTitle" hidden>
       <div class="current-tab-point-summary-card">
         <div class="current-tab-point-summary-heading">
-          <h2 id="currentTabImagePointSummaryTitle" class="current-tab-point-summary-title">当前 Tab 图片打点汇总</h2>
+          <h2 id="currentTabImagePointSummaryTitle" class="current-tab-point-summary-title">四个 Tab 图片打点汇总</h2>
           <button id="closeCurrentTabImagePointSummary" class="current-tab-point-summary-close" type="button">关闭</button>
         </div>
         <p id="currentTabImagePointSummarySummary" class="current-tab-point-summary-summary"></p>
@@ -3012,10 +3012,10 @@
           })
         }
         if (shouldRefreshImagePointSummary) {
-          renderCurrentTabImagePointSummary(createCurrentTabImagePointSummary())
+          renderAllTabsImagePointSummary(createAllTabsImagePointSummary())
           bundledAnnotationLoad.then(function () {
             if (currentScreenshotTab.id === tab.id) {
-              renderCurrentTabImagePointSummary(createCurrentTabImagePointSummary())
+              renderAllTabsImagePointSummary(createAllTabsImagePointSummary())
             }
           })
         }
@@ -4088,18 +4088,20 @@
         return persisted
       }
 
-      function manualAnnotationCheckTargetDetails (targetKey) {
+      function manualAnnotationTargetDetailsForTab (targetKey, tab) {
         const separatorIndex = targetKey.indexOf('::')
         const pageName = separatorIndex < 0 ? targetKey : targetKey.slice(0, separatorIndex)
         const state = separatorIndex < 0 ? 'main' : targetKey.slice(separatorIndex + 2)
-        const pageIndex = baselinePages.findIndex(page => page.name === pageName)
+        const tabPages = cloneScreenshotPages(tab?.pages)
+        const pageIndex = tabPages.findIndex(page => page.name === pageName)
         if (pageIndex < 0) return null
-        const page = baselinePages[pageIndex]
+        const page = tabPages[pageIndex]
         const pageNumber = String(pageIndex + 1).padStart(2, '0')
         let variantLabel = ''
         if (state.startsWith('variant:')) {
           const identifier = state.slice('variant:'.length)
-          const variant = variantsForPage(pageIndex).find((candidate, index) => variantId(candidate, index) === identifier)
+          const variants = Array.isArray(tab?.variants?.[pageName]) ? tab.variants[pageName] : []
+          const variant = variants.find((candidate, index) => variantId(candidate, index) === identifier)
           variantLabel = ` · 子项“${variant?.label || identifier}”`
         }
         return {
@@ -4109,53 +4111,86 @@
         }
       }
 
-      function createCurrentTabImagePointSummary () {
+      function manualAnnotationCheckTargetDetails (targetKey) {
+        return manualAnnotationTargetDetailsForTab(targetKey, currentScreenshotTab)
+      }
+
+      function createAllTabsImagePointSummary () {
         const entries = []
-        const annotatedPageIndexes = new Set()
+        const annotatedPages = new Set()
+        const perTab = []
         let imagePointCount = 0
+        let pageCount = 0
 
-        Object.entries(savedAnnotations.targets).forEach(([targetKey, target]) => {
-          const details = manualAnnotationCheckTargetDetails(targetKey)
-          if (!details) return
+        screenshotTabs.forEach((tab, tabIndex) => {
+          const tabAnnotatedPages = new Set()
+          const tabPageCount = cloneScreenshotPages(tab.pages).length
+          let tabImagePointCount = 0
+          pageCount += tabPageCount
 
-          imagePointStrokes(target?.strokes).forEach(stroke => {
-            const imagePointNumber = Number(stroke.number)
-            const resources = annotationImagePointResources(stroke)
-            annotatedPageIndexes.add(details.pageIndex)
-            imagePointCount += 1
-            entries.push({
-              pageIndex: details.pageIndex,
-              location: details.label,
-              imagePointNumber,
-              pointLabel: `图片打点 ${imagePointNumber}`,
-              androidResourceId: resources.androidResourceId.trim(),
-              iosResourceId: resources.iosResourceId.trim()
+          Object.entries(savedAnnotations.targets).forEach(([targetKey, target]) => {
+            const details = manualAnnotationTargetDetailsForTab(targetKey, tab)
+            if (!details) return
+
+            imagePointStrokes(target?.strokes).forEach(stroke => {
+              const imagePointNumber = Number(stroke.number)
+              const resources = annotationImagePointResources(stroke)
+              const pageIdentifier = `${tab.id}:${details.pageIndex}`
+              annotatedPages.add(pageIdentifier)
+              tabAnnotatedPages.add(details.pageIndex)
+              imagePointCount += 1
+              tabImagePointCount += 1
+              entries.push({
+                tabIndex,
+                tabId: tab.id,
+                tabLabel: tab.label,
+                pageIndex: details.pageIndex,
+                location: details.label,
+                imagePointNumber,
+                pointLabel: `图片打点 ${imagePointNumber}`,
+                androidResourceId: resources.androidResourceId.trim(),
+                iosResourceId: resources.iosResourceId.trim()
+              })
             })
+          })
+
+          perTab.push({
+            tabId: tab.id,
+            tabLabel: tab.label,
+            imagePointCount: tabImagePointCount,
+            annotatedPageCount: tabAnnotatedPages.size,
+            pageCount: tabPageCount
           })
         })
 
         entries.sort((left, right) => {
-          return left.pageIndex - right.pageIndex ||
+          return left.tabIndex - right.tabIndex ||
+            left.pageIndex - right.pageIndex ||
             left.location.localeCompare(right.location, 'zh-CN') ||
             left.imagePointNumber - right.imagePointNumber
         })
         return {
           entries,
+          perTab,
+          tabCount: screenshotTabs.length,
           imagePointCount,
-          annotatedPageCount: annotatedPageIndexes.size,
-          pageCount: baselinePages.length
+          annotatedPageCount: annotatedPages.size,
+          pageCount
         }
       }
 
-      function renderCurrentTabImagePointSummary (report) {
-        elements.currentTabImagePointSummaryTitle.textContent = `当前 Tab“${currentScreenshotTab.label}”图片打点汇总`
-        elements.currentTabImagePointSummarySummary.textContent = `图片打点总数：${report.imagePointCount}；所在页数：${report.annotatedPageCount}/${report.pageCount}。`
+      function renderAllTabsImagePointSummary (report) {
+        elements.currentTabImagePointSummaryTitle.textContent = `${report.tabCount} 个 Tab 图片打点汇总`
+        const tabSummary = report.perTab
+          .map(tab => `${tab.tabLabel} ${tab.imagePointCount} 个（${tab.annotatedPageCount}/${tab.pageCount} 页）`)
+          .join('；')
+        elements.currentTabImagePointSummarySummary.textContent = `图片打点总数：${report.imagePointCount}；所在页数：${report.annotatedPageCount}/${report.pageCount}。${tabSummary}`
         elements.currentTabImagePointSummaryContent.replaceChildren()
 
         if (report.entries.length === 0) {
           const empty = document.createElement('p')
           empty.className = 'current-tab-point-summary-empty'
-          empty.textContent = '当前 Tab 暂无图片打点。'
+          empty.textContent = '四个 Tab 暂无图片打点。'
           elements.currentTabImagePointSummaryContent.append(empty)
           return
         }
@@ -4164,7 +4199,7 @@
         table.className = 'current-tab-point-summary-table'
         const head = document.createElement('thead')
         const headRow = document.createElement('tr')
-        ;['所在页数', '图片打点编号', '安卓资源 ID', 'iOS 资源 ID'].forEach(label => {
+        ;['所属 Tab', '所在页数', '图片打点编号', '安卓资源 ID', 'iOS 资源 ID'].forEach(label => {
           const heading = document.createElement('th')
           heading.scope = 'col'
           heading.textContent = label
@@ -4176,6 +4211,7 @@
         report.entries.forEach(entry => {
           const row = document.createElement('tr')
           const values = [
+            entry.tabLabel,
             entry.location,
             entry.pointLabel,
             entry.androidResourceId,
@@ -4183,7 +4219,7 @@
           ]
           values.forEach((value, index) => {
             const cell = document.createElement('td')
-            cell.dataset.label = ['所在页数', '图片打点编号', '安卓资源 ID', 'iOS 资源 ID'][index]
+            cell.dataset.label = ['所属 Tab', '所在页数', '图片打点编号', '安卓资源 ID', 'iOS 资源 ID'][index]
             if (value) {
               cell.textContent = value
             } else {
@@ -4207,19 +4243,35 @@
         return true
       }
 
-      function toggleCurrentTabImagePointSummary () {
+      async function loadAllTabsManualAnnotationsForSummary () {
+        for (const tab of screenshotTabs) {
+          await loadBundledManualAnnotations(tab, {
+            preserveManualAnnotationCheck: true,
+            allowInactiveTab: true
+          })
+        }
+      }
+
+      async function toggleAllTabsImagePointSummary () {
         if (!elements.currentTabImagePointSummaryDialog.hidden) return closeCurrentTabImagePointSummary()
         if (!flushManualAnnotationAutoSave()) return false
-        const report = createCurrentTabImagePointSummary()
-        renderCurrentTabImagePointSummary(report)
-        elements.workspace.classList.add('is-image-point-summary-open')
-        elements.currentTabImagePointSummaryDialog.hidden = false
-        elements.summarizeCurrentTabImagePoints.setAttribute('aria-expanded', 'true')
-        elements.closeCurrentTabImagePointSummary.focus()
-        const message = `已汇总当前 Tab 的 ${report.imagePointCount} 个图片打点，分布在 ${report.annotatedPageCount} 页`
-        setAnnotationStatus(message)
-        elements.manualAnnotationStatus.textContent = message
-        return true
+        elements.summarizeCurrentTabImagePoints.disabled = true
+        setAnnotationStatus('正在加载四个 Tab 的图片打点…')
+        try {
+          await loadAllTabsManualAnnotationsForSummary()
+          const report = createAllTabsImagePointSummary()
+          renderAllTabsImagePointSummary(report)
+          elements.workspace.classList.add('is-image-point-summary-open')
+          elements.currentTabImagePointSummaryDialog.hidden = false
+          elements.summarizeCurrentTabImagePoints.setAttribute('aria-expanded', 'true')
+          elements.closeCurrentTabImagePointSummary.focus()
+          const message = `已汇总 ${report.tabCount} 个 Tab 的 ${report.imagePointCount} 个图片打点，分布在 ${report.annotatedPageCount} 页`
+          setAnnotationStatus(message)
+          elements.manualAnnotationStatus.textContent = message
+          return true
+        } finally {
+          elements.summarizeCurrentTabImagePoints.disabled = false
+        }
       }
 
       function createManualAnnotationCheckReport () {
@@ -4701,7 +4753,8 @@
       }
 
       async function loadBundledManualAnnotations (tab = currentScreenshotTab, {
-        preserveManualAnnotationCheck = false
+        preserveManualAnnotationCheck = false,
+        allowInactiveTab = false
       } = {}) {
         const tabId = String(tab?.id || '')
         const sourcePath = typeof tab?.annotationFile === 'string' ? tab.annotationFile.trim() : ''
@@ -4726,8 +4779,8 @@
             const source = await response.text()
             const fingerprint = manualAnnotationSourceFingerprint(source)
             const imported = normalizeManualAnnotationImport(JSON.parse(source), tab)
-            if (currentScreenshotTab.id !== tabId) return false
-            if (bundledManualAnnotationFingerprints[tabId] === fingerprint) {
+            if (currentScreenshotTab.id !== tabId && !allowInactiveTab) return false
+            if (bundledManualAnnotationFingerprints[tabId] === fingerprint && savedAnnotationsContainScreenshotTab(tab)) {
               loadedBundledManualAnnotationTabs.add(tabId)
               return true
             }
@@ -5611,7 +5664,7 @@
       elements.saveManualAnnotation.addEventListener('click', saveCurrentManualAnnotations)
       elements.checkManualAnnotations.addEventListener('click', checkManualAnnotationResults)
       elements.closeManualAnnotationCheck.addEventListener('click', closeManualAnnotationCheckResult)
-      elements.summarizeCurrentTabImagePoints.addEventListener('click', toggleCurrentTabImagePointSummary)
+      elements.summarizeCurrentTabImagePoints.addEventListener('click', toggleAllTabsImagePointSummary)
       elements.closeCurrentTabImagePointSummary.addEventListener('click', closeCurrentTabImagePointSummary)
       document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape' && !elements.currentTabImagePointSummaryDialog.hidden) closeCurrentTabImagePointSummary()
